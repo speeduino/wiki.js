@@ -1,9 +1,9 @@
 ---
-title: Injector_wiring
-description: 
+title: Injector wiring
+description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-06T05:07:36.786Z
-tags: 
+date: 2020-01-06T05:09:32.767Z
+tags: wiring
 ---
 
 Introduction
