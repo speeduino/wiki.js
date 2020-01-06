@@ -1,36 +1,44 @@
-File Structure
-==============
+---
+title: Style Guide
+description: Style guidelines used within the Speeduino firmware
+published: true
+date: 2020-01-06T04:57:38.671Z
+tags: 
+---
 
-Items must be arranged in the following sequence:
+# Goal
+The Speeduino firmware aspires to a common, unified approach to code layout based on the guidelines on this page. Any pull requests or submissions should align with these recommendations as much as possible. 
 
-Header comment
+# MISRA
+Speeduino strives for compliance to the MISRA C:2012 coding standard and many of the conventions below are to align with this. A full description of the requirments of MISRA C:2012 is beyond the scope of this document, but the code does include a MISRA scanning script based on cppcheck that you can use to verify your code changes.
 
-1.  included files
-2.  defines
-3.  local struct typedefs
-4.  local prototypes
-5.  global vars
-6.  main function (if present)
-7.  local functions
+## File Structure
 
-In a C header (.h) file items must be arranged in the following sequence:
+Within code files (`.ino`), items must be arranged in the following sequence:
+
+1. A mandatory header comment describing the purpose of the file
+2. included files (`#include`)
+3. defines (`#define`)
+4. local struct typedefs
+5. local prototypes
+6. Definitions of any global vars
+7. Main function (if present)
+8. Local functions
+
+In a C header (`.h`) file items must be arranged in the following sequence:
 
 1.  Header comment
 2.  ifndef guard
-3.  included files
-4.  defines
+3.  included files (`#include`)
+4.  defines (`#define`)
 5.  struct typedefs
 6.  prototypes
 7.  (extern) global vars
 
-Names
-=====
-
+## File Names
 All names should be meaningful and follow existing usage patterns if present.
 
-Conventions
------------
-
+## Naming Conventions
 | Item                                        | Standard                                                     | Example                   |
 |---------------------------------------------|--------------------------------------------------------------|---------------------------|
 | Functions                                   | camelCase, lowercase first letter, no spaces or _           | readSensor();             |
@@ -38,61 +46,51 @@ Conventions
 | Anonymous variables (eg some loop counters) | Single lowercase letter (Preferred order or use: x, y, z, i) | x++;                      |
 | Constants                                   | UPPER_CASE, words joined with _                            | 1.  define TWO_SQUARED 4 |
 
-Layout
-======
-
+## Layout and whitespace
 -   Use spaces for indents, not tabs
 -   Indent 2 spaces per level
 -   Always use { }, even for single statement blocks
 -   Describe block structures using indentation, do not rely on { } alone
 -   For multiple line blocks, brackets should always have their own line:
 
-` void readSensors()`
-` {`
-`    analogRead(sensor1);`
-`    analogRead(sensor2);`
-` }  `
+```
+void readSensors()
+{
+  analogRead(sensor1);
+  analogRead(sensor2);
+}
+```
 
 -   Single line blocks (if/else statements etc) should be on the same line and must includes braces
     -   When used on a single line, there should be a trailing space after the { and a preceding space before the }
 
 ` if(fanEnabled) { digitalWrite(fanPin, HIGH); }`
 
-Declarations
-============
-
+## Declarations
 -   Declare variables at the top of the function
 -   In a block of related definitions vertically align the names, types, and initialisations
 -   Initialise variables close to where they are first used.
 
-Functions
-=========
-
--   Put the return type on same line as function name
+## Functions
+-   Also put the return type on same line as function name
 -   Functions should be kept as short, and broken into sub-functions as required
 -   Each function should have a single clearly defined purpose, this purpose should be reflected in its name.
 
-Executable Statements
-=====================
+## Executable Statements
+- One per line, not i=0; j=0;
+- Multiple operations are permitted per line where appropriate. Eg: i = j = 0;
+- True / False if statements should **always** use a comparison (Either to 0 or 1, or to `true` and `false`). Eg:
+    -   Good: `if(isEnabled == 1)`
+    -   Bad: `if(isEnabled)`
+- Do no use comma operator for multiple variable definitions on a single line
 
--   One per line, not i=0; j=0;
--   Multiple operations are permitted per line where appropriate. Eg: i = j = 0;
--   True / False if statements should not use a comparison to 0 or 1. Eg:
-    -   Good: if(isEnabled)
-    -   Bad: if(isEnabled == 1)
-
-don't use comma operator
-
-Function definitions
-====================
-
+## Function definitions
 -   Use inline static for all non-interface functions
--   Use prototypes for all functions (even those returning int)
+-   Use prototypes for all functions (even those returning int or void)
 -   Don't turn parameter type checking off in prototypes with (), use (void) instead
 -   Give sensible variable names in prototypes
 
-Comments
-========
-
--   Blocks comments should be used for any single comment longer than one line
--   Single comments are preferred at the end of a line rather than on their own line beforehand
+## Comments
+- Use of the Doxygen commenting syntax is STRONGLY recommended (http://www.doxygen.nl/manual/docblocks.html)
+- Blocks comments should be used for any single comment longer than one line
+- Single comments are preferred at the end of a line rather than on their own line beforehand
