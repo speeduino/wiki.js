@@ -2,16 +2,17 @@
 title: Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2020-01-06T04:57:38.671Z
+date: 2020-01-06T04:58:33.942Z
 tags: 
 ---
 
 # Goal
 The Speeduino firmware aspires to a common, unified approach to code layout based on the guidelines on this page. Any pull requests or submissions should align with these recommendations as much as possible. 
 
-# MISRA
+## A note on MISRA compliance
 Speeduino strives for compliance to the MISRA C:2012 coding standard and many of the conventions below are to align with this. A full description of the requirments of MISRA C:2012 is beyond the scope of this document, but the code does include a MISRA scanning script based on cppcheck that you can use to verify your code changes.
 
+# Details
 ## File Structure
 
 Within code files (`.ino`), items must be arranged in the following sequence:
