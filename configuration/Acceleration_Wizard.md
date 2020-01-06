@@ -1,9 +1,9 @@
 ---
-title: Acceleration_Wizard
-description: 
+title: Acceleration Wizard
+description: Tuning the acceleration enrichment
 published: true
-date: 2020-01-06T06:30:59.316Z
-tags: 
+date: 2020-01-06T06:31:19.786Z
+tags: TunerStudio
 ---
 
 Overview
