@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-06T05:10:53.902Z
+date: 2020-01-06T05:26:30.696Z
 tags: wiring
 ---
 
@@ -35,10 +35,7 @@ For 4 cylinders/injectors, there are 2 ways that these can be connected to Speed
 
 The standard method is the same as that used for 6 or 8 cylinder setups, where 2 injectors are connected to each injector channel. In this configuration, only 2 injector channels will be used. The injectors paired together must have their Top Dead Centres (TDC) 360 crank degrees apart.
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/wiring/inj_4Cyl_semi-seq.png" title="Semi-sequential" width="50%" />
-
-</center>
+![inj_4Cyl_semi-seq.png](/wiring/inj_4Cyl_semi-seq.png){.align-center}
 
 #### Method 2
 
@@ -46,9 +43,7 @@ This method is only available on 4 cylinder / 4 injector applications and allows
 
 `Settings -> Engine Constants -> Injector Timing -> Semi-Sequential`
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/wiring/inj_4Cyl_seq.png" title="4 Cylinder Sequential" width="50%" />
-</center>
+![inj_4Cyl_seq.png](/wiring/inj_4Cyl_seq.png){.align-center}
 
 ### 5 injectors
 
@@ -61,18 +56,11 @@ For setups with more than 4 injectors, the number of outputs used will be equal 
 **Examples:**
 
 **6 Cylinder**
-
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/wiring/inj_6Cyl_semi-seq.png" title="6 Cylinder Semi-sequential" width="50%" />
-
-</center>
+![inj_6Cyl_semi-seq.png](/wiring/inj_6Cyl_semi-seq.png){.align-center}
 
 **8 Cylinder**
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/wiring/inj_8Cyl_semi-seq.png" title="8 Cylinder Semi-sequential" width="50%" />
-
-</center>
+![inj_8Cyl_semi-seq.png](/wiring/inj_8Cyl_semi-seq.png){.align-center}
 
 Inline with the above, this configuration requires each injector output to be connected to 2 injectors.
 The injectors should be grouped in opposing pairs, that is, cylinders whose Top Dead Centres are 360 degrees apart.
