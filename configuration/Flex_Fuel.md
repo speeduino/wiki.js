@@ -1,3 +1,11 @@
+---
+title: Flex Fuel
+description: Setting up the flex fuel / ethanol content sensor
+published: true
+date: 2020-01-06T23:49:54.097Z
+tags: 
+---
+
 Overview
 --------
 
@@ -37,6 +45,7 @@ Tuning
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/flex/flex_settings.png" width="40%" />
 
 </center>
+
 -   **Sensor frequency -** The minimum and maximum frequency of the sensor that represent 0% and 100% ethanol respectively. For standard GM/Continental flex sensors, these values are 50 and 150
 -   **Fuel multiplier% -** This is the additional fuel that should be added as ethanol content increases. The Low value on the left represents the adjustment to the fuel map at 0% ethanol and will typically be 100% if the base tune was performed with E0 fuel. If the base tune was made with E10 or E15 however, this value can be adjusted below 100%. The high value represents the fuel multiplier at 100% ethanol (E100) and the default value of 163% is based on the theoretical difference in energy density between E0 and E100. Tuning of this value may be required
 -   **Additional advance -** The additional degrees of advance that will be applied as ethanol content increases. This amount increases linearly between the low and high values and is added after all other ignition modifiers have been applied.
