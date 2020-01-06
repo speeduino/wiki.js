@@ -1,3 +1,11 @@
+---
+title: Injector_Characteristics
+description: 
+published: true
+date: 2020-01-06T02:21:20.560Z
+tags: 
+---
+
 Overview
 --------
 
@@ -6,8 +14,8 @@ Settings
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/constants/injectorChars.png" />
-
 </center>
+
 | Variable                    | Typical value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Injector Open Time          | 1.0 - 1.5     | The time the injector takes to open completely once triggered, plus the time necessary to close. This is specific to each injector type and version. See [Fuel Calculation](Fuel_Calculation "wikilink") for how this value is used, and the [Tuning section](Tuning_section "wikilink") for adjustments to this value.                                                                                                                                                                                                                                                          |
