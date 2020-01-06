@@ -2,7 +2,7 @@
 title: Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2020-01-06T01:57:23.509Z
+date: 2020-01-06T02:01:11.209Z
 tags: boards, PNP
 ---
 
@@ -44,8 +44,8 @@ Manual NA6s come with a switch only TPS that provides limited feedback to the EC
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/MX5/TPS_wiring.png" width="500" />
-
 </center>
+
 **Note:** If a VTPS is **NOT** being fitted, the stock TPS should be disconnected and a 1k resistor placed between the signal line and ground to prevent erratic acceleration enrichment at full throttle.
 
 ### Inlet Temperature Sensor
@@ -58,6 +58,7 @@ The 2 wires from this sensor can be pinned directly into the AFM connector on pi
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/MX5/IAT_connector.png" width="500" />
 
 </center>
+
 ### Wideband O2 Sensor
 
 Whilst not mandatory, the installation of a wideband oxygen sensor and controller is strongly recommended. Any wideband controller that outputs a 0-5v signal is supported and calibration for common controllers can be found in the Tools-&gt;Calibrate AFR Table dialog.
@@ -74,6 +75,7 @@ The fuse to be removed is found in the engine bay fuse block:
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/MX5/ST_SIG_fuse.png" width="500" />
 
 </center>
+
 #### Alternative control methods
 
 If the above method of fuel pump control is either not desirable or not available, an alternative driver wired to pin 2O on the main connector that can be used for this. Pin 2O originally carries the AFM signal, however as Speeduino does not use this (And the AFM must be disconnected) it can be used to carry the fuel pump control.
