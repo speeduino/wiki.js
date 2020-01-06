@@ -1,7 +1,12 @@
-<languages/> <translate>
+---
+title: Engine_Constants
+description: 
+published: true
+date: 2020-01-06T06:27:51.675Z
+tags: 
+---
 
-Overview
---------
+## Overview
 
 From the Settings menu, select Constants
 
@@ -11,13 +16,9 @@ From the Settings menu, select Constants
 </center>
 Here you need to setup the engine constants. Fill out the fields in the bottom section before calculating the Required Fuel.
 
-Settings
---------
+## Settings Description
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/constants/engine.png" width="30%" />
-
-</center>
+![engine.png](/constants/engine.png){.align-center}
 -   **Control Algorithm:** The load source that will be used for the fuel table
 -   **Squirts per Engine Cycle:** How many squirts will be performed over the duration of the engine cycle (Eg 720 degrees for a 4 stroke). most engines will not require values greater than 4. For sequential installations, this should be set to 2 with the injector staging set to 'Alternating'(Internally Speeduino will adjust the squirts to 1)
     -   Note that for 3 and 5 squirts, you must have a cam signal in addition to the crank.
@@ -38,5 +39,3 @@ Settings
     -   **Instantaneous:** Every reading is used as it is taken. Makes for a highly fluctuating signal, but can be useful for testing
     -   **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is the recommended option for 4 of more cylinders
     -   **Cycle Minimum:** The lowest value detected across 720 degrees is used. This is the recommended method for less than 4 cylinders or ITBs
-
-</translate>
