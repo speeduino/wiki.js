@@ -1,18 +1,25 @@
-Tuner Studio is the recommended tuning interface for the Speeduino. It runs on Windows, Mac and linux and provides configuration, tuning and logging capabilities.
+---
+title: Setting up TunerStudio
+description: How to create and connect to your ECU within TunerStudio
+published: true
+date: 2020-01-06T06:25:28.249Z
+tags: 
+---
 
-Once you have the firmware compiled and uploaded to your Arduino, you're ready to setup Tuner Studio in order to configure and monitor it. If you haven't yet compiled and uploaded the firmware, refer to the [Compiling and Installing Firmware](Compiling_and_Installing_Firmware "wikilink") page.
+Tuner Studio is the tuning interface software used by Speeduino. It runs on Windows, Mac and linux and provides configuration, tuning and logging capabilities.
 
-Downloading Tuner Studio
-------------------------
+Once you have the firmware compiled and uploaded to your Arduino, you're ready to setup Tuner Studio in order to configure and monitor it. If you haven't yet compiled and uploaded the firmware, refer to the [Installing Firmware](/Installing_Firmware) page.
 
-If you haven't already, grab a copy of Tuner Studio from: [1](http://www.tunerstudio.com/index.php/downloads)(http://www.tunerstudio.com/index.php/downloads) Tuner Studio is available for Windows, Mac and linux and will run on most PCs as it's system requirements are fairly low.
+## Downloading Tuner Studio
+
+If you haven't already, grab a copy of Tuner Studio from: http://www.tunerstudio.com/index.php/downloads
+Tuner Studio is available for Windows, Mac and linux and will run on most PCs as it's system requirements are fairly low.
 
 The current minimum version of TunerStudio required is 3.0.7, but the latest version is usually recommended.
 
 If you find Tuner Studio to be useful, please consider paying for a license. This is a fantastic program from a single developer that rivals the best tuning software in the world, it's worth the money.
 
-Setting up your project
------------------------
+## Setting up your project
 
 ### Create new project
 
