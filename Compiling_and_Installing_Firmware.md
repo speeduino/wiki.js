@@ -1,12 +1,17 @@
+---
+title: Compiling_and_Installing_Firmware
+description: 
+published: true
+date: 2020-01-06T02:55:15.455Z
+tags: 
+---
+
+The Speeduino firmware is the code that powers the hardware and must be installed onto your board prior to using the ECU. New firmware releases are made regularly (Approximately every 2 months) that bring new features, bug fixes and performance improvements so staying up to date is highly recommended. 
+
 With the goal of maximum simplicity in mind, the process of compiling and installing the firmware is reasonably straightforward.
 
-Latest Stable Firmware
-----------------------
 
--   **Date:** April 4th 2019
--   **Details:** See <https://speeduino.com/forum/viewtopic.php?f=13&t=2701>
-
-Installation - Easy Method
+Installation - SpeedyLoader
 --------------------------
 
 The simplest method of installing the Speeduino firmware onto a standard Arduino Mega 2560 is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file for the firmware you choose so it can be loaded into your TunerStudio project.
@@ -20,7 +25,7 @@ The simplest method of installing the Speeduino firmware onto a standard Arduino
 
 Once the firmware is installed on the board, see [Connecting to TunerStudio](Connecting_to_TunerStudio "wikilink") for more details on how to configure TunerStudio
 
-Manually Compiling
+Installation - Manually Compiling
 ------------------
 
 If you want to compile the firmware yourself, or make any code changes, then the source of both the releases and the current development version is freely available. Note that manually compiling the firmware is **NOT** required to install Speeduino, the easiest (and recommended for most users) method is using SpeedyLoader as described above.
@@ -56,9 +61,9 @@ At this point you should have a compiled firmware! If you experienced a problem 
 This video walks through the whole process of installing the firmware on your Arduino from scratch:
 
 <center>
-<embedvideo service="youtube">AX9URou4JTs</embedvideo>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AX9URou4JTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
+
 #### Optional (But recommended)
 
 There is an option available for changing the compiler optimization level, which can improve . By default, the IDE uses the -Os compile option, which focuses on producing small binaries. As the size of the Speeduino code is not an issue but speed is a consideration, changing this to -O3 produces better results (Approximately 20% faster, with a 40% larger sketch size) To do this, you need to edit the platform.txt file:
@@ -137,7 +142,7 @@ You may have the wrong kind of Arduino board selected. Set the board type by sel
 
 The following can occur if you have only opened the speeduino.ino file rather than the whole project.
 
-`speeduino.ino:27:21:` `fatal` `error:` `globals.h:` `No` `such` `file` `or` `directory`
+`speeduino.ino:27:21: fatal error: globals.h: No such file or directory`
 
 Make sure all the files are contained within the same directory, then select File-&gt;Open and find the speeduino.ino file. If you have opened the project correctly, you should have multiple tabs along the top:
 
