@@ -1,8 +1,8 @@
 ---
-title: Configuration_Index
-description: 
+title: Configuration Index
+description: Listing of all dialog configuration help pages
 published: true
-date: 2020-01-06T02:17:50.472Z
+date: 2020-01-06T02:19:30.887Z
 tags: 
 ---
 
