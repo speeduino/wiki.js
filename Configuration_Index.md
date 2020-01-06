@@ -1,36 +1,41 @@
+---
+title: Configuration_Index
+description: 
+published: true
+date: 2020-01-06T02:17:50.472Z
+tags: 
+---
+
 -   **Settings Menu**
-    -   [Engine Constants](Engine_Constants "wikilink")
-    -   [Injector Characteristics](Injector_Characteristics "wikilink")
-    -   [Trigger Setup](Trigger_Setup "wikilink")
-    -   [IAT Density](IAT_Density "wikilink")
-    -   [Reset Control](Reset_Control "wikilink")
+    -   [Engine Constants](configuration/Engine_Constants)
+    -   [Injector Characteristics](configuration/Injector_Characteristics)
+    -   [Trigger Setup](configuration/Trigger_Setup)
+    -   [IAT Density](configuration/IAT_Density)
+    -   [Reset Control](configuration/Reset_Control)
 -   **Tuning Menu**
-    -   [Acceleration Wizard](Acceleration_Wizard "wikilink")
-    -   [AFR/O2](AFR/O2 "wikilink")
-    -   [Rev Limits](Rev_Limits "wikilink")
-    -   [Flex Fuel](Flex_Fuel "wikilink")
-    -   [Staged Injection](Staged_Injection "wikilink")
+    -   [Acceleration Wizard](configuration/Acceleration_Wizard)
+    -   [AFR/O2](configuration/O2)
+    -   [Rev Limits](configuration/Rev_Limits)
+    -   [Flex Fuel](configuration/Flex_Fuel)
+    -   [Staged Injection](configuration/Staged_Injection)
 -   **Spark Menu**
-    -   [Spark Settings](Spark_Settings "wikilink")
-    -   [Dwell](Dwell "wikilink")
-    -   [IAT Retard](IAT_Retard "wikilink")
+    -   [Spark Settings](configuration/Spark_Settings "wikilink")
+    -   [Dwell](configuration/Dwell "wikilink")
+    -   [IAT Retard](configuration/IAT_Retard "wikilink")
 -   **Starting/Idle Menu**
-    -   [Cranking](Cranking "wikilink")
-    -   [Warmup](Warmup "wikilink")
+    -   [Cranking](configuration/Cranking "wikilink")
+    -   [Warmup](configuration/Warmup "wikilink")
 -   **Idle control**
-    -   [Idle](Idle "wikilink")
+    -   [Idle](configuration/Idle "wikilink")
 -   **Accessories Menu**
-    -   [Thermo fan](Thermo_fan "wikilink")
-    -   [Launch Control and Flat shift](Launch_Flatshift "wikilink")
-    -   [Fuel pump](Fuel_pump "wikilink")
-    -   [Boost Control](Boost_Control "wikilink")
-    -   [VVT](VVT "wikilink")
-    -   [Tacho](Tacho "wikilink")
-    -   [Secondary Serial Interface](Secondary_Serial_IO_interface "wikilink")
+    -   [Thermo fan](configuration/Thermo_fan "wikilink")
+    -   [Launch Control and Flat shift](configuration/Launch_Flatshift "wikilink")
+    -   [Fuel pump](configuration/Fuel_pump "wikilink")
+    -   [Boost Control](configuration/Boost_Control "wikilink")
+    -   [VVT](configuration/VVT "wikilink")
+    -   [Tacho](configuration/Tacho "wikilink")
+    -   [Secondary Serial Interface](configuration/Secondary_Serial_IO_interface "wikilink")
     -   [External Auxilary input channel configuration](Auxillary_IO_Configuration#How_to_Configure_to_use_a_External_Data_Source "wikilink")
-    -   [Local Auxilary input channel configuration](Auxillary_IO_Configuration#How_to_Configure_to_use_a_Local_MCU_pin "wikilink")
-
-<!-- -->
-
--   Tools Menu
-    -   [Sensor Calibration](Sensor_Calibration "wikilink")
+    -   [Local Auxilary input channel configuration](configuration/Auxillary_IO_Configuration#How_to_Configure_to_use_a_Local_MCU_pin "wikilink")
+-   **Tools Menu**
+    -   [Sensor Calibration](configuration/Sensor_Calibration "wikilink")
