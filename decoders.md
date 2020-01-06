@@ -2,7 +2,7 @@
 title: Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2020-01-05T23:49:24.680Z
+date: 2020-01-06T00:24:43.437Z
 tags: 
 ---
 
