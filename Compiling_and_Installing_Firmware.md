@@ -1,8 +1,8 @@
 ---
-title: Compiling_and_Installing_Firmware
-description: 
+title: Speeduino Firmware setup
+description: Setting up the Speeduino firmware on your board
 published: true
-date: 2020-01-06T02:55:15.455Z
+date: 2020-01-06T02:56:49.310Z
 tags: 
 ---
 
