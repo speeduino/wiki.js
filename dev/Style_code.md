@@ -2,7 +2,7 @@
 title: Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2020-01-06T04:58:33.942Z
+date: 2020-01-06T05:00:33.219Z
 tags: 
 ---
 
@@ -42,10 +42,10 @@ All names should be meaningful and follow existing usage patterns if present.
 ## Naming Conventions
 | Item                                        | Standard                                                     | Example                   |
 |---------------------------------------------|--------------------------------------------------------------|---------------------------|
-| Functions                                   | camelCase, lowercase first letter, no spaces or _           | readSensor();             |
-| Variables                                   | sensorValue = 0;                                             |
-| Anonymous variables (eg some loop counters) | Single lowercase letter (Preferred order or use: x, y, z, i) | x++;                      |
-| Constants                                   | UPPER_CASE, words joined with _                            | 1.  define TWO_SQUARED 4 |
+| Functions                                   | camelCase, lowercase first letter, no spaces or _            | `readSensor();`           |
+| Variables                                   | Same as functions                                            | `sensorValue = 0;`        |
+| Anonymous variables (eg some loop counters) | Single lowercase letter (Preferred order or use: x, y, z, i) | `x++;`                    |
+| Constants                                   | UPPER_CASE, words joined with _                              | `#define TWO_SQUARED 4`   |
 
 ## Layout and whitespace
 -   Use spaces for indents, not tabs
