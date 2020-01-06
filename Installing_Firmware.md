@@ -2,19 +2,19 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2020-01-06T02:56:49.310Z
+date: 2020-01-06T06:21:55.641Z
 tags: 
 ---
 
+## Overview
 The Speeduino firmware is the code that powers the hardware and must be installed onto your board prior to using the ECU. New firmware releases are made regularly (Approximately every 2 months) that bring new features, bug fixes and performance improvements so staying up to date is highly recommended. 
 
-With the goal of maximum simplicity in mind, the process of compiling and installing the firmware is reasonably straightforward.
+With the goal of maximum simplicity in mind, the process of compiling and installing the firmware is reasonably straightforward. Most users will use the SpeedyLoader method for installing the firmware
 
 
-Installation - SpeedyLoader
---------------------------
+## Installation - SpeedyLoader
 
-The simplest method of installing the Speeduino firmware onto a standard Arduino Mega 2560 is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file for the firmware you choose so it can be loaded into your TunerStudio project.
+The simplest (and recommended) method of installing the Speeduino firmware onto a standard Arduino Mega 2560 is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file and optionally a base tune for the firmware you choose so it can be loaded into your TunerStudio project.
 
 -   **Windows:** [32-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-ia32.exe) / [64-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-x64.exe)
 -   **Mac:** [SpeedyLoader.dmg](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.dmg)
@@ -25,10 +25,12 @@ The simplest method of installing the Speeduino firmware onto a standard Arduino
 
 Once the firmware is installed on the board, see [Connecting to TunerStudio](Connecting_to_TunerStudio "wikilink") for more details on how to configure TunerStudio
 
-Installation - Manually Compiling
-------------------
+## Installation - Manually Compiling
+> Note that manually compiling the firmware is **NOT** required to install Speeduino, the easiest (and recommended for most users) method is using SpeedyLoader as described above.
+{.is-warning}
 
-If you want to compile the firmware yourself, or make any code changes, then the source of both the releases and the current development version is freely available. Note that manually compiling the firmware is **NOT** required to install Speeduino, the easiest (and recommended for most users) method is using SpeedyLoader as described above.
+ 
+If you want to compile the firmware yourself, or make any code changes, then the source of both the releases and the current development version is freely available.
 
 ### Requirements
 
@@ -45,10 +47,6 @@ There are two methods for obtaining the Speeduino firmware:
 
 1.  Regular, stable code drops are produced and made as releases on Github. These can be found at: <https://github.com/noisymime/speeduino/releases>
 2.  If you want the latest and greatest (And occasionally flakiest) code, the git repository can be cloned and updated. See <https://github.com/noisymime/speeduino>
-
-#### Older firmware releases
-
-If required, older firmware releases and details can be found at [Firmware History](Firmware_History "wikilink")
 
 ### Compiling the firmware
 
@@ -112,11 +110,15 @@ Assuming all goes well, you should see the IDE message that avrdude is done, sim
 
 <img src="http://i.imgur.com/iBRSq5t.png" />
 
+### Older firmware releases
+
+If required, older firmware releases and details can be found at [Firmware History](Firmware_History "wikilink")
+
 ### Verifying Firmware
 
 The firmware is now loaded onto your board and you are now able to move onto [Connecting to TunerStudio](Connecting_to_TunerStudio "wikilink").
 
-Optionally, you may perform a verification of the firmware by using the Arduino IDE's Serial Monitor. This can be started by selecting 'Serial Monitor' from the Tools menu.
+Optionally, you may perform a manual verification of the firmware by using the Arduino IDE's Serial Monitor. This can be started by selecting 'Serial Monitor' from the Tools menu.
 
 In the window that appears, enter a capital "S" (no quotes) and press *Enter*. The Mega should respond with the year and month of the code version installed (xxxx.xx):
 
