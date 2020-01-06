@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-06T05:09:32.767Z
+date: 2020-01-06T05:10:53.902Z
 tags: wiring
 ---
 
@@ -27,7 +27,7 @@ There are a number of ways that the injectors can be wired depending on your con
 
 For these configurations, each injector is wired into it's own output from the Speeduino board.
 
-### Up to 4 injectors
+### 4 injectors
 
 For 4 cylinders/injectors, there are 2 ways that these can be connected to Speeduino:
 
