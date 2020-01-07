@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-01-07T04:42:03.396Z
+date: 2020-01-07T04:43:06.269Z
 tags: 
 ---
 
@@ -43,11 +43,7 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 | Model/s     | Part Number                   | Alternative Part Numbers | Make | Notes                                                                       | Image                                                                                                                                  |
 |-------------|-------------------------------|--------------------------|------|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | Most 99-00  | 1-353222-6 (ECU side)         |                          | TE   | Subarus only use 96 of the 126 pins. The 3rd block of pins is not populated | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=353222&DocType=Customer+Drawing&DocLang=English) |
-| JECS 93 pin | MX7-93PL-C4 (ECU side)<br/>Loom side (3 plugs):<br/>   |                          | JAE  | 3 rows of pins. Used on WRX models (maybe others) up to 1999.               | [1](https://www.mouser.com/ds/2/206/J031431-1134923.pdf)                                                                               |
-|             |          |                          |      |                                                                             | 
-               35 pins connector: MX7-A-35SC
-               28 pins connector: MX7-A-28SC
-               30 pins connector: MX7-A-30SC  |                          
+| JECS 93 pin | MX7-93PL-C4 (ECU side)<br/>Loom side (3 plugs):<br/>35 pins connector: MX7-A-35SC<br/>28 pins connector: MX7-A-28SC<br/>30 pins connector: MX7-A-30SC   |                          | JAE  | 3 rows of pins. Used on WRX models (maybe others) up to 1999.               | [1](https://www.mouser.com/ds/2/206/J031431-1134923.pdf)                                                                               |
 
 ### Toyota
 
