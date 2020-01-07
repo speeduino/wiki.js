@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-01-07T04:43:06.269Z
+date: 2020-01-07T04:44:09.400Z
 tags: 
 ---
 
@@ -30,11 +30,7 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 | Unknown                         | 917940 (ECU)  | 917937 (Loom side)                       | AMP  | 120 pin 'Impul-Mate' assembly                                             |                                                                                                                                                                                                                                                                                |
 | Skyline RB25 (NEO)              | 178079 (ECU)  | 178073 (Loom side)                       | AMP  | 104 pin 'Impul-Mate' assembly. Also used with 5 at the front (Eg 5178079) |                                                                                                                                                                                                                                                                                |
 | Unknown                         | 178078 (ECU)  | 178080 (Loom side)                       | AMP  | 88 pin 'Impul-Mate' assembly. Also used with 5 at the front (Eg 5178078)  |                                                                                                                                                                                                                                                                                |
-| 300ZX
- Skyline R32,R33,R34 (Excl NEO)
- Silvia S13(CA18),S14(Zenki)
- 180SX
- Infinity Q45                     | 5174385 (ECU) | 174385 (Older prt \#) 177700 (Loom side) | AMP  | 76 pin 'Impul-Mate' assembly                                              | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174385&DocType=Customer+Drawing&DocLang=Japanese)                                                                                                                                        |
+| 300ZX<br>Skyline R32,R33,R34 (Excl NEO)<br/>Silvia S13(CA18),S14(Zenki)<br/>180SX<br/>Infinity Q45                     | 5174385 (ECU) | 174385 (Older prt \#) 177700 (Loom side) | AMP  | 76 pin 'Impul-Mate' assembly                                              | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174385&DocType=Customer+Drawing&DocLang=Japanese)                                                 |
 | Silvia S13(SR20),S14(Kouki),S15 | 174836 (ECU)  | 177699 (Loom)                            | AMP  | 64 pin 'Impul-Mate' assembly                                              | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174836&DocType=Customer+Drawing&DocLang=Japanese) [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=177699&DocType=Customer+Drawing&DocLang=English) |
 | Unknown                         | 174831 (ECU)  | 177698 (Loom)                            | AMP  | 48 pin 'Impul-Mate' assembly                                              |                                                                                                                                                                                                                                                                                |
 
