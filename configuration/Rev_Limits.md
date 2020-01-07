@@ -1,8 +1,8 @@
 ---
-title: Rev_Limits
-description: 
+title: Limiters
+description: Configuring engine protection limiters
 published: true
-date: 2020-01-07T00:20:08.654Z
+date: 2020-01-07T01:45:12.010Z
 tags: 
 ---
 
