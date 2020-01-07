@@ -2,7 +2,7 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-01-07T00:46:55.176Z
+date: 2020-01-07T05:33:51.557Z
 tags: TunerStudio
 ---
 
@@ -16,7 +16,7 @@ Here you need to setup the engine constants. Fill out the fields in the bottom s
 
 ## Settings Description
 
-![engine.png](/img/constants/engine.png =80%x){.align-center}
+![engine.png](/img/constants/engine.png =70%x){.align-center}
 -   **Control Algorithm:** The load source that will be used for the fuel table
 -   **Squirts per Engine Cycle:** How many squirts will be performed over the duration of the engine cycle (Eg 720 degrees for a 4 stroke). most engines will not require values greater than 4. For sequential installations, this should be set to 2 with the injector staging set to 'Alternating'(Internally Speeduino will adjust the squirts to 1)
     -   Note that for 3 and 5 squirts, you must have a cam signal in addition to the crank.
@@ -35,5 +35,6 @@ Here you need to setup the engine constants. Fill out the fields in the bottom s
 -   **Board Layout:** Specifies the input/output pin layout based on which Speeduino board you're using. For specific details of these pin mappings, see the utils.ino file
 -   **MAP Sample Method:** How the MAP sensor readings will be processed:
     -   **Instantaneous:** Every reading is used as it is taken. Makes for a highly fluctuating signal, but can be useful for testing
-    -   **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is the recommended option for 4 of more cylinders
+    -   **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is of Event average are the recommended options for 4 of more cylinders
     -   **Cycle Minimum:** The lowest value detected across 720 degrees is used. This is the recommended method for less than 4 cylinders or ITBs
+    - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. ZGenerally offers faster response with a similar level of accuracy. 
