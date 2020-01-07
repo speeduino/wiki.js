@@ -1,3 +1,11 @@
+---
+title: Idle
+description: 
+published: true
+date: 2020-01-07T02:56:36.908Z
+tags: 
+---
+
 Overview
 --------
 
@@ -43,6 +51,7 @@ Settings in TunerStudio include selecting PWM idle control, temperature and DC s
 <img src="http://i.imgur.com/Po5bOuD.png?1" width="350px" />
 
 </center>
+
 Under Idle control type, PWM is selected:
 
 <center>
@@ -55,12 +64,14 @@ The temperature-versus-DC is selected under the Idle - PWM Duty Cycle selection.
 <img src="http://i.imgur.com/USptRVr.png" width="450px" />
 
 </center>
+
 Some engines prefer additional airflow during cranking for a reliable start. This air can be automatically added only during cranking by using the Idle - PWM Cranking Duty Cycle settings. Once the engine starts and rpm rise above the set maximum cranking rpm, the idle control switches to the previous warmup settings. Note the relationship between coolant temperature during cranking and PWM DC can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
 
 <center>
 <img src="http://i.imgur.com/jXursvf.png?1" width="450px" />
 
 </center>
+
 ***NOTE:** Every engine, valve type and tune is different. Suitable settings must be determined by the tuner. Do not infer any tuning settings from the images in this wiki. They are only examples.*
 
 Both 2 and 3 wire PWM idle controllers are supported. In general, the 3 wire models will provide a smoother response than the 2 wire ones, but the difference is not always significant. For 3 wire valves, 2 of the Aux outputs will be required.
@@ -69,6 +80,7 @@ Both 2 and 3 wire PWM idle controllers are supported. In general, the 3 wire mod
 <img src="http://i.imgur.com/QfDesZC.png" width="150px" />
 
 </center>
+
 ### Stepper Motors
 
 Stepper motor idle controls are very common on GM and other OEM setups. These motors typically have 4 wires (bi-polar). They must be driven through power transistors or a driver module, such as the [DRV8825 stepper motor driver](https://www.pololu.com/product/2133) optional to the v0.4 board. These driver modules can be purchased inexpensively from a variety of vendors on sites such as eBay, Amazon, etc.
@@ -123,6 +135,7 @@ Under Idle control type, stepper is selected. The basic stepper operational sett
 <img src="http://i.imgur.com/fHgI86M.png?1" width="450px" />
 
 </center>
+
 **Step time:** This is how long (in ms) that the motor requires to complete each step. If this is set too low, the ECU will be trying to make the next step before the previous one is completed, which leads to the motor 'twitching' and not functioning correctly. If this is set longer than needed, the system will take longer to make each adjustment, which may lead to idle fluctuating more than desired. Typical values are usually 2ms - 4ms. The common GM stepper motor requires 3ms.
 **Home Steps:** Stepper motors must be 'homed' before they can be used so the that ECU knows their current position. You should set this to the maximum number of steps that the motor can move.
 **Minimum steps:** In order to allow a smooth idle that isn't continually fluctuating, the ECU will only move the motor if at least this many steps are required. Typical values are in the 2-6 range, however if you have a noisy coolant signal line, this value may need to be increased.
@@ -132,13 +145,17 @@ The temperature-versus-steps is selected under the Idle - Stepper Motor selectio
 <img src="http://i.imgur.com/kwFa7bT.png" width="350px" />
 
 </center>
+
 Some engines prefer additional airflow during cranking for a reliable start. This air can be automatically added only during cranking by using the Idle - Stepper Motor Cranking settings. Once the engine starts and rpm rise above the set maximum idle rpm, the idle control switches to the previous warmup settings. Note the relationship between coolant temperature during cranking and motor steps can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
 
 <center>
 <img src="http://i.imgur.com/yyqIs7Q.png" width="350px" />
 
 </center>
-***NOTE:** Every engine, valve type and tune is different. Suitable settings must be determined by the tuner. Do not infer any tuning settings from the images in this wiki. They are only random examples.*
+
+> ***NOTE:** Every engine, valve type and tune is different. Suitable settings must be determined by the tuner. Do not infer any tuning settings from the images in this wiki. They are only random examples.*
+{.is-info}
+
 
 ***NOTE:** Refer to the [Pololu video](https://www.pololu.com/product/2133/faqs) for instructions to set the DRV8825 driver current level to maximum for most automotive full-step stepper motors.*
 
