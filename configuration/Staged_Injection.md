@@ -1,3 +1,11 @@
+---
+title: Staged Injection
+description: Configuring multi-stage fuel injection
+published: true
+date: 2020-01-07T00:05:13.360Z
+tags: 
+---
+
 Staged Injection
 ----------------
 
@@ -7,8 +15,10 @@ Speeduino has the ability to control a secondary fuel stage for engines that hav
 
 No matter which control strategy is chosen, you must enter the sizing of the primary and secondary injectors in order to allow Speeduino to know the split in the overall fuelling.
 
-<font color="red">**CRITICAL**</font> - The req-Fuel value in the [Engine Constants](Engine_Constants "wikilink") MUST be updated when staged injection is turned on. **When staging is in use, the value entered in the req_fuel calculator MUST be equal to the sum of both the primary and secondary injector sizes**
-Failure to set these values correctly will result in excessive rich or lean conditions.
+> **CRITICAL** - The req-Fuel value in the [Engine Constants](Engine_Constants "wikilink") MUST be updated when staged injection is turned on. **When staging is in use, the value entered in the req_fuel calculator MUST be equal to the sum of both the primary and secondary injector sizes**
+> Failure to set these values correctly will result in excessive rich or lean conditions.
+{.is-danger}
+
 
 **Eg:**
 **Primary Injectors :** 300cc
@@ -19,6 +29,7 @@ Failure to set these values correctly will result in excessive rich or lean cond
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/staging/staging_settings.PNG" width="400" /> <img src="https://raw.githubusercontent.com/speeduino/wiki/master/staging/staged_reqfuel.PNG" width="400" />
 
 </center>
+
 ### Control methods
 
 Speeduino provides 2 staging control modes, each with their own strengths and weaknesses. In most cases it is recommended to start with the Automatic mode, which only requires tuning of the standard VE table, and reviewing to see if you get the desired outcome. Only if this can't be tuned to give a satisfactory fuel split would changing to the manual table tuning be recommended.
@@ -26,8 +37,9 @@ Speeduino provides 2 staging control modes, each with their own strengths and we
 #### Table control
 
 Table control allows the use of a manual 8x8 map that indicates what percentage of the fuel load will be performed by the **secondary** injectors
-0% = Secondary injectors disabled
-100% = Primary injectors disabled
+- 0% = Secondary injectors disabled
+- 100% = Primary injectors disabled
+
 It is important to note that the values in this table do NOT correspond directly to the split of the duty cycle or pulse width. They represent the percentage of the total fuel load that the secondaries will be asked to perform. The affect this value has on the pulse width depends on the ratio of the primary and secondary injector capacities.
 
 One disadvantage of the table tuning method is that it does not allow for the full fuel load of the primary and secondary injectors to be used simultaneously. As the table is a split of the total fuel load, as one set of injectors performs more, the other will perform less.
