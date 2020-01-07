@@ -2,7 +2,7 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-01-06T06:28:07.779Z
+date: 2020-01-07T00:46:55.176Z
 tags: TunerStudio
 ---
 
@@ -10,15 +10,13 @@ tags: TunerStudio
 
 From the Settings menu, select Constants
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_8.png" width="40%" />
+![TS_8.png](/img/TS_8.png =60%x){.align-center}
 
-</center>
 Here you need to setup the engine constants. Fill out the fields in the bottom section before calculating the Required Fuel.
 
 ## Settings Description
 
-![engine.png](/constants/engine.png){.align-center}
+![engine.png](/img/constants/engine.png =80%x){.align-center}
 -   **Control Algorithm:** The load source that will be used for the fuel table
 -   **Squirts per Engine Cycle:** How many squirts will be performed over the duration of the engine cycle (Eg 720 degrees for a 4 stroke). most engines will not require values greater than 4. For sequential installations, this should be set to 2 with the injector staging set to 'Alternating'(Internally Speeduino will adjust the squirts to 1)
     -   Note that for 3 and 5 squirts, you must have a cam signal in addition to the crank.
