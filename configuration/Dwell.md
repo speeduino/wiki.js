@@ -1,3 +1,11 @@
+---
+title: Dwell
+description: 
+published: true
+date: 2020-01-07T00:26:08.640Z
+tags: 
+---
+
 Overview
 ========
 
@@ -8,10 +16,7 @@ From the April 2017 firmware onwards, dwell will automatically reduce when the c
 Settings
 ========
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/dwell.png" height="600" />
-
-</center>
+![dwell.png](/img/ignition/dwell.png){.align-center}
 **Note:** Both the running and cranking dwell times are nominal values, assumed to be at a constant voltage (Usually 12v). Actual dwell time used will depend on the current system voltage with higher voltages having lower dwell times and vice versa. See section below on voltage correction
 
 -   Cranking dwell - The nominal dwell time that will be used during cranking. Cranking is defined as being whenever the RPM is above 0, but below the 'Cranking RPM' values in the [Cranking](Cranking "wikilink") dialog
@@ -26,7 +31,4 @@ As the system voltage rises and falls, the dwell time needs to reduce and increa
 
 The correction curve in the base tune file should be suitable for most coils / igniters, but can be altered if required.
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/dwell_correction.png" height="520" />
-
-</center>
+![dwell_correction.png](/img/ignition/dwell_correction.png){.align-center}
