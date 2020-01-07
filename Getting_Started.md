@@ -1,8 +1,8 @@
 ---
-title: Getting_Started
-description: 
+title: Getting Started
+description: Starting pages for each area of the manual
 published: true
-date: 2020-01-06T05:23:43.783Z
+date: 2020-01-07T03:59:48.914Z
 tags: 
 ---
 
@@ -13,8 +13,9 @@ The links below will help give an overview of each area, how it should be config
 
 - [Hardware requirements](/Hardware_requirements) - What hardware you will need to have in order to work with Speeduino (Sensors, wiring, injectors, coils etc)
 - Specific board information
-  - [v0.3 board](/V03 "wikilink")
-  - [v0.4 board](/v04 "wikilink")
+  - [v0.3 board](/boards/V03)
+  - [v0.4 board](/boards/v04)
+  - [Miata/MX5 NA 89-95 PNP](/boards/MX5_PNP)
 -   [Loading the Speeduino Firmware](/Installing_Firmware)
 -   Working with Tuner Studio software
     -   [Connecting to Tuner Studio](/Connecting_to_TunerStudio)
