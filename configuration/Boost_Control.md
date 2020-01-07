@@ -1,3 +1,11 @@
+---
+title: Boost Control
+description: Open and closed loop boost control settings
+published: true
+date: 2020-01-07T03:05:38.368Z
+tags: 
+---
+
 Overview
 --------
 
@@ -9,16 +17,13 @@ Settings
 --------
 
 Speeduino's boost control uses a PID algorithm with 2 modes of operation, Simple and Full. Each has their own advantages and disadvantages, as outlined below
-
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/accessories/boost_settings.PNG" width="500" />
-
-</center>
+![boost_settings.png](/img/accessories/boost_settings.png =80%x){.align-center}
 In Simple mode, the PID values themselves are controlled by the ECU itself and a sensitivity slider is used to adjust how aggressive the output duty cycle will be set. The simple mode can be easy and fast to setup, however has the downside that to avoid overboost, the sensitivity may need to be set low, which can increase lag.
 
 ### Target table
+![boost_map.png](/img/accessories/boost_map.png){.align-center}
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/accessories/boost_map.png" width="500" />
+The boost map function varies depending on whether open or closed loop boost control has been selected. 
 
-</center>
+- In closed loop mode, this map serves as a target table. The values in the map are the desired boost pressures (in kPa). In closed loop mode, these target values can optionally be modified by a flex fuel value if available. 
+- In open loop mode, the map values are the duty cycle percents that will be used
