@@ -2,7 +2,7 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2020-01-07T01:01:30.816Z
+date: 2020-01-07T01:16:16.588Z
 tags: 
 ---
 
