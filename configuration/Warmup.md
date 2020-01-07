@@ -1,15 +1,17 @@
-Overview
---------
+---
+title: Warmup
+description: 
+published: true
+date: 2020-01-07T01:58:36.229Z
+tags: 
+---
+
+## Overview
 
 The Warm Up Enrichment (WUE) dialog contains settings related to the period after start (ie not cranking) but before the engine has reached normal operating temperature. It allows for modifications to fueling during this time to
 
-Settings
---------
-
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/warmup/warmup.png" height="500" />
-
-</center>
+## Settings
+![warmup.PNG](/img/warmup/warmup.PNG =80%x){.align-center}
 ### Warmup curve
 
 This curve represents the additional fuel amount to be added whilst the engine is coming up to temperature (Based on the coolant sensor). The final value in this curve should represent the normal running temperature of the engine and have a value of 100% (Representing no modification of the fuel from that point onwards).
