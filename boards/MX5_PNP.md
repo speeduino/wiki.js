@@ -2,7 +2,7 @@
 title: Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2020-01-07T00:41:38.170Z
+date: 2020-01-07T05:09:42.847Z
 tags: boards, PNP
 ---
 
@@ -13,7 +13,7 @@ The Speeduino Miata / MX5 Plug N Play (PNP) box is designed for easy installatio
 
 The stock ECU for these vehicles have a 2 plug loom connection and look like the below:
 
-![OEM_ECU.png](/img/MX5/OEM_ECU.png){.align-center}
+![OEM_ECU.png](/img/MX5/OEM_ECU.png =70%x){.align-center}
 
 > **WARNING:** In particular, please see below in the fuel pump section for details that must be understood prior to starting
 {.is-warning}
@@ -32,7 +32,7 @@ For a load reference, it is strongly recommended to run a manifold pressure line
 
 The 1.6L cars typically come with a suitable MAP port near the throttle body that is capped off in stock form and is generally the easiest place to take the manifold pressure reference.
 
-![MAP_orig.png](/img/MX5/MAP_orig.png){.align-center}
+![MAP_orig.png](/img/MX5/MAP_orig.png =70%x){.align-center}
 
 5mm or 6mm vacuum hose should be used and there are multiple original holes in the firewall where this can be run.
 
@@ -40,7 +40,7 @@ The 1.6L cars typically come with a suitable MAP port near the throttle body tha
 
 Manual NA6s come with a switch only TPS that provides limited feedback to the ECU. It is highly recommended to replace this with a Variable TPS (VTPS) that provides a signal indicating the current throttle position. The original wiring can be used with any 3 wire VTPS
 
-![TPS_wiring.png](/img/MX5/TPS_wiring.png){.align-center}
+![TPS_wiring.png](/img/MX5/TPS_wiring.png =70%x){.align-center}
 
 > **Note:** If a VTPS is **NOT** being fitted, the stock TPS should be disconnected and a 1k resistor placed between the signal line and ground to prevent erratic acceleration enrichment at full throttle.
 {.is-warning}
@@ -52,7 +52,7 @@ In the stock configuration, inlet air temperature is provided by a sensor in the
 
 The 2 wires from this sensor can be pinned directly into the AFM connector on pins 1 and 6 (It does not matter which wire goes to which pin):
 
-![IAT_connector.png](/img/MX5/IAT_connector.png){.align-center}
+![IAT_connector.png](/img/MX5/IAT_connector.png =70%x){.align-center}
 
 ### Wideband O2 Sensor
 
@@ -66,7 +66,7 @@ The stock ECU does not perform any fuel pump control as this is taken care of by
 
 The fuse to be removed is found in the engine bay fuse block:
 
-![ST_SIG_fuse.png](/img/MX5/ST_SIG_fuse.png)
+![ST_SIG_fuse.png](/img/MX5/ST_SIG_fuse.png =70%x){.align-center}
 
 #### Alternative control methods
 
@@ -74,7 +74,8 @@ If the above method of fuel pump control is either not desirable or not availabl
 
 To do this, a jumper wire is required on the AFM connector per the below:
 
-![AFM_fuel_pump.png](/img/MX5/AFM_fuel_pump.png){.align-center}
+![AFM_fuel_pump.png](/img/MX5/AFM_fuel_pump.png =70%x){.align-center}
+
 
 Once the above jumper is in place, the fuel pump pin in TunerStudio should be set to A9.
 
@@ -86,8 +87,8 @@ Wiring on the 48-pin 1.8 (NA8) models is largely identical to the 1.6 (NA6) howe
 -   If the tacho doesn't work, set the tacho pin to 49 and add a jumper to the pins labelled 'Tach' on the board (Just above R56)
 -   If the TPS reading is fixed at full open/closed and you have a heated rear demister, you may need to remove/cut wire 2L. This should only be done in this specific case and it is unlikely to affect most cars.
 
-Configuration and start
------------------------
+## Configuration and start
+It is strongly recommended to start by using the NA6 base tune that is available through SpeedyLoader. 
 
 ### Sensor calibration
 
