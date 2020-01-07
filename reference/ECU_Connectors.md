@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-01-07T04:40:29.128Z
+date: 2020-01-07T04:41:44.029Z
 tags: 
 ---
 
@@ -55,9 +55,7 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 |--------------|-------------|--------------------------|------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | MK3 Supra    | 178780-1    |                          | AMP  | 76-pin, 4 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178780&DocType=Customer+Drawing&DocLang=Japanese) |
 | 3S-GT MR2    | 174518-7    |                          | AMP  | 64-pin, 3 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
-| 4efte GT\    | 175448-6    |                          | AMP  | 42-pin, 2 plug ECU  |                                                                                                                                         |
-| 2e-fe\
-| 4e-fe        | 
+| 4efte GT<br/>2e-fe>br/>4e-fe    | 175448-6    |                          | AMP  | 42-pin, 2 plug ECU  |                                                                                                                                         |
 | 4efte Glanza | 175448-6    |                          | AMP  | 54-pin, 3 plug ECU  |                                                                                                                                         |
 | 1MZFE Camry  | 178203      |                          | AMP  | 100-pin, 4 plug ECU | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
 
