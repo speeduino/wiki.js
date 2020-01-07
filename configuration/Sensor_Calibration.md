@@ -1,29 +1,31 @@
-Sensor Calibration
-------------------
+---
+title: Sensor Calibration
+description: Steps for calibrating all analog sensor inputs
+published: true
+date: 2020-01-07T03:13:01.249Z
+tags: 
+---
+
+## Sensor Calibration
 
 Before your Speeduino can correctly interpret the signals from the sensors, it must know which sensors you are using. Inputting this information into TunerStudio (TS) writes the correct calibration to your Speeduino. It is necessary to perform this step before you can effectively check your Speeduino build. Note that this is not tuning your system, but only telling it how to understand the signals from the sensors.
 
 This should be completed after completing the Settings for your engine. Your computer must be connected to your Speeduino through TS to perform the calibrations.
 
-------------------------------------------------------------------------
-
 ### MAP Sensor
 
 Open the **Tools** menu: tools_menu
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/tuning/tools_menu.png" title="Fig. 1 Tools Menu" width="30%"/>
+![tools_menu.png](/img/tuning/tools_menu.png =50%x){.align-center}
 
-</center>
-Select **Calibrate MAP**, the window below will open:
+Select **Calibrate Pressure Sensors**, the window below will open:
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/tuning/MAP_calibration.png" title="Fig. 2 MAP Calibration" width="40%"/>
+![MAP_calibration.png](/img/tuning/MAP_calibration.png =60%x){.align-center}
 
-</center>
 Select your MAP Sensor from the drop down list. If you used the MAP sensor in the bill of materials, this will be the MPX4250A. If you are using another MAP or one from the engine manufacturer, select it from the list. Click **Burn** to send the information to your Speeduino.
 
-------------------------------------------------------------------------
+If used, the external Baro and EMAP (exhaust pressure) sensors can be calibrated in the same manner. 
+
 
 ### Coolant and Intake Temperature Sensors
 
@@ -33,21 +35,15 @@ The sensor selected will be the **Coolant Temperature Sensor**. Select your sens
 
 Note that the standard Speeduino build is to have a 2490 ohm bias resistor, which is standard for sensors used by most manufacturers. If your sensor requires another value, you may need to change resistor R3 to the correct value for your sensor. You can try overriding the Bias Resistor Value with 2490 ohms, but check to be sure your sensor reads correctly in TS.
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/tuning/CLT_calibration.png" title="Fig. 4 Coolant" width="40%"/>
+![CLT_calibration.png](/img/tuning/CLT_calibration.png =70%x){.align-center}
 
-</center>
 The same calibration can then be performed for the Inlet Air Temperature (IAT) sensor by changing the **Sensor Table** to **Air Temperature Sensor**:
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/tuning/IAT_calibration.png" title="Fig. 5 Coolant" Intake Air Temperature width="40%"/>
+![IAT_calibration.png](/img/tuning/IAT_calibration.png =70%x){.align-center}
 
-</center>
 Select your sensor from the **Common Sensor Values** drop-down list. This will place the correct values into the temperature and resistance charts and the Bias resistor value. Click **Write to Controller** to send this information to your Speeduino. If your sensor is not listed, see [Entering Custom Values](#Entering_Custom_Values "wikilink") below.
 
 Note that the standard Speeduino build is to have a 2490 ohm bias resistor, which is standard for sensors used by most manufacturers. If your sensor requires another value, you may need to change resistor R3 to the correct value for your sensor. You can try overriding the Bias Resistor Value with 2490 ohms, but check to be sure your sensor reads correctly in TS.
-
-------------------------------------------------------------------------
 
 #### Entering Custom Values
 
@@ -59,38 +55,25 @@ In the **Calibrate Thermistor Tables** screen, first ensure the correct temperat
 
 Note that his procedure can also be used to enter the values of resistance on simulators for testing and troubleshooting. Two points should be remembered if you use simulator values – first, never enter zero for resistance. Although your simulator may go to zero, enter some small value above zero, say 10 ohms. Entering zero leads to false values in the firmware. Second – remember to enter the correct sensor values before installing your Speeduino!
 
-------------------------------------------------------------------------
-
 ### Oxygen Sensor Calibration
 
 Open the **Tools** menu again and select **Calibrate AFR Table**:
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/tuning/O2_calibration.png" title="Fig. 7 AFR Calibration" width="30%"/>
+![O2_calibration.png](/img/tuning/O2_calibration.png =60%x){.align-center}
 
-</center>
 Select your **Oxygen Sensor sensor** from the **Common Sensor Values** drop-down list. If you are using a custom Oxygen Sensor controller, select **Custom Linear WB** and then you can enter the values for **Volts** and **AFR** at two points (should be published in the controller manual).
 
 Click **Write to Controller** to send this information to your Speeduino.
 
 This will set up your Speeduino so that you can also run simulations to check your build before installation.
 
-------------------------------------------------------------------------
 
 ### Throttle Position Sensor
 
 Before Speeduino can work correctly with your engine, you will also need to Calibrate the Throttle Position Sensor. This must be done using the throttle body and TPS used on the engine. It is best to do this while the throttle body is installed on the engine.
 
 Open the **Tools** menu and select **Calibrate TPS**:
-
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/tuning/TPS_calibration.png" title="Fig. 8 TPS Calibration" width="30%"/>
-
-</center>
+![TPS_calibration.png](/img/tuning/TPS_calibration.png =50%x){.align-center}
 With the throttle closed, click the **Get Current** button beside the Closed Throttle ADC count field. Then move the throttle to full open and hold it there. Then click the **Get Current** button beside the Full Throttle ADC count field.
 
 Click **Accept** to save the information to Speeduino.
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
