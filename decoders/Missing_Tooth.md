@@ -2,7 +2,7 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2020-01-07T04:51:44.497Z
+date: 2020-01-07T04:53:01.240Z
 tags: 
 ---
 
@@ -13,11 +13,7 @@ A missing tooth crank trigger is used as standard equipment by a number of OEMs,
 
 It is comprised of crank wheel with a given number of evenly spaced teeth, and one or more 'missing' teeth. Common values are typically 60-2, 36-1, 24-1, 12-1 and 4-1 where the first number represents the total number of teeth the wheel would have if there were none missing. The second number after a dash "-" indicates the number of teeth missing.
 
-> **Note**: If there is a third number (e.g., 36-1-1), the missing teeth are
-> not sequential, and this decoder does not apply. Do not confuse counts
-> with slashes "/", as numbers following slashes represent cam teeth—not
-> missing teeth. Wheels with "+" indicate added teeth rather than missing,
-> and again this decoder does not apply.
+> **Note**: If there is a third number (e.g., 36-1-1), the missing teeth are not sequential, and this decoder does not apply. Do not confuse counts with slashes "/", as numbers following slashes represent cam teeth—not missing teeth. Wheels with "+" indicate added teeth rather than missing, and again this decoder does not apply.
 {.is-warning}
 
 
