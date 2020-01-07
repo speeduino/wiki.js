@@ -2,7 +2,7 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-01-07T05:33:51.557Z
+date: 2020-01-07T05:35:29.616Z
 tags: TunerStudio
 ---
 
@@ -37,4 +37,4 @@ Here you need to setup the engine constants. Fill out the fields in the bottom s
     -   **Instantaneous:** Every reading is used as it is taken. Makes for a highly fluctuating signal, but can be useful for testing
     -   **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is of Event average are the recommended options for 4 of more cylinders
     -   **Cycle Minimum:** The lowest value detected across 720 degrees is used. This is the recommended method for less than 4 cylinders or ITBs
-    - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. ZGenerally offers faster response with a similar level of accuracy. 
+    - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. Generally offers faster response with a similar level of accuracy. 
