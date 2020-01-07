@@ -2,7 +2,7 @@
 title: Rev_Limits
 description: 
 published: true
-date: 2020-01-06T06:39:07.313Z
+date: 2020-01-07T00:20:08.654Z
 tags: 
 ---
 
@@ -20,7 +20,7 @@ The soft cut limiter will lock timing at an absolute value to slow further accel
 Settings
 --------
 
-![revLimiter.png](/tuning/revLimiter.png){.align-center}
+![revLimiter.png](/img/tuning/revLimiter.png){.align-center}
 
 -   **Soft rev limit:** The RPM at which the soft cut ignition timing will be applied over.
 -   **Soft limit absolute timing:** Whilst the engine is over the soft limit RPM, the ignition advance will be held at this value. Lower values here will have a greater soft cut affect.
