@@ -1,3 +1,11 @@
+---
+title: ECU_Connectors
+description: 
+published: true
+date: 2020-01-07T04:36:28.961Z
+tags: 
+---
+
 ECU Connector Reference
 -----------------------
 
@@ -35,11 +43,11 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 | Model/s     | Part Number                   | Alternative Part Numbers | Make | Notes                                                                       | Image                                                                                                                                  |
 |-------------|-------------------------------|--------------------------|------|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | Most 99-00  | 1-353222-6 (ECU side)         |                          | TE   | Subarus only use 96 of the 126 pins. The 3rd block of pins is not populated | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=353222&DocType=Customer+Drawing&DocLang=English) |
-| JECS 93 pin | MX7-93PL-C4 (ECU side)
-               Loom side (3 plugs):
+| JECS 93 pin | MX7-93PL-C4 (ECU side)\       |                          | JAE  | 3 rows of pins. Used on WRX models (maybe others) up to 1999.               | [1](https://www.mouser.com/ds/2/206/J031431-1134923.pdf)                                                                               |
+|             | Loom side (3 plugs):\         |                          |      |                                                                             | 
                35 pins connector: MX7-A-35SC
                28 pins connector: MX7-A-28SC
-               30 pins connector: MX7-A-30SC  |                          | JAE  | 3 rows of pins. Used on WRX models (maybe others) up to 1999.               | [1](https://www.mouser.com/ds/2/206/J031431-1134923.pdf)                                                                               |
+               30 pins connector: MX7-A-30SC  |                          
 
 ### Toyota
 
@@ -47,9 +55,9 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 |--------------|-------------|--------------------------|------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | MK3 Supra    | 178780-1    |                          | AMP  | 76-pin, 4 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178780&DocType=Customer+Drawing&DocLang=Japanese) |
 | 3S-GT MR2    | 174518-7    |                          | AMP  | 64-pin, 3 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
-| 4efte GT
- 2e-fe
- 4e-fe         | 175448-6    |                          | AMP  | 42-pin, 2 plug ECU  |                                                                                                                                         |
+| 4efte GT\    | 175448-6    |                          | AMP  | 42-pin, 2 plug ECU  |                                                                                                                                         |
+| 2e-fe\
+| 4e-fe        | 
 | 4efte Glanza | 175448-6    |                          | AMP  | 54-pin, 3 plug ECU  |                                                                                                                                         |
 | 1MZFE Camry  | 178203      |                          | AMP  | 100-pin, 4 plug ECU | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
 
