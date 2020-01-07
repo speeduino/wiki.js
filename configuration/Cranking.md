@@ -1,3 +1,11 @@
+---
+title: Cranking
+description: 
+published: true
+date: 2020-01-07T01:57:30.177Z
+tags: 
+---
+
 Overview
 --------
 
@@ -6,10 +14,9 @@ Cranking conditions during starting typically require multiple adjustments to bo
 Settings
 --------
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/warmup/cranking.png" height="500" />
 
-</center>
+![cranking.png](/img/warmup/cranking.png =70%x){.align-center}
+
 -   **Cranking RPM** - This sets the threshold for whether Speeduino will set its status to be cranking or running. Any RPM above 0 and below this value will be considered cranking and all cranking related adjustments will be applied. It's generally best to set this to be around 100rpm higher than your typical cranking speed to account for spikes and to provide a smoother transition to normal idle
 -   **Flood Clear level** - Flood clear is used to assist in removing excess fuel that has entered the cylinder/s. Whilst flood clear is active, all fuel and ignition events will be stopped and the engine can be cranked for a few seconds without risk of starting or further flooding. To trigger flood clear, the RPM must be **below** the above Cranking RPM setting and the TPS must be **above** the threshold of this setting.
 -   **Fuel pump prime duration** - When Speeduino is first powered on, the fuel pump output will be engaged for this many seconds in oder to pressurise the fuel system. If the engine is started in this time, the pump will simply keep running, otherwise it will be turned off after this period of time. Note that fuel pump priming only occurs at system power on time. If you have USB connected, Speeduino remains powered on even without a 12v signal.
