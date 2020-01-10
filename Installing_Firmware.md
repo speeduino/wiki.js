@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2020-01-06T06:21:55.641Z
+date: 2020-01-10T11:17:16.904Z
 tags: 
 ---
 
@@ -21,9 +21,9 @@ The simplest (and recommended) method of installing the Speeduino firmware onto 
 -   **Linux:** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.AppImage) (Will need to be made executable after downloading)
 -   **Raspberry Pi** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-armv7l.AppImage)
     -   Linux / RaspberryPi versions require libusb libraries to be installed. EG if on Debian/Ubuntu:
-            sudo apt-get install libusb-1.0-0 libusb-0.1-4:i386
+            `sudo apt-get install libusb-1.0-0 libusb-0.1-4:i386`
 
-Once the firmware is installed on the board, see [Connecting to TunerStudio](Connecting_to_TunerStudio "wikilink") for more details on how to configure TunerStudio
+Once the firmware is installed on the board, see [Connecting to TunerStudio](Connecting_to_TunerStudio) for more details on how to configure TunerStudio
 
 ## Installation - Manually Compiling
 > Note that manually compiling the firmware is **NOT** required to install Speeduino, the easiest (and recommended for most users) method is using SpeedyLoader as described above.
