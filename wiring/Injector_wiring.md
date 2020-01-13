@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-07T04:47:21.545Z
+date: 2020-01-13T13:29:02.505Z
 tags: wiring
 ---
 
@@ -31,13 +31,13 @@ For these configurations, each injector is wired into it's own output from the S
 
 For 4 cylinders/injectors, there are 2 ways that these can be connected to Speeduino:
 
-#### Method 1
+#### Method 1 (Semi-sequential)
 
 The standard method is the same as that used for 6 or 8 cylinder setups, where 2 injectors are connected to each injector channel. In this configuration, only 2 injector channels will be used. The injectors paired together must have their Top Dead Centres (TDC) 360 crank degrees apart.
 
 ![inj_4Cyl_semi-seq.png](/img/wiring/inj_4Cyl_semi-seq.png =75%x){.align-center}
 
-#### Method 2
+#### Method 2 (Full sequential)
 
 This method is only available on 4 cylinder / 4 injector applications and allows you to wire 1 injector per channel. The injector channels always fire in numerical order (ie 1, 2, 3, 4) so your injectors should be wired to take your firing order into account. Within Tuner Studio, this option can be enabled by selecting:
 
