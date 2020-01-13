@@ -2,7 +2,7 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2020-01-13T14:03:10.277Z
+date: 2020-01-13T22:35:25.398Z
 tags: ignition, wiring
 ---
 
@@ -18,7 +18,7 @@ Wasted spark is a common means of controlling spark that requires only half the 
 * 6 cylinder engine requires 3 ignition outputs
 * 4 cylinder engine requires 4 ignition outputs
 
-Wasted Spark has the advantage of not requiring any cam signal or input to determine engine phase. This is possible by firing the ignition putputs once per revolution and pairing that output to 2 cylinders that are both at TDC (With one cylinder on compression stroke and the other on exhaust)
+Wasted Spark has the advantage of not requiring any cam signal or input as it does not need to know the engine phase. This is possible by firing the ignition outputs once per revolution and pairing that output to 2 cylinders that are both at TDC (With one cylinder on compression stroke and the other on exhaust)
 
 When using wasted spark, it is critical the correct pairs coils and/or spark plugs are joined together. 
 
@@ -26,14 +26,15 @@ There are many dual pole, wasted spark coil packs available both with and withou
 
 ![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-spark.png =500x){.align-center}
 
-> Note: The above example uses 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
+> Note: The above example uses 'smart' coils with built in igniters. Do NOT attach high current (dumb) coils without adding an igniter
 {.is-warning}
 
-### Coil on Plug (Wasted COP)
-As an alternative to a dual pole wasted spark coil, individual coil on plug units can be used in a wasted spark configuration. This is useful when setting up an ignition system that you may one day wish to convert to sequential ignition, current do not have the capability (Eg when a cam signal isnt yet available). 
+### Coil on Plug 
+As an alternative to a dual pole wasted spark coil, individual coil on plug units can be used in a wasted spark configuration. 
 ![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-COP.png =500x){.align-center}
-> 
-> Note: The above example uses 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
+
+
+> Note: The above examples use 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
 {.is-warning}
 
 
@@ -47,4 +48,5 @@ Sequential ignition control using Coil-on=Plugs coils dramtically simplifies the
 {.is-warning}
 
 ## Distributor
+If a distributor remains in use, only a single output is required from the ECU. This should be fed into a single channel ignition module (Such as the common Bosch 124) which can then drive the coil. 
 ![ign_Basic-distributor.png](/img/wiring/ign_Basic-distributor.png =500x){.align-center}
