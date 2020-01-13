@@ -2,12 +2,15 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2020-01-13T13:26:54.675Z
-tags: wiring, ignition
+date: 2020-01-13T14:03:10.277Z
+tags: ignition, wiring
 ---
 
 # Header
 ## Overview
+Ignition output configuration can be one of the most difficult areas of ECU wiring and one that often causes the most confusion. A large part of this complexity comes from the huge number of different ignition types that are available, with there being significant changes in the hardware used in the late 80s and throughout the 90s compared to newer designs. 
+
+Whilst this guide does not cover all ignition styles and hardware, it does cover the most common scenarios. Generally, it is recommended (Where possible) to use newer styles of ignition hardware (Typically 'smart' Coil-on-Plug or Coil-Near-Plug) rather than utilising separate igntion modules. 
 
 ## Wasted Spark
 Wasted spark is a common means of controlling spark that requires only half the number of ignition outputs as there are cylinders, with 2 cylinder being attached to each output. EG:
@@ -15,20 +18,33 @@ Wasted spark is a common means of controlling spark that requires only half the 
 * 6 cylinder engine requires 3 ignition outputs
 * 4 cylinder engine requires 4 ignition outputs
 
-Wasted Spark has the advantage of not requiring any cam signal or input to determine engine phase. This is possible by firing the ignition putputs once per revolution and pairing that output to 2 cylinders that are both at TDC (With one cylinder on compression strok and the other on exhaust)
+Wasted Spark has the advantage of not requiring any cam signal or input to determine engine phase. This is possible by firing the ignition putputs once per revolution and pairing that output to 2 cylinders that are both at TDC (With one cylinder on compression stroke and the other on exhaust)
 
 When using wasted spark, it is critical the correct pairs coils and/or spark plugs are joined together. 
 
-### Coil on Plug (Wasted COP)
-As an alternative to a dual pole wasted spark coil, individual coil on plug units can be used
+There are many dual pole, wasted spark coil packs available both with and without built in igniters. Either are suitable for use with Speeduino, but use of coils with built-in igniters is recommended
+
 ![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-spark.png =500x){.align-center}
+
+> Note: The above example uses 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
+{.is-warning}
+
+### Coil on Plug (Wasted COP)
+As an alternative to a dual pole wasted spark coil, individual coil on plug units can be used in a wasted spark configuration. This is useful when setting up an ignition system that you may one day wish to convert to sequential ignition, current do not have the capability (Eg when a cam signal isnt yet available). 
+![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-COP.png =500x){.align-center}
 > 
 > Note: The above example uses 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
 {.is-warning}
 
 
 ## Sequential (COPs)
+Sequential ignition control using Coil-on=Plugs coils dramtically simplifies the ignition wiring. With this configuration, each coil (and subsequently each cylinder) connects to a single ignition outpt, wired in the firing order. 
+
+
 ![ign_4Cyl_COP_seq.png](/img/wiring/ign_4Cyl_COP_seq.png =500x){.align-center}
+
+> Note: The above example uses 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
+{.is-warning}
 
 ## Distributor
 ![ign_Basic-distributor.png](/img/wiring/ign_Basic-distributor.png =500x){.align-center}
