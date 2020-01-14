@@ -2,7 +2,7 @@
 title: Setting up TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2020-01-06T06:25:28.249Z
+date: 2020-01-14T07:33:43.161Z
 tags: 
 ---
 
@@ -25,11 +25,11 @@ If you find Tuner Studio to be useful, please consider paying for a license. Thi
 
 When you first start TunerStudio, you'll need to setup a new project which contains the settings, tune, logs etc. On the start up screen, select 'Create new project'
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_1.png" width="60%" />
+![TS_1.png](/img/TunerStudio/TS_1.png =500x){.align-center}
 
 Give you project a name and select the directory you want the project to be stored in. Tuner Studio then requires a firmware definition file in order to communicate with the arduino. Tick the 'Other / Browse' button.
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_2.png" width="40%" />
+![TS_1.png](/img/TunerStudio/TS_2.png =400x){.align-center}
 
 Then browse to the Speeduino source directory, enter the reference subfolder and select speeduino.ini file
 
