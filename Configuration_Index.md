@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-01-06T02:20:48.003Z
+date: 2020-01-14T00:41:04.896Z
 tags: 
 ---
 
@@ -27,6 +27,7 @@ tags:
     -   [Warmup](/configuration/Warmup "wikilink")
 -   **Idle control**
     -   [Idle](/configuration/Idle "wikilink")
+    -   [Idle Advance](/configuration/IdleAdvance "wikilink")
 -   **Accessories Menu**
     -   [Thermo fan](/configuration/Thermo_fan "wikilink")
     -   [Launch Control and Flat shift](/configuration/Launch_Flatshift "wikilink")
