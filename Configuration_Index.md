@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-01-14T00:41:04.896Z
+date: 2020-01-14T14:38:52.690Z
 tags: 
 ---
 
@@ -11,7 +11,7 @@ tags:
     -   [Injector Characteristics](/configuration/Injector_Characteristics)
     -   [Trigger Setup](/configuration/Trigger_Setup)
     -   [IAT Density](/configuration/IAT_Density)
-    -   [Reset Control](/configuration/Reset_Control)
+<!---    -   [Reset Control](/configuration/Reset_Control) -->
 -   **Tuning Menu**
     -   [Acceleration Wizard](/configuration/Acceleration_Wizard)
     -   [AFR/O2](/configuration/O2)
@@ -33,7 +33,6 @@ tags:
     -   [Launch Control and Flat shift](/configuration/Launch_Flatshift "wikilink")
     -   [Fuel pump](/configuration/Fuel_pump "wikilink")
     -   [Boost Control](/configuration/Boost_Control "wikilink")
-    -   [VVT](/configuration/VVT "wikilink")
     -   [Tacho](/configuration/Tacho "wikilink")
     -   [Secondary Serial Interface](/configuration/Secondary_Serial_IO_interface "wikilink")
     -   [External Auxilary input channel configuration](/configuration/Auxillary_IO_Configuration#How_to_Configure_to_use_a_External_Data_Source "wikilink")
