@@ -1,3 +1,14 @@
+---
+title: Hardware Requirements
+description: 
+published: true
+date: 2020-01-14T07:31:48.212Z
+tags: wiring, hardware
+---
+
+# Hardware Requirements overview
+This page presents the basic hardware requirements of a Speeduino system, as well as a number of options for different variations of these. It does not represent every supported combination of hardware, but provides an overview if you're starting out. 
+
 Arduino
 -------
 
@@ -14,7 +25,7 @@ Alternatively (and necessary for full-sequential injection) an added cam signal 
 
 VR (variable reluctance) sensors can also be used, however as the board does not contain any sort of signal conditioner to convert the sine wave (below) to the required square wave, an additional module will be needed. An 8-pin DIP socket is located on v0.3.x and v0.4.x series official boards for this purpose as IC3. The MAX9926 chip has been tested to work with most types of input signals, and is available from the [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product), however any similar module that outputs a 0v-5v square wave (LM1815, LM358, SSC/DSC, many OEM modules, etc.) should also work fine with VR sensor signals.
 
-![](Sine-square_waves.jpg "Sine-square_waves.jpg")
+![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
 
 ### TPS
 
@@ -65,15 +76,10 @@ Circuits and techniques Speeduino users have found useful for adapting or implem
 
 See the [Flex Fuel](Flex_Fuel "wikilink") section for details on hardware and configuration of flex fuel setups.
 
-#### Oil Pressure
-
-&lt;<placeholder>&gt;
 
 #### 12V Input Signal
 
 Some position sensors output a 12v signal. To correct this, and avoid damaging the Arduino, a circuit like the one in the diagram can be constructed. The resistor R1 is not always required, but will make sure that any output that is not high is pulled low. Along with this circuit use the pull-up jumper on the Speeduino. This will effectively change a 0v/12v into a 0v/5v signal.
-
-![<File:Highvolthall.png>](Highvolthall.png "File:Highvolthall.png")
 
 *Many thanks to PSIG for the info and diagram.*
 
@@ -85,10 +91,12 @@ The GM 7 /8 pin modules have been used in a wide variety of GM engines from 4 cy
 GM 7-Pin Module   <img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_7-pin.png" title="Fig. 1 GM 7-pin module" width="400"/>
 
 </center>
+
 <center>
 GM 8-Pin Ignition Module   <img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_8-pin.png" title="Fig. 2 GM 8-pin module" width="370"/>
 
 </center>
+
 The 7 and 8 pin modules are functionally equivalent and largely share the same wiring. The 7 pin is used in the large coil-in-cap distributors while the 8 pin is used in the small cap distributors with remote mounted coils. The 8 pin has one additional terminal that provides a sensor ground. Both modules provide coil ground via the metal grommets used to secure them to the distributor.
 
 These modules provide an simple means for computer controlled timing while retaining the distributor. They were designed to be used with throttle body injection and port injection motors and provide automatic coil current limiting (7.5 amps was the GM specification) and automatic dwell control. The can be adapted to other distributor applications that use either variable reluctor or hall type sensors.

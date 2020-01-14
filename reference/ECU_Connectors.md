@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-01-07T04:44:09.400Z
+date: 2020-01-14T07:55:13.593Z
 tags: 
 ---
 
@@ -14,6 +14,13 @@ In an effort to simplify the design of new boards, this page is a reference of k
 These part numbers are primarily for the ECU side. Where known, a loom side part number is also shown.
 
 ### Audi
+
+### BMW
+| Model/s                   | Part Number | Alternative Part Numbers | Notes                                                                                     | Image                                                                                                                                          |
+|---------------------------|-------------|--------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| M54/M52tu/M62             | 967-288     |                          | 134 pins, 5 plug construction        | [PDF](https://www.mouser.fi/ProductDetail/571-7-967288-1)              |
+
+
 
 ### Mazda
 
