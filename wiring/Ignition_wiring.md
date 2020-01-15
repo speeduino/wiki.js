@@ -2,7 +2,7 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2020-01-13T22:35:25.398Z
+date: 2020-01-15T09:31:11.804Z
 tags: ignition, wiring
 ---
 
@@ -16,7 +16,7 @@ Whilst this guide does not cover all ignition styles and hardware, it does cover
 Wasted spark is a common means of controlling spark that requires only half the number of ignition outputs as there are cylinders, with 2 cylinder being attached to each output. EG:
 * 4 cylinder engine requires 2 ignition outputs
 * 6 cylinder engine requires 3 ignition outputs
-* 4 cylinder engine requires 4 ignition outputs
+* 8 cylinder engine requires 4 ignition outputs
 
 Wasted Spark has the advantage of not requiring any cam signal or input as it does not need to know the engine phase. This is possible by firing the ignition outputs once per revolution and pairing that output to 2 cylinders that are both at TDC (With one cylinder on compression stroke and the other on exhaust)
 
