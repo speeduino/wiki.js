@@ -2,7 +2,7 @@
 title: Spark Settings
 description: Configuration options for the ignition outputs
 published: true
-date: 2020-01-16T12:12:17.724Z
+date: 2020-01-16T12:12:49.688Z
 tags: 
 ---
 
@@ -27,6 +27,7 @@ Please ensure you have reviewed these settings prior to attempting to start your
 
 ### Rotary modes
 ![rotary_settings.png](/img/ignition/rotary_settings.png){.align-center width=450}
+
 Speeduino currently only supports the ignition configuration used on FC RX7 engines. Support for FD and RX8 ignition setups is in development. The leading / trailing split angle can be set as a function of the current engine load.
 
 - **FC** - Outputs are configured for the Leading/Trailing setup that was used on FC RX7s. Wiring is:
