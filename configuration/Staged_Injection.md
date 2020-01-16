@@ -2,7 +2,7 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2020-01-16T12:10:38.125Z
+date: 2020-01-16T12:36:25.977Z
 tags: 
 ---
 
@@ -18,9 +18,9 @@ No matter which control strategy is chosen, you must enter the sizing of the pri
 {.is-danger}
 
 **Eg:**
-**Primary Injectors :** 300cc
-**Secondary Injectors :** 700cc
-**Value entered into the req_fuel calculator :** 1000cc
+* **Primary Injectors :** 300cc
+* **Secondary Injectors :** 700cc
+* **Value entered into the req_fuel calculator :** 1000cc
 
 ![staging_settings.PNG](/img/staging/staging_settings.PNG){.align-center width=400}
 ![staging_settings.PNG](/img/staging/staged_reqfuel.PNG){.align-center width=400}
@@ -40,6 +40,6 @@ One disadvantage of the table tuning method is that it does not allow for the fu
 #### Automatic staging
 Speeduino has an automatic staging method that takes into account the full capacity of the injectors (ie the sum of the 2 injector stages) and will perform a split of these itself. With this method, the user can simply tune the VE table in the same manner as if only a single set of injectors were used and the system takes care of the rest.
 
-In this mode, Speeduino will attempt to use the primary injectors up to their 'Injector Duty Limit' (As configured in the [Injector Characteristics](Injector_Characteristics "wikilink") dialog. When staging is being used, it is recommend that this limit should be no higher than 85%. Once the primary injectors reach this duty limit, Speeduino will begin to perform any further fueling from the secondary injectors. In this way, the VE table is all that is required for tuning as the system will take care of allocating the current fuel load to the best injectors.
+In this mode, Speeduino will attempt to use the primary injectors up to their 'Injector Duty Limit' (As configured in the [Injector Characteristics](Injector_Characteristics) dialog. When staging is being used, it is recommend that this limit should be no higher than 85%. Once the primary injectors reach this duty limit, Speeduino will begin to perform any further fueling from the secondary injectors. In this way, the VE table is all that is required for tuning as the system will take care of allocating the current fuel load to the best injectors.
 
 Note that the dead time of the 2 sets of injectors is currently assumed to be the same. This may be altered in future firmwares if required (Post a feature request if needed).
