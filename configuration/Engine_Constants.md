@@ -2,7 +2,7 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-01-16T04:33:44.741Z
+date: 2020-01-16T11:22:51.218Z
 tags: TunerStudio
 ---
 
@@ -10,7 +10,7 @@ tags: TunerStudio
 
 From the Settings menu, select Constants
 
-![TS_8.png](/img/TS_8.png){width=300 .align-center}
+![TS_8.png](/img/TS_8.png){.align-center width=300}
 
 Here you need to setup the engine constants. Fill out the fields in the bottom section before calculating the Required Fuel.
 
