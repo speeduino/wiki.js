@@ -2,9 +2,11 @@
 title: Setting up TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2020-01-16T15:14:37.835Z
+date: 2020-01-16T15:28:01.635Z
 tags: 
 ---
+
+# Connecting to Tuner Studio
 
 Tuner Studio is the tuning interface software used by Speeduino. It runs on Windows, Mac and linux and provides configuration, tuning and logging capabilities.
 
