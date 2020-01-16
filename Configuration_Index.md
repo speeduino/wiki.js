@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-01-14T14:38:52.690Z
+date: 2020-01-16T06:00:50.841Z
 tags: 
 ---
 
@@ -35,7 +35,6 @@ tags:
     -   [Boost Control](/configuration/Boost_Control "wikilink")
     -   [Tacho](/configuration/Tacho "wikilink")
     -   [Secondary Serial Interface](/configuration/Secondary_Serial_IO_interface "wikilink")
-    -   [External Auxilary input channel configuration](/configuration/Auxillary_IO_Configuration#How_to_Configure_to_use_a_External_Data_Source "wikilink")
-    -   [Local Auxilary input channel configuration](/configuration/Auxillary_IO_Configuration#How_to_Configure_to_use_a_Local_MCU_pin "wikilink")
+    -   [Auxilary IO configuration](/configuration/Auxillary_IO_Configuration)
 -   **Tools Menu**
     -   [Sensor Calibration](/configuration/Sensor_Calibration "wikilink")
