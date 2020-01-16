@@ -2,10 +2,11 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-01-16T11:35:42.148Z
+date: 2020-01-16T16:07:13.772Z
 tags: TunerStudio
 ---
 
+# Engine Constants
 ## Overview
 
 From the Settings menu, select Constants
@@ -38,3 +39,5 @@ Here you need to setup the engine constants. Fill out the fields in the bottom s
     -   **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is of Event average are the recommended options for 4 of more cylinders
     -   **Cycle Minimum:** The lowest value detected across 720 degrees is used. This is the recommended method for less than 4 cylinders or ITBs
     - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. Generally offers faster response with a similar level of accuracy. 
+    
+The Oddfire angles should only be used on oddfire engines (Primarily some specifica V6s)
