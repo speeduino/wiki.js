@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-16T06:35:19.038Z
+date: 2020-01-16T07:18:08.045Z
 tags: wiring
 ---
 
