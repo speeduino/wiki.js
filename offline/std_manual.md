@@ -2,7 +2,7 @@
 title: std_manual
 description: 
 published: true
-date: 2020-01-16T06:07:36.046Z
+date: 2020-01-16T06:28:52.838Z
 tags: 
 ---
 
@@ -13,7 +13,7 @@ tags:
 ./wiring/system.md
 ./wiring/Injector_wiring.md
 ./wiring/Ignition_wiring.md
-./wiring/Sensors_wiring.md
+./wiring/Sensor_wiring.md
 ./configuration/Engine_Constants.md
 ./configuration/Injector_Characteristics.md
 ./configuration/Trigger_Setup.md
