@@ -2,7 +2,7 @@
 title: Daihatsu +1 trigger
 description: 
 published: true
-date: 2020-01-07T03:54:13.568Z
+date: 2020-01-16T11:48:01.703Z
 tags: 
 ---
 
@@ -29,4 +29,4 @@ In 3 cylinder engines, there are 3 evenly spaced teeth at 0, 240 and 480 crank d
 
 The 4 cylinder is the same, except with 4 evenly spaced teeth. The 5 teeth are therefore located at 0, 30, 180, 360 & 540 (Crank degrees, ATDC)
 
-![daihatsu_3_1.png](/img/decoders/daihatsu_3_1.png =75%x){.align-center}
+![daihatsu_3_1.png](/img/decoders/daihatsu_3_1.png){.align-center width=80%}
