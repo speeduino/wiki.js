@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-16T07:18:08.045Z
+date: 2020-01-16T07:24:23.488Z
 tags: wiring
 ---
 
@@ -35,7 +35,7 @@ For 4 cylinders/injectors, there are 2 ways that these can be connected to Speed
 
 The standard method is the same as that used for 6 or 8 cylinder setups, where 2 injectors are connected to each injector channel. In this configuration, only 2 injector channels will be used. The injectors paired together must have their Top Dead Centres (TDC) 360 crank degrees apart.
 
-![inj_4Cyl_semi-seq.png](/img/wiring/inj_4Cyl_semi-seq.png){width=75%}
+![inj_4Cyl_semi-seq.png](/img/wiring/inj_4Cyl_semi-seq.png){.align-center width=75%}
 
 #### Method 2 (Full sequential)
 
