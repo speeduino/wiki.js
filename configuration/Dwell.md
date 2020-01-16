@@ -2,7 +2,7 @@
 title: Dwell
 description: 
 published: true
-date: 2020-01-07T01:48:38.837Z
+date: 2020-01-16T11:40:00.504Z
 tags: 
 ---
 
@@ -16,7 +16,7 @@ From the April 2017 firmware onwards, dwell will automatically reduce when the c
 Settings
 ========
 
-![dwell.png](/img/ignition/dwell.png =60%x){.align-center}
+![dwell.png](/img/ignition/dwell.png){.align-center width=400}
 **Note:** Both the running and cranking dwell times are nominal values, assumed to be at a constant voltage (Usually 12v). Actual dwell time used will depend on the current system voltage with higher voltages having lower dwell times and vice versa. See section below on voltage correction
 
 -   Cranking dwell - The nominal dwell time that will be used during cranking. Cranking is defined as being whenever the RPM is above 0, but below the 'Cranking RPM' values in the [Cranking](Cranking "wikilink") dialog
@@ -31,4 +31,4 @@ As the system voltage rises and falls, the dwell time needs to reduce and increa
 
 The correction curve in the base tune file should be suitable for most coils / igniters, but can be altered if required.
 
-![dwell_correction.png](/img/ignition/dwell_correction.png =60%x){.align-center}
+![dwell_correction.png](/img/ignition/dwell_correction.png){.align-center width=450}
