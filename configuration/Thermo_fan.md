@@ -2,8 +2,8 @@
 title: Thermo fan
 description: Control of a cooling fan relay
 published: true
-date: 2020-01-14T02:17:03.743Z
-tags: tuning, aux outputs
+date: 2020-01-16T11:42:04.261Z
+tags: aux outputs, tuning
 ---
 
 # Thermo fan
@@ -13,7 +13,7 @@ Control of a cooling (thermo) fan is available through the Thermo fan dialog.
 {.is-info}
 
 ## Settings
-![fan.png](/img/accessories/fan.png =500x){.align-center}
+![fan.png](/img/accessories/fan.png){.align-center width=450}
 
 * **Fan mode** - Currently only `On/Off` mode is supported
 * **Output pin** - The arduino pin that the fan control will use. In most cases this should be left as `Board Default`
