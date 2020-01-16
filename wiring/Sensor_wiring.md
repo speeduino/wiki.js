@@ -2,14 +2,14 @@
 title: Analog sensor wiring
 description: 
 published: true
-date: 2020-01-14T13:44:54.097Z
-tags: wiring, sensors
+date: 2020-01-16T11:22:16.943Z
+tags: sensors, wiring
 ---
 
 # Analog Sensor Wiring
 Analog sensors provide data such as temperatures, throttle position and O2 readings to the ECU. The diagram below shows the typical wiring for these sensors. 
 
-![analog_sensors.png](/img/wiring/analog_sensors.png =500x){.align-center}
+![analog_sensors.png](/img/wiring/analog_sensors.png){.align-center width=500}
 
 ### Notes
 * Use of 2 wire temperature sensors is **highly** recommended. Whilst 1 wire sensors will work, they are almost always considerably less accurate
