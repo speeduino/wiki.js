@@ -2,7 +2,7 @@
 title: Setting up TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2020-01-16T11:32:43.137Z
+date: 2020-01-16T15:14:37.835Z
 tags: 
 ---
 
@@ -60,7 +60,3 @@ In the Speeduino reference directory, you will find the base tune file to be ope
 ![TS_7.png](/img/TunerStudio/TS_7.png){.align-center width=400}
 
 And that's it! Tuner Studio should now attempt to connect to the Arduino and show a realtime display of the ECU.
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
