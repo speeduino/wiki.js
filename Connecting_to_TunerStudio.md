@@ -2,7 +2,7 @@
 title: Setting up TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2020-01-14T12:33:41.487Z
+date: 2020-01-16T11:32:43.137Z
 tags: 
 ---
 
@@ -25,37 +25,39 @@ If you find Tuner Studio to be useful, please consider paying for a license. Thi
 
 When you first start TunerStudio, you'll need to setup a new project which contains the settings, tune, logs etc. On the start up screen, select 'Create new project'
 
-![TS_1.png](/img/TunerStudio/TS_1.png =500x){.align-center}
+![TS_1.png](/img/TunerStudio/TS_1.png){.align-center width=450}
 
 Give you project a name and select the directory you want the project to be stored in. Tuner Studio then requires a firmware definition file in order to communicate with the arduino. Tick the 'Other / Browse' button.
 
-![TS_1.png](/img/TunerStudio/TS_2.png =400x){.align-center}
+![TS_2.png](/img/TunerStudio/TS_2.png){.align-center width=400}
 
 Then browse to the Speeduino source directory, enter the reference subfolder and select speeduino.ini file
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_3.png" width="40%" />
+![TS_3.png](/img/TunerStudio/TS_3.png){.align-center width=400}
 
 ### Configuration options
 
-Set the configuration parameters for your project. These can be changed any time later on, so don't worry if you don't have them at this time.
-
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_4.png" width="40%" />
+Refer to the [Configuring TunerStudio project options](/Configuring_TunerStudio) page for this
 
 ### Comms settings
 
 Select your comms options. The exact port name will depend on which operating system you are running and this will be the same as in the Arduino IDE. Baud rate should be 115200.
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_5.png" width="40%" />
+![Comms Settings](/img/TunerStudio/TS_comms_settings.png){.align-center width=400}
+
+> **Note:** The `Detect` and `Test port` options require Tuner Studio version 3.0.60 or above to work correctly
+{.is-info}
+
 
 ### Load base tune
 
 Once the project is created, you'll need to load in a base tune to ensure that all values are at least somewhat sane. Failure to do this can lead to very strange issues and values in your tune.
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_6.png" width="40%" />
+![TS_6.png](/img/TunerStudio/TS_6.png){.align-center width=400}
 
 In the Speeduino reference directory, you will find the base tune file to be opened:
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/TS_7.png" width="40%" />
+![TS_7.png](/img/TunerStudio/TS_7.png){.align-center width=400}
 
 And that's it! Tuner Studio should now attempt to connect to the Arduino and show a realtime display of the ECU.
 
