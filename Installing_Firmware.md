@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2020-01-16T15:32:11.799Z
+date: 2020-01-16T15:46:57.263Z
 tags: 
 ---
 
@@ -53,7 +53,7 @@ There are two methods for obtaining the Speeduino firmware:
 
 -   Start the IDE, select *File &gt; Open*, navigate to the location you downloaded Speeduino to and open the **speeduino.ino** file.
 -   Set the board type: *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK (This is the only board currently supported)
--   Click the **Verify** icon in the top left corner (Looks like a tick) <img src="http://i.imgur.com/FKMDHoC.png?1" width="30" height="30" />
+-   Click the **Verify** icon in the top left corner (Looks like a tick) 
 
 At this point you should have a compiled firmware! If you experienced a problem during the compile, see the [Troubleshooting](http://speeduino.com/wiki/index.php?title=Compiling_and_Installing_Firmware&action=edit&section=4#Troubleshooting) section below.
 
@@ -87,29 +87,15 @@ Once you've successfully compiled the firmware, installation on the board is tri
 -   Plug in your Mega 2560 to a free USB port
 -   If you're running an older version of **Windows** and this is the first time you've used an Arduino, you may need to install drivers for the Arduino serial chip (USB-UART or "USB adapter chip").
 
-<img src="http://i.imgur.com/CkVOai2.png" width="400" />
-
 Most official boards and many non-official versions use the ATMega16U2 or 8U2, whereas many of the Mega2560 clone boards utilize the CH340G IC. Both types work well. The serial chips can generally be identified by appearance:
 
-ATMega16U (square IC) - drivers included in Windows, MacOS and Linux:
-
-<img src="http://i.imgur.com/epoIiIm.png" width="200" />
-
-or
-
-WCH CH340G (Rectangular IC) - uses "CH341" drivers from [WCH](http://www.wch.cn/downloads/file/65.html) for Windows:
-
-<img src="http://i.imgur.com/bB2DqNW.png" width="200" />
-
-WCH-original CH340/CH341 drivers for other systems (Mac, Linux, Android, etc) may be found [here](http://www.wch.cn/downloads/CH341SER_ZIP.html).
+* **ATMega16U** - This has a square IC near the USB connector - drivers are included in Windows 7+, MacOS and Linux.
+* **WCH CH340G** - This has a rectangular IC near the USB connector- uses "CH341" drivers from [WCH](http://www.wch.cn/downloads/file/65.html) for Windows
+  * WCH-original CH340/CH341 drivers for other systems (Mac, Linux, Android, etc) may be found [here](http://www.wch.cn/downloads/CH341SER_ZIP.html).
 
 -   In Arduino IDE; select the Mega2560: *Tools &gt; Board*
 -   Select your system's serial port to upload: *Tools &gt; Serial Port*
--   Hit the *Upload* button from the top left corner (Looks like an arrow point to the right) <img src="http://i.imgur.com/NgSMarQ.png" width="30" height="30" />
-
-Assuming all goes well, you should see the IDE message that avrdude is done, similar to this:
-
-<img src="http://i.imgur.com/iBRSq5t.png" />
+-   Hit the *Upload* button from the top left corner 
 
 ### Older firmware releases
 
