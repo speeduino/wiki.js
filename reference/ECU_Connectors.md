@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-01-14T07:55:13.593Z
+date: 2020-01-14T14:09:24.594Z
 tags: 
 ---
 
@@ -18,7 +18,7 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 ### BMW
 | Model/s                   | Part Number | Alternative Part Numbers | Notes                                                                                     | Image                                                                                                                                          |
 |---------------------------|-------------|--------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| M54/M52tu/M62             | 967-288     |                          | 134 pins, 5 plug construction        | [PDF](https://www.mouser.fi/ProductDetail/571-7-967288-1)              |
+| M54/M52tu/M62tu           | 967-288     |                          | 134 pins, 5 plug construction        | [PDF](https://www.mouser.fi/ProductDetail/571-7-967288-1)              |
 
 
 

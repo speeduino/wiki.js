@@ -1,42 +1,54 @@
-Configuring TunerStudio Project Properties
-------------------------------------------
+---
+title: Configuring TunerStudio project options
+description: 
+published: true
+date: 2020-01-16T11:08:57.820Z
+tags: TunerStudio
+---
 
-The menu option for the project properties page can be found here <img src="project_properties_select.jpg" title="fig:project_properties_select.jpg" alt="project_properties_select.jpg" width="400" />
+# Configuring TunerStudio Project Properties
 
-Once opened this page will be seen. <img src="project_properties.jpg" title="fig:project_properties.jpg" alt="project_properties.jpg" width="350" />
+The menu option for the project properties page can be found here
 
-Settings Tab
-------------
+![TS_9.png](/img/TunerStudio/TS_9.png){.align-center width=400}
+
+Once opened this page will be seen. 
+
+![TS_4.png](/img/TunerStudio/TS_4.png){.align-center width=350}
+
+## Settings Tab
+The Settings tab does not affect the tune directly, but does change the way some things are displayed within Tuner Studio. Some menus are hidden by default, either for safety reasons or because they are still under development, and they can be enabled here.
+
+### Lambda Display
+This changes whether the oxygen sensor reasons are shown in AFR (default) or Lambda.
 
 ### Temperature Display
 
-Options are :
+The temperature selection changes all degrees values within TunerStudio. 
 
 -   Fahrenheit(Default)
 -   Celsius
 
-### Fueling Algorithms
+> Changing this value does not alter the values in tune at all, only which scale the values are displayed in
+{.is-info}
 
-Options are :
 
--   Speed Density Fueling Algorithm (default)
--   Alpha-N Fueling Algorithm
+### Enable Hardware Test
+The hardware testing dialog allows you to manually turn the ignition and injection outputs on and off in order to test that the circuits are working. This can be dangerous if the outputs are connected to hardware however and so this dialog must be explicitely enabled. 
 
-### Enable_hardware_test
+> Please **ONLY** turn this on when the ECU is not connected to a vehicle
+{.is-danger}
 
-Default option is disabled. If Enabled an additional Tab will appear on the tuning page <img src="hardware_test_tab.jpg" title="fig:hardware_test_tab.jpg" alt="hardware_test_tab.jpg" width="200" /> Clicking on this will open further options <img src="hardware_test_output_option.jpg" title="fig:hardware_test_output_option.jpg" alt="hardware_test_output_option.jpg" width="200" />
+If Enabled, an additional Tab will appear on the tuning page 
 
--   Output Testing
+![Project Settings](/img/TunerStudio/TS_project_settings.png){.align-center width=400}
 
-[`Hardware` `test` `page`](Hardware_testing_page "wikilink")`.`
+### Reset control features
+An optional Speeduino specific boot loader is available that has different methods of controlling the automatic reset. The vast majority of users should leave this on the default 'Basic options only'
 
--   Input Testing
 
-### CAN_COMMANDS
+## CAN Devices Tab
 
-Default option is disabled
+CAN options are currently under development, but settings are available on this tab for testing if you have supported hardware.
 
-Can Devices Tab
----------------
-
-<img src="can_devices_tab.jpg" title="can_devices_tab.jpg" alt="can_devices_tab.jpg" width="350" />
+![CAN Devices](/img/TunerStudio/TS_CAN_settings.png){.align-center width=400}
