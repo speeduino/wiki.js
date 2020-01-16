@@ -2,7 +2,7 @@
 title: Configuring TunerStudio project options
 description: 
 published: true
-date: 2020-01-16T11:08:06.062Z
+date: 2020-01-16T11:08:57.820Z
 tags: TunerStudio
 ---
 
@@ -51,4 +51,4 @@ An optional Speeduino specific boot loader is available that has different metho
 
 CAN options are currently under development, but settings are available on this tab for testing if you have supported hardware.
 
-![Project Settings](/img/TunerStudio/TS_CAN_settings.png){.align-center width=400}
+![CAN Devices](/img/TunerStudio/TS_CAN_settings.png){.align-center width=400}
