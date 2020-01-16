@@ -2,12 +2,13 @@
 title: Idle
 description: 
 published: true
-date: 2020-01-07T02:56:36.908Z
+date: 2020-01-16T13:18:37.502Z
 tags: 
 ---
 
-Overview
---------
+# Idle Control
+## Overview
+The idle control outputs are used to alter the state of an idle control valve to increase the amount of air entering the engine at idle. These come in multiple types (Described below) and each is configured and tuned differently. 
 
 ### Compatible Idle Valve Types
 
