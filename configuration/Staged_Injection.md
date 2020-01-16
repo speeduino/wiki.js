@@ -2,7 +2,7 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2020-01-07T01:47:42.658Z
+date: 2020-01-16T11:38:17.245Z
 tags: 
 ---
 
@@ -25,8 +25,8 @@ No matter which control strategy is chosen, you must enter the sizing of the pri
 **Secondary Injectors :** 700cc
 **Value entered into the req_fuel calculator :** 1000cc
 
-![staging_settings.PNG](/img/staging/staging_settings.PNG =60%x){.align-center}
-![staging_settings.PNG](/img/staging/staged_reqfuel.PNG =60%x){.align-center}
+![staging_settings.PNG](/img/staging/staging_settings.PNG){.align-center width=400}
+![staging_settings.PNG](/img/staging/staged_reqfuel.PNG){.align-center width=400}
 
 ### Control methods
 
