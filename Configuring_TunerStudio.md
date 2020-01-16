@@ -1,9 +1,21 @@
+---
+title: Configuring_TunerStudio
+description: 
+published: true
+date: 2020-01-16T04:29:01.680Z
+tags: 
+---
+
 Configuring TunerStudio Project Properties
 ------------------------------------------
 
-The menu option for the project properties page can be found here <img src="project_properties_select.jpg" title="fig:project_properties_select.jpg" alt="project_properties_select.jpg" width="400" />
+The menu option for the project properties page can be found here
 
-Once opened this page will be seen. <img src="project_properties.jpg" title="fig:project_properties.jpg" alt="project_properties.jpg" width="350" />
+![TS_9.png](/img/TunerStudio/TS_9.png){.align-center width=400}
+
+Once opened this page will be seen. 
+
+![TS_4.png](/img/TunerStudio/TS_4.png){.align-center width=350}
 
 Settings Tab
 ------------
