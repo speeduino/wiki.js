@@ -2,10 +2,11 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2020-01-14T14:06:47.340Z
+date: 2020-01-16T15:32:11.799Z
 tags: 
 ---
 
+# Loading the Speeduino firmware
 ## Overview
 The Speeduino firmware is the code that powers the hardware and must be installed onto your board prior to using the ECU. New firmware releases are made regularly (Approximately every 2 months) that bring new features, bug fixes and performance improvements so staying up to date is highly recommended. 
 
@@ -148,4 +149,6 @@ The following can occur if you have only opened the speeduino.ino file rather th
 
 Make sure all the files are contained within the same directory, then select File-&gt;Open and find the speeduino.ino file. If you have opened the project correctly, you should have multiple tabs along the top:
 
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/speeduinoIDE.png" width="60%" />
+![speeduinoIDE.png](/img/TunerStudio/speeduinoIDE.png){.align-center width=500}
+
+If you see only a single file or a small number of files then you haven't opened the entire project.
