@@ -2,7 +2,7 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2020-01-16T12:41:42.574Z
+date: 2020-01-16T12:42:32.994Z
 tags: ignition, wiring
 ---
 
@@ -31,8 +31,8 @@ There are many dual pole, wasted spark coil packs available both with and withou
 
 ### Coil on Plug 
 As an alternative to a dual pole wasted spark coil, individual coil on plug units can be used in a wasted spark configuration. 
-![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-COP.png){.align-center width=500}
 
+![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-COP.png){.align-center width=500}
 
 > Note: The above examples use 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
 {.is-warning}
