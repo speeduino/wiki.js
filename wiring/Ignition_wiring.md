@@ -2,11 +2,11 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2020-01-16T11:21:51.013Z
+date: 2020-01-16T12:41:42.574Z
 tags: ignition, wiring
 ---
 
-# Header
+# Ignition Wiring
 ## Overview
 Ignition output configuration can be one of the most difficult areas of ECU wiring and one that often causes the most confusion. A large part of this complexity comes from the huge number of different ignition types that are available, with there being significant changes in the hardware used in the late 80s and throughout the 90s compared to newer designs. 
 
