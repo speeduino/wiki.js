@@ -2,7 +2,7 @@
 title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2020-01-07T05:01:47.638Z
+date: 2020-01-16T11:46:41.284Z
 tags: decoder
 ---
 
@@ -18,7 +18,7 @@ Missing tooth cam or distributor wheels can be used with cam or distributor whee
 Due to typically limited teeth, only half the teeth being read on each revolution, and the potential for reduced accuracy due to timing drive wear; the timing accuracy may be reduced in comparison to crank wheel systems. A figure of error cannot be predicted here as the wear or 'slop' of a given engine will be unique. However, it should be reasonable to assume the timing error will not exceed the accuracy of an OEM-equivalent cam-driven system such as typical distributor systems, or possibly better due to more sensor targets.
 
 ## Tuner Studio Configuration
-![missingtooth_cam_triggerconfig.png](/img/decoders/missingtooth_cam_triggerconfig.png =80%x){.align-center}
+![missingtooth_cam_triggerconfig.png](/img/decoders/missingtooth_cam_triggerconfig.png){.align-center width=450}
 
 **Fields:**
 -   Primary base teeth: This is the number of teeth the wheel would have if there were none missing, e.g. a 36-1 wheel has only 35 actual teeth, but you would enter 36 into this field.
@@ -32,4 +32,4 @@ The trigger angle is set in CRANK degrees, not cam.
 
 ## Trigger Pattern
 
-![missingtooth_cam_trace.jpg](/img/decoders/missingtooth_cam_trace.jpg =75%x){.align-center}
+![missingtooth_cam_trace.jpg](/img/decoders/missingtooth_cam_trace.jpg){.align-center width75%}
