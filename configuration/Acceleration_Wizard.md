@@ -2,12 +2,11 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2020-01-16T11:33:20.998Z
+date: 2020-01-16T13:15:47.463Z
 tags: TunerStudio
 ---
 
-Overview
---------
+# Acceleration Enrichment
 
 Acceleration Enrichment (AE) is used to add extra fuel during the short transient period following a rapid increase in throttle. It performs much the same function as an accelerator pump on a carbureted engine, increasing the amount of fuel delivered until the manifold pressure reading adjusts based on the new load.
 
@@ -19,8 +18,8 @@ Acceleration Enrichment (AE) is used to add extra fuel during the short transien
 
 Tuning of acceleration enrichment is based on the rate of change of the throttle position, a variable known as TPSdot (TPS delta over time). This is measured in %/second, with higher values representing faster presses of the throttle and values in the range 50%/s to 1000%/s are normal. Eg:
 
--   100%/s = pressing the throttle from 0% to 100% in 1 second
--   1000%/s = pressing the throttle from 0% to 100% in 0.1s
+- 100%/s = pressing the throttle from 0% to 100% in 1 second
+- 1000%/s = pressing the throttle from 0% to 100% in 0.1s
 
 TPSdot forms the X axis of the acceleration curve, with the Y axis value representing the % increase in fuel.
 

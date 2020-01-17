@@ -1,5 +1,12 @@
-Overview
---------
+---
+title: Dual Wheel
+description: 
+published: true
+date: 2020-01-17T00:44:09.513Z
+tags: trigger
+---
+
+## Dual Wheel
 
 A dual wheel trigger is one where there is a primary multi-tooth wheel combined with a secondary single pulse to provide location information. The primary input should contain no missing teeth. Both pulses can run at either cam or crank speed, but sequential operations requires that the secondary pulse is located on the cam. The design of the secondary trigger can vary (Eg a single short tooth, half-moon wheel etc), provided it only provides a single pulse per revolution.
 
@@ -7,13 +14,12 @@ As with other arbitrary tooth count wheels, the number of teeth must evenly divi
 
 Tooth \#1 is defined to be the first tooth on the primary wheel AFTER the pulse on the secondary wheel.
 
-Applications
-------------
+### Applications
 
 Dual wheel triggers are standard fitment on a number of Euro make cars, particularly those from VW and Audi. They are also a popular aftermarket fitment due to their simplicity and ease of fitment.
 
-Tuner Studio Configuration
---------------------------
+### Tuner Studio Configuration
+
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/decoders/dualwheel_triggerconfig.png" />
@@ -31,7 +37,7 @@ Fields:
 
 The trigger angle can be found by placing the engine at TDC, then calculating how far it must be rotated until the first primary tooth after the secondary pulse.
 
-### Sequential operation
+#### Sequential operation
 
 The missing tooth decoder supports sequential operation if the secondary input is running at cam speed. If Sequential mode is selected for either the fuel timing or spark timing, the system will expect that the secondary input is running at cam speed and will only provide half the output pulses if this is not the case.
 

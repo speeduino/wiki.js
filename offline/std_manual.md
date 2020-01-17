@@ -2,11 +2,11 @@
 title: std_manual
 description: 
 published: true
-date: 2020-01-16T06:28:52.838Z
+date: 2020-01-17T01:03:46.600Z
 tags: 
 ---
 
-./Overview.md
+./home.md
 ./Installing_Firmware.md
 ./Connecting_to_TunerStudio.md
 ./Configuring_TunerStudio.md

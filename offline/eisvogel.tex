@@ -871,6 +871,12 @@ $if(titlepage-background)$
   \setstretch{2}
   \vfill
   \vskip -8em
+
+  $if(logo)$
+  \noindent
+  \includegraphics[width=$if(logo-width)$$logo-width$$else$100$endif$pt, left]{$logo$}
+  $endif$
+  \vskip 2em
   \noindent {\huge \textbf{\textsf{$title$}}}
   $if(subtitle)$
   \vskip 1em
@@ -892,12 +898,11 @@ $else$
   \vskip 2em
   \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$}}
   \vfill
+  $if(logo)$
+  \noindent
+  \includegraphics[width=$if(logo-width)$$logo-width$$else$100$endif$pt, left]{$logo$}
+  $endif$
 }
-$endif$
-
-$if(logo)$
-\noindent
-\includegraphics[width=$if(logo-width)$$logo-width$$else$100$endif$pt, left]{$logo$}
 $endif$
 
 $if(titlepage-background)$

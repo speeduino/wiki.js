@@ -2,25 +2,20 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-16T07:24:23.488Z
+date: 2020-01-16T12:41:06.829Z
 tags: wiring
 ---
 
-Introduction
-------------
-
+# Injector wiring
+## Overview
 Speeduino contains 4 injector control circuits and is capable of supporting up to 8 injectors (and cylinders) with these.
 
-Supported Injectors
--------------------
-
+## Supported Injectors
 Speeduino supports High-Z (aka 'high-impedance' or 'saturated') injectors natively. Low-Z injectors are supported with the addition of resistors wired in series with the signal wires. High-Z injectors are typically those with a resistance greater than 8 Ohms.
 
 If "Low-Z" ("peak and hold" or PWM-controlled) injectors that are lower impedance are used, the wiring will require series resistors on each injector to avoid damaging the board with excessive current. The resistor ohms and watt rating can be calculated by Ohm's Law, or use an Internet calculator page such as the [Speeduino Injector Resistor Calculator](http://efistuff.orgfree.com/InjectorResistorCalculator.html).
 
-Layout
-------
-
+## Layouts
 There are a number of ways that the injectors can be wired depending on your configuration and preference.
 
 ### 1, 2 and 3 injectors
@@ -53,13 +48,10 @@ This method is only available on 4 cylinder / 4 injector applications and allows
 
 For setups with more than 4 injectors, the number of outputs used will be equal to half the number of injectors.
 
-**Examples:**
-
-**6 Cylinder**
+#### 6 Cylinder
 ![inj_6Cyl_semi-seq.png](/img/wiring/inj_6Cyl_semi-seq.png){.align-center width=75%}
 
-**8 Cylinder**
-
+#### 8 Cylinder
 ![inj_8Cyl_semi-seq.png](/img/wiring/inj_8Cyl_semi-seq.png){.align-center width=75%}
 
 Inline with the above, this configuration requires each injector output to be connected to 2 injectors.
