@@ -15,7 +15,7 @@ METADATA_ARG=--metadata-file=${METADATA}
 ARGS="${TEMPLATE_OPTIONS} --template=${TEMPLATE}"
 #ARGS="${TEMPLATE_OPTIONS}"
 #PDF_ARGS="--pdf-engine=xelatex"
-PDF_ARGS="-f markdown-markdown_in_html_blocks --pdf-engine=xelatex"
+PDF_ARGS="-f markdown-markdown_in_html_blocks --pdf-engine=xelatex --metadata date=`date +%D`"
 
 #This contains all the fonts that might be needed
 #sudo apt-get install texlive-fonts-extra
@@ -43,5 +43,5 @@ cp ${OUTPUT_FILENAME} ${CUR_PATH}/offline
 
 #Cleanup
 cd ${BUILD}/..
-rm -rf ./tmp
+#rm -rf ./tmp
 cd ${CUR_PATH}
