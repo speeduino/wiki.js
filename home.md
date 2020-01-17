@@ -1,4 +1,3 @@
-
 ---
 title: Speeduino Manual
 description: The Speeduino documentation manual
