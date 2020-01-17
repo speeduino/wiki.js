@@ -2,12 +2,13 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2020-01-07T04:53:01.240Z
+date: 2020-01-17T00:41:27.503Z
 tags: 
 ---
 
-# Missing Tooth Pattern
-## Overview
+# Supported trigger patterns
+## Missing Tooth Pattern
+### Overview
 
 A missing tooth crank trigger is used as standard equipment by a number of OEMs, most notably Ford, but is also very popular as an aftermarket fitment.
 
@@ -17,11 +18,11 @@ It is comprised of crank wheel with a given number of evenly spaced teeth, and o
 {.is-warning}
 
 
-## Applications
+### Applications
 
 Missing tooth crank wheels can be used on virtually any engine and is one of the more popular aftermarket options. It provides very good resolution in the higher tooth count versions (Eg 36-1 and 60-2) without being CPU intensive to decode.
 
-## Tuner Studio Configuration
+### Tuner Studio Configuration
 ![missingtooth_triggerconfig.png](/img/decoders/missingtooth_triggerconfig.png){.align-center}
 
 **Fields:**
@@ -40,5 +41,5 @@ The missing tooth decoder supports sequential operation if an additional cam inp
 
 This cam signal should take the form of a single pulse every complete cycle. This can be a short tooth or a half moon type arrangement, provided that electrically there is only a single rising (or falling) pulse per cycle.
 
-## Trigger Pattern
+### Trigger Diagram
 ![missingtooth_trace1.png](/img/decoders/missingtooth_trace1.png){.align-center}
