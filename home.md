@@ -1,9 +1,15 @@
 ---
-title: Speeduino wiki
-description: The Speeduino documentation wiki
+title: Speeduino Manual
+description: The Speeduino documentation manual
 published: true
 date: 2020-01-10T06:08:13.463Z
-tags: 
+tags: home
+titlepage: true
+titlepage-rule-height: 2
+titlepage-rule-color: "360049"
+titlepage-background: "offline/background1.pdf"
+logo: "img/Speeduino logo_med.png"
+logo-width: 120
 ---
 
 # Speeduino Manual
