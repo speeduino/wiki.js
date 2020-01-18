@@ -1,9 +1,9 @@
 ---
-title: Basic_Distributor
+title: Basic Distributor
 description: 
 published: true
-date: 2020-01-17T11:55:34.718Z
-tags: 
+date: 2020-01-18T11:51:26.983Z
+tags: decoder, trigger
 ---
 
 ## Basic Distributor
