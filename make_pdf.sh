@@ -1,10 +1,12 @@
 #!/bin/bash
-PANDOC_PATH=/home/pi/pandoc_src/bin/
+#PANDOC_PATH=/home/pi/pandoc_src/bin/
+PANDOC_PATH=/usr/bin/
 MAKEFILE=Makefile
-OUTPUT_FILENAME='offline/Speeduino_manual.pdf'
-METADATA='offline/metadata.yaml'
-DEFINITION='offline/std_manual.md'
-BUILD='/home/pi/book/tmp'
+WORKING_DIR=`pwd`
+OUTPUT_FILENAME=${WORKING_DIR}'/offline/Speeduino_manual.pdf'
+METADATA=${WORKING_DIR}'/offline/metadata.yaml'
+DEFINITION=${WORKING_DIR}'/offline/std_manual.md'
+BUILD='/tmp/book'
 CHAPTERS=`tail -n +8 ${DEFINITION}`
 IMAGES_FOLDER="img"
 IMAGES=${IMAGES_FOLDER}/*
@@ -19,10 +21,10 @@ PDF_ARGS="-f markdown-markdown_in_html_blocks --pdf-engine=xelatex --metadata da
 
 #This contains all the fonts that might be needed
 #sudo apt-get install texlive-fonts-extra
-
 CUR_PATH=`pwd`
 mkdir -p ${BUILD}
 cd ${BUILD}
+echo "Temp directory:" `pwd`
 git clone --depth=1 https://github.com/speeduino/wiki.js.git
 cd wiki.js
 
@@ -37,11 +39,10 @@ echo ${PANDOC_PATH}pandoc ${ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
 ${PANDOC_PATH}pandoc ${ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
 
 #Copy the produced PDF back to the main directory
-cp ${OUTPUT_FILENAME} ${CUR_PATH}/offline
+#cp ${OUTPUT_FILENAME} ${CUR_PATH}/offline
 #	@echo "$@ was built"
 
 
 #Cleanup
-cd ${BUILD}/..
-#rm -rf ./tmp
 cd ${CUR_PATH}
+rm -rf ${BUILD}
