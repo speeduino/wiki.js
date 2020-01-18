@@ -1,6 +1,14 @@
 #!/bin/bash
-#PANDOC_PATH=/home/pi/pandoc_src/bin/
+
 PANDOC_PATH=/usr/bin/
+for arg in "$@"
+do
+    if [ "$arg" == "--local" ]
+    then
+        PANDOC_PATH=/home/pi/pandoc_src/bin/
+    fi
+done
+
 MAKEFILE=Makefile
 WORKING_DIR=`pwd`
 OUTPUT_FILENAME=${WORKING_DIR}'/offline/Speeduino_manual.pdf'
@@ -13,11 +21,11 @@ IMAGES=${IMAGES_FOLDER}/*
 COVER_IMAGE=${IMAGES_FOLDER}/Speeduino\ logo.png
 TEMPLATE=offline/eisvogel.tex
 TEMPLATE_OPTIONS='--listings --toc --toc-depth=2'
-METADATA_ARG=--metadata-file=${METADATA}
 ARGS="${TEMPLATE_OPTIONS} --template=${TEMPLATE}"
 #ARGS="${TEMPLATE_OPTIONS}"
 #PDF_ARGS="--pdf-engine=xelatex"
-PDF_ARGS="-f markdown-markdown_in_html_blocks --pdf-engine=xelatex --metadata date=`date +%D`"
+PDF_ARGS="-f markdown-markdown_in_html_blocks --pdf-engine=xelatex --metadata-file=${WORKING_DIR}/offline/metadata.yml"
+METADATA_ARGS="--metadata date=`date +%D`"
 
 #This contains all the fonts that might be needed
 #sudo apt-get install texlive-fonts-extra
@@ -35,8 +43,8 @@ do
 done
 
 
-echo ${PANDOC_PATH}pandoc ${ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
-${PANDOC_PATH}pandoc ${ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
+echo ${PANDOC_PATH}pandoc ${ARGS} ${PDF_ARGS} ${METADATA_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
+${PANDOC_PATH}pandoc ${ARGS} ${PDF_ARGS} ${METADATA_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
 
 #Copy the produced PDF back to the main directory
 #cp ${OUTPUT_FILENAME} ${CUR_PATH}/offline

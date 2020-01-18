@@ -2,7 +2,7 @@
 title: std_manual
 description: 
 published: true
-date: 2020-01-17T01:03:46.600Z
+date: 2020-01-18T12:20:10.417Z
 tags: 
 ---
 
@@ -44,7 +44,7 @@ tags:
 ./decoders/4G63.md
 ./decoders/GM_24X.md
 ./decoders/Jeep_2000.md
-./decoders/Audi_135.md
+./decoders/Harley_EVO.md
 ./decoders/Honda_D17.md
 ./decoders/Miata_99.md
 ./decoders/Non-360.md
