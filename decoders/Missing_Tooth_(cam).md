@@ -2,12 +2,12 @@
 title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2020-01-17T00:42:59.489Z
+date: 2020-01-18T11:47:20.390Z
 tags: decoder
 ---
 
 ## Missing tooth (Cam speed)
-The missing tooth cam-speed trigger is a Speeduino innovation, that permits function similar to a dual-wheel setup, thereby allowing sequential or wasted spark operation from cam-mounted or distributor wheels. The operation is based on both [Missing Tooth](Missing_Tooth "wikilink") and [Dual Wheel](Dual_Wheel "wikilink"). It is suggested to read those sections first for familiarization as this section will only highlight the fundamental differences to those common decoders.
+The missing tooth cam-speed trigger is a Speeduino innovation, that permits function similar to a dual-wheel setup, thereby allowing sequential or wasted spark operation from cam-mounted or distributor wheels. The operation is based on both [Missing Tooth](/decoders/Missing_Tooth "wikilink") and [Dual Wheel](/decoders/Dual_Wheel "wikilink"). It is suggested to read those sections first for familiarization as this section will only highlight the fundamental differences to those common decoders.
 
 This decoder is comprised of a single cam-speed wheel in the same configuration as a crank-mounted missing-tooth wheel. The number of teeth ***must*** be evenly divisible into 720°. As it rotates at half crank speed, the sensor reads half the wheel teeth on each 360° crank revolution, and the remaining teeth on the next crank rotation. A single missing tooth will appear on only one of the two crank rotations, and is then used as a phase indicator, much as the dual-wheel system uses the cam signal.
 
@@ -21,10 +21,10 @@ Due to typically limited teeth, only half the teeth being read on each revolutio
 ![missingtooth_cam_triggerconfig.png](/img/decoders/missingtooth_cam_triggerconfig.png){.align-center width=450}
 
 **Fields:**
--   Primary base teeth: This is the number of teeth the wheel would have if there were none missing, e.g. a 36-1 wheel has only 35 actual teeth, but you would enter 36 into this field.
--   Missing Teeth: The size of the 'gap' in the number of teeth. These missing teeth must be situated in a single block (ie there's only a single gap in the teeth). One missing tooth is recommended.
--   Trigger Angle: This is the angle in **crank degrees** **AFTER** TDC (ATDC) of the first tooth following the gap. This number ranges from -360° to +360°.
--   Cam Speed: Ensure this box is checked for this cam-speed system.
+- **Primary base teeth**: This is the number of teeth the wheel would have if there were none missing, e.g. a 36-1 wheel has only 35 actual teeth, but you would enter 36 into this field.
+- **Missing Teeth:** The size of the 'gap' in the number of teeth. These missing teeth must be situated in a single block (ie there's only a single gap in the teeth). One missing tooth is recommended.
+- **Trigger Angle**: This is the angle in **crank degrees** **AFTER** TDC (ATDC) of the first tooth following the gap. This number ranges from -360° to +360°.
+- **Cam Speed**: Ensure this box is checked for this cam-speed system.
 
 ### Timing Setting
 

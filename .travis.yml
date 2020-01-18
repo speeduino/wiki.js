@@ -1,0 +1,56 @@
+# Continuous Integration (CI) is the practice, in software
+# engineering, of merging all developer working copies with a shared mainline
+# several times a day < http://docs.platformio.org/page/ci/index.html >
+#
+# Documentation:
+#
+# * Travis CI Embedded Builds with PlatformIO
+#   < https://docs.travis-ci.com/user/integration/platformio/ >
+#
+# * PlatformIO integration with Travis CI
+#   < http://docs.platformio.org/page/ci/travis.html >
+#
+# * User Guide for `platformio ci` command
+#   < http://docs.platformio.org/page/userguide/cmd_ci.html >
+#
+#
+# Please choice one of the following templates (proposed below) and uncomment
+# it (remove "# " before each line) or use own configuration according to the
+# Travis CI documentation (see above).
+#
+
+
+#
+# Template #1: General project. Test it using existing `platformio.ini`.
+#
+
+language: python
+python:
+    - "2.7"
+
+dist: bionic
+sudo: required
+
+
+#addons:
+#  apt:
+#    sources:
+#      - sourceline: 'deb http://ports.ubuntu.com/ubuntu-ports trusty-backports main restricted universe multiverse'
+#    packages:
+#      - cppcheck/trusty-backports
+
+before_install:
+  - sudo apt-get update -qq
+#  - sudo apt-get install -t trusty-backports cppcheck
+# Requirements for doxygen
+  - sudo apt-get install texlive-fonts-recommended lmodern texlive-xetex texlive-fonts-extra pandoc
+
+script:
+  - wget https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb
+  - sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb
+  - cd /home/travis/build/speeduino/wiki.js
+  - sudo ln -s /home/travis/build/speeduino/wiki.js/img /img
+  - sudo ./make_pdf.sh
+  - curl -v https://speeduino.com:2078 || true
+  - curl -v --tlsv1.2 --ipv4 --user "speeduino_manual@speeduino.com:$WEB_PWD" --basic -T "./offline/Speeduino_manual.pdf" "https://speeduino.com:2078/Speeduino_manual.pdf"
+

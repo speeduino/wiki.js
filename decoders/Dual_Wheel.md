@@ -2,7 +2,7 @@
 title: Dual Wheel
 description: 
 published: true
-date: 2020-01-17T00:44:09.513Z
+date: 2020-01-18T11:49:59.890Z
 tags: trigger
 ---
 
@@ -20,18 +20,15 @@ Dual wheel triggers are standard fitment on a number of Euro make cars, particul
 
 ### Tuner Studio Configuration
 
+![dualwheel_triggerconfig.png](/img/decoders/dualwheel_triggerconfig.png){.align-center width=400}
 
-<center>
-<img src="https://raw.githubusercontent.com/speeduino/wiki/master/decoders/dualwheel_triggerconfig.png" />
+**Fields**:
 
-</center>
-Fields:
-
--   Primary base teeth: This is the number of teeth on the primary input wheel. If the primary wheel is located on the cam (or is otherwise running at cam speed), divide it's teeth by two for this setting
--   Trigger Angle: This is the angle in crank degrees **AFTER** TDC (ATDC) of the first tooth on the primary input, following the single pulse on the secondary input.
--   Trigger edge: Whether the trigger will be taken from the leading (rising) or trailing (falling) edge of the primary input
--   Secondary trigger edge: As above, but for the secondary input
--   re-sync every cycle: Whether the system will reset the sync level every time the secondary input is seen. This can be useful for noisy crank triggers that otherwise my lose sync permanently and not recover until a restart.
+- **Primary base teeth**: This is the number of teeth on the primary input wheel. If the primary wheel is located on the cam (or is otherwise running at cam speed), divide it's teeth by two for this setting
+- **Trigger Angle**: This is the angle in crank degrees **AFTER** TDC (ATDC) of the first tooth on the primary input, following the single pulse on the secondary input.
+- **Trigger edge**: Whether the trigger will be taken from the leading (rising) or trailing (falling) edge of the primary input
+- **Secondary trigger edge**: As above, but for the secondary input
+- **Re-sync every cycle**: Whether the system will reset the sync level every time the secondary input is seen. This can be useful for noisy crank triggers that otherwise my lose sync permanently and not recover until a restart.
 
 ### Timing Setting
 
