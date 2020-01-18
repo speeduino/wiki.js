@@ -2,8 +2,8 @@
 title: Miata 99-05
 description: 
 published: true
-date: 2020-01-18T12:01:57.549Z
-tags: decoder, trigger, miata
+date: 2020-01-18T12:03:50.588Z
+tags: decoder, miata, trigger
 ---
 
 ## Miata 99-05
