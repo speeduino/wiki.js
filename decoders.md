@@ -2,7 +2,7 @@
 title: Trigger patterns and decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2020-01-06T03:04:16.730Z
+date: 2020-01-18T12:19:32.241Z
 tags: 
 ---
 
@@ -19,8 +19,8 @@ The list below includes all those that are currently supported. They each lead t
 | [GM 7X](/decoders/GM_7X "wikilink")                               | Untested         | Multi tooth pulse                                                                                                               |
 | [4G63](/decoders/4G63 "wikilink")                                 | Complete         | As used on many 4 cylinder Mitsubishis and NA/NB Miata / MX-5. Also supports the 6 cylinder variation of this pattern (Eg 6g72) |
 | [GM 24X](/decoders/GM_24X "wikilink")                             | Untested         | Commonly used on GM LS1 V8                                                                                                      |
-| [Jeep 2000](/decoders/Jeep_2000 "wikilink")                       | Complete         | 6 Cylinder Jeep engines from '91 to 2000                                                                                        |
-| [Audi 135](/decoders/Audi_135 "wikilink")                         | Complete         | Audi engines with 135 pulses-per-revolution                                                                                     |
+| [Jeep 2000](/decoders/Jeep_2000 "wikilink")                       | Complete         | 6 Cylinder Jeep engines from '91 to 2000                                                                                     |
+| [Harley EVO](/decoders/Harley_EVO "wikilink")                     | Complete         | Harley EVO V-Twin engines up to '99                                                                                              |
 | [Honda D17](/decoders/Honda_D17 "wikilink")                       | Complete         | Honda 4 cylinder D17 engine                                                                                                     |
 | [Miata 99](/decoders/Miata_99 "wikilink")                         | Complete         | 1.8L Miata/MX5 from '99 to '00                                                                                                  |
 | [Non-360](/decoders/Non-360 "wikilink")                           | Complete         | A variation of the dual wheel decoder that can be used with tooth counts that do not divide evenly into 360                     |
