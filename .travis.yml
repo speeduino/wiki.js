@@ -46,9 +46,11 @@ before_install:
   - sudo apt-get install texlive-fonts-recommended texlive-xetex pandoc
 
 script:
-  - cd /home/travis/build/noisymime/wiki.js
-  - sudo ln -s /home/travis/build/noisymime/wiki.js/img /img
+  - wget https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb
+  - sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb
+  - cd /home/travis/build/speeduino/wiki.js
+  - sudo ln -s /home/travis/build/speeduino/wiki.js/img /img
   - sudo ./make_pdf.sh
   - curl -v https://speeduino.com:2078 || true
-  - curl -v --tlsv1.2 --ipv4 --user "speeduino_manual@speeduino.com:$WEB_PWD" --basic -T "./offline/Speeduino_manual.pdf" "https://speeduino.com:2078Speeduino_manual.pdf"
+  - curl -v --tlsv1.2 --ipv4 --user "speeduino_manual@speeduino.com:$WEB_PWD" --basic -T "./offline/Speeduino_manual.pdf" "https://speeduino.com:2078/Speeduino_manual.pdf"
 
