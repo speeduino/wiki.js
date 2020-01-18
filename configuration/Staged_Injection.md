@@ -2,7 +2,7 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2020-01-16T12:36:25.977Z
+date: 2020-01-18T22:27:45.271Z
 tags: 
 ---
 
@@ -10,7 +10,7 @@ tags:
 ## Overview
 Speeduino has the ability to control a secondary fuel stage for engines that have 2 sets of injectors, typically of different capacities. There are few stock engines that come with secondary injectors, the notable exception being many Mazda rotaries. Secondary staged injection is also a common modification, used whenever large injectors are required, but where it is desirable to keep smaller injectors for smoother low RPM performance.
 
-### Configuration
+## Configuration
 No matter which control strategy is chosen, you must enter the sizing of the primary and secondary injectors in order to allow Speeduino to know the split in the overall fuelling.
 
 > **CRITICAL** - The req-Fuel value in the [Engine Constants](Engine_Constants "wikilink") MUST be updated when staged injection is turned on. **When staging is in use, the value entered in the req_fuel calculator MUST be equal to the sum of both the primary and secondary injector sizes**
@@ -18,6 +18,7 @@ No matter which control strategy is chosen, you must enter the sizing of the pri
 {.is-danger}
 
 **Eg:**
+
 * **Primary Injectors :** 300cc
 * **Secondary Injectors :** 700cc
 * **Value entered into the req_fuel calculator :** 1000cc
