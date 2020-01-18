@@ -2,7 +2,7 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2020-01-18T22:27:45.271Z
+date: 2020-01-18T22:28:53.772Z
 tags: 
 ---
 
@@ -23,8 +23,8 @@ No matter which control strategy is chosen, you must enter the sizing of the pri
 * **Secondary Injectors :** 700cc
 * **Value entered into the req_fuel calculator :** 1000cc
 
-![staging_settings.PNG](/img/staging/staging_settings.PNG){.align-center width=400}
-![staging_settings.PNG](/img/staging/staged_reqfuel.PNG){.align-center width=400}
+![Staged fuel settings](/img/staging/staging_settings.PNG){.align-center width=400}
+![REquired fuel calculator](/img/staging/staged_reqfuel.PNG){.align-center width=400}
 
 ### Control methods
 Speeduino provides 2 staging control modes, each with their own strengths and weaknesses. In most cases it is recommended to start with the Automatic mode, which only requires tuning of the standard VE table, and reviewing to see if you get the desired outcome. Only if this can't be tuned to give a satisfactory fuel split would changing to the manual table tuning be recommended.
