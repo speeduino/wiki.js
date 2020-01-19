@@ -2,26 +2,25 @@
 title: Boost Control
 description: Open and closed loop boost control settings
 published: true
-date: 2020-01-16T11:43:18.702Z
+date: 2020-01-19T11:43:23.245Z
 tags: 
 ---
 
-Overview
---------
+# Boost Control
 
 Speeduino has an on board closed loop boost controller than can be used to regulate standard single turbo setups.
 
 Most 3 or 4 port boost solenoids can be used, with frequencies between 15Hz and 500Hz supported. Any of the on board high current outputs can be directly connected to the solenoid and is controlled via a boost target table and PID tuning. Over boost limiting is also available.
 
-Settings
---------
+## Settings
 
 Speeduino's boost control uses a PID algorithm with 2 modes of operation, Simple and Full. Each has their own advantages and disadvantages, as outlined below
 ![boost_settings.png](/img/accessories/boost_settings.png){.align-center width=400}
 In Simple mode, the PID values themselves are controlled by the ECU itself and a sensitivity slider is used to adjust how aggressive the output duty cycle will be set. The simple mode can be easy and fast to setup, however has the downside that to avoid overboost, the sensitivity may need to be set low, which can increase lag.
 
-### Target table
-![boost_map.png](/img/accessories/boost_map.png){.align-center width=450}
+## Target table
+
+![Example boost map](/img/accessories/boost_map.png){.align-center width=450}
 
 The boost map function varies depending on whether open or closed loop boost control has been selected. 
 
