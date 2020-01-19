@@ -2,12 +2,11 @@
 title: Limiters
 description: Configuring engine protection limiters
 published: true
-date: 2020-01-07T01:45:12.010Z
+date: 2020-01-19T11:45:07.950Z
 tags: 
 ---
 
-Overview
---------
+# Limiters
 
 Speeduino includes a spark based rev limited with both hard and soft cuts.
 
@@ -17,12 +16,11 @@ The soft cut limiter will lock timing at an absolute value to slow further accel
 {.is-info}
 
 
-Settings
---------
+## Settings
 
-![revLimiter.png](/img/tuning/revLimiter.png){.align-center}
+![Rev limiter settings](/img/tuning/revLimiter.png){.align-center}
 
--   **Soft rev limit:** The RPM at which the soft cut ignition timing will be applied over.
--   **Soft limit absolute timing:** Whilst the engine is over the soft limit RPM, the ignition advance will be held at this value. Lower values here will have a greater soft cut affect.
--   **Soft limit max time:** The maximum number of seconds that the soft limiter will operate for. If the engine remains in the soft cut RPM region longer than this, the hard cut will be applied.
--   **Hard rev limiter:** Above this RPM, all ignition events will cease.
+- **Soft rev limit:** The RPM at which the soft cut ignition timing will be applied over.
+- **Soft limit absolute timing:** Whilst the engine is over the soft limit RPM, the ignition advance will be held at this value. Lower values here will have a greater soft cut affect.
+- **Soft limit max time:** The maximum number of seconds that the soft limiter will operate for. If the engine remains in the soft cut RPM region longer than this, the hard cut will be applied.
+- **Hard rev limiter:** Above this RPM, all ignition events will cease.
