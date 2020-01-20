@@ -2,7 +2,7 @@
 title: std_manual
 description: 
 published: true
-date: 2020-01-18T12:20:10.417Z
+date: 2020-01-20T06:27:20.241Z
 tags: 
 ---
 
@@ -52,3 +52,4 @@ tags:
 ./decoders/Subaru_36-2-2-2.md
 ./boards/V04.md
 ./boards/V03.md
+./footer.md
