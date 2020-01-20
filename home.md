@@ -2,8 +2,14 @@
 title: Speeduino Manual
 description: The Speeduino documentation manual
 published: true
-date: 2020-01-20T03:33:24.788Z
+date: 2020-01-10T06:08:13.463Z
 tags: home
+titlepage: true
+titlepage-rule-height: 2
+titlepage-rule-color: "360049"
+titlepage-background: "offline/background1.pdf"
+logo: "offline/logo.png"
+logo-width: 350
 ---
 
 # Introduction
