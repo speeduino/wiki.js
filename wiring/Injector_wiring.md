@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-16T12:41:06.829Z
+date: 2020-01-24T06:29:26.450Z
 tags: wiring
 ---
 
@@ -30,7 +30,7 @@ For 4 cylinders/injectors, there are 2 ways that these can be connected to Speed
 
 The standard method is the same as that used for 6 or 8 cylinder setups, where 2 injectors are connected to each injector channel. In this configuration, only 2 injector channels will be used. The injectors paired together must have their Top Dead Centres (TDC) 360 crank degrees apart.
 
-![inj_4Cyl_semi-seq.png](/img/wiring/inj_4Cyl_semi-seq.png){.align-center width=75%}
+![inj_4Cyl_semi-seq.png](/img/wiring/inj_4Cyl_semi-seq.png){.align-center width=450}
 
 #### Method 2 (Full sequential)
 
@@ -38,7 +38,7 @@ This method is only available on 4 cylinder / 4 injector applications and allows
 
 `Settings -> Engine Constants -> Injector Timing -> Semi-Sequential`
 
-![inj_4Cyl_seq.png](/img/wiring/inj_4Cyl_seq.png){.align-center width=75%}
+![inj_4Cyl_seq.png](/img/wiring/inj_4Cyl_seq.png){.align-center width=450}
 
 ### 5 injectors
 
@@ -49,10 +49,10 @@ This method is only available on 4 cylinder / 4 injector applications and allows
 For setups with more than 4 injectors, the number of outputs used will be equal to half the number of injectors.
 
 #### 6 Cylinder
-![inj_6Cyl_semi-seq.png](/img/wiring/inj_6Cyl_semi-seq.png){.align-center width=75%}
+![inj_6Cyl_semi-seq.png](/img/wiring/inj_6Cyl_semi-seq.png){.align-center width=450}
 
 #### 8 Cylinder
-![inj_8Cyl_semi-seq.png](/img/wiring/inj_8Cyl_semi-seq.png){.align-center width=75%}
+![inj_8Cyl_semi-seq.png](/img/wiring/inj_8Cyl_semi-seq.png){.align-center width=450}
 
 Inline with the above, this configuration requires each injector output to be connected to 2 injectors.
 The injectors should be grouped in opposing pairs, that is, cylinders whose Top Dead Centres are 360 degrees apart.
