@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-01-16T06:00:50.841Z
+date: 2020-02-22T22:40:39.951Z
 tags: 
 ---
 
@@ -34,7 +34,7 @@ tags:
     -   [Fuel pump](/configuration/Fuel_pump "wikilink")
     -   [Boost Control](/configuration/Boost_Control "wikilink")
     -   [Tacho](/configuration/Tacho "wikilink")
-    -   [Secondary Serial Interface](/configuration/Secondary_Serial_IO_interface "wikilink")
+    -   [Secondary Serial Interface](/en/Secondary_Serial_IO_interface "wikilink")
     -   [Auxilary IO configuration](/configuration/Auxillary_IO_Configuration)
 -   **Tools Menu**
     -   [Sensor Calibration](/configuration/Sensor_Calibration "wikilink")
