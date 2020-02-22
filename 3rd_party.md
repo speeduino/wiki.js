@@ -1,3 +1,11 @@
+---
+title: 3rd_party
+description: 
+published: true
+date: 2020-02-22T23:02:32.029Z
+tags: 
+---
+
 3rd Party Boards
 ================
 
@@ -32,7 +40,7 @@ The modules can use several different processor board types, including different
 
 IO operations are programmed with logic, &lt; ,&gt;,= and bitwise AND . some variants offer 2 or even 3 connecting logic conditions.
 
-More information [dxControl-GPIO](dxControl-GPIO "wikilink")
+More information [dxControl-GPIO](en/dxControl-GPIO "wikilink")
 
 DxControl-Gears , A Gearbox Controller for Speeduino
 ----------------------------------------------------
