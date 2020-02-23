@@ -2,7 +2,7 @@
 title: Secondary_Serial_IO_interface
 description: 
 published: true
-date: 2020-02-23T00:37:57.218Z
+date: 2020-02-23T00:40:49.546Z
 tags: 
 ---
 
