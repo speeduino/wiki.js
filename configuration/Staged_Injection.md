@@ -2,7 +2,7 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2020-02-29T21:19:35.774Z
+date: 2020-02-29T21:25:11.772Z
 tags: 
 ---
 
@@ -32,7 +32,7 @@ Speeduino provides 2 staging control modes, each with their own strengths and we
 #### Automatic staging
 When using the automatic staging method Speeduino takes into account the full capacity of the injectors (ie the sum of the 2 injector stages) and will perform a split of these itself. With this method, the user can simply tune the VE table in the same manner as if only a single set of injectors were used and the system takes care of the rest.
 
-In this mode, Speeduino will attempt to use the primary injectors up to their 'Injector Duty Limit' (As configured in the [Injector Characteristics](Injector_Characteristics) dialog. When staging is being used, it is recommend that this limit should be no higher than 85%. Once the primary injectors reach this duty limit, Speeduino will begin to perform any further fueling from the secondary injectors. In this way, the VE table is all that is required for tuning as the system will take care of allocating the current fuel load to the best injectors.
+In this mode, Speeduino will attempt to use the primary injectors up to their 'Injector Duty Limit' (As configured in the [Injector Characteristics](/configuration/Injector_Characteristics) dialog. When staging is being used, it is recommend that this limit should be no higher than 85%. Once the primary injectors reach this duty limit, Speeduino will begin to perform any further fueling from the secondary injectors. In this way, the VE table is all that is required for tuning as the system will take care of allocating the current fuel load to the best injectors.
 
 #### Table control
 Table control allows the use of a manual 8x8 map that indicates what percentage of the fuel load will be performed by the **secondary** injectors
