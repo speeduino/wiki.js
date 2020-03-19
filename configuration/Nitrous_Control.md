@@ -2,8 +2,8 @@
 title: Nitrous Control
 description: 
 published: true
-date: 2020-03-19T02:43:54.000Z
-tags: tuning, nitrous, n2o
+date: 2020-03-19T02:44:21.875Z
+tags: n2o, nitrous, tuning
 ---
 
 # Nitrous Control
@@ -11,7 +11,7 @@ Speeduino contains a 2 step nitrous control system for controlling valves and ma
 The 2 stages operate independantly and can overlap (ie both run at the same time) if needed. 
 
 
-![nitrous_settings.png](/img/accessories/nitrous_settings.png){.align-center width=300}
+![nitrous_settings.png](/img/accessories/nitrous_settings.png){.align-center width=450}
 ## Activation Settings
 - **Nitrous Mode:** Whether 1 or 2 stages will be used
 - **Arming Pin:** The Arduino Pin to be used for arming the nitrous control. 
