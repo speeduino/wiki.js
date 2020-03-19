@@ -2,7 +2,7 @@
 title: std_manual
 description: 
 published: true
-date: 2020-01-20T06:27:20.241Z
+date: 2020-03-19T02:45:23.921Z
 tags: 
 ---
 
@@ -34,6 +34,7 @@ tags:
 ./configuration/Launch_Flatshift.md
 ./configuration/Fuel_pump.md
 ./configuration/Boost_Control.md
+./configuration/Nitrous_Control.md
 ./configuration/Sensor_Calibration.md
 ./configuration/Auxillary_IO_Configuration.md
 ./decoders/Missing_Tooth.md
