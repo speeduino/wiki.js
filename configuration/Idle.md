@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2020-04-08T01:49:07.081Z
+date: 2020-04-08T02:02:30.883Z
 tags: 
 ---
 
@@ -69,7 +69,6 @@ Both 2 and 3 wire PWM idle controllers are supported. In general, the 3 wire mod
 
 <center>
 <img src="http://i.imgur.com/QfDesZC.png" width="150px" />
-
 </center>
 
 ### Stepper Motors
@@ -78,33 +77,33 @@ Stepper motor idle controls are very common on GM and other OEM setups. These mo
 
 Most stepper idle valves function by turning a threaded rod in and out of the valve body in a series of partial-turn steps, increasing or decreasing airflow around the plunger (on end of valve below), and into the engine. The idle airflow bypasses the primary throttle body:
 
-<img src="http://i.imgur.com/ZAhTLrs.png" width="150px" />
+<center><img src="http://i.imgur.com/ZAhTLrs.png" width="150px" /></center>
 
 Example of a generic DRV8825 driver module on a v0.4 board:
 
-<img src="http://i.imgur.com/nHMXFNK.png" width="150px" />
+<center><img src="http://i.imgur.com/nHMXFNK.png" width="150px" /></center>
 
 Note the board is mounted at a standoff for air circulation and cooling:
 
-<img src="http://i.imgur.com/L65i6z1.png" width="150px" />
+<center><img src="http://i.imgur.com/L65i6z1.png" width="150px" /></center>
 
 The DRV8825 motor outputs are labeled as A2-A1-B1-B2, and the wiring connection examples are to this labeling. Check your schematics for the output connections that route to these DRV8825 outputs:
 
-<img src="http://efistuff.orgfree.com/images/DRV8825_Motor_Wiring.png" width="150px" />
+<center><img src="http://efistuff.orgfree.com/images/DRV8825_Motor_Wiring.png" width="150px" /></center>
 
 Examples of wiring to the DRV8825 driver:
 
-<img src="http://efistuff.orgfree.com/images/IAC_DSM_95-99.png" width="150px" />
+<center><img src="http://efistuff.orgfree.com/images/IAC_DSM_95-99.png" width="150px" /></center>
 
 The GM "screw-in" style used 1982 to 2003 on many models:
 
-<img src="http://efistuff.orgfree.com/images/IAC_GM_82-03.png" width="150px" />
+<center><img src="http://efistuff.orgfree.com/images/IAC_GM_82-03.png" width="150px" /></center>
 
 #### Stepper Driver Current Adjustment
 
 The DRV8825 stepper driver module includes a potentiometer (adjustable resistor) indicated by the yellow arrow in the image below. The potentiometer is used for setting the driver's maximum current output limit. Because Speeduino uses full-step operation, the current limit is not critical to protect the module, but should be adjusted to the module's maximum value for best operation of most automotive stepper IACs.
 
-<img src="http://i.imgur.com/1U3IQgF.jpg" width="150px" />
+<center><img src="http://i.imgur.com/1U3IQgF.jpg" width="150px" /></center>
 
 You will need a multi-meter or volt-meter to make the adjustment as outlined here. In order to set the potentiometer to maximum current before first use, ensure power to the module is OFF, then gently turn the potentiometer dial clockwise to the internal limit. **Do not force the adjustment beyond the internal stop.** Power-up Speeduino with 12V, and use the meter to test the voltage between the center of the potentiometer and any 12V ground point. Note the voltage reading. Power-down and repeat the test, this time turning the potentiometer counter/anti-clockwise gently to the internal limit. The test direction that resulted in higher voltage is the correct setting for the module.
 
@@ -118,11 +117,11 @@ Settings in TunerStudio include selecting stepper idle control, temperature and 
 
 <center>
 <img src="http://i.imgur.com/hC15oxv.png" width="450px" />
-
 </center>
+
 Under Idle control type, stepper is selected. The basic stepper operational settings are also located in this window:
 
-![Stepper idle settings](/img/idle/stepper.png){.align-center width=400}
+![Stepper idle settings](/img/idle/stepper.png){.align-center width=350}
 
 * **Step time:** This is how long (in ms) that the motor requires to complete each step. If this is set too low, the idle motor will not have completed the step before the ECU tries to make the next one, which leads to the motor 'twitching' and not functioning correctly. If this is set longer than needed the system will take longer to make each adjustment and the overall idle response will be slower. Typical values are usually 2ms - 4ms. The common GM stepper motor requires 3ms.
 * **Cool time:** Some motors require a slight pause in between steps in order to function correctly. This is know as the 'cooling' time. Typically this value will be less than 4ms at the most, with many motors operating normally with no cooling period (0ms)
@@ -157,11 +156,11 @@ Some engines prefer additional airflow during cranking for a reliable start. Thi
 
 While not an idle control mode, Speeduino is compatible with stand-alone idle valves that are self-controlling. Examples of this are thermal wax or bi-metal spring idle or auxiliary air valves like the one below. Internally expanding and contracting material opens and closes air valves, providing increased air flow and engine rpm when cold for warmup. Speeduino functions to enrich the cold engine and adjust for the additional air, in the same way it would if you opened the throttle slightly.
 
-<img src="http://i.imgur.com/I9Wc9p2.png" width="150px" />
+<center><img src="http://i.imgur.com/I9Wc9p2.png" width="150px" /></center>
 
 Other examples of stand-alone valves are simple On/Off valves as shown in the next section, controlled by inexpensive thermal switches like these:
 
-<img src="http://i.imgur.com/YImLboR.png" width="150px" /> <img src="http://i.imgur.com/nHEt5a5.png" width="150px" /> <img src="http://i.imgur.com/E13Z9Op.png" width="150px" />
+<center><img src="http://i.imgur.com/YImLboR.png" width="150px" /> <img src="http://i.imgur.com/nHEt5a5.png" width="150px" /> <img src="http://i.imgur.com/E13Z9Op.png" width="150px" /></center>
 
 ## Closed Loop Control
 
