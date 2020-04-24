@@ -2,8 +2,8 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-01-14T07:31:48.212Z
-tags: wiring, hardware
+date: 2020-04-24T17:23:17.530Z
+tags: hardware, wiring
 ---
 
 # Hardware Requirements overview
@@ -157,6 +157,8 @@ Outputs
 Speeduino injector drivers use on/off (not PWM) control and are designed to work with "High-Z" injectors. This type of injectors are also known as "saturated" or "high-impedance" that use full battery voltage to control the injector open cycle, and generally the impedance is greater than about 8 Ohms. If you are running "Low-Z" ("peak and hold" or PWM-controlled) injectors that are lower impedance, you will need to install series resistors on these to avoid damaging the board with excessive current. The resistor ohms and watt rating can be calculated by Ohm's Law, or use an Internet calculator page such as the [Speeduino Injector Resistor Calculator](http://efistuff.orgfree.com/InjectorResistorCalculator.html).
 
 Speeduino can drive up to 2 High-Z injectors per output channel.
+
+The 0.4v boards have 2 pins per injector channel allowing each injector to be directly connected to the board without splicing in the harness. If the application has less than 4 injectors using any pin connected to the proper channel will work. 
 
 ### Coils
 
