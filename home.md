@@ -2,7 +2,7 @@
 title: Speeduino Manual
 description: The Speeduino documentation manual
 published: true
-date: 2020-04-24T17:11:55.203Z
+date: 2020-04-24T17:13:24.501Z
 tags: home
 ---
 
@@ -16,7 +16,7 @@ Whilst this document will assist in providing information related to Speeduino's
 In terms of starting out with Speeduino, it can help to understand the various compnents that make up the system:
 
 1. **A Speeduino board** - This is the muscle of the Speeduino ECU and contains all the drivers and IO circuits. This maybe one of the generic boards (Such as the v0.4) or a PNP board for a specific model car
-2. **An Arduino** - This is the brains of Speeduino and contains the processor, memory and storage. It plugs into the Speeduino board in order to interface with the vehicle wiring
+2. **An Arduino** - This is the brains of Speeduino and contains the processor, memory and storage. It plugs into the Speeduino board in order to interface with the vehicle wiring. Usually a Arduino Mega 2560.
 3. **Firmware** - This is the system software that runs on the Arduino board and powers its operation. New firmware is released regularly with updates, performance improvements and bug fixes. 
 
 As a starting point, it is generally recommended to first upload the firmware to your Arduino and get it connecting to the tuning software (Tuner Studio) before moving on to hardware assembly or wiring etc. Software setup and configuration on Speeduino can be completed without the need for any additional hardware to be present (Beyond the arduino itself) and this allows exploration of the software and options available before either an outlay of significant funds or a significant investment of time.
