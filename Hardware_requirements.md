@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-04-24T17:23:17.530Z
+date: 2020-04-24T18:01:03.719Z
 tags: hardware, wiring
 ---
 
@@ -17,7 +17,7 @@ Speeduino uses the Arduino Mega 2560 R3 as the controller. All official and most
 Inputs
 ------
 
-### Crank sensor
+### Crank sensor / Camshaft Sensor
 
 This is arguably the most important sensor for Speeduino to function correctly. The signal going to the Arduino must be a 0v-5v square wave series of pulses (shown below) representing teeth on a wheel running at crank (or cam) speed. Many Hall and 'opto' sensors meet this digital square-wave spec. If only a crankshaft trigger wheel is used (no cam signal), the crank wheel must have a 'missing' tooth in order to provide position information as well as the engine RPM. Tested missing-tooth wheels currently are 4-1, 12-1, 36-1 and 60-2.
 
@@ -26,6 +26,10 @@ Alternatively (and necessary for full-sequential injection) an added cam signal 
 VR (variable reluctance) sensors can also be used, however as the board does not contain any sort of signal conditioner to convert the sine wave (below) to the required square wave, an additional module will be needed. An 8-pin DIP socket is located on v0.3.x and v0.4.x series official boards for this purpose as IC3. The MAX9926 chip has been tested to work with most types of input signals, and is available from the [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product), however any similar module that outputs a 0v-5v square wave (LM1815, LM358, SSC/DSC, many OEM modules, etc.) should also work fine with VR sensor signals.
 
 ![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
+
+It is recomended to take precautions for EMI while routing and choosing the wire for the crankshaft and camshaft sensors. Keeping wires away from electrically noisy components like the alternator, and spark plugs can help. Using a shileded cable can also help. Software filtering can be used but nothing beats a clean signal from the source. 
+
+If crank / cam signal is lost and EMI / filtering options have been exhaused ensure that the speeduino boards 12+v and GND connections are noise free as well. It is possible for noise on the main power rail to cause interference as well. 
 
 ### TPS
 
