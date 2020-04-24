@@ -2,7 +2,7 @@
 title: Injector wiring
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2020-01-24T06:29:26.450Z
+date: 2020-04-24T17:45:30.052Z
 tags: wiring
 ---
 
@@ -50,6 +50,8 @@ For setups with more than 4 injectors, the number of outputs used will be equal 
 
 #### 6 Cylinder
 ![inj_6Cyl_semi-seq.png](/img/wiring/inj_6Cyl_semi-seq.png){.align-center width=450}
+
+For a V6 with a firing order of (1,4,2,5,3,6) the injectors will be wired in 3 groups of (1,5) and (4,3), and (2,6) as these cylenders are 360 crank degrees apart.
 
 #### 8 Cylinder
 ![inj_8Cyl_semi-seq.png](/img/wiring/inj_8Cyl_semi-seq.png){.align-center width=450}
