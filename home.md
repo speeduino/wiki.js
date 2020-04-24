@@ -2,14 +2,8 @@
 title: Speeduino Manual
 description: The Speeduino documentation manual
 published: true
-date: 2020-01-10T06:08:13.463Z
+date: 2020-04-24T17:11:55.203Z
 tags: home
-titlepage: true
-titlepage-rule-height: 2
-titlepage-rule-color: 360049
-titlepage-background: offline/background1.pdf
-logo: offline/logo.png
-logo-width: 350
 ---
 
 # Introduction
@@ -26,6 +20,8 @@ In terms of starting out with Speeduino, it can help to understand the various c
 3. **Firmware** - This is the system software that runs on the Arduino board and powers its operation. New firmware is released regularly with updates, performance improvements and bug fixes. 
 
 As a starting point, it is generally recommended to first upload the firmware to your Arduino and get it connecting to the tuning software (Tuner Studio) before moving on to hardware assembly or wiring etc. Software setup and configuration on Speeduino can be completed without the need for any additional hardware to be present (Beyond the arduino itself) and this allows exploration of the software and options available before either an outlay of significant funds or a significant investment of time.
+
+More details on hardware requirments and verson specific features can be found on the Getting Started page. (https://wiki.speeduino.com/en/Getting_Started)
 
 ### About this manual
 
