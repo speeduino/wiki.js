@@ -2,7 +2,7 @@
 title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2020-01-18T11:47:20.390Z
+date: 2020-04-28T18:39:15.344Z
 tags: decoder
 ---
 
@@ -16,6 +16,17 @@ This decoder is comprised of a single cam-speed wheel in the same configuration 
 Missing tooth cam or distributor wheels can be used with cam or distributor wheel modification or fabrication as no OEM systems use it originally. The wheel ***must*** have at least as many teeth as cylinders, ***not*** including the missing tooth. This generally requires double the number of teeth as cylinders or more. As many teeth, slots, or other readable features (sensor targets) as possible in the limited space is recommended in order to satisfy this requirement, and to maximize resolution. The sensor must be capable of reliably reading smaller or closely-spaced teeth.
 
 Due to typically limited teeth, only half the teeth being read on each revolution, and the potential for reduced accuracy due to timing drive wear; the timing accuracy may be reduced in comparison to crank wheel systems. A figure of error cannot be predicted here as the wear or 'slop' of a given engine will be unique. However, it should be reasonable to assume the timing error will not exceed the accuracy of an OEM-equivalent cam-driven system such as typical distributor systems, or possibly better due to more sensor targets.
+
+
+### Timing Requirements
+
+The missing tooth crank and cam decoders require that the wheel is spinning at roughly the same speed throughout the rotation. For single missing tooth decoders: If the next tooth does not come within 1.5 * The Delta Time of the last 2 teeth it is assumed we just observed the missing tooth. For more than one missing tooth decoder there is a bit more leeway if the next tooth does not come within 2 * The Delta Time of the last 2 teeth it is assumed we just observed the missing teeth. 
+
+Usually this can be fixed by ensuring that the starter motor has enough current available to power through any harder spots through the rotation / opening closing cams / engine accessories. 
+
+If the starter motor is good and getting the right voltage ensure the mechanical components of the engine are correct. 
+
+
 
 ### Tuner Studio Configuration
 ![missingtooth_cam_triggerconfig.png](/img/decoders/missingtooth_cam_triggerconfig.png){.align-center width=450}
