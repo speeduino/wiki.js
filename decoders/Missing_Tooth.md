@@ -2,7 +2,7 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2020-01-17T00:41:27.503Z
+date: 2020-04-28T18:38:42.248Z
 tags: 
 ---
 
@@ -21,6 +21,15 @@ It is comprised of crank wheel with a given number of evenly spaced teeth, and o
 ### Applications
 
 Missing tooth crank wheels can be used on virtually any engine and is one of the more popular aftermarket options. It provides very good resolution in the higher tooth count versions (Eg 36-1 and 60-2) without being CPU intensive to decode.
+
+### Timing Requirements
+
+The missing tooth crank and cam decoders require that the wheel is spinning at roughly the same speed throughout the rotation. For single missing tooth decoders: If the next tooth does not come within 1.5 * The Delta Time of the last 2 teeth it is assumed we just observed the missing tooth. For more than one missing tooth decoder there is a bit more leeway if the next tooth does not come within 2 * The Delta Time of the last 2 teeth it is assumed we just observed the missing teeth. 
+
+Usually this can be fixed by ensuring that the starter motor has enough current available to power through any harder spots through the rotation / opening closing cams / engine accessories. 
+
+If the starter motor is good and getting the right voltage ensure the mechanical components of the engine are correct. 
+
 
 ### Tuner Studio Configuration
 ![missingtooth_triggerconfig.png](/img/decoders/missingtooth_triggerconfig.png){.align-center}
