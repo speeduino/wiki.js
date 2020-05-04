@@ -2,7 +2,7 @@
 title: Spark Settings
 description: Configuration options for the ignition outputs
 published: true
-date: 2020-01-16T12:12:49.688Z
+date: 2020-05-04T21:10:37.611Z
 tags: 
 ---
 
@@ -11,6 +11,8 @@ tags:
 The Spark settings dialog contains the options for how the ignition outputs will function, including which of the 4 IGN outputs are used and how. They are critical and incorrect values will result in an engine not starting and in some cases damage to hardware is possible. This dialog also contains a number of options for fixing the ignition timing for testing and diagnosis.
 
 Please ensure you have reviewed these settings prior to attempting to start your engine.
+
+To generate a base timing map that will give you better numbers than the default map from speedy loader there are several tools online like: http://www.useasydocs.com/theory/spktable.htm use them at your own risk and always listen for pre-detonation / knocking. It is best to tune the spark tables on a rolling road or dyno. 
 
 ## Settings
 ![spark_settings.png](/img/ignition/spark_settings.png){.align-center width=500}
