@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-05-12T02:04:04.670Z
+date: 2020-05-14T05:37:22.501Z
 tags: 
 ---
 
@@ -36,6 +36,7 @@ tags:
     -   [Nitrous Control](/configuration/Nitrous_Control)
     -   [VSS and Gear Detection](/configuration/VSS)
     -   [Tacho](/configuration/Tacho "wikilink")
+    -   [Variable Valve Timing (VVT)](/configuration/VVT)
     -   [Secondary Serial Interface](/en/Secondary_Serial_IO_interface "wikilink")
     -   [Auxilary IO configuration](/configuration/Auxillary_IO_Configuration)
 -   **Tools Menu**
