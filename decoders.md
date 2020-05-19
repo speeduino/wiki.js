@@ -1,8 +1,8 @@
 ---
-title: Trigger patterns and decoders
+title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2020-01-18T12:19:32.241Z
+date: 2020-05-19T03:24:29.299Z
 tags: 
 ---
 
