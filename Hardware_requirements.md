@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-05-19T03:19:51.304Z
+date: 2020-05-19T03:20:58.874Z
 tags: hardware, wiring
 ---
 
@@ -222,4 +222,4 @@ GPIO for Speeduino
 
 There are several variants of the GPIO , The firmware can be downloaded here <https://github.com/Autohome2/Speeduino-GPIO>
 
-More information [GPIO_for_Speeduino](GPIO_for_Speeduino "wikilink")
+More information [GPIO_for_Speeduino](/GPIO_for_Speeduino "wikilink")
