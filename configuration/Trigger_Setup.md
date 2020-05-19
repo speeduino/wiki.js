@@ -2,7 +2,7 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2020-01-19T11:38:58.299Z
+date: 2020-05-19T03:57:04.713Z
 tags: 
 ---
 
@@ -36,4 +36,4 @@ Note that many of the settings on this dialog are dependant on your configuratio
 - **Re-sync every cycle** - If set to yes, the system will look for the sync conditions every cycle rather than just counting the expected number of teeth. It is recommended that this option should be turned on, however if you have a noisy crank/cam signal you may need to turn it off as it can cause sync to drop out occassionally. 
 
 ## Finding tooth \#1 and trigger angle
-Please refer to the [Decoder page](/decoders) for the trigger that you are using
+Please refer to the [Trigger Patterns and Decoders](/decoders) for the trigger that you are using
