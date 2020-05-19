@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-05-19T03:24:42.322Z
+date: 2020-05-19T04:08:54.723Z
 tags: hardware, wiring
 ---
 
@@ -29,9 +29,9 @@ VR (variable reluctance) sensors can also be used, however as the board does not
 
 ![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
 
-It is recomended to take precautions for EMI while routing and choosing the wire for the crankshaft and camshaft sensors. Keeping wires away from electrically noisy components like the alternator, and spark plugs can help. Using a shileded cable can also help. Software filtering can be used but nothing beats a clean signal from the source. 
+It is recomended to take precautions for EMI while routing and choosing the wire for the crankshaft and camshaft sensors. Keeping wires away from electrically noisy components like the alternator, and spark plugs can help. Using a shielded cable can also help (tie the shield to the ECU side only). Software filtering can be used but nothing beats a clean signal from the source. 
 
-If crank / cam signal is lost and EMI / filtering options have been exhaused ensure that the speeduino boards 12+v and GND connections are noise free as well. It is possible for noise on the main power rail to cause interference. 
+If crank / cam signal is lost and EMI / filtering options have been exhaused, ensure that the Speeduino board's +12V and GND connections are noise free as well. It is possible for noise on the main power rail to cause interference. 
 
 ### TPS
 
