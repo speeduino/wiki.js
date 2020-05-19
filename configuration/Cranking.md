@@ -2,7 +2,7 @@
 title: Cranking
 description: 
 published: true
-date: 2020-01-16T11:40:55.664Z
+date: 2020-05-19T03:55:36.475Z
 tags: 
 ---
 
@@ -23,4 +23,4 @@ Settings
 -   **Priming Pulsewidth** - Upon power up, Speeduino will fire all injectors for this period of time. This pulse is NOT intended as a starting fuel load, but is instead for clearing out air that may have entered the fuel lines. It should be kept short to avoid engine flooding.
 -   **Cranking enrichment** - Whilst cranking is active (See Cranking RPM above), the fuel load will be increased by this amount. Note that as a standard correction value, this cranking enrichment **is in addition** to any other adjustments that are currently active. This includes the warmup enrichment etc.
 -   **Cranking Bypass** - This option is specifically for ignition systems that have a hardware cranking ignition option. These systems were used throughout the 80s and early 90s and allowed ignition timing to be fixed and controlled by the ignition system itself when active (Via an input wire). With this option you can specify an output pin that will be set HIGH when the system is cranking. The pin number specified is the ARDUINO pin number.
--   **Fix cranking timing with trigger** - Some (usually low resolution) trigger patterns are designed to align one of their pulses with the desired cranking advance. This is typically 5 or 10 degrees BTDC. When enabled, Speeduino will wait for this timed input pulse before firing the relevant ignition output (A dwell safety factor is still applied incase this pulse is not detected). This option is only made available when a trigger pattern that supports this function is selected (See [Trigger Setup](Trigger_Setup "wikilink"))
+-   **Fix cranking timing with trigger** - Some (usually low resolution) trigger patterns are designed to align one of their pulses with the desired cranking advance. This is typically 5 or 10 degrees BTDC. When enabled, Speeduino will wait for this timed input pulse before firing the relevant ignition output (A dwell safety factor is still applied incase this pulse is not detected). This option is only made available when a trigger pattern that supports this function is selected (See [Trigger Setup](/configuration/Trigger_Setup "wikilink"))
