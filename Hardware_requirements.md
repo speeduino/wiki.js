@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-04-24T19:03:28.430Z
+date: 2020-05-19T02:51:44.119Z
 tags: hardware, wiring
 ---
 
@@ -58,7 +58,7 @@ Recommended MAP sensor is the MPX4250 from Freescale, however many MAP sensors a
 
 Any standard 2-wire thermistor sensor can be used for these temperature functions. The sensors have 1 side connected to a ground (Preferably from the ECU) and the other running to the signal line. These sensors have no polarity, so the orientation of these wires does not matter.
 
-For full details, please see the [Sensor Calibration](Sensor_Calibration "wikilink") page
+For full details, please see the [Sensor Calibration](/Sensor_Calibration) page
 
 ### Exhaust Gas Oxygen Sensors (O2 and WBO2)
 
