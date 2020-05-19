@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-05-19T03:20:58.874Z
+date: 2020-05-19T03:24:42.322Z
 tags: hardware, wiring
 ---
 
@@ -21,7 +21,7 @@ Inputs
 
 This is arguably the most important sensor for Speeduino to function correctly. The signal going to the Arduino must be a 0v-5v square wave series of pulses (shown below) representing teeth on a wheel running at crank (or cam) speed. Many Hall and 'opto' sensors meet this digital square-wave spec. If only a crankshaft trigger wheel is used (no cam signal), the crank wheel must have a 'missing' tooth in order to provide position information as well as the engine RPM. Tested missing-tooth wheels currently are 4-1, 12-1, 36-1 and 60-2.
 
-For all timing signal parsing options see the [decoders](/decoders) page.
+For all timing signal parsing options see the [Trigger Patterns and Decoders](/decoders) page.
 
 Alternatively (and necessary for full-sequential injection) an added cam signal with or without crank wheel missing teeth. These setups are indicated by the added "/x", such as 60-2/1, for a 60-tooth crank wheel, with 2 missing teeth, and a 1-tooth cam signal per cycle. Cam-speed missing-tooth wheels can also support semi and full-sequential.
 
