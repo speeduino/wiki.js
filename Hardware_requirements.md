@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2020-05-19T03:04:19.744Z
+date: 2020-05-19T03:10:21.133Z
 tags: hardware, wiring
 ---
 
@@ -80,7 +80,7 @@ Circuits and techniques Speeduino users have found useful for adapting or implem
 
 #### Flex Fuel Sensor
 
-See the [Flex Fuel](Flex_Fuel "wikilink") section for details on hardware and configuration of flex fuel setups.
+See the [Flex Fuel](/configuration/Flex_Fuel) section for details on hardware and configuration of flex fuel setups.
 
 
 #### 12V Input Signal
@@ -192,7 +192,7 @@ A good run down of 'smart' coil types can be found at: [<http://www.megamanual.c
 
 #### Low Current
 
-Most Speeduino versions have low-current (LC) signal outputs directly from the MEGA processor to (usually) the prototyping (proto) area of the board. These outputs are generally not suited to control power devices directly in this form, and need suitable output circuits built on the proto area to enable their use. Alternatively, the output functions such as Fuel Pump or Fan are re-assignable to other pins and components, such as the existing HC [medium-current](Hardware_requirements#Medium_Current "wikilink") output MOSFETs.
+Most Speeduino versions have low-current (LC) signal outputs directly from the MEGA processor to (usually) the prototyping (proto) area of the board. These outputs are generally not suited to control power devices directly in this form, and need suitable output circuits built on the proto area to enable their use. Alternatively, the output functions such as Fuel Pump or Fan are re-assignable to other pins and components, such as the existing HC [medium-current](#Medium_Current) output MOSFETs.
 
 Some Speeduino versions include an 8-channel ULN2803A Darlington transistor array IC that is capable of switching up to 1/2 amp per channel. These auxiliary outputs are sufficient to switch small devices directly, or to switch power-handling devices, such as power MOSFETs or automotive relays. Configuration and settings of these outputs is described in the [Configuration](Configuration_Index "wikilink") section. Additional information for using a ULN2803A on v0.4-series boards may be found [here](https://speeduino.com/forum/viewtopic.php?f=19&t=1023&p=16588#p16588). Similar output options and pin assignments may be used on other board designs.
 
