@@ -2,7 +2,7 @@
 title: Miata 99-05
 description: 
 published: true
-date: 2020-01-18T12:03:50.588Z
+date: 2020-05-28T07:32:26.758Z
 tags: decoder, miata, trigger
 ---
 
@@ -18,7 +18,7 @@ NB Miatas from 1999 until 2005.
 
 ### Tuner Studio Configuration
 
-The trigger angle should not need changing once this pattern has been selected.
+The trigger angle should not need changing once this pattern has been selected (ie Make sure it is set to 0)
 
 For most installs, Trigger filtering set to Off or Weak is sufficient.
 
