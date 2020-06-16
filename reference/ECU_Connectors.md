@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-06-16T02:23:21.003Z
+date: 2020-06-16T02:37:34.456Z
 tags: 
 editor: markdown
 ---
@@ -53,7 +53,7 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 
 | Model/s      | Part Number | Alternative Part Numbers | Make | Notes               | Image                                                                                                                                   |
 |--------------|-------------|--------------------------|------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| MK3 Supra ('88)<br/>Celica ST165   | 172319-7    |                          | AMP  | 54-pin, 3 plug ECU  |  |
+| MK3 Supra ('88)<br/>Celica ST165   | 172319-7    |                          | AMP  | 52-pin, 3 plug ECU  |  |
 | MK3 Supra ('89+)   | 178780-1    |                          | AMP  | 76-pin, 4 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178780&DocType=Customer+Drawing&DocLang=Japanese) |
 | 3S-GT MR2    | 174518-7    |                          | AMP  | 64-pin, 3 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
 | 4efte GT<br/>2e-fe<br/>4e-fe    | 175446-6    |                          | AMP  | 42-pin, 2 plug ECU  |                                                                                                                                         |
