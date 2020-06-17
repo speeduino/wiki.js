@@ -2,8 +2,9 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-05-14T05:37:22.501Z
+date: 2020-06-17T23:15:07.670Z
 tags: 
+editor: markdown
 ---
 
 -   **Settings Menu**
@@ -13,6 +14,7 @@ tags:
     -   [IAT Density](/configuration/IAT_Density)
 <!---    -   [Reset Control](/configuration/Reset_Control) -->
 -   **Tuning Menu**
+    -   [Fuel (VE) Table](/configuration/VE_table)
     -   [Acceleration Wizard](/configuration/Acceleration_Wizard)
     -   [AFR/O2](/configuration/O2)
     -   [Rev Limits](/configuration/Rev_Limits)
