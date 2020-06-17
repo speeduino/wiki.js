@@ -2,15 +2,16 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2020-01-16T13:15:47.463Z
-tags: TunerStudio
+date: 2020-06-17T23:17:44.231Z
+tags: 
+editor: markdown
 ---
 
-# Acceleration Enrichment
+# Acceleration Enrichment (AE)
 
 Acceleration Enrichment (AE) is used to add extra fuel during the short transient period following a rapid increase in throttle. It performs much the same function as an accelerator pump on a carbureted engine, increasing the amount of fuel delivered until the manifold pressure reading adjusts based on the new load.
 
-> To operate correctly, you must have a variable TPS installed and calibrated.
+> To operate TPS based AE correctly, you must have a variable TPS installed and calibrated.
 {.is-info}
 
 
