@@ -2,7 +2,7 @@
 title: Spark Settings
 description: Configuration options for the ignition outputs
 published: true
-date: 2020-06-18T01:40:33.530Z
+date: 2020-06-18T01:40:50.711Z
 tags: 
 editor: markdown
 ---
@@ -25,7 +25,7 @@ To generate a base timing map that will give you better numbers than the default
     - **Sequential** - This mode is only functional on engines with 4 or fewer cylinders.
     - **Rotary** - See below for full detail
 - **Cranking advance** - The number of absolute degrees (BTDC) that the timing will be set to when cranking. This overrides all other timing advance modifiers during cranking.
--   **Spark output triggers** - <font color='red'>**THIS IS A CRITICAL SETTING!**</font>. Selecting the incorrect option here can cause damage to your igniters or coils. Specifies whether the coil will fire when the ignition output from Speeduino goes HIGH or goes LOW. The VAST majority of ignition setups will require this to be set **GOING LOW** (ie the coil charges/dwells when the signal is high and will **fire** when that signal goes low). Whilst GOING LOW is required for most ignition setups, there are some configurations that perform the dwell timing on the ignition module and fire the coil only when they receive a HIGH signal from the ECU.
+-   **Spark output triggers** - <font color='red'>**THIS IS A CRITICAL SETTING!**</font> Selecting the incorrect option here can cause damage to your igniters or coils. Specifies whether the coil will fire when the ignition output from Speeduino goes HIGH or goes LOW. The VAST majority of ignition setups will require this to be set **GOING LOW** (ie the coil charges/dwells when the signal is high and will **fire** when that signal goes low). Whilst GOING LOW is required for most ignition setups, there are some configurations that perform the dwell timing on the ignition module and fire the coil only when they receive a HIGH signal from the ECU.
 -   **Fixed Angle** - This is used to lock the ignition timing to a specific angle for testing. Setting this to any value other than 0 will result in that exact angle being used (ie overriding any other settings) at all RPMs/load points, except during cranking (Cranking always uses the above Cranking Advance setting). This setting should be set to 0 for normal operation.
 
 ### Rotary modes
