@@ -2,8 +2,9 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-01-16T16:09:59.854Z
-tags: TunerStudio
+date: 2020-06-18T00:42:45.270Z
+tags: 
+editor: markdown
 ---
 
 # Engine Constants
@@ -15,10 +16,18 @@ From the Settings menu, select Constants
 
 Here you need to setup the engine constants. Fill out the fields in the bottom section before calculating the Required Fuel.
 
-## Settings Description
+## Configuration
 
 ![engine.png](/img/constants/engine.png){.align-center width=400}
 
+### Required Fuel Calculator
+The required fuel calculator determines the theoretical fuel injection time that would be required at 100% VE. This is determined by knowing the engine capacity, the size and number of the fuel injectors and the number of squirts that will be performed in each cycle. Increasing this figure will lead to an overall increase in the amount of fuel that is injected **at all points** of the VE map (And vice versa).
+
+> You should set all the values in the `Settings` section below before performing the `Required Fuel` calculation
+{.is-info}
+
+
+### Settings
 - **Control Algorithm:** The load source that will be used for the fuel table
 - **Squirts per Engine Cycle:** How many squirts will be performed over the duration of the engine cycle (Eg 720 degrees for a 4 stroke). most engines will not require values greater than 4. For sequential installations, this should be set to 2 with the injector staging set to 'Alternating'(Internally Speeduino will adjust the squirts to 1)
   - Note that for 3 and 5 squirts, you must have a cam signal in addition to the crank.
