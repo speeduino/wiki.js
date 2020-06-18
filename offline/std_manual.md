@@ -2,8 +2,9 @@
 title: std_manual
 description: 
 published: true
-date: 2020-03-19T02:45:23.921Z
+date: 2020-06-18T00:50:35.813Z
 tags: 
+editor: markdown
 ---
 
 ./home.md
@@ -18,6 +19,7 @@ tags:
 ./configuration/Injector_Characteristics.md
 ./configuration/Trigger_Setup.md
 ./configuration/IAT_Density.md
+./configuration/VE_table.md
 ./configuration/Acceleration_Wizard.md
 ./configuration/O2.md
 ./configuration/Rev_Limits.md
