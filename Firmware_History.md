@@ -1,3 +1,15 @@
+---
+title: Firmware_History
+description: 
+published: true
+date: 2020-06-19T05:31:03.807Z
+tags: 
+editor: markdown
+---
+
+# Firmware releases now posted on GitHub
+https://github.com/noisymime/speeduino/releases
+
 Overview
 ========
 
