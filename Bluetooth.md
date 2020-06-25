@@ -2,7 +2,7 @@
 title: Bluetooth
 description: 
 published: true
-date: 2020-06-25T01:46:02.102Z
+date: 2020-06-25T01:49:38.083Z
 tags: 
 editor: markdown
 ---
@@ -15,18 +15,17 @@ editor: markdown
 The Mega 2560 communicates via a USB-to-serial connection for downloading of the Speeduino firmware, and also for communication during operation with monitoring, tuning, and logging programs such as TunerStudio and MegaLogViewer. Once the Speeduino firmware is loaded, Speeduino can also communicate via a properly re-programmed Bluetooth module serial connection, known as serial port profile (SPP). There are a number of ways to accomplish this, and the following demonstrates using an inexpensive `HC-05` / `HC-06` module for a direct connection to the Mega board.
 
 
-''Note: Speeduino and TunerStudio communicate at 115200 bps baud rate. Most any wireless serial device from Bluetooth to Satphone will work if programmed to the proper communications speed. Some slower systems (e.g., cheap short-range 433MHz radio) can work, but may not transmit or receive quickly enough for high-speed data logging.
+> ***Note:** Loading firmware by Bluetooth is not recommended*
+{.is-warning}
 
-*Note: Loading firmware by Bluetooth is possible, but requires specific and somewhat involved procedure, or a more expensive and [specific type of Bluetooth module](https://www.adafruit.com/products/1588) that can accomplish resetting for upload — neither of which is within the scope of this basic overview. Additional information is on the Speeduino Forums.*
 
 > **Note:** Using bluetooth bypasses the USB serial converter, allowing Arduino Mega versions with non-FTDI UART serial chips to connect to TunerStudio and other serial programs cross-platform without special drivers or setup. The Mega demonstrated here is a CH340 version.
 {.is-info}
 
 
-
 ### Bluetooth Types
 
-This method of using Bluetooth (BT) communications only requires an HC-series BT module, and a wiring connection. The BT module in this case is an HC-05, HC-06, HC-07 or HC-09, mounted on an interface board (“backplane”, “backboard”, "breakout", etc) operating in Slave mode. As slave-only modules are simpler to re-program, the example described here is an **HC-06** slave-only module on a **JY-MCU v1.02** board:
+This method of using Bluetooth (BT) communications only requires an HC-series BT module, and a wiring connection. The BT module in this case is an HC-05, HC-06, HC-07 or HC-09, mounted on an interface board operating in Slave mode. As slave-only modules are simpler to re-program, the example described here is an **HC-06** slave-only module on a **JY-MCU v1.02** board:
 
 <center>
 <img src="http://i.imgur.com/siuxlXg.png" height="200" />
@@ -55,6 +54,7 @@ GND-------GND
 <img src="http://i.imgur.com/AJooEMu.png" height="200" />
 
 </center>
+
 While the HC interface module can connect and functions when connected to the Mega's 3.3V pin, the module specifies 3.6V minimum for proper regulator operation, and therefore the 5V connection is suggested. There are several locations on the Mega board to source 5V and ground, and the most obvious are the standard marked power pins in this example. The connector shown was scavenged from an old desktop computer, and re-purposed for connecting the BT. The wire colors do not matter, and must only make the proper connections:
 
 <center>
@@ -136,11 +136,13 @@ The second type tested to work properly is by using the UART on-board an [Arduin
 
 Once the USB-to-TTL communication is established to the BT module, the HC-06 commands to re-program are:
 
-**`Send_________________Response`**
-`AT`<enter>`---------------OK`
-`AT+NAMESpeeduino-----OKSetname`
-`AT+PIN9876-----------OKSetPIN`
-`AT+BAUD8-------------OK115200`
+```
+Send_________________Response
+AT`<enter>`---------------OK
+AT+NAMESpeeduino-----OKSetname
+AT+PIN9876-----------OKSetPIN
+AT+BAUD8-------------OK115200
+```
 
 Other module types may require different commands to perform the reprogramming. For example some newer HC-06 will accept "AT" by itself but give errors for the other commands. In those cases try the these variations: AT+NAME=Speeduino, AT+PSWD="9876", AT+UART=115200,0,0.
 
@@ -157,10 +159,3 @@ Even with the antenna exposed, placement under the dash or behind vehicle struct
 
 </center>
 An extension is easily made with common stranded-wire (never solid wire!) 4-conductor cable and simple connectors. If shielded cable is used, only ground the shielding to the GND wire at the Mega-end of the cable.
-
-The extension can also be securely and quickly connected at the enclosure by using a common 4-pin connector or similar:
-
-<center>
-<img src="http://i.imgur.com/XSD7Ror.png" height="200" />
-
-</center>
