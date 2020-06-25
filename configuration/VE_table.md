@@ -2,7 +2,7 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2020-06-25T01:00:24.616Z
+date: 2020-06-25T05:28:43.871Z
 tags: fuel, fuel table, tuning, ve table
 editor: markdown
 ---
@@ -11,7 +11,7 @@ editor: markdown
 
 The fuel or VE table is the primary method of controlling the amount of fuel that will be injected at each speed/load point. 
 
-![ve_table.png](/img/tuning/ve_table.png){.align-center width=400}
+![ve_table.png](/img/tuning/ve_table.png){.align-center width=450}
 
 ## Configuration
 The fuel map is a 3D, interpolated table that uses RPM and fuel load to lookup the desired VE value. The fuel load axis is determined by whether you are using Speed Density (MAP kPa) or Alpha-N (TPS) for your fuel load (See [Engine_Constants](/en/configuration/Engine_Constants))
@@ -29,7 +29,7 @@ The values in this table represent a percentage of the `Required Fuel` amount th
 
 ## Secondary Fuel table
 
-![2nd_fuel_table.png](/img/tuning/2nd_fuel_table.png){.align-center width=400}
+![2nd_fuel_table.png](/img/tuning/2nd_fuel_table.png){.align-center width=450}
 
 Speeduino also has the ability to use a secondary fuel table which allows for blended and switched mode fueling. There are 2 blended modes and 2 switched modes available.
 
@@ -39,7 +39,7 @@ Blended fuel modes work in conjunction with the primary fuel table to come up wi
 ### Multiplied %
 This is a blended fuel mode (ie it uses both the primary and secondary fuel tables together) that allows for different load and RPM axis to be combined. Commonly this is used for having primary and secondary fuel tables with different load sources (**Eg:** Primary map using TPS and secondary map using manifold pressure). 
 
-This mode is often used on engines with Individual Throttle Bodies (ITBs) to allow TPS and MAP based tables to be combined. 
+This mode is often used on engines with Individual Throttle Bodies (ITBs) to allow TPS and MAP based tables to be combined.
 
 The final fuel value is derived from treating both values (Primary and Secondary) as percentages and multiplying them together. 
 #### Example 1
@@ -63,7 +63,14 @@ This is a blended fuel mode that is very similar to the above `Multipled %` mode
 This is a less commonly used mode, but is an alternative in the same setups that you would use `Multiplied %`
 
 ### Switched - Conditional
+Conditional switched mode will allow use of the 2nd fuel table when a certain value goes above a defined level. The available switching values are:
 
+* RPM
+* Ethanol content
+* MAP 
+* TPS
+
+Dpending on the desired outcome, this can be used to expand the resolution of the main fuel table, automatically handle alternate fuels or as an alternative ITB mode (Particularly if running boosted ITBs). 
 
 ### Switched - Input based
 
