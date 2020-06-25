@@ -1,23 +1,28 @@
-Bluetooth Wireless Option
--------------------------
+---
+title: Bluetooth
+description: 
+published: true
+date: 2020-06-25T01:46:02.102Z
+tags: 
+editor: markdown
+---
 
-<center>
-<img src="http://i.imgur.com/KgmM8nL.png" height="100" /><img src="http://i.imgur.com/NjmX3qu.png" height="100" /><img src="https://raw.githubusercontent.com/speeduino/wiki/master/Speeduino%20logo_sml.png" height="100" />
+## Bluetooth Wireless Option
 
-</center>
+
 ### Minimum-Money Hardware
 
-The Mega 2560 communicates via a USB-to-serial connection for downloading of the Speeduino firmware, and also for communication during operation with monitoring, tuning, and logging programs such as TunerStudio and MegaLogViewer. Once the Speeduino firmware is loaded, Speeduino can also communicate via a properly re-programmed Bluetooth module serial connection, known as serial port profile (SPP). There are a number of ways to accomplish this, and the following demonstrates using an inexpensive [HC-series bluetooth module](http://www.ebay.com/sch/i.html?_odkw=hc+bluetooth+-%28interface%2Cbase%2Cbare%29&_sop=15&LH_BIN=1&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR0.TRC0.H0.Xhc+bluetooth+-%28interface%2Cbase%2Cbare%29+backplane.TRS0&_nkw=hc+bluetooth+-%28interface%2Cbase%2Cbare%29+backplane&_sacat=0) for a direct connection to the Mega board.
+The Mega 2560 communicates via a USB-to-serial connection for downloading of the Speeduino firmware, and also for communication during operation with monitoring, tuning, and logging programs such as TunerStudio and MegaLogViewer. Once the Speeduino firmware is loaded, Speeduino can also communicate via a properly re-programmed Bluetooth module serial connection, known as serial port profile (SPP). There are a number of ways to accomplish this, and the following demonstrates using an inexpensive `HC-05` / `HC-06` module for a direct connection to the Mega board.
 
-------------------------------------------------------------------------
 
 ''Note: Speeduino and TunerStudio communicate at 115200 bps baud rate. Most any wireless serial device from Bluetooth to Satphone will work if programmed to the proper communications speed. Some slower systems (e.g., cheap short-range 433MHz radio) can work, but may not transmit or receive quickly enough for high-speed data logging.
 
 *Note: Loading firmware by Bluetooth is possible, but requires specific and somewhat involved procedure, or a more expensive and [specific type of Bluetooth module](https://www.adafruit.com/products/1588) that can accomplish resetting for upload — neither of which is within the scope of this basic overview. Additional information is on the Speeduino Forums.*
 
-*Note: Using bluetooth bypasses the USB serial converter, allowing Arduino Mega versions with non-FTDI UART serial chips to connect to TunerStudio and other serial programs cross-platform without special drivers or setup. The Mega demonstrated here is a CH340 version.*
+> **Note:** Using bluetooth bypasses the USB serial converter, allowing Arduino Mega versions with non-FTDI UART serial chips to connect to TunerStudio and other serial programs cross-platform without special drivers or setup. The Mega demonstrated here is a CH340 version.
+{.is-info}
 
-------------------------------------------------------------------------
+
 
 ### Bluetooth Types
 
@@ -27,6 +32,7 @@ This method of using Bluetooth (BT) communications only requires an HC-series BT
 <img src="http://i.imgur.com/siuxlXg.png" height="200" />
 
 </center>
+
 ### The Board
 
 The purpose of the interface board is to allow operation from any voltage of 3.6 to over 6 volts, permitting powering from the Mega's 5V pins, as well as regulated voltage on the Tx (transmit) and Rx (receive) lines. While an HC BT without interface board may be used, the power must be 3.3 volts, and divider or regulation circuits must also be made and used on the TX and RX lines to drop voltage from 5-volt TTL to a safe level for the bare BT. Using a module with the interface board solves these problems, and also provides an LED indicator and connection pins.
@@ -37,11 +43,13 @@ The purpose of the interface board is to allow operation from any voltage of 3.6
 
 The BT module connects to the Mega through the TX0 and RX0 pins, and the 5V and GND (ground) pins. The Mega connects to the BT module as follows:
 
-**`Mega_______BT`**
-`TX0------>RXD`
-`RX0<------TXD`
-`5V--------VCC`
-`GND-------GND`
+```
+Mega_______BT
+TX0------>RXD
+RX0<------TXD
+5V--------VCC
+GND-------GND
+```
 
 <center>
 <img src="http://i.imgur.com/AJooEMu.png" height="200" />
@@ -53,6 +61,7 @@ While the HC interface module can connect and functions when connected to the Me
 <img src="http://i.imgur.com/tviZHpy.png" height="200" />
 
 </center>
+
 ### Board Attachment
 
 The connector wires are soldered directly to the Mega's pins on the bottom of the board. It is imperative that a strain relief be used to prevent pulling on the soldered connections, as they are relatively weak. In this example a 'zip tie' is used though one of the Mega holes and around the wires as a strain relief:
@@ -69,6 +78,7 @@ After proper [reprogramming](Bluetooth#Reprogramming_the_Bluetooth_Module "wikil
 <img src="http://i.imgur.com/4XLIyA6.png" height="200" />
 
 </center>
+
 ### Phones / Tablets
 
 With an active Bluetooth connection, smart phones and tablets can talk to Speeduino. Android phones and the free [MSDroid](https://play.google.com/store/apps/details?id=com.msdroid) dash and logging app are one example, as is the [Shadow Dash](http://www.tunerstudio.com/index.php/shadowdashmsmenu) app from the makers of TunerStudio.
@@ -97,6 +107,7 @@ In this example using MSDroid; after loading the *speeduino.ini* file into MSDro
 <img src="http://i.imgur.com/za7wptB.png" height="200" />
 
 </center>
+
 ### Reprogramming the Bluetooth Module
 
 The module is usually supplied with generic settings. The name it broadcasts is non-descriptive, the PIN security code is commonly 0000 or 1234 with obvious low security, and unusable 9600 bps speed is typical. These settings should be changed for proper operation and security. The module can be reprogrammed to “Speeduino”, change the PIN number to 9876 (or any other) for security, and set the speed to the required 115200 bps in the following example.
@@ -105,6 +116,7 @@ The module is usually supplied with generic settings. The name it broadcasts is 
 <img src="http://i.imgur.com/1taXGO8.png" height="200" />
 
 </center>
+
 #### Interface
 
 There are two common terminal emulators used to accomplish this. Both use a serial interface, such as the Arduino [IDE serial monitor](https://www.arduino.cc/en/Guide/Environment#toc12), or programs appropriate for your PC's OS, such as [HTerm](http://www.der-hammer.info/terminal/), [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/), [TeraTerm](http://ttssh2.osdn.jp/index.html.en), etc.).
@@ -117,6 +129,7 @@ The first type of terminal emulator is an inexpensive UART module acting as a [U
 <img src="http://i.imgur.com/xZ3eKx2.png" height="200" />
 
 </center>
+
 The second type tested to work properly is by using the UART on-board an [Arduino](http://www.princetronics.com/arduino-uno-as-usb-to-serial-ttl-converter/) as a terminal emulator. [This method](http://alselectro.wordpress.com/2014/10/21/bluetooth-hc05-how-to-pair-two-modules/) uses either a blank sketch, or a jumper from the RESET pin to a GND pin to hold the Arduino in reset mode, allowing straight-through serial communications to pins TX0 and RX0. Note this method uses different connections to the BT, using TX-to-TX and RX-to-RX, only for programming with AT commands. Normal BT operation still requires the connections shown earlier. The module type may also require an additional jumper.
 
 #### Commands
@@ -133,9 +146,7 @@ Other module types may require different commands to perform the reprogramming. 
 
 The module should now be ready to connect to Speeduino and communicate with the new name, PIN, and baud rate.
 
-------------------------------------------------------------------------
 
-------------------------------------------------------------------------
 
 #### Bluetooth Range and Speed
 
@@ -153,7 +164,3 @@ The extension can also be securely and quickly connected at the enclosure by usi
 <img src="http://i.imgur.com/XSD7Ror.png" height="200" />
 
 </center>
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
