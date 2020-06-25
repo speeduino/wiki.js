@@ -2,8 +2,8 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2020-06-18T00:47:09.502Z
-tags: tuning, fuel, ve table, fuel table
+date: 2020-06-25T01:00:24.616Z
+tags: fuel, fuel table, tuning, ve table
 editor: markdown
 ---
 
@@ -20,10 +20,10 @@ The values in this table represent a percentage of the `Required Fuel` amount th
 
 ### Options
 - **Multiply VE value by MAP:Baro ratio:** Enabling this option 'flattens' the fuel table by multiplying the value in the current speed/load point by the MAP value divided by the Baro value. You can tune with or without this option enabled, but it is generally recommended to be turned on as it will allow for simpler and more predictable tuning results. 
-> **Warning:** Changing this value will required retuning of the fuel map!
+> **Warning:** Changing this value will require retuning of the fuel map!
 {.is-warning}
 
-- **Multiply by ration of AFR to Target AFR:** This option is normally set to `No`
+- **Multiply by ration of AFR to Target AFR:** This option is normally set to `No` for most setups. It allows basic close loop feedback by adjust the base fuel amount according to how far away from the target AFR the engine is currently running. 
 
 
 
@@ -37,9 +37,30 @@ Blended fuel modes work in conjunction with the primary fuel table to come up wi
 
 
 ### Multiplied %
+This is a blended fuel mode (ie it uses both the primary and secondary fuel tables together) that allows for different load and RPM axis to be combined. Commonly this is used for having primary and secondary fuel tables with different load sources (**Eg:** Primary map using TPS and secondary map using manifold pressure). 
 
+This mode is often used on engines with Individual Throttle Bodies (ITBs) to allow TPS and MAP based tables to be combined. 
+
+The final fuel value is derived from treating both values (Primary and Secondary) as percentages and multiplying them together. 
+#### Example 1
+**Primary Fuel table value:** 75
+**Secondary fuel table value:** 100
+**Final value:** 75 
+
+#### Example 2
+**Primary Fuel table value:** 80
+**Secondary fuel table value:** 150
+**Final value:** 120
+
+#### Example 3
+**Primary Fuel table value:** 90
+**Secondary fuel table value:** 80
+**Final value:** 72
 
 ### Added
+This is a blended fuel mode that is very similar to the above `Multipled %` mode. The only difference between the two is that instead of multiplying the values from the primary and secondary tables, the 2 are added together. 
+
+This is a less commonly used mode, but is an alternative in the same setups that you would use `Multiplied %`
 
 ### Switched - Conditional
 
