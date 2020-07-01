@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-06-17T06:51:16.746Z
+date: 2020-07-01T21:02:21Z
 tags: 
 editor: markdown
 ---
@@ -14,7 +14,11 @@ In an effort to simplify the design of new boards, this page is a reference of k
 
 These part numbers are primarily for the ECU side. Where known, a loom side part number is also shown.
 
-### Audi
+### Audi / VW / Seat / Skoda
+| Model/s                                                                    | Part Number       | Alternative Part Numbers                           | Notes                 | Image                                                             |
+|----------------------------------------------------------------------------|-------------------|----------------------------------------------------|-----------------------|-------------------------------------------------------------------|
+| Most engines between 1997-200x (1.4, 1.6, 1.8t, 2.0, 2.3, 2.7t, 2.8, 3.2, 4.2)       | 1241434-1 (ECU)   |  1473244-1 (LOOM 81pin), 1473252-1 (LOOM 40pin)    | 2plug 121 pins        | [PDF](https://pl.mouser.com/ProductDetail/1241434-1)              |
+
 
 ### BMW
 | Model/s                   | Part Number | Alternative Part Numbers | Notes                                                                                     | Image                                                                                                                                          |
