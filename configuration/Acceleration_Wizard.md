@@ -2,7 +2,7 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2020-07-07T19:50:31.288Z
+date: 2020-07-07T20:11:43.464Z
 tags: 
 editor: markdown
 ---
@@ -51,8 +51,13 @@ Same as TPSdot Threshold, but applies when using MAP enrichment mode.
 - **Accel Time**
 Duration of acceleration enrichment. Once enrichment is triggered, it will last this many milliseconds.
 - **Taper Start RPM, Taper End RPM**
-Scales the enrichment taper at different RPMs. If RPM is less than or equal to Start RPM, enrichment will be 100%. If RPM is greater than or equal to End RPM, enrichment will be 0%. As RPM increases, the total amount of required enrichment decreases. Enrichment is scaled linearly in between these values. Typically above 4000 RPM there is 0 acceleration enrichment required.
+Scales the enrichment taper at different RPMs. If RPM is less than or equal to Start RPM, enrichment will be 100% of the calculated enrichment value, based on the TPSdot(or MAPdot) value seen. If RPM is greater than or equal to End RPM, enrichment will be 0%. As RPM increases, the total amount of required enrichment decreases. Enrichment is scaled linearly in between these values. 
 - **Cold Adjustment**
 Scales the acceleration enrichment percentage linearly based on coolant temperature. At Start Temperature, adjustment will be equal to the Cold Adjustment field (%). At End Temperature, adjustment will be 0%.
 - **Deceleration Fuel Cutoff**
-Stops injecting fuel when decelerating.
+Stops injecting fuel when:
+ *RPM is above **Cutoff RPM**
+ TPS is below **TPS Threshhold**
+ Engine temperature is above **Minimum engine temperature**
+ The above conditions are met for **Cutoff delay** seconds*
+ ** RPM Hysteresis can be adjusted to account for fluctuating RPM conditions to prevent accidental DFCO.
