@@ -2,7 +2,7 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2020-06-17T23:17:44.231Z
+date: 2020-07-07T19:48:40.862Z
 tags: 
 editor: markdown
 ---
@@ -39,3 +39,20 @@ If you find that the AFR is initially good, but then goes briefly lean, you shou
 In cases where the TPS signal is noisy, spikes in its reading may incorrectly trigger the acceleration enrichment. This can be seen in a log file or on a live dash in TunerStudio by the activation of the 'TPS Accel' indicator when there is no (or little) throttle movement occurring. 
 
 Should this occur (and assuming that the TPS wiring cannot be corrected to reduce noise) then the false triggers can be prevented from triggering AE by increasing the "TPSdot Threshold" value. This should be increased in increments of ~5%/s, pausing between each increase to observe whether AE is still being incorrectly activated.
+
+### Fields
+
+- **Enrichment Mode**
+Chose whether to use Throttle Position Sensor or Manifold Absolute Pressure for acceleration enrichment.
+- **TPSdot Threshold**
+Percentage of throttle position change per second required to trigger acceleration enrichment. For example, if set to 70, the throttle position must change at a rate of 70% per second for acceleration enrichment to become active.
+- **MAPdot Threshold**
+Same as TPSdot Threshold, but applies when using MAP enrichment mode.
+- **Accel Time**
+Duration of acceleration enrichment. Once enrichment is triggered, it will last this many milliseconds.
+- **Taper Start RPM, Taper End RPM**
+Scales the enrichment taper at different RPMs. If RPM is less than or equal to Start RPM, enrichment will be 100%. If RPM is greater than or equal to End RPM, enrichment will be 0%. As RPM increases, the total amount of required enrichment decreases. Enrichment is scaled linearly in between these values. Typically above 4000 RPM there is 0 acceleration enrichment required.
+- **Cold Adjustment**
+Scales the acceleration enrichment percentage linearly based on coolant temperature. At Start Temperature, adjustment will be equal to the Cold Adjustment field (%). At End Temperature, adjustment will be 0%.
+- **Deceleration Fuel Cutoff**
+Stops injecting fuel when decelerating.
