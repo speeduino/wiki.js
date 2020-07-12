@@ -2,8 +2,9 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2020-01-16T15:46:57.263Z
+date: 2020-07-12T10:48:34.675Z
 tags: 
+editor: markdown
 ---
 
 # Loading the Speeduino firmware
@@ -20,9 +21,11 @@ The simplest (and recommended) method of installing the Speeduino firmware onto 
 -   **Windows:** [32-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-ia32.exe) / [64-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-x64.exe)
 -   **Mac:** [SpeedyLoader.dmg](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.dmg)
 -   **Linux:** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.AppImage) (Will need to be made executable after downloading)
--   **Raspberry Pi** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-armv7l.AppImage)
-    -   Linux / RaspberryPi versions require libusb libraries to be installed. EG if on Debian/Ubuntu:
+    -   Linux requires libusb libraries to be installed. EG if on Debian/Ubuntu:
             `sudo apt-get install libusb-1.0-0 libusb-0.1-4:i386`
+-   **Raspberry Pi** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-armv7l.AppImage)
+    -   Raspberry Pi / Raspbian users can install the required libraries with:
+            `sudo apt-get install libusb-1.0-0 libusb-0.1-4`
 
 Once the firmware is installed on the board, see [Connecting to TunerStudio](/Connecting_to_TunerStudio) for more details on how to configure TunerStudio
 
