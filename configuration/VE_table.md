@@ -2,7 +2,7 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2020-06-25T05:28:43.871Z
+date: 2020-08-02T12:14:44.068Z
 tags: fuel, fuel table, tuning, ve table
 editor: markdown
 ---
@@ -73,4 +73,9 @@ Conditional switched mode will allow use of the 2nd fuel table when a certain va
 Dpending on the desired outcome, this can be used to expand the resolution of the main fuel table, automatically handle alternate fuels or as an alternative ITB mode (Particularly if running boosted ITBs). 
 
 ### Switched - Input based
+Input based switch mode let's you change the fuel table that is in use via an external input to the ECU. The options required are:
+
+* The (Arduino) pin that the input is connected to
+* The polarity of this input (IE Is the secondary fuel table used with the signal is high or low). For a standard ground switching input, this should be `LOW`
+* Whether to use the internal pullup on this input. For a standard ground switching input, this should be `Yes`
 
