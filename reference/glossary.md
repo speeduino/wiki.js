@@ -1,14 +1,11 @@
 ---
-title: **Glossary**
+title: Glossary
 description: A list of terms and abbreviations used through out the Speeduino community and beyond.
 published: true
-date: 2020-08-05T04:50:28.285Z
+date: 2020-08-05T04:52:10.650Z
 tags: 
 editor: markdown
 ---
-
-Glossary
------------------
 
 **accel** - acceleration or accelerator.
 **ADC** - "analog to digital converter" any circuit or micro chip that converts an analog signal to a number which is understood by a microprocessor and/or microcontroller.
