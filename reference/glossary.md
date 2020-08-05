@@ -1,8 +1,8 @@
 ---
-title: Glossary
+title: **Glossary**
 description: A list of terms and abbreviations used through out the Speeduino community and beyond.
 published: true
-date: 2020-08-05T04:48:52.764Z
+date: 2020-08-05T04:50:28.285Z
 tags: 
 editor: markdown
 ---
