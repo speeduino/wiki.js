@@ -1,8 +1,8 @@
 ---
 title: Glossary
-description: A list of terms and abreviations used through out the Speeduino community and beyond.
+description: A list of terms and abbreviations used through out the Speeduino community and beyond.
 published: true
-date: 2020-08-05T04:41:56.435Z
+date: 2020-08-05T04:48:52.764Z
 tags: 
 editor: markdown
 ---
