@@ -1,4 +1,12 @@
-<languages/> <translate>
+---
+title: Trademarks
+description: 
+published: true
+date: 2020-09-02T11:15:48.904Z
+tags: 
+editor: markdown
+---
+
 
 Overview
 ========
@@ -27,5 +35,3 @@ Similar to the 'Speeduino' name itself, the logo may not be used on it's own. Ho
 -   'Speeduino compatible'
 -   'Made for Speeduino'
 -   'Powered by Speeduino'
-
-</translate>
