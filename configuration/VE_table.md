@@ -2,16 +2,17 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2020-08-02T12:14:44.068Z
+date: 2020-09-15T23:50:32.567Z
 tags: fuel, fuel table, tuning, ve table
 editor: markdown
+dateCreated: 2020-06-18T00:47:09.502Z
 ---
 
 # Fuel (VE) table
 
 The fuel or VE table is the primary method of controlling the amount of fuel that will be injected at each speed/load point. 
 
-![ve_table.png](/img/tuning/ve_table.png){.align-center width=450}
+![VE Table 1](/img/tuning/ve_table.png){.align-center width=450}
 
 ## Configuration
 The fuel map is a 3D, interpolated table that uses RPM and fuel load to lookup the desired VE value. The fuel load axis is determined by whether you are using Speed Density (MAP kPa) or Alpha-N (TPS) for your fuel load (See [Engine_Constants](/en/configuration/Engine_Constants))
@@ -19,11 +20,14 @@ The fuel map is a 3D, interpolated table that uses RPM and fuel load to lookup t
 The values in this table represent a percentage of the `Required Fuel` amount that will be injected when the engine is at a given speed/load point. 
 
 ### Options
-- **Multiply VE value by MAP:Baro ratio:** Enabling this option 'flattens' the fuel table by multiplying the value in the current speed/load point by the MAP value divided by the Baro value. You can tune with or without this option enabled, but it is generally recommended to be turned on as it will allow for simpler and more predictable tuning results. 
+- **Multiply VE value by MAP ratio:** Enabling this option 'flattens' the fuel table by multiplying the value in the current speed/load point by the MAP value divided by either the Baro value (in kPa) or a fixed 100% (For compatibility with tunes from other systems). 
+  - You can tune with or without this option enabled, but it is generally recommended to be turned on as it will allow for simpler and more predictable tuning results. 
+  - For new tunes it is recommended to use the `Baro` option
 > **Warning:** Changing this value will require retuning of the fuel map!
 {.is-warning}
 
 - **Multiply by ration of AFR to Target AFR:** This option is normally set to `No` for most setups. It allows basic close loop feedback by adjust the base fuel amount according to how far away from the target AFR the engine is currently running. 
+- **Multiply by ration of stoich AFR to target AFR ('Incorporate AFR')**: This option is similar to the one above, but instead of using the current AFR value, the fixed stoich AFR is used. 
 
 
 
