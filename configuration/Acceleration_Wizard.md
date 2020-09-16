@@ -2,9 +2,10 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2020-07-07T20:11:43.464Z
+date: 2020-09-16T00:13:54.075Z
 tags: 
 editor: markdown
+dateCreated: 2020-01-06T01:53:49.039Z
 ---
 
 # Acceleration Enrichment (AE)
@@ -24,7 +25,7 @@ Tuning of acceleration enrichment is based on the rate of change of the throttle
 
 TPSdot forms the X axis of the acceleration curve, with the Y axis value representing the % increase in fuel.
 
-![accel.png](/img/tuning/accel.png){.align-center width=800}
+![Acceleration Enrichment curves](/img/tuning/accel.png){.align-center width=500}
 
 ### Tuning
 
