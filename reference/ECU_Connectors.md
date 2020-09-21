@@ -2,9 +2,10 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-07-01T21:02:21Z
+date: 2020-09-21T00:58:04.163Z
 tags: 
 editor: markdown
+dateCreated: 2020-01-06T01:54:30.269Z
 ---
 
 ECU Connector Reference
@@ -14,11 +15,11 @@ In an effort to simplify the design of new boards, this page is a reference of k
 
 These part numbers are primarily for the ECU side. Where known, a loom side part number is also shown.
 
-### Audi / VW / Seat / Skoda
-| Model/s                                                                    | Part Number       | Alternative Part Numbers                           | Notes                 | Image                                                             |
-|----------------------------------------------------------------------------|-------------------|----------------------------------------------------|-----------------------|-------------------------------------------------------------------|
-| Most engines between 1997-200x (1.4, 1.6, 1.8t, 2.0, 2.3, 2.7t, 2.8, 3.2, 4.2)       | 1241434-1 (ECU)   |  1473244-1 (LOOM 81pin), 1473252-1 (LOOM 40pin)    | 2plug 121 pins        | [PDF](https://pl.mouser.com/ProductDetail/1241434-1)              |
-
+### Audi
+| Model/s                      | Part Number | Alternative Part Numbers | Notes                                                                                                           | Image                                                                                                                                                                                    |
+|------------------------------|-------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| A3,A4,A6,Golf,Passat         | 8-1393476-0 |                          | 80-pin 2 plug connector. Found on many models starting from 1997 going to mid 2000's. Both gasoline and diesel. | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+View+Model%7FCVM_8-1393476-0%7FB%7Fpdf%7F3D%7F3D_CVM_CVM_8-1393476-0_B.pdf%7F8-1393476-0)        |
+| Golf mk3, Passat B4, Corrado | 963356-1    |                          | 1st gen VR6 type engines (both coilpack/distributor type)                                                       | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+View+Model%7FCVM_963356-1%7FD%7Fpdf%7F3D%7F3D_CVM_CVM_963356-1_D_c-963356-1-d-3d.pdf%7F963356-1) |
 
 ### BMW
 | Model/s                   | Part Number | Alternative Part Numbers | Notes                                                                                     | Image                                                                                                                                          |
