@@ -2,7 +2,7 @@
 title: getting started
 description: 
 published: true
-date: 2020-10-16T21:54:07.147Z
+date: 2020-10-16T21:55:41.138Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T00:09:22.204Z
@@ -18,8 +18,8 @@ Les liens ci-dessous vont vous donner une vue d'ensemble de chaque région, de l
 
 [Requis matériel](/fr/Hardware_requirements) - Quel matériel vous aurez besoin en vue de les faire fonctionner Speeduino (Capteurs, Câblage, Injecteurs, Bobine d'allumage, etc)
 Information Spécifique sur les plaques
-[plaque v0.3](/fr/Hardware_requirements)
-[plaque v0.4](/fr/Hardware_requirements) 
+[plaque v0.3](/fr/boards/V03)
+[plaque v0.4](/fr/boards/V04) 
 [Miata/MX5 NA 89-95 PNP](/fr/Hardware_requirements)
 Chargement du Speeduino Firmware
 Utilisation avec le logiciel Tuner Studio 
