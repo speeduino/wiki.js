@@ -2,7 +2,7 @@
 title: getting started
 description: 
 published: true
-date: 2020-10-16T21:55:41.138Z
+date: 2020-10-16T21:56:40.124Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T00:09:22.204Z
@@ -20,7 +20,7 @@ Les liens ci-dessous vont vous donner une vue d'ensemble de chaque région, de l
 Information Spécifique sur les plaques
 [plaque v0.3](/fr/boards/V03)
 [plaque v0.4](/fr/boards/V04) 
-[Miata/MX5 NA 89-95 PNP](/fr/Hardware_requirements)
+[Miata/MX5 NA 89-95 PNP](fr/boards/MX5_PNP)
 Chargement du Speeduino Firmware
 Utilisation avec le logiciel Tuner Studio 
 Connexion au logiciel Tuner Studio
