@@ -2,14 +2,16 @@
 title: Getting Started
 description: Starting pages for each area of the manual
 published: true
-date: 2020-04-24T17:32:25.037Z
+date: 2020-10-16T22:00:29.888Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:37:14.971Z
 ---
 
 ## Getting started with Speeduino
 The Speeduino hardware and software can be setup in many ways and so it can initially be daunting to understand requirements and configuration steps. 
 
-Generally it is best to understand the [hardware requirments](/Hardware_requirements) first and ensure that your sensors are producing signals that speeduino can understand and control. Then decide the board version that works best with the target instilation [(v0.3)](/boards/V03) or [(v0.4)](/boards/V04) or a PNP variant.  
+Generally it is best to understand the [hardware requirments](/Hardware_requirements) first and ensure that your sensors are producing signals that speeduino can understand and control. Then decide the board version that works best with the target instalation [(v0.3)](/boards/V03) or [(v0.4)](/boards/V04) or a PNP variant.  
 
 The links below will help give an overview of each area, how it should be configured and how it relates to the overall setup. 
 
