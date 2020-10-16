@@ -2,8 +2,10 @@
 title: System Wiring Diagram
 description: A high level master system wiring diagram
 published: true
-date: 2020-05-19T03:22:51.432Z
+date: 2020-10-16T03:12:48.487Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T23:29:13.246Z
 ---
 
 # High level wiring guide
