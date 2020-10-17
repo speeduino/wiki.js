@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T18:00:48.757Z
+date: 2020-10-17T18:11:08.149Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -92,13 +92,13 @@ Une fois que vous avez réussi, le reste est très simple.
 -   Si vous avez une vieille version de **Windows** et que c'est la première fois que vous utilisez Arduino, vous devrez possiblement installer les pilotes pour les module série Arduino. (USB-UART ou "USB adapter chip").
 
 
-* **ATMega16U** - This has a square IC near the USB connector - drivers are included in Windows 7+, MacOS and Linux.
-* **WCH CH340G** - This has a rectangular IC near the USB connector- uses "CH341" drivers from [WCH](http://www.wch.cn/downloads/file/65.html) for Windows
-  * WCH-original CH340/CH341 drivers for other systems (Mac, Linux, Android, etc) may be found [here](http://www.wch.cn/downloads/CH341SER_ZIP.html).
+* **ATMega16U** - Ce jeu de puce est carré près du connecteur USB - Les pilotes sont inclus pour Windows 7+, MacOS et Linux.
+* **WCH CH340G** - Ce jeu de puce est rectangulaire près du connecteur USB - il utilise le pilote "CH341" dispoible : [ici](http://www.wch.cn/downloads/file/65.html) pour Windows
+  * WCH-original CH340/CH341 Les pilotes pour les autres systèmes (Mac, Linux, Android, etc) peuvent être téléchargés [ici](http://www.wch.cn/downloads/CH341SER_ZIP.html).
 
--   In Arduino IDE; select the Mega2560: *Tools &gt; Board*
--   Select your system's serial port to upload: *Tools &gt; Serial Port*
--   Hit the *Upload* button from the top left corner 
+-   Dans le Arduino IDE; selectionnez le Mega2560: *Outils &gt; type de carte*
+-   Choisissez votre port série : *Outils &gt; Ports*
+-   Cliquez le boutton *Upload* dans le coin supérieur gauche
 
 ### Relâches des vieux micrologiciels
 
@@ -120,9 +120,8 @@ Il est aussi possible d'enter "?" pour une liste de requêtes possible du MEGA.
 
 ### Dépannage
 
-#### Incorrect Arduino board selected
-
-If you see the following (or similar) errors when trying to compile the firmware and the solutions:
+#### Mauvais Type d'Arduino 
+Si vous voyez ceci (ou erreurs similaires) quand vous tentez de complier le micrologiciel:
 
     scheduler.ino:317:7: error: ‘OCR4A’ was not declared in this scope
     scheduler.ino:323:8: error: ‘TIMSK5’ was not declared in this scope
