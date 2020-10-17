@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T01:45:09.886Z
+date: 2020-10-17T01:46:44.542Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -82,9 +82,9 @@ Il y a une option de changer le niveau d'optimisation dans le 'compiler. Par dé
     -   compiler.cpp.flags
 -   Sauvegardez le fichier et redémarrez le Arduino IDE
 
-**Note:** This is NOT required if using PlatformIO, the above optimisation is applied automatically there
+**Note:** Ceci n'est pas ncessaire si vous utilisez 'PlatformIO', l'optimisation est automatiquement appliquée.
 
-### Installing
+### Installation
 
 Once you've successfully compiled the firmware, installation on the board is trivial.
 
