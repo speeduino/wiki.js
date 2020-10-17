@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T01:34:31.952Z
+date: 2020-10-17T01:45:09.886Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -17,7 +17,7 @@ Voulant garder un maximum de simplicité, le processus de compilation et d'insta
 
 ## Installation - SpeedyLoader
 
-La méthode la plus simple (et recommandée) d'installer le micrologiciel Speeduino sur un Arduino standard MEGA 2560 est avec l'utilitaire SpeedyLoader. SpeedyLoader fera lui-même le transfert du micrologiciel et de l'installation de celui-ci sans aucune nécessité de compilation manuelle. Vous pouvez choisir lea version la plus récente ou sélectionner une des versions plus ancienne si vous le préférez. SpeedyLoader téléchargera le fichier INI and optionnellement un fichier de programmation de base qui sera possible de charger dans le logiciel TunerStudio.
+La méthode la plus simple (et recommandée) d'installer le micrologiciel Speeduino sur un Arduino standard MEGA 2560 est avec l'utilitaire SpeedyLoader. SpeedyLoader fera lui-même le transfert du micrologiciel et de l'installation de celui-ci sans aucune nécessité de compilation manuelle. Vous pouvez choisir lea version la plus récente ou sélectionner une des versions plus ancienne si vous le préférez. SpeedyLoader téléchargera le fichier INI et si désiré un fichier de programmation de base qui sera possible de charger dans le logiciel TunerStudio.
 
 -   **Windows:** [32-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-ia32.exe) / [64-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-x64.exe)
 -   **Mac:** [SpeedyLoader.dmg](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.dmg)
@@ -37,7 +37,7 @@ Une fois le micrologiciel installé sur la plaque, voir  [Se connecter à TunerS
  
 Si vous voulez complier le micrologiciel vous-même, ou de faire des changement dans le code, les codes sources sont disponibles gratuitement.
 
-### Requirements
+### Requis
 
 -   un PC Windows, Mac ou linux 
 -   un parmi les choix suivants:
@@ -51,11 +51,11 @@ Si vous voulez complier le micrologiciel vous-même, ou de faire des changement 
 Il y a deux méthodes pour obtenir le micrologiciel Speeduino:
 
 1.  Des versions régulières et stables sont produites et relâchées sur Github. On peut les retrouver ici: <https://github.com/noisymime/speeduino/releases>
-2.  Si vous voules les versions les plus récentes et avec plus donc fonctionnalitées, (quelque fois non parfaites et ou stables) elles sont disponibles ici: <https://github.com/noisymime/speeduino>
+2.  Si vous voulez les versions les plus récentes et avec plus donc fonctionnalités, (quelque fois non parfaites et ou non stables) elles sont disponibles ici: <https://github.com/noisymime/speeduino>
 
 ### Compilation du micrologiciel
 
--   Démarrez le IDE, sélectionnez *Fichier &gt; ouvrir*, navigez à l'emplacement où vous avez téléchargé le Speeduino et ouvrez le fichier **speeduino.ino**.
+-   Démarrez le IDE, sélectionnez *Fichier &gt; ouvrir*, naviguez à l'emplacement où vous avez téléchargé le Speeduino et ouvrez le fichier **speeduino.ino**.
 -   Sélectionnez le type de plaque: *Outils &gt; Type de carte &gt; Arduino Mega 2560* ou Mega ADK (Ce sont les deux seuls types supportés présentement)
 -   Cliquez l'icone **Vérifier** dans le coin gauche en haut (ressemble à un crochet)
 
@@ -69,18 +69,18 @@ Le video démontre la marche a suivre complète de l'installation du micro logic
 
 #### Optionnel (Mais recommandé)
 
-There is an option available for changing the compiler optimization level, which can improve . By default, the IDE uses the -Os compile option, which focuses on producing small binaries. As the size of the Speeduino code is not an issue but speed is a consideration, changing this to -O3 produces better results (Approximately 20% faster, with a 40% larger sketch size) To do this, you need to edit the platform.txt file:
+Il y a une option de changer le niveau d'optimisation dans le 'compiler. Par défaut, le IDE utilise le '-0s' comme option, ce qui focus à faire de plus petits fichiers. Étant donné que la grosseur des fichiers n'est pas un problèmes mais que la vitesse est à considérer, changer l'option a '-03' produit de meilleurs résultats. (20% plus rapide mais avec des fichiers 40% plus gars approx.) Pour faire cela, vous devez éditer le fichier platform.txt :
 
--   Make sure the Arduino IDE isn't running
--   Open the platform.txt file which is in the following locations:
-    -   On Windows: c:\\Program Files\\Arduino\\hardware\\arduino\\avr
-    -   On Mac: /Applications/Arduino/Contents/Resources/Java/hardware/arduino/avr/
-    -   On Linux:
--   On the following 3 entries, change the Os to be O3:
+-   Le Arduino IDE ne doit pas être en fonction
+-   Ouvrir le fichier platform.txt qui est dans ces endroits:
+    -   Sur Windows: c:\\Program Files\\Arduino\\hardware\\arduino\\avr
+    -   Sur Mac: /Applications/Arduino/Contents/Resources/Java/hardware/arduino/avr/
+    -   Sur Linux:
+-   Pour les 3 entrées suivantes, changez les 'Os' pour des 'O3':
     -   compiler.c.flags
     -   compiler.c.elf.flags
     -   compiler.cpp.flags
--   Save the file and restart the Arduino IDE
+-   Sauvegardez le fichier et redémarrez le Arduino IDE
 
 **Note:** This is NOT required if using PlatformIO, the above optimisation is applied automatically there
 
