@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T01:26:48.799Z
+date: 2020-10-17T01:34:31.952Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -55,19 +55,19 @@ Il y a deux méthodes pour obtenir le micrologiciel Speeduino:
 
 ### Compilation du micrologiciel
 
--   Start the IDE, select *File &gt; Open*, navigate to the location you downloaded Speeduino to and open the **speeduino.ino** file.
--   Set the board type: *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK (This is the only board currently supported)
--   Click the **Verify** icon in the top left corner (Looks like a tick) 
+-   Démarrez le IDE, sélectionnez *Fichier &gt; ouvrir*, navigez à l'emplacement où vous avez téléchargé le Speeduino et ouvrez le fichier **speeduino.ino**.
+-   Sélectionnez le type de plaque: *Outils &gt; Type de carte &gt; Arduino Mega 2560* ou Mega ADK (Ce sont les deux seuls types supportés présentement)
+-   Cliquez l'icone **Vérifier** dans le coin gauche en haut (ressemble à un crochet)
 
-At this point you should have a compiled firmware! If you experienced a problem during the compile, see the [Troubleshooting](http://speeduino.com/wiki/index.php?title=Compiling_and_Installing_Firmware&action=edit&section=4#Troubleshooting) section below.
+À ce point vous devriez avoir compilé le micrologiciel! Si vous rencontrez des problèmes voir le guide de dépannage : [dépannage](http://speeduino.com/wiki/index.php?title=Compiling_and_Installing_Firmware&action=edit&section=4#Troubleshooting) plus bas. (Anglais seulement pour l'instant)
 
-This video walks through the whole process of installing the firmware on your Arduino from scratch:
+Le video démontre la marche a suivre complète de l'installation du micro logiciel sur le arduino a partir de zéro:
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AX9URou4JTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
-#### Optional (But recommended)
+#### Optionnel (Mais recommandé)
 
 There is an option available for changing the compiler optimization level, which can improve . By default, the IDE uses the -Os compile option, which focuses on producing small binaries. As the size of the Speeduino code is not an issue but speed is a consideration, changing this to -O3 produces better results (Approximately 20% faster, with a 40% larger sketch size) To do this, you need to edit the platform.txt file:
 
