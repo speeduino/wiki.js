@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T01:13:13.421Z
+date: 2020-10-17T01:26:48.799Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -35,25 +35,25 @@ Une fois le micrologiciel installé sur la plaque, voir  [Se connecter à TunerS
 {.is-warning}
 
  
-If you want to compile the firmware yourself, or make any code changes, then the source of both the releases and the current development version is freely available.
+Si vous voulez complier le micrologiciel vous-même, ou de faire des changement dans le code, les codes sources sont disponibles gratuitement.
 
 ### Requirements
 
--   A Windows, Mac or linux PC
--   One of the following:
-    -   [The Arduino IDE](http://arduino.cc/en/Main/Software). Current minimum version required is 1.6.7, although a newer version is recommended.
-    -   [PlatformIO](http://platformio.org/). Can be downloaded from <http://platformio.org/platformio-ide>
--   A copy of the latest Speeduino codebase. See below.
--   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
+-   un PC Windows, Mac ou linux 
+-   un parmi les choix suivants:
+    -   [Le Arduino IDE](http://arduino.cc/en/Main/Software). La version la plus vieille supportée est la 1.6.7, mais il est recommandé d'utiliser la version la plus à jour.
+    -   [PlatformIO](http://platformio.org/). Disponible pour téléchargement ici: <http://platformio.org/platformio-ide>
+-   Une copie du code source Speeduino le plus récent. Voir plus bas.
+-   Une copie de [TunerStudio](http://www.tunerstudio.com/index.php/downloads) pour tester que le micrologiciel a été chargé correctement.
 
-### Downloading the firmware
+### Téléchargement du micrologiciel
 
-There are two methods for obtaining the Speeduino firmware:
+Il y a deux méthodes pour obtenir le micrologiciel Speeduino:
 
-1.  Regular, stable code drops are produced and made as releases on Github. These can be found at: <https://github.com/noisymime/speeduino/releases>
-2.  If you want the latest and greatest (And occasionally flakiest) code, the git repository can be cloned and updated. See <https://github.com/noisymime/speeduino>
+1.  Des versions régulières et stables sont produites et relâchées sur Github. On peut les retrouver ici: <https://github.com/noisymime/speeduino/releases>
+2.  Si vous voules les versions les plus récentes et avec plus donc fonctionnalitées, (quelque fois non parfaites et ou stables) elles sont disponibles ici: <https://github.com/noisymime/speeduino>
 
-### Compiling the firmware
+### Compilation du micrologiciel
 
 -   Start the IDE, select *File &gt; Open*, navigate to the location you downloaded Speeduino to and open the **speeduino.ino** file.
 -   Set the board type: *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK (This is the only board currently supported)
