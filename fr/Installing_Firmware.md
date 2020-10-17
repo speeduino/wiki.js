@@ -2,36 +2,36 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-16T22:01:54.254Z
+date: 2020-10-17T01:13:13.421Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
 ---
 
-# Loading the Speeduino firmware
-## Overview
-The Speeduino firmware is the code that powers the hardware and must be installed onto your board prior to using the ECU. New firmware releases are made regularly (Approximately every 2 months) that bring new features, bug fixes and performance improvements so staying up to date is highly recommended. 
+# Chargement du micrologiciel Speeduino
+## Survol
+Le micrologiciel Speeduino est le code qui fait fonctionner le module et doit être installé sur votre module avant de pouvoir utiliser le ECU. De nouvelles version du micrologiciel sont lancées régulièrement (aux deux mois environ) et ils permettent de nouvelles fonctionnalités, des corrections de bugs et des améliorations de performances. Donc il est recommandé de rester à jour pour les micro logiciels.  
 
-With the goal of maximum simplicity in mind, the process of compiling and installing the firmware is reasonably straightforward. Most users will use the SpeedyLoader method for installing the firmware
+Voulant garder un maximum de simplicité, le processus de compilation et d'installation du micrologiciel est raisonnablement simple. La plupart des utilisateurs utiliseront la méthode 'SpeedyLoader' pour l'installation du micrologiciel.
 
 
 ## Installation - SpeedyLoader
 
-The simplest (and recommended) method of installing the Speeduino firmware onto a standard Arduino Mega 2560 is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file and optionally a base tune for the firmware you choose so it can be loaded into your TunerStudio project.
+La méthode la plus simple (et recommandée) d'installer le micrologiciel Speeduino sur un Arduino standard MEGA 2560 est avec l'utilitaire SpeedyLoader. SpeedyLoader fera lui-même le transfert du micrologiciel et de l'installation de celui-ci sans aucune nécessité de compilation manuelle. Vous pouvez choisir lea version la plus récente ou sélectionner une des versions plus ancienne si vous le préférez. SpeedyLoader téléchargera le fichier INI and optionnellement un fichier de programmation de base qui sera possible de charger dans le logiciel TunerStudio.
 
 -   **Windows:** [32-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-ia32.exe) / [64-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-x64.exe)
 -   **Mac:** [SpeedyLoader.dmg](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.dmg)
--   **Linux:** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.AppImage) (Will need to be made executable after downloading)
-    -   Linux requires libusb libraries to be installed. EG if on Debian/Ubuntu:
+-   **Linux:** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.AppImage) (Doit être exécuté après le téléchargement)
+    -   Linux requiert que la bibliothèque libusb soit installée. exemple :  si sur Debian/Ubuntu:
             `sudo apt-get install libusb-1.0-0 libusb-0.1-4:i386`
 -   **Raspberry Pi** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-armv7l.AppImage)
-    -   Raspberry Pi / Raspbian users can install the required libraries with:
+    -   Raspberry Pi / Utilisateurs Raspbian peuvent installer la bibliothèque de cette façon:
             `sudo apt-get install libusb-1.0-0 libusb-0.1-4`
 
-Once the firmware is installed on the board, see [Connecting to TunerStudio](/Connecting_to_TunerStudio) for more details on how to configure TunerStudio
+Une fois le micrologiciel installé sur la plaque, voir  [Se connecter à TunerStudio](/Connecting_to_TunerStudio) pour plus de détails sur comment configurer TunerStudio
 
-## Installation - Manually Compiling
-> Note that manually compiling the firmware is **NOT** required to install Speeduino, the easiest (and recommended for most users) method is using SpeedyLoader as described above.
+## Installation - Compilation manuelle
+> Note: la compilation manuelle du micrologiciel **n'est pas** nécessaire pour installer Speeduino, la façon la plus simple (et recommandée pour la plupart des usagers) est d'utiliser SpeedyLoader tel que décrite ci-haut.
 {.is-warning}
 
  
