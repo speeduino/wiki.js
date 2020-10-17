@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T02:03:11.455Z
+date: 2020-10-17T18:00:48.757Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -128,16 +128,16 @@ If you see the following (or similar) errors when trying to compile the firmware
     scheduler.ino:323:8: error: ‘TIMSK5’ was not declared in this scope
     scheduler.ino:323:25: error: ‘OCIE4A’ was not declared in this scope
 
-You may have the wrong kind of Arduino board selected. Set the board type by selecting *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK
+Il se peut que vous ayez choisit le mauvais type de plaque Arduino. Choisissez le type en allant à:  *Outils &gt; Type de carte &gt; Arduino Mega 2560* ou Mega ADK
 
-#### Entire Speeduino project is not opened
+#### Projet complet Speeduino n'est pas ouvert
 
-The following can occur if you have only opened the speeduino.ino file rather than the whole project.
+Ce qui suit peut survenir si vous ouvrez seulement le fichier speeduino.ino plutôt que le projet en entier:
 
 `speeduino.ino:27:21: fatal error: globals.h: No such file or directory`
 
-Make sure all the files are contained within the same directory, then select File-&gt;Open and find the speeduino.ino file. If you have opened the project correctly, you should have multiple tabs along the top:
+Assurez vous que tous les fichiers sont contenus dans le même répertoire, ensuite choisissez Fichier-&gt;Ouvrir et trouvez le fichier 'speeduino.ino'. Si vous avez ouvert le projet correctemet, vous devriez avoir plusieurs onglets dans le haut:
 
 ![speeduinoIDE.png](/img/TunerStudio/speeduinoIDE.png){.align-center width=500}
 
-If you see only a single file or a small number of files then you haven't opened the entire project.
+Si vous voyez seulement un fichier ou un petit nombre de fichiers; vous n'avez pas ouvert le projet en entier...
