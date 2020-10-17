@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T02:01:55.963Z
+date: 2020-10-17T02:03:11.455Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -116,9 +116,9 @@ Dans la fenêtre qui s'ouvre, tappez la lettre 'S' (en majuscule, mais sans les 
 
 **NOTE**: S'assurer que la vitesse est de 115200 baud. 
 
-You can also enter "?" for a list of queries from your Mega.
+Il est aussi possible d'enter "?" pour une liste de requêtes possible du MEGA.
 
-### Troubleshooting
+### Dépannage
 
 #### Incorrect Arduino board selected
 
