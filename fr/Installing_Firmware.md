@@ -2,7 +2,7 @@
 title: installation firmware
 description: 
 published: true
-date: 2020-10-17T01:46:44.542Z
+date: 2020-10-17T02:01:55.963Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T22:01:54.254Z
@@ -57,11 +57,11 @@ Il y a deux méthodes pour obtenir le micrologiciel Speeduino:
 
 -   Démarrez le IDE, sélectionnez *Fichier &gt; ouvrir*, naviguez à l'emplacement où vous avez téléchargé le Speeduino et ouvrez le fichier **speeduino.ino**.
 -   Sélectionnez le type de plaque: *Outils &gt; Type de carte &gt; Arduino Mega 2560* ou Mega ADK (Ce sont les deux seuls types supportés présentement)
--   Cliquez l'icone **Vérifier** dans le coin gauche en haut (ressemble à un crochet)
+-   Cliquez l'icône **Vérifier** dans le coin gauche en haut (ressemble à un crochet)
 
 À ce point vous devriez avoir compilé le micrologiciel! Si vous rencontrez des problèmes voir le guide de dépannage : [dépannage](http://speeduino.com/wiki/index.php?title=Compiling_and_Installing_Firmware&action=edit&section=4#Troubleshooting) plus bas. (Anglais seulement pour l'instant)
 
-Le video démontre la marche a suivre complète de l'installation du micro logiciel sur le arduino a partir de zéro:
+Le video démontre la marche a suivre complète de l'installation du micro logiciel sur le arduino à partir de zéro:
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AX9URou4JTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -69,7 +69,7 @@ Le video démontre la marche a suivre complète de l'installation du micro logic
 
 #### Optionnel (Mais recommandé)
 
-Il y a une option de changer le niveau d'optimisation dans le 'compiler. Par défaut, le IDE utilise le '-0s' comme option, ce qui focus à faire de plus petits fichiers. Étant donné que la grosseur des fichiers n'est pas un problèmes mais que la vitesse est à considérer, changer l'option a '-03' produit de meilleurs résultats. (20% plus rapide mais avec des fichiers 40% plus gars approx.) Pour faire cela, vous devez éditer le fichier platform.txt :
+Il existe une option de changer le niveau d'optimisation dans le 'compiler'. Par défaut, le IDE utilise le '-0s' comme option, ce qui focus à faire de plus petits fichiers. Étant donné que la grosseur des fichiers n'est pas un problèmes mais que la vitesse est à considérer, changer l'option a '-03' produit de meilleurs résultats. (20% plus rapide mais avec des fichiers 40% plus gars approx.) Pour faire cela, vous devez éditer le fichier platform.txt :
 
 -   Le Arduino IDE ne doit pas être en fonction
 -   Ouvrir le fichier platform.txt qui est dans ces endroits:
@@ -86,12 +86,11 @@ Il y a une option de changer le niveau d'optimisation dans le 'compiler. Par dé
 
 ### Installation
 
-Once you've successfully compiled the firmware, installation on the board is trivial.
+Une fois que vous avez réussi, le reste est très simple.
 
--   Plug in your Mega 2560 to a free USB port
--   If you're running an older version of **Windows** and this is the first time you've used an Arduino, you may need to install drivers for the Arduino serial chip (USB-UART or "USB adapter chip").
+-   Branchez le Mega 2560 dans un port USB libre.
+-   Si vous avez une vieille version de **Windows** et que c'est la première fois que vous utilisez Arduino, vous devrez possiblement installer les pilotes pour les module série Arduino. (USB-UART ou "USB adapter chip").
 
-Most official boards and many non-official versions use the ATMega16U2 or 8U2, whereas many of the Mega2560 clone boards utilize the CH340G IC. Both types work well. The serial chips can generally be identified by appearance:
 
 * **ATMega16U** - This has a square IC near the USB connector - drivers are included in Windows 7+, MacOS and Linux.
 * **WCH CH340G** - This has a rectangular IC near the USB connector- uses "CH341" drivers from [WCH](http://www.wch.cn/downloads/file/65.html) for Windows
@@ -101,21 +100,21 @@ Most official boards and many non-official versions use the ATMega16U2 or 8U2, w
 -   Select your system's serial port to upload: *Tools &gt; Serial Port*
 -   Hit the *Upload* button from the top left corner 
 
-### Older firmware releases
+### Relâches des vieux micrologiciels
 
-If required, older firmware releases and details can be found at [Firmware History](Firmware_History "wikilink")
+Si requis les vieilles versions se retrouvent ici:[Firmware History](Firmware_History "wikilink")
 
-### Verifying Firmware
+### Verification du mcrologiciel 
 
-The firmware is now loaded onto your board and you are now able to move onto [Connecting to TunerStudio](Connecting_to_TunerStudio "wikilink").
+Le micrologiciel étant maintenant installé vous pouvez maintenant passer à: [Connecter à TunerStudio](Connecting_to_TunerStudio "wikilink").
 
-Optionally, you may perform a manual verification of the firmware by using the Arduino IDE's Serial Monitor. This can be started by selecting 'Serial Monitor' from the Tools menu.
+Si voulu, il est possible de faire une validation manuelle du micrologiciel en utilisant le moniteur série du Arduino IDE. Ceci peut être démarré en sélectionnant le 'Moniteur série' à partir du menu Outils.
 
-In the window that appears, enter a capital "S" (no quotes) and press *Enter*. The Mega should respond with the year and month of the code version installed (xxxx.xx):
+Dans la fenêtre qui s'ouvre, tappez la lettre 'S' (en majuscule, mais sans les guillemets) et appuyez sur *enter* Le Arduino devrait répondre avec la date du code installé (xxxx.xx):
 
     Speeduino 2017.03
 
-**NOTE**: Ensure the baud rate is set to 115200
+**NOTE**: S'assurer que la vitesse est de 115200 baud. 
 
 You can also enter "?" for a list of queries from your Mega.
 
