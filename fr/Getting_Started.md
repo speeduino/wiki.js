@@ -2,7 +2,7 @@
 title: getting started
 description: 
 published: true
-date: 2020-10-19T00:17:00.660Z
+date: 2020-10-19T00:17:45.855Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T00:09:22.204Z
@@ -12,7 +12,7 @@ dateCreated: 2020-10-16T00:09:22.204Z
 Démarer avec Speeduino
 Le matériel et le logiciel Speeduino peuvent être mise en place de plusieurs façons et il pourrait paraitre intimidant de comprendre les requis et les étapes de configurations nécessaires.
 
-Généralement il est mieux de comprendre les [requis matériel](/fr/Hardware_requirements) en premier et de s'assurer que les capteurs produisent des signaux que le Speeduino est capable d'interpreter et contrôler. Ensuite de décider la version matériel requise du Speeduino. [V0.3](/fr/boards/V03), [V0.4](/fr/boards/V04) ou bien un module '[Plug and Play](/fr/boards/V03)'
+Généralement il est mieux de comprendre les [requis matériel](/fr/Hardware_requirements) en premier et de s'assurer que les capteurs produisent des signaux que le Speeduino est capable d'interpreter et contrôler. Ensuite de décider la version matériel requise du Speeduino. [V0.3](/fr/boards/V03), [V0.4](/fr/boards/V04) ou bien un module '[Plug and Play](/fr/boards/MX5_PNP)'
 
 Les liens ci-dessous vont vous donner une vue d'ensemble de chaque région, de la façon qu'elle devrait être configurer et de l'interaction sur la mise en place.
 
