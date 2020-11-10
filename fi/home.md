@@ -2,7 +2,7 @@
 title: Speeduino käyttöohje
 description: Speeduino moottorinohjausjärjestelmän käyttöohje.
 published: false
-date: 2020-11-10T08:56:38.715Z
+date: 2020-11-10T08:56:58.618Z
 tags: home
 editor: markdown
 dateCreated: 2020-11-10T08:18:27.466Z
@@ -27,7 +27,7 @@ Uuden Speeduino-järjestelmän kohdalla on suositeltavaa aloittaa Arduinon firmw
 
 Lisää tietoa vaatimuksista elektroniikan osalta sekä versiokohtaista tietoa löytyy *Kuinka päästä alkuun?* -sivulla -- https://wiki.speeduino.com/fi/kuinka_paasta_alkuun
 
-### Tietoa tästä käyttöohjeesta
+### Tietoa käyttöohjeista
 
 Open Source -projektina nämä käyttöohjeet kehittyvät jatkuvasti ja tämä tarkoittaa myös sitä, että saatat törmätä aukkoihin kohdissa, joissa on vasta vähän tietoa tarjolla. Älä epäröi kirjoittaa keskustelufoorumille, jos koet että käyttöohjeista puuttuu jokin kriittinen tieto (tai ei kriittinen).
 
