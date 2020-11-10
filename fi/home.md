@@ -2,7 +2,7 @@
 title: Speeduino käyttöohje
 description: Speeduino moottorinohjausjärjestelmän käyttöohje.
 published: false
-date: 2020-11-10T08:57:41.241Z
+date: 2020-11-10T08:58:02.532Z
 tags: home
 editor: markdown
 dateCreated: 2020-11-10T08:18:27.466Z
@@ -29,6 +29,6 @@ Lisää tietoa vaatimuksista elektroniikan osalta sekä versiokohtaista tietoa l
 
 ### Tietoa käyttöohjeista
 
-Open Source -projektin luonteesta johtuen nämä käyttöohjeet kehittyvät jatkuvasti ja tämä tarkoittaa myös sitä, että saatat törmätä aukkoihin kohdissa, joissa on vasta vähän tietoa tarjolla. Älä epäröi kirjoittaa keskustelufoorumille, jos koet että käyttöohjeista puuttuu jokin kriittinen tieto (tai ei kriittinen).
+Open Source -projektin luonteesta johtuen nämä käyttöohjeet kehittyvät jatkuvasti ja tämä tarkoittaa myös sitä, että saatat törmätä aukkoihin kohdissa, joissa on vasta vain vähän tietoa tarjolla. Älä epäröi kirjoittaa keskustelufoorumille, jos koet että käyttöohjeista puuttuu jokin kriittinen tieto (tai ei kriittinen).
 
 Lisäksi, mikäli haluat osallistua Speeduino dokumentaation luomiseen haluaisimme ehdottomasti kuulla sinusta lisää. Toivottu tapa edetä on pyytää Wikin käyttöoikeuksia Slack-keskustelualustan kautta -- https://speeduino.com/forum/app.php/page/slack
