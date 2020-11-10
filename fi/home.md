@@ -1,8 +1,8 @@
 ---
-title: Esittely
-description: Speeduino moottorinohjausjärjestelmän esittely.
+title: Speeduino käyttöohje
+description: Speeduino moottorinohjausjärjestelmän käyttöohje.
 published: false
-date: 2020-11-10T08:18:27.466Z
+date: 2020-11-10T08:19:41.282Z
 tags: esittely speeduino
 editor: markdown
 dateCreated: 2020-11-10T08:18:27.466Z
