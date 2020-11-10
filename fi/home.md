@@ -2,7 +2,7 @@
 title: Speeduino käyttöohje
 description: Speeduino moottorinohjausjärjestelmän käyttöohje.
 published: false
-date: 2020-11-10T08:31:40.611Z
+date: 2020-11-10T08:41:32.503Z
 tags: esittely speeduino
 editor: markdown
 dateCreated: 2020-11-10T08:18:27.466Z
@@ -23,6 +23,6 @@ Päästäksesti alkuun Speeduinon kanssa  on hyvä tietää mistä peruskomponen
 
 3. **Firmware** - Firmware on ohjelma, jota suoritetaan Arduino/Teensy -piirilevyllä. Tämä ohjelmisto määrittää koko Speeduinon toiminnan. Uusi firmware-ohjemisto julkaistaan säännöllisesti. Tyypillisesti julkaisu sisältää päivityksiä, suorituskykyparannuksia ja bugi korjauksia.
 
-As a starting point, it is generally recommended to first upload the firmware to your Arduino and get it connecting to the tuning software (Tuner Studio) before moving on to hardware assembly or wiring etc. Software setup and configuration on Speeduino can be completed without the need for any additional hardware to be present (Beyond the arduino itself) and this allows exploration of the software and options available before either an outlay of significant funds or a significant investment of time.
+Uuden Speeduino-järjestelmän kohdalla on suositeltavaa aloittaa Arduinon firmwaren lataamisesta sekä Arduinon yhdistämisestä säätöohjelmaan (Tuner Studio) ja vasta tämän jälkeen suositellaan siirtymistä elektroniikan kokoonpanoon, johtosarjan tekoon ym. muihin asioihin. Speeduinon perussäädöt ja parametrien asetukset voidaan suorittaa ilman, että Arduinoon on kytkettynä muita elektroniikan komponentteja (kuten Speeduino piirilevyä). Tämä mahdollistaa säätöohjelmaan tutustumisen jo ennen kuin projektiin on käytetty yhtään sen enempää aikaa tai rahaa.
 
-More details on hardware requirments and verson specific features can be found on the Getting Started page. (https://wiki.speeduino.com/en/Getting_Started)
+Lisää tietoa vaatimuksista elektroniikan osalta sekä versiokohtaista tietoa löytyy _Kuinka päästä alkuun?_ -sivulla (https://wiki.speeduino.com/fi/kuinka_paasta_alkuun)
