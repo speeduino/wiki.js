@@ -2,7 +2,7 @@
 title: Speeduino käyttöohje
 description: Speeduino moottorinohjausjärjestelmän käyttöohje.
 published: false
-date: 2020-11-10T08:42:02.844Z
+date: 2020-11-10T08:43:58.820Z
 tags: home
 editor: markdown
 dateCreated: 2020-11-10T08:18:27.466Z
@@ -25,4 +25,4 @@ Päästäksesti alkuun Speeduinon kanssa  on hyvä tietää mistä peruskomponen
 
 Uuden Speeduino-järjestelmän kohdalla on suositeltavaa aloittaa Arduinon firmwaren lataamisesta sekä Arduinon yhdistämisestä säätöohjelmaan (Tuner Studio) ja vasta tämän jälkeen suositellaan siirtymistä elektroniikan kokoonpanoon, johtosarjan tekoon ym. muihin asioihin. Speeduinon perussäädöt ja parametrien asetukset voidaan suorittaa ilman, että Arduinoon on kytkettynä muita elektroniikan komponentteja (kuten Speeduino piirilevyä). Tämä mahdollistaa säätöohjelmaan tutustumisen jo ennen kuin projektiin on käytetty yhtään sen enempää aikaa tai rahaa.
 
-Lisää tietoa vaatimuksista elektroniikan osalta sekä versiokohtaista tietoa löytyy _Kuinka päästä alkuun?_ -sivulla (https://wiki.speeduino.com/fi/kuinka_paasta_alkuun)
+Lisää tietoa vaatimuksista elektroniikan osalta sekä versiokohtaista tietoa löytyy *Kuinka päästä alkuun?* -sivulla -- https://wiki.speeduino.com/fi/kuinka_paasta_alkuun
