@@ -2,7 +2,7 @@
 title: Kuinka aloittaa?
 description: Kuinka aloittaa Speeduino-projekti.
 published: false
-date: 2020-11-10T10:13:08.168Z
+date: 2020-11-10T10:13:49.201Z
 tags: kuinka aloittaa
 editor: markdown
 dateCreated: 2020-11-10T09:54:44.085Z
@@ -16,7 +16,7 @@ Yleisesti ottaen on paras vaihtoehto aloittaa ymmärtämällä elektroniikkaan k
 
 Alla olevat linkit auttavat saamaan aihekohtaisen yleiskäsityksen. Kuinka kyseinen kokonaisuus säädetään ja miten se soveltuu mihinkin projektiin.
 
-- [Elektroniikka kompoHardware requirements](/Hardware_requirements) - Mitä komponentteja tarvitset Speeduino järjestelmään (anturit, johdotus, suuttimet, sytytyspuolat jne.)
+- [Elektroniikan komponentit](/Hardware_requirements) - Mitä komponentteja tarvitset Speeduino järjestelmään (anturit, johdotus, suuttimet, sytytyspuolat jne.)
 - Piirilevykohtaiset tiedot:
   - [v0.3 piirilevy](/boards/V03)
   - [v0.4 piirilevy](/boards/V04)
