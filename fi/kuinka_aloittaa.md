@@ -2,7 +2,7 @@
 title: Kuinka aloittaa?
 description: Kuinka aloittaa Speeduino-projekti.
 published: false
-date: 2020-11-10T09:54:44.085Z
+date: 2020-11-10T10:05:04.749Z
 tags: kuinka aloittaa
 editor: markdown
 dateCreated: 2020-11-10T09:54:44.085Z
@@ -12,7 +12,7 @@ dateCreated: 2020-11-10T09:54:44.085Z
 
 Speeduino elektroniikka ja ohjelmisto voidaan asentaa monella eri tavalla, joten on tärkeää ymmärtää järjestelmää koskevat vaatimukset sekä säätämisen eri vaiheet.
 
-
+Yleisesti ottaen on paras vaihtoehto aloittaa ymmärtämällä elektroniikkaan kohdistuvat vaatimukset ensin ja varmistaa, että antureilta tulevat signaalit ovat Speeduinon ymmärrettävissä ja ohjattavissa. Tämän jälkeen voidaan valita mikä Speeduino piirilevy sopii parhaiten kyseiseen asennukseen [(v0.3)](/boards/V03) vai [(v0.4)](/boards/V04) vai jokin Plug'n'play piirilevyistä.
 
 Generally it is best to understand the [hardware requirments](/Hardware_requirements) first and ensure that your sensors are producing signals that speeduino can understand and control. Then decide the board version that works best with the target instalation [(v0.3)](/boards/V03) or [(v0.4)](/boards/V04) or a PNP variant.  
 
