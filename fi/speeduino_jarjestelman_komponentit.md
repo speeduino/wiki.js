@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:23:42.563Z
+date: 2020-11-13T13:24:07.490Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -33,7 +33,7 @@ VR (variable reluctance) antureita voidaan myös käyttää. Tällöin on huomio
 
 Rakennettaessa johtosarjaa kampiakselin ja nokka-akselin anturoinneille on syytä kiinnittää huomiota EMI-asioihin (elektromagneettiset häiriöt). Näihin voi vaikuttaa oikeanlaisella kaapelivalinnalla sekä kaapelin viennillä. Auttaa jos kaapeloinnin pystyy asentamaan mahdollisimman kauaksi suurista häiriölähteistä (esim. laturi, sytytystulpat, -johdot ja -puolat). Suojatun kaapelin käyttö on suositeltaavaa (liitä suoja-vaippa ainoastaan ECUn päähän). Signaalia voidaan suodattaa ohjelmallisesti mutta mikään ei voita puhdasta, suoraan anturilta tulevaa, signaalia.
 
-Jos kampi-/nokka-akselin signaali on kadoksissa ja EMI / suodatus asetukset ovat tapissaan, varmista että Speeduino piirilevyn +12V ja GND liitännät ovat vapaita häiriöistä. On mahdollista, että päävirtojen kautta aiheutuu häiriöitä muulle järjestelmälle.
+Jos kampi-/nokka-akselin signaali on kadoksissa ja EMI-/suodatus-asetukset ovat tapissaan, varmista että Speeduino piirilevyn +12V ja GND liitännät ovat vapaita häiriöistä. On mahdollista, että päävirtojen kautta aiheutuu häiriöitä muulle järjestelmälle.
 
 ### TPS (kaasuläpän asentoanturi)
 
