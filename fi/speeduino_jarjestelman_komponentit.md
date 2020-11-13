@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T12:22:07.585Z
+date: 2020-11-13T12:25:14.903Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -16,10 +16,12 @@ Arduino
 -------
 Speeduino järjestelmän aivoina käytetään Arduino Mega 2560 R3 levyä. Kaikki viralliset ja suurinosa Arduino Mega 2560 klooneista toimii mutta on suositeltavaa käyttää sellaista versiota, jossa sarjakommunikaatio on toteutettu 16u2 sirulla edullisemman CH340 sirun sijaan. Tieto siitä kumpaa sirua levyllä on käytetty löytyy yleensä levyn teknistentietojen listasta. Jos epäilet asiaa voit varmistaa asian suoraan Arduinon myyjältä.
 
-Inputs
-------
+Sisääntulot
+-------
 
-### Crank sensor / Camshaft Sensor
+### Kampia- ja nokka-akselin anturit
+
+Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 
 
 This is arguably the most important sensor for Speeduino to function correctly. The signal going to the Arduino must be a 0v-5v square wave series of pulses (shown below) representing teeth on a wheel running at crank (or cam) speed. Many Hall and 'opto' sensors meet this digital square-wave spec. If only a crankshaft trigger wheel is used (no cam signal), the crank wheel must have a 'missing' tooth in order to provide position information as well as the engine RPM. Tested missing-tooth wheels currently are 4-1, 12-1, 36-1 and 60-2.
 
