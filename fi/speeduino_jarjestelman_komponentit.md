@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T12:35:21.365Z
+date: 2020-11-13T12:43:02.696Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -19,11 +19,9 @@ Speeduino järjestelmän aivoina käytetään Arduino Mega 2560 R3 levyä. Kaikk
 Sisääntulot
 -------
 
-### Kampia- ja nokka-akselin anturit
+### Kampi- ja nokka-akselin anturit
 
-Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 0-5v kantti-muotoista aaltoa (kuvassa alla), jonka tulee vastata hammaspyörän kuviota, joka pyörii kampi- tai nokka-akselin pyörintänopeudella.
-
-Many Hall and 'opto' sensors meet this digital square-wave spec. If only a crankshaft trigger wheel is used (no cam signal), the crank wheel must have a 'missing' tooth in order to provide position information as well as the engine RPM. Tested missing-tooth wheels currently are 4-1, 12-1, 36-1 and 60-2.
+Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 0-5v kantti-muotoista aaltoa (kuvassa alla), jonka tulee vastata hammaspyörän kuviota, joka pyörii kampi- tai nokka-akselin pyörintänopeudella. Useimmat Hall- ja "opto"-tyyppiset anturit pystyvät tuottamaan vaaditun kaltaisen kantti-muotoisen signaalin. Jos käytössä on ainoastaan kampiakselin anturi (ei signaalia nokka-akselilta), hammaspyörän kuvion tulee olla puuttuvalla hampaalla olevaa mallia, jotta moottorin asento ja sen käyntinopeus voidaan määrittää. Toistaiseksi testatut puuttuvan hampaan kuviot ovat 4-1, 12-1, 36-1 ja 60-2.
 
 For all timing signal parsing options see the [Trigger Patterns and Decoders](/decoders) page.
 
