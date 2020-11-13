@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T12:15:07.181Z
+date: 2020-11-13T12:22:07.585Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -10,12 +10,11 @@ dateCreated: 2020-11-13T12:11:48.259Z
 
 # Yleiskatsaus Speeduino-järjestelmän komponentteihin
 
-Tällä sivulla esitetään Speeduino-järjestelmään kuuluvat komponentit sekä näiden vaihtoehtoisia muunnelmia. Kaikkia mahdollisia vaihtoehtoja ei esitetä mutta tämä sivu tarjaa hyvän yleiskäsityksen, jonka avulla on helppo aloittaa - varsinkin jos olet ensikertalainen.
+Tällä sivulla esitellään Speeduino-järjestelmään kuuluvat komponentit sekä näiden vaihtoehtoisia muunnelmia. Kaikkia mahdollisia vaihtoehtoja ei esitetä mutta tämä sivu tarjaa hyvän yleiskäsityksen, jonka avulla on helppo aloittaa - varsinkin jos olet ensikertalainen.
 
 Arduino
 -------
-
-Speeduino uses the Arduino Mega 2560 R3 as the controller. All official and most clone Arduino Mega 2560 boards will work fine, but it is recommended to use a board that has the 16u2 serial interface rather than the cheaper CH340. Which chip a board uses can usually be found on the information/specification listing from most retailers, but if in doubt, ask the seller you are looking to buy from.
+Speeduino järjestelmän aivoina käytetään Arduino Mega 2560 R3 levyä. Kaikki viralliset ja suurinosa Arduino Mega 2560 klooneista toimii mutta on suositeltavaa käyttää sellaista versiota, jossa sarjakommunikaatio on toteutettu 16u2 sirulla edullisemman CH340 sirun sijaan. Tieto siitä kumpaa sirua levyllä on käytetty löytyy yleensä levyn teknistentietojen listasta. Jos epäilet asiaa voit varmistaa asian suoraan Arduinon myyjältä.
 
 Inputs
 ------
