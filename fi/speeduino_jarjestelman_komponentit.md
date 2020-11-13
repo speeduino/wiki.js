@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T12:43:02.696Z
+date: 2020-11-13T12:49:26.725Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -21,9 +21,9 @@ Sisääntulot
 
 ### Kampi- ja nokka-akselin anturit
 
-Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 0-5v kantti-muotoista aaltoa (kuvassa alla), jonka tulee vastata hammaspyörän kuviota, joka pyörii kampi- tai nokka-akselin pyörintänopeudella. Useimmat Hall- ja "opto"-tyyppiset anturit pystyvät tuottamaan vaaditun kaltaisen kantti-muotoisen signaalin. Jos käytössä on ainoastaan kampiakselin anturi (ei signaalia nokka-akselilta), hammaspyörän kuvion tulee olla puuttuvalla hampaalla olevaa mallia, jotta moottorin asento ja sen käyntinopeus voidaan määrittää. Toistaiseksi testatut puuttuvan hampaan kuviot ovat 4-1, 12-1, 36-1 ja 60-2.
+Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 0-5v kantti-muotoista aaltoa (kuvassa alla), jonka tulee vastata triggeri-pyörän kuviota, joka pyörii kampi- tai nokka-akselin pyörintänopeudella. Useimmat Hall- ja "opto"-tyyppiset anturit pystyvät tuottamaan vaaditun kaltaisen kantti-muotoisen signaalin. Jos käytössä on ainoastaan kampiakselin anturi (ei signaalia nokka-akselilta), triggeri-pyörän kuvion tulee olla puuttuvalla hampaalla oleva kuvio, jotta moottorin asento ja sen käyntinopeus voidaan määrittää. Toistaiseksi testatut puuttuvan hampaan kuviot ovat 4-1, 12-1, 36-1 ja 60-2 kuviot.
 
-For all timing signal parsing options see the [Trigger Patterns and Decoders](/decoders) page.
+Lisää tietoa triggeri-pyörien kuviovaihtoehdoista löydät [Trigger Patterns and Decoders](/decoders) sivulta.
 
 Alternatively (and necessary for full-sequential injection) an added cam signal with or without crank wheel missing teeth. These setups are indicated by the added "/x", such as 60-2/1, for a 60-tooth crank wheel, with 2 missing teeth, and a 1-tooth cam signal per cycle. Cam-speed missing-tooth wheels can also support semi and full-sequential.
 
