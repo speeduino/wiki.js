@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:15:17.096Z
+date: 2020-11-13T13:20:05.511Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -31,9 +31,7 @@ VR (variable reluctance) antureita voidaan myös käyttää. Tällöin on huomio
 
 ![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
 
-Rakennettaessa johtosarjaa kampiakselin ja nokka-akselin anturoinneille on syytä kiinnittää huomiota EMI-asiat (elektromagneettiset häiriöt), joihin voi vaikuttaa oikeanlaisella kaapelivalinnalla sekä kaapelin viennillä.
-
-It is recomended to take precautions for EMI while routing and choosing the wire for the crankshaft and camshaft sensors. Keeping wires away from electrically noisy components like the alternator, and spark plugs can help. Using a shielded cable can also help (tie the shield to the ECU side only). Software filtering can be used but nothing beats a clean signal from the source. 
+Rakennettaessa johtosarjaa kampiakselin ja nokka-akselin anturoinneille on syytä kiinnittää huomiota EMI-asioihin (elektromagneettiset häiriöt). Näihin voi vaikuttaa oikeanlaisella kaapelivalinnalla sekä kaapelin viennillä. Auttaa jos kaapeloinnin pystyy asentamaan mahdollisimman kauaksi suurista häiriölähteistä (esim. laturi, sytytystulpat, -johdot ja -puolat). Suojatun kaapelin käyttö on suositeltaavaa (liitä suoja-vaippa ainoastaan ECUn päähän). Signaalia voidaan suodattaa ohjelmallisesti mutta mikään ei voita puhdasta, suoraan anturilta tulevaa, signaalia.
 
 If crank / cam signal is lost and EMI / filtering options have been exhaused, ensure that the Speeduino board's +12V and GND connections are noise free as well. It is possible for noise on the main power rail to cause interference. 
 
