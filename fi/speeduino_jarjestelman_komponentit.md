@@ -2,17 +2,17 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T12:11:48.259Z
+date: 2020-11-13T12:13:45.024Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
 ---
 
-# Yleiskatsaus Speeduinon elektroniikkaan
+# Yleiskatsaus Speeduino-järjestelmän komponentteihin
 
-Tällä sivulla esitetään Speeduino-järjestelmään kuuluvat komponentit.
+Tällä sivulla esitetään Speeduino-järjestelmään kuuluvat komponentit sekä näiden vaihtoehtoisia muunnelmia.
 
-This page presents the basic hardware requirements of a Speeduino system, as well as a number of options for different variations of these. It does not represent every supported combination of hardware, but provides an overview if you're starting out. 
+It does not represent every supported combination of hardware, but provides an overview if you're starting out. 
 
 Arduino
 -------
