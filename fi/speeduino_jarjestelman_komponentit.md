@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T12:49:26.725Z
+date: 2020-11-13T13:00:39.895Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -25,7 +25,7 @@ Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tär
 
 Lisää tietoa triggeri-pyörien kuviovaihtoehdoista löydät [Trigger Patterns and Decoders](/decoders) sivulta.
 
-Alternatively (and necessary for full-sequential injection) an added cam signal with or without crank wheel missing teeth. These setups are indicated by the added "/x", such as 60-2/1, for a 60-tooth crank wheel, with 2 missing teeth, and a 1-tooth cam signal per cycle. Cam-speed missing-tooth wheels can also support semi and full-sequential.
+Täysin sekventiaaliseen ruiskutukseen vaaditaan myös nokka-akselin anturin tuottama signaali (tällöin kampiakselilla olevan triggeri-pyörän ei välttämättä tarvitse olla kuvioltaan puuttuvahampainen). Nämä kuviot ovat merkattu "/x"-merkillä kuten 60-2/1 joka tarkoittaa, että kampiakselilla on 60 hampainen triggeri-kuvio, 2 puuttuvalla hampaalla, ja nokka-akselilla on 1 hampainen triggeri-kuvio. Nokka-akselilla oleva puuttuvahampaista kuviota voidaan käyttää semi- ja täysin seqventiaalisissa kokoonpanoissa.
 
 VR (variable reluctance) sensors can also be used, however as the board does not contain any sort of signal conditioner to convert the sine wave (below) to the required square wave, an additional module will be needed. An 8-pin DIP socket is located on v0.3.x and v0.4.x series official boards for this purpose as IC3. The MAX9926 chip has been tested to work with most types of input signals, and is available from the [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product), however any similar module that outputs a 0v-5v square wave (LM1815, LM358, SSC/DSC, many OEM modules, etc.) should also work fine with VR sensor signals.
 
