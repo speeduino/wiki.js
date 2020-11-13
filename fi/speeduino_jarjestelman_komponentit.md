@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:38:50.116Z
+date: 2020-11-13T13:52:02.235Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -35,24 +35,24 @@ Rakennettaessa johtosarjaa kampiakselin ja nokka-akselin anturoinneille on syyt�
 
 Jos EMI-/suodatus-asetukset ovat maksimissaan ja kampi-/nokka-akselin signaali on kadoksissa, varmista että Speeduino piirilevyn +12V ja GND liitännät ovat vapaita häiriöistä. On mahdollista, että päävirtojen kautta aiheutuu häiriöitä toisaalle järjestelmään.
 
-### TPS (kaasuläpän asentoanturi)
+### TPS (Throttle Position Sensor, kaasuläpän asentoanturi)
 
 TPS-anturin on oltava mielummin 3-johtoinen, potentiometri-tyyppinen.2-johtoinen on/off-tyyppistä antruia ei suositella käytettävän. Jos TPS-anturisi on 3-johtoinen se todennäköisesti toimii mutta on varmistettava, että anturi on potentiometri-tyyppinen.
 
 TPS-anturi toimii lähettämällä muuttuvan analogisen signaalisn Speeduinolle ja välittää näin kaasuläpän asennon. Tyypillisesti anturille johdettu +5V ja maadoitus (GND, signaali maa tai paluusignaali) kulkee sisäisen potentiometrin kautta, joka tuottaa anturin ulostuloon matalan jännitteen pienellä kaasuläpän avaumalla ja vastaavasti suuren jännitteen suurella kaasuläpän avaumalla.
 
-Jos TPS-anturia joudutaan käyttämään tuntemattomien liitäntöjen kanssa on suositeltavaa mitata TPS-anturi yleismittarilla, jotta voidaan määrittää anturin pinnijärjestys ilman, että anturi mahdollisesti vahingoittuu kytkentäkokeiluista. Mittaus voidaan suorittaa moottori sammutettuna ja TPS-anturi irrallaan seuraavasti:
+Jos TPS-anturia joudutaan käyttämään tuntemattomien liitäntöjen kanssa on suositeltavaa mitata TPS-anturi yleismittarilla, jotta voidaan määrittää anturin pinnijärjestys ilman, että anturi mahdollisesti vahingoittuu kytkentäkokeiluista. Mittaus voidaan suorittaa moottori sammutettuna ja TPS-anturin liitin irrallaan seuraavasti:
 
--   Assign a letter to each pin.
--   Attach the ohm meter to two pins, and operate the throttle from closed (idle) to wide-open (WOT), recording the results.
--   Find the pair of pins where the resistance does not change significantly from idle to WOT. These are your two power pins.
--   The remaining pin is your **Signal** pin.
--   In order to determine which power pin is **V+** and which is **GND**, test ohms between the **Signal** pin and one power pin.
--   In idle position; if ohms are low that power pin is **GND**. If ohms are high that power pin is **V+**.
+- Merkkaa jokainen anturin pinni omalla kirjaimella.
+-	Kaasuläpän ollessa kiinni liitä yleismittari (ohm-asetus) kahteen anturin pinneistä ja käännä kaasuläppä auki-asentoon, kirjaa mittauksen tulokset ylös.
+- Etsi pinnipari, joiden resistanssi ei muutu merkittävästi kaasuläpän suljetun ja avoinaisen asennon välillä. Nämä ovat kaksi käyttöjännite-pinniä.
+- Jäljelle jäävä pinni on **Signaali**-pinni
+- Määrittääksesi kumpi käyttöjännite-pinneistä on **V+** ja kumpi **GND** testaa resistanssi (ohm) **Signaali**-pinnin ja jommankumman käyttöjännitepinnin välillä.
+- Kaasuläpän ollessa kiinni - jos resistanssi pinnien välillä on pieni on kyseinen pinni **GND**. Jos resistanssi on suuri on pinni **V+**.
 
-Most usable TPS sensors have 3 pins. If your TPS has a different number of pins, referring to the original engine wiring diagram may show the function, and whether it is usable or which pins to use for Speeduino. For TP sensors that work 'backwards', and wiring cannot be changed, a simple code modification is available on the [Forums](https://speeduino.com/forum/viewtopic.php?f=19&t=1159#p18146) to make use of this type of TPS.
+Suurin osa käyttökelpoisista TPS-anturiesta on 3 pinnisiä. Jos TPS-anturissasi on poikkeava määrä pinnejä voi auton alkuperäinen piirikaavio kertoa pinnien merkityksen ja sen onko kyseinen anturi käytettävissä Speeduinon kanssa. TPS-antureille, jotka toimivat "takaperin" (tapauksissa, joissa johdotusta ei voida muuttaa), on saatavilla yksinkertainen muutos ohjelman koodiin, joka on saatavilla täältä: [Forums](https://speeduino.com/forum/viewtopic.php?f=19&t=1159#p18146)
 
-### MAP (Manifold Pressure)
+### MAP (Manifold Pressure, imusarjan paine -anturi)
 
 Recommended MAP sensor is the MPX4250 from Freescale, however many MAP sensors are supported. If you want to use one that is not included in the list (Under Tools-&gt;Map Calibration in TunerStudio) then please make a new thread in the forum requesting this. Other sensors can and will work just fine, but you will need to calibrate these within TunerStudio against a different set of values.
 
