@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:20:05.511Z
+date: 2020-11-13T13:23:42.563Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -21,21 +21,21 @@ Sisääntulot
 
 ### Kampi- ja nokka-akselin anturit
 
-Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 0-5v kantti-muotoista aaltoa (kuvassa alla), jonka tulee vastata triggeri-pyörän kuviota, joka pyörii kampi- tai nokka-akselin pyörintänopeudella. Useimmat Hall- ja "opto"-tyyppiset anturit pystyvät tuottamaan vaaditun kaltaisen kantti-muotoisen signaalin. Jos käytössä on ainoastaan kampiakselin anturi (ei signaalia nokka-akselilta), triggeri-pyörän kuvion tulee olla puuttuvalla hampaalla oleva kuvio, jotta moottorin asento ja sen käyntinopeus voidaan määrittää. Toistaiseksi testatut puuttuvan hampaan kuviot ovat 4-1, 12-1, 36-1 ja 60-2 kuviot.
+Nämä anturit ovat Speeduino järjestelmän toiminnan kannalta ne kaikista tärkeimmät. Arduinolle kulkevan signaalin tulee olla 0-5V kantti-muotoista aaltoa (kuvassa alla), jonka tulee vastata triggeri-pyörän kuviota, joka pyörii kampi- tai nokka-akselin pyörintänopeudella. Useimmat Hall- ja "opto"-tyyppiset anturit pystyvät tuottamaan vaaditun kaltaisen kantti-muotoisen signaalin. Jos käytössä on ainoastaan kampiakselin anturi (ei signaalia nokka-akselilta), triggeri-pyörän kuvion tulee olla puuttuvalla hampaalla oleva kuvio, jotta moottorin asento ja sen käyntinopeus voidaan määrittää. Toistaiseksi testatut puuttuvan hampaan kuviot ovat 4-1, 12-1, 36-1 ja 60-2 kuviot.
 
 Lisää tietoa triggeri-pyörien kuviovaihtoehdoista löydät [Trigger Patterns and Decoders](/decoders) sivulta.
 
 Täysin sekventiaaliseen ruiskutukseen vaaditaan myös nokka-akselin anturin tuottama signaali (tällöin kampiakselilla olevan triggeri-pyörän ei välttämättä tarvitse olla kuvioltaan puuttuvahampainen). Nämä kuviot ovat merkattu "/x"-merkillä kuten 60-2/1 joka tarkoittaa, että kampiakselilla on 60 hampainen triggeri-kuvio, 2 puuttuvalla hampaalla, ja nokka-akselilla on 1 hampainen triggeri-kuvio. Nokka-akselilla oleva puuttuvahampaista kuviota voidaan käyttää semi- ja täysin seqventiaalisissa kokoonpanoissa.
 
-VR (variable reluctance) antureita voidaan myös käyttää. Tällöin on huomioitav, että viralliset Speeduino piirilevy versiot eivät suoraan tue VR-anturin tuottaman sini-aallon (alla) muuttamista vaadituksi kantti-muotoiseksi aalloksi. Tätä muunnosta varten tarvitaan erillinen VR-moduuli. Virallisilta piirilevyiltä (v0.3.x ja v0.4.x) löytyy VR-modulia varten 8-pinninen DIP-kanta (IC3). MAX9926 sirun on testattu toimivan suurimman osan tarjolla olevista sisääntulosignaaleista kanssa. Kyseistä sirua voi osaa täälä: [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product). Minkä tahansa 0-5v kantti-muotoista signaalia tuottavan moduulin pitäisi toimia myös (LM1815, LM358, SSC/DSC, monet OEM-modulit jne.)
+VR (variable reluctance) antureita voidaan myös käyttää. Tällöin on huomioitav, että viralliset Speeduino piirilevy versiot eivät suoraan tue VR-anturin tuottaman sini-aallon (alla) muuttamista vaadituksi kantti-muotoiseksi aalloksi. Tätä muunnosta varten tarvitaan erillinen VR-moduuli. Virallisilta piirilevyiltä (v0.3.x ja v0.4.x) löytyy VR-modulia varten 8-pinninen DIP-kanta (IC3). MAX9926 sirun on testattu toimivan suurimman osan tarjolla olevista sisääntulosignaaleista kanssa. Kyseistä sirua voi osaa täälä: [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product). Minkä tahansa 0-5V kantti-muotoista signaalia tuottavan moduulin pitäisi toimia myös (LM1815, LM358, SSC/DSC, monet OEM-modulit jne.)
 
 ![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
 
 Rakennettaessa johtosarjaa kampiakselin ja nokka-akselin anturoinneille on syytä kiinnittää huomiota EMI-asioihin (elektromagneettiset häiriöt). Näihin voi vaikuttaa oikeanlaisella kaapelivalinnalla sekä kaapelin viennillä. Auttaa jos kaapeloinnin pystyy asentamaan mahdollisimman kauaksi suurista häiriölähteistä (esim. laturi, sytytystulpat, -johdot ja -puolat). Suojatun kaapelin käyttö on suositeltaavaa (liitä suoja-vaippa ainoastaan ECUn päähän). Signaalia voidaan suodattaa ohjelmallisesti mutta mikään ei voita puhdasta, suoraan anturilta tulevaa, signaalia.
 
-If crank / cam signal is lost and EMI / filtering options have been exhaused, ensure that the Speeduino board's +12V and GND connections are noise free as well. It is possible for noise on the main power rail to cause interference. 
+Jos kampi-/nokka-akselin signaali on kadoksissa ja EMI / suodatus asetukset ovat tapissaan, varmista että Speeduino piirilevyn +12V ja GND liitännät ovat vapaita häiriöistä. On mahdollista, että päävirtojen kautta aiheutuu häiriöitä muulle järjestelmälle.
 
-### TPS
+### TPS (kaasuläpän asentoanturi)
 
 TPS sensor must be of the 3 wire potentiometer type, rather than the 2 wire on/off switches found on some throttles. If your TPS is a 3 wire sensor then it will likely work, however you will need to confirm it is a potentiometer (variable) type sensor.
 
