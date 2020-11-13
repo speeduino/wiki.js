@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:10:29.620Z
+date: 2020-11-13T13:15:17.096Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -30,6 +30,8 @@ Täysin sekventiaaliseen ruiskutukseen vaaditaan myös nokka-akselin anturin tuo
 VR (variable reluctance) antureita voidaan myös käyttää. Tällöin on huomioitav, että viralliset Speeduino piirilevy versiot eivät suoraan tue VR-anturin tuottaman sini-aallon (alla) muuttamista vaadituksi kantti-muotoiseksi aalloksi. Tätä muunnosta varten tarvitaan erillinen VR-moduuli. Virallisilta piirilevyiltä (v0.3.x ja v0.4.x) löytyy VR-modulia varten 8-pinninen DIP-kanta (IC3). MAX9926 sirun on testattu toimivan suurimman osan tarjolla olevista sisääntulosignaaleista kanssa. Kyseistä sirua voi osaa täälä: [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product). Minkä tahansa 0-5v kantti-muotoista signaalia tuottavan moduulin pitäisi toimia myös (LM1815, LM358, SSC/DSC, monet OEM-modulit jne.)
 
 ![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
+
+Rakennettaessa johtosarjaa kampiakselin ja nokka-akselin anturoinneille on syytä kiinnittää huomiota EMI-asiat (elektromagneettiset häiriöt), joihin voi vaikuttaa oikeanlaisella kaapelivalinnalla sekä kaapelin viennillä.
 
 It is recomended to take precautions for EMI while routing and choosing the wire for the crankshaft and camshaft sensors. Keeping wires away from electrically noisy components like the alternator, and spark plugs can help. Using a shielded cable can also help (tie the shield to the ECU side only). Software filtering can be used but nothing beats a clean signal from the source. 
 
