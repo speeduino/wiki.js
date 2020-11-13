@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:25:31.877Z
+date: 2020-11-13T13:38:50.116Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -37,11 +37,11 @@ Jos EMI-/suodatus-asetukset ovat maksimissaan ja kampi-/nokka-akselin signaali o
 
 ### TPS (kaasuläpän asentoanturi)
 
-TPS sensor must be of the 3 wire potentiometer type, rather than the 2 wire on/off switches found on some throttles. If your TPS is a 3 wire sensor then it will likely work, however you will need to confirm it is a potentiometer (variable) type sensor.
+TPS-anturin on oltava mielummin 3-johtoinen, potentiometri-tyyppinen.2-johtoinen on/off-tyyppistä antruia ei suositella käytettävän. Jos TPS-anturisi on 3-johtoinen se todennäköisesti toimii mutta on varmistettava, että anturi on potentiometri-tyyppinen.
 
-The TPS functions by sending an analog variable voltage signal to Speeduino in order to report the current position of the throttle. It is typically supplied with V+ of 5V and ground (GND, signal ground, or signal return), routing through an internal potentiometer to output a low voltage at low throttle opening, and a rising voltage with greater throttle opening.
+TPS-anturi toimii lähettämällä muuttuvan analogisen signaalisn Speeduinolle ja välittää näin kaasuläpän asennon. Tyypillisesti anturille johdettu +5V ja maadoitus (GND, signaali maa tai paluusignaali) kulkee sisäisen potentiometrin kautta, joka tuottaa anturin ulostuloon matalan jännitteen pienellä kaasuläpän avaumalla ja vastaavasti suuren jännitteen suurella kaasuläpän avaumalla.
 
-If using a TPS with unknown connections; it is recommended to test the TPS with an ohm meter in order to determine the connection of each pin without risking damage by applying sensor power randomly. This can be accomplished on the bench or with the engine off and TPS disconnected:
+Jos TPS-anturia joudutaan käyttämään tuntemattomien liitäntöjen kanssa on suositeltavaa mitata TPS-anturi yleismittarilla, jotta voidaan määrittää anturin pinnijärjestys ilman, että anturi mahdollisesti vahingoittuu kytkentäkokeiluista. Mittaus voidaan suorittaa moottori sammutettuna ja TPS-anturi irrallaan seuraavasti:
 
 -   Assign a letter to each pin.
 -   Attach the ohm meter to two pins, and operate the throttle from closed (idle) to wide-open (WOT), recording the results.
