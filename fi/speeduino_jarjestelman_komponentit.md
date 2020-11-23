@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-13T13:52:02.235Z
+date: 2020-11-23T18:39:56.061Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -54,13 +54,16 @@ Suurin osa käyttökelpoisista TPS-anturiesta on 3 pinnisiä. Jos TPS-anturissas
 
 ### MAP (Manifold Pressure, imusarjan paine -anturi)
 
-Recommended MAP sensor is the MPX4250 from Freescale, however many MAP sensors are supported. If you want to use one that is not included in the list (Under Tools-&gt;Map Calibration in TunerStudio) then please make a new thread in the forum requesting this. Other sensors can and will work just fine, but you will need to calibrate these within TunerStudio against a different set of values.
+Suositeltu MAP-anturi on Freescalen valmistama MPX4250-anturi. Tästä huolimatta myös monet muut MAP-anturit ovat käyttökelpoisia. Jos haluat käyttää anturia listan (Tools > MAP Calibration, TunerStudiossa) ulkopuolelta ole hyvä ja kirjoita tästä Speeduino keskustelufoorumille. Muut anturit toimivat kyllä mutta niille on asetettava anturikohtaiset kalibrointitiedot TunerStudiossa.
 
-### Temperature Sensors (CLT and IAT)
+### Lämpötila-anturit (CLT ja IAT)
 
-Any standard 2-wire thermistor sensor can be used for these temperature functions. The sensors have 1 side connected to a ground (Preferably from the ECU) and the other running to the signal line. These sensors have no polarity, so the orientation of these wires does not matter.
+- CLT = Coolant Temperature = Jäähdytysveden lämpötila
+- IAT = Intake Air Temperature = Imuilman lämpötila
 
-For full details, please see the [Sensor Calibration](/configuration/Sensor_Calibration) page
+Mikä tahansa 2-johtoinen termistori-tyyppinen anturi on käyttökelpoinen lämpötilan mittaamiseen. Anturin toinen johdin kytketään maahan (suositeltavaa on kytkeä maa ECU:n päähän) ja toinen johdin toimii signaalijohtimena. Näillä anturiella ei ole polariteettia, joten johtojen järjestyksellä ei ole merkitystä.
+
+Enemmän tietoa aiheesta löydät [Sensor Calibration](/configuration/Sensor_Calibration) sivulta.
 
 ### Exhaust Gas Oxygen Sensors (O2 and WBO2)
 
