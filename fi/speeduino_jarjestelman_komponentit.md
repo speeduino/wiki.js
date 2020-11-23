@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-23T18:41:37.796Z
+date: 2020-11-23T18:45:15.818Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -65,15 +65,21 @@ Mikä tahansa 2-johtoinen termistori-tyyppinen anturi on käyttökelpoinen lämp
 
 Enemmän tietoa aiheesta löydät [Sensor Calibration](/configuration/Sensor_Calibration) sivulta.
 
-### Lambda-anturit (O2 and WBO2)
+### Lambda-anturit (O2)
 
-O2-anturin malli (kapea- tai laajakaista) on valittava TunerStudion valikosta: *Tools > Calibrate AFR Table.*
+O2 = Oxygen = Happi
 
-#### Narrow-band
+O2-anturin malli (kapea- tai laajakaistainen) on valittava TunerStudion valikosta: *Tools > Calibrate AFR Table.*
+
+#### Kapeakaistainen Lambda-anturi (NBO2)
+
+NB = Narrow Band = Kapeakaistainen
 
 NBO2 sensor signals are read directly by Speeduino. TunerStudio applies the standard non-linear 0-volt to 1-volt values for all standard NBO2 sensors automatically under calibration. Once set in calibration, Speeduino will use the designated NBO2 to adjust fueling according to the entries you make in the AFR table (*Tuning &gt; AFR Table*), and the sensor is selected for type and parameters (or disabled) under *Tuning &gt; AFR/O2*. Note that narrow-band sensors were originally designed to target stoichiometric AFR (Lambda 1.0) for efficient catalytic emissions control, and are generally not sufficiently accurate or suitable for tuning efficient lean economy or rich power fueling. While not recommended; involved tuning methods are available to allow limited and approximate tuning for lean and rich AFRs using a NBO2 sensor.
 
-#### Wide-band
+#### Laajakaistainen Lambda-anturi (WBO2)
+
+WB = Wide Band = Laajakaistainen
 
 Wide-band oxygen (WBO2) sensors can detect and report a wider range of lambda (ƛ) or AFRs than narrow-band, and with greater accuracy, from approximately 10:1 to 20:1 (about 0.7 to 1.3 lambda), depending on specific sensor version and controller. Speeduino cannot use WBO2 sensors directly, requiring an external controller to process the signal and to apply sensor heating control. Enter the controller brand and model from the list displayed. If the controller signal is generic linear or custom, select and enter the required information, or an option to install a custom INC file is available in the menu list.
 
