@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-23T18:50:55.375Z
+date: 2020-11-23T19:12:05.325Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -75,7 +75,7 @@ O2-anturin malli (kapea- tai laajakaistainen) on valittava TunerStudion valikost
 
 NB = Narrow Band = Kapeakaistainen
 
-**Speeduino voi lukea NBO2 anturin signaali suoraan sellaisenaan. TunerStudio käyttää standardia epälineaarista 0-1 voltin asteikkoa kaikkien standardi NB02 antreiden kalibrointien osalta.**
+Speeduino voi lukea NBO2 anturin signaali suoraan sellaisenaan. TunerStudio käyttää standardia epälineaarista 0-1 voltin asteikkoa kaikkien standardi NB02 antureiden kalibroinnin osalta. Kun NB02-anturi on valittu käyttöön, Speeduino käyttää Lambda-anturin signaalia säätääkseen polttoaineensyöttöä AFR-taulukkoon asetettujen arvojen mukaan (*Tuning > AFT Table*). Itse anturin tyyppi ja sen parametrit valitaan TunerStudion valikosta Tuning > AFR/O2. 
 
 NBO2 sensor signals are read directly by Speeduino. TunerStudio applies the standard non-linear 0-volt to 1-volt values for all standard NBO2 sensors automatically under calibration. Once set in calibration, Speeduino will use the designated NBO2 to adjust fueling according to the entries you make in the AFR table (*Tuning &gt; AFR Table*), and the sensor is selected for type and parameters (or disabled) under *Tuning &gt; AFR/O2*. Note that narrow-band sensors were originally designed to target stoichiometric AFR (Lambda 1.0) for efficient catalytic emissions control, and are generally not sufficiently accurate or suitable for tuning efficient lean economy or rich power fueling. While not recommended; involved tuning methods are available to allow limited and approximate tuning for lean and rich AFRs using a NBO2 sensor.
 
