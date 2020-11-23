@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-23T19:28:00.939Z
+date: 2020-11-23T19:29:51.286Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -81,7 +81,7 @@ Speeduino voi lukea NBO2 anturin signaali suoraan sellaisenaan. TunerStudio käy
 
 WB = Wide Band = Laajakaistainen
 
-Laajakaistaiset Lambda-anturit pystyvät toimimaan nimensä mukaisesti Lambdan tai polttoaine/ilma-seoksen arvojen laajemmalla skaalalla verrattuna kapeakaistaisiin antureihin (10:1 - 20:1 AFR / 0.7 - 1.3 Lambda. Asteikot riippuvat anturin ja ohjainelektroniikan mallista). Lisäksi WB-anturit ovat tarkempia verrattuna NB-antureihin. WB-anturia ei sellaisenaan voi kytkeä suoraan Speeduinoon vaan tarvitaan erillinen ohjain prosessoimaan anturin signaali sekä ohjaamaan anturin lämmitystä. Ohjaimen merkki ja malli valitaan TunerStudion valikosta. Oli ohjaimen lähettämä signaali sitten geneerinen lineaarisignaali tai räätälöity signaali, valitse ja täytä vaaditut tiedot suoraan TunerStudion valikosta tai vaihtoehtoisesti voit valita valikosta mahdollisuuden asentaa räätälöity INC-tiedosto, joka sisältää räätälöidyt kalibrointitiedot valitsemaasi Lambda-anturin ohjainta varten.
+Laajakaistaiset Lambda-anturit pystyvät mittaamaan nimensä mukaisesti Lambdan tai polttoaine/ilma-seoksen arvoja laajemmalla skaalalla verrattuna kapeakaistaisiin antureihin (10:1 - 20:1 AFR / 0.7 - 1.3 Lambda. Asteikot riippuvat anturin ja ohjainelektroniikan mallista). Lisäksi WB-anturit ovat tarkempia verrattuna NB-antureihin. WB-anturia ei sellaisenaan voi kytkeä suoraan Speeduinoon vaan tarvitaan erillinen ohjain prosessoimaan anturin signaali sekä ohjaamaan anturin lämmitystä. Ohjaimen merkki ja malli valitaan TunerStudion valikosta. Oli ohjaimen lähettämä signaali sitten geneerinen lineaarisignaali tai räätälöity, valitse ja täytä vaaditut tiedot suoraan TunerStudion valikosta. Vaihtoehtoisesti voidaan valikosta valita mahdollisuus asentaa räätälöity INC-tiedosto, joka sisältää räätälöidyt kalibrointitiedot valitsemaasi Lambda-anturiohjainta varten.
 
 Once set in *Tools &gt; Calibrate AFR Sensor*, Speeduino can use the designated WBO2 to report lambda/AFR to TunerStudio for gauge display. After the sensor is selected for type and parameters under *Tuning &gt; AFR/O2* it can adjust corrective fueling on-the-fly according to the entries you make in the AFR table (*Tuning &gt; AFR Table*), and for auto-tuning in TunerStudio, or MegaLogViewer in real-time or from logs. Settings also include the option to disable. Although Speeduino can use the WBO2 information to correct fueling; it is strongly suggested it not be used to compensate for poor tuning.
 
