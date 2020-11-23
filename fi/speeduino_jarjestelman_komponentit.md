@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-23T18:39:56.061Z
+date: 2020-11-23T18:41:37.796Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -54,7 +54,7 @@ Suurin osa käyttökelpoisista TPS-anturiesta on 3 pinnisiä. Jos TPS-anturissas
 
 ### MAP (Manifold Pressure, imusarjan paine -anturi)
 
-Suositeltu MAP-anturi on Freescalen valmistama MPX4250-anturi. Tästä huolimatta myös monet muut MAP-anturit ovat käyttökelpoisia. Jos haluat käyttää anturia listan (Tools > MAP Calibration, TunerStudiossa) ulkopuolelta ole hyvä ja kirjoita tästä Speeduino keskustelufoorumille. Muut anturit toimivat kyllä mutta niille on asetettava anturikohtaiset kalibrointitiedot TunerStudiossa.
+Suositeltu MAP-anturi on Freescalen valmistama MPX4250-anturi. Tästä huolimatta myös monet muut MAP-anturit ovat käyttökelpoisia. Jos haluat käyttää anturia listan (*Tools > MAP Calibration*, TunerStudiossa) ulkopuolelta ole hyvä ja kirjoita tästä Speeduino keskustelufoorumille. Muut anturit toimivat kyllä mutta niille on asetettava anturikohtaiset kalibrointitiedot TunerStudiossa.
 
 ### Lämpötila-anturit (CLT ja IAT)
 
@@ -65,9 +65,9 @@ Mikä tahansa 2-johtoinen termistori-tyyppinen anturi on käyttökelpoinen lämp
 
 Enemmän tietoa aiheesta löydät [Sensor Calibration](/configuration/Sensor_Calibration) sivulta.
 
-### Exhaust Gas Oxygen Sensors (O2 and WBO2)
+### Lambda-anturit (O2 and WBO2)
 
-The type of O2 sensor (narrow or wide-band) must be selected in TunerStudio under *Tools &gt; Calibrate AFR Table*.
+O2-anturin malli (kapea- tai laajakaista) on valittava TunerStudion valikosta: *Tools > Calibrate AFR Table.*
 
 #### Narrow-band
 
