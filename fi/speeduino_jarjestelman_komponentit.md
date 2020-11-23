@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-23T19:17:50.898Z
+date: 2020-11-23T19:28:00.939Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -75,13 +75,13 @@ O2-anturin malli (kapea- tai laajakaistainen) on valittava TunerStudion valikost
 
 NB = Narrow Band = Kapeakaistainen
 
-Speeduino voi lukea NBO2 anturin signaali suoraan sellaisenaan. TunerStudio käyttää standardia epälineaarista 0-1 voltin asteikkoa kaikkien standardi NB02 antureiden kalibroinnin osalta. Kun NB02-anturi on valittu käyttöön, Speeduino käyttää Lambda-anturin signaalia säätääkseen polttoaineensyöttöä AFR-taulukkoon asetettujen arvojen mukaan (*Tuning > AFT Table*). Itse anturin tyyppi ja sen parametrit valitaan TunerStudion valikosta Tuning > AFR/O2. On syytä huomioida, että kapeakaistaiset Lambda-anturit on suunniteltu alunperin tarkkailemaan stoikiometristä polttoaineseosta (Lambda 1.0) katalysaattorilla varustetuissa autoissa. Yleisestiottaen kapeakaistaiset Lambda-anturit eivät sovellu tarkkuutensa puolesta säätöön, jossa tavoitteena on laihan tai rikkaan polttoaineseoksen havaitseminen. Vaikka tätä ei suositella, on kapeakaistaisella anturimallilla mahdollisuus säätää moottorin seossuhteet rajallisesti.
+Speeduino voi lukea NBO2 anturin signaali suoraan sellaisenaan. TunerStudio käyttää standardia epälineaarista 0-1 voltin asteikkoa kaikkien standardi NB02 antureiden kalibroinnin osalta. Kun NB02-anturi on valittu käyttöön, Speeduino käyttää Lambda-anturin signaalia säätääkseen polttoaineensyöttöä AFR-taulukkoon asetettujen arvojen mukaan (*Tuning > AFR Table*). Itse anturin tyyppi ja sen parametrit valitaan TunerStudion valikosta *Tuning > AFR/O2*. On syytä huomioida, että kapeakaistaiset Lambda-anturit on suunniteltu alunperin tarkkailemaan stoikiometristä polttoaineseosta (Lambda 1.0) katalysaattorilla varustetuissa autoissa. Yleisestiottaen kapeakaistaiset Lambda-anturit eivät sovellu tarkkuutensa puolesta säätöön, jossa tavoitteena on laihan tai rikkaan polttoaineseoksen havaitseminen. Vaikka tätä ei suositella, on kapeakaistaisella anturimallilla mahdollisuus säätää moottorin seossuhteet rajallisesti.
 
 #### Laajakaistainen Lambda-anturi (WBO2)
 
 WB = Wide Band = Laajakaistainen
 
-Wide-band oxygen (WBO2) sensors can detect and report a wider range of lambda (ƛ) or AFRs than narrow-band, and with greater accuracy, from approximately 10:1 to 20:1 (about 0.7 to 1.3 lambda), depending on specific sensor version and controller. Speeduino cannot use WBO2 sensors directly, requiring an external controller to process the signal and to apply sensor heating control. Enter the controller brand and model from the list displayed. If the controller signal is generic linear or custom, select and enter the required information, or an option to install a custom INC file is available in the menu list.
+Laajakaistaiset Lambda-anturit pystyvät toimimaan nimensä mukaisesti Lambdan tai polttoaine/ilma-seoksen arvojen laajemmalla skaalalla verrattuna kapeakaistaisiin antureihin (10:1 - 20:1 AFR / 0.7 - 1.3 Lambda. Asteikot riippuvat anturin ja ohjainelektroniikan mallista). Lisäksi WB-anturit ovat tarkempia verrattuna NB-antureihin. WB-anturia ei sellaisenaan voi kytkeä suoraan Speeduinoon vaan tarvitaan erillinen ohjain prosessoimaan anturin signaali sekä ohjaamaan anturin lämmitystä. Ohjaimen merkki ja malli valitaan TunerStudion valikosta. Oli ohjaimen lähettämä signaali sitten geneerinen lineaarisignaali tai räätälöity signaali, valitse ja täytä vaaditut tiedot suoraan TunerStudion valikosta tai vaihtoehtoisesti voit valita valikosta mahdollisuuden asentaa räätälöity INC-tiedosto, joka sisältää räätälöidyt kalibrointitiedot valitsemaasi Lambda-anturin ohjainta varten.
 
 Once set in *Tools &gt; Calibrate AFR Sensor*, Speeduino can use the designated WBO2 to report lambda/AFR to TunerStudio for gauge display. After the sensor is selected for type and parameters under *Tuning &gt; AFR/O2* it can adjust corrective fueling on-the-fly according to the entries you make in the AFR table (*Tuning &gt; AFR Table*), and for auto-tuning in TunerStudio, or MegaLogViewer in real-time or from logs. Settings also include the option to disable. Although Speeduino can use the WBO2 information to correct fueling; it is strongly suggested it not be used to compensate for poor tuning.
 
