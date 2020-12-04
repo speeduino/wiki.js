@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-11-27T14:38:59.907Z
+date: 2020-12-04T21:17:24.352Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -80,8 +80,11 @@ Speeduino voi lukea NBO2 anturin signaali suoraan sellaisenaan. TunerStudio käy
 #### Laajakaistainen Lambda-anturi (WBO2)
 
 WB = Wide Band = Laajakaistainen
+AFR = Air/Fuel Ratio = Ilma/Polttoaine -suhde
 
 Laajakaistaiset Lambda-anturit pystyvät mittaamaan nimensä mukaisesti Lambdan tai polttoaine/ilma-seoksen arvoja laajemmalla skaalalla verrattuna kapeakaistaisiin antureihin (10:1 - 20:1 AFR / 0.7 - 1.3 Lambda. Asteikot riippuvat anturin ja ohjainelektroniikan mallista). Lisäksi WB-anturit ovat tarkempia verrattuna NB-antureihin. WB-anturia ei sellaisenaan voi kytkeä suoraan Speeduinoon vaan tarvitaan erillinen ohjain prosessoimaan anturin signaali sekä ohjaamaan anturin lämmitystä. Ohjaimen merkki ja malli valitaan TunerStudion valikosta. Oli ohjaimen lähettämä signaali sitten geneerinen lineaarisignaali tai räätälöity, valitse ja täytä vaaditut tiedot suoraan TunerStudion valikosta. Vaihtoehtoisesti voidaan valikosta valita mahdollisuus asentaa räätälöity INC-tiedosto, joka sisältää räätälöidyt kalibrointitiedot valitsemaasi Lambda-anturiohjainta varten.
+
+Kun olet valinnut *Tools > Calibrate AFT Sensor* -valikosta anturivaihtoehdon Speeduino käyttää valittua WB02-anturia näyttääkseen lambda/AFR -lukeman TunerStudion mittaristossa.
 
 Once set in *Tools &gt; Calibrate AFR Sensor*, Speeduino can use the designated WBO2 to report lambda/AFR to TunerStudio for gauge display. After the sensor is selected for type and parameters under *Tuning &gt; AFR/O2* it can adjust corrective fueling on-the-fly according to the entries you make in the AFR table (*Tuning &gt; AFR Table*), and for auto-tuning in TunerStudio, or MegaLogViewer in real-time or from logs. Settings also include the option to disable. Although Speeduino can use the WBO2 information to correct fueling; it is strongly suggested it not be used to compensate for poor tuning.
 
