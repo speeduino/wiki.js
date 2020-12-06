@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-06T15:18:17.338Z
+date: 2020-12-06T15:24:17.399Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -84,7 +84,7 @@ AFR = Air/Fuel Ratio = Ilma/Polttoaine -suhde
 
 Laajakaistaiset Lambda-anturit pystyvät mittaamaan nimensä mukaisesti Lambdan tai polttoaine/ilma-seoksen arvoja laajemmalla skaalalla verrattuna kapeakaistaisiin antureihin (10:1 - 20:1 AFR / 0.7 - 1.3 Lambda. Asteikot riippuvat anturin ja ohjainelektroniikan mallista). Lisäksi WB-anturit ovat tarkempia verrattuna NB-antureihin. WB-anturia ei sellaisenaan voi kytkeä suoraan Speeduinoon vaan tarvitaan erillinen ohjain prosessoimaan anturin signaali sekä ohjaamaan anturin lämmitystä. Ohjaimen merkki ja malli valitaan TunerStudion valikosta. Oli ohjaimen lähettämä signaali sitten geneerinen lineaarisignaali tai räätälöity, valitse ja täytä vaaditut tiedot suoraan TunerStudion valikosta. Vaihtoehtoisesti voidaan valikosta valita mahdollisuus asentaa räätälöity INC-tiedosto, joka sisältää räätälöidyt kalibrointitiedot valitsemaasi Lambda-anturiohjainta varten.
 
-Kun *Tools > Calibrate AFT Sensor* -valikosta on valittu anturivaihtoehto (EGO Sensor), Speeduino käyttää valittua anturivaihtoehtoa näyttääkseen lambda/AFR -lukeman TunerStudion mittaristossa. Kun *Tuning &gt; AFR/O2* -valikosta  
+Kun *Tools > Calibrate AFT Sensor* -valikosta on valittu anturivaihtoehto (EGO Sensor), Speeduino käyttää valittua anturivaihtoehtoa näyttääkseen lambda/AFR -lukeman TunerStudion mittaristossa. Kun taas *Tuning &gt; AFR/O2* -valikosta on valittu anturivaihtoehto sekä asetettu parametrit, Speeduino voi säätää ja korjata polttoaineensuihkutusta "lennosta" taulukkoon täytettyjen arvojen mukaan (*Tuning &gt; AFR Table*). Lisäksi kyseistä taulukkoa käytetään TunerStudion automaattisäädön pohjana.  
 
 Once set in *Tools &gt; Calibrate AFR Sensor*, Speeduino can use the designated WBO2 to report lambda/AFR to TunerStudio for gauge display. After the sensor is selected for type and parameters under *Tuning &gt; AFR/O2* it can adjust corrective fueling on-the-fly according to the entries you make in the AFR table (*Tuning &gt; AFR Table*), and for auto-tuning in TunerStudio, or MegaLogViewer in real-time or from logs. Settings also include the option to disable. Although Speeduino can use the WBO2 information to correct fueling; it is strongly suggested it not be used to compensate for poor tuning.
 
