@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:48:11.384Z
+date: 2020-12-07T18:53:22.763Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -120,13 +120,13 @@ GM 7 / 8 pinnisiä moduuleja on käytetty laajasti GM valmistamien moottorien yh
 
 Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun sytytyksen tapauksissa, joissa halutaan säilyttää jakaja. Moduulit ovat suunniteltu toimimaan sekä läppärunkojen että perinteisen imusarjan kanssa ja tarjoamaan automaattisen virranrajoituksen (7.5A on GM:n speksi) sekä automaattisen dwell-säädön. Kyseisiä moduuleja voidaan käyttää myös muissa jakajapohjaisissa sovelluksissa, jotka käyttävät VR- tai HALL -tyyppistä asentoanturia.
 
-##### Pin Descriptions and connections
+##### Pinnijärjestykset ja yhteydet
 
-• "**+**" : Battery voltage from a switched ignition source. Provides the power to operate the module.
+• "**+**" : Kytkimen takana oleva akkujännite. Tämä on moduulin käyttöjännite.
 
-• "**C-**" : Ignition coil negative connection.
+• "**C-**" : Sytytyspuolan maa pinni.
 
-• "**P & N**" : Positive and Negative of the distributor reluctor. Polarity is important. GM distributor connectors can only be connected one way. For use with other distributors, verify polarity of the reluctor leads.
+• "**P & N**" : Jakajan reluktorin + ja - pinnit. Oikea polariteetti on tärkeä! GM jakajien liittimet voidaan kytkeä vain yhdellä tavalla. Jos moduulia käytetään toisen merkkisen jakajan kanssa, muista varmistaa reluktorin liittimen oikea pinnijärjestys.
 
 • "**B**" : Ignition bypass. When cranking, grounding this line bypasses computer control of timing. The timing iscontrolled by the module only. This can be done using the Speeduino Cranking Bypass pin function (see below).
 
