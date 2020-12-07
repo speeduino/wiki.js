@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-06T15:41:55.435Z
+date: 2020-12-07T17:40:10.744Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -86,7 +86,9 @@ Laajakaistaiset Lambda-anturit pystyvät mittaamaan nimensä mukaisesti Lambdan 
 
 Kun *Tools > Calibrate AFT Sensor* -valikosta on valittu anturivaihtoehto (EGO Sensor), Speeduino käyttää valittua anturivaihtoehtoa näyttääkseen lambda/AFR -lukeman TunerStudion mittaristossa. Kun taas *Tuning &gt; AFR/O2* -valikosta on valittu anturivaihtoehto sekä asetettu parametrit, Speeduino voi säätää ja korjata polttoaineensuihkutusta "lennosta" taulukkoon (*Tuning &gt; AFR Table*) täytettyjen arvojen mukaan, käyttää tietoa automaattisäädön pohjana tai MegaLogViewerin näyttämän reaaliaikaisen datan ja logien pohjana. Asetuksiin sisältyy myös mahdollisuus kytkeä lambda-anturi kokonaan pois päältä. Vaikka Speeduino voi käyttää lambda-anturin lähettämää signaalia polttoaineenruiskutuksen korjaukseen ei ominaisuutta suositella käytettävän huonon säädön kompensointiin.
 
-### Application-Specific Inputs
+### Sovelluskohtaiset sisääntulot
+
+Tulevissa kappaleissa kerrotaan piireistä ja tekniikoista, jotka Speeduinokäyttäjät ovat havainneet hyödyllisksi 
 
 Circuits and techniques Speeduino users have found useful for adapting or implementing certain inputs or functions.
 
