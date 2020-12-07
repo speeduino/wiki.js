@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:19:42.017Z
+date: 2020-12-07T18:28:28.487Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -98,23 +98,21 @@ Lisää tietoa Flex Fuel -antureista sekä niiden asetuksista ja asennuksista l�
 
 #### 12V sisääntulo signaali
 
-Jotkut asentoanturit lähettävät 12V signaalia. Tämän korjaamiseksi ja Arduinon suojelemiseksi voi rakentaa kuvassa näkyvän piirin. Piirin vastusta R1 ei aina välttämättä vaadita mutta se varmistaa, että jokainen korkea signaali vedetään alas.
+Jotkut asentoanturit lähettävät 12V signaalia. Tämän korjaamiseksi ja Arduinon suojelemiseksi voi rakentaa kaaviossa näkyvän piirin. Piirin vastusta R1 ei aina välttämättä vaadita mutta se varmistaa, että jokainen korkea signaali vedetään alas. Tämän piirin kanssa tulee käyttää Speeduinon ylösvetovastusta. Tämä muuttaa 0-12V signaalin 0-5V signaaliksi.
 
-Some position sensors output a 12v signal. To correct this, and avoid damaging the Arduino, a circuit like the one in the diagram can be constructed. The resistor R1 is not always required, but will make sure that any output that is not high is pulled low. Along with this circuit use the pull-up jumper on the Speeduino. This will effectively change a 0v/12v into a 0v/5v signal.
+*Kiitos PSIG:lle näistä tiedoista ja kaaviosta*
 
-*Many thanks to PSIG for the info and diagram.*
+#### GM 7 / 8 pin -sytytysmoduulit
 
-#### GM 7 / 8 pin Distributor Module
-
-The GM 7 /8 pin modules have been used in a wide variety of GM engines from 4 cylinder to V8s (small and big block). The 8 pin distributor was also widely used in marine applications by Indmar, Mercruiser, and others.
+GM 7 / 8 pinnisiä moduuleja on käytetty laajasti GM valmistamien moottorien yhteydessä aina 4 sylinterisistä 8 sylinterisiin V-moottoreihin (pikku- ja isolohkot). 8 pinninen moduuli on myös laajalti käytetty merimoottoreissa Indmarin, Mercruiserin ja monen muun valmistajan toimesta.
 
 <center>
-GM 7-Pin Module   <img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_7-pin.png" title="Fig. 1 GM 7-pin module" width="400"/>
+<img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_7-pin.png" title="Fig. 1 GM 7-pin module" width="400"/><br/>GM 7-Pin -moduuli
 
 </center>
 
 <center>
-GM 8-Pin Ignition Module   <img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_8-pin.png" title="Fig. 2 GM 8-pin module" width="370"/>
+<img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_8-pin.png" title="Fig. 2 GM 8-pin module" width="370"/><br/>GM 8-Pin -sytytysmoduuli
 
 </center>
 
