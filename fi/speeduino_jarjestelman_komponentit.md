@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T17:40:10.744Z
+date: 2020-12-07T17:57:53.042Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -88,16 +88,17 @@ Kun *Tools > Calibrate AFT Sensor* -valikosta on valittu anturivaihtoehto (EGO S
 
 ### Sovelluskohtaiset sisääntulot
 
-Tulevissa kappaleissa kerrotaan piireistä ja tekniikoista, jotka Speeduinokäyttäjät ovat havainneet hyödyllisksi 
-
-Circuits and techniques Speeduino users have found useful for adapting or implementing certain inputs or functions.
-
-#### Flex Fuel Sensor
-
-See the [Flex Fuel](/configuration/Flex_Fuel) section for details on hardware and configuration of flex fuel setups.
+Tulevissa kappaleissa kerrotaan piireistä ja tekniikoista, jotka Speeduinokäyttäjät ovat havainneet hyödyllisksi asennettaessa tiettyjä sisääntuloja ja toiminnallisuuksia.
 
 
-#### 12V Input Signal
+#### Flex Fuel -anturi
+
+Lisää tietoa Flex Fuel -antureista sekä niiden asetuksista ja asennuksista löydät täältä: [Flex Fuel](/configuration/Flex_Fuel).
+
+
+#### 12V sisääntulo signaali
+
+Jotkut asentoanturit toimivat 12V käyttöjännitteellä. 
 
 Some position sensors output a 12v signal. To correct this, and avoid damaging the Arduino, a circuit like the one in the diagram can be constructed. The resistor R1 is not always required, but will make sure that any output that is not high is pulled low. Along with this circuit use the pull-up jumper on the Speeduino. This will effectively change a 0v/12v into a 0v/5v signal.
 
