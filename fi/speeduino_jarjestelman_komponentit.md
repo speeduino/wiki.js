@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:03:37.893Z
+date: 2020-12-07T18:19:42.017Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -98,7 +98,7 @@ Lisää tietoa Flex Fuel -antureista sekä niiden asetuksista ja asennuksista l�
 
 #### 12V sisääntulo signaali
 
-Jotkut asentoanturit toimivat 12V käyttöjännitteellä. 
+Jotkut asentoanturit lähettävät 12V signaalia. Tämän korjaamiseksi ja Arduinon suojelemiseksi voi rakentaa kuvassa näkyvän piirin. Piirin vastusta R1 ei aina välttämättä vaadita mutta se varmistaa, että jokainen korkea signaali vedetään alas.
 
 Some position sensors output a 12v signal. To correct this, and avoid damaging the Arduino, a circuit like the one in the diagram can be constructed. The resistor R1 is not always required, but will make sure that any output that is not high is pulled low. Along with this circuit use the pull-up jumper on the Speeduino. This will effectively change a 0v/12v into a 0v/5v signal.
 
