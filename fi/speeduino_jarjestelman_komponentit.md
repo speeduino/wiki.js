@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:31:37.101Z
+date: 2020-12-07T18:44:50.391Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -102,7 +102,7 @@ Jotkut asentoanturit lähettävät 12V signaalia. Tämän korjaamiseksi ja Ardui
 
 *Kiitos PSIG:lle näistä tiedoista ja kaaviosta*
 
-#### GM 7 / 8 pin -sytytysmoduulit
+#### GM 7 / 8 pin -jakajasytytys moduulit
 
 GM 7 / 8 pinnisiä moduuleja on käytetty laajasti GM valmistamien moottorien yhteydessä aina 4 sylinterisistä 8 sylinterisiin V-moottoreihin (pikku- ja isolohkot). 8 pinninen moduuli on myös laajalti käytetty merimoottoreissa Indmarin, Mercruiserin ja monen muun valmistajan toimesta.
 
@@ -116,9 +116,9 @@ GM 7 / 8 pinnisiä moduuleja on käytetty laajasti GM valmistamien moottorien yh
 
 </center>
 
-7 ja 8 pinnisen moduulien toimintaperiaatteet vastaavat toisiaan ja suurimmalta osien moduulit jakavat myös samankaltaisen johdotuksen. 7 pinnistä moduulia on käyetty isojen coil-in-cap (puola kannessa) jakajien kanssa kun taas 8 pinnistä moduulia on käytetty pienikantisten jakajien ja erillispuolien kanssa.
+7 ja 8 pinnisen moduulien toimintaperiaatteet vastaavat toisiaan ja suurimmalta osien moduulit jakavat myös samankaltaisen johdotuksen. 7 pinnistä moduulia on käyetty isojen coil-in-cap (puola kannessa) jakajien kanssa kun taas 8 pinnistä moduulia on käytetty pienikantisten jakajien ja erillispuolien kanssa. 8 pinnisessä moduulissa on yksi vaihtoehtoinen liitinpinni anturimaata varten. Molemmat moduulit tarjoavat puolan maadoituksen metallisten läpivientien kautta, jotka kiinnittävät ne jakajaan.
 
-The 7 and 8 pin modules are functionally equivalent and largely share the same wiring. The 7 pin is used in the large coil-in-cap distributors while the 8 pin is used in the small cap distributors with remote mounted coils. The 8 pin has one additional terminal that provides a sensor ground. Both modules provide coil ground via the metal grommets used to secure them to the distributor.
+Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun sytytyksen tapauksissa, joissa halutaan säilyttää jakaja. Moduulit ovat suunniteltu toimimaan sekä läppärunkojen että perinteisen imusarjan kanssa,  
 
 These modules provide an simple means for computer controlled timing while retaining the distributor. They were designed to be used with throttle body injection and port injection motors and provide automatic coil current limiting (7.5 amps was the GM specification) and automatic dwell control. The can be adapted to other distributor applications that use either variable reluctor or hall type sensors.
 
