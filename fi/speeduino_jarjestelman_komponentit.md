@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:28:28.487Z
+date: 2020-12-07T18:31:37.101Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -115,6 +115,8 @@ GM 7 / 8 pinnisiä moduuleja on käytetty laajasti GM valmistamien moottorien yh
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/hardware/GM_8-pin.png" title="Fig. 2 GM 8-pin module" width="370"/><br/>GM 8-Pin -sytytysmoduuli
 
 </center>
+
+7 ja 8 pinnisen moduulien toimintaperiaatteet vastaavat toisiaan ja suurimmalta osien moduulit jakavat myös samankaltaisen johdotuksen. 7 pinnistä moduulia on käyetty isojen coil-in-cap (puola kannessa) jakajien kanssa kun taas 8 pinnistä moduulia on käytetty pienikantisten jakajien ja erillispuolien kanssa.
 
 The 7 and 8 pin modules are functionally equivalent and largely share the same wiring. The 7 pin is used in the large coil-in-cap distributors while the 8 pin is used in the small cap distributors with remote mounted coils. The 8 pin has one additional terminal that provides a sensor ground. Both modules provide coil ground via the metal grommets used to secure them to the distributor.
 
