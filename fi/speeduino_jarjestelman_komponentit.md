@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:44:50.391Z
+date: 2020-12-07T18:48:11.384Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -118,9 +118,7 @@ GM 7 / 8 pinnisiä moduuleja on käytetty laajasti GM valmistamien moottorien yh
 
 7 ja 8 pinnisen moduulien toimintaperiaatteet vastaavat toisiaan ja suurimmalta osien moduulit jakavat myös samankaltaisen johdotuksen. 7 pinnistä moduulia on käyetty isojen coil-in-cap (puola kannessa) jakajien kanssa kun taas 8 pinnistä moduulia on käytetty pienikantisten jakajien ja erillispuolien kanssa. 8 pinnisessä moduulissa on yksi vaihtoehtoinen liitinpinni anturimaata varten. Molemmat moduulit tarjoavat puolan maadoituksen metallisten läpivientien kautta, jotka kiinnittävät ne jakajaan.
 
-Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun sytytyksen tapauksissa, joissa halutaan säilyttää jakaja. Moduulit ovat suunniteltu toimimaan sekä läppärunkojen että perinteisen imusarjan kanssa,  
-
-These modules provide an simple means for computer controlled timing while retaining the distributor. They were designed to be used with throttle body injection and port injection motors and provide automatic coil current limiting (7.5 amps was the GM specification) and automatic dwell control. The can be adapted to other distributor applications that use either variable reluctor or hall type sensors.
+Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun sytytyksen tapauksissa, joissa halutaan säilyttää jakaja. Moduulit ovat suunniteltu toimimaan sekä läppärunkojen että perinteisen imusarjan kanssa ja tarjoamaan automaattisen virranrajoituksen (7.5A on GM:n speksi) sekä automaattisen dwell-säädön. Kyseisiä moduuleja voidaan käyttää myös muissa jakajapohjaisissa sovelluksissa, jotka käyttävät VR- tai HALL -tyyppistä asentoanturia.
 
 ##### Pin Descriptions and connections
 
