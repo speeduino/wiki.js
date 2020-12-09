@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-09T18:44:52.058Z
+date: 2020-12-09T18:47:48.373Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -149,6 +149,8 @@ Lisäksi "Cranking bypass" tulee asettaa On -tilaan ja "Bypass output pin" tulee
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/warmup/cranking_bypass.png" title="Fig. 4 Bypass settings" width="40%"/>
 
 </center>
+Triggeri asetukset (TunerStudiossa *Starting > Trigger Setup*) 
+
 Trigger settings (under Starting / Trigger Setup in TunerStudio) should be as shown below. You will need to adjust the trigger angle to get correct timing. Instructions for this are in the wiki.
 
 <center>
