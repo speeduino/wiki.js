@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-09T18:23:34.277Z
+date: 2020-12-09T18:35:22.825Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -132,9 +132,9 @@ Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun syty
 
 • "**R**" : Referenssi tai kierrosnopeusmittarin signaali. Tämä on 5V kanttiaalto ulostulo joka tarjoaa kierroslukusignaalin Speeduinolle (RPM1 sisääntulo). Käyttääksesi tätä yhdistä tämä pinni Speeduinon RPM1 pinniin ja aseta jumpperi JP2 Hall asentoon ja JP4 yhdistettynä (5V ylösveto).
 
-• "**E**" : Timing control signal. When pin B has 5 volts on it, the module allows Speeduino to control the timing using this pin. The output of Ign1 should be connected to this pin.
+• "**E**" : Ajoituksen ohjaussignaali. Kun pinnissä B on +5 volttia sytytysmoduuli sallii Speeduinon ohjata sytytyksen ajoitusta käyttämällä tätä pinniä. Speeduinon IGN1 pinni tulisi kytkeä tähän pinniin. 
 
-• "**G**": *(8 pin only)* Signal ground. Should be connected to the Speeduino sensor ground. (Module ground is provided through the metal mounting grommets)
+• "**G**": *(8 pinnisessä versiossa)* Signaalin maa. Tämä pinni tulisi kytkeä Speeduinon anturimaa -pinniin. (Moduulin maadoitus tapahtuu metallisten asennusläpivientien kautta.
 
 A timing bypass circuit must be constructed to utilize the Speeduino ignition timing control. The small circuit below should be built in the proto area.
 
