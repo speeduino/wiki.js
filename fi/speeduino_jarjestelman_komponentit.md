@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-09T18:35:22.825Z
+date: 2020-12-09T18:39:11.989Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -136,12 +136,12 @@ Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun syty
 
 • "**G**": *(8 pinnisessä versiossa)* Signaalin maa. Tämä pinni tulisi kytkeä Speeduinon anturimaa -pinniin. (Moduulin maadoitus tapahtuu metallisten asennusläpivientien kautta.
 
-A timing bypass circuit must be constructed to utilize the Speeduino ignition timing control. The small circuit below should be built in the proto area.
+Sytytyksen ajoitusksen ohituspiiri on rakennettava, jotta Speeduinon sytytyksen ajoituksen ohjaus toimii. Alla olevan ylösvetopiirin voi rakentaa Speeduino piirilevyn proto-alueelle:
 
-<center>
+<center><br/>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/GM7_pin_bypass.png" title="Fig. 3 Bypass circuit" width="40%"/>
 
-</center>
+</center><br/>
 In addition, the cranking bypass should be turned on and the bypass pin should be set to pin 3 in the Cranking Settings dialog (under Starting / Idle in TunerStudio):
 
 <center>
