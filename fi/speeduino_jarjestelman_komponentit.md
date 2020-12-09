@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-09T18:39:11.989Z
+date: 2020-12-09T18:42:34.400Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -142,6 +142,9 @@ Sytytyksen ajoitusksen ohituspiiri on rakennettava, jotta Speeduinon sytytyksen 
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/GM7_pin_bypass.png" title="Fig. 3 Bypass circuit" width="40%"/>
 
 </center><br/>
+
+Lisäksi "Cranking bypass" tulee asettaa On -tilaan ja "Bypass output pin" tulee asettaa 3.
+
 In addition, the cranking bypass should be turned on and the bypass pin should be set to pin 3 in the Cranking Settings dialog (under Starting / Idle in TunerStudio):
 
 <center>
