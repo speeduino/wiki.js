@@ -2,7 +2,7 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-07T18:53:22.763Z
+date: 2020-12-09T18:23:34.277Z
 tags: elektroniikan komponentit
 editor: markdown
 dateCreated: 2020-11-13T12:11:48.259Z
@@ -128,9 +128,9 @@ Nämä moduulit tarjoavat yksinkertaisen tavan toteuttaa tietokone ohjattun syty
 
 • "**P & N**" : Jakajan reluktorin + ja - pinnit. Oikea polariteetti on tärkeä! GM jakajien liittimet voidaan kytkeä vain yhdellä tavalla. Jos moduulia käytetään toisen merkkisen jakajan kanssa, muista varmistaa reluktorin liittimen oikea pinnijärjestys.
 
-• "**B**" : Ignition bypass. When cranking, grounding this line bypasses computer control of timing. The timing iscontrolled by the module only. This can be done using the Speeduino Cranking Bypass pin function (see below).
+• "**B**" : Sytytyksen ohitus. Starttaamisen aikana, tämän pinnin maadoittaminen ohittaa tietokoneohjatun ajoituksen ohjauksen. Tällöin itse sytytysmoduuli ohjaa ajoituksen. Tämän ominaisuuden voi aktivoida käyttämällä Speeduinon "Cranking Bypass pin" -toiminnallisuutta (katso alas).
 
-• "**R**" : Reference or tach signal. This outputs a 5 volt square wave that serves as the RPM1 input for the Speeduino. To use this, connect it to RPM1 and set JP2 to Hall and JP4 connected (ie, 5 volt pull up).
+• "**R**" : Referenssi tai kierrosnopeusmittarin signaali. Tämä on 5V kanttiaalto ulostulo joka tarjoaa kierroslukusignaalin Speeduinolle (RPM1 sisääntulo). Käyttääksesi tätä yhdistä tämä pinni Speeduinon RPM1 pinniin ja aseta jumpperi JP2 Hall asentoon ja JP4 yhdistettynä (5V ylösveto).
 
 • "**E**" : Timing control signal. When pin B has 5 volts on it, the module allows Speeduino to control the timing using this pin. The output of Ign1 should be connected to this pin.
 
