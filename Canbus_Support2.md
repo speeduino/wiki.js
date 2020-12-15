@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-15T23:35:46.418Z
+date: 2020-12-15T23:43:53.643Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -80,7 +80,7 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
  	
 
 #### MODE 01
- 	  PID(hex)  PID(Dec) 	Data bytes returned 	Description 	Min value 	Max value 	Units 	Formula[a]
+ 	  PID(hex)  PID(Dec) 	Data bytes <br/> returned 	Description 	Min value 	Max value 	Units 	Formula[a]
        00 	     0 	        4 	                     PIDs supported [01 - 20] 			Bit encoded [A7..D0] == [PID $01..PID $20] See below      
        05        5          1                        Engine coolant temperature
        0B        11         1                        Intake manifold absolute pressure     
