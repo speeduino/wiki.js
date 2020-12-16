@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T21:33:49.625Z
+date: 2020-12-16T21:35:56.303Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -117,7 +117,7 @@ Speeduino responds to the Mode 22 request for the following PID:
        7710      0          2                        AuxIn16 Data
 
 
-#### CAN (11-bit) bus format
+### CAN (11-bit) bus format
 
 The PID query and response occurs on the vehicle's CAN bus. Standard OBD requests and responses use functional addresses. The diagnostic reader initiates a query using CAN ID 7DFh, which acts as a broadcast address, and accepts responses from any ID in the range 7E8h to 7EFh. ECUs that can respond to OBD queries listen both to the functional broadcast ID of 7DFh and one assigned ID in the range 7E0h to 7E7h. Their response has an ID of their assigned ID plus 8 e.g. 7E8h through 7EFh.
 
