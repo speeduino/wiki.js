@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T00:01:05.044Z
+date: 2020-12-16T00:04:07.713Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -78,6 +78,18 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 | A7 A6 A5 A4 A3 A2 A1 A0 | B7 B6 B5 B4 B3 B2 B1 B0 | 	C7 C6 C5 C4 C3 C2 C1 C0 | D7 D6 D5 D4 D3 D2 D1 D0 |
  	
+{| class="wikitable"
+!  !!  !!  !! 
+|-
+|                              A ||  ||  || 
+|-
+| A7 A6 A5 A4 A3 A2 A1 A0 ||  ||  || 
+|-
+|  ||  ||  || 
+|-
+|  ||  ||  || 
+|}
+
 
 #### MODE 01
  	  PID(hex)  PID(Dec) 	Data bytes returned 	Description 	Min value 	Max value 	Units 	Formula[a]
