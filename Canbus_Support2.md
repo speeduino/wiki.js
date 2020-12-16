@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T22:26:41.931Z
+date: 2020-12-16T22:45:54.953Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -98,7 +98,7 @@ So, supported PIDs are: 01, 03, 04, 05, 06, 07, 0C, 0D, 0E, 0F, 10, 11, 13, 15, 
 
 Speeduino responds to the Mode 22 request for the following PID: 
 
-![mode22_pid_supported.png](/mode22_pid_supported.png)
+![mode22_pid_supported1.png](/mode22_pid_supported1.png)
 
 ### CAN (11-bit) bus format
 
