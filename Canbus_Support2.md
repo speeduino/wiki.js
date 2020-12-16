@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2020-12-16T23:02:04.190Z
+date: 2020-12-16T23:04:20.281Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -113,13 +113,15 @@ CAN bus may also be used for communication beyond the standard OBD messages. Phy
 
 #### Query
 
-The functional PID query is sent to the vehicle on the CAN bus at ID 7DFh, using 8 data bytes. The bytes are:
+The functional PID query is sent to the vehicle on the CAN bus at ID 7DFh, using 8 data bytes. 
+The bytes are:
 
 ![11bit_query.png](/11bit_query.png)
 
 #### Response
 
-The vehicle responds to the PID query on the CAN bus with message IDs that depend on which module responded. Typically the engine or main ECU responds at ID 7E8h. Other modules, like the hybrid controller or battery controller in a Prius, respond at 07E9h, 07EAh, 07EBh, etc. These are 8h higher than the physical address the module responds to. Even though the number of bytes in the returned value is variable, the message uses 8 data bytes regardless (CAN bus protocol form Frameformat with 8 data bytes). The bytes are:
+The vehicle responds to the PID query on the CAN bus with message IDs that depend on which module responded. Typically the engine or main ECU responds at ID 7E8h. Other modules, like the hybrid controller or battery controller in a Prius, respond at 07E9h, 07EAh, 07EBh, etc. These are 8h higher than the physical address the module responds to. Even though the number of bytes in the returned value is variable, the message uses 8 data bytes regardless (CAN bus protocol form Frameformat with 8 data bytes). 
+The bytes are:
 
 ![11bit_response.png](/11bit_response.png)
 
