@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T20:21:56.089Z
+date: 2020-12-16T21:10:58.189Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -76,6 +76,9 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 #### MODE 01
 
+The table below shows the current list of PIDs supported by the firmware (as of 16/12/2020).
+
+![pid_support_list.png](/pid_support_list.png)
 
 #### Bitwise encoded PIDs
 
