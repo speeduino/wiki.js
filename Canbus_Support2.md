@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T00:04:07.713Z
+date: 2020-12-16T00:17:18.245Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -78,19 +78,9 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 | A7 A6 A5 A4 A3 A2 A1 A0 | B7 B6 B5 B4 B3 B2 B1 B0 | 	C7 C6 C5 C4 C3 C2 C1 C0 | D7 D6 D5 D4 D3 D2 D1 D0 |
  	
-{| class="wikitable"
-!  !!  !!  !! 
-|-
-|                              A ||  ||  || 
-|-
-| A7 A6 A5 A4 A3 A2 A1 A0 ||  ||  || 
-|-
-|  ||  ||  || 
-|-
-|  ||  ||  || 
-|}
+ 
 
-
+      
 #### MODE 01
  	  PID(hex)  PID(Dec) 	Data bytes returned 	Description 	Min value 	Max value 	Units 	Formula[a]
        00 	     0 	        4 	                     PIDs supported [01 - 20] 			Bit encoded [A7..D0] == [PID $01..PID $20] See below      
@@ -99,15 +89,15 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
        0C 	     12         2 	                     Engine speed 	0 	16,383.75 	rpm 	256 A + B 4 {\displaystyle {\frac {256A+B}{4}}} {\displaystyle {\frac {256A+B}{4}}}
        0D 	     13       	1 	                     Vehicle speed 	0 	255 	km/h 	A {\displaystyle A} A
        0E 	     14        	1                      	 Timing advance 	-64 	63.5 	° before TDC 	A 2 − 64 {\displaystyle {\frac {A}{2}}-64} {\displaystyle {\frac {A}{2}}-64}
-       0F 	15 	1 	Intake air temperature 	-40 	215 	°C 	A − 40 {\displaystyle A-40} {\displaystyle A-40}
-      11 	17 	1 	Throttle position 	0 	100 	% 	100 255 A {\displaystyle {\tfrac {100}{255}}A} {\displaystyle {\tfrac {100}{255}}A}
-      19 	25 	2 	Oxygen Sensor 6 A: Voltage
+       0F 	     15  	    1                        Intake air temperature 	-40 	215 	°C 	A − 40 {\displaystyle A-40} {\displaystyle A-40}
+       11        17        1                          Throttle position 	0 	100 	% 	100 255 A {\displaystyle {\tfrac {100}{255}}A} {\displaystyle {\tfrac {100}{255}}A}
+       19        25       2                           Oxygen Sensor                                                                   6 A: Voltage
                                   B: Short term fuel trim  0 -100 
-      1C 	28 	1 	OBD standards this vehicle conforms to 	1 	250 	- 	enumerated. See below
-      20 	32 	4 	PIDs supported [21 - 40] 				Bit encoded [A7..D0] == [PID $21..PID $40] See below
-     22 	34 	2 	Fuel Rail Pressure (relative to manifold vacuum) 	0 	5177.265 	kPa 	0.079 ( 256 A + B ) {\displaystyle 0.079(256A+B)} {\displaystyle 0.079(256A+B)}
+       1C       28        1                          OBD standards this vehicle conforms to 	1 	250 	- 	enumerated. See below
+       20       32        4                          PIDs supported [21 - 40] 				Bit encoded [A7..D0] == [PID $21..PID $40] See below
+     22        34        2                          Fuel Rail Pressure (relative to manifold vacuum) 	0 	5177.265 	kPa 	0.079 ( 256 A + B ) {\displaystyle 0.079(256A+B)} {\displaystyle 0.079(256A+B)}
 
-     24 	36 	4 	Oxygen Sensor 1
+     24         36      4                           Oxygen Sensor 1
      AB: Air-Fuel Equivalence Ratio (lambda,λ)
      CD: Voltage 
 
