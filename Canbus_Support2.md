@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T19:46:40.647Z
+date: 2020-12-16T19:53:07.340Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -75,8 +75,8 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 
  	
-|             A            |             B             |             C            |             D            |
-|--------------------------|--------------------------|--------------------------|--------------------------|
+|             A             |             B              |             C            |             D             |
+|:---------------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
 | A7 A6 A5 A4 A3 A2 A1 A0 |  B7 B6 B5 B4 B3 B2 B1 B0  | C7 C6 C5 C4 C3 C2 C1 C0  | D7 D6 D5 D4 D3 D2 D1 D0  |
 
 #### MODE 01
