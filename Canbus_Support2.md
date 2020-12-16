@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T21:35:56.303Z
+date: 2020-12-16T22:26:41.931Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -49,7 +49,7 @@ The STM32 uses pins xxx for connection to the can transceiver.
 
 ### OBD Port Interface Support Options
 
-The OBD2 port Inteface offers support for ,
+The OBD2 port Interface offers support for ,
 
    1. To output the current realtime data ([see supported PID list](CanBus_Support2#PID_supported"wikilink")) . 
    
@@ -57,7 +57,8 @@ The OBD2 port Inteface offers support for ,
    3. Activate External Outputs(coming soon!)
 
 ### Modes Supported
- There are 10 diagnostic services described in the latest OBD-II standard SAE J1979. Before 2002, J1979 referred to these services as "modes". Speeduino supports only a selected number of these modes. These are:
+ There are 10 diagnostic services described in the latest OBD-II standard SAE J1979. Before 2002, J1979 referred to these services as "modes".
+ Speeduino supports only a selected number of these modes. These are:
 
 Mode (hex) 	Description
 - 01   Show current data
@@ -97,25 +98,7 @@ So, supported PIDs are: 01, 03, 04, 05, 06, 07, 0C, 0D, 0E, 0F, 10, 11, 13, 15, 
 
 Speeduino responds to the Mode 22 request for the following PID: 
 
-
- 	  PID(hex)  PID(Dec) 	Data bytes returned 	Description 	Min value 	Max value 	Units 	Formula[a]
-       7701      0 	        2 	                     AuxIn1 Data   
-       7702      0          2                        AuxIn2 Data
-       7703      0 	        2 	                     AuxIn3 Data   
-       7704      0          2                        AuxIn4 Data
-       7705      0 	        2 	                     AuxIn5 Data   
-       7706      0          2                        AuxIn6 Data
-       7707      0 	        2 	                     AuxIn7 Data   
-       7708      0          2                        AuxIn8 Data
-       7709      0 	        2 	                     AuxIn9 Data   
-       770A      0          2                        AuxIn10 Data
-       770B      0 	        2 	                     AuxIn11 Data
-       770C      0          2                        AuxIn12 Data
-       770D      0 	        2 	                     AuxIn13 Data 
-       770E      0          2                        AuxIn14 Data
-       770F      0 	        2 	                     AuxIn15 Data 
-       7710      0          2                        AuxIn16 Data
-
+![mode22_pid_supported.png](/mode22_pid_supported.png)
 
 ### CAN (11-bit) bus format
 
