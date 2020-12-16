@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2020-12-16T23:33:03.690Z
+date: 2020-12-16T23:40:19.448Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -35,7 +35,7 @@ The can0 Canbus Interface offers ,
 
 To enable use of the Canbus interface it must be enabled in TunerStudio.
 
-## OBD2 Data Support
+# OBD2 Data Support
 
 When used with an MCU that has an Internal canbus interface Speeduino firmware is able to output data using the OBD2 std 
 On MCU that have multiple canbus ports the OBD support is provided on can0.
@@ -84,6 +84,10 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 
 ![pid_support_list.png](/pid_support_list.png)
+
+## MODE 9
+
+Mode 9 support is coming soon!
 
 ## MODE 22
 
