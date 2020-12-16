@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2020-12-15T21:08:11.059Z
+date: 2020-12-16T22:49:12.009Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -41,7 +41,7 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [Tacho](/configuration/Tacho "wikilink")
     -   [Variable Valve Timing (VVT)](/configuration/VVT)
     -   [Secondary Serial Interface](/en/Secondary_Serial_IO_interface "wikilink")
-    -   [CanBus Support](/en/CanBus_Support)   
+    -   [CanBus Support](/en/CanBus_Support2)   
     -   [Auxilary IO configuration](/configuration/Auxillary_IO_Configuration)
 -   **Tools Menu**
     -   [Sensor Calibration](/configuration/Sensor_Calibration "wikilink")
