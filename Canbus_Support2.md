@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2020-12-16T23:04:20.281Z
+date: 2020-12-16T23:21:47.409Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -15,6 +15,11 @@ Speeduino is able to support Canbus in two ways.
 
 1. Use a Mega2560 MCU with a coprocessor board
 2. Use a Teensy or STM32 (with internal can module) MCU.
+
+> The Teensy3.5 uses pins 3(Tx) and 4(RX) for connection to the can transceiver.
+> The Teensy3.6 uses pins 3(Tx) and 4(RX) for can0 and 33(TX) and 34(RX) for can1 for connection to the can transceivers.
+> The STM32F4XX uses pins PD0(RX) and PD1(TX) by default for can0 and PB5(RX) and PB6(TX) for can1 for connection to the can transceivers.
+{.is-info}
 
 ## About the CanBus Interface
 The Canbus Interface offers ,
@@ -33,7 +38,7 @@ To enable use of the Canbus interface it must be enabled in TunerStudio.
 ## OBD2 Data Support
 
 When used with an MCU that has an Internal canbus interface Speeduino firmware is able to output data using the OBD2 std 
-
+On MCU that have multiple canbus ports the OBD support is provided on can0.
 > Speeduino does not offer “readiness monitoring” or emission testing support and should not be used for such.
 {.is-warning}
 
@@ -43,10 +48,6 @@ When used with an MCU that has an Internal canbus interface Speeduino firmware i
 The Interface supports 11bit addressing @500kbps data rate.
 The port will respond to the STD OBD2 protocol .
 Any code reader /app /software following OBD2 standard protocol is able to access the data described below.
-> The Teensy3.5 uses pins xxx for connection to the can transceiver.
-> The STM32 uses pins xxx for connection to the can transceiver.
-{.is-info}
-
 
 ## OBD Port Interface Support Options
 
