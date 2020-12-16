@@ -2,15 +2,20 @@
 title: Secondary_Serial_IO_interface
 description: 
 published: true
-date: 2020-02-23T00:40:49.546Z
+date: 2020-12-16T23:49:26.641Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:37:19.933Z
 ---
 
 Overview
 --------
 
-The Arduino Mega2560 version of Speeduino supports the use of Serial3 for supplemetry IO.The proposed STM32 and Teensy3.5 versions use Serial2 . On a Mega 2560 Serial3 can be found on the board at pins 14 and 15.The connection speed is 115200baud.
-Supplementry IO via Canbus is under development for Teensy and Mega2560 mcu types. The use of canbus will also enable more advanced features to be added in the future.
+The Arduino Mega2560 version of Speeduino supports the use of Serial3 for supplemetry IO.
+The STM32F4XX and Teensy3.5/6 versions use Serial2 .
+On a Mega 2560 Serial3 can be found on the board at pins 14 and 15.The connection speed is 115200baud.
+Supplementry IO via Canbus is under development for Teensy and Mega2560 mcu types.
+The use of canbus will also enable more advanced features to be added in the future.
 
 Settings
 --------
