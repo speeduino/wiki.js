@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T00:17:18.245Z
+date: 2020-12-16T00:45:00.522Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
