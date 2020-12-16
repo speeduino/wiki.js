@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2020-12-16T22:57:29.762Z
+date: 2020-12-16T23:02:04.190Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -34,15 +34,19 @@ To enable use of the Canbus interface it must be enabled in TunerStudio.
 
 When used with an MCU that has an Internal canbus interface Speeduino firmware is able to output data using the OBD2 std 
 
-Speeduino does not offer “readiness monitoring” or emission testing support and should not be used for such.
+> Speeduino does not offer “readiness monitoring” or emission testing support and should not be used for such.
+{.is-warning}
+
 
 ## OBD Port Interface Configuration 
 
 The Interface supports 11bit addressing @500kbps data rate.
 The port will respond to the STD OBD2 protocol .
 Any code reader /app /software following OBD2 standard protocol is able to access the data described below.
-The Teensy3.5 uses pins xxx for connection to the can transceiver.
-The STM32 uses pins xxx for connection to the can transceiver.
+> The Teensy3.5 uses pins xxx for connection to the can transceiver.
+> The STM32 uses pins xxx for connection to the can transceiver.
+{.is-info}
+
 
 ## OBD Port Interface Support Options
 
@@ -62,7 +66,7 @@ Mode (hex) 	Description
 - 09   Vehicle information (VIN)  (coming soon)
 - 22   Manufacturer Specific data.
 
-Mode 22 is a custom PID mode that is defined by the manufacturer.It is used to define additional services.
+Mode 22 is a custom PID mode that is defined by the manufacturer. It is used to define additional services.
 
 ## PID supported
 
@@ -74,9 +78,17 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 ## MODE 01
 
-The table below shows the current list of PIDs supported by the firmware (as of 16/12/2020).
+> The table below shows the current list of PIDs supported by the firmware (as of 16/12/2020).
+{.is-info}
+
 
 ![pid_support_list.png](/pid_support_list.png)
+
+## MODE 22
+
+Speeduino responds to the Mode 22 request for the following PID: 
+
+![mode22_pid_support.png](/mode22_pid_support.png)
 
 ## Bitwise encoded PIDs
 
@@ -90,12 +102,6 @@ For example, if the car response is BE1FA813, it can be decoded like this:
 ![bit_encoded1.png](/bit_encoded1.png)
 
 So, supported PIDs are: 01, 03, 04, 05, 06, 07, 0C, 0D, 0E, 0F, 10, 11, 13, 15, 1C, 1F and 20 
-
-## MODE 22
-
-Speeduino responds to the Mode 22 request for the following PID: 
-
-![mode22_pid_support.png](/mode22_pid_support.png)
 
 ## CAN (11-bit) bus format
 
