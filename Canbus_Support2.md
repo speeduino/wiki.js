@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2020-12-16T23:31:47.511Z
+date: 2020-12-16T23:33:03.690Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -53,7 +53,7 @@ Any code reader /app /software following OBD2 standard protocol is able to acces
 
 The OBD2 port Interface offers support for ,
 
-   1. To output the current realtime data ([see supported PID list](#PID_supported"wikilink")) . 
+   1. To output the current realtime data ([see supported PID list](/en/Canbus_Support2#PID_supported"wikilink")) . 
    
    2. Output the Analog/Digital data values from the 16 Aux inputs ([see here for info on aux data input configuration](/en/configuration/Auxillary_IO_Configuration))
    3. Activate External Outputs(coming soon!)
