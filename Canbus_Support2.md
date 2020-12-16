@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2020-12-16T22:54:50.845Z
+date: 2020-12-16T22:57:29.762Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -16,7 +16,7 @@ Speeduino is able to support Canbus in two ways.
 1. Use a Mega2560 MCU with a coprocessor board
 2. Use a Teensy or STM32 (with internal can module) MCU.
 
-### About the CanBus Interface
+## About the CanBus Interface
 The Canbus Interface offers ,
 
   1. OBD2 formatted data of current realtime data .
@@ -36,7 +36,7 @@ When used with an MCU that has an Internal canbus interface Speeduino firmware i
 
 Speeduino does not offer “readiness monitoring” or emission testing support and should not be used for such.
 
-### OBD Port Interface Configuration 
+## OBD Port Interface Configuration 
 
 The Interface supports 11bit addressing @500kbps data rate.
 The port will respond to the STD OBD2 protocol .
@@ -44,7 +44,7 @@ Any code reader /app /software following OBD2 standard protocol is able to acces
 The Teensy3.5 uses pins xxx for connection to the can transceiver.
 The STM32 uses pins xxx for connection to the can transceiver.
 
-### OBD Port Interface Support Options
+## OBD Port Interface Support Options
 
 The OBD2 port Interface offers support for ,
 
@@ -72,13 +72,13 @@ When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C
 
 ![bit_notation1.png](/bit_notation1.png)
 
-### MODE 01
+## MODE 01
 
 The table below shows the current list of PIDs supported by the firmware (as of 16/12/2020).
 
 ![pid_support_list.png](/pid_support_list.png)
 
-### Bitwise encoded PIDs
+## Bitwise encoded PIDs
 
 Some of the PIDs in the above table cannot be explained with a simple formula. A more elaborate explanation of these data is provided here:
 Example MODE 01 PID 00
@@ -91,7 +91,7 @@ For example, if the car response is BE1FA813, it can be decoded like this:
 
 So, supported PIDs are: 01, 03, 04, 05, 06, 07, 0C, 0D, 0E, 0F, 10, 11, 13, 15, 1C, 1F and 20 
 
-### MODE 22
+## MODE 22
 
 Speeduino responds to the Mode 22 request for the following PID: 
 
