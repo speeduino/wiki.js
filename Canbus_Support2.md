@@ -2,7 +2,7 @@
 title: CanBus Support2
 description: 
 published: true
-date: 2020-12-16T20:17:28.918Z
+date: 2020-12-16T20:21:56.089Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -72,45 +72,10 @@ The following PIDs are supports by by the OBD port
 
 When using Bit-Encoded-Notation, quantities like C4 means bit 4 from data byte C. Each bit is numerated from 0 to 7, so 7 is the most significant bit and 0 is the least significant bit (See below).
 
-![bit_notation.png](/bit_notation.png)
+![bit_notation1.png](/bit_notation1.png)
 
 #### MODE 01
- 	  PID(hex)  PID(Dec) 	Data bytes returned 	Description 	Min value 	Max value 	Units 	Formula[a]
-       00 	     0 	        4 	                     PIDs supported [01 - 20] 			Bit encoded [A7..D0] == [PID $01..PID $20] See below      
-       05        5          1                        Engine coolant temperature
-       0B        11         1                        Intake manifold absolute pressure     
-       0C 	     12         2 	                     Engine speed 	0 	16,383.75 	rpm 	256 A + B 4 {\displaystyle {\frac {256A+B}{4}}} {\displaystyle {\frac {256A+B}{4}}}
-       0D 	     13       	1 	                     Vehicle speed 	0 	255 	km/h 	A {\displaystyle A} A
-       0E 	     14        	1                      	 Timing advance 	-64 	63.5 	° before TDC 	A 2 − 64 {\displaystyle {\frac {A}{2}}-64} {\displaystyle {\frac {A}{2}}-64}
-       0F 	15 	1 	Intake air temperature 	-40 	215 	°C 	A − 40 {\displaystyle A-40} {\displaystyle A-40}
-      11 	17 	1 	Throttle position 	0 	100 	% 	100 255 A {\displaystyle {\tfrac {100}{255}}A} {\displaystyle {\tfrac {100}{255}}A}
-      19 	25 	2 	Oxygen Sensor 6 A: Voltage
-                                  B: Short term fuel trim  0 -100 
-      1C 	28 	1 	OBD standards this vehicle conforms to 	1 	250 	- 	enumerated. See below
-      20 	32 	4 	PIDs supported [21 - 40] 				Bit encoded [A7..D0] == [PID $21..PID $40] See below
-     22 	34 	2 	Fuel Rail Pressure (relative to manifold vacuum) 	0 	5177.265 	kPa 	0.079 ( 256 A + B ) {\displaystyle 0.079(256A+B)} {\displaystyle 0.079(256A+B)}
 
-     24 	36 	4 	Oxygen Sensor 1
-     AB: Air-Fuel Equivalence Ratio (lambda,λ)
-     CD: Voltage 
-
-     25 	37 	4 	Oxygen Sensor 2
-       AB: Air-Fuel Equivalence Ratio (lambda,λ)
-       CD: Voltage 
-
-     33 	51 	1 	Absolute Barometric Pressure 	0 	255 	kPa 	A {\displaystyle A} A
-
-    40 	64 	4 	PIDs supported [41 - 60] 				Bit encoded [A7..D0] == [PID $41..PID $60] See below
-
-    42 	66 	2 	Control module voltage 	0 	65.535 	V 	256 A + B 1000 {\displaystyle {\frac {256A+B}{1000}}} {\displaystyle {\frac {256A+B}{1000}}}
-
-    46 	70 	1 	Ambient air temperature 	-40 	215 	°C 	A − 40 {\displaystyle A-40} {\displaystyle A-40}
-
-    52 	82 	1 	Ethanol fuel % 	0 	100 	% 	100 255 A {\displaystyle {\tfrac {100}{255}}A} {\displaystyle {\tfrac {100}{255}}A}
-
-    5C 	92 	1 	Engine oil temperature 	-40 	210 	°C 	A − 40 {\displaystyle A-40} {\displaystyle A-40}
-
-    60 	96 	4 	PIDs supported [61 - 80] 				Bit encoded [A7..D0] == [PID $61..PID $80] See below
 
 #### Bitwise encoded PIDs
 
@@ -121,11 +86,7 @@ A request for this PID returns 4 bytes of data (Big-endian). Each bit, from MSB 
 
 For example, if the car response is BE1FA813, it can be decoded like this:
 
-    Hexadecimal 	 B 	  |    E    |    1    |    F    |	 A    |  	8   |  	1   |  	3
-     Binary 	  1 0 1 1 | 1 1 1 0 | 0 0 0 1 | 1 1 1 1 | 1 0 1 0 | 1 0 0 0 | 0 0 0 1 | 0 0 1 1
-
-    Supported? 	Yes  No  Yes  Yes | Yes  Yes  Yes  No | No No No Yes | Yes Yes Yes Yes |Yes No Yes No | Yes No No No | No No No Yes| No No Yes Yes
-    PID number 	 01  02  03   04  | 05   06   07   08 | 09 0A 0B 0C| 0D 	0E 	0F 	10 |	11 	12 	13 	14 |	15 	16 	17 	18 |	19 	1A 	1B 	1C |	1D 	1E 	1F 	20
+![bit_encoded1.png](/bit_encoded1.png)
 
 So, supported PIDs are: 01, 03, 04, 05, 06, 07, 0C, 0D, 0E, 0F, 10, 11, 13, 15, 1C, 1F and 20 
 
