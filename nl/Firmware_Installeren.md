@@ -2,7 +2,7 @@
 title: Speeduino Firmware installatie
 description: De Speeduino firmware op uw board instellen
 published: true
-date: 2020-12-22T10:39:21.689Z
+date: 2020-12-22T10:40:14.195Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-22T10:39:21.689Z
