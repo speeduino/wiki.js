@@ -2,17 +2,31 @@
 title: Dropbear
 description: 
 published: true
-date: 2020-12-24T02:00:03.685Z
+date: 2020-12-26T23:37:18.264Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
 ---
 
-# Header
-Your content here
+# Dropbear ECU
+The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to a full production release. It is powered by the high speed Teensy 3.5 board and is designed to be a complete unit out of the box. 
 
-# Pin out
-## Black Connector      
+## Features
+
+- 8x high impedance injector drivers
+- 8x 5v/12v coil pre-drivers (For use with igniters/smart coils)
+- 6x medium current (2A) outputs
+- 7x analog inputs
+- 4x digital inputs
+- CAN transceiver
+- Onboard VR conditioner
+- Swappable internal MAP sensors
+- Onboard baro sensor
+- Optional stepper motor driver
+
+
+## Pin out
+### Black Connector      
 ![Connector_black.png](/img/boards/Connector_black.png){.align-center width=400}
 
 | Pin | Direction | Max Current | Purpose | Comment |
@@ -42,7 +56,7 @@ Your content here
 | C7  | Input     | N/A         | Throttle Sensor   | Connect to signal line of variable throttle position sensor (TPS). Other pins of sensor should connect to C1 and A3        |
 | C8  | Input     | N/A         |External MAP Sensor| Signal line if using external MAP sensor. Input should be 0-5v and MAP source switch should be set to 'Ext.'. See below for 'Switch Configuration'. If using internal sensor this pin should be left unconnected.        |
 
-## Grey Connector
+### Grey Connector
 ![Connector_black.png](/img/boards/Connector_grey.png){.align-center width=400}
 
 | Pin | Direction | Max Current | Purpose | Comment |
