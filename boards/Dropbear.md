@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2020-12-26T23:37:18.264Z
+date: 2020-12-28T00:43:31.031Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -85,3 +85,14 @@ The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to
 | C6  | Output    | 2A          | Spare 1/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see below)       |
 | C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
+
+## Board Configuration
+The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
+
+### VR Conditioner
+The ECU contains a dual onboard conditioner that can can be used with VR sensors. 
+
+### MAP Selector
+The Dropbear board uses a removable MAP card containing the sensor and a short hose running to the bulkhead connector on the enclosure. Currently only the default 0-250kpa sensor board is available, with higher range boards to be made available in the future. To use this MAP card, select the `Int.` (Internal) option on the MAP switch. 
+
+If you wish to use an external MAP sensor located in the engine bay, this switch should be to to `Ext.` and the sensors signal line should be connected to pin `C8` on the Black connector. The MAP card can be left in place or removed when the `Ext.` option is used. 
