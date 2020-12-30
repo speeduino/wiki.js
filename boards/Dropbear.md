@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2020-12-28T22:31:35.248Z
+date: 2020-12-30T01:34:22.427Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -39,6 +39,7 @@ If you wish to use an external MAP sensor located in the engine bay, this switch
 
 
 ## Pin out
+
 The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and will only connect to the matching colour loom plug. 
 
 ### Black Connector      
