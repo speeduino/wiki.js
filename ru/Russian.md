@@ -2,7 +2,7 @@
 title: Speeduino Manual
 description: The Speeduino documentation manual
 published: true
-date: 2021-01-01T13:30:00.064Z
+date: 2021-01-01T13:33:23.856Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T13:30:00.064Z
