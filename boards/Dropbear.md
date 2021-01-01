@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2020-12-30T01:34:22.427Z
+date: 2021-01-01T00:48:15.457Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -27,7 +27,7 @@ The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to
 ## Board Configuration
 The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
 
-### Crank/Cam inputs (VR Conditioner)
+### Crank/Cam inputs
 The ECU contains a dual onboard conditioner that can can be used with VR sensors. The selection between Hall/Optical sensors and VR sensors is made via a pair of switches, one each for the crank and cam. These can be selected independently for setups that use one of each sensor type. 
 
 When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
@@ -56,10 +56,10 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | A7  | Both      | N/A         | CAN H             | CAN H connection        |
 | A8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | B1  | Output    | 100mA       | Tacho             | 12v square wave output for use as input to a tachometer        |
-| B2  | Input     | N/A         | Crank Primary     | Primary crank sensor (CKP) input. Can be 12v, Ground switching or the positive wire of a Vr sensor. See 'Crank/Cam' section below        |
-| B3  | Input     | N/A         | Crank Negative    | **Only used with a VR sensor.** Connect to negative side of VR crank sensor. See 'Crank/Cam' section below        |
-| B4  | Input     | N/A         | Cam Primary     | Primary crank sensor (CKP) input. Can be 12v, Ground switching or the positive wire of a Vr sensor. See 'Crank/Cam' section below        |
-| B5  | Input     | N/A         | Cam Negative    | **Only used with a VR sensor.** Connect to negative side of VR cam sensor. See 'Crank/Cam' section below        |
+| B2  | Input     | N/A         | Crank Primary     | Primary crank sensor (CKP) input. Can be 12v, Ground switching or the positive wire of a VR sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
+| B3  | Input     | N/A         | Crank Negative    | **Only used with a VR sensor.** Connect to negative side of VR crank sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
+| B4  | Input     | N/A         | Cam Primary     | Cam sensor (CMP) primary input. Can be 12v, Ground switching or the positive wire of a VR sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
+| B5  | Input     | N/A         | Cam Negative    | **Only used with a VR sensor.** Connect to negative side of VR cam sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
 | B6  | Input     | N/A         | Spare Digital 1| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc        |
 | B7  | Input     | N/A         | Clutch input.     | Ground switching digital input that goes to ground when clutch is engaged. Do not feed 12v on this input        |
 | B8  | Input     | N/A         | Flex sensor       | Signal wire from GM/Continental Flex sensor.         |
@@ -70,7 +70,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
 | C6  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
 | C7  | Input     | N/A         | Throttle Sensor   | Connect to signal line of variable throttle position sensor (TPS). Other pins of sensor should connect to C1 and A3        |
-| C8  | Input     | N/A         |External MAP Sensor| Signal line if using external MAP sensor. Input should be 0-5v and MAP source switch should be set to 'Ext.'. See below for 'Switch Configuration'. If using internal sensor this pin should be left unconnected.        |
+| C8  | Input     | N/A         |External MAP Sensor| Signal line if using external MAP sensor. Input should be 0-5v and MAP source switch should be set to 'Ext.'. See [MAP Selection](#map-selector) section for more details. If using internal sensor this pin should be left unconnected.        |
 
 ### Grey Connector
 ![Connector_black.png](/img/boards/Connector_grey.png){.align-center width=400}
