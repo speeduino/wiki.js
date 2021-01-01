@@ -1,8 +1,8 @@
 ---
-title: Speeduino Firmware setup
+title: Настройка прошивки Speeduino
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2021-01-01T17:04:36.320Z
+date: 2021-01-01T17:08:09.160Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T15:47:32.110Z
