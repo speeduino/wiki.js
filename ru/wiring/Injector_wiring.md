@@ -1,8 +1,8 @@
 ---
-title: Injector wiring
+title: Подключение форсунок
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2021-01-01T19:20:55.103Z
+date: 2021-01-01T19:21:54.018Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T19:20:55.103Z
