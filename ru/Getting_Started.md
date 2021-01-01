@@ -2,7 +2,7 @@
 title: Getting Started
 description: Starting pages for each area of the manual
 published: true
-date: 2021-01-01T13:59:01.266Z
+date: 2021-01-01T14:05:38.232Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T13:59:01.266Z
@@ -15,7 +15,7 @@ dateCreated: 2021-01-01T13:59:01.266Z
 
 Ссылки ниже помогут вам сделать выбор. 
 
-- [Аппаратные требования](/Hardware_requirements) - Какое оборудование вам потребуется для работы со Speeduino (Датчики, провода, форсунки, катушки зажигания и т.д.)
+- [Аппаратные требования](/Hardware_requirements) - какое оборудование вам потребуется для работы со Speeduino (Датчики, провода, форсунки, катушки зажигания и т.д.)
 - Информация о конкретной плате
   - [v0.3 плата](/boards/V03)
   - [v0.4 плата](/boards/V04)
