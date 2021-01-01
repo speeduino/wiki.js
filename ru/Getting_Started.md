@@ -1,8 +1,8 @@
 ---
-title: Getting Started
+title: Начиная Работу
 description: Starting pages for each area of the manual
 published: true
-date: 2021-01-01T14:05:38.232Z
+date: 2021-01-01T17:06:18.593Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T13:59:01.266Z
