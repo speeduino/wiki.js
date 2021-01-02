@@ -2,63 +2,63 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2021-01-02T04:18:44.187Z
+date: 2021-01-02T18:32:23.995Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:18:44.187Z
 ---
 
-# Acceleration Enrichment (AE)
+# Обогащения при ускорении  Acceleration Enrichment (AE)
 
-Acceleration Enrichment (AE) is used to add extra fuel during the short transient period following a rapid increase in throttle. It performs much the same function as an accelerator pump on a carbureted engine, increasing the amount of fuel delivered until the manifold pressure reading adjusts based on the new load.
+Обогащение при разгоне путём подачи дополнительного топлива в течение короткого переходного периода после быстрого открытия дроссельной заслонки. Он выполняет ту же функцию, что и ускорительный насос на карбюраторном двигателе, увеличивая количество подаваемого топлива до тех пор, пока показания давления в коллекторе не подстраиваются на основе новой нагрузки.
 
-> To operate TPS based AE correctly, you must have a variable TPS installed and calibrated.
+> Для правильной работы AE по датчику открытия дроссельной заслонки необходимо откалибровать этот датчик.
 {.is-info}
 
 
-## Theory
+## Теория
 
-Tuning of acceleration enrichment is based on the rate of change of the throttle position, a variable known as TPSdot (TPS delta over time). This is measured in %/second, with higher values representing faster presses of the throttle and values in the range 50%/s to 1000%/s are normal. Eg:
+Настройка обогащения при ускорении основана на скорости изменения положения дросселя, переменной, известной как TPSdot (дельта TPS с течением времени). Это измеряется в %/с, причем более высокие значения представляют собой более быстрые нажатия дросселя и значения в диапазоне от 50 %/с до 1000 %/с являются нормальными. Например,:
 
-- 100%/s = pressing the throttle from 0% to 100% in 1 second
-- 1000%/s = pressing the throttle from 0% to 100% in 0.1s
+- 100%/s = поворот дросселя от 0% до 100% за 1 секунду
+- 1000%/s = поворот дросселя от 0% до 100% за 0.1 секунду
 
-TPSdot forms the X axis of the acceleration curve, with the Y axis value representing the % increase in fuel.
+TPSdot образует ось X кривой ускорения, причем значение оси Y представляет увеличение топлива в%.
 
 ![Acceleration Enrichment curves](/img/tuning/accel.png){.align-center width=500}
 
-### Tuning
+### Настройка
 
-The enrichment curve included with the base Speeduino tune is a good starting point for most engines, but some adjustment is normal depending on injector size, throttle diameter etc.
+Кривая обогащения, включенная в базовую настройку Speeduino, является хорошей отправной точкой для большинства двигателей, но некоторая регулировка является нормальной в зависимости от размера инжектора, диаметра дросселя и т.д
 
-In most cases, tuning of the AE curve can be performed in a stationary environment, though dyno or road tuning is also possible. Fast and slow blips of the throttle should be performed and the affect on the AFRs monitored using the live line graph on the AE dialog. This graph shows both TPSdot and AFR values in sync with each other, making adjustments to the correct part of the AE curve simpler to identify.
+В большинстве случаев настройка кривой AE может быть выполнена в стационарной среде, хотя также возможна настройка с помощью диномометра или на трассе. Следует выполнить быстрое и медленное нажатие дроссельной заслонки и контролировать воздействие на AFR с помощью графика в режиме реального времени в диалоговом окне AE. На этом графике показаны значения TPSdot и AFR, синхронизированные друг с другом, что позволяет проще идентифицировать правильную часть кривой AE.
 
-If you find that the AFR is initially good, but then goes briefly lean, you should increase the 'Accel Time' setting, with increments of 10-20ms recommended.
+Если вы обнаружите, что AFR изначально хороша, но затем идет краткое обеднение, вы должны увеличить настройки "Accel Time", с приращениями 10-20 мс рекомендуется.
 
-### False triggering
+### Ложное срабатывание False triggering
 
-In cases where the TPS signal is noisy, spikes in its reading may incorrectly trigger the acceleration enrichment. This can be seen in a log file or on a live dash in TunerStudio by the activation of the 'TPS Accel' indicator when there is no (or little) throttle movement occurring. 
+В случаях, когда сигнал TPS является шумным, пики в его показаниях могут неправильно вызвать увеличение ускорения. Это можно увидеть в файле журнала или в TunerStudio путем активации индикатора "TPS Accel", когда не происходит (или незначительно) движение дросселя. 
 
-Should this occur (and assuming that the TPS wiring cannot be corrected to reduce noise) then the false triggers can be prevented from triggering AE by increasing the "TPSdot Threshold" value. This should be increased in increments of ~5%/s, pausing between each increase to observe whether AE is still being incorrectly activated.
+Если это происходит (и предполагается, что проводка TPS не может быть исправлена для уменьшения шума), то ложные триггеры могут быть предотвращены для запуска AE путем увеличения значения "TPSdot Threshold". Оно должно увеличиваться с шагом ~ 5 %/с, приостанавливаясь между каждым увеличением, чтобы убедиться, что AE все еще неправильно активируется.
 
-### Fields
+### Поля Fields
 
 - **Enrichment Mode**
-Chose whether to use Throttle Position Sensor or Manifold Absolute Pressure for acceleration enrichment.
+Выберите, использовать ли датчик положения дросселя или абсолютное давление во впуске для обагощения при ускорении.
 - **TPSdot Threshold**
-Percentage of throttle position change per second required to trigger acceleration enrichment. For example, if set to 70, the throttle position must change at a rate of 70% per second for acceleration enrichment to become active.
+Процент изменения положения дросселя в секунду, необходимый для запуска обогащения при ускорении. Например, если установлено значение 70, положение дросселя должно изменяться со скоростью 70% в секунду, чтобы обогащение ускорения стало активным.
 - **MAPdot Threshold**
-Same as TPSdot Threshold, but applies when using MAP enrichment mode.
+Совпадает с TPSdot Threshold, но применяется при использовании режима по датчику давления во впуске MAP.
 - **Accel Time**
-Duration of acceleration enrichment. Once enrichment is triggered, it will last this many milliseconds.
+Продолжительность обогащения при ускорении. После запуска обогащения оно будет длиться столько миллисекунд.
 - **Taper Start RPM, Taper End RPM**
-Scales the enrichment taper at different RPMs. If RPM is less than or equal to Start RPM, enrichment will be 100% of the calculated enrichment value, based on the TPSdot(or MAPdot) value seen. If RPM is greater than or equal to End RPM, enrichment will be 0%. As RPM increases, the total amount of required enrichment decreases. Enrichment is scaled linearly in between these values. 
+Масштабирование степени обогащения при различных оборотах в минуту. Если RPM меньше или равно Start RPM, обогащение будет составлять 100% от вычисленного значения обогащения на основе видимого значения TPSdot (или MAPdot). Если RPM больше или равно End RPM, обогащение будет равно 0%. По мере увеличения RPM общее количество требуемого обогащения уменьшается. Обогащение линейно масштабируется между этими значениями. 
 - **Cold Adjustment**
-Scales the acceleration enrichment percentage linearly based on coolant temperature. At Start Temperature, adjustment will be equal to the Cold Adjustment field (%). At End Temperature, adjustment will be 0%.
+Линейное масштабирование процента увеличения ускорения на основе температуры охлаждающей жидкости (температуры цилиндра для ДВС воздушного охлаждения). При начальной температуре регулировка будет равна полю холодной регулировки (%). При конечной температуре регулировка будет 0%.
 - **Deceleration Fuel Cutoff**
-Stops injecting fuel when:
- *RPM is above **Cutoff RPM**
- TPS is below **TPS Threshhold**
- Engine temperature is above **Minimum engine temperature**
- The above conditions are met for **Cutoff delay** seconds*
- ** RPM Hysteresis can be adjusted to account for fluctuating RPM conditions to prevent accidental DFCO.
+Прекращает впрыск топлива, когда:
+ *RPM is above **Cutoff RPM** обороты выше оборотов отсечки
+ TPS is below **TPS Threshhold** закрытие заслонки ниже заданного
+ Температура ДВС выше **Minimum engine temperature**
+ Вышеуказанные условия выполнены для **Cutoff delay** секунд*
+ ** гистерезис оборотов может быть отрегулирован для предотвращения случайного торможение двигателем.
