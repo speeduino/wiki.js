@@ -2,17 +2,17 @@
 title: Auxillary IO Configuration
 description: 
 published: true
-date: 2021-01-02T04:21:13.651Z
+date: 2021-01-02T18:36:00.396Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:21:13.651Z
 ---
 
-# Auxillary IO Configuration
+# Конфигурация вспомогательных вводов-выводов Auxillary IO Configuration
 
-Speeduino also supports the reading of up to 16 additional input channels. These inputs can be either Analog or Digital Pins on the Mega2560(or other mcu in use) or from a remote data aquistion device (such as The DxControl GPIO for instance) via the secondary serial port or the Canbus interface(if available).
+Speeduino также поддерживает считывание до 16 дополнительных входных каналов. Эти входы могут быть либо аналоговыми, либо цифровыми контактами на Mega2560 (или других используемых mcu), либо от удаленного устройства передачи данных (например, DxControl GPIO) через вторичный последовательный порт или интерфейс Canbus (если имеется).
 
-A data channel configured here will have the raw data avilable in TunerStudio as a Gauge and will also be loggable too.
+Канал данных, сконфигурированный здесь, будет иметь необработанные данные, доступные в TunerStudio в качестве датчика, и также будет регистрироваться.
 
 ## How to Use
 
