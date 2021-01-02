@@ -2,7 +2,7 @@
 title: Аппаратные Требования
 description: 
 published: true
-date: 2021-01-02T09:06:30.478Z
+date: 2021-01-02T10:13:58.202Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:58:44.060Z
@@ -111,113 +111,112 @@ GM 8-контактный модуль зажигания   <img src="https://r
 
 • "**C-**" : Отрицательное соединение катушки зажигания.
 
-• "**P & N**" : Positive and Negative of the distributor reluctor. Polarity is important. GM distributor connectors can only be connected one way. For use with other distributors, verify polarity of the reluctor leads.
+• "**P & N**" : Позитив и негатив дистрибьютора. Полярность важна. Соединители распределителя GM могут быть подключены только одним способом. Для использования с другими распределителями проверьте полярность выводов резистора.
 
-• "**B**" : Ignition bypass. When cranking, grounding this line bypasses computer control of timing. The timing iscontrolled by the module only. This can be done using the Speeduino Cranking Bypass pin function (see below).
+• "**B**" : Байпас зажигания. При прокрутке заземление этой линии обходит компьютерный контроль синхронизации. Синхронизация контролируется только модулем. Это можно сделать с помощью функции байпасного штифта прокрутки Speeduino (см. ниже).
 
-• "**R**" : Reference or tach signal. This outputs a 5 volt square wave that serves as the RPM1 input for the Speeduino. To use this, connect it to RPM1 and set JP2 to Hall and JP4 connected (ie, 5 volt pull up).
+• "**R**" : Опорный сигнал или сигнал тахо. Это приводит к появлению квадратной волны 5 В, которая служит RPM1 входом для Speeduino. Чтобы использовать это, подключите его к RPM1 и установите JP2 в Холл и JP4 подключен (т.е. 5 вольт).
 
-• "**E**" : Timing control signal. When pin B has 5 volts on it, the module allows Speeduino to control the timing using this pin. The output of Ign1 should be connected to this pin.
+• "**E**" : Сигнал управления синхронизацией. Если контакт B имеет 5 вольт, модуль позволяет Speeduino управлять синхронизацией с помощью этого контакта. Выход Ign1 должен быть подключен к этому контакту.
 
-• "**G**": *(8 pin only)* Signal ground. Should be connected to the Speeduino sensor ground. (Module ground is provided through the metal mounting grommets)
+• "**G**": *(8 контактов только)* Сигнальное заземление. Необходимо подключить к заземлению датчика Speeduino. (Заземление модуля обеспечивается через металлические монтажные решетки)
 
-A timing bypass circuit must be constructed to utilize the Speeduino ignition timing control. The small circuit below should be built in the proto area.
+Схема байпаса синхронизации должна быть сконструирована так, чтобы использовать управление опережения зажигания Speeduino. Небольшой контур ниже должен быть построен в протообласти.
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/GM7_pin_bypass.png" title="Fig. 3 Bypass circuit" width="40%"/>
 
 </center>
-In addition, the cranking bypass should be turned on and the bypass pin should be set to pin 3 in the Cranking Settings dialog (under Starting / Idle in TunerStudio):
+Кроме того, необходимо включить байпас прокрутки и установить байпас на контакт 3 в диалоговом окне "Настройки прокрутки" (в разделе "Запуск/бездействие в TunerStudio").:
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/warmup/cranking_bypass.png" title="Fig. 4 Bypass settings" width="40%"/>
 
 </center>
-Trigger settings (under Starting / Trigger Setup in TunerStudio) should be as shown below. You will need to adjust the trigger angle to get correct timing. Instructions for this are in the wiki.
+Настройки триггера (в разделе Starting/Trigger Setup в TunerStudio) должны быть такими, как показано ниже. Вам нужно будет настроить угол срабатывания, чтобы получить правильное время. Инструкции для этого находятся в wiki.
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/GM7_pin_triggerSettings.PNG" title="Fig. 5 Trigger settings" width="35%"/>
 
 </center>
-Timing control is set in the Spark / Spark Settings dialog:
+Управление синхронизацией установлено в меню the Spark/Spark:
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/GM7_pin_sparkSettings.png" title="Fig. 6 Spark settings" width="30%"/>
 
 </center>
-The module works well, however, some applications result in a noisy trigger signal. This shows as an unstable RPM (either at idle, or more frequently, at higher speeds). Trigger filtering may help, but a modification may be necessary to clean up the signal. The circuit below effectively cleans/filters the signal, allowing use with no trigger filtering by the Speeduino. It has been tested with single and 8-pole reluctors and modules from GM, Transpo and a no-name generic.
+Модуль работает хорошо, однако некоторые приложения приводят к шумному запускающему сигналу. Это показывает нестабильную частоту вращения (либо на холостом ходу, либо чаще, на более высоких скоростях). Фильтрация триггеров может помочь, но для очистки сигнала может потребоваться модификация. Схема ниже эффективно очищает/фильтрует сигнал, позволяя использовать без триггерной фильтрации Speeduino. Он был протестирован с одно- и 8-полюсными катушками и модулями от GM, Transpo и дженериком без названия.
 
 <center>
 <img src="https://raw.githubusercontent.com/speeduino/wiki/master/ignition/GM7_pin_filter.png" title="Fig. 7 Filter circuit" width="40%"/>
-
 </center>
-*Many thanks to apollard for this outline information.*
 
-Outputs
+
+Выводы
 -------
 
-### Injectors
+### Форсунки
 
-Speeduino injector drivers use on/off (not PWM) control and are designed to work with "High-Z" injectors. This type of injectors are also known as "saturated" or "high-impedance" that use full battery voltage to control the injector open cycle, and generally the impedance is greater than about 8 Ohms. If you are running "Low-Z" ("peak and hold" or PWM-controlled) injectors that are lower impedance, you will need to install series resistors on these to avoid damaging the board with excessive current. The resistor ohms and watt rating can be calculated by Ohm's Law, or use an Internet calculator page such as the [Speeduino Injector Resistor Calculator](http://efistuff.orgfree.com/InjectorResistorCalculator.html).
+Драйверы форсунок Speeduino используют управление включением/выключением (не PWM) и предназначены для работы с инжекторами "High-Z". Этот тип инжекторов также известен как "насыщенный" или "высокоимпедансный", которые используют полное напряжение батареи для управления разомкнутым циклом инжектора, и обычно импеданс превышает приблизительно 8 Ом. Если используются инжекторы "Low-Z" ("peak and hold" или PWM-управляемые) с меньшим импедансом, на них необходимо установить последовательные резисторы, чтобы избежать повреждения платы избыточным током. Резисторы могут быть рассчитаны по закону Ома или использовать страницу Интернет-калькулятора [Speeduino Injector Resistor Calculator](http://efistuff.orgfree.com/InjectorResistorCalculator.html).
 
-Speeduino can drive up to 2 High-Z injectors per output channel.
+Speeduino может использовать до 2 инжекторов High-Z на каждый выходной канал.
 
-The 0.4v boards have 2 pins per injector channel allowing each injector to be directly connected to the board without splicing in the harness. If the application has less than 4 injectors using any pin connected to the proper channel will work. 
+Платы 0,4 В имеют по 2 контакта на канал инжектора, что позволяет каждому инжектору непосредственно соединяться с платой без сращивания в жгуте. Если приложение имеет менее 4 инжекторов с помощью любого контакта, подключенного к соответствующему каналу, будет работать. 
 
-### Coils
+### Катушки зажигания
 
-Current versions of the Speeduino use low-power output signals, designed to work with external small-signal ignition coil drivers, whether a separate type (module or ICM, igniter, IGBT, etc.), or built into the coil assembly ('smart' coils). This method permits Speeduino to have great flexibility to control most types of ignition systems. Attaching the Speeduino outputs directly to a traditional high current passive ("dumb" or 2-pin) ignition coil without an ignition coil driver WILL cause damage to your Arduino.
+В текущих версиях Speeduino используются выходные сигналы малой мощности, предназначенные для работы с внешними драйверами катушек зажигания, будь то отдельного типа (модуль или ICM, воспламенитель, IGBT и т. д.), или встроенного в сборку катушки ("умные" катушки). Этот способ позволяет Speeduino иметь большую гибкость для управления большинством типов систем зажигания. Подключение выходов Speeduino непосредственно к традиционной пассивной катушке зажигания высокого тока ("тупой" или 2-контактный) без драйвера катушки зажигания ПРИВЕДЕТ к повреждению вашего Arduino.
 
-***How Speeduino controls ignition circuit power*** In prior history, the coil driver was a set of mechanical contact points ("points"), simply replaced today by an electronic version. The added coil driver can be anywhere from inside the Speeduino to inside the coil assembly; though near or in the coil reduces electrical noise.
+***Как Speeduino управляет искрой*** В предшествующей истории драйвер катушки представлял собой набор механических контактных точек ("points"), просто заменённых сегодня электронной версией. Дополнительный привод катушки может находиться в любом месте от Speeduino до узла катушки; хотя вблизи или в катушке уменьшает электрический шум.
 
-In the example animated image below, the Speeduino ignition signal is normally low (near ground or 0V) while Speeduino calculates the time to the next coil firing. At the proper time, Speeduino switches the ignition output to high (near 5V or 12V selectable) in order to switch the coil driver (example IGBT) on, allowing current to flow through the coil to ground. This is called the 'dwell' period. During dwell an increasing energy field is generated around the ignition coil core and wire windings.
+В приведенном анимированном изображении сигнал зажигания Speeduino обычно низкий (вблизи земли или 0V), в то время как Speeduino вычисляет время до следующего запуска катушки. В соответствующее время Speeduino переключает выход зажигания на высокий (почти 5V или 12V выбираемый), чтобы включить драйвер катушки (например, IGBT), позволяя току протекать через катушку на землю. Это называется "период выдержки" (dwell). Во время пребывания вокруг сердечника катушки зажигания и проволочных обмоток генерируется возрастающее энергетическое поле.
 
-At the end of the dwell period and therefore at the proper time for spark; Speeduino switches the coil driver off, stopping current flow, which collapses the energy field to create high voltage and the resulting spark:
+В конце периода выдержки и, следовательно, в надлежащее время для искры; Speeduino выключает драйвер катушки, останавливая поток тока, который разрушает энергетическое поле для создания высокого напряжения и результирующей искры:
 
 <img src="http://efistuff.orgfree.com/images/Speedy_Ignition_Sequence.gif" title="Fig. 1 Typical IDI Ignition" />
 
-In TunerStudio, the setting for this example would be to fire the spark "*going low*". The dwell setting is highly variable depending on coil type, voltage levels, etc. Too little dwell will give weak or no spark and excess dwell will rapidly increase heat, possibly damaging any of the ignition components, but usually the ignition coil or coil driver.
+В TunerStudio, настройка для этого примера заключается в срабатывании искры "*going low*". Уставка времени выдержки сильно варьируется в зависимости от типа катушки, уровня напряжения и т.д. Слишком малое пребывание даст слабую искру или отсутствие искры, а избыточное пребывание быстро увеличит тепло, возможно, повредив любой из компонентов зажигания, обычно это катушка зажигания или драйвер катушки.
 
-The wasted-spark version is below to show how it is identical in operation, but with the high-voltage spark returning through the second spark plug to complete the circuit:
+Версия с отработанной искрой показана ниже, чтобы показать, как она идентична в работе, но с высоковольтной искрой, возвращающейся через вторую свечу зажигания для завершения цепи:
 
 <img src="http://efistuff.orgfree.com/images/SpeedyIgnitionDiagramWASTED.jpg" title="Fig. 2 Typical ISI-WS Ignition" />
 
-A good run down of 'smart' coil types can be found at: [<http://www.megamanual.com/seq/coils.htm>](http://www.megamanual.com/seq/coils.htm). There are many ignition modules available that Speeduino can use to control standard coils, or for smart coils you can generally use 4 or 5-pin types as these will always be logic level, although some 3-pin coils are also of this variety. GM LS1/2 coils are an example of powerful smart coils that are commonly used and can usually be obtained easily and cheaply.
+Хороший обзор "умных" типов катушек можно найти в: [<http://www.megamanual.com/seq/coils.htm>](http://www.megamanual.com/seq/coils.htm). Существует много модулей зажигания, которые Speeduino может использовать для управления стандартными катушками, или для интеллектуальных катушек, как правило, можно использовать 4 или 5-контактный тип, так как они всегда будут логическим уровнем, хотя некоторые 3-контактные катушки также относятся к этой разновидности. GM LS1/2 катушки являются примером мощных интеллектуальных катушек, которые обычно используются и обычно могут быть получены легко и дешево.
 
-*(Note: In the past, some ignition control modules with current limiting or dwell control features (e.g., 1970s GM HEI, Bosch '024' types, and Ford DS1) were referred-to as "smart" modules. While still true, common terminology of individual ignition coils with at least a driver integrated, or newer technology with greater controls (e.g., controlled spark duration or multi-spark) are all considered "smart" coils. You must know the control requirements of the specific drivers, control modules, or coils you intend to use in order to operate them properly with Speeduino.)*
+*(NПримечание: В прошлом некоторые модули управления зажиганием с ограничением тока или элементами управления замедлением (например, 1970-е годы GM HEI, типы Bosch '024' и Ford DS1) назывались "умными" модулями. Хотя все еще верно, общая терминология отдельных катушек зажигания с, по меньшей мере, встроенным драйвером или более новой технологией с более широкими средствами управления (например, управляемая продолжительность искры или многоискровая) все считаются "умными" катушками. Для правильной работы с Speeduino необходимо знать требования к управлению определенными драйверами, модулями управления или катушками.)*
 
-### Aux Outputs
+### Вспомогательные выходы
 
-#### Low Current
+#### Низкий ток
 
-Most Speeduino versions have low-current (LC) signal outputs directly from the MEGA processor to (usually) the prototyping (proto) area of the board. These outputs are generally not suited to control power devices directly in this form, and need suitable output circuits built on the proto area to enable their use. Alternatively, the output functions such as Fuel Pump or Fan are re-assignable to other pins and components, such as the existing high-current (HC) output MOSFETs - see "Medium Current" section below for more.
+В большинстве версий Speeduino сигналы низкого тока (LC) выводятся непосредственно из процессора MEGA в (обычно) область прототипирования (proto) платы. Эти выходы обычно не подходят для управления устройствами питания непосредственно в этой форме и нуждаются в соответствующих выходных схемах, построенных на протообласти, чтобы обеспечить их использование. Кроме того, функции вывода, такие как топливный насос или вентилятор, могут быть повторно назначены другим штырькам и компонентам, таким как существующие высоковольтные (HC) выходные МОП-транзисторы - для получения дополнительной информации см. раздел "Средний ток" ниже.
 
-Some Speeduino versions include an 8-channel ULN2803A Darlington transistor array IC that is capable of switching up to 1/2 amp per channel. These auxiliary outputs are sufficient to switch small devices directly, or to switch power-handling devices, such as power MOSFETs or automotive relays. Configuration and settings of these outputs is described in the [Configuration](/Configuration_Index) section. Additional information for using a ULN2803A on v0.4-series boards may be found [here](https://speeduino.com/forum/viewtopic.php?f=19&t=1023&p=16588#p16588). Similar output options and pin assignments may be used on other board designs.
+Некоторые версии Speeduino включают в себя 8-канальную ULN2803A Darlington транзисторную матрицу IC, которая способна переключаться до 1/2 ампер на канал. Этих вспомогательных выходов достаточно для непосредственного переключения небольших устройств или для переключения устройств управления питанием, таких как силовые МОП-транзисторы или автомобильные реле. Конфигурация и настройки этих выходов описаны в [Configuration](/Configuration_Index) секции. Дополнительная информация по использованию ULN2803A на платах серии v0.4 [Здесь](https://speeduino.com/forum/viewtopic.php?f=19&t=1023&p=16588#p16588). Аналогичные опции вывода и назначения выводов могут использоваться в других конструкциях плат.
 
-#### Medium Current
+#### Средний ток
 
-v0.3x and later boards include medium-power MOSFET auxiliary outputs to switch up to 3 amps directly. These are labeled "HC" in schematics and some references. These outputs are commonly used to operate idle valves, boost-control valves, VVT solenoids, etc., or to control relays for handling much larger loads, such as electric radiator fans. Configuration and settings of these outputs is described in the [Configuration](/Configuration_Index) section.
+Платы v0.3x и более поздних версий включают вспомогательные выходы MOSFET средней мощности для непосредственного переключения до 3 ампер. Они помечены "HC" в схемах и некоторых ссылках. Эти выходы обычно используются для управления нерабочими клапанами, повышающими регулирующими клапанами, электромагнитами VVT и т.д., или для управления реле для обработки гораздо больших нагрузок, таких как вентиляторы электрических радиаторов. Конфигурация и настройки этих выходов описаны в[Configuration](/Configuration_Index) секции.
 
-Auxilary IO
+Вспомогательные вводы-выводы
 -----------
 
-On Arduino Mega2560 based Speeduino boards (official or just running current firmware) git commit 13f80e7 support is available for the external connection of 8 16bit analog inputs via [Serial3](/Secondary_Serial_IO_interface)
+На платах Speeduino на базе Mega2560 Arduino (официальных или работающих под управлением текущего встроенного ПО) поддержка git commit 13f80e7 доступна для внешнего подключения 8 16-битных аналоговых входов через [Serial3](/Secondary_Serial_IO_interface)
 
-CanBus
+Шина CanBus
 ------
 
-As the Arduino mega2560 has no CanBus interface a seperate "co-processor" interface has been designed. More information about this unit can be found here <https://github.com/Autohome2/Speeduino-can-interface>. This uses the functionality provided by the Serial3 port and connects via that port.
+Поскольку Arduino mega2560 не имеет интерфейса CanBus, был разработан отдельный "сопроцессорный" интерфейс. Более подробную информацию об этом устройстве можно найти здесь <https://github.com/Autohome2/Speeduino-can-interface>. This использует функциональные возможности, предоставляемые портом Serial3, и подключается через этот порт.
 
-On the upcoming Teensy3.5 variant of Speeduino the CanBus code will be incorporated into the main system firmware as the Teensy3.5 has integrated CanBus and only requires a transceiver module added.
+На предстоящем Teensy3.5 варианте Speeduino код CanBus будет включен в встроенное ПО основной системы, так как Teensy3.5 имеет интегрированную CanBus и требует добавления только модуля приемопередатчика.
 
-Third Party Addon's
+Добавления от стороних разработчиков
 -------------------
 
-In This section you will find information about third party designed hardware designed to be used in conjunction with the Speeduino ECU
+В этом разделе содержится информация о стороннем оборудовании, разработанном для использования совместно с ECU Speeduino.
 
-GPIO for Speeduino
+Интерфейс ввода/вывода общего назначения для Speeduino (GPIO)
 ------------------
 
-There are several variants of the GPIO , The firmware can be downloaded here <https://github.com/Autohome2/Speeduino-GPIO>
+Существует несколько вариантов GPIO, прошивку можно загрузить здесь <https://github.com/Autohome2/Speeduino-GPIO>
 
-More information [GPIO_for_Speeduino](/GPIO_for_Speeduino "wikilink")
+Больше информации [GPIO_for_Speeduino](/GPIO_for_Speeduino "wikilink")
