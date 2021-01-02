@@ -2,57 +2,57 @@
 title: Настройка проекта в TunerStudio
 description: 
 published: true
-date: 2021-01-02T07:48:10.428Z
+date: 2021-01-02T10:27:42.268Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:48:10.428Z
 ---
 
-# Configuring TunerStudio Project Properties
+# Опции проекта в TunerStudio 
 
-The menu option for the project properties page can be found here
+Пункт меню для страницы свойств проекта можно найти здесь
 
 ![TS_9.png](/img/TunerStudio/TS_9.png){.align-center width=400}
 
-Once opened this page will be seen. 
+После открытия эта страница будет выглядеть так. 
 
 ![TS_4.png](/img/TunerStudio/TS_4.png){.align-center width=350}
 
-## Settings Tab
-The Settings tab does not affect the tune directly, but does change the way some things are displayed within Tuner Studio. Some menus are hidden by default, either for safety reasons or because they are still under development, and they can be enabled here.
+## Вкладка "Параметры" (Settings tab)
+Вкладка "Настройки" не влияет непосредственно на настройку, но изменяет способ отображения некоторых элементов в Tuner Studio. Некоторые меню по умолчанию скрыты либо из соображений безопасности, либо потому, что они все еще находятся в стадии разработки, и их можно включить здесь.
 
-### Lambda Display
-This changes whether the oxygen sensor reasons are shown in AFR (default) or Lambda.
+### Отображение кислорода (Lambda Display)
+Это влияет на то, отображаются ли информация в виде соотношения AFR (по умолчанию) для датчика кислорода в или в единицах Lambda.
 
-### Temperature Display
+### Отображение температуры (Temperature Display)
 
 The temperature selection changes all degrees values within TunerStudio. 
 
--   Fahrenheit(Default)
+-   Fahrenheit(по умолчанию)
 -   Celsius
 
-> Changing this value does not alter the values in tune at all, only which scale the values are displayed in
+> Изменение этого значения не приводит к изменению настроенных значений, но только в том масштабе, в котором они отображаются
 {.is-info}
 
 
-### Enable Hardware Test
-The hardware testing dialog allows you to manually turn the ignition and injection outputs on and off in order to test that the circuits are working. This can be dangerous if the outputs are connected to hardware however and so this dialog must be explicitely enabled. 
+### Включить тестирование оборудования )Enable Hardware Test)
+Диалоговое окно тестирования аппаратных средств позволяет вручную включать и выключать выходы зажигания и впрыска для проверки работоспособности цепей. Это может быть опасно, если выходы подключены к аппаратным средствам, поэтому этот диалог должен быть включен в явном виде.
 
-> Please **ONLY** turn this on when the ECU is not connected to a vehicle
+> Пожалуйста **ТОЛЬКО** включайте, когда ЭБУ не подключен к транспортному средству
 {.is-danger}
 
-If Enabled, an additional Tab will appear on the tuning page 
+Если включено, на странице настройки появится дополнительная вкладка
 
 ![Project Settings](/img/TunerStudio/TS_project_settings.png){.align-center width=400}
 
-### Reset control features
-An optional Speeduino specific boot loader is available that has different methods of controlling the automatic reset. The vast majority of users should leave this on the default 'Basic options only'
+### Сброс функций управления (Reset control features)
+Доступен дополнительный загрузчик Speeduino с различными способами управления автоматическим сбросом. Подавляющее большинство пользователей должны оставить это по умолчанию 'Basic options only'
 
 
-## CAN Devices Tab
+## Вкладка "Устройства CAN" (CAN Devices Tab)
 
-CAN options are currently under development, but settings are available on this tab for testing if you have supported hardware.
+Параметры CAN в настоящее время разрабатываются, но параметры доступны на этой вкладке для тестирования, если вы поддерживаете оборудование.
 
 ![CAN Devices](/img/TunerStudio/TS_CAN_settings.png){.align-center width=400}
 
-Configuration of CAN devices is currently unsupported
+Конфигурация устройств CAN в настоящее время не поддерживается
