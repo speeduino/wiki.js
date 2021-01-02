@@ -2,19 +2,19 @@
 title: История прошивок
 description: 
 published: true
-date: 2021-01-02T07:56:01.166Z
+date: 2021-01-02T10:16:20.173Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:56:01.165Z
 ---
 
-# Firmware releases now posted on GitHub
+# Прошивки размещённые на GitHub
 https://github.com/noisymime/speeduino/releases
 
-Overview
+Обзор
 ========
 
-Recent firmware releases can be found below. These may be useful for rolling back if required or if you cannot locate the ini file associated with the firmware you are running.
+Последние версии прошивок приведены ниже. Они могут быть полезны для отката при необходимости или если не удается найти ini-файл, связанный с выполняемым микропрограммным обеспечением.
 
 | Month   | Firmware Download                                              | Details                                                         |
 |---------|----------------------------------------------------------------|-----------------------------------------------------------------|
