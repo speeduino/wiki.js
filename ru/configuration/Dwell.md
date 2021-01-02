@@ -1,32 +1,32 @@
 ---
-title: Dwell
+title: Время выдержки Dwell
 description: 
 published: true
-date: 2021-01-02T04:24:31.931Z
+date: 2021-01-02T19:12:00.346Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:24:31.931Z
 ---
 
-# Dwell Control
-## Overview
-The dwell control dialog alters the coil charging time (dwell) for Speeduino's ignition outputs. Care should be taken with these settings as igniters and coils can be permanently damaged if dwelled for excessive periods of time.
+# Контроль времени выдержки
+## Обзор
+Диалоговое окно управления временем насыщения катушки зажигания изменяет время зарядки катушки (выдержка) для выходов зажигания Speeduino. При таких настройках следует соблюдать осторожность, так как модули зажигания и катушки могут быть навсегда повреждены, если они будут выдерживаться слишком долго.
 
-From the April 2017 firmware onwards, dwell will automatically reduce when the configured duration is longer than the available time at the current RPM. This is common in single channel ignition configurations (Eg 1 coil with a distributor) and in particular on higher cylinder count engines.
+Начиная с апреля 2017 года, выдержка будет автоматически сокращаться, когда настроенная продолжительность больше, чем доступное время при текущей скорости вращения. Это распространено в одноканальных конфигурациях зажигания (катушка с распределителем) и, в частности, в двигателях с более высоким числом цилиндров.
 
-## Settings
+## Настройки
 ![dwell.png](/img/ignition/dwell.png){.align-center width=400}
 
-**Note:** Both the running and cranking dwell times are nominal values, assumed to be at a constant voltage (Usually 12v). Actual dwell time used will depend on the current system voltage with higher voltages having lower dwell times and vice versa. See section below on voltage correction
+**Примечание:** Как время работы, так и время прокрутки времена выдержки являются номинальными значениями, предполагаемыми при постоянном напряжении (обычно 12 В). Используемое фактическое время выдержки будет зависеть от текущего напряжения системы с более высокими напряжениями, имеющими более низкие времена выдержки, и наоборот. См. раздел ниже, посвященный коррекции напряжения
 
-- Cranking dwell - The nominal dwell time that will be used during cranking. Cranking is defined as being whenever the RPM is above 0, but below the 'Cranking RPM' values in the [Cranking](Cranking "wikilink") dialog
-- Running dwell - The nominal dwell that will be used when the engine is running normally.
-- Spark duration - The approximate time the coil takes to fully discharge. This time is used in calculating a reduced dwell when in time limited conditions, such as mentioned above on single coil, high cylinder count engines. The limited dwell time is calculated by taking the maximum revolution time at the given RPM, dividing by the number of spark outputs required per revolution and subtracting the spark duration. Outside of those conditions, this setting is not used.
-- Over dwell protection - The over dwell protection system runs independently of the standard ignition schedules and monitors the time that each ignition output has been active. If the active time exceeds this amount, the output will be ended to prevent damage to coils. This value should typically be at least 3ms higher than the nominal dwell times configured above in order to allow overhead for voltage correction.
+- Cranking dwell - Номинальное время выдержки, которое будет использоваться при прокрутке. Прокрутка определяется как выполняемая при частоте вращения выше 0, но ниже значений "Обороты прокрутки" [Cranking](Cranking "wikilink")
+- Running dwell - Номинальное время выдержки, которая будет использоваться при нормальной работе двигателя.
+- Spark duration - Приблизительное время полного разряда катушки. Это время используется для вычисления уменьшенного времени пребывания в условиях ограниченного времени, таких как упомянутые выше для двигателей с общей катушкой и большим числом цилиндров. Ограниченное время выдержки вычисляется путем взятия максимального времени вращения при заданных оборотах в минуту, деления на количество искровых выходов, требуемых для каждого оборота, и вычитания длительности искры. Вне этих условий этот параметр не используется.
+- Over dwell protection - Система защиты от перегрузки работает независимо от стандартных графиков зажигания и контролирует время, в течение которого каждый выход зажигания был активен. Если активное время превышает это значение, выход будет закончен для предотвращения повреждения катушек. Это значение обычно должно быть, по меньшей мере, на 3 мс выше, чем номинальное время пребывания, сконфигурированное выше, для того, чтобы позволить накладные расходы для коррекции напряжения.
 
-## Voltage correction
-As the system voltage rises and falls, the dwell time needs to reduce and increase respectively. This allows for a consistent spark strength without damaging the coil/s during high system voltage conditions. It is recommended that 12v be used as the 'nominal' voltage, meaning that the Dwell % figure at 12v should be 100%.
+## Коррекция по напряжению Voltage correction
+По мере роста и падения напряжения системы время пребывания должно соответственно уменьшаться и увеличиваться. Это позволяет обеспечить постоянную искровую прочность без повреждения катушки/катушек в условиях высокого напряжения системы. Рекомендуется использовать 12 В в качестве "номинального" напряжения, что означает, что показатель Dwell% при 12 В должен быть 100%.
 
-The correction curve in the base tune file should be suitable for most coils / igniters, but can be altered if required.
+Базовая кривая коррекции должна подходить для большинства катушек/модулей зажигания, но может быть изменена при необходимости.
 
 ![dwell_correction.png](/img/ignition/dwell_correction.png){.align-center width=450}
