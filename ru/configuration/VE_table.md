@@ -1,86 +1,86 @@
 ---
-title: Fuel (VE) table / map
+title: Топливная карта объемной эффективности Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2021-01-02T04:29:36.436Z
+date: 2021-01-02T20:07:00.397Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:29:36.436Z
 ---
 
-# Fuel (VE) table
+# Топливная карта объемной эффективности Fuel (VE) table
 
-The fuel or VE table is the primary method of controlling the amount of fuel that will be injected at each speed/load point. 
+Таблица топлива или VE является основным способом регулирования количества топлива, которое будет впрыскиваться в каждой точке оборотов - горизонтальная ось/ нагрузки -вертикальная ось. 
 
 ![VE Table 1](/img/tuning/ve_table.png){.align-center width=450}
 
-## Configuration
-The fuel map is a 3D, interpolated table that uses RPM and fuel load to lookup the desired VE value. The fuel load axis is determined by whether you are using Speed Density (MAP kPa) or Alpha-N (TPS) for your fuel load (See [Engine_Constants](/en/configuration/Engine_Constants))
+## Конфигурация
+Карта топлива представляет собой 3D интерполированную таблицу, в которой для поиска требуемого значения VE используется частота вращения и топливная нагрузка. Ось топливной нагрузки определяется тем, используется ли Speed Density (MAP kPa) или Alpha-N (TPS) для нагрузки на топливо (See [Engine_Constants](/en/configuration/Engine_Constants))
 
-The values in this table represent a percentage of the `Required Fuel` amount that will be injected when the engine is at a given speed/load point. 
+Значения в этой таблице представляют собой процент от `Required Fuel` количество, которое будет впрыскиваться, когда двигатель находится на заданной скорости/нагрузке. 
 
-### Options
-- **Multiply VE value by MAP ratio:** Enabling this option 'flattens' the fuel table by multiplying the value in the current speed/load point by the MAP value divided by either the Baro value (in kPa) or a fixed 100% (For compatibility with tunes from other systems). 
-  - You can tune with or without this option enabled, but it is generally recommended to be turned on as it will allow for simpler and more predictable tuning results. 
-  - For new tunes it is recommended to use the `Baro` option
+### Варианты
+- **Multiply VE value by MAP ratio:** Включение этой опции "сглаживает" таблицу топлива путем умножения значения в текущей точке скорости/нагрузки на значение MAP, деленное либо на значение Баро (в кПа), либо на фиксированное 100% (для совместимости с настройками других систем). 
+  - Этот параметр можно настроить с включенным параметром или без него, но его обычно рекомендуется включать, так как он позволит получить более простые и предсказуемые результаты настройки. 
+  - Для новых настроек рекомендуется использовать `Baro` вариант
   
-> **Warning:** Changing this value will require retuning of the fuel map!{.is-warning}
+> **Предупреждение:** Изменение этого значения потребует повторного использования топливной карты!{.is-warning}
 
-- **Multiply by ration of AFR to Target AFR:** This option is normally set to `No` for most setups. It allows basic close loop feedback by adjust the base fuel amount according to how far away from the target AFR the engine is currently running. 
-- **Multiply by ration of stoich AFR to target AFR ('Incorporate AFR')**: This option is similar to the one above, but instead of using the current AFR value, the fixed stoich AFR is used. 
+- **Multiply by ration of AFR to Target AFR:** Для большинства установок эта опция обычно имеет значение "Нет". Это позволяет осуществлять базовую обратную связь замкнутого контура путем регулирования количества базового топлива в соответствии с тем, как далеко от целевого AFR работает двигатель. 
+- **Multiply by ration of stoich AFR to target AFR ('Incorporate AFR')**: Эта опция аналогична описанной выше, но вместо использования текущего значения AFR используется фиксированное значение stoich AFR.
 
 
 
-## Secondary Fuel table
+## Вторая топливная карта
 
 ![Secondary Fuel table](/img/tuning/2nd_fuel_table.png){.align-center width=450}
 
-Speeduino also has the ability to use a secondary fuel table which allows for blended and switched mode fueling. There are 2 blended modes and 2 switched modes available.
+Speeduino также имеет возможность использовать вторичный топливный стол, который позволяет смешивать и переключать режим заправки. Доступны 2 режима смешения и 2 режима коммутации.
 
-Blended fuel modes work in conjunction with the primary fuel table to come up with a single, combined VE. Switched fuel modes are where either the primary or secondary fuel table is used, but not both at the same time. Which table is being used at any given time can be configured based on either an external input (Eg dash switch) or set via certain conditions. 
+Смешанные режимы топлива работают совместно с первичным топливным столом для создания единого комбинированного VE. Переключаемые режимы топлива - это то, где используется либо первичный, либо вторичный топливный стол, но не оба одновременно. Таблица, используемая в любой момент времени, может быть сконфигурирована на основе внешнего входа (дефис-переключатель) или установлена с помощью определенных условий. 
 
 
-### Multiplied %
-This is a blended fuel mode (ie it uses both the primary and secondary fuel tables together) that allows for different load and RPM axis to be combined. Commonly this is used for having primary and secondary fuel tables with different load sources (**Eg:** Primary map using TPS and secondary map using manifold pressure). 
+### Умножаемый Multiplied %
+Это смешанный топливный режим (т.е. он использует как первичную, так и вторичную топливные таблицы вместе), который позволяет комбинировать различные нагрузки и оси оборотов. Обычно это используется для таблицы первичного и вторичного топлива с различными источниками нагрузки (* * Eg: * * Первичная карта с использованием TPS и вторичная карта с использованием давления в коллекторе). 
 
-This mode is often used on engines with Individual Throttle Bodies (ITBs) to allow TPS and MAP based tables to be combined.
+Этот режим часто используется на двигателях с индивидуальными дроссельными телами (ITB) для обеспечения возможности объединения таблиц на основе TPS и MAP.
 
-The final fuel value is derived from treating both values (Primary and Secondary) as percentages and multiplying them together. 
+Конечное значение топлива получают, рассматривая оба значения (первичное и вторичное) как проценты и умножая их вместе.
 
-#### Example 1
-* **Primary Fuel table value:** 75
-* **Secondary fuel table value:** 100
-* **Final value:** 75 
+#### Пример 1
+* **Значение первой топливной карты:** 75
+* **Значение второй топливной карты:** 100
+* **Окончательное значение:** 75 
 
-#### Example 2
-* **Primary Fuel table value:** 80
-* **Secondary fuel table value:** 150
-* **Final value:** 120
+#### Пример 2
+* **Значение первой топливной карты:** 80
+* **Значение второй топливной карты:** 150
+* **Окончательное значение:** 120
 
-#### Example 3
-* **Primary Fuel table value:** 90
-* **Secondary fuel table value:** 80
-* **Final value:** 72
+#### Пример 3
+* **Значение первой топливной карты:** 90
+* **Значение второй топливной карты:** 80
+* **Окончательное значение:** 72
 
-### Added
-This is a blended fuel mode that is very similar to the above `Multipled %` mode. The only difference between the two is that instead of multiplying the values from the primary and secondary tables, the 2 are added together. 
+### Слагаемый Added
+Это смешанный топливный режим, который очень похож на вышеуказанный `Multipled %` режим. Единственное различие между ними состоит в том, что вместо умножения значений из первичной и вторичной таблиц 2 складываются вместе. 
 
-This is a less commonly used mode, but is an alternative in the same setups that you would use `Multiplied %`
+Это менее часто используемый режим, но является альтернативой в тех же установках, которые вы бы использовали `Multiplied %`
 
 ### Switched - Conditional
-Conditional switched mode will allow use of the 2nd fuel table when a certain value goes above a defined level. The available switching values are:
+Условный переключаемый режим позволит использовать 2-ю топливную таблицу при достижении определенного значения выше заданного уровня. Доступные значения переключения::
 
-* RPM
-* Ethanol content
+* Обороты RPM
+* Содержание этанола Ethanol content
 * MAP 
 * TPS
 
-Dpending on the desired outcome, this can be used to expand the resolution of the main fuel table, automatically handle alternate fuels or as an alternative ITB mode (Particularly if running boosted ITBs). 
+В зависимости от желаемого результата, это может быть использовано для расширения разрешения основной топливной таблицы, автоматической обработки альтернативных видов топлива или в качестве альтернативного режима ITB (особенно при работе с ускоренными ITB). 
 
 ### Switched - Input based
-Input based switch mode let's you change the fuel table that is in use via an external input to the ECU. The options required are:
+Режим переключения на основе ввода позволяет изменить таблицу топлива, которая используется через внешний вход в ECU. Требуются следующие параметры:
 
-* The (Arduino) pin that the input is connected to
-* The polarity of this input (IE Is the secondary fuel table used with the signal is high or low). For a standard ground switching input, this should be `LOW`
-* Whether to use the internal pullup on this input. For a standard ground switching input, this should be `Yes`
+* (Arduino) контакт, к которому подключен вход
+* Полярность этого входа (IE - таблица вторичного топлива, используемая с сигналом, высокая или низкая). Для стандартного входа переключения на землю это должно быть "LOW";
+* Следует ли использовать внутреннюю пульсацию на этом входе. Для стандартного входа переключения на землю это должно быть "Yes"
 
