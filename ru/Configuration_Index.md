@@ -1,8 +1,8 @@
 ---
-title: Configuration Index
+title: Меню конфигурации и настроек
 description: Listing of all dialog configuration help pages
 published: true
-date: 2021-01-02T04:13:48.000Z
+date: 2021-01-02T07:49:10.057Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:13:48.000Z
