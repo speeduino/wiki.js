@@ -1,40 +1,40 @@
 ---
-title: Launch & Flatshift
+title: Запуск и плоское смещение Launch & Flatshift
 description: 
 published: true
-date: 2021-01-02T04:36:19.868Z
+date: 2021-01-02T19:46:26.413Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:36:19.868Z
 ---
 
-# Launch Control & Flat Shift
+# Контроль запуска и плоского смещения Launch Control & Flat Shift
 
-Speeduino features a 2-step launch control combined with a flat shift feature. These are each dependant on a clutch switch (Usually a ground switching type) being wired in.
+Speeduino имеет двухступенчатое управление запуском в сочетании с функцией плоской смены. Каждый из них зависит от включенного переключателя сцепления (как правило, заземляющего типа).
 
 ## Setup
-Both the 2-step and flatshift modes have hard and soft cut states. When under soft cut, the ignition timing will be altered to reduce the RPM acceleration, though this is generally not sufficient to stop or limit RPM rising. Under hard cut, the ignition signal is stopped completely until the RPMs drop
+Режимы двухэтапного и плоского переключения имеют состояния жесткого и мягкого среза. При мягком срезании синхронизация зажигания будет изменена для уменьшения ускорения оборотов, хотя этого, как правило, недостаточно для остановки или ограничения роста оборотов. При жестком отключении сигнал зажигания полностью останавливается до тех пор, пока обороты не упадут
 
 ![Launch and flat shift settings](/img/tuning/launchFlatS.png){.align-center width=400}
 
 ### Launch
-* **TPS Threshold** - A minimum value for the launch engagement. The limiter will only be engaged above this RPM. Typical values are 1%-3% TPS, depending on how much noise is on your signal
-* **Soft rev limit** - The RPM at which the timing will be adjusted to slow RPM increase
-* **Soft limit absolute timing** - The **absolute** timing that will be used once the soft RPM limit is reached. This overrides all other timing adjustments at this time
-* **Hard rev limit** - The RPM at which the ignition signal will be cut entirely.
-* **Fuel adder during launch** - A percentage modifier to the current pulse width to add extra fuel when launch (soft or hard) is active. This can aid in building boost on turbo setups at launch time
+* **TPS Threshold** - Минимальное значение для запуска. Ограничитель будет включаться только выше этой частоты вращения. Типичные значения: 1% -3% TPS, в зависимости от уровня шума в сигнале
+* **Soft rev limit** - Частота вращения, при которой синхронизация будет отрегулирована для медленного увеличения частоты вращения
+* **Soft limit absolute timing** - **absolute** время, которое будет использоваться после достижения предела мягкой частоты вращения. Это отменяет все остальные настройки синхронизации в данный момент времени
+* **Hard rev limit** - Частота вращения, при которой сигнал зажигания будет полностью отключен.
+* **Fuel adder during launch** - Процентный модификатор текущей длительности импульса для добавления дополнительного топлива при активном запуске (мягком или жестком). Это может помочь в повышении производительности турбоустановок во время запуска
 
 ### Flat shift
-* **Soft rev window** - This is an RPM window below the `Launch / Flat shift switch RPM` point during which an alternative timing will be applied. Typical values are 100 to 1000rpm. 
-* **Soft limit absolute timing** - The abosloute timing that will be used when in the flat shift soft RPM window
+* **Soft rev window** - Это окно RPM под точкой "Launch/Flat shift switch RPM", в течение которой будет применено альтернативное время. Типичные значения от 100 до 1000 об/мин.
+* **Soft limit absolute timing** - Синхронизация abosloute, которая будет использоваться в мягком окне RPM плоской смены
 
 ### Clutch settings
-Both launch and flat shift require a clutch input in order to activate. This is generally a ground active type switch attached behind the clutch pedal.
+И запуск, и плоский сдвиг требуют ввода сцепления для включения. Обычно это заземляющий переключатель активного типа, закрепленный за педалью сцепления.
 
-* **Clutch input pin** - The Arduino pin that the switch is wired to. Most setups should leave this as the Board Default
-* **Clutch enabled when switch is** - The polarity of the clutch input. Typically this should be set to `LOW` for a switch that connects to ground when activated 
-* **Clutch pullup resistor** - Whether the internal pullup will be enabled on this input. Typicall this should be set to `Pullup` if you have selected `LOW` for the above setting
-* **Launch / Flat shift switch RPM** - The ECU will use the RPM point the clutch is engaged at to determine whether it is in launch mode or flatshift. If the clutch is pressed above this RPM value, it will be assumed to be a flat shift, below it will be considered a launch
+* **Clutch input pin** - Контакт Arduino, к которому подключен коммутатор. Большинство установок должны оставить это значение в качестве значения по умолчанию для платы
+* **Clutch enabled when switch is** - Полярность входа муфты. Обычно для коммутатора, подключенного к заземлению при активации, должно быть установлено значение "LOW".
+* **Clutch pullup resistor** - Будет ли включена внутренняя пульсация на этом входе. Typicall это должно быть установлено в "Pullup", если вы выбрали "LOW" для вышеуказанной настройки
+* **Launch / Flat shift switch RPM** - ECU использует точку RPM, в которой находится муфта, для определения того, находится ли она в режиме запуска или в режиме плоской передачи. Если муфта нажата выше этого значения оборотов, то предполагается плоское смещение, ниже оно будет считаться запуском
 
-> The engagement point of the clutch switch can make a significant difference in the applcation of launch control. The switch should trigger as close to the clutches take up point as possible for the fastest response. 
+> Точка зацепления переключателя сцепления может существенно изменить применение управления запуском. Переключатель должен сработать как можно ближе к сцеплениям и занять максимально возможную точку для наиболее быстрого отклика.
 {.is-success}
