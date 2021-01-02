@@ -1,8 +1,8 @@
 ---
-title: Подключение форсунок
+title: Схема подключения форсунок
 description: Wiring description and diagrams for fuel injectors
 published: true
-date: 2021-01-01T19:21:54.018Z
+date: 2021-01-02T03:15:54.689Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T19:20:55.103Z
