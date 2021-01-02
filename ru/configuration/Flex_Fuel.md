@@ -1,48 +1,48 @@
 ---
-title: Flex Fuel
+title: Гибкое топливо Flex Fuel
 description: Setting up the flex fuel / ethanol content sensor
 published: true
-date: 2021-01-02T04:27:27.299Z
+date: 2021-01-02T19:38:05.948Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:27:27.299Z
 ---
 
-# Flex Fuel
+# Гибкое топливо Flex Fuel
 
-## Overview
+## Обзор
 
-Speeduino has the ability to modify fuel and ignition settings based on the ethanol content of the fuel being used, a practice typically known as flex fuelling. A flex fuel sensor is installed in the feed or return fuel lines and a signal wire is used as an input on the Speeduino board.
+Speeduino обладает способностью изменять параметры топлива и зажигания на основе содержания этанола в используемом топливе, что обычно известно как гибкое топливо. Датчик этанола устанавливается в линии подачи или возврата топлива, а сигнальный провод используется в качестве входного сигнала на плате Speeduino.
 
-As ethanol is less energy dense, but also has a higher equivalent octane rating, adjustments to the fuel load and ignition timing are required.
+Поскольку этанол является менее плотным по энергии, но также имеет более высокий эквивалентный октановый показатель, требуются регулировки топливной нагрузки и опережения зажигания.
 
-## Hardware
+## Аппаратное обеспечение Hardware
 
-Speeduino uses any of the standard GM/Continental Flex fuel sensors that are widely available and were used across a wide range of vehicles. These were available in 3 different units, all of which are functionally identical, with the main difference being only the physical size and connector. The part numbers for these are:
+Speeduino использует любой из стандартных топливных датчиков GM/Continental Flex, которые широко доступны и использовались в широком диапазоне транспортных средств. Они были доступны в 3 различных единицах, все из которых функционально идентичны, при этом основным отличием были только физический размер и разъем. Номера деталей для них:
 
--   Small - \#13577429
--   Mid-size - \#13577379
--   Wide - \#13577394 (Same as the mid-size one, but with longer pipes)
+-   Маленький - \#13577429
+-   Среднего размера - \#13577379
+-   Широкий - \#13577394 (Тот же, что и среднеразмерный, но с более длинными трубами)
 
-All 3 use a variant of the Delphi GT150 series connector. You can use a generic GT150 connector, but you will have to clip off 2 tabs from the side of the sensor.
+Все 3 используют вариант разъема серии Delphi GT150. Можно использовать общий соединитель GT150, но придется отцепить 2 вкладки со стороны датчика.
 
 Part numbers :
 
--   Housing (\#13519047)
--   Pins (\#15326427)
--   Seal (\#15366021)
+-   Корпус (\#13519047)
+-   Контакты (\#15326427)
+-   Уплотнение (\#15366021)
 
-Alternatively, there is a GM part for a harness connector, part number 13352241: <http://www.gmpartsdirect.com/oe-gm/13352241>
+Кроме того, имеется GM-деталь для соединителя электрического жгута, номер детали 13352241: <http://www.gmpartsdirect.com/oe-gm/13352241>
 
-### Wiring
+### Схема Wiring
 
 All units are wired identically and have markings on the housing indicating what each pin is for (12v, ground and signal) Speeduino boards v0.3.5+ and v0.4.3+ have an input location on their proto areas that the signal wire can be directly connected to.
 
-On boards earlier to these, you will need to add a pullup resistor of between 2k and 3.5k Ohm. Recommended value is 3.3k, however any resistor in this range will work. Note that this is a relatively strict range, more generic values such as 1k or 10k DO NOT WORK with these sensors.
+Все блоки подключены идентично и имеют маркировку на корпусе, указывающую на то, что каждый вывод предназначен для плат Speeduino v0.3.5 + и v0.4.3 + (12 В, земля и сигнал), а также на место входа, к которому можно непосредственно подключить сигнальный провод.
 
-## Tuning
+## Настройка
 ![flex_settings.png](/img/flex/flex_settings.png){.align-center width=450}
 
--   **Sensor frequency -** The minimum and maximum frequency of the sensor that represent 0% and 100% ethanol respectively. For standard GM/Continental flex sensors, these values are 50 and 150
--   **Fuel multiplier% -** This is the additional fuel that should be added as ethanol content increases. The Low value on the left represents the adjustment to the fuel map at 0% ethanol and will typically be 100% if the base tune was performed with E0 fuel. If the base tune was made with E10 or E15 however, this value can be adjusted below 100%. The high value represents the fuel multiplier at 100% ethanol (E100) and the default value of 163% is based on the theoretical difference in energy density between E0 and E100. Tuning of this value may be required
--   **Additional advance -** The additional degrees of advance that will be applied as ethanol content increases. This amount increases linearly between the low and high values and is added after all other ignition modifiers have been applied.
+-   **Sensor frequency -** Минимальная и максимальная частота датчика, представляющие 0% и 100% этанола соответственно. Для стандартных гибких датчиков GM/Continental эти значения составляют 50 и 150
+-   **Fuel multiplier% -** Это дополнительное топливо, которое должно добавляться по мере увеличения содержания этанола. Низкое значение слева представляет корректировку на карту топлива при 0% этанола и обычно составляет 100%, если базовая настройка выполнялась с E0 топливом. Если базовая мелодия была выполнена с E10 или E15 однако, это значение может быть отрегулировано ниже 100%. Высокое значение представляет множитель топлива при 100% этанола (E100), а значение по умолчанию 163% основано на теоретической разнице в плотности энергии между E0 и E100. Может потребоваться настройка этого значения
+-   **Additional advance -** Дополнительные углы опережения, которые будут применяться по мере увеличения содержания этанола. Это количество линейно увеличивается между низким и высоким значениями и добавляется после применения всех других модификаторов зажигания.
