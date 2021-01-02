@@ -2,14 +2,14 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-01-02T07:10:43.264Z
+date: 2021-01-02T11:26:15.669Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:10:43.264Z
 ---
 
-# Dropbear ECU
-The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to a full production release. It is powered by the high speed Teensy 3.5 board and is designed to be a complete unit out of the box. 
+# Dropbear ЭБУ
+Dropbear представляет собой ЭБУ с 8 каналами впрыска и 8 каналами зажигания. Использует высокоскоростную плату Teensy 3.5 и представляет собой готовое устройство в корпусе. 
 
 ## Features
 
