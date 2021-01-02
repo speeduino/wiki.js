@@ -1,97 +1,97 @@
 ---
-title: Errors
+title: Ошибки
 description: 
 published: true
-date: 2021-01-02T04:28:36.433Z
+date: 2021-01-02T19:29:16.982Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:28:36.433Z
 ---
 
-Overview
+Обзор
 --------
 
-From the July 2016 firmware onwards there is an error handling system that provides feedback and 'limp home' type options in case an issue is detected. The system can manage up to 4 errors at any given time.
+Начиная с июля 2016 года, существует система обработки ошибок, которая предоставляет обратную связь и опции типа "limp home" в случае обнаружения проблемы. Система может управлять до 4 ошибками в любой момент времени.
 
-Viewing Errors
+Просмотр Ошибок
 --------------
 
-When an error is detected, the Error indicator within TunerStudio will activate
+При обнаружении ошибки активируется индикатор ошибки в TunerStudio
 
 TBA
 
-### Using Default Values
+### Используя значения по умолчанию Using Default Values
 
 TBA
 
-Error Numbers
+Номера ошибок
 -------------
 
-| Error Number | Default Value | Description                                                                                                           |
+| Номер ошибки | Значение по умолчанию | Описание                                                                                                           |
 |--------------|---------------|-----------------------------------------------------------------------------------------------------------------------|
-| 0            | N/A           | No errors                                                                                                             |
-| 1            | N/A           | Unknown error. This should typically not occur, but indicates that an error was detected, but could not be identified |
-| 2            | 40C           | Inlet Air Temperature (IAT) sensor is shorted to 5v                                                                   |
-| 3            | 40C           | Inlet Air Temperature (IAT) sensor is shorted to ground                                                               |
-| 4            | 40C           | Coolant (CLT) sensor is shorted to 5v                                                                                 |
-| 5            | 40C           | Coolant (CLT) sensor is shorted to ground                                                                             |
-| 6            | 14.7          | O2 sensor is shorted to 5v                                                                                            |
-| 7            | 14.7          | O2 sensor is shorted to ground                                                                                        |
-| 8            | 50%           | Throttle Position Sensor (TPS) is shorted to 5v                                                                       |
-| 9            | 50%           | Throttle Position Sensor (TPS) is shorted to ground                                                                   |
-| 10           | 13v           | Battery input above 20v                                                                                               |
-| 11           | 13v           | Battery input below 5v                                                                                                |
-| 12           | 240kPa        | MAP sensor shorted to 5v                                                                                              |
-| 13           | 80kPa         | MAP Sensor shorted to ground                                                                                          |
-| 14           |               | Not currently in use                                                                                                  |
-| 15           |               | Not currently in use                                                                                                  |
-| 16           |               | Not currently in use                                                                                                  |
-| 17           |               | Not currently in use                                                                                                  |
-| 18           |               | Not currently in use                                                                                                  |
-| 19           |               | Not currently in use                                                                                                  |
-| 20           |               | Not currently in use                                                                                                  |
-| 21           |               | Not currently in use                                                                                                  |
-| 22           |               | Not currently in use                                                                                                  |
-| 23           |               | Not currently in use                                                                                                  |
-| 24           |               | Not currently in use                                                                                                  |
-| 25           |               | Not currently in use                                                                                                  |
-| 26           |               | Not currently in use                                                                                                  |
-| 27           |               | Not currently in use                                                                                                  |
-| 28           |               | Not currently in use                                                                                                  |
-| 29           |               | Not currently in use                                                                                                  |
-| 30           |               | Not currently in use                                                                                                  |
-| 31           |               | Not currently in use                                                                                                  |
-| 32           |               | Not currently in use                                                                                                  |
-| 33           |               | Not currently in use                                                                                                  |
-| 34           |               | Not currently in use                                                                                                  |
-| 35           |               | Not currently in use                                                                                                  |
-| 36           |               | Not currently in use                                                                                                  |
-| 37           |               | Not currently in use                                                                                                  |
-| 38           |               | Not currently in use                                                                                                  |
-| 39           |               | Not currently in use                                                                                                  |
-| 40           |               | Not currently in use                                                                                                  |
-| 41           |               | Not currently in use                                                                                                  |
-| 42           |               | Not currently in use                                                                                                  |
-| 43           |               | Not currently in use                                                                                                  |
-| 44           |               | Not currently in use                                                                                                  |
-| 45           |               | Not currently in use                                                                                                  |
-| 46           |               | Not currently in use                                                                                                  |
-| 47           |               | Not currently in use                                                                                                  |
-| 48           |               | Not currently in use                                                                                                  |
-| 49           |               | Not currently in use                                                                                                  |
-| 50           |               | Not currently in use                                                                                                  |
-| 51           |               | Not currently in use                                                                                                  |
-| 52           |               | Not currently in use                                                                                                  |
-| 53           |               | Not currently in use                                                                                                  |
-| 54           |               | Not currently in use                                                                                                  |
-| 55           |               | Not currently in use                                                                                                  |
-| 56           |               | Not currently in use                                                                                                  |
-| 57           |               | Not currently in use                                                                                                  |
-| 58           |               | Not currently in use                                                                                                  |
-| 59           |               | Not currently in use                                                                                                  |
-| 60           |               | Not currently in use                                                                                                  |
-| 61           |               | Not currently in use                                                                                                  |
-| 62           |               | Not currently in use                                                                                                  |
-| 63           |               | Not currently in use                                                                                                  |
+| 0            | N/A           | Нет ошибок                                                                                                             |
+| 1            | N/A           | Неизвестная ошибка. Обычно это не происходит, обнаружена ошибка которая не может быть идентифицирована |
+| 2            | 40C           | Датчик температуры воздуха на входе (IAT) закорочен на 5В                                                                   |
+| 3            | 40C           | Датчик температуры воздуха на входе (IAT) закорочен на землю                                                               |
+| 4            | 40C           | Датчик температуры охлаждающей жидкости (CLT) закорочен на 5В                                                                                 |
+| 5            | 40C           | Датчик температуры охлаждающей жидкости (CLT) закорочен на землю                                                                             |
+| 6            | 14.7          | Датчик кислорода закорочен на 5В                                                                                            |
+| 7            | 14.7          | Датчик кислорода закорочен на землю                                                                                        |
+| 8            | 50%           | ДПДЗ (TPS) закорочен на 5В                                                                       |
+| 9            | 50%           | ДПДЗ (TPS) закорочен на землю                                                                   |
+| 10           | 13v           | Напряжение батареи выше 20В                                                                                               |
+| 11           | 13v           | Напряжение батареи ниже 5В                                                                                                |
+| 12           | 240kPa        | MAP закорочен на 5В                                                                                              |
+| 13           | 80kPa         | MAP закорочен на землю                                                                                          |
+| 14           |               | Пока не используется                                                                                                  |
+| 15           |               | Пока не используется                                                                                                  |
+| 16           |               | Пока не используется                                                                                                  |
+| 17           |               | Пока не используется                                                                                                  |
+| 18           |               | Пока не используется                                                                                                  |
+| 19           |               | Пока не используется                                                                                                  |
+| 20           |               | Пока не используется                                                                                                  |
+| 21           |               | Пока не используется                                                                                                  |
+| 22           |               | Пока не используется                                                                                                  |
+| 23           |               | Пока не используется                                                                                                  |
+| 24           |               | Пока не используется                                                                                                  |
+| 25           |               | Пока не используется                                                                                                  |
+| 26           |               | Пока не используется                                                                                                  |
+| 27           |               | Пока не используется                                                                                                  |
+| 28           |               | Пока не используется                                                                                                  |
+| 29           |               | Пока не используется                                                                                                  |
+| 30           |               | Пока не используется                                                                                                  |
+| 31           |               | Пока не используется                                                                                                  |
+| 32           |               | Пока не используется                                                                                                  |
+| 33           |               | Пока не используется                                                                                                  |
+| 34           |               | Пока не используется                                                                                                  |
+| 35           |               | Пока не используется                                                                                                  |
+| 36           |               | Пока не используется                                                                                                  |
+| 37           |               | Пока не используется                                                                                                  |
+| 38           |               | Пока не используется                                                                                                  |
+| 39           |               | Пока не используется                                                                                                  |
+| 40           |               | Пока не используется                                                                                                  |
+| 41           |               | Пока не используется                                                                                                  |
+| 42           |               | Пока не используется                                                                                                  |
+| 43           |               | Пока не используется                                                                                                  |
+| 44           |               | Пока не используется                                                                                                  |
+| 45           |               | Пока не используется                                                                                                  |
+| 46           |               | Пока не используется                                                                                                  |
+| 47           |               | Пока не используется                                                                                                  |
+| 48           |               | Пока не используется                                                                                                  |
+| 49           |               | Пока не используется                                                                                                  |
+| 50           |               | Пока не используется                                                                                                  |
+| 51           |               | Пока не используется                                                                                                  |
+| 52           |               | Пока не используется                                                                                                  |
+| 53           |               | Пока не используется                                                                                                  |
+| 54           |               | Пока не используется                                                                                                  |
+| 55           |               | Пока не используется                                                                                                  |
+| 56           |               | Пока не используется                                                                                                  |
+| 57           |               | Пока не используется                                                                                                  |
+| 58           |               | Пока не используется                                                                                                  |
+| 59           |               | Пока не используется                                                                                                  |
+| 60           |               | Пока не используется                                                                                                  |
+| 61           |               | Пока не используется                                                                                                  |
+| 62           |               | Пока не используется                                                                                                  |
+| 63           |               | Пока не используется                                                                                                  |
 |              |               |                                                                                                                       |
 
