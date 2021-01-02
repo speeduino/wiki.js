@@ -2,53 +2,50 @@
 title: Engine Constants
 description: 
 published: true
-date: 2021-01-02T04:25:38.753Z
+date: 2021-01-02T11:06:52.644Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:25:38.753Z
 ---
 
-# Engine Constants
-## Overview
+# Постоянные Мотора (Constants)
+## Обзор
 
-From the Settings menu, select Constants
+Из меню Settings, выберите Constants
 
 ![TS_8.png](/img/TunerStudio/TS_8.png){.align-center width=300}
 
-Here you need to setup the engine constants. Fill out the fields in the bottom section before calculating the Required Fuel.
+Здесь необходимо настроить постоянные двигателя. Заполните поля в нижней части перед вычислением требуемого количества топлива (Required Fuel).
 
-## Configuration
+## Конфигурация (Configuration)
 
 ![engine.png](/img/constants/engine.png){.align-center width=400}
 
-### Required Fuel Calculator
-The required fuel calculator determines the theoretical fuel injection time that would be required at 100% VE. This is determined by knowing the engine capacity, the size and number of the fuel injectors and the number of squirts that will be performed in each cycle. Increasing this figure will lead to an overall increase in the amount of fuel that is injected **at all points** of the VE map (And vice versa).
+### Калькулятор необходимого количества топлива (Required Fuel Calculator)
+Требуемый калькулятор топлива определяет теоретическое время впрыска топлива, которое требуется при 100% заполнении (объемной эффективности VE). Это определяется знанием объема двигателя, размера и количества топливных форсунок и количества впрысков, которые будут выполняться в каждом цикле. Увеличение этого показателя приведет к общему увеличению количества топлива, которое впрыскивается **во всех точках** карты VE (И наоборот).
 
-> You should set all the values in the `Settings` section below before performing the `Required Fuel` calculation
-{.is-info}
+> Необходимо установить все значения в `Settings` разделе перед выполнением расчета потребного количества топлива `Required Fuel`{.is-info}
 
 
-### Settings
-- **Control Algorithm:** The load source that will be used for the fuel table
-- **Squirts per Engine Cycle:** How many squirts will be performed over the duration of the engine cycle (Eg 720 degrees for a 4 stroke). most engines will not require values greater than 4. For sequential installations, this should be set to 2 with the injector staging set to 'Alternating'(Internally Speeduino will adjust the squirts to 1)
-  - Note that for 3 and 5 squirts, you must have a cam signal in addition to the crank.
-- **Injector Staging:** This configures the timing strategy used for the injectors
-  - **Alternating** (Recommended for most installs) - Injectors are timed around each cylinders TDC. The exact closing angle can be specific in the Injector Characteristics dialog.
-  - **Simultaneous** - All injectors are fired together, based on the TDC of cylinder 1.
-- **Engine stroke:** Whether the engine is 2 stroke or 4 stroke
-- **Number of cylinders:** Number of cylinders in the engine. For rotary engines, select 4.
-- **Injector Port Type:** Option isn't used by firmware. Selection currently does not matter
-- **Number of injectors:** Usually the same as number of cylinders (For port injection)
-- **Engine Type:** Whether the crank angle between firings is the same for all cylinders. If using an Odd fire engine (Eg Some V-Twins and Buick V6s), the angle for each output channel must be specific.
-- **Injector Layout:** Specifies how the injectors are wired in
-  - **Paired:** 2 injectors are wired to each channel. The number of channels used is therefore equal to half the number of cylinders.
-  - **Semi-Sequential:** Semi-sequential: Same as paired except that injector channels are mirrored (1&4, 2&3) meaning the number of outputs used are equal to the number of cylinders. Only valid for 4 cylinders or less.
-  - **Sequential**: 1 injector per output and outputs used equals the number of cylinders. Injection is timed over full cycle. Only available for engines with 4 or fewer cylinders.
-- **Board Layout:** Specifies the input/output pin layout based on which Speeduino board you're using. For specific details of these pin mappings, see the utils.ino file
-- **MAP Sample Method:** How the MAP sensor readings will be processed:
-  - **Instantaneous:** Every reading is used as it is taken. Makes for a highly fluctuating signal, but can be useful for testing
-  - **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is of Event average are the recommended options for 4 of more cylinders
-  - **Cycle Minimum:** The lowest value detected across 720 degrees is used. This is the recommended method for less than 4 cylinders or ITBs
-  - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. Generally offers faster response with a similar level of accuracy. 
-    
-The Oddfire angles should only be used on oddfire engines (Primarily some specifica V6s)
+### Параметры Настройки (Settings)
+- **Control  algoritm - Топливный алгоритм:** Источник нагрузки, который будет использоваться для топливной таблицы
+- **Squirts per Engine Cycle:** Как много впрысков на цикл двигателя (720 градусов для 4тактного). Большинству двигателей не нужны значения более 4. Для последовательного впрыска значение должно быть равно 2, а установка "Alternating" 1
+  - Обратите внимание, что для 3 и 5 впрысков, вы должны иметь сигнал от распредвала в дополнение к сигналу коленвала.
+- **Injector Staging:** Это настраивает стратегию синхронизации, используемую для инжекторов.
+  - **Alternating** (Рекомендуется в большинстве случаев) - Инжекторы синхронизированы для ВМТ каждого цилиндра. Точный угол закрытия может быть определен в диалоговом окне "Injector Characteristics".
+  - **Simultaneous** - Все инжекторы прыскают вместе на основе ВМТ цилиндра 1.
+- **Engine stroke:** Двигатель 2 или 4 тактный
+- **Number of cylinders:** Число цилиндров. Для ванкеля выберите 4.
+- **Injector Port Type:** В настоящее время не поддерживается. Выбор ничего не изменяет
+- **Number of injectors:** Количество инжекторов. Обычно равно числу цилиндров
+- **Engine Type:** Тип двигателя. Для некоторых V-двигателей должна быть дополнительная настройка.
+- **Injector Layout:** Размещение форсунок
+  - **Paired:** Парные - по 2 форсунки на канал. Число используемых каналов равно половине числа цилиндров.
+  - **Semi-Sequential:** Полупоследовательные: То же что и для парных но инжекторные каналы зазеркалены (1&4, 2&3) означая что число цилиндров равно числу каналов. Только для 4 или менее цилиндров.
+  - **Sequential**: Последовательный - по 1 форсунке на канал выхода инжектора. Число каналов равно числу форсунок. Впрыск синхронизируется по всем цилиндрам. Только для 4 или менее цилиндров.
+- **Board Layout:** Определяет компоновку контактов ввода/вывода на основе используемой платы Speeduino. Для получения подробной информации об этих сопоставлениях контактов см. файл utils.ino
+- **MAP Sample Method:** Как будут обрабатываться показания датчика MAP:
+  - **Instantaneous:** мгновенный - как есть. Создает сигнал с высокой неравномерностью, но может быть полезным для тестирования
+  - **Cycle Average:** - среднее по циклу. Используется среднее значение датчика для 720 градусов поворота кривошипа. Это среднее значение рекомендуется для 4 и большего количества цилиндров
+  - **Cycle Minimum:** - наименьшее по циклу. Используется наименьшее значение, обнаруженное для 720 градусов. Это рекомендуемый метод для менее чем 4 цилиндров или множестве дроссельных заслонок.
+  - **Event Average:** Аналогично Cycle Average, однако выполняет усреднение один раз за цикл зажигания, а не один раз за цикл. Обычно предлагает более быстрый отклик с аналогичным уровнем точности.
