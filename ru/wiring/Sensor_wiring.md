@@ -1,19 +1,18 @@
 ---
-title: Analog sensor wiring
+title: Схема подключения аналоговых датчиков
 description: 
 published: true
-date: 2021-01-01T19:27:38.250Z
+date: 2021-01-02T03:15:10.869Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T19:27:38.250Z
 ---
 
-# Analog Sensor Wiring
-Analog sensors provide data such as temperatures, throttle position and O2 readings to the ECU. The diagram below shows the typical wiring for these sensors. 
-
+# Подключение аналоговых датчиков
+Аналоговые датчики служат для передачи ряда необходимых для работы ЭБУ данных, таких как температура, положение дроссельной заслонки и показания датчика кислорода. На приведенной ниже схеме показана типовая схема подключения этих датчиков.
 ![analog_sensors.png](/img/wiring/analog_sensors.png){.align-center width=500}
 
-### Notes
-* Use of 2 wire temperature sensors is **highly** recommended. Whilst 1 wire sensors will work, they are almost always considerably less accurate. Running a dedicated ground wire back to the ECU from the sensor is also recomended.
-* The external MAP sensor in the above diagram is optional and may be omitted if the onboard MAP is used. Alternatively an external Baro sensor may be added in the same was as an external MAP
-* A 3 wire variable TPS is required. On/Off type throttle switches are not suitable
+### Примечания
+* Настоятельно рекомендуется использовать **двухпроводных** датчиков температуры . Однопроводные датчики будет работать, но они почти всегда значительно менее точны. Также рекомендуется использовать отдельный провод заземления для ЭБУ от датчиков.
+* Внешний датчик давления во впускном тракте (MAP) на вышеприведенной схеме является необязательным и может быть убран, если используется встроенный на плате MAP.
+* Требуется 3 проводный датчик переменного сопротивления для определения углового положения дроссельной заслонки TPS). Датчикм типа Включен/Выключен не подходят. 
