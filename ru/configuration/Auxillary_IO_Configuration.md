@@ -1,8 +1,8 @@
 ---
-title: Auxillary IO Configuration
+title: Конфигурация вспомогательных вводов-выводов
 description: 
 published: true
-date: 2021-01-02T18:36:00.396Z
+date: 2021-01-02T18:36:33.907Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:21:13.651Z
