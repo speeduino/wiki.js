@@ -1,8 +1,8 @@
 ---
-title: Время выдержки Dwell
+title: Время выдержки катушек Dwell
 description: 
 published: true
-date: 2021-01-02T19:12:00.346Z
+date: 2021-01-02T19:12:16.582Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:24:31.931Z
