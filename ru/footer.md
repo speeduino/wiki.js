@@ -1,8 +1,8 @@
 ---
-title: Лицензия Speeduino
+title: Лицензия данного руководства Speeduino
 description: 
 published: true
-date: 2021-01-02T08:02:16.678Z
+date: 2021-01-02T20:09:56.891Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T08:02:16.678Z
