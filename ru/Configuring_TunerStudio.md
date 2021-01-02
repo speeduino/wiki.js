@@ -1,8 +1,8 @@
 ---
-title: Настройка проекта в TunerStudio
+title: Настройка опций проекта в TunerStudio
 description: 
 published: true
-date: 2021-01-02T10:27:42.268Z
+date: 2021-01-02T10:28:01.876Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:48:10.428Z
