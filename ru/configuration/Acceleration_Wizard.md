@@ -1,8 +1,8 @@
 ---
-title: Acceleration Wizard
+title: Настройка ускорения
 description: Tuning the acceleration enrichment
 published: true
-date: 2021-01-02T18:32:23.995Z
+date: 2021-01-02T18:38:06.017Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:18:44.187Z
