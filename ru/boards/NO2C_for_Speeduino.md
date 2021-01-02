@@ -2,102 +2,88 @@
 title: NO2C_for_Speeduino
 description: 
 published: true
-date: 2021-01-02T07:14:19.455Z
+date: 2021-01-02T14:07:34.199Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:14:19.455Z
 ---
 
-The No Overhang Two Channel boards made for Speeduino share the features below
+Двухканальные платы для Speeduino, имеют следующие характеристики:
 ------------------------------------------------------------------------------
 
--   Arduino MEGA 2560 shield board
--   Same size as the Arduino
--   2 injector output channels
--   2 coil output channels
--   Dedicated tachometer output
--   4 medium/high current outputs (idle, boost, VVT, fuel pump, fan, etc)
--   IAT, CLT, TPS, and O2 inputs (protected)
--   On-board MAP sensor
--   Stepper idle control through board mounted DRV8825 accessory PCB
--   VR conditioning through board mounted VR conditioner accessory PCB
+-   Силовая плата для Arduino MEGA 2560 
+-   Размер Arduino
+-   2 канала инжекторов
+-   2 канала зажигания
+-   Выделенный вывод тахометра
+-   4 выходы средней/большой силы тока (холостой ход,VVT, топливный насос, вентилятор и т.д.)
+-   защищенные входа IAT, CLT, TPS, O2
+-   Датчик давления воздуха на плате
+-   Управление шаговым мотором холостого хода с помощью встроенной платы DRV8825
+-   VR кондиционер сигнала на плате
 
-Like the official Speeduino boards, the NO2C requires igniter driven coils and a conditioner for crank/cam signals that aren't 5v square-wave. The board is designed to accept the official Speeduino conditioner board for signals that do not meet the requirements.
+Как и официальные платы Speeduino, NO2C требует катушек с приводом от модуля зажигания и кондиционера для сигналов коленвала/распредвала, которые не являются 5В сигналом прямоугольной формы.
 
 NO2C v0.1.x
 -----------
 
-Uses the AMP MTA-100 or Molex KK100/KK254 connector system and through hole components
-
-### v0.1.0
-
--   Had flaws which caused the Arduino USB connector to interfere with the boards solder pads
--   lacked tachometer output
--   was never released
+Использует разъемы AMP MTA-100 или Molex KK100/KK254 и компоненты для сквозных отверстий
 
 ### v0.1.1
 
--   corrected the issue mentioned above
--   added tachometer output
+-   первая работоспособная плата
 
 NO2C v0.2.x
 -----------
 
-Uses the Molex Micro-Fit 3.0 connector system and through hole components. The Micro-Fit connector is used as a computer power connector and there are several manufacturers, it's known generically as 3mm connector.
+Использует систему разъемов Molex Micro-Fit 3.0 и компоненты сквозных отверстий. Разъем Micro-Fit используется в качестве разъема питания компьютера, и есть несколько производителей, он известен как 3мм разъем.
 
-For some tips that will help make the assembly of your board a success: **[v0.2.x Assembly Tips](v0.2.x_Assembly_Tips "wikilink")**
+Советы по сборке платы: **[v0.2.x Assembly Tips](v0.2.x_Assembly_Tips "wikilink")**
 
 ### v0.2.0
 
--   Added pass through pinholes around the edge for daughter board expansion
--   Increased size of resistor footprints making it easier to find usable resistors and/or use precision resistors for all voltage dividers
--   Increased pitch of 1uf caps (see above)
--   Added launch control input
+-   Добавлен проход через точечные отверстия вокруг края для расширения дочерней платы
+-   Увеличенный размер следов резисторов упрощает поиск пригодных резисторов и/или использование прецизионных резисторов для всех делителей напряжения
+-   Увеличенный размер конденсаторов 1uf (см. выше)
+-   Добавлен вход управления запуском
 
 ### v0.2.1
 
--   Improved silk screen
--   All MOSFET outputs (injector and auxiliary) have the same gate connection to the Arduino MEGA
--   VR signals are routed straight into the conditioner
--   MAP sensor location accepts either though-hole or SMD part
--   Other routing and placement adjustments (R10 and R11 are flipped)
+-   Улучшенна шелкография
+-   Все выходы MOSFET (инжектор и вспомогательный) имеют одинаковое соединение с Arduino MEGA
+-   VR сигналы направляются прямо в кондиционер
+-   MAP датчик может быть крупным или SMD
+-   Другие корректировки трассировки и размещения
 
 ### v0.2.2
 
--   Moved C20 from the edge of the board, it has always bothered me there
--   Added Serial0/Bluetooth header
--   Other routing and placement adjustments
+-   Переехал C20 от края доски, это всегда беспокоило меня
+-   Добавлен Serial0/Bluetooth
+-   Другие корректировки трассировки и размещения
 
 ### vC1
 
--   Traditional reset protection removed in favor of a jumper and resistor to hold the reset pin high
--   Routing and placement adjustments
--   Version style changed to bring inline with other projects and due to required BOM change compared to v0.2.x
+-   Традиционная защита от сброса, снятая в пользу перемычки и резистора для удержания контакта сброса на высоком уровне
+-   Корректировки трассировки и размещения
+-   Стиль версии изменен для приведения в соответствие с другими проектами и из-за требуемого изменения спецификации по сравнению с v0.2.x
 
 NO2C DB
 -------
 
-A daughter board that stacks on top of the NO2C v0.2.x and vCx boards to add the features below. The daughter boards are hybrid surface mount/through hole, see features below for which parts are through hole.
+Дочерняя плата, которая располагается поверх плат NO2C v0.2.x и vCx для добавления перечисленных ниже функций. Дочерние платы представляют собой гибридное поверхностное/сквозное отверстие. См. ниже описание элементов, являющихся сквозным отверстием.
 
-### DB1 (Scraped)
+### DB1 (заменена DB2)
 
-Makes it easy to add additional general outputs, and can be populated to add all the features below.
-
--   4 low current outputs (through hole)
--   2 general digital inputs (protected)
--   1 analog input (protected)
--   Flex-fuel input (protected)
--   Barometric pressure sensor (provides constant correction vs power on base)
 
 ### DB2
 
-Makes it easy to add additional coil outputs, and can be populated to add all the features below.
+Упрощает добавление дополнительных выходов катушек и может быть заполнено для добавления всех перечисленных ниже функций.
 
--   2 additional coil output channels (through hole)
--   4 low current outputs
--   2 general digital inputs (protected)
--   1 analog input (protected)
--   Flex-fuel input (protected)
--   Barometric pressure sensor (provides constant correction vs power on base)
+-   2 дополнительных канала зажигания (сквозь отверстия)
+-   4 слаботочных вывода
+-   2 цифровых защищенных входа общего назначения
+-   1 аналоговый защищенный вход
+-   Flex-fuel - гибкое топливо защищенный вход
+-   Барометричнский сенсор (для постоянной коррекции)
 
-With the low current outputs you could reconfigure two of the medium/high current outputs on the NO2C to act as injector drivers. To do this you will have to make minor changes to the firmware before programming the Arduino.
+С помощью выходов низкого тока можно изменить конфигурацию двух выходов среднего/высокого тока на NO2C, чтобы они работали в качестве драйверов инжектора. Для этого необходимо внести незначительные изменения в программу для Arduino.
