@@ -1,61 +1,67 @@
 ---
-title: Tuning
+title: Настройка Tuning
 description: 
 published: true
-date: 2021-01-02T07:27:32.418Z
+date: 2021-01-03T10:01:21.715Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:27:32.418Z
 ---
 
-Fuel, Ignition, and AFR Tables
+Таблицы топлива, Зажигания и Воздух-Топливо AFR Fuel, Ignition, and AFR Tables
 ------------------------------
 
-Speeduino determines the correct amount of fuel to inject during each engine cycle and when to fire the ignition with calculations. The formula basis for these calculations is known as Speed Density (SD), which uses engine *speed* and air *density* to calculate the appropriate fuel to inject. Speeduino equates intake manifold absolute pressure (MAP) to both air density (mass) for fuel calculations and engine load for ignition calculations. Speeduino then multiplies this air density factor by the Volumetric Efficiency factor at the current engine speed to estimate appropriate fuel flow to match the load and airflow. These calculations are modified by additional factors such as air temperature, fuel vaporization (coolant temperature), acceleration enrichment, target air:fuel ratio (AFR), etc.
+Speeduino определяет правильное количество топлива для впрыскивания в течение каждого цикла двигателя и время зажигания с помощью расчетов. Формула для этих расчетов известна как плотность скорости Speed Density (SD), которая использует скорость двигателя *speed* и плотность воздуха *density* для расчета соответствующего топлива для впрыска. Speeduino приравнивает абсолютное давление во впускном коллекторе (MAP) как к плотности воздуха (массе) для расчетов топлива, так и к нагрузке двигателя для расчетов зажигания. Затем Speeduino умножает этот коэффициент плотности воздуха на коэффициент объемной эффективности Volumetric Efficiency при текущей частоте вращения двигателя, чтобы оценить соответствующий поток топлива для соответствия нагрузке и потоку воздуха. Эти расчеты модифицируются дополнительными факторами, такими как температура воздуха, испарение топлива (температура теплоносителя), ускорение обогащения, целевое соотношение воздух: топливо (AFR) и т.д.
 
-The lookup tables Speeduino uses to calculate these primary factors of MAP and rpm are called the VE Table (for fuel), Spark Table (for ignition timing), or AFR Table (for Air:Fuel Ratio targets). While each table is based on speed and density, the functions are separated for tuning purposes. The tables are arranged with low pressure and low rpm at the bottom-left of the table, increasing upward for pressure, and to the right for rpm. A typical production automotive engine could have perhaps 30kPa MAP at idle and roughly 100kPa (atmospheric pressure) at wide-open throttle, showing as idle in the lower-left of the table, and high-load at redline in the upper-right section.
+Таблицы поиска Speeduino, используемые для вычисления этих основных коэффициентов MAP и rpm, называются
+таблицей VE (для топлива)
+таблицей искр Spark Table (для синхронизации зажигания)
+таблицей AFR (для целевых значений соотношения воздух/топливо).
+В то время как каждая таблица основана на скорости и плотности, функции разделяются для настройки. Типичный серийный автомобильный двигатель может иметь, возможно, 30kPa MAP при холостом ходу и приблизительно 100kPa (атмосферное давление) при широко открытом дросселе, показывая холостой ход в левой нижней части стола и высокую нагрузку при красном свете в правой верхней части.
+
 
 ### The VE Table
 
-As engine efficiency varies by load and rpm, each of the 256 bins (cells) on the 16x16 table has an efficiency number based on the engine's ability to flow air into the cylinders at that MAP and rpm. This is known as the volumetric efficiency or simply VE. The greater the air pumping efficiency, the higher this relative VE number. Greater air flow efficiency requires greater fuel flow to maintain the same target AFR. Increases or decreases in VE may be caused by factors inherent in the engine design, or variable efficiency factors such as throttle position, camshaft timing, harmonic tuning, AFR, ignition timing, etc.
+Поскольку КПД двигателя изменяется в зависимости от нагрузки и частоты вращения, каждая из 256 ячеек таблице 16x16 имеет показатель КПД, основанный на способности двигателя подавать воздух в цилиндры при этом МАП и частоте вращения. Это называется объемной эффективностью или просто VE. Чем выше эффективность нагнетания воздуха, тем выше это относительное число VE. Более высокая эффективность воздушного потока требует большего расхода топлива для поддержания той же цели AFR. Увеличение или уменьшение VE может быть вызвано факторами, присущими конструкции двигателя, или переменными коэффициентами эффективности, такими как положение дросселя, синхронизация распределительного вала, настройка гармоник, AFR, синхронизация зажигания и т.д.
 
 <img src="http://i.imgur.com/QsBeFjQ.jpg?1" title="Fig.1: VE Table" />
 
-Just like standard horsepower or kilowatt and torque calculations, note the generally greater VE at peak torque. Although the VE (and therefore torque) generally decreases above the peak torque area, the multiplier of rpm causes the HP or KW to increase as rpm increase, until the rate of torque reduction exceeds the increase in rpm. Typically, the maximum naturally-aspirated VE is 100%, and is located at the peak torque rpm and maximum manifold pressure (near atmospheric pressure ~101kPa). VE can be greater than 100 on the table, and is most commonly higher when increased for boost, which provides more than 100% VE. However, those numbers may be altered for any reason the tuner sees fit.
+Как и при стандартных расчетах лошадиных сил или киловатт и крутящего момента, обратите внимание на увеличение VE при пиковом крутящем моменте. Хотя VE (и, следовательно, крутящий момент) обычно уменьшается выше области пикового крутящего момента, множитель частоты вращения вызывает увеличение HP или KW по мере увеличения частоты вращения до тех пор, пока скорость уменьшения крутящего момента не превысит увеличение частоты вращения. Как правило, максимальный естественный атмосферный VE составляет 100% и находится при пиковых оборотах в минуту и максимальном давлении в коллекторе (около атмосферного давления ~ 101 кПа). VE может быть больше 100 на столе и чаще всего выше при увеличении для повышения, что обеспечивает более 100% VE. Однако эти числа могут быть изменены по любой причине, которую тюнер считает подходящей.
 
-### How is a beginning fuel VE table created?
+### Как заполнить начальную карту How is a beginning fuel VE table created?
 
-***NOTE:** Tuning and table creation must be made from an existing tune file which contains valid or default values. The provided basic tune file (Speeduino base tune.msq) was created for this purpose and is located in the **reference** folder of the [Stable Firmware](http://speeduino.com/wiki/index.php/Compiling_and_Installing_Firmware#Latest_Stable_Firmware%7CLatest) you downloaded; when the TunerStudio project is created and Speeduino is first connected, the basic tune file should be loaded into TS by pressing **CTRL+O** and navigating to the file, or by clicking **File &gt; Open Tune (msq)** and selecting the file. Attempting to create tables or tune without loading a tune file will usually result in frustration and probable file corruption.*
+***Примечание:** Настройка и создание таблицы должны выполняться из существующего файла настройки, содержащего допустимые значения или значения по умолчанию. Предоставленный файл базовой настройки (Speeduino base tune.msq) был создан для этой цели и расположен в папке **reference**
+[Stable Firmware](http://speeduino.com/wiki/index.php/Compiling_and_Installing_Firmware#Latest_Stable_Firmware%7CLatest) вы скачали; при создании проекта TunerStudio и первом подключении Speeduino файл базовой настройки должен быть загружен в Tuner Studio нажатием **CTRL+O** и переход к файлу или щелчком **File &gt; Open Tune (msq)** и выбор файла. Попытка создания таблиц или настройки без загрузки файла настройки обычно приводит к разочарованию и вероятному повреждению файла.*
 
-The fuel table should be roughly based upon the engine's torque curve as outlined above. The rpm and MAP values (Table X and Y) and relative bin VE values that create these curves can be estimated for various MAP and rpm by manual estimation, or by tools such as the Table Generator in the registered version of [TunerStudio](http://www.tunerstudio.com/index.php/tuner-studio). The use of the Table Generator function is covered in the TunerStudio section.
+Таблица топлива должна быть грубо основана на кривой крутящего момента двигателя, как описано выше. Значения rpm и MAP (таблица X и Y) и относительные значения VE, которые создают эти кривые, могут быть оценены для различных MAP и rpm посредством ручной оценки или с помощью инструментов, таких как генератор таблиц в зарегистрированной версии [TunerStudio](http://www.tunerstudio.com/index.php/tuner-studio). Использование функции генератора таблиц описано в разделе TunerStudio.
 
 <img src="http://i.imgur.com/UrSMeIs.png" title="Fig. 2 Table Generator" />
 
-### Manual VE Tables
+### Ручные таблицы объёмной эффективности Manual VE Tables
 
-Often, a table generator is not available, or is not suited for estimating tables for certain engine types. This is where knowledge and experience can help in creating a set of tables to begin tuning. While in-depth knowledge of engine theory is very helpful for specific tuning; general guidelines can assist in creating tables that will usually allow engine start and initial running, when coupled with assistance from the operator.
+Часто генератор таблиц недоступен или не подходит для оценки таблиц для определенных типов двигателей. Именно здесь знания и опыт могут помочь в создании набора таблиц для начала настройки. В то время как глубокое знание теории двигателей очень полезно для конкретной настройки; общие руководящие принципы могут помочь в создании таблиц, которые обычно позволяют запускать и запускать двигатель при поддержке оператора.
 
-Notice the areas of interest in Figure 3. These are general areas, and can be very different sizes and shapes for various engine types, but are areas found in most automotive general, performance, and racing tables.
+Обратите внимание на интересующие области на рис. 3. Это общие области, и могут быть очень разные размеры и формы для различных типов двигателей, но это области, найденные в большинстве автомобильных общих, производительности и гоночных таблиц.
 
 <img src="http://i.imgur.com/Cim526L.jpg?1" title="Fig. 3 Table areas" />
 
-Along the left side are MAP pressures in kilopascals (kPa), from less than idle at the bottom, to approximately maximum manifold pressure. These [absolute pressures](https://en.wikipedia.org/wiki/Pressure_measurement#Absolute.2C_gauge_and_differential_pressures_-_zero_reference) should generally be selected to cover the entire operating range, and expanded if appropriate for expected severe weather or altitudes, supercharged (including turbocharged) "boost" applications, etc. Dedicating a row to pressures below idle permits idle stabilization or recovery schemes if desired, whereas an additional row above atmospheric is generally considered unnecessary, except as listed above.
+Вдоль левой стороны расположены МАП давления в килопаскалях (кПа), от менее холостого хода в нижней части до приблизительно максимального давления в коллекторе. Они [absolute pressures](https://en.wikipedia.org/wiki/Pressure_measurement#Absolute.2C_gauge_and_differential_pressures_-_zero_reference) обычно выбирается таким образом, чтобы охватить весь рабочий диапазон, и расширяется, если это необходимо, в случае ожидаемой суровой погоды или высот, с наддувом (включая турбированный) и т.д. Выделение ряда на давление ниже холостого хода позволяет при желании использовать схемы стабилизации или восстановления холостого хода, в то время как дополнительный ряд выше атмосферного обычно считается ненужным, за исключением перечисленных выше.
 
-Similarly, along the bottom of the table are increasing rpm values, from less than idle to beyond the engine's peak power rpm. The maximum normal rpm or established shift points are below this redline rpm. It is unnecessary to include rpm above the engine's redline, as it should never be operated above that rpm, although it can still rev beyond this point. Over-revving (excessive and damaging rpm) can be limited by rpm limit settings known as rev limiters. See [Rev Limits](Rev_Limits "wikilink").
+Аналогично, вдоль нижней части таблицы увеличиваются значения частоты вращения, от менее холостого до более высокого, чем пиковая частота вращения двигателя. Максимальная нормальная скорость вращения или установленные точки сдвига ниже этой красной скорости вращения. Нет необходимости включать частоту вращения выше красной линии двигателя, так как она никогда не должна работать выше этой частоты вращения, хотя она все еще может вращаться выше этой точки. Избыточное вращение (избыточная и повреждающая обороты) может быть ограничено настройками ограничения оборотов, известными как ограничители оборотов. Посмотрите [Rev Limits](Rev_Limits "wikilink").
 
-### Building the VE Table
+### Построение таблицы объёмной эффективности VE Table
 
-In both MAP and rpm headers, attention should be paid to include more divisions where the pressures or rpm change rapidly or frequently, and greater resolution is therefore desired or required. This tends to be the lower MAP and lower rpm areas, primarily including areas 1, 2, and 5. Note in the example above that rpm divisions are in 200 rpm increases near idle, up to roughly peak torque, and larger divisions above that area. The example above ensures higher resolution and more accurate fuel, spark, and AFRs in those highly used and constantly changing areas. In this example a more linear but still bottom-weighted scheme is used for the MAP divisions.
+Как в коллекторах MAP, так и в коллекторах со скоростью вращения следует обратить внимание на включение большего количества делений, в которых давление или скорость вращения изменяются быстро или часто, и поэтому требуется или требуется большее разрешение. Это имеет тенденцию быть более низкими областями MAP и более низкими областями частоты вращения, в основном включая области 1, 2 и 5. Заметим в приведенном выше примере, что деления на обороты в 200 об/мин увеличиваются вблизи холостого хода, примерно до пикового крутящего момента и более крупные деления выше этой площади. Приведенный выше пример обеспечивает более высокое разрешение и более точное топливо, искру и АФР в тех высокоиспользуемых и постоянно меняющихся областях. В этом примере для разделов MAP используется более линейная, но все же взвешенная снизу схема.
 
-While VE is normally considered a percentage, Speeduino calculations simply use them as relative references, that are sized to allow a logical reference and room to adjust (0 to 255). For normally-aspirated (NA) engines, it is generally suggested to use 100 in the maximum MAP row (atmospheric) at peak torque rpm, with all other entries on the table of lower pressure being lower VE. Supercharged and other systems will simply have rows above 100 kPa (atmospheric), where VE numbers will be relatively higher.
+В то время как VE обычно считается процентом, расчеты Speeduino просто используют их в качестве относительных привязок, размеры которых позволяют корректировать логическую привязку и помещение (от 0 до 255). Для двигателей с нормальным атмосферным давлением (NA), как правило, предлагается использовать 100 в максимальном ряду MAP (атмосферный) при пиковом крутящем моменте об/мин, при этом все остальные значения на таблице низкого давления являются более низкими VE. Наддувные и другие системы будут просто иметь ряды выше 100 кПа (атмосферные), где числа VE будут относительно выше.
+постоянно меняющиеся области. В этом примере для разделов MAP используется более линейная, но все же взвешенная снизу схема.
 
-Don't forget that all aspects of the tuning tables are adjustable in TS, usually by clicking on the object in question, as below:
-
+Не забывайте, что все аспекты таблиц настройки регулируются в TS, обычно щелчком по рассматриваемому объекту, как показано ниже:
 <img src="http://i.imgur.com/q6LnLb2.png?1" title="Table mods" />
 
-### Alternative table-building techniques
+### Альтернативный метод построения таблицы Alternative table-building techniques
 
-Another method used to create a basic table to tune from is called a "wedge" table. It is simply a table outlined with appropriate MAP and rpm values, and filled with a simple graduating set of cells, as below. While this method is initially simple and requires less estimation, it also requires more follow-up tuning and map smoothing for good running in all ranges of operation, as there is no torque curve estimation or 'shape' to work from.
+Другой метод, используемый для создания базовой таблицы для настройки, называется таблицей "клин". Это просто таблица с соответствующими значениями MAP и rpm и заполненная простым выпускным набором ячеек, как показано ниже. Хотя этот метод изначально прост и требует меньшей оценки, он также требует большей последующей настройки и сглаживания карты для хорошей работы во всех диапазонах работы, так как нет оценки кривой крутящего момента или "формы" для работы.
 
 <img src="http://i.imgur.com/1kRVjCW.png?1" title="Wedge Table" />
 
@@ -73,12 +79,12 @@ Using the 3D viewing feature in TS, the example wedge table appears like this be
 
 ------------------------------------------------------------------------
 
-*Liability Disclaimer*
+*Отказ от ответственности*
 
-*Information provided by the Speeduino Wiki and it's authors is general in nature and is not intended to be a substitute for professional advice, including but not limited to, mechanical, electrical, theoretical, and safety advice.*
+*Информация, предоставленная компанией Speeduino Wiki и ее авторами, носит общий характер и не предназначена для замены профессиональных консультаций, включая, но не ограничиваясь, механические, электрические, теоретические и советы по безопасности.*
 
-*All information is provided "as is." This **is** the Internet. While we try to provide accurate information, we make no claims, promises, or guarantees about the accuracy or completeness of the information provided. Information provided may be altered at any time, by anyone with access, without notice. The Speeduino Wiki and its various authors disclaim any responsibility associated with the general information provided on any of its pages.*
+*Вся информация предоставляется "как есть". Это * * это * * Интернет. Хотя мы пытаемся предоставить точную информацию, мы не предъявляем никаких претензий, обещаний или гарантий относительно точности или полноты предоставленной информации. Предоставленная информация может быть изменена в любое время, любым лицом, имеющим доступ, без уведомления. Speeduino Wiki и его различные авторы отказываются от ответственности, связанной с общей информацией, представленной на любой из его страниц.*
 
-*Visitors use the Speeduino Wiki content solely at their own risk. There is no requirement to use any information in any way. If you are not sure about anything, obtain professional assistance. The responsibility of any interpretation, use, or consideration and any resulting effects is strictly yours. In no event shall the Speeduino Wiki or its authors be liable to any third party for damages related to using or not using its content whether claims are advanced on contract, tort, or other legal theories.*
+*Посетители используют контент Speeduino Wiki исключительно на свой страх и риск. Нет никаких требований к использованию какой-либо информации. Если вы ни в чем не уверены, получите профессиональную помощь. Ответственность за любое толкование, использование или рассмотрение и любые вытекающие из этого последствия лежит исключительно на вас. Ни при каких обстоятельствах Speeduino Wiki или ее авторы не несут ответственности перед какой-либо третьей стороной за ущерб, связанный с использованием или неиспользованием ее содержания, независимо от того, выдвигаются ли претензии по контракту, деликту или другим правовым теориям.*
 
-*The Speeduino Wiki and its authors do not endorse any product, service, method, technique, seller, or provider mentioned in any of its articles or associated advertisements.*
+*Компания Speeduino Wiki и ее авторы не одобряют какие-либо продукты, услуги, методы, технику, продавца или поставщика, упомянутые в каких-либо статьях или связанных с ними рекламных объявлениях.*
