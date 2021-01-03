@@ -1,14 +1,14 @@
 ---
-title: Sensor Calibration
+title: Калибровка датчиков Sensor Calibration
 description: Steps for calibrating all analog sensor inputs
 published: true
-date: 2021-01-02T04:41:37.772Z
+date: 2021-01-03T06:57:56.292Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:41:37.772Z
 ---
 
-# Sensor Calibration
+# Калибровка датчиков Sensor Calibration
 
 Before your Speeduino can correctly interpret the signals from the sensors, it must know which sensors you are using. Inputting this information into TunerStudio (TS) writes the correct calibration to your Speeduino. It is necessary to perform this step before you can effectively check your Speeduino build. Note that this is not tuning your system, but only telling it how to understand the signals from the sensors.
 
