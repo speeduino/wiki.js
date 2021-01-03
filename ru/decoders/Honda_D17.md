@@ -1,29 +1,29 @@
 ---
-title: Honda D17
+title: Реперный диск Honda D17
 description: 
 published: true
-date: 2021-01-02T07:08:08.277Z
+date: 2021-01-03T08:52:55.178Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:08:08.277Z
 ---
 
-## Overview
+## Обзор 
 
-The Honda D17 decoder applies to the Honda engine family using a 12+1 crankshaft wheel. The 4+1 camshaft signal is not currently used with Speeduino. Without the cam signal, all standard fuel and ignition modes up to semi-sequential and wasted-spark are supported.
+Декодер Honda D17 применяется к семейству двигателей Honda с помощью колеса коленчатого вала 12 + 1. Сигнал распредвала 4 + 1 в настоящее время не используется в Speeduino. Без кулачкового сигнала поддерживаются все стандартные режимы топлива и зажигания вплоть до полупоследовательного и отработанного искрового.
 
-### Applications
+### Приложения Applications
 
 -   TBA
 
 ### Tuner Studio Configuration
 
-### Timing adjustment
+### Настройка синхронизации Timing adjustment
 
-In most cases altering the trigger angle should not be required, however there is some small variation between the OEM versions of thIs trigger so some minor adjustment may be needed. Once you have the engine started, set a fixed ignition angle and check the timing with a timing light. If this is a few degrees out (&lt;20°), adjust the trigger angle here. If this is more than 20° out, there may be a larger problem.
+В большинстве случаев изменение угла срабатывания не требуется, однако существует некоторое небольшое изменение между OEM-версиями этого триггера, поэтому может потребоваться некоторая незначительная регулировка. После запуска двигателя установите фиксированный угол зажигания и проверьте синхронизацию с помощью индикатора синхронизации. Если это несколько градусов (& lt; 20 °), отрегулируйте здесь угол срабатывания. Если это больше 20 °, может возникнуть большая проблема.
 
 ### Trigger Pattern
 
-The crank trigger wheel consists of 12 evenly spaced teeth plus 1 additional 13th tooth which provides position information. The first tooth after this 13th one is considered Tooth \#1
+Репер состоит из 12 равномерно разнесенных зубьев плюс 1 дополнительный 13-й зуб, обеспечивающий информацию о положении. Первый зуб после этого 13-го считается зубом \#1
 
 ![honda_D17.png](/img/decoders/honda_D17.png){.align-center width=75%}
