@@ -1,49 +1,50 @@
 ---
-title: Staged Injection
+title: Поэтапный впрыск Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2021-01-02T04:43:36.211Z
+date: 2021-01-03T07:47:11.819Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:43:36.211Z
 ---
 
-# Staged Injection
-## Overview
-Speeduino has the ability to control a secondary fuel stage for engines that have 2 sets of injectors, typically of different capacities. Whilst there are few stock engines that come with secondary injectors (the notable exception being many Mazda rotaries) secondary staged injection is a common modification, in particular used whenever large injectors are required, but where it is desirable to keep smaller injectors for smoother low RPM performance.
+# Поэтапный впрыск Staged Injection
+## Обзор
+Speeduino имеет возможность управлять вторичной топливной ступенью для двигателей, имеющих 2 комплекта форсунок, обычно разной мощности. Несмотря на то, что существует мало двигателей, которые поставляются со вторичными инжекторами (заметным исключением является множество роторов Mazda), вторичный ступенчатый впрыск является обычной модификацией, в частности, используется всякий раз, когда требуются большие инжекторы, но где желательно сохранять меньшие инжекторы для более плавной работы при низких оборотах.
 
-## Configuration
-No matter which control strategy is chosen, you must enter the sizing of the primary and secondary injectors in order to allow Speeduino to know the split in the overall fuelling.
+## Конфигурация
+Независимо от того, какая стратегия управления выбрана, необходимо ввести размеры первичного и вторичного инжекторов, чтобы компания Speeduino знала разделение в общей заправке топливом.
 
-> **CRITICAL** - The req-Fuel value in the [Engine Constants](/configuration/Engine_Constants) MUST be updated when staged injection is turned on. **When staging is in use, the value entered in the req_fuel calculator MUST be equal to the sum of both the primary and secondary injector sizes**
-> Failure to set these values correctly will result in excessive rich or lean conditions.
+> **CRITICAL** - Значение req-Fuel в [Engine Constants](/configuration/Engine_Constants) ДОЛЖНО обновляться при включении ступенчатого впрыска. **When staging is in use, the value entered in the req_fuel calculator MUST be equal to the sum of both the primary and secondary injector sizes**
+>Неправильная установка этих значений приведет к чрезмерной богатой или бедной смеси.
 {.is-danger}
 
-**Eg:**
+**Пример:**
 
-* **Primary Injectors :** 300cc
-* **Secondary Injectors :** 700cc
-* **Value entered into the req_fuel calculator :** 1000cc
+* Первичные форсунки **Primary Injectors :** 300cc
+* Вторичные форсунки **Secondary Injectors :** 700cc
+* Значение для калькулятора потребного топлива
+**Value entered into the req_fuel calculator :** 1000cc
 
 ![Staged fuel settings](/img/staging/staging_settings.PNG){.align-center width=400}
 ![REquired fuel calculator](/img/staging/staged_reqfuel.PNG){.align-center width=400}
 
-### Control methods
-Speeduino provides 2 staging control modes, each with their own strengths and weaknesses. In most cases it is recommended to start with the Automatic mode, which only requires tuning of the standard VE table, and reviewing to see if you get the desired outcome. Only if this can't be tuned to give a satisfactory fuel split would changing to the manual table tuning be recommended.
+### Метод контроля Control methods
+Speeduino предоставляет 2 режима управления постановкой, каждый из которых имеет свои сильные и слабые стороны. В большинстве случаев рекомендуется начать работу в автоматическом режиме, который требует только настройки стандартной таблицы VE, и проверить, получается ли желаемый результат. Только если это невозможно настроить для обеспечения удовлетворительного разделения топлива, рекомендуется изменить настройку таблицы вручную.
 
-#### Automatic staging
-When using the automatic staging method Speeduino takes into account the full capacity of the injectors (ie the sum of the 2 injector stages) and will perform a split of these itself. With this method, the user can simply tune the VE table in the same manner as if only a single set of injectors were used and the system takes care of the rest.
+#### Автоматическая поэтапность Automatic staging
+При использовании метода автоматической подготовки Speeduino учитывает полную мощность инжекторов (т.е. сумму 2 ступеней инжектора) и выполняет их разделение. С помощью этого способа пользователь может просто настроить таблицу VE таким же образом, как если бы использовался только один набор инжекторов и система заботилась об остальных.
 
-In this mode, Speeduino will attempt to use the primary injectors up to their 'Injector Duty Limit' (As configured in the [Injector Characteristics](/configuration/Injector_Characteristics) dialog. When staging is being used, it is recommend that this limit should be no higher than 85%. Once the primary injectors reach this duty limit, Speeduino will begin to perform any further fueling from the secondary injectors. In this way, the VE table is all that is required for tuning as the system will take care of allocating the current fuel load to the best injectors.
+В этом режиме Speeduino будет пытаться использовать первичные инжекторы вплоть до своего "Предела производительности инжектора" (в соответствии с конфигурацией в [Injector Characteristics](/configuration/Injector_Characteristics) диалог. При использовании подготовки рекомендуется, чтобы этот предел не превышал 85%. Как только первичные инжекторы достигнут этого предела нагрузки, Speeduino начнет выполнять любую дальнейшую заправку топливом из вторичных инжекторов. Таким образом, таблица VE - это все, что требуется для настройки, поскольку система будет заботиться о распределении текущей топливной нагрузки на лучшие форсунки.
 
-#### Table control
-Table control allows the use of a manual 8x8 map that indicates what percentage of the fuel load will be performed by the **secondary** injectors
-- 0% = Secondary injectors disabled
-- 100% = Primary injectors disabled
+#### Табличный контроль Table control
+Управление таблицей позволяет использовать ручную карту 8x8, которая показывает, какой процент топливной нагрузки будет выполняться ** вторичными ** форсунками
+- 0% = вторичные форсунки отключены
+- 100% = первичные форсунки отключены
 
-It is important to note that the values in this table do NOT correspond directly to the split of the duty cycle or pulse width. They represent the percentage of the total fuel load that the secondaries will be asked to perform. The affect this value has on the pulse width depends on the ratio of the primary and secondary injector capacities.
+Важно отметить, что значения в этой таблице НЕ соответствуют непосредственно разделению рабочего цикла или длительности импульса. Они представляют собой процентную долю от общей топливной нагрузки, которую будет предложено выполнить вторичным исполнителям. Влияние этого значения на длительность импульса зависит от соотношения мощности первичного и вторичного инжекторов.
 
-One disadvantage of the table tuning method is that it does not allow for the full fuel load of the primary and secondary injectors to be used simultaneously. As the table is a split of the total fuel load, as one set of injectors performs more, the other will perform less.
+Одним из недостатков способа настройки таблицы является то, что он не позволяет одновременно использовать полную топливную нагрузку первичной и вторичной форсунок. Поскольку таблица представляет собой деление общей топливной нагрузки, поскольку один комплект инжекторов работает больше, другой будет работать меньше.
 
-### Note
-The dead time of the 2 sets of injectors is currently assumed to be the same. This may be altered in future firmwares if required (Post a feature request if needed).
+### Замечание
+В настоящее время предполагается, что время покоя 2 комплектов инжекторов одинаково. При необходимости это может быть изменено в будущих прошивках (при необходимости отправтье запрос на эту функцию).
