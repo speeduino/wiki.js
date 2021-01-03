@@ -2,15 +2,15 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-01-02T06:41:14.102Z
+date: 2021-01-03T08:09:42.297Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T06:41:14.102Z
 ---
 
-Speeduino supports an ever growing number of crank and cam decoders and trigger wheels. This includes some of the more common OEM setups as well as those favoured in the aftermarket (Such as the missing tooth wheels).
+Speeduino поддерживает постоянно растущее количество коленвально-распредвальных декодеров и реперных колес. Это включает в себя некоторые из более распространенных установок OEM, а также те, которые предпочтительны на рынке послепродажного обслуживания (например, отсутствующие зубчатые колеса)..
 
-The list below includes all those that are currently supported. They each lead to a page with details on using the decoder (These pages are a Work in Progress)
+В списке ниже перечислены все поддерживаемые в настоящее время. Каждый из них ведет к странице с подробной информацией об использовании декодера (эти страницы являются незавершенным процессом)
 
 | Decoder                                                 | Status           | Applications / Description                                                                                                      |
 | ------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
