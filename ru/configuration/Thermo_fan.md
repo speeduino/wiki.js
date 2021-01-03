@@ -1,24 +1,24 @@
 ---
-title: Thermo fan
+title: Вентилятор охлаждения Thermo fan
 description: Control of a cooling fan relay
 published: true
-date: 2021-01-02T04:45:50.596Z
+date: 2021-01-03T06:16:57.306Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:45:50.596Z
 ---
 
-# Thermo fan
-Control of a cooling (thermo) fan is available through the Thermo fan dialog. 
+# Вентилятор охлаждения Thermo fan
+Управление охлаждающим вентилятором осуществляется через диалоговое окно Thermo fan. 
 
-> Note that only On/Off fan control is currently possible (Not fan speed control using PWM). 
+> Следует отметить, что в настоящее время возможно только включение/выключение управления вентилятором (Не управление скоростью вентилятора с помощью PWM). 
 {.is-info}
 
 ## Settings
 ![fan.png](/img/accessories/fan.png){.align-center width=450}
 
-* **Fan mode** - Currently only `On/Off` mode is supported
-* **Output pin** - The arduino pin that the fan control will use. In most cases this should be left as `Board Default`
-* **Output inverted** - Most setups will use `No` for this setting, but if you have a fan circuit that flips the output, the On/Off polarity can be reversed with this setting
-* **Fan temperature** - The temperature above which the fan will be turned on. 
-* **Fan hysteresis** - The number of degrees below the fan set point that fan will be turned off. This is used to avoid oscillation around the set point resulting in the fan turning on and off rapidly. 
+* **Fan mode** - В настоящее время поддерживается только режим On/Off
+* **Output pin** - Контакт arduino, который будет использоваться элементом управления вентилятором. В большинстве случаев это следует оставить как `Board Default`
+* **Output inverted** - В большинстве установок для этой настройки будет использоваться параметр "Нет", но при наличии цепи вентилятора, переключающей выходной сигнал, полярность включения/выключения может быть изменена с помощью этой настройки
+* **Fan temperature** - Температура, выше которой будет включен вентилятор.
+* **Fan hysteresis** - Количество градусов ниже установленного значения чтобы избежать постоянного включению и выключения вентилятора.
