@@ -2,13 +2,13 @@
 title: Nitrous Control
 description: 
 published: true
-date: 2021-01-02T04:38:25.145Z
+date: 2021-01-03T07:24:39.353Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:38:25.145Z
 ---
 
-# Nitrous Control
+# Управление закисью Азота Nitrous Control
 Speeduino contains a 2 step nitrous control system for controlling valves and making fueling adjustments for dry setups. 
 The 2 stages operate independantly and can overlap (ie both run at the same time) if needed. 
 
