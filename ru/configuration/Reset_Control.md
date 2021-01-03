@@ -1,109 +1,109 @@
 ---
-title: Reset_Control
+title: Контроль перегрузки Reset_Control
 description: 
 published: true
-date: 2021-01-02T04:40:27.686Z
+date: 2021-01-03T06:46:34.319Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:40:27.686Z
 ---
 
-Background
+Зачем
 ----------
 
-The Arduino Mega platform is great in that it provides a low cost, low barrier to entry platform for projects. Unfortunately, these conveniences come with some disadvantages.
+Платформа Arduino Mega великолепна тем, что обеспечивает низкую стоимость, низкий барьер для входа на платформу для проектов. К сожалению, эти удобства имеют некоторые недостатки.
 
-Specifically, in an effort to make the programming process as painless as possible, most (possibly all) versions of the Arduino Mega 2560 board will reset themselves when a new serial connection is initiated. Needless to say, it's pretty inconvenient for the computer controlling your engine to reboot if you're driving the car and the serial connection to your logger becomes unstable and has to reconnect (hint: the engine stops).
+В частности, чтобы сделать процесс программирования максимально безболезненным, большинство (возможно, все) версий платы Arduino Mega 2560 будут перезагружены обнаружении нового последовательного соединения. Нет нужды говорить, что компьютеру, управляющему вашим двигателем, довольно неудобно перезагружаться, если вы управляете автомобилем и последовательное подключение к логгеру становится нестабильным и приходится подключаться заново (двигатель останавливается).
 
-This feature will enable you to prevent that from happening.
+Эта функция позволяет предотвратить это.
 
-Requirements
+Требования
 ------------
 
-Reset Control can be used as simply as setting some options and [connecting a wire](#Wiring "wikilink"). However, some options also require [updating the usb-serial bootloader](#Updating_the_Bootloader "wikilink") on the ATmega16U2 chip (if the board has one).
+Reset Control может использоваться так же просто, как установка некоторых опций [connecting a wire](#Wiring "wikilink"). Однако некоторые варианты также требуют [updating the usb-serial bootloader](#Updating_the_Bootloader "wikilink") на микросхеме ATmega16U2 (если она установлена на плате).
 
 (TODO more details)
 
-Options
+Варианты
 -------
 
 ![<File:2018-02-27> 21 11 05-Reset Control.png](2018-02-27_21_11_05-Reset_Control.png "File:2018-02-27 21 11 05-Reset Control.png")
 
-The Speeduino firmware provides three options for preventing the Arduino from resetting *(**\*** indicates a [bootloader update](#Updating_the_Bootloader "wikilink") is required)*:
+Встроенное ПО Speeduino предоставляет три варианта предотвращения сброса Arduino *(**\*** указывает на [bootloader update](#Updating_the_Bootloader "wikilink") требуется)*:
 
--   Prevent When Running
-    -   Disabled
-        -   No reset control is enabled
-    -   When the engine is running**\***
-        -   As long as the engine is running, the Arduino will not automatically reset itself.
-        -   The Control Pin will be held high as long as the engine is running.
-        -   It will only be possible to update the Speeduino firmware when the car is not running or the Control Pin is otherwise held low.
-    -   Prevent Always**\***
-        -   The Control Pin is always held high.
-        -   It will only be possible to update the Speeduino firmware if the Control Pin is held low by jumper, switch, or some other means.
-    -   Serial Command
-        -   Similar to "Prevent Always," except that no custom bootloader is required.
-        -   The Control Pin will normally be held high.
-        -   To update the Speeduino firmware, you will need to first send the character 'U' to it over the serial connection. This will let it know that an update is coming and it will reset itself upon receiving any more data.
+-   Запретить при выполнении Prevent When Running
+    -   Выключено Disabled
+        -   Управление сбросом не включено
+    -   Когда двигатель работает When the engine is running**\***
+        -   Пока двигатель работает, Arduino не будет автоматически сбрасывать себя.
+        -   Управляющий контакт будет удерживаться на высоком уровне, пока работает двигатель.
+        -   Обновление прошивки возможно только в том случае, если автомобиль не работает или управляющий штырь в противном случае удерживается на низком уровне.
+    -   Всегда предотвращать Prevent Always**\***
+        -   Контакт управления всегда удерживается на высоком уровне.
+        -   Обновление прошивки Speeduino возможно только в том случае, если управляющий контакт удерживается на низком уровне перемычкой, переключателем или каким-либо другим способом.
+    -   Последовательная команда Serial Command
+        -   Аналогично "Запретить всегда", за исключением того, что не требуется пользовательский загрузчик.
+        -   Обычно управляющий контакт удерживается на высоком уровне.
+        -   Для обновления встроенного ПО Speeduino необходимо сначала отправить на него символ "U" по последовательному соединению. Это даст ему знать, что грядет обновление, и он сбросит себя после получения дополнительных данных.
 
-Wiring
+Схема Wiring
 ------
 
-### Standard 16u2 Firmware or No 16u2
+### Стандартная прошивка 16u2 или не 16u2
 
-This is as simple as running a wire from the control pin to the reset pin on your Arduino.
+Это так же просто, как проложить провод от управляющего контакта к контакту сброса на вашем Arduino.
 
-### Custom 16u2 Firmware
+### Пользовательская прошивка Custom 16u2 Firmware
 
-The custom 16u2 firmware differs from the stock one in that it uses one of the 16u2's GPIO pins to recognize when the board should / should not be allowed to reset. The pin used is PB7, as illustrated.
+Пользовательская прошивка 16u2 отличается от стандартного тем, что оно использует один из контактов GPIO 16u2 для распознавания того, когда плата должна/не должна иметь разрешения на сброс. Используемый штифт является PB7, как показано.
 
 ![](Reset_control_16u2_pins.jpg "Reset_control_16u2_pins.jpg")
 
-How you connect the control pin to PB7 is up to you, but if you are connecting from a pin on the Speeduino's proto area, you may wish to use right-angle pin headers on the Arduino to make separating the Speeduino shield from the Arduino MCU (also illustrated).
+То, как вы подключаете управляющий контакт к PB7, зависит от вас, но если вы подключаетесь от контакта в области прото Speeduino, вы можете использовать правые коннекторы на Arduino, чтобы отделить щит Speeduino от MCU Arduino (также показан).
 
-Updating the Bootloader
+Обновление загрузчика Updating the Bootloader
 -----------------------
 
-Using the "When the engine is running" and "Prevent Always" reset control modes requires updating the usb-serial firmware on your Arduino's ATmega16U2 chip (these modes are unavailable if your board uses something else to perform usb serial functionality, such as an FTDI or CH340 chip).
+Использование режимов управления "When the engine is running" и "Prevent Always" требует обновления USB-последовательного встроенного ПО на чипе Arduino 's ATmega16U2 (эти режимы недоступны, если ваша плата использует что-то другое для выполнения функций USB serial, таких как FTDI или CH340 чип).
 
-A hex file for the updated bootloader can be found in the following locations:
+Шестнадцатеричный файл для обновленного загрузчика можно найти в:
 
--   In the [Speeduino Firmware download](Compiling_and_Installing_Firmware#Downloading_the_firmware "wikilink") under the "reference/bootloaders" directory
--   In the Speeduino source on GitHub: [1](https://raw.githubusercontent.com/noisymime/speeduino/master/reference/bootloaders/Speeduino-usbserial-atmega16u2-Mega2560-Rev3.hex)
+-   [Speeduino Firmware download](Compiling_and_Installing_Firmware#Downloading_the_firmware "wikilink") в "reference/bootloaders" директории
+-   В Speeduino исходниках на GitHub: [1](https://raw.githubusercontent.com/noisymime/speeduino/master/reference/bootloaders/Speeduino-usbserial-atmega16u2-Mega2560-Rev3.hex)
 
-To perform the update, you will need a copy of [dfu-programmer](https://dfu-programmer.github.io/). Directions for installing dfu-programmer for Mac can be found [here](https://www.arduino.cc/en/Hacking/DFUProgramming8U2). It may also be possible to use Atmel's flip programmer but it has not been tested.
+Для выполнения обновления потребуется копия [dfu-programmer](https://dfu-programmer.github.io/). Инструкции по установке dfu-programmer для Mac можно найти [here](https://www.arduino.cc/en/Hacking/DFUProgramming8U2). Возможно также использование программирования flip Atmel, но он не был протестирован.
 
-The procedure is as follows (directions are for Windows but are very similar for Linux and Mac):
+Процедура следующая (для Windows, но очень похожие для Linux и Mac):
 
-1.  Extract both dfu-programmer and the updated bootloader into the directory of your choice.
-2.  Plug your Arduino into a USB port and wait for the computer to recognize it.
-3.  Briefly short the 16U2's RESET and GND pins. This will cause the 16U2 to enter [DFU mode](https://www.arduino.cc/en/Hacking/DFUProgramming8U2).
-4.  If you are prompted by Windows to install a driver, do not let Windows install the driver automatically. Instead, browse to the .inf file that came with dfu-programmer.
-5.  Use the following commands to backup your existing usb-serial firmware and install the new one (prepend sudo on Mac and Linux):
+1.  Извлеките dfu-programmer и обновленный загрузчик в выбранный каталог.
+2.  Подключите Arduino к USB-порту и дождитесь его распознавания компьютером.
+3.  Кратко сократите контакты 16U2 RESET и GND. Это приведет к вводу 16U2 [DFU mode](https://www.arduino.cc/en/Hacking/DFUProgramming8U2).
+4.  Если Windows предлагает установить драйвер, не разрешайте Windows устанавливать драйвер автоматически. Вместо этого перейдите к INF-файлу, поставляемому вместе с dfu-programmer.
+5.  Используйте следующие команды для резервного копирования существующего встроенного ПО USB-serial и установки нового (prepend sudo на Mac и Linux):
     1.  `dfu-programmer` `atmega16u2` `read` `>` `arduino-usbserial-backup.hex`
     2.  `dfu-programmer` `atmega16u2` `erase`
     3.  `dfu-programmer` `atmega16u2` `flash` `Speeduino-usbserial-atmega16u2-Mega2560-Rev3.hex`
     4.  `dfu-programmer` `atmega16u2` `reset`
 
-6.  The bootloader update is complete. You should now disconnect and reconnect the Arduino to your computer.
+6.  Обновление загрузчика завершено. Теперь необходимо отключить и повторно подключить Arduino к компьютеру.
 
-In Windows, your Arduino will now appear as a generic USB Serial Device in the Device Manager so you will likely need to reconfigure TunerStudio to use the new port. If you like, you can check the "Bus reported device description" property in the device's Details tab to verify that "Speeduino Mega 2560" is shown.
+В Windows Arduino теперь будет отображаться как универсальное USB Serial Device в диспетчере устройств, поэтому вам, вероятно, потребуется перенастроить TunerStudio для использования нового порта. При необходимости можно проверить свойство "Bus reported device description" на вкладке "Details" устройства, чтобы убедиться, что отображается "Speeduino Mega 2560".
 
-Updating the Speeduino Firmware With "Serial Command" Selected
+Обновление прошивки Speeduino с использованием команды Updating the Speeduino Firmware With "Serial Command" Selected
 --------------------------------------------------------------
 
-Performing a Speeduino firmware update using the Serial Command method is a multi-step process:
+Выполнение обновленияпрошивки Speeduino с использованием Serial Command является многоэтапным процессом:
 
-1.  Using the serial terminal program of your choice (this was tested using [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)), open a serial connection to your Speeduino. At this time, you may wish to enter a "?" to verify that the serial connection is working properly.
-2.  Enter "U" in the terminal. If all goes well, it should respond with the message "Comms halted. Next byte will reset the Arduino."
-3.  Without entering any more characters, close the serial terminal.
-4.  Finally, start the firmware upload. The Arduino should now reset and accept the firmware upload as normal.
+1.  Использование программы последовательного терминала по вашему выбору (это было протестировано с помощью [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)), откройте последовательное подключение к Speeduino. В настоящее время может потребоваться ввести "?" для проверки правильности работы последовательного соединения.
+2.  Введите "U" на терминале. Если все идет хорошо, он должен ответить сообщением "Связь остановлена. Следующий байт сбросит Arduino ".
+3.  Не вводя больше символов, закройте последовательный терминал.
+4.  Наконец, запустите загрузку прошивки. Теперь Arduino должен выполнить сброс и принять загрузку встроенного ПО в обычном режиме.
 
 (TODO: Screenshots)
 
-Updating the Speeduino Firmware With the Updated 16U2 Bootloader Installed
+Обновление прошивки с помощью установленного бутлоадера Speeduino Firmware With the Updated 16U2 Bootloader Installed
 --------------------------------------------------------------------------
 
-If you have reset control set to "When engine is running," there is no special procedure required to update your Speeduino firmware. As long as the engine is not running, the Arduino will behave just as any other and you can update it the same way you would any other time.
+Если для параметра reset control установлено значение "When engine is running", для обновления встроенного ПО Speeduino не требуется специальная процедура. Пока двигатель не работает, Arduino будет вести себя так же, как любой другой, и вы можете обновить его так же, как в любое другое время.
 
-If you have reset control set to "Always," you will either need to temporarily disable it from inside TunerStudio in order to update your Speeduino firmware.
+Если для элемента управления установлено значение "Always", либо необходимо временно отключить его из TunerStudio, чтобы обновить встроенное ПО Speeduino.
