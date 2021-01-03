@@ -1,24 +1,24 @@
 ---
-title: Warmup
+title: Прогрев Warmup
 description: 
 published: true
-date: 2021-01-02T04:50:01.434Z
+date: 2021-01-03T06:10:10.667Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:50:01.434Z
 ---
 
-# Warmup Enrichment
-## Overview
-The Warm Up Enrichment (WUE) dialog contains settings related to the period after start (ie not cranking) but before the engine has reached normal operating temperature. It allows for modifications to fueling during this time to
+# Обагощение при прогреве Warmup Enrichment
+## Обзор
+Диалоговое окно "Обогащение при прогреве" (WUE) содержит настройки, относящиеся к периоду после запуска (т.е. без прокрутки), но до достижения двигателем нормальной рабочей температуры.
 
-## Settings
+## Настройки Settings
 ![warmup.PNG](/img/warmup/warmup.PNG){.align-center width=450}
 
-### Warmup curve
+### Кривая прогрева Warmup curve
 
-This curve represents the additional fuel amount to be added whilst the engine is coming up to temperature (Based on the coolant sensor). The final value in this curve should represent the normal running temperature of the engine and have a value of 100% (Representing no modification of the fuel from that point onwards).
+Эта кривая представляет дополнительное количество топлива, добавляемое при прогреве двигателя (на основе датчика охлаждающей жидкости). Конечное значение на этой кривой должно представлять нормальную рабочую температуру двигателя и иметь значение 100% (без изменения топлива с этой точки).
 
-### Afterstart Enrichment
+### Обагощение после запуска Afterstart Enrichment
 
-Afterstart Enrichment (ASE) is a seperate fuel modifier that operates over and above the WUE for a fixed period of time after the engine first starts. Typically this is a 3 - 10 second period where a small enrichment can help the engine transition smoothly from cranking to idling.
+Afterstart Refrigment (ASE) - это отдельный модификатор топлива, который работает в дополнение к WUE в течение фиксированного периода времени после первого запуска двигателя. Обычно это период 3-10 секунд, когда небольшое обогащение может помочь двигателю плавно переходить от прокрутки к холостому ходу.
