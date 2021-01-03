@@ -1,27 +1,27 @@
 ---
-title: Trigger Setup
+title: Настройки реперных дисков Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-01-02T04:46:44.421Z
+date: 2021-01-03T08:07:33.043Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:46:44.421Z
 ---
 
-# Trigger Setup
-## Overview
+# Настройки реперных дисков Trigger Setup
+## Обзор
 
-One of the most critical components of an EFI setup is the Crank Angle Sensor (CAS) and how it is used by the ECU. The Trigger settings dialog is where the trigger configuration is defined and it is vitally important to have this correct before trying to start your engine.
+Одним из наиболее важных компонентов установки EFI является датчик угла поворота коленчатого вала (CAS) и способ его использования в ECU. В диалоговом окне "Trigger settings" (Параметры триггера) определяется конфигурация триггера, и крайне важно, чтобы перед запуском двигателя была выполнена соответствующая настройка.
 
-With incorrect settings, you may have issues getting sync or see erratic RPM readings.
+При неправильных настройках могут возникнуть проблемы с синхронизацией или ошибочные показания оборотов.
 
-Note that many of the settings on this dialog are dependant on your configuration and it is therefore normal that some options maybe greyed out.
+Обратите внимание, что многие параметры в этом диалоговом окне зависят от конфигурации, поэтому некоторые параметры могут быть затемнены.
 
-## Trigger Settings
+## Настройки репера Trigger Settings
 
 ![Trigger settings dialog](/img/constants/triggerSettings.png){.align-center width=400}
 
-- **Trigger Pattern** - The pattern used by the crank/cam sensor setup on your engine. For a full list of the supported patterns, see the [Decoders](/decoders) page
+- **Trigger Pattern** - Шаблон, используемый датчиками коленвал/распредвала на двигателе. Полный список поддерживаемых шаблонов см. в разделе [Decoders](/decoders) page
 - **Primary Base teeth** - For patterns where the number of teeth are variable (missing tooth, dual wheel etc), this number represents the number of teeth on the primary wheel. For missing tooth type wheels, this number should be the count as if there were no teeth missing.
 - **Primary trigger speed** - The speed at which the primary input spins. It is closely related to the Primary Base teeth setting and indicates whether that number of teeth passes the sensor once every crank revolution or every cam revolution.
 - **Missing teeth** - If using the missing tooth pattern, this is the size of the gap, given in 'missing teeth'. Eg 36-1 has 1 missing tooth. 60-2 has 2 missing teeth etc. The missing teeth **MUST** be all located in a single block, there cannot be multiple missing tooth gaps around the wheel.
