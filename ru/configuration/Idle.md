@@ -2,7 +2,7 @@
 title: Холостой ход Idle
 description: 
 published: true
-date: 2021-01-03T05:22:04.797Z
+date: 2021-01-03T05:27:27.853Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:32:55.051Z
@@ -147,7 +147,7 @@ dateCreated: 2021-01-02T04:32:55.051Z
 {.is-info}
 
 
-* * * ПРИМЕЧАНИЕ: * * См.[Pololu video](https://www.pololu.com/product/2133/faqs) инструкции по установке максимального уровня тока привода DRV8825 для большинства полноступенчатых шаговых двигателей автомобилей. *
+*** ПРИМЕЧАНИЕ: ** См. [Pololu video](https://www.pololu.com/product/2133/faqs) инструкции по установке максимального уровня тока привода DRV8825 для большинства полноступенчатых шаговых двигателей автомобилей. *
 
 #### Примеры
 
@@ -156,21 +156,21 @@ dateCreated: 2021-01-02T04:32:55.051Z
 | GM 4-провода   | 3           | 250          |
 | DSM 4-провода  | 4           | 270-320      |
 
-***NOTE:** While normal DSM stepper function is seen at room temperatures at 3ms, step skipping occurs just under that speed. Very cold temperatures may cause skipping, thus the recommendation of 4ms. Test for the most suitable speeds for your setup.*
+* ** ПРИМЕЧАНИЕ: ** В то время как нормальная ступенчатая функция DSM видна при комнатной температуре в течение 3 мс, пропуск шага происходит как раз при этой скорости. Очень холодные температуры могут привести к пропуску, поэтому рекомендуется 4 мс. Протестируйте наиболее подходящие скорости для вашей установки *.
 
-### Stand-Alone (Non-Electronic)
+### Самостоятельные клапаны (не электронные)
 
-While not an idle control mode, Speeduino is compatible with stand-alone idle valves that are self-controlling. Examples of this are thermal wax or bi-metal spring idle or auxiliary air valves like the one below. Internally expanding and contracting material opens and closes air valves, providing increased air flow and engine rpm when cold for warmup. Speeduino functions to enrich the cold engine and adjust for the additional air, in the same way it would if you opened the throttle slightly.
+Несмотря на то, что Speeduino не работает в режиме холостого хода, он совместим с автономными клапанами холостого хода, которые являются саморегулируемыми. Примерами этого являются термический воск или двухметаллические пружинные клапаны холостого хода или вспомогательные воздушные клапаны, подобные приведенному ниже. Внутренний расширяющийся и сжимаемый материал открывает и закрывает воздушные клапаны, обеспечивая повышенный расход воздуха и частоту вращения двигателя при холоде для прогрева. Speeduino работает, чтобы обогатить холодный двигатель и настроить на дополнительный воздух, точно так же, если бы вы открыли дроссель слегка.
 
 <center><img src="http://i.imgur.com/I9Wc9p2.png" width="150px" /></center>
 
-Other examples of stand-alone valves are simple On/Off valves as shown in the next section, controlled by inexpensive thermal switches like these:
+Другими примерами автономных клапанов являются простые двухпозиционные клапаны, как показано в следующем разделе, управляемые недорогими термическими переключателями, такими как:
 
 <center><img src="http://i.imgur.com/YImLboR.png" width="150px" /> <img src="http://i.imgur.com/nHEt5a5.png" width="150px" /> <img src="http://i.imgur.com/E13Z9Op.png" width="150px" /></center>
 
-## Closed Loop Control
+## Управление по замкнутому контуру Closed Loop Control
 
-Closed loop idle control operates by setting RPM targets rather than configuring the duty cycle or steps directly. A PID algorithm is used and can be tuned to match the valve/motor that you are using. 
+Управление холостым ходом по замкнутому контуру осуществляется путем установки целевых значений частоты вращения вместо непосредственного конфигурирования рабочего цикла или шагов. Используется алгоритм PID, который может быть настроен на соответствие используемому клапану/двигателю.
 
 ### Closed loop settings
 
