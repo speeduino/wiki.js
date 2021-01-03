@@ -1,19 +1,19 @@
 ---
-title: IAT Density
+title: Плотность воздуха на впуске IAT Density
 description: 
 published: true
-date: 2021-01-02T04:31:35.795Z
+date: 2021-01-03T04:44:00.716Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:31:35.795Z
 ---
 
-# IAT Density
-## Overview
+# Плотность воздуха на впуске IAT Density
+## Обзор
 
-The IAT density curve represents the change in oxygen density of the inlet charge as temperature rises. 
+Кривая плотности IAT представляет изменение плотности кислорода на впуске при изменении температуры. 
 
 ## Example Curve
 ![iatDensity.png](/img/constants/iatDensity.png){.align-center width=400}
 
-This default curve approximately follows the ideal gas law and is suitable for most installations, however if you are seeing very high inlet temperatures (Either due to heat soak in the engine bay or from turbocharging) the you may need to adjust the hot end of this curve.
+Эта кривая по умолчанию примерно соответствует идеальному закону газа и подходит для большинства случаев, однако, если вы у вас очень высокие температуры на входе (из-за теплового нагрева в отсеке двигателя, или из-за турбонаддува), вам может потребоваться отрегулировать горячую часть этой кривой.
