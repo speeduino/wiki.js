@@ -1,8 +1,8 @@
 ---
-title: Idle advance
+title: Регулирование холостого хода опережением Idle advance
 description: Controlling idle speed with changes to advance
 published: true
-date: 2021-01-03T06:01:17.092Z
+date: 2021-01-03T06:02:03.774Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:33:55.933Z
