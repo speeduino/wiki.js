@@ -1,18 +1,18 @@
 ---
-title: Fuel pump
+title: Топливный насос Fuel pump
 description: Setting the on/off conditions of the fuel pump
 published: true
-date: 2021-01-02T04:30:32.916Z
+date: 2021-01-03T04:39:29.554Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:30:32.916Z
 ---
 
-# Fuel pump
-Fuel pump control is a simple but important function performed by the ECU. Currently Speeduino does not perform variable (PWM) pump control, but 
+# Топливный насос Fuel pump
+Управление топливным насосом является простой, но важной функцией, выполняемой ЭБУ. В настоящее время Speeduino не выполняет PWM управления насосом 
 
-## Settings
+## Настройки
 ![fuel_pump.png](/img/accessories/fuel_pump.png){.align-center width=480}
 
-* **Fuel pump pin** - The Arduino pin that the fuel pump output is on. In most cases this should be left to `Board Default` unless you have a specific reason to change this. 
-* **Prime duration** - How long (In seconds) the fuel pump should run when the system is first powered up. Note that this is triggered **when the ECU is powered on**, which will not always be the same as when the ignition is turned out. If you have a USB cable connected then the ECU is already powered up. 
+* **Fuel pump pin** - Контакт Arduino, на котором работает топливный насос. В большинстве случаев это должно быть оставлено на "Board Default", если у вас нет причины это изменить 
+* **Prime duration** - Как долго (в секундах) должен работать топливный насос при первом включении системы. Обратите внимание, что это срабатывает ** при включении ЭБУ **, что не всегда будет таким же, как при выключенном зажигании. При подключении кабеля USB блок ЭБУ уже включен. 
