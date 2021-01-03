@@ -1,24 +1,24 @@
 ---
-title: Subaru 36-2-2-2
+title: Реперный диск Субару Subaru 36-2-2-2
 description: 
 published: true
-date: 2021-01-02T06:58:37.737Z
+date: 2021-01-03T08:50:04.251Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T06:58:37.737Z
 ---
 
-## Subaru 36-2-2-2
+## Реперный диск Субару Subaru 36-2-2-2
 
-The 36-2-2-2 wheel is common on many 4 cylinder Subaru engines from approx. 2000 onwards. It utilises a crank trigger wheel containing a nominal 36 teeth, spaced 10 crank degrees apart, and 3 groups of 2 missing teeth. These missing tooth groupings allow for sync to be determined within at most 1/2 a crank turn.
+Колесо 36-2-2-2 распространено на многих 4 цилиндрических двигателях Subaru с ок. 2000 и далее. Оно использует кривошипно-спусковое колесо, содержащее номинальные 36 зубьев, отстоящих друг от друга на 10 градусов кривошипа и 3 группы из 2 отсутствующих зубьев. Эти недостающие группы зубьев позволяют определять синхронизацию в пределах не более 1/2 поворота кривошипа.
 
-Early wheels were VR triggered however after the switch to variable valve timing, Subaru switched to Hall sensors. Most configurations are paired with one or two 4-1 cam sensors, however these are not required for sync on Speeduino.
+Ранние колеса приводились в действие VR, однако после переключения на изменяемые фазы газораспределения Subaru переключилась на датчики Холла. Большинство конфигураций спарены с одним или двумя 4-1 кулачковыми датчиками, однако они не требуются для синхронизации на Speeduino.
 
-### Trigger Pattern
-The 3 sets of 2 missing teeth are located such that one group is on its own and the other two are located adjacent to one another, with a single tooth in between. Sync can be determined by detecting the missing 2 teeth, then seeing if there is another set of missing teeth immediately after it.
+### Шаблон реперного диска Trigger Pattern
+3 набора из 2 отсутствующих зубов расположены таким образом, что одна группа расположена сама по себе, а две другие расположены рядом друг с другом, между которыми расположен один зуб. Синхронизацию можно определить, обнаружив отсутствующие 2 зуба, а затем увидев, есть ли другой набор отсутствующих зубов сразу после него.
 
-Cylinder 1 TDC compression happens on the fourth tooth after the single gap. Speeduino watches for any missing tooth period, then waits to confirm whether it is followed by another. Sync can therefore be determined in this manner at 2 points in a single crank revolution.
+Сжатие ВМТ в цилиндре 1 происходит на четвертом зубе после одиночного зазора. Speeduino наблюдает за любым отсутствующим периодом зуба, затем ждет, чтобы подтвердить, следует ли за ним другой. Поэтому синхронизация может быть определена таким образом в 2 точках при одном вращении кривошипа.
 
 ![36-2-2-2.png](/img/decoders/36-2-2-2.png){.align-center width=90%}
 
-**Note:** Many diagrams and trigger wheel images available online show the wheel from the backside, making it show as rotating counter clockwise. For the correct orientation, when looking at the front of the engine, the wheel spins clockwise.
+**Примечание:** Многие диаграммы и изображения триггерных колес, доступные в Интернете, показывают колесо с задней стороны, что делает его вращающимся против часовой стрелки. Для правильной ориентации при взгляде на переднюю часть двигателя колесо крутится по часовой стрелке.
