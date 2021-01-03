@@ -1,50 +1,51 @@
 ---
-title: Spark Settings
+title: Настройка зажигания Spark Settings
 description: Configuration options for the ignition outputs
 published: true
-date: 2021-01-02T04:42:38.347Z
+date: 2021-01-03T09:14:21.374Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:42:38.347Z
 ---
 
-# Spark Settings
-## Overview
-The Spark settings dialog contains the options for how the ignition outputs will function, including which of the 4 IGN outputs are used and how. They are critical and incorrect values will result in an engine not starting and in some cases damage to hardware is possible. This dialog also contains a number of options for fixing the ignition timing for testing and diagnosis.
+# Настройка зажигания Spark Settings
+## Обзор
 
-Please ensure you have reviewed these settings prior to attempting to start your engine.
+Диалоговое окно "Spark settings" (Настройки искры) содержит параметры функционирования выходов зажигания, в том числе, какие из 4 выходов IGN используются и как. Они критичны, и неправильные значения приводят к тому, что двигатель не запускается, и в некоторых случаях возможно повреждение оборудования. В этом диалоговом окне также содержится ряд вариантов фиксации опережения зажигания для тестирования и диагностики.
 
-To generate a base timing map that will give you better numbers than the default map from speedy loader there are several tools online like: http://www.useasydocs.com/theory/spktable.htm use them at your own risk and always listen for pre-detonation / knocking. It is best to tune the spark tables on a rolling road or dyno. 
+Проверьте эти параметры перед запуском двигателя.
 
-## Settings
+Чтобы создать базовую карту синхронизации, которая даст вам лучшие числа, чем карта по умолчанию от быстрого загрузчика есть несколько инструментов онлайн, как: http://www.useasydocs.com/theory/spktable.htm использовать их на свой страх и риск и всегда слушать преддетонацию / детонацию. Лучше всего настраивать зажигание на трассе или диностенде.
+
+## Настройки
 ![spark_settings.png](/img/ignition/spark_settings.png){.align-center width=500}
 
-- **Spark Output mode** - Determines how the ignition pulses will be outputted and is very specific to your ignition wiring. **Note that no matter which option is selected here, ignition signals ALWAYS fire in numerical order (ie 1-&gt;2-&gt;3-&gt;4) up to the maximum number of outputs**. The firing order of the engine is accounted for in the wiring order.
-    - **Wasted Spark** - Number of ignition outputs is equal to half the number of cylinders and each output will fire once every crank revolution. One spark will therefore take place during the compression stroke and the other on the exhaust stroke (aka the 'wasted' spark). This method is common on many 80s and 90s vehicles that came with specific wasted spark coils, but can also be used with individual coils that are wired in pairs. Wasted spark will function with only a crank angle reference (Eg a missing tooth crank wheel with no cam signal)
-    - **Single Channel** - This mode sends all ignition pulses to IGN1 output and is used when the engine contains a distributor (Typically with a single coil). The number of output pulses per (crank) revolution is equal to half the number of cylinders.
-    - **Wasted COP** - This is a convenience mode that uses the same timing as the 'Wasted Spark' option, however each pulse is sent to 2 ignition outputs rather than one. These are paired IGN1/IGN3 and IGN2/IGN4 (ie When IGN1 is high, IGN3 will also be high). As this is still a wasted spark timing mode, only crank position is required and there will be 1 pulse per pair, per crank revolution. This mode can be useful in cases where there are 4 individual coils, but running full sequential is either not desired or not possible (Eg when no cam reference is available).
-    - **Sequential** - This mode is only functional on engines with 4 or fewer cylinders.
-    - **Rotary** - See below for full detail
-- **Cranking advance** - The number of absolute degrees (BTDC) that the timing will be set to when cranking. This overrides all other timing advance modifiers during cranking.
--   **Spark output triggers** - <font color='red'>**THIS IS A CRITICAL SETTING!**</font> Selecting the incorrect option here can cause damage to your igniters or coils. Specifies whether the coil will fire when the ignition output from Speeduino goes HIGH or goes LOW. The VAST majority of ignition setups will require this to be set **GOING LOW** (ie the coil charges/dwells when the signal is high and will **fire** when that signal goes low). Whilst GOING LOW is required for most ignition setups, there are some configurations that perform the dwell timing on the ignition module and fire the coil only when they receive a HIGH signal from the ECU.
--   **Fixed Angle** - This is used to lock the ignition timing to a specific angle for testing. Setting this to any value other than 0 will result in that exact angle being used (ie overriding any other settings) at all RPMs/load points, except during cranking (Cranking always uses the above Cranking Advance setting). This setting should be set to 0 for normal operation.
+- **Spark Output mode** - Определяет, как будут выводиться импульсы зажигания, и зависит от вашей проводки зажигания. **Обратите внимание, что независимо от того, какая опция выбрана здесь, сигналы зажигания ВСЕГДА горят в числовом порядке (ie 1-&gt;2-&gt;3-&gt;4) до максимального количества выходов**. Порядок зажигания двигателя учитывается в порядке разводки.
+    - **Wasted Spark** - Потраченная впустую искра. Количество выходов зажигания равно половине числа цилиндров и каждый выход будет срабатывать один раз за каждый оборот кривошипа. Поэтому одна искра будет иметь место во время такта сжатия, а другая - во время такта выпуска (она же "потраченная впустую" искра). Этот метод распространён на многих транспортных средствах 80-х и 90-х годов, которые поставлялись с конкретными отработанными искровыми катушками, но также могут использоваться с отдельными катушками, которые проводятся попарно. Отработанная искра будет работать только с эталоном угла поворота кривошипа (например, отсутствующее зубчатое кривошипное колесо без сигнала кулачка)
+    - **Single Channel** - Одноканальный. Этот режим посылает все импульсы зажигания на IGN1 выход и используется, когда двигатель содержит распределитель (обычно с одной катушкой). Количество выходных импульсов на (кривошип) оборот равно половине числа цилиндров.
+    - **Wasted COP** - Это удобный режим, в котором используется та же синхронизация, что и в опции "Wasted Spark", однако каждый импульс посылается на 2 выходы зажигания, а не на один. Это парные IGN1/IGN3 и IGN2/IGN4 (то есть, когда IGN1 высокий, IGN3 также будет высоким). Поскольку этот режим по-прежнему является бесполезным, требуется только положение кривошипа, и на один оборот кривошипа будет приходиться 1 импульс на пару. Этот режим может быть полезен в тех случаях, когда имеется 4 отдельных катушки, но полная последовательная работа либо не желательна, либо невозможна (например, когда отсутствует ссылка на кулачок).
+    - **Sequential** - Последовательный - этот режим работает только на двигателях с 4 или менее цилиндрами (8 для платы Dropbear).
+    - **Rotary** - Ванкели. Подробную информацию см. ниже.
+- **Cranking advance** - Опережение при запуске - число абсолютных градусов (BTDC), на которые устанавливается синхронизация при прокрутке. Это переопределяет все другие модификаторы опережения синхронизации во время запуска.
+-   **Spark output triggers** - <font color='red'>**ЭТО КРИТИЧЕСКАЯ НАСТРОЙКА!**</font> Выбор неправильной опции может привести к повреждению воспламенителей или катушек. Определяет, будет ли катушка срабатывать, когда выходной сигнал зажигания Speeduino становится ВЫСОКИМ или НИЗКИМ. Для ПОДАВЛЯЮЩЕГО большинства установок зажигания требуется установка **НИЗКИЙ УРОВЕНЬ** (т.е. зарядка/остановка катушки при высоком сигнале и ** искра ** при низком сигнале). В то время как для большинства установок зажигания требуется GOING LOW, существуют некоторые конфигурации, которые выполняют задержку синхронизации на модуле зажигания и зажигают катушку только тогда, когда они принимают сигнал HIGH от ECU.
+-   **Fixed Angle** - Фиксированный угол. Используется для фиксации момента зажигания до определенного угла для испытания. Установка этого значения на любое значение, отличное от 0, приведет к использованию этого точного угла (т.е. к переопределению любых других настроек) при всех оборотах/точках нагрузки, за исключением случаев, когда выполняется прокрутка (при прокрутке всегда используется вышеупомянутая настройка "Опережение прокрутки"). Для нормальной работы этот параметр должен иметь значение 0.
 
-### Rotary modes
+### Зажигание для Ванкелей Rotary modes
 ![rotary_settings.png](/img/ignition/rotary_settings.png){.align-center width=450}
 
-Speeduino supports the ignition configurations found on FC/FD RX7 and RX8 engines and this option becomes avaialble when the Rotary ignition mode is selected above. The leading / trailing split angle can be set as a function of the current engine load.
+Speeduino поддерживает конфигурации зажигания, найденные в двигателях FC/FD RX7 и RX8, и эта опция становится доступной, когда режим зажигания Rotary выбран выше. Передний/задний угол разделения может быть установлен как функция текущей нагрузки двигателя.
 
-- **FC** - Outputs are configured for the Leading/Trailing setup that was used on FC RX7s. Wiring is:
-  - **IGN1** - Leading (wasted) sparks
+- **FC** - Выходные данные конфигурируются для настройки Leading/Trailing, которая использовалась в FC RX7s. Проводка:
+  - **IGN1** - Leading (wasted) sparks Ведущие (потраченные впустую) искры
   - **IGN2** - Trailing spark
   - **IGN3** - Trailing select
   - **IGN4** - Not used
-- **FD** - Uses the same wasted spark signal for both leading sparks as FC, but individual signals for the trailing sparks. Wiring is:
-  - **IGN1** - Leading (wasted) sparks
+- **FD** - Использует один и тот же отработанный искровой сигнал для обоих ведущих искр, как FC, но отдельные сигналы для задних искр. Проводка:
+  - **IGN1** - Leading (wasted) sparks Ведущие (потраченные впустую) искры
   - **IGN2** - Front rotor trailing
   - **IGN3** - Rear rotor trailing
   - **IGN4** - Not used
-- **RX8** - Individual outputs are used for each spark signal. Wiring is:
+- **RX8** - Для каждого искрового сигнала используются отдельные выходы. Проводка:
   - **IGN1** - Front rotor leading
   - **IGN2** - Rear rotor leading
   - **IGN3** - Front rotor trailing
