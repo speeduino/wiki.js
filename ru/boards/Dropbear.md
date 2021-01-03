@@ -1,8 +1,8 @@
 ---
-title: Dropbear
+title: Самая новая плата Dropbear
 description: 
 published: true
-date: 2021-01-02T11:26:15.669Z
+date: 2021-01-03T09:33:19.316Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:10:43.264Z
