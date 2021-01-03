@@ -1,16 +1,16 @@
 ---
-title: VSS and Gear Detection
+title: Определение оборотов колеса и передачи VSS and Gear Detection
 description: 
 published: true
-date: 2021-01-02T04:48:14.362Z
+date: 2021-01-03T07:22:12.342Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:48:14.362Z
 ---
 
-# VSS and Gear Detection
-Speeduino contains a 2 step nitrous control system for controlling valves and making fueling adjustments for dry setups. 
-The 2 stages operate independantly and can overlap (ie both run at the same time) if needed. 
+# Определение оборотов колеса и передачи VSS and Gear Detection
+Speeduino содержит систему управления азотом в 2 ступени для управления клапанами и регулировки заправки для сухих установок.
+2 этапа работают независимо и могут перекрываться (то есть оба выполняются одновременно), если это необходимо. 
 
 ![VSS Configuration dialog](/img/accessories/vss_settings.png){.align-center width=450}
 
