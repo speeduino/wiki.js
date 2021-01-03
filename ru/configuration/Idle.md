@@ -1,26 +1,30 @@
 ---
-title: Idle
+title: Холостой ход Idle
 description: 
 published: true
-date: 2021-01-02T04:32:55.051Z
+date: 2021-01-03T05:22:04.797Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:32:55.051Z
 ---
 
-# Idle Control
-## Overview
-The idle control outputs are used to alter the state of an idle control valve to increase the amount of air entering the engine at idle. These come in multiple types (Described below) and each is configured and tuned differently. 
+# Управление Холостым ходом Idle Control
+## Обзор
+Выводы управления холостым ходом используются для изменения состояния клапана управления холостым ходом для изменения количества воздуха, поступающего в двигатель на холостом ходу. Они поставляются в нескольких типах (описаны ниже), каждый из которых конфигурируется и настраивается по-разному. 
 
-Open and closed loop idle control is available for both PWM and Stepper based idle valves. 
+Управление холостым ходом по открытому и замкнутому контуру доступно как для клапанов холостого хода ШИМ, так и для лапанов холостого хода на шаговых моторах. 
 
-## Compatible Idle Valve Types
+## Совместимые типы клапанов холостого хода
 
-There are currently 3 modes of idle control available, using on/off, PWM duty cycle, or a stepper step count, enabled below a set coolant temperature. These modes cover the most common types of idle mechanisms in use. 
+В настоящее время доступны 3 режима управления холостым ходом
+- с использованием включения/выключения
+- ШИМ регулированием
+- на шаговых моторах.
+Это охватывают наиболее распространенные типы используемых механизмов.
 
-### On/Off (aka Fast Idle)
+### С использованием включения/выключения On/Off (aka Fast Idle)
 
-This is a simple digital on/off "switch" output by Speeduino that triggers at a selected temperature. It is intended to control an on/off fast idle valve as found in many older OEM setups, or an open/closed solenoid-type valve that is chosen for the purpose. In addition to OEM idle valves, examples of valves popular for re-purposing as on/off idle valves are larger vacuum, breather, or purge valves, and even fuel valves. Idle speed adjustment is generally set only once, with an in-line adjustable or fixed restrictor, pinch clamp, or other simple flow-control method.
+Это простой цифровой "переключатель" на выходе Speeduino, который срабатывает при выбранной температуре. Он предназначен для управления включенным/выключенным быстродействующим клапаном, как во многих старых установках OEM, или открытым/закрытым электромагнитным клапаном, который выбран для этой цели. В дополнение к нерабочим клапанам OEM, примерами клапанов, популярных для повторного использования в качестве двухпозиционных нерабочих клапанов, являются большие вакуумные, дыхательные или продувочные клапаны и даже топливные клапаны. Регулировка скорости холостого хода обычно устанавливается только один раз с помощью встроенного или фиксированного ограничителя, зажимного зажима или другого простого способа управления потоком.
 
 <center>
 <img src="http://i.imgur.com/yu5YIbY.png" width="150px" />
@@ -30,127 +34,127 @@ This is a simple digital on/off "switch" output by Speeduino that triggers at a 
 <img src="http://i.imgur.com/wUvNNwm.png?1" width="150px" />
 </center>
 
-*Note: On/Off valves can be used in many ways to increase or decrease air flow for various idle purposes in-addition to warm-up. Examples are use as dashpot valves to reduce deceleration stalling, idle speed recovery for maintaining engine speed with accessory loads such as air conditioning, or air addition for specific purposes such as turbo anti-lag air control. See [Generic Outputs](Generic_Outputs "wikilink") for control information.*
+*Замечание: Двухпозиционные клапаны могут использоваться многими способами для увеличения или уменьшения расхода воздуха для различных целей простоя в дополнение к прогреву. Примерами являются использование в качестве заслоночных клапанов для уменьшения остановки замедления, восстановление скорости холостого хода для поддержания частоты вращения двигателя с дополнительными нагрузками, такими как кондиционирование воздуха, или добавление воздуха для конкретных целей, таких как управление турбо-замедленным воздухом. Посмотрите [Generic Outputs](Generic_Outputs "wikilink") для информации.*
 
-### PWM
+### ШИМ регулирование PWM
 
-While similar in construction to many solenoid on/off valves; [PWM](https://www.arduino.cc/en/Tutorial/PWM) idle valves are designed to vary the opening, and therefore flow through the valve, by PWM valve positioning.
+По конструкции аналогичен многим электромагнитным двухпозиционным клапанам; [PWM](https://www.arduino.cc/en/Tutorial/PWM) клапаны холостого хода предназначены для изменения открытия и, следовательно, потока через клапан путем установки клапана ШИМ.
 
-These valves are opened and closed by varying the duty cycle of signal sent to them. 
+Эти клапаны открываются и закрываются путем изменения рабочего цикла подаваемого на них сигнала. 
 
-> **Note:** As a fail-safe, some PWM idle valves default to a partially-open state when they are disconnected or are receiving 0% duty cycle. They will close then re-open with increasing PWM DC%, so be sure to research or test your valve type for proper operation.
+> ** Примечание: ** В качестве отказоустойчивого устройства некоторые неактивные клапаны ШИМ по умолчанию находятся в частично открытом состоянии, когда они отключены или получают рабочий цикл 0%. Они закроются, а затем снова откроются с увеличением PWM DC%, поэтому обязательно изучите или протестируйте тип клапана для правильной работы.
 {.is-info}
 
 
-#### PWM Settings
+#### ШИМ настройки PWM Settings
 
-Settings in TunerStudio include selecting PWM idle control, temperature and DC settings for warmup, and PWM DC during cranking under the following selections:
+Настройки в TunerStudio включают выбор управления холостым ходом ШИМ, настройки температуры и постоянного тока для прогрева и ШИМ постоянного тока во время прокрутки при следующих вариантах выбора:
 
 ![Example PWM idle settings](/img/idle/pwm_menu.png){.align-center width=350}
 
-The '*Idle - PWM Duty Cycle*' and '*Idle - PWM Cranking Duty Cycle*' options will only be available when '*PWM Open Loop*' is selected in the Idle Control options
+'*Idle - PWM Duty Cycle*' и '*Idle - PWM Cranking Duty Cycle*' опции доступны только если '*PWM Open Loop*' выбран в параметрах управления холостым ходом
 
-Under Idle control type, PWM is selected:
+В разделе Тип управления в режиме холостого хода, выбран PWM:
 
 ![Example PWM idle settings](/img/idle/pwm_settings.png){.align-center width=400}
 
-The temperature-versus-DC is selected under the Idle - PWM Duty Cycle selection. Note the relationship between temperature and PWM DC can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
+Температура по отношению к постоянному току выбирается при выборе "Idle - PWM Duty Cycle". Обратите внимание, что взаимосвязь между температурой и ШИМ DC может быть изменена простым перемещением синих точек на кривой или выбором таблицы для ручного ввода, как показано здесь:
 
 ![Example PWM idle curve](/img/idle/pwm_curve.png){.align-center width=400}
 
-Some engines prefer additional airflow during cranking for a reliable start. This air can be automatically added only during cranking by using the Idle - PWM Cranking Duty Cycle settings. Once the engine starts and rpm rise above the set maximum cranking rpm, the idle control switches to the previous warmup settings. Note the relationship between coolant temperature during cranking and PWM DC can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
+Некоторые двигатели предпочитают дополнительный воздушный поток при прокрутке для надежного запуска. Этот воздух может быть автоматически добавлен только во время прокрутки с помощью настроек Idle - PWM Cranking Duty Cycle. После запуска двигателя и повышения частоты вращения выше установленной максимальной частоты вращения прокрутки регулятор малого газа переключается на предыдущие настройки прогрева. Обратите внимание, что зависимость между температурой хладагента во время прокрутки и PWM DC может быть изменена простым перемещением синих точек на кривой или выбором таблицы для ручного ввода, как показано здесь:
 
 ![Example PWM cranking curve](/img/idle/pwm_cranking_curve.png){.align-center width=400}
 
-> ***NOTE:** Every engine, valve type and tune is different. Suitable settings must be determined by the tuner. Do not infer any tuning settings from the images in this wiki. They are only examples.*
+> *** ПРИМЕЧАНИЕ: ** Каждый двигатель, тип клапана и конфигурация различны. Соответствующие настройки должны определяться вами. Не выводите параметры настройки из изображений этого вики-сайта. Это лишь примеры.*
 {.is-warning}
 
-##### 2 wire vs 3 wire valves
+##### 2 и 3 проводные клапаны
 
-Both 2 and 3 wire PWM idle controllers are supported. In general, the 3 wire models will provide a smoother response than the 2 wire ones, but the difference is not always significant. For 3 wire valves, 2 of the Aux outputs will be required.
+Поддерживаются как 2-проводные, так и 3-проводные ШИМ контроллеры. Как правило, модели проводов 3 обеспечивают более гладкую реакцию, чем модели проводов 2, но разница не всегда существенна. Для 3 проводных клапанов потребуется 2 выхода Aux.
 
 <center>
 <img src="http://i.imgur.com/QfDesZC.png" width="150px" />
 </center>
 
-### Stepper Motors
+### Шаговые моторы Stepper Motors
 
-Stepper motor idle controls are very common on GM and other OEM setups. These motors typically have 4 wires (bi-polar). They must be driven through power transistors or a driver module, such as the [DRV8825 stepper motor driver](https://www.pololu.com/product/2133) optional to the v0.4 board. These driver modules can be purchased inexpensively from a variety of vendors on sites such as eBay, Amazon, etc.
+Управление холостым ходом шагового двигателя очень распространено в GM и других заводских исполнениях. Эти двигатели обычно имеют 4 провода (биполярные). Они должны приводиться в действие через силовые транзисторы или модуль драйвера, например [DRV8825 stepper motor driver](https://www.pololu.com/product/2133) опционально для платы v0.4. Эти модули драйверов можно приобрести недорого у различных поставщиков на таких сайтах, как eBay, Amazon и т.д..
 
-Most stepper idle valves function by turning a threaded rod in and out of the valve body in a series of partial-turn steps, increasing or decreasing airflow around the plunger (on end of valve below), and into the engine. The idle airflow bypasses the primary throttle body:
+Большинство шаговых клапанов холостого хода функционируют, поворачивая резьбовой шток в корпус клапана, увеличивая или уменьшая воздушный поток. Воздушный поток обходит корпус первичного дросселя:
 
 <center><img src="http://i.imgur.com/ZAhTLrs.png" width="150px" /></center>
 
-Example of a generic DRV8825 driver module on a v0.4 board:
+Пример универсального модуля драйвера DRV8825 на плате v0.4:
 
 <center><img src="http://i.imgur.com/nHMXFNK.png" width="150px" /></center>
 
-Note the board is mounted at a standoff for air circulation and cooling:
+Обратите внимание, что плата установлена в стойке для охлаждения воздухом:
 
 <center><img src="http://i.imgur.com/L65i6z1.png" width="150px" /></center>
 
-The DRV8825 motor outputs are labeled as A2-A1-B1-B2, and the wiring connection examples are to this labeling. Check your schematics for the output connections that route to these DRV8825 outputs:
+Выходы DRV8825 двигателя помечены как A2-A1-B1-B2, и примеры подключения проводов относятся к этой маркировке. Проверьте схемы на наличие выходных соединений, которые направляются к этим DRV8825 выходам:
 
 <center><img src="http://efistuff.orgfree.com/images/DRV8825_Motor_Wiring.png" width="150px" /></center>
 
-Examples of wiring to the DRV8825 driver:
+Примеры проводки к драйверу DRV8825:
 
 <center><img src="http://efistuff.orgfree.com/images/IAC_DSM_95-99.png" width="150px" /></center>
 
-The GM "screw-in" style used 1982 to 2003 on many models:
+Стиль GM "прикрутить" использовался с 1982 по 2003 год на многих моделях:
 
 <center><img src="http://efistuff.orgfree.com/images/IAC_GM_82-03.png" width="150px" /></center>
 
-#### Stepper Driver Current Adjustment
+#### Регулировка тока шагового драйвера Stepper Driver Current Adjustment
 
-The DRV8825 stepper driver module includes a potentiometer (adjustable resistor) indicated by the yellow arrow in the image below. The potentiometer is used for setting the driver's maximum current output limit. Because Speeduino uses full-step operation, the current limit is not critical to protect the module, but should be adjusted to the module's maximum value for best operation of most automotive stepper IACs.
+Модуль DRV8825 шагового привода включает потенциометр (регулируемый резистор), обозначенный желтой стрелкой на рисунке ниже. Потенциометр используется для установки максимального предела тока на выходе драйвера. Поскольку Speeduino использует полноступенчатую работу, текущий предел не является критическим для защиты модуля, а должен быть скорректирован в соответствии с максимальным значением модуля для лучшей работы большинства автомобильных шаговых IAC.
 
 <center><img src="http://i.imgur.com/1U3IQgF.jpg" width="150px" /></center>
 
-You will need a multi-meter or volt-meter to make the adjustment as outlined here. In order to set the potentiometer to maximum current before first use, ensure power to the module is OFF, then gently turn the potentiometer dial clockwise to the internal limit. **Do not force the adjustment beyond the internal stop.** Power-up Speeduino with 12V, and use the meter to test the voltage between the center of the potentiometer and any 12V ground point. Note the voltage reading. Power-down and repeat the test, this time turning the potentiometer counter/anti-clockwise gently to the internal limit. The test direction that resulted in higher voltage is the correct setting for the module.
+Вам понадобится мультиметр или вольтметр, чтобы выполнить настройку, как описано здесь. Чтобы установить максимальный ток потенциометра перед первым использованием, убедитесь, что питание модуля выключено, затем осторожно поверните линейку потенциометра по часовой стрелке до внутреннего предела. ** Не нажимайте регулировку за пределы внутренней остановки. ** Включите Speeduino с 12V, и используйте измеритель для проверки напряжения между центром потенциометра и любой 12V точкой заземления. Обратите внимание на показания напряжения. Выключите питание и повторите испытание, на этот раз повернув потенциометр против часовой стрелки до внутреннего предела. Направление тестирования, приведшее к повышению напряжения, является правильной настройкой для модуля.
 
-*Note: Original Pololu modules are typically adjusted clockwise for maximum voltage. However, clone modules may be either clockwise or counter-clockwise, which makes this testing necessary.*
+*Примечание.Исходные модули Pololu обычно настраиваются по часовой стрелке для максимального напряжения. Однако модули клонов могут быть по часовой стрелке или против часовой стрелки, что делает это тестирование необходимым.*
 
-The module's rated *continuous* current is up to 1.5A. While the module can supply a peak of 2.2A of current; in full-step mode and with the potentiometer adjusted to this position, the driver is limited to approximately 70% of full current, or approximately 1.5A.
+Номинальный * непрерывный * ток модуля составляет до 1.5A. В то время как модуль может подавать максимум 2.2A тока; в полноступенчатом режиме и с потенциометром, отрегулированным в этом положении, драйвер ограничен приблизительно 70% полного тока, или приблизительно 1.5A.
 
-#### Stepper Settings
+#### Настройки шагового Stepper Settings
 
-Settings in TunerStudio include selecting stepper idle control, temperature and step settings for warmup, and open steps during cranking under the following selections:
+Настройки в TunerStudio включают выбор шагового управления холостым ходом, температуры и ступенчатых настроек для прогрева, а также открытие шагов во время прокрутки при следующих вариантах выбора:
 
 <center>
 <img src="http://i.imgur.com/hC15oxv.png" width="450px" />
 </center>
 
-Under Idle control type, stepper is selected. The basic stepper operational settings are also located in this window:
+В разделе Тип управления в режиме ожидания выбран клапан на шаговом приводе. В этом окне также находятся основные рабочие настройки клапана.:
 
 ![Stepper idle settings](/img/idle/stepper.png){.align-center width=350}
 
-* **Step time:** This is how long (in ms) that the motor requires to complete each step. If this is set too low, the idle motor will not have completed the step before the ECU tries to make the next one, which leads to the motor 'twitching' and not functioning correctly. If this is set longer than needed the system will take longer to make each adjustment and the overall idle response will be slower. Typical values are usually 2ms - 4ms. The common GM stepper motor requires 3ms.
-* **Cool time:** Some motors require a slight pause in between steps in order to function correctly. This is know as the 'cooling' time. Typically this value will be less than 4ms at the most, with many motors operating normally with no cooling period (0ms)
-* **Home Steps:** Stepper motors must be 'homed' before they can be used so the that ECU knows their current position. You should set this to the maximum number of steps that the motor can move.
-* **Minimum steps:** In order to allow a smooth idle that isn't continually fluctuating, the ECU will only move the motor if at least this many steps are required. Typical values are in the 2-6 range, however if you have a noisy coolant signal line, this value may need to be increased.
-* **Don't exceed:** In order to prevent the stepper motor attempting to move beyond it's maximum range, this is a limit placed on the total number of steps that will be made. The value in this field must always be lower than the number of homing steps
+* **Step time:** Именно столько времени (в мс) требуется двигателю для выполнения каждого шага. Если это установлено слишком низко, холостой двигатель не завершит этап, прежде чем ЭБУ попытается сделать следующий, что приводит к "подергиванию" двигателя и его неправильной работе. Если этот параметр установлен дольше, чем требуется, то для каждой корректировки потребуется больше времени, и общая реакция на бездействие будет более медленной. Типичные значения обычно составляют 2-4 мс. Общий шаговый двигатель GM требует 3 мс.
+* **Cool time:** Для правильной работы некоторых двигателей требуется небольшая пауза между шагами. Это известно как "время охлаждения." Обычно это значение составляет не более 4 мс, при этом многие двигатели работают нормально без периода охлаждения (0 мс).
+* **Home Steps:** Шаговые двигатели должны быть "установлены" перед их использованием, чтобы блок пиролиза знал их текущее положение. Необходимо установить максимальное количество шагов, которое может быть перемещено двигателем.
+* **Minimum steps:** Для обеспечения плавного холостого хода, который постоянно не колеблется, ЭБУ перемещает двигатель только в том случае, если требуется, по меньшей мере, такое количество шагов. Типичные значения находятся в диапазоне 2-6, однако при наличии шумной сигнальной линии жидкости охлаждения это значение может потребоваться увеличить.
+* **Don't exceed:** Чтобы предотвратить попытку шагового двигателя выйти за пределы максимального диапазона, это ограничение накладывается на общее количество шагов, которые будут выполнены. Значение в этом поле всегда должно быть меньше количества шагов наведения
 
-The temperature-versus-steps is selected under the Idle - Stepper Motor selection. Note the relationship between temperature and motor steps can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
+Зависимость температуры от шагов выбирается при выборе "Холостой ход - шаговый двигатель". Обратите внимание, что взаимосвязь между температурой и шагами двигателя может быть изменена простым перемещением синих точек на кривой или выбором таблицы для ручного ввода, как показано здесь:
 
 ![Example stepper idle curve](/img/idle/stepper_curve.png){.align-center width=400}
 
-Some engines prefer additional airflow during cranking for a reliable start. This air can be automatically added only during cranking by using the Idle - Stepper Motor Cranking settings. Once the engine starts and rpm rise above the set maximum idle rpm, the idle control switches to the previous warmup settings. Note the relationship between coolant temperature during cranking and motor steps can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
+Некоторым двигателям предпочительно добавить дополнительный воздушный поток при прокрутке стартером для надежного запуска. Этот воздух может быть автоматически добавлен только во время прокрутки с помощью настроек Idle - Stepper Motor Cranking. После запуска двигателя и повышения частоты вращения выше установленной максимальной частоты вращения холостого хода регулятор холостого хода переключается на предыдущие настройки прогрева. Обратите внимание, что зависимость между температурой хладагента во время прокрутки и шагов двигателя может быть изменена простым перемещением синих точек на кривой или выбором таблицы для ручного ввода, как показано здесь:
 
 ![Example cranking stepper curve](/img/idle/stepper_curve_cranking.png){.align-center width=400}
 
-> ***NOTE:** Every engine, valve type and tune is different. Suitable settings must be determined by the tuner. Do not infer any tuning settings from the images in this wiki. They are only random examples.*
+> *** ПРИМЕЧАНИЕ: ** Каждый двигатель, тип клапана и конфигурация различны. Соответствующие настройки должны определяться тюнером. Не выводите параметры настройки из изображений этого вики-сайта. Это лишь случайные примеры.*
 {.is-info}
 
 
-***NOTE:** Refer to the [Pololu video](https://www.pololu.com/product/2133/faqs) for instructions to set the DRV8825 driver current level to maximum for most automotive full-step stepper motors.*
+* * * ПРИМЕЧАНИЕ: * * См.[Pololu video](https://www.pololu.com/product/2133/faqs) инструкции по установке максимального уровня тока привода DRV8825 для большинства полноступенчатых шаговых двигателей автомобилей. *
 
-#### Examples
+#### Примеры
 
-| Motor      | Step time | Home steps |
-|------------|-----------|------------|
-| GM 4-wire  | 3         | 250        |
-| DSM 4-wire | 4         | 270-320    |
+| Шаговый        | время шага  | число шагов  |
+|----------------|-------------|--------------|
+| GM 4-провода   | 3           | 250          |
+| DSM 4-провода  | 4           | 270-320      |
 
 ***NOTE:** While normal DSM stepper function is seen at room temperatures at 3ms, step skipping occurs just under that speed. Very cold temperatures may cause skipping, thus the recommendation of 4ms. Test for the most suitable speeds for your setup.*
 
