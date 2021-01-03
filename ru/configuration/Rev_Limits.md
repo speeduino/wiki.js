@@ -1,14 +1,14 @@
 ---
-title: Ограничители Limiters
+title: Ограничение максимальных оборотов Limiters
 description: Configuring engine protection limiters
 published: true
-date: 2021-01-03T06:56:22.151Z
+date: 2021-01-03T06:56:57.242Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:37:22.043Z
 ---
 
-# Ограничители Limiters
+# Ограничение оборотов Limiters
 
 Speeduino может ограничивать обороты как жестко так и мягко.
 
