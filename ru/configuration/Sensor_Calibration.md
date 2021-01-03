@@ -2,7 +2,7 @@
 title: Калибровка датчиков Sensor Calibration
 description: Steps for calibrating all analog sensor inputs
 published: true
-date: 2021-01-03T06:57:56.292Z
+date: 2021-01-03T07:18:55.111Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:41:37.772Z
@@ -10,73 +10,73 @@ dateCreated: 2021-01-02T04:41:37.772Z
 
 # Калибровка датчиков Sensor Calibration
 
-Before your Speeduino can correctly interpret the signals from the sensors, it must know which sensors you are using. Inputting this information into TunerStudio (TS) writes the correct calibration to your Speeduino. It is necessary to perform this step before you can effectively check your Speeduino build. Note that this is not tuning your system, but only telling it how to understand the signals from the sensors.
+Прежде чем Speeduino сможет правильно интерпретировать сигналы от датчиков, он должен знать, какие датчики вы используете. При вводе этой информации в TunerStudio (TS) выполняется правильная калибровка в Speeduino. Необходимо выполнить этот шаг перед эффективной проверкой сборки Speeduino. Обратите внимание, что это не настраивает вашу систему, а только подсказывает, как понимать сигналы от датчиков.
 
-This should be completed after completing the Settings for your engine. Your computer must be connected to your Speeduino through TS to perform the calibrations.
+Это должно быть выполнено после завершения настройки для вашего обработчика. Для выполнения калибровки компьютер должен быть подключен к Speeduino через Tuner Studio.
 
-## MAP Sensor
+## Датчик давления воздуха MAP Sensor
 
-Open the **Tools** menu: tools_menu
+Откройте **Tools** меню:
 
 ![tools_menu.png](/img/tuning/tools_menu.png){.align-center width=400}
 
-Select **Calibrate Pressure Sensors**, the window below will open:
+Выберите **Calibrate Pressure Sensors**, окроется окно:
 
 ![MAP_calibration.png](/img/tuning/MAP_calibration.png){.align-center width=400}
 
-Select your MAP Sensor from the drop down list. If you used the MAP sensor in the bill of materials, this will be the MPX4250A. If you are using another MAP or one from the engine manufacturer, select it from the list. Click **Burn** to send the information to your Speeduino.
+Выберите MAP Sensor из раскрывающегося списка. Если в спецификации использовался датчик MAP, это будет MPX4250A. Если используется другой MAP или от производителя двигателя, выберите его из списка. Нажмите * * Записать * *, чтобы отправить информацию в Speeduino.
 
-If used, the external Baro and EMAP (exhaust pressure) sensors can be calibrated in the same manner. 
+При использовании внешние датчики Baro и EMAP (давление выхлопа) могут быть откалиброваны таким же образом. 
 
 
-## Coolant and Intake Temperature Sensors
+## Температурные датчики охлаждающей жидкости и воздуха на впуске Coolant and Intake Temperature Sensors
 
-Open the **Tools** menu and select **Calibrate Thermistor Tables**:
+Откройте **Tools** меню и выберите **Calibrate Thermistor Tables**:
 
-The sensor selected will be the **Coolant Temperature Sensor**. Select your sensor from the **Common Sensor Values** drop-down list. This will place the correct values into the temperature and resistance charts and the Bias resistor value. If your sensor is not listed, see [Entering Custom Values](#Entering_Custom_Values "wikilink") below.
+Выбранный датчик будет **Coolant Temperature Sensor**. Выберите датчик из **Common Sensor Values**раскрывающийся список. При этом правильные значения будут помещены в таблицы температуры и сопротивления и значение резистора смещения. Если датчика нет в списке, см. [Entering Custom Values](#Entering_Custom_Values "wikilink") ниже.
 
-Note that the standard Speeduino build is to have a 2490 ohm bias resistor, which is standard for sensors used by most manufacturers. If your sensor requires another value, you may need to change resistor R3 to the correct value for your sensor. You can try overriding the Bias Resistor Value with 2490 ohms, but check to be sure your sensor reads correctly in TS.
+Обратите внимание, что стандартная сборка Speeduino должна иметь переменные резисторы 2490 Ом, который является стандартным для датчиков, используемых большинством производителей. Если сенсору требуется другое значение, может потребоваться изменить R3 резистора на правильное значение для сенсора. Можно попытаться заменить значение резистора на 2490 Ом, но проверить правильность считывания датчика в Tuner Studio.
 
 ![CLT_calibration.png](/img/tuning/CLT_calibration.png){.align-center width=450}
 
-The same calibration can then be performed for the Inlet Air Temperature (IAT) sensor by changing the **Sensor Table** to **Air Temperature Sensor**:
+Затем можно выполнить такую же калибровку для температуры воздуха на входе (IAT) заменив **Sensor Table** на **Air Temperature Sensor**:
 
 ![IAT_calibration.png](/img/tuning/IAT_calibration.png){.align-center width=450}
 
-Select your sensor from the **Common Sensor Values** drop-down list. This will place the correct values into the temperature and resistance charts and the Bias resistor value. Click **Write to Controller** to send this information to your Speeduino. If your sensor is not listed, see [Entering Custom Values](#Entering_Custom_Values "wikilink") below.
+Выберите датчик из **Common Sensor Values** раскрывающийся список. При этом правильные значения будут помещены в таблицы температуры и сопротивления и значение резистора смещения. Щелкните **Write to Controller** чтобы отправить эту информацию на ваш Speeduino. Если датчика нет в списке, см. [Entering Custom Values](#Entering_Custom_Values "wikilink") ниже.
 
-Note that the standard Speeduino build is to have a 2490 ohm bias resistor, which is standard for sensors used by most manufacturers. If your sensor requires another value, you may need to change resistor R3 to the correct value for your sensor. You can try overriding the Bias Resistor Value with 2490 ohms, but check to be sure your sensor reads correctly in TS.
+Обратите внимание, что стандартная сборка Speeduino должна иметь переменные резисторы 2490 Ом, который является стандартным для датчиков, используемых большинством производителей. Если сенсору требуется другое значение, может потребоваться изменить R3 резистора на правильное значение для сенсора. Можно попытаться заменить значение резистора на 2490 Ом, но проверить правильность считывания датчика в Tuner Studio.
 
-### Entering Custom Values
+### Введение пользовательских значений Entering Custom Values
 
-Some sensors are not listed in the tables for the common sensors. If yours is not listed, you will need to enter the values into the fields your self. You will need two bits of information: 1. The value of your bias resistor (2490 if you used the standard values in the Bill of Materials, or you have a pre-made Speeduino), and 2. The resistance of your sensor at three different temperatures.
+Некоторые датчики не перечислены в таблицах для общих датчиков. Если ваш не указан в списке, необходимо ввести значения в поля для себя. Вам понадобится два бита информации: 1. Значение резистора (2490 при использовании стандартных значений в спецификации или при наличии предварительно изготовленного Speeduino) и 2. Сопротивление датчика при трех различных температурах.
 
-The sensor resistance can be generated by measuring the resistance of the sensor in ambient air, putting it in a freezer and then in boiling water. You will need a good multimeter and an accurate thermometer that measures -10C to 100C (14°F to 212°F). It is best to use jumper wires to allow the resistance of the sensor to be read without holding it in your hand (some sensors react quickly to temperature changes). Some sensors react slowly to temperature changes, so allow the sensor at least 10 minutes to reach a stable temperature, and then record the temperature and resistance observed.
+Сопротивление датчика может быть создано путем измерения сопротивления датчика в окружающем воздухе, помещения его в морозильную камеру, а затем в кипящую воду. Понадобится хороший мультиметр и точный термометр, измеряющий -10C до 100C (от 14 ° F до 212 ° F). Лучше всего использовать перемычки для считывания сопротивления датчика, не удерживая его в руке (некоторые датчики быстро реагируют на изменения температуры). Некоторые датчики медленно реагируют на изменения температуры, поэтому позволяют датчику по крайней мере за 10 минут достичь стабильной температуры, а затем регистрируют наблюдаемые температуру и сопротивление.
 
-In the **Calibrate Thermistor Tables** screen, first ensure the correct temperature unit is selected (**F** or **C**). Then record the bias resistor value and the temperature / resistance values in the fields. Click **Write to Controller** to send this information to your Speeduino.
+В **Calibrate Thermistor Tables** сначала убедитесь, что выбрана правильная единица измерения температуры (**F** or **C**). Затем запишите значение резистора смещения и значения температуры/сопротивления в поля. Щелкните **Write to Controller** чтобы отправить эту информацию на ваш Speeduino.
 
-Note that his procedure can also be used to enter the values of resistance on simulators for testing and troubleshooting. Two points should be remembered if you use simulator values – first, never enter zero for resistance. Although your simulator may go to zero, enter some small value above zero, say 10 ohms. Entering zero leads to false values in the firmware. Second – remember to enter the correct sensor values before installing your Speeduino!
+Следует отметить, что его процедура также может быть использована для ввода значений сопротивления на тренажерах для тестирования и поиска и устранения неисправностей. При использовании значений симулятора следует помнить две точки - во-первых, никогда не вводить ноль для сопротивления. Хотя ваш симулятор может перейти к нулю, введите небольшое значение выше нуля, скажем, 10 Ом. Ввод нуля приводит к появлению ложных значений в микропрограмме. Во-вторых, не забудьте ввести правильные значения датчиков перед установкой Speeduino!
 
-## Oxygen Sensor 
+## Датчик кислорода Oxygen Sensor 
 
-Open the **Tools** menu again and select **Calibrate AFR Table**:
+Откройте **Tools** меню и выберите **Calibrate AFR Table**:
 
 ![O2 calibration](/img/tuning/O2_calibration.png){.align-center width=400}
 
-Select your **Oxygen Sensor sensor** from the **Common Sensor Values** drop-down list. If you are using a custom Oxygen Sensor controller, select **Custom Linear WB** and then you can enter the values for **Volts** and **AFR** at two points (should be published in the controller manual).
+Выберите **Oxygen Sensor sensor** из **Common Sensor Values** раскрывающийся список. При использовании пользовательского контроллера датчика кислорода выберите **Custom Linear WB** а затем можно ввести значения для **Volts** и **AFR** в двух пунктах (должно быть опубликовано в руководстве по контроллеру).
 
-Click **Write to Controller** to send this information to your Speeduino.
+Нажмите **Write to Controller** чтобы сохранить информацию в Speeduino.
 
-This will set up your Speeduino so that you can also run simulations to check your build before installation.
+Программа Speeduino будет настроена таким образом, чтобы можно было также выполнить моделирование для проверки сборки перед установкой.
 
 
-## Throttle Position Sensor
+## Датчик поворота заслонки ДПДЗ Throttle Position Sensor
 
-Before Speeduino can work correctly with your engine, you will also need to Calibrate the Throttle Position Sensor. This must be done using the throttle body and TPS used on the engine. It is best to do this while the throttle body is installed on the engine.
+Прежде чем Speeduino сможет правильно работать с вашим двигателем, вам также потребуется откалибровать датчик положения дросселя. Для этого необходимо использовать корпус дросселя и ДПДЗ (Throttle Position Sensor TPS), используемые на двигателе. Лучше всего это делать, пока корпус дросселя установлен на двигатель.
 
-Open the **Tools** menu and select **Calibrate TPS**:
+Откройте **Tools** меню и выберите **Calibrate TPS**:
 ![TPS calibration](/img/tuning/TPS_calibration.png){.align-center width=480}
 
-With the throttle closed, click the **Get Current** button beside the Closed Throttle ADC count field. Then move the throttle to full open and hold it there. Then click the **Get Current** button beside the Full Throttle ADC count field.
+Закрыв дроссель, нажмите кнопку **Get Current** рядом с полем Closed Throttle ADC count. Затем переместите дроссель до полного открытия и удерживайте его там. Затем нажмите кнопку **Get Current** button рядом с Full Throttle ADC count field.
 
-Click **Accept** to save the information to Speeduino.
+Нажмите **Accept** чтобы сохранить информацию в Speeduino.
