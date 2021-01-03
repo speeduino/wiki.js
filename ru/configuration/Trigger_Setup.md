@@ -2,7 +2,7 @@
 title: Настройки реперных дисков Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-01-03T08:07:33.043Z
+date: 2021-01-03T08:20:44.025Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:46:44.421Z
@@ -11,7 +11,7 @@ dateCreated: 2021-01-02T04:46:44.421Z
 # Настройки реперных дисков Trigger Setup
 ## Обзор
 
-Одним из наиболее важных компонентов установки EFI является датчик угла поворота коленчатого вала (CAS) и способ его использования в ECU. В диалоговом окне "Trigger settings" (Параметры триггера) определяется конфигурация триггера, и крайне важно, чтобы перед запуском двигателя была выполнена соответствующая настройка.
+Одним из наиболее важных компонентов установки EFI является датчик угла поворота коленчатого вала (CAS) и способ его использования в ЭБУ. В диалоговом окне "Trigger settings" (Параметры триггера) определяется конфигурация триггера, и крайне важно, чтобы перед запуском двигателя была выполнена соответствующая настройка.
 
 При неправильных настройках могут возникнуть проблемы с синхронизацией или ошибочные показания оборотов.
 
@@ -22,20 +22,20 @@ dateCreated: 2021-01-02T04:46:44.421Z
 ![Trigger settings dialog](/img/constants/triggerSettings.png){.align-center width=400}
 
 - **Trigger Pattern** - Шаблон, используемый датчиками коленвал/распредвала на двигателе. Полный список поддерживаемых шаблонов см. в разделе [Decoders](/decoders) page
-- **Primary Base teeth** - For patterns where the number of teeth are variable (missing tooth, dual wheel etc), this number represents the number of teeth on the primary wheel. For missing tooth type wheels, this number should be the count as if there were no teeth missing.
-- **Primary trigger speed** - The speed at which the primary input spins. It is closely related to the Primary Base teeth setting and indicates whether that number of teeth passes the sensor once every crank revolution or every cam revolution.
-- **Missing teeth** - If using the missing tooth pattern, this is the size of the gap, given in 'missing teeth'. Eg 36-1 has 1 missing tooth. 60-2 has 2 missing teeth etc. The missing teeth **MUST** be all located in a single block, there cannot be multiple missing tooth gaps around the wheel.
-- **Secondary teeth** - As above, but for the secondary input. This input is always assumed to run at cam speed.
-- **Trigger angle multiplier** - This option is used only on the [Non-360 pattern](/decoders/non-360). 
-- **Trigger angle** - The angle of the crank, **After Top Dead Centre (ATDC)**, when tooth \#1 passes the sensor on the primary (crank) input. This setting is critical for Speeduino to accurately know the current crank angle. See section below ('Finding tooth \#1 and trigger angle') for further information on how to determine this value
+- **Primary Base teeth** - Для шаблонов, в которых число зубьев является переменным (отсутствие зуба, двойное колесо и т.д.), это число представляет количество зубьев на основном колесе. Для отсутствующих зубчатых колес это число должно быть числом, как если бы зубьев не было.
+- **Primary trigger speed** - Скорость вращения первичного входа. Он тесно связан с настройкой зубьев основного основания и указывает, проходит ли это количество зубьев датчик один раз при каждом вращении кривошипа или при каждом вращении кулачка.
+- **Missing teeth** - Если используется отсутствующий рисунок зуба, это размер зазора, указанный в "отсутствующих зубах". У Eg 36-1 отсутствует 1 зуб. 60-2 имеет 2 отсутствующих зуба и т.д. Недостающие зубы **ДОЛЖНЫ** быть расположены в одном блоке, не может быть много отсутствующих зубьев вокруг колеса.
+- **Secondary teeth** - Как и выше, но для вторичного входа. Предполагается, что этот вход всегда работает со скоростью кулачка.
+- **Trigger angle multiplier** - Эта опция используется только на [Non-360 pattern](/decoders/non-360). 
+- **Trigger angle** - Угол поворота кривошипа, **После Верхней Мертвой Точки (ATDC)**, когда зуб \#1 passes the sensor on the primary (crank) input. This setting is critical for Speeduino to accurately know the current crank angle. См. раздел ниже ("Поиск зуба\# 1 и угла триггера" 'Finding tooth \#1 and trigger angle') для получения дополнительной информации о том, как определить это значение
 
-### Trigger options
+### Опции триггера Trigger options
 
-- **Skip revolutions** - The number of revolutions the engine should perform before the Sync flag is set. This can help prevent false sync events when cranking. Typical values are from 0 to 2
-- **Trigger edge** - Whether the primary signal triggers on the Rising or Falling edge
-- **Secondary trigger edge** -Whether the secondary signal triggers on the Rising or Falling edge
-- **Trigger filter** - A time based software filter that will ignore crank/cam inputs if they arrive sooner than expected based on the current RPM. The more aggressive the filter, the closer to the expected time the filter will operate. Higher levels of filtering may cause true pulses to be filtered out however, so it is recommended to use the lowest setting possible
-- **Re-sync every cycle** - If set to yes, the system will look for the sync conditions every cycle rather than just counting the expected number of teeth. It is recommended that this option should be turned on, however if you have a noisy crank/cam signal you may need to turn it off as it can cause sync to drop out occassionally. 
+- **Skip revolutions** - Число оборотов, которые процессор должен выполнить до установки флага Sync. Это может помочь предотвратить ложные события синхронизации при прокрутке. Типичные значения: от 0 до 2
+- **Trigger edge** - Срабатывает ли первичный сигнал на фронте подъема или падения
+- **Secondary trigger edge** - Срабатывает ли вторичный сигнал на фронте подъема или падения
+- **Trigger filter** - Программный фильтр на основе времени, который будет игнорировать входы кривошипа/кулачка, если они поступят раньше, чем ожидалось, на основе текущей частоты вращения. Чем агрессивнее фильтр, тем ближе к ожидаемому времени работа фильтра. Более высокие уровни фильтрации могут вызвать фильтрацию истинных импульсов, поэтому рекомендуется использовать минимальную возможную настройку
+- **Re-sync every cycle** - Если установлено значение "да", система будет искать условия синхронизации каждый цикл, а не просто считать ожидаемое количество зубьев. Рекомендуется включить этот параметр, однако при наличии шумного кривошипно-кулачкового сигнала может потребоваться его выключение, так как он может привести к выпадению синхронизации. 
 
-## Finding tooth \#1 and trigger angle
-Please refer to the [Trigger Patterns and Decoders](/decoders) for the trigger that you are using
+## "Поиск зуба\# 1 и угла триггера" Finding tooth \#1 and trigger angle
+Обратитесь к [Trigger Patterns and Decoders](/decoders) для используемого триггера
