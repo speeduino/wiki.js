@@ -1,25 +1,25 @@
 ---
-title: Basic Distributor
+title: Основной распределитель Basic Distributor
 description: 
 published: true
-date: 2021-01-02T06:54:11.352Z
+date: 2021-01-03T08:45:28.725Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T06:54:11.352Z
 ---
 
-## Basic Distributor
+## Основной распределитель Basic Distributor
 
-The Basic Distributor trigger is a very simplistic decoder that expects input like what a traditional distributor outputs. That is, 1 pulse per cylinder per cycle.
+Триггер Basic Distributor - это очень упрощенный декодер, который ожидает ввода, как и традиционный распределитель. То есть 1 импульс на цилиндр за цикл.
 
-For this reason the signal lacks any cylinder position signal and so without a missing/added tooth or camshaft signal reference Speeduino cannot calculate crankshaft angle, phase of cycle, or cylinder assignment. **A distributor must be used to route the resulting sparks to the correct cylinders** (With the exception of single cylinder engines). 
+По этой причине в сигнале отсутствует какой-либо сигнал положения цилиндра, и поэтому без отсутствующего/добавленного опорного сигнала зуба или распределительного вала Speeduino не может рассчитать угол коленчатого вала, фазу цикла или назначение цилиндра. **Для направления искр в соответствующие цилиндры должен использоваться распределитель.** (За исключением одноцилиндровых двигателей). 
 
-The signal can be as simple as the breaker points from an old pre-electronic distributor, to a crankshaft wheel without any abnormal, extra, or missing slots, provided it is conditioned appropriately to 0v-5v. Most who have installed aftermarket tachometers are familiar with the simplicity of the signal with the only variation being the number of pulses in each crankshaft rotation.
+Сигнал может быть таким же простым, как точки выключателя от старого предэлектронного распределителя к колесу коленчатого вала без каких-либо аномальных, дополнительных или отсутствующих слотов, при условии, что он соответствующим образом кондиционирован до 0В-5В. Большинство из тех, кто установил тахометры послепродажного обслуживания, знакомы с простотой сигнала, причем единственным изменением является количество импульсов при каждом вращении коленчатого вала.
 
-### A note on resolution
+### Записка о разрешающей способности A note on resolution
 
-By its nature the resolution of a simple distributor wheel is quite low. The exact resolution depends on the number of cylinders (The more cylinders, the higher the resolution), but even with an 8 cylinder engine there are only 4 pulses per revolution. This can impact timing accuracy if running ignition control from Speeduino and in most cases upgrading to a higher resolution trigger wheel is strongly recommended. 
+По своей природе разрешение простого распределительного колеса достаточно низкое. Точное разрешение зависит от количества цилиндров (Чем больше цилиндров, тем выше разрешение), но даже при 8 цилиндровом двигателе на оборот приходится всего 4 импульсов. Это может повлиять на точность синхронизации, если настоятельно рекомендуется запустить управление зажиганием от Speeduino и в большинстве случаев повысить разрешение пускового колеса. 
 
-## Trigger Signal
+## Сигнал репера Trigger Signal
 
 ![Basic_sistributor case.png](/img/decoders/basic_distributor.jpg){.align-center}
