@@ -1,56 +1,56 @@
 ---
-title: Missing Tooth
+title: Реперный диск (триггер) с отсутствующим зубом Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2021-01-02T07:02:39.535Z
+date: 2021-01-03T08:40:46.341Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:02:39.535Z
 ---
 
-# Supported trigger patterns
-## Missing Tooth Pattern
-### Overview
+# Подерживаемые конфигурации реперных дисков Supported trigger patterns
+## Отсутствующий зуб Missing Tooth Pattern
+### Обзор
 
-A missing tooth crank trigger is used as standard equipment by a number of OEMs, most notably Ford, but is also very popular as an aftermarket fitment.
+Отсутствующий крючок зуба используется в качестве стандартного оборудования рядом OEM-производителей, особенно Ford, но также очень популярен в качестве оборудования для послепродажного обслуживания.
 
-It is comprised of crank wheel with a given number of evenly spaced teeth, and one or more 'missing' teeth. Common values are typically 60-2, 36-1, 24-1, 12-1 and 4-1 where the first number represents the total number of teeth the wheel would have if there were none missing. The second number after a dash "-" indicates the number of teeth missing.
+Он состоит из реперного диска коленвала с заданным числом равномерно разнесенных зубьев и одного или более "отсутствующих" зубьев. Общими значениями обычно являются 60-2, 36-1, 24-1, 12-1 и 4-1, где первое число представляет общее количество зубьев, которое колесо имело бы, если бы не было пропущено. Второе число после тире "-" указывает на количество отсутствующих зубов.
 
-> **Note**: If there is a third number (e.g., 36-1-1), the missing teeth are not sequential, and this decoder does not apply. Do not confuse counts with slashes "/", as numbers following slashes represent cam teeth—not missing teeth. Wheels with "+" indicate added teeth rather than missing, and again this decoder does not apply.
+> **Примечание**: Если имеется третье число (например, 36-1-1), отсутствующие зубцы не являются последовательными, и этот декодер не применяется. Не путайте подсчеты с косыми чертами "/", так как цифры, следующие за косыми чертами, представляют зубья кулачка - не пропускают зубья. Колеса с "+" указывают на добавление зубьев, а не на отсутствие, и снова этот декодер не применяется.
 {.is-warning}
 
 
-### Applications
+### Приложения Applications
 
-Missing tooth crank wheels can be used on virtually any engine and is one of the more popular aftermarket options. It provides very good resolution in the higher tooth count versions (Eg 36-1 and 60-2) without being CPU intensive to decode.
+Реперные диски с отсутствующим зубом могут использоваться практически на любом двигателе и являются одним из наиболее популярных вариантов послепродажного обслуживания. Он обеспечивает очень хорошее разрешение в версиях с более высоким числом зубьев (например, 36-1 и 60-2) без интенсивного использования ЦП для декодирования.
 
-### Timing Requirements
+### Требования к синхронизации Timing Requirements
 
-The missing tooth crank and cam decoders require that the wheel is spinning at roughly the same speed throughout the rotation. For single missing tooth decoders: If the next tooth does not come within 1.5 * The Delta Time of the last 2 teeth it is assumed we just observed the missing tooth. For more than one missing tooth decoder there is a bit more leeway if the next tooth does not come within 2 * The Delta Time of the last 2 teeth it is assumed we just observed the missing teeth. 
+РПри применении реперного диска с отсутствующим зубом декодеры требуют, чтобы колесо вращалось приблизительно с одинаковой скоростью на протяжении всего вращения. Для одного отсутствующего зуба декодеры: Если следующий зуб не приходит в пределах 1.5 * Дельта времени последних 2 зубов предполагается, что мы только что наблюдали отсутствующий зуб. Для более чем одного отсутствующего декодера зуба есть немного больше свободы, если следующий зуб не попадает в течение 2 * Дельта-время последних 2 зубов предполагается, что мы только что наблюдали отсутствующие зубы. 
 
-Usually this can be fixed by ensuring that the starter motor has enough current available to power through any harder spots through the rotation / opening closing cams / engine accessories. 
+Обычно это можно зафиксировать, гарантируя, что пусковой двигатель имеет достаточный ток, доступный для питания через любые более жесткие точки через кулачки поворота/открытия/вспомогательные устройства двигателя. 
 
-If the starter motor is good and getting the right voltage ensure the mechanical components of the engine are correct. 
+Если двигатель стартера хороший и получает правильное напряжение, убедитесь в правильности механических компонентов двигателя. 
 
 
-### Tuner Studio Configuration
+### Конфигурации в Tuner Studio
 ![missingtooth_triggerconfig.png](/img/decoders/missingtooth_triggerconfig.png){.align-center}
 
-**Fields:**
+**Поля:**
 
-  - Primary base teeth: This is the number of teeth the wheel would have if there were none missing. Eg a 36-1 wheel has only 35 actual teeth, but you would enter 36 into this field.
-  - Missing Teeth: The size of the 'gap' in the number of teeth. These missing teeth must be situated in a single block (ie there's only a single gap in the teeth)
-  - Trigger Angle: This is the angle in crank degrees **AFTER** TDC (ATDC) of the first tooth following the gap
+  - Primary base teeth: Это количество зубьев, которое было бы у колеса, если бы не было отсутствующих. Пример 36-1 колесо имеет только 35 фактических зубьев, но вы бы ввели 36 в это поле.
+  - Missing Teeth: Размер "зазора" в количестве зубов. Эти отсутствующие зубья должны быть расположены в одном блоке (то есть есть только один зазор в зубах)
+  - Trigger Angle: первого зуба, следующего за зазором: Это угол в градусах кривошипа **ПОСЛЕ** ВМТC (ATDC) первого зуба, следующего за зазором
 
-### Timing Setting
+### Настройка синхронизации Timing Setting
 
-The trigger angle can be found by placing the engine at TDC, then calculating how far it must be rotated until the first tooth after the gap reaches the sensor.
+Угол срабатывания можно определить, поместив двигатель в ВМТ (TDC), а затем рассчитав, как далеко он должен вращаться, пока первый зуб после зазора не достигнет датчика.
 
-### Sequential operation
+### Последовательная работа Sequential operation
 
-The missing tooth decoder supports sequential operation if an additional cam input is present. If Sequential mode is selected for either the fuel timing or spark timing, the system will expect to see a cam signal and will not sync correctly without this. Note that this is ONLY the case if sequential is selected for one or both of fuel and spark timing.
+Декодер отсутствующих зубьев поддерживает последовательную работу, если имеется дополнительный вход с распредвала. Если выбран последовательный режим для синхронизации топлива или синхронизации зажигания, система ожидает увидеть сигнал распредвала и не будет синхронизироваться правильно без этого. Следует отметить, что это происходит ТОЛЬКО в том случае, если выбрана последовательная синхронизация для одного или обоих типов топлива и искровой синхронизации.
 
-This cam signal should take the form of a single pulse every complete cycle. This can be a short tooth or a half moon type arrangement, provided that electrically there is only a single rising (or falling) pulse per cycle.
+Сигнал распредвала должен иметь форму одного импульса каждый полный цикл. Это может быть расположение с коротким зубцом или полулунным типом, при условии, что электрически имеется только один поднимающийся (или падающий) импульс за цикл.
 
-### Trigger Diagram
+### Диаграмма триггера Trigger Diagram
 ![missingtooth_trace1.png](/img/decoders/missingtooth_trace1.png){.align-center}
