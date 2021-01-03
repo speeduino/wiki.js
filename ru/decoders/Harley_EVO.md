@@ -1,8 +1,8 @@
 ---
-title: Harley EVO
+title: Реперный Harley EVO
 description: 
 published: true
-date: 2021-01-02T07:07:15.924Z
+date: 2021-01-03T08:54:45.923Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:07:15.924Z
@@ -10,6 +10,6 @@ dateCreated: 2021-01-02T07:07:15.924Z
 
 ## Harley Evo
 
-The Harley EVO pattern is used on V-Twin engines from '86 through to '99.
+Модель Harley EVO используется на двигателях V-Twin с '86 по' 99.
 
-This pattern will work on all injected EVO engines. 
+Эта схема будет работать на всех впрыскиваемых двигателях EVO.
