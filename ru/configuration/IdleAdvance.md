@@ -2,34 +2,34 @@
 title: Idle advance
 description: Controlling idle speed with changes to advance
 published: true
-date: 2021-01-02T04:33:55.933Z
+date: 2021-01-03T06:01:17.092Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:33:55.933Z
 ---
 
-# Idle advance control
-Idle speed can be controlled without the use of an idle valve (IACV) by adjustiming timing. This feature references the same idle RPM target curve that is used by the closed loop idle control and will then adjust the advance based on the error between current and target RPM.
+# Регулирование холостого хода углом опережения Idle advance control
+Управление скоростью холостого хода может осуществляться без использования клапана холостого хода, а с помощью регулировки угла опережения. Эта функция ссылается на ту же целевую кривую холостых оборотов, которая используется управлением холостыми оборотами по замкнутому контуру, и затем корректирует опережение на основе разницы между реальными и заданными оборотами.
 
-## Settings
+## Настройки Settings
 ![idle_advance.png](/img/idle/idle_advance.png){.align-center}
 
-* **Idle advance mode**
-	* **Added** - This is the most common mode and will alter the regular advance amount by adding (or subtracting) a certain number of degrees based on the amount of RPM delta (Between target and actual RPMs)
-  * **Switched** - The ignition advance will switch to the values in the idle advance curve rather than adjusting the normal advance values
-* **Idle detect mode** - This setting specifies how the ECU determines whether it is at idle or not. Most commonly this is based on a variable TPS and a specific TPS%, but if a closed throttle switch (CTPS) is available, this may be used instead
-* **Delay before idle control** - This allows the idle RPM to settle during decelleration before the ignition advance is changed. 
-* **Active below** - Maximum RPM that the idle advance control will be active under
-* **Active Below** - If the idle detect mode is set to TPS, this is the throttle position that the control will be active below
-* The following 3 settings are only used if idle detection uses a CTPS input
-  * **CTPS enabled** - Whether to use a CTPS input
-  * **CTPS Pin** - The Arduino pin that the CTPS is connected to
-  * **CTPS Polatiry** - Whether idle is indicated by the input being pulled to ground (Normal) or indicated by the input being pulled to 5v (Inverted). In Normal mode, the internal pullup will be enabled. 
+* **Idle advance mode** варианты
+	* **Added** - Это наиболее распространенный вариант, который изменяет опережение, добавляя (или вычитая) определенное число градусов на основе величины разницы оборотов (между заданными и фактическими).
+  * **Switched** - Опережение зажигания будет переключаться на значения кривой опережения холостого хода, а не регулировать обычные значения опережения.
+* **Idle detect mode** - определяет, находится ли он в состоянии холостого хода или нет. Чаще всего это основано на переменной дроссельной заслонки TPS и определенном % открытия заслонки, но если доступен переключатель с замкнутым дросселем (CTPS), его можно использовать вместо этого.
+* **Delay before idle control** - позволяет организовать задержку при торможении до изменения опережения зажигания.
+* **Active below** - Максимальная частота вращения, при которой активизируется управление опережения холостого хода
+* **Active Below** - Если режим обнаружения холостого хда установлен дросселем, то это положение дросселя для перехода в режим холостого хода
+* Следующие 3 параметра используются только в том случае, если для определения режима холостого хода используется вход CTPS
+  * **CTPS enabled** - Следует ли использовать вход CTPS
+  * **CTPS Pin** - Контакт Arduino, к которому подключен CTPS
+  * **CTPS Polatiry** - Индицируется ли холостой ход входом, который контактирует на землю (Normal), или входом, который контактирует с 5В (Inverted).
+  
+### Кривая холостого опережения Idle Advance curve
+Эта кривая определяет величину регулировки синхронизации (режим добавления) или величину абсолютного опережения (режим переключения), которая будет использоваться на основе разницы (ошибки) целевой частоты вращения. 
 
-### Idle Advance curve
-This curve specifies the amount of timing adjustment (Added mode) or the absoolute advance amount (Switched mode) that will be used based on the delta (error) from target RPM. 
+Обычно время добавляется (положительные значения), чтобы попытаться увеличить обороты, и время удаляется (отрицательные значения), чтобы уменьшить обороты.
 
-Generally timing will be added (positive values) in order to try and increase RPM and timing will be removed (Negative values) to redue RPM.
-
-### Idle RPM target curve
-This curve specifies what the desired idle RPM is based on the current coolant temperature. This table is shared with the idle air control if that is being used in conjuction with idle advance control. 
+### Кривая целевого холостого Idle RPM target curve
+Эта кривая определяет желаемую частоту вращения холостого хода на основе текущей температуры охлаждающей жидкости. Эта таблица совместно используется с управлением воздухом холостого хода, если оно используется в сочетании с управлением опережения холостого хода.
