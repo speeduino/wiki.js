@@ -1,8 +1,8 @@
 ---
-title: Trigger Patterns and Decoders
+title: Реперные диски и декодеры Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-01-03T08:09:42.297Z
+date: 2021-01-03T08:10:06.980Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T06:41:14.102Z
