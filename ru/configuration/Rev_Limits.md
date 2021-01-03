@@ -1,28 +1,28 @@
 ---
-title: Limiters
+title: Ограничители Limiters
 description: Configuring engine protection limiters
 published: true
-date: 2021-01-02T04:37:22.043Z
+date: 2021-01-03T06:56:22.151Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:37:22.043Z
 ---
 
-# Limiters
+# Ограничители Limiters
 
-Speeduino includes a spark based rev limited with both hard and soft cuts.
+Speeduino может ограничивать обороты как жестко так и мягко.
 
-The soft cut limiter will lock timing at an absolute value to slow further acceleration. If RPMs continue to climb and reach the hard cut limit, ignition events will cease until the RPM drop below this threshold.
+Мягкий ограничитель будет замедлять дальнейшее ускорение. Если обороты в минуту продолжают подниматься и достигают предела жесткого ограничения, выключится зажигание пока обороты не упадут ниже этого порога.
 
-> **Note** As this is spark based limiting, fuel only installs cannot use the rev limiter functionality
+> ** Примечание ** Поскольку это ограничение на основе зажигания, установки по топливу не могут иметь функциональность ограничителя оборотов
 {.is-info}
 
 
-## Settings
+## Настройки Settings
 
 ![Rev limiter settings](/img/tuning/revLimiter.png){.align-center}
 
-- **Soft rev limit:** The RPM at which the soft cut ignition timing will be applied over.
-- **Soft limit absolute timing:** Whilst the engine is over the soft limit RPM, the ignition advance will be held at this value. Lower values here will have a greater soft cut affect.
-- **Soft limit max time:** The maximum number of seconds that the soft limiter will operate for. If the engine remains in the soft cut RPM region longer than this, the hard cut will be applied.
-- **Hard rev limiter:** Above this RPM, all ignition events will cease.
+- **Soft rev limit:** Частота вращения, при которой будет применена мягкое ограничение.
+- **Soft limit absolute timing:** Пока двигатель превышает мягко заданную предельную частоту вращения, опережение зажигания будет удерживаться на этом уровне.
+- **Soft limit max time:** Максимальное количество секунд, в течение которых будет работать мягкий ограничитель. Если двигатель остается в области soft cut RPM дольше, чем это время, будет применена твердая отсечка.
+- **Hard rev limiter:** Выше этой частоты вращения зажигание временно выключится.
