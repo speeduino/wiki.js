@@ -2,7 +2,7 @@
 title: Начиная Работу
 description: Starting pages for each area of the manual
 published: true
-date: 2021-01-01T17:06:18.593Z
+date: 2021-01-04T15:41:01.252Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T13:59:01.266Z
@@ -20,7 +20,7 @@ dateCreated: 2021-01-01T13:59:01.266Z
   - [v0.3 плата](/boards/V03)
   - [v0.4 плата](/boards/V04)
   - [Miata/MX5 NA 89-95 плата](/boards/MX5_PNP)
--   [Загрузка микропрограммного обеспечения Speeduino](/Installing_Firmware)
+-   [Загрузка прошивки Speeduino](/Installing_Firmware)
 -   Работа с программным обеспечением Tuner Studio
     -   [Подключение к Tuner Studio](/Connecting_to_TunerStudio)
     -   [Настройка проекта в Tuner Studio](/Configuring_TunerStudio)
