@@ -2,7 +2,7 @@
 title: Отсутствующий зуб Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2021-01-04T18:06:52.944Z
+date: 2021-01-04T18:08:10.297Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:01:35.249Z
@@ -39,10 +39,10 @@ dateCreated: 2021-01-02T07:01:35.249Z
 - **Trigger Angle**: Это угол в ** градусах кривошипа** **ПОСЛЕ** ВМТ (ATDC) первого зуба, следующего за зазором. Это число колеблется от -360 ° до + 360°.
 - **Cam Speed**: Убедитесь, что этот флажок установлен для распредвала.
 
-### Timing Setting
+### Настройка синхронизации Timing Setting
 
 Угол устанавливается в градусах кривошипа, а не распредвала.
 
-### Trigger Pattern
+### Шаблон триггера Trigger Pattern
 
 ![missingtooth_cam_trace.jpg](/img/decoders/missingtooth_cam_trace.jpg){.align-center width75%}
