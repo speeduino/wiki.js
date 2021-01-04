@@ -2,7 +2,7 @@
 title: Начиная Работу
 description: Starting pages for each area of the manual
 published: true
-date: 2021-01-04T15:41:01.252Z
+date: 2021-01-04T15:41:43.349Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-01T13:59:01.266Z
