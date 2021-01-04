@@ -1,8 +1,8 @@
 ---
-title: Проворот при запуске - Cranking
+title: Прокрутка при запуске - Cranking
 description: 
 published: true
-date: 2021-01-02T18:52:54.896Z
+date: 2021-01-04T17:08:41.904Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:23:28.580Z
