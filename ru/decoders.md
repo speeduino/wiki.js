@@ -2,7 +2,7 @@
 title: Реперные диски и декодеры Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-01-03T08:10:06.980Z
+date: 2021-01-04T17:29:51.300Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T06:41:14.102Z
@@ -14,21 +14,22 @@ Speeduino поддерживает постоянно растущее коли�
 
 | Decoder                                                 | Status           | Applications / Description                                                                                                      |
 | ------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [Missing Tooth](/decoders/Missing_Tooth "wikilink")               | Complete         | A crank wheel with 1 or more 'missing' teeth                                                                                    |
-| [Missing Tooth (cam)](/decoders/Missing_Tooth_\(cam\) "wikilink") | Complete         | A camshaft or distributor wheel with 1 or more 'missing' teeth at half-crank speed                                              |
-| [Dual Wheel](/decoders/Dual_Wheel "wikilink")                     | Complete         | Two signals combined from two different wheels                                                                                  |
-| [Basic Distributor](/decoders/Basic_Distributor "wikilink")       | Complete         | Untimed pulses that are the equivalent of a tach or distributor pulse                                                           |
-| [GM 7X](/decoders/GM_7X "wikilink")                               | Untested         | Multi tooth pulse                                                                                                               |
-| [4G63](/decoders/4G63 "wikilink")                                 | Complete         | As used on many 4 cylinder Mitsubishis and NA/NB Miata / MX-5. Also supports the 6 cylinder variation of this pattern (Eg 6g72) |
-| [GM 24X](/decoders/GM_24X "wikilink")                             | Untested         | Commonly used on GM LS1 V8                                                                                                      |
-| [Jeep 2000](/decoders/Jeep_2000 "wikilink")                       | Complete         | 6 Cylinder Jeep engines from '91 to 2000                                                                                     |
-| [Harley EVO](/decoders/Harley_EVO "wikilink")                     | Complete         | Harley EVO V-Twin engines up to '99                                                                                              |
-| [Honda D17](/decoders/Honda_D17 "wikilink")                       | Complete         | Honda 4 cylinder D17 engine                                                                                                     |
-| [Miata 99](/decoders/Miata_99 "wikilink")                         | Complete         | 1.8L Miata/MX5 from '99 to '00                                                                                                  |
-| [Non-360](/decoders/Non-360 "wikilink")                           | Complete         | A variation of the dual wheel decoder that can be used with tooth counts that do not divide evenly into 360                     |
-| [Nissan 360](/decoders/Nissan_360 "wikilink")                     | In progress      | 360 tooth cam wheel used in many 4 and 6 cylinder engines.                                                                      |
-| [Subaru 6/7](/decoders/Subaru_6/7 "wikilink")                     | Testing underway | Subaru engines using the 6 tooth crank wheel + 7 tooth cam wheel arrangement                                                    |
-| [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Complete         | 3+1 and 4+1 patterns used on 3 and 4 cylinder Daihatsu engines                                                                  |
-| [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps                                                                       |
+| [Missing Tooth](/decoders/Missing_Tooth "wikilink")               | Завершен         | Зубчатое реперное колесо коленвала без одного или нескольких зубъев                                                                                    |
+| [Missing Tooth (cam)](/decoders/Missing_Tooth_\(cam\) "wikilink") | Завершен         | Зубчатое реперное колесо распредвала или дистрибютера без одного или нескольких зубъев вращающееся в 2 раза медленнее коленвала                                              |
+| [Dual Wheel](/decoders/Dual_Wheel "wikilink")                     | Завершен         | 2 сигнала с 2 реперных колес коленвала и распредвала                                                                                  |
+| [Basic Distributor](/decoders/Basic_Distributor "wikilink")       | Завершен         | Несинхронизированные импульсы, с частотой распределителя                                                           |
+| [GM 7X](/decoders/GM_7X "wikilink")                               | Не проверен         | Многозубчатый импульс                                                                                                               |
+| [4G63](/decoders/4G63 "wikilink")                                 | Завершен         | Используется на многих 4 цилиндровых Mitsubishi и NA/NB Miata / MX-5. Также поддерживается 6 цилиндров этого типа (Например 6g72) |
+| [GM 24X](/decoders/GM_24X "wikilink")                             | Не проверен         | Обычно используется на GM LS1 V8                                                                                                      |
+| [Jeep 2000](/decoders/Jeep_2000 "wikilink")                       | Завершен         | 6 Цилиндровые двигатели Jeep от '91 до 2000                                                                                     |
+| [Harley EVO](/decoders/Harley_EVO "wikilink")                     | Завершен         | Двигатели Harley EVO V-Twin до '99                                                                                              |
+| [Honda D17](/decoders/Honda_D17 "wikilink")                       | Завершен         | Двигатель Honda 4 цилиндра D17                                                                                                     |
+| [Miata 99](/decoders/Miata_99 "wikilink")                         | Завершен         | 1.8L Miata/MX5 от '99 до' 00                                                                                                  |
+| [Non-360](/decoders/Non-360 "wikilink")                           | Завершен         | Вариант двухколесного декодера, который может использоваться с количеством зубов, которые не делятся равномерно на 360
+|
+| [Nissan 360](/decoders/Nissan_360 "wikilink")                     | В разработке      | Зубчатое колесо 360, используемое во многих 4 и 6 цилиндровых двигателях.                                                                      |
+| [Subaru 6/7](/decoders/Subaru_6/7 "wikilink")                     | Испытывается | Двигатели Subaru, использующие 6-зубое реперное колесо коленвала + 7-зубое распредвала                                                    |
+| [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Завершен         | 3+1 и 4+1 , используемые на 3 и 4 цилиндровых двигателях Daihatsu                                                                  |
+| [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Завершен         | 30 зубчатое колесо с тремя стратегически расположенными большими зазорами                                                                       |
 
-All signals need to be conditioned to a 3.3v - 5v dc square wave before being used by the firmware.
+Перед использованием микропрограммного обеспечения все сигналы должны быть преобразованы в квадратную волну 3,3 - 5 В постоянного тока.
