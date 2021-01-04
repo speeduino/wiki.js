@@ -1,15 +1,15 @@
 ---
-title: Missing Tooth (Cam speed)
+title: Отсутствующий зуб Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2021-01-02T07:01:35.249Z
+date: 2021-01-04T17:55:42.989Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:01:35.249Z
 ---
 
-## Missing tooth (Cam speed)
-The missing tooth cam-speed trigger is a Speeduino innovation, that permits function similar to a dual-wheel setup, thereby allowing sequential or wasted spark operation from cam-mounted or distributor wheels. The operation is based on both [Missing Tooth](/decoders/Missing_Tooth "wikilink") and [Dual Wheel](/decoders/Dual_Wheel "wikilink"). It is suggested to read those sections first for familiarization as this section will only highlight the fundamental differences to those common decoders.
+## Отсутствующий зуб Missing tooth (Cam speed)
+Отсутствующий зуб распредвалв является новшеством Speeduino, которое позволяет выполнять функцию, подобную конфигурации с двумя колесами, тем самым обеспечивая последовательную или бесполезную искровую работу с колесами, установленными на кулачке или распределителе. Операция основана на обоих [Missing Tooth](/decoders/Missing_Tooth "wikilink") и [Dual Wheel](/decoders/Dual_Wheel "wikilink"). Предлагается сначала прочитать эти разделы для ознакомления, поскольку в этом разделе будут лишь подчеркнуты фундаментальные различия с этими распространенными декодерами.
 
 This decoder is comprised of a single cam-speed wheel in the same configuration as a crank-mounted missing-tooth wheel. The number of teeth ***must*** be evenly divisible into 720°. As it rotates at half crank speed, the sensor reads half the wheel teeth on each 360° crank revolution, and the remaining teeth on the next crank rotation. A single missing tooth will appear on only one of the two crank rotations, and is then used as a phase indicator, much as the dual-wheel system uses the cam signal.
 
