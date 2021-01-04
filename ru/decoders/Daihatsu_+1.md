@@ -1,34 +1,33 @@
 ---
-title: Daihatsu +1 trigger
+title: Дайхатсу(Тойота) Daihatsu +1 trigger
 description: 
 published: true
-date: 2021-01-04T17:33:16.543Z
+date: 2021-01-04T17:41:09.966Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-04T17:33:16.543Z
 ---
 
-## Overview
-The Daihatsu +1 triggers are used across a number of 3 and 4 cylinder engines from Daihatsu. See below for applications.
+## Обзор
+Триггеры Daihatsu + 1 используются на нескольких 3 и 4 цилиндровых двигателях от Daihatsu(Тойота). Приложения см. ниже.
 
-It is comprised of a single cam signal provided by either a hall sensor. This should be fed into the RPM1 input on Speeduino
+Он состоит из одного кулачкового сигнала, подаваемого датчиком Холла. Это должно подаваться на вход RPM1 на Speeduino
 
-## Applications
--   TBA (3 cylinder)
--   TBA (4 cylinder)
+## Приложения
+-   TBA (3 цилиндра)
+-   TBA (4 цилиндра)
 
-## Tuner Studio Configuration
-Simply select the Daihatsu +1 trigger option.
+## Конфигурация Tuner Studio
+Просто выберите триггер Daihatsu + 1.
 
-## Timing adjustment
+## Регулировка синхронизации Timing adjustment
 
-In most cases altering the trigger angle should not be required, however there is some small variation between the OEM versions of thIs trigger so some minor adjustment may be needed. Once you have the engine started, set a fixed ignition angle and check the timing with a timing light. If this is a few degrees out (&lt;20°), adjust the trigger angle here. If this is more than 20° out, there may be a larger problem.
+В большинстве случаев изменение угла срабатывания не требуется, однако существует некоторое небольшое изменение между OEM-версиями этого триггера, поэтому может потребоваться некоторая незначительная регулировка. После запуска двигателя установите фиксированный угол зажигания и проверьте синхронизацию с помощью индикатора синхронизации. Если это несколько градусов (& lt; 20°), отрегулируйте здесь угол срабатывания. Если это больше 20°, может возникнуть большая проблема.
 
-Trigger Pattern
+Шаблон триггера Trigger Pattern
 ---------------
+В 3 цилиндрических двигателях имеются 3 равномерно разнесенные зубья на 0, 240 и 480 градусах кривошипа. Имеется дополнительный (+ 1) зуб, расположенный под углом 30 градусов кривошипа для обеспечения информации о положении
 
-In 3 cylinder engines, there are 3 evenly spaced teeth at 0, 240 and 480 crank degrees. There is an additional (+1) tooth located at 30 crank degrees to provide position info
-
-The 4 cylinder is the same, except with 4 evenly spaced teeth. The 5 teeth are therefore located at 0, 30, 180, 360 & 540 (Crank degrees, ATDC)
+4 цилиндра одинаковы, за исключением 4 равномерно расположенных зубьев. Таким образом, 5 зубьев расположены на 0, 30, 180, 360 и 540 (углы кривошипа, ATDC)
 
 ![daihatsu_3_1.png](/img/decoders/daihatsu_3_1.png){.align-center width=80%}
