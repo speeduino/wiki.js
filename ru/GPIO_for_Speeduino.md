@@ -1,180 +1,179 @@
 ---
-title: GPIO_for_Speeduino
+title: Интерфейс ввода/вывода GPIO_for_Speeduino
 description: 
 published: true
-date: 2021-01-04T15:47:47.591Z
+date: 2021-01-04T16:38:10.086Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-04T15:47:47.591Z
 ---
 
-GPIO for Speeduino
+Интерфейс ввода/вывода общего назначения (general-purpose input/output) GPIO for Speeduino
 ==================
 
-By Darren Siepka
+Даррен Сиепка
 
-### What is it?
+### Что это?
 
-GPIO for Speeduino are a family of multipurpose general programmable input and output modules that can be used both in conjunction with the Speeduino engine ECU or standalone. The modules are programmed via Tunerstudio either via the serial port or over the integrated CanBus network(certain variants only)
+GPIO для Speeduino - это семейство универсальных программируемых модулей ввода и вывода, которые могут использоваться как совместно с ECU двигателя Speeduino, так и автономно. Модули программируются через Tunerstudio либо через последовательный порт, либо через интегрированную сеть CanBus (только некоторые варианты)
 
-The modules can use several different processor board types, including different arduino, teensy and stm32.
+Модули могут использовать несколько различных типов плат процессоров, в том числе arduino, tensy и stm32.
 
-Io operations are programmed with logic, &lt; ,&gt;,= and bitwise AND . some variants offer 2 or even 3 connecting logic conditions.
+Операции ввода-вывода программируются логическими, & lt;, & gt;, = и побитовыми И. некоторые варианты предлагают 2 или даже 3 логических условия соединения.
 
-### Versions
+### Версии
 
 ### GPIO MINI V0.001
 
-This firmware supports up to 16 output channels , 16 input channels and 16 analog channels from local sources subject to MCU capability. MCU supported are currently Arduino Pro-Mini , Arduino Uno and Arduino Mega2560. The Output channels can be activated via one condition with logical operations of &lt; , &gt; and = Only onboard(local) io are supported in this version.
+Данное микропрограммное обеспечение поддерживает до 16 выходных каналов, 16 входных каналов и 16 аналоговых каналов от локальных источников, на которые распространяется функция MCU. В настоящее время поддерживаются MCU Arduino Pro-Mini, Arduino Uno и Arduino Mega2560. Выходные каналы могут быть активированы через одно условие с логическими операциями & lt;, & gt; и = В этой версии поддерживаются только встроенные (локальные) io.
 
 ### GPIO MINI V0.002
 
-This firmware offers the same features as V0.001 but with the ability to also access the output channel data values from a Speeduino ECU connected directly using the Speeduino Serial3 support.This firmware is currently only supported by Arduino Mega2560
+Это микропрограммное обеспечение имеет те же функции, что и V0.001, но с возможностью доступа к значениям данных выходного канала от ECU Speeduino, подключенного непосредственно с помощью поддержки Speeduino Serial3. В настоящее время эта микропрограмма поддерживается только Arduino Mega2560
 
 ### GPIO MINI V0.003
 
-This firmware allows Speeduino to access the GPIO device's inputs(both digital and analog) to be displayed within TunerStudio or logged.Again in this version the GPIO device is still connected directly to the Speeduino via Serial3.This firmware is currently only supported by Arduino Mega2560
+Это встроенное ПО позволяет Speeduino получать доступ к входам устройства GPIO (как цифровым, так и аналоговым), отображаемым в TunerStudio или регистрируемым в журнале. Опять же в этой версии устройство GPIO все еще подключено непосредственно к Speeduino через Serial3.This прошивку в настоящее время поддерживает только Arduino Mega2560
 
-Software installation
+Установка программного обеспечения
 ---------------------
 
-You can download the latest versions of GPIO here <https://github.com/Autohome2/Speeduino-GPIO>
+Последние версии GPIO можно загрузить здесь <https://github.com/Autohome2/Speeduino-GPIO>
 
-If you are installing one of the versions with CANBUS you will need to install the libraries to your Arduino IDE if you dont have a current version installed.The libraries are included in the download.
+Если вы устанавливаете одну из версий с помощью CANBUS, вам потребуется установить библиотеки в Arduino IDE, если вы не установили текущую версию. Библиотеки включены в загрузку.
 
-The libraries used are:
+Используемые библиотеки:
 
-Canbus from CoryJFowler (for spi canbus modules)[1](https://github.com/coryjfowler/MCP_CAN_lib)
+Canbus от CoryJFowler (for spi canbus modules)[1](https://github.com/coryjfowler/MCP_CAN_lib)
 
-Flexcan from Pawelsky( for Teensy onboard Can)[2](https://github.com/pawelsky/FlexCAN_Library)
+Flexcan от Pawelsky (for Teensy onboard Can)[2](https://github.com/pawelsky/FlexCAN_Library)
 
-The flexcan library is included in the installation of Teensyduino into the Arduino IDE[3](https://www.pjrc.com/teensy/td_download.html)
+Библиотека flexcan включена в установку Teensyduino в Arduino IDE[3](https://www.pjrc.com/teensy/td_download.html)
 
-The Tunerstudio INI file and base tune can be found in the reference folder for the specific variant you wish to install in the download . NOTE it is very important to install the correct ini and base msq for the selected firmware.
+Файл Tunerstudio INI и базовая настройка находятся в папке ссылок для конкретного варианта, который вы хотите установить при загрузке. ПРИМЕЧАНИЕ. Очень важно установить правильный ini и базовый msq для выбранного микропрограммного обеспечения (прошивки).
 
-Realtime Data Organisation
+Организация данных в реальном времени
 --------------------------
 
-Some versions of GPIO support the ability to access the realtime data from the GPIO I/O ports remotely via Either the Serial3 port or Canbus (see model versions). The data is stuctured as an offset address to the GPIO device real canID.
+Некоторые версии GPIO поддерживают возможность удаленного доступа к данным в реальном времени с портов ввода-вывода GPIO через порт Serial3 или Canbus (см. версии модели). Данные структурированы как адрес смещения для устройства GPIO real canID.
 
 1 - 32
 
-The digital inputs 1 through 32. These send a value of 1023 if ON and 0 when OFF.
+Цифровые входы от 1 до 32. Они посылают значение 1023, если включено, и 0, когда выключено.
 
 33 - 64
 
-The Digital Outputs 1 through 32. These have an ON value of 1023 and an Off value of 0.
+Цифровые выходы от 1 до 32. Они имеют значение ON, равное 1023, и значение Off, равное 0.
 
 65 - 81
 
-The analog inputs 0 through 15. These Send a value ranging from 0 to 1024.
+Аналоговые входы от 0 до 15. Эти команды посылают значение в диапазоне от 0 до 1024.
 
-example: if the GPIO real canID == 0x105 to request analog 0 you would request data from 261dec + 65dec == 326dec == 0x146
+пример: если GPIO real canID = = 0x105 для запроса аналогового 0, вы бы запросили данные от 261dec + 65dec = = 326dec = = 0x146
 
-The data is located in bytes 0 and 1 of the 8 transmitted , 0 being lsb 1 being msb.
+Данные находятся в байтах 0 и 1 из 8 переданных данных, 0 - lsb 1 - msb.
 
-Configuration
+Конфигурация
 -------------
 
-### Device Configuration
+### Конфигурация устройства
 
-Device configuration can be found in the Tunerstudio Tab "Settings" then select "device configuration"
+Конфигурацию устройства можно найти в Tunerstudio закладке "Settings" затем выберите "device configuration"
 
 ![](Gpio_config.jpg "Gpio_config.jpg")
 
--   **Device Real CanID** - The HEX 11bit Can address of the GPIO device
--   **Board Pin Layout** - The Mcu and board layout the GPIO is using
+-   **Device Real CanID** - Адрес HEX 11bit Can устройства GPIO
+-   **Board Pin Layout** - Компоновка Mcu и платы, используемая GPIO
 
 <img src="Board_pin_layout.jpg" title="Board_pin_layout.jpg" alt="Board_pin_layout.jpg" width="400" />
 
-Select the appropriate mcu and board type for your GPIO unit.The firmware download has several board configurations pre setup in the code. Depending on which MCU you compile the firmware with will depend if that configuration is available to use.
+Выберите соответствующий тип mcu и платы для блока GPIO. Загрузка прошивки имеет несколько конфигураций плат, предварительно установленных в коде. В зависимости от того, с каким MCU будет скомпилировано микропрограммное обеспечение, зависит, доступна ли эта конфигурация для использования.
 
 -   **Speeduino Connection Type**
-    -   **Not used** - This setting if the GPIO is a standalone device
-    -   **Via Serial3** - This setting if the GPIO connects directly using its serial connection to the secondary serial port on the Speeduino(usually Serial3).
-    -   **Via CanBus** - This setting if the GPIO is connected using its CanBus .This is pre-set at 11bit 250kbps.
+    -   **Not used** - Этот параметр используется, если GPIO является автономным устройством
+    -   **Via Serial3** - Эта настройка используется, если GPIO подключается непосредственно с помощью последовательного соединения к вторичному последовательному порту Speeduino (обычно Serial3).
+    -   **Via CanBus** - Этот параметр устанавливается, если GPIO подключен с помощью CanBus. Предварительно установлено значение 11 бит 250 кбит/с.
 
 <img src="Speeduino_connection.jpg" title="Speeduino_connection.jpg" alt="Speeduino_connection.jpg" width="400" />
 
--   **Speeduino Base CanBus Address** - The HEX 11bit Can address of the Speeduino ECU
+-   **Speeduino Base CanBus Address** - Адрес HEX 11bit Can ECU Speeduino
 
-### Programmable I/O and Output config
+### Программируемая конфигурация ввода/вывода
 
-From the Programmable Outputs Tab you can select to configure the Universal outputs or the External IO
+С Programmable Outputs закладки можно выбрать для настройки универсальных выходов **Universal outputs** или Внешний ввод-вывод **External IO**
 
 <img src="Prog_outputs1.jpg" title="Prog_outputs1.jpg" alt="Prog_outputs1.jpg" width="400" />
 
-### Configuring Outputs
+### Настройка выходных данных
 
-This page enables the configuration of the Universal Outputs.
+Эта страница используется для настройки универсальных выходов Universal Outputs.
 
 <img src="Universal_outputs.jpg" title="Universal_outputs.jpg" alt="Universal_outputs.jpg" width="500" />
 
--   *' Output port*' - This is the output port on the GPIO device . To use first select a port from the output port list ,configure the setting for that port and then click "burn" to burn the changes to your GPIO device(if online)
+-   *' Output port*' - Это выходной порт устройства GPIO. Чтобы сначала выбрать порт из списка выходных портов, настройте параметр для этого порта, а затем нажмите кнопку "" Записать "", чтобы записать изменения на устройство GPIO (если оно работает).
 
 <!-- -->
 
 -   *' Port settings*'
-    -   -   *' Enabled*' - Enables this output port
-        -   *' Power on value*' - The active state of the port when the GPIO device starts up
-        -   *' Active value*' - The active output state(Active High or Active Low)
+    -   -   *' Enabled*' - Включает этот выходной порт
+        -   *' Power on value*' - Активное состояние порта при запуске устройства GPIO
+        -   *' Active value*' - Активное выходное состояние (активное высокое или активное низкое)
 
 <!-- -->
 
--   *' Active conditions*'
-    -   -   *' Controller*' - This is fixed as the name of the GPIO device in use
-        -   *' Output channel*' - This is either the realtime output data from the local GPIO device or data from External devices[(see external data configuration)]((see_external_data_configuration) "wikilink")).
-        -   *' Logic option*' - The logical operation on the source value compared to the threshold , select &lt;,&gt;, or =
-        -   *' Threshold*' - The Trigger threshold for the output vs the source data.
-        -   ''' Hysteresis ''' - The threshold used with the threshold value
+-   *' Active conditions*' Активные условия
+    -   -   *' Controller*' - Это исправлено как имя используемого устройства GPIO
+        -   *' Output channel*' - Это либо выходные данные в реальном времени с локального устройства GPIO, либо данные с внешних устройств. [(see external data configuration)]((see_external_data_configuration) "wikilink")).
+        -   *' Logic option*' - Логическая операция над исходным значением по сравнению с пороговым значением, выберите &lt;,&gt;, или =
+        -   *' Threshold*' - Пороговое значение Trigger для выходных данных и исходных данных.
+        -   ''' Hysteresis ''' - Порог и пороговое значение
 
-### Configuring external data sources
+### Настройка внешних источников данных
 
-This page enable the configuration of the external data sources.
+Эта страница используется для настройки внешних источников данных.
 
 <img src="Externalio_config.jpg" title="Externalio_config.jpg" alt="Externalio_config.jpg" width="800" />
 
--   **External Input Channel Selection** - Enable/disable the external input channel
+-   **External Input Channel Selection** - Включение/отключение внешнего входного канала
 
 <!-- -->
 
--   **Source Base CanID** - The 11bit HEX CanID of the device the data is to be sourced from.
+-   **Source Base CanID** - 11-битный HEX CanID устройства, из которого должны быть получены данные.
 
-EG: In the picture this is set to 0x200 which was the Speeduino Base Can address set in "device configuration"
+Пример: На рисунке это значение равно 0x200, что было адресом Speeduino Base Can, установленным в "конфигурации устройства"
 
--   **Data from outchannel** - The outchannel number (from realtime outchannels) the data BEGINS at.
+-   **Data from outchannel** - Номер исходящего канала (из исходящих каналов в реальном времени), данные НАЧИНАЮТСЯ в.
 
-If the device is being accessed via CANBUS then this is the offset added to the base address +1 EG: in the picture it is 7 this would give a Can address of 0x208 or if a direct connection with Speeduino collect data from outchannel 7 (tpsADC)
+Если доступ к устройству осуществляется через CANBUS, то это смещение, добавленное к базовому адресу + 1 EG: на рисунке 7, это даст Can-адрес 0x208 или если прямое соединение со Speeduino собирает данные из внешнего канала 7 (tpsADC)
 
--   **no: of bytes** - The number of bytes the data has , select 1 or 2 (a 1 byte value has a range 0-254 , a 2 byte from 0 - 1024).
+-   **no: of bytes** - Количество байтов, которое имеют данные, выберите 1 или 2 (значение 1 байта имеет диапазон от 0 до 254, 2 байта от 0 до 1024).
 
-EG: In the picture it shows 1. This is due to outchannel 7(tpsADC) being only 1 byte long with a value of 0 - 254.
+Пример: На снимке видно 1. Это происходит из-за того, что внешний канал 7 (tpsADC) имеет длину всего 1 байт со значением от 0 до 254.
 
-### Hardware Test Page
+### Страница тестирования аппаратных средств Hardware Test Page
 
-To see this option you must enable it in project properties
+Чтобы увидеть этот параметр, необходимо включить его в свойствах проекта
 
 <img src="Project_properties_select.jpg" title="Project_properties_select.jpg" alt="Project_properties_select.jpg" width="800" />
 
 <img src="Project_properties_gpio.jpg" title="Project_properties_gpio.jpg" alt="Project_properties_gpio.jpg" width="800" />
 
-Then a new Tab will appear on the main dash
+Затем на главном тире появится новая вкладка
 
 <img src="Hardware_test_tab_gpio.jpg" title="Hardware_test_tab_gpio.jpg" alt="Hardware_test_tab_gpio.jpg" width="800" />
 
-#### Test Output Hardware
+#### Аппаратное обеспечение тестового вывода Test Output Hardware
 
-This will allow you to individually turn on/off output ports that are available . The availability depends on the board you have selected and pin configuration.To start testing click on "Enable test mode" . The output ports that can be tested will then be unGreyed and can be clicked on/off. After testing either click "Stop test mode" or just close the window. Any outputs still activated will be switched off.
+Это позволит по отдельности включать/отключать доступные выходные порты. Доступность зависит от выбранной платы и конфигурации контактов. Для запуска тестирования нажмите кнопку "Enable test mode". Выходные порты, которые могут быть протестированы, будут не серыми и могут быть включены/выключены. После тестирования нажмите кнопку "Stop test mode" или просто закройте окно. Все активированные выходы будут отключены.
 
 <img src="Hardware_output_test.jpg" title="Hardware_output_test.jpg" alt="Hardware_output_test.jpg" width="800" />
 
-### Creating new board layouts/pin configurations
+### Создание новых компоновок плат/конфигураций контактов Creating new board layouts/pin configurations
 
-New board types can be easily added to GPIO. It requires changes to be made to two files , "Utils.ino" and the Tunerstudio ini file.
+В GPIO можно легко добавлять новые типы плат. Требуется внести изменения в два файла, "Utils.ino" и файл "Tunerstudio.ini"
 
 #### Utils.ino
-
-In the utils.ino file is the indiivual configurations for each board option EG:
+В файле utils.ino представлены отдельные конфигурации для каждой опции платы НАПРИМЕР:
 
 `     #if defined(CORE_AVR)`
 `     case 1: // mega2560 demo V0.001`
@@ -232,9 +231,9 @@ In the utils.ino file is the indiivual configurations for each board option EG:
 `     break;`
 `     #endif `
 
-This is the entry for position 1 the STD mega2560 board.
+Это запись для позиции 1 платы STD mega2560.
 
-To add a new board create a new case with all the above pins. Ensure you change the MCU define if it is not a mega2560 to that of the MCU you are compiling with(only mega2560 is currently supported in). Any pins that are not used must be set to 255. EG: adding a new entry called"mynewboard" in position 6.
+Для добавления новой платы создайте новый корпус со всеми вышеуказанными контактами. Убедитесь, что вы изменили определение MCU, если он не является mega2560, на MCU, с которым вы компилируете (в настоящее время поддерживается только mega2560). Все неиспользуемые контакты должны иметь значение 255. EG: добавление новой записи под названием "mynewboard" в позицию 6.
 
 `     #if defined(CORE_AVR)`
 `     case 6: // mynewboard`
@@ -292,18 +291,17 @@ To add a new board create a new case with all the above pins. Ensure you change 
 `     break;`
 `     #endif `
 
-`Add that in in the appropriate space ie between 5 and 7 (in they exist or at the end of the options if not).`
+`Добавить, что в соответствующем пространстве то есть между 5 и 7 (в них существуют или в конце опции, если нет).`
 
-Saving and rcomplie the file and upload to your GPIO. Ensure the position used matches that in the ini file mods see next.
+Сохранение и повторная загрузка файла в GPIO. Убедитесь, что используемое положение соответствует положению, которое в ini-файле моды видят далее.
 
-#### The Tunerstudio ini
-
-This is located in the "reference" folder in the firmware download. Do not use MS notepad to edit this file!! A good editor is Notepad++ a few software download. The line rquiring editing is line 140
+#### Файл Tunerstudio ini
+Находится в "reference" в папке загрузки микропрограммного обеспечения. Не используйте блокнот MS для редактирования этого файла!! Хороший редактор - Notepad++ несколько загрузок программного обеспечения.
 
 `#define PIN_LAYOUT = "ProMini GPIO v0.002", "Mega2560 GPIO v0.003", "STM32 BluePill GPIO V0.003", "Speeduino v0.3", "Speeduino v0.4", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID"  `
 
-To add a new entry simply remove one of the "INVALID" and replace with your board name EG: the changed file adding a new board called "mynewboard"
+Чтобы добавить новую запись, просто удалите одну из "INVALID" и замените на имя платы НАПРИМЕР: измененный файл, добавляющий новую плату с именем "mynewboard"
 
 `#define PIN_LAYOUT = "ProMini GPIO v0.002", "Mega2560 GPIO v0.003", "STM32 BluePill GPIO V0.003", "Speeduino v0.3", "Speeduino v0.4", "INVALID", "mynewboard", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID" `
 
-This shows the new entry being a position 6(promini is position 0). The board config must be at position 6 in the utils.ino too. When you save the changed file and reload it into Tunerstudio your new board will appear as an option.
+Это показывает, что новая запись является позицией 6 (promini - позиция 0). Конфигурационный элемент платы должен находиться в положении 6 в утилите. Когда вы сохраните измененный файл и перезагрузите его в Tunerstudio, новая плата появится в качестве опции.
