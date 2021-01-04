@@ -2,46 +2,46 @@
 title: ЭБУ Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2021-01-04T19:42:35.221Z
+date: 2021-01-04T19:55:49.800Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T07:12:03.650Z
 ---
 
-Introduction
+Введение
 ------------
 
-The Speeduino Miata / MX5 Plug N Play (PNP) box is designed for easy installation on the 1.6L NA6 vehicles using the 48-pin ECU. This is all 1.6L models from 1989 through 1993 and some 1.6s up to 1995.
+Speeduino Miata/ MX5 Plug N Play (PNP) предназначена для легкой установки на автомобили 1.6L NA6 с помощью 48-контактного ECU. Это все 1.6 модели с 1989 по 1993 год и некоторые до 1995 года.
 
-The stock ECU for these vehicles have a 2 plug loom connection and look like the below:
+Штатный блок для этих транспортных средств имеет 2 штекерное соединение и выглядит следующим образом:
 
 ![OEM_ECU.png](/img/MX5/OEM_ECU.png){.align-center width=500}
 
-> **WARNING:** Note that some changes to the stock hardware configuration are required with this unit. In particular, please see below in the fuel pump section for details that must be understood prior to starting
+> **ПРЕДУПРЕЖДЕНИЕ:** Обратите внимание на то, что для этого устройства требуются некоторые изменения конфигурации оборудования. В частности, подробности, которые должны быть поняты перед запуском, см. ниже в разделе топливного насоса.
 {.is-danger}
 
 
 
-Hardware requirements
+Требования к оборудованию
 ---------------------
 
-The PNP box plugs straight into the stock wiring in place of the original ECU, however some hardware changes are either recommended or are desirable in most installations.
+Блок PNP подключается непосредственно к проводке на месте исходного ECU, однако некоторые изменения оборудования либо рекомендуются, либо желательны в большинстве установок.
 
-Most significantly, Speeduino does not operate with the stock AFM on the NA6 engine. This unit can either be retained or removed, but if being kept in place, the connector to it should be disconnected.
+Самое важное, Speeduino не работает со штоком AFM на NA6 двигателе. Этот блок можно либо сохранить, либо удалить, но если его оставить на месте, разъем к нему следует отсоединить.
 
-### Manifold Pressure
+### Давление в коллекторе
 
-For a load reference, it is strongly recommended to run a manifold pressure line to the Speeduino PNP box. This allows Speeduino to run in the default Speed-Density configuration and is usually a fairly easy installation. The unit comes with a built-in MAP sensor that supports up to 1 Bar of boost, but is compatible with other external sensors if more pressure is required.
+Для определения нагрузки настоятельно рекомендуется проложить линию давления в коллекторе к коробке Speeduino PNP. Это позволяет Speeduino работать в конфигурации Speed-Density по умолчанию и обычно является довольно простой установкой. Блок поставляется со встроенным датчиком MAP, поддерживающим до 1 бар наддува, но совместимым с другими внешними датчиками, если требуется большее давление.
 
-The 1.6L cars typically come with a suitable MAP port near the throttle body that is capped off in stock form and is generally the easiest place to take the manifold pressure reference.
+Автомобили 1.6L обычно поставляются с подходящим портом MAP рядом с корпусом дросселя, который закрыт в форме запаса и обычно является наиболее простым местом для определения эталонного давления в коллекторе.
 
 ![MAP_orig.png](/img/MX5/MAP_orig.png){.align-center width=500}
 
 5mm or 6mm vacuum hose should be used and there are multiple original holes in the firewall where this can be run.
 
-### Throttle Position Sensor
+### Датчик положения дросселя
 
-Manual NA6s come with a switch only TPS that provides limited feedback to the ECU. It is highly recommended to replace this with a Variable TPS (VTPS) that provides a signal indicating the current throttle position. The original wiring can be used with any 3 wire VTPS
+Ручной NA6s поставляется только с коммутатором TPS, который обеспечивает ограниченную обратную связь с ECU. Настоятельно рекомендуется заменить его переменной TPS (VTPS), которая выдает сигнал, указывающий текущее положение дросселя. Исходная проводка может использоваться с любым 3 проводом VTPS
 
 ![TPS_wiring.png](/img/MX5/TPS_wiring.png){.align-center width=500}
 
@@ -49,53 +49,53 @@ Manual NA6s come with a switch only TPS that provides limited feedback to the EC
 {.is-warning}
 
 
-### Inlet Temperature Sensor
+### Датчик температуры на входе
 
-In the stock configuration, inlet air temperature is provided by a sensor in the AFM. If the AFM is retained then this sensor will work if jump wires are run from the AFM to the disconnected connector (See image below), however as most setups elect to remove the AFM, an additional sensor needs to be added. The recommended sensor is the GM open air IAT that is common to many GM vehicles. Part number for this is \#25036751 and it can be found fairly cheaply from many online sources, including the Speeduino store (https://speeduino.com/shop/index.php?id_product=23&controller=product)
+В конфигурации запаса температура воздуха на входе обеспечивается датчиком в АСМ. Если AFM сохраняется, то этот датчик будет работать, если переходные провода проходят от AFM к отсоединенному разъему (см. рисунок ниже), однако, поскольку большинство установок выбирают удаление AFM, необходимо добавить дополнительный датчик. Рекомендуемым датчиком является IAT на открытом воздухе ГМ, который является общим для многих транспортных средств ГМ. Номер детали для этого\# 25036751 и его можно найти довольно дешево из многих интернет-источников, включая магазин Speeduino (https://speeduino.com/shop/index.php?id_product=23&controller=product)
 
-The 2 wires from this sensor can be pinned directly into the AFM connector on pins 1 and 6 (It does not matter which wire goes to which pin):
+Провода 2 от этого датчика могут быть прикреплены непосредственно к разъему AFM на контактах 1 и 6 (неважно, какой провод идет к какому контакту):
 
 ![IAT_connector.png](/img/MX5/IAT_connector.png){.align-center width=500}
 
-### Wideband O2 Sensor
+### Широкополосный датчик O2
 
-Whilst not mandatory, the installation of a wideband oxygen sensor and controller is strongly recommended. Any wideband controller that outputs a 0-5v signal is supported and calibration for common controllers can be found in the Tools-&gt;Calibrate AFR Table dialog.
+Хотя установка широкополосного кислородного датчика и контроллера не является обязательной, настоятельно рекомендуется. Любой широкополосный контроллер, который выдает сигнал 0-5 В, поддерживается и калибровка для обычных контроллеров доступна в диалоговом окне Tools- & gt; Calibrate AFR Table.
 
-The wideband analog output signal should be connected to the original O2 sensor wire. This has a convenient connector in the engine bay, located just next to the coils. This can be found by following the wire from the original sensor. If not reusing the original narrowband sensor, the connector can be cut from this and attached to the wideband signal.
+Широкополосный аналоговый выходной сигнал должен быть подключен к исходному проводу датчика O2. Это имеет удобный разъем в моторном отсеке, расположенный как раз рядом с катушками. Это можно найти, проследив за проводом от исходного датчика. Если не использовать исходный узкополосный датчик повторно, разъем может быть вырезан из него и присоединен к широкополосному сигналу.
 
-### Fuel pump control
+### Управление топливным насосом
 
-The stock ECU does not perform any fuel pump control as this is taken care of by the AFM. Speeduino however can control the fuel pump through the original wiring, but requires the removal of the ST_SIG fuse. Failure to remove this fuse prior to powering the unit on will trip the smart FET that is used on this line, but should not cause permanent damage if only performed once or twice.
+Блок не осуществляет никакого управления топливным насосом, поскольку об этом заботится АСМ. Однако Speeduino может управлять топливным насосом через исходную проводку, но требует удаления предохранителя ST_SIG. Отказ снять этот предохранитель до включения питания блока приведет к отключению интеллектуального полевого транзистора, который используется на этой линии, но не должен вызывать постоянных повреждений, если они выполняются только один или два раза.
 
-The fuse to be removed is found in the engine bay fuse block:
+Извлекаемый предохранитель находится в блоке предохранителей отсека двигателя:
 
 ![ST_SIG_fuse.png](/img/MX5/ST_SIG_fuse.png){.align-center width=500}
 
-#### Alternative control methods
+#### Альтернативные методы контроля
 
-If the above method of fuel pump control is either not desirable or not available, an alternative driver wired to pin 2O on the main connector that can be used for this. Pin 2O originally carries the AFM signal, however as Speeduino does not use this (And the AFM must be disconnected) it can be used to carry the fuel pump control.
+Если вышеописанный способ управления топливным насосом либо нежелателен, либо недоступен, то альтернативный драйвер, подключенный к 2O на главном разъеме, может быть использован для этого. Контакт 2O изначально несет сигнал AFM, однако, поскольку Speeduino не использует его (и AFM должен быть отключен), он может использоваться для управления топливным насосом.
 
-To do this, a jumper wire is required on the AFM connector per the below:
+Для этого на разъеме AFM требуется перемычка, как показано ниже:
 
 ![AFM_fuel_pump.png](/img/MX5/AFM_fuel_pump.png){.align-center width=500}
 
 
-Once the above jumper is in place, the fuel pump pin in TunerStudio should be set to A9.
+После установки вышеуказанной перемычки необходимо установить штырь топливного насоса в TunerStudio в положение A9.
 
-### Setup on 1.8 engines
+### Настройка на двигателях 1.8
 
-Wiring on the 48-pin 1.8 (NA8) models is largely identical to the 1.6 (NA6) however there are some minor differences. In addition to other points on this page, the following should be observed for 1.8 setups:
+Проводка на 48-контактных моделях 1.8 (NA8) во многом идентична 1.6 (NA6), однако существуют некоторые незначительные различия. В дополнение к другим пунктам на этой странице для установок 1.8 следует соблюдать следующее:
 
--   Fuel pump output pin should be set to A9
--   If the tacho doesn't work, set the tacho pin to 49 and add a jumper to the pins labelled 'Tach' on the board (Just above R56)
--   If the TPS reading is fixed at full open/closed and you have a heated rear demister, you may need to remove/cut wire 2L. This should only be done in this specific case and it is unlikely to affect most cars.
+- Выходной палец топливного насоса должен быть установлен в A9
+- Если tacho не работает, установите контакт tacho на 49 и добавьте перемычку к контактам "Tach" на плате (чуть выше R56)
+- Если показания TPS зафиксированы при полном размыкании/замыкании и у вас есть обогреваемый задний дефистор, возможно, вам потребуется снять/вырезать 2L провода. Это следует делать только в данном конкретном случае и вряд ли это коснется большинства автомобилей.
 
-## Configuration and start
-It is strongly recommended to start by using the NA6 base tune that is available through SpeedyLoader. 
+## Конфигурирование и запуск
+Настоятельно рекомендуется начать с использования базовой мелодии NA6, которая доступна через SpeedingLoader.
 
-### Sensor calibration
+### Калибровка датчика
 
-The stock sensors can use preset calibrations within TunerStudio. The following values should be used if the stock sensors are retained:
+Датчики запаса могут использовать предварительно установленные калибровки в TunerStudio. При сохранении датчиков запаса следует использовать следующие значения:
 **Stock Coolant Sensor (CLT)** - RX-7_CLT(S4 & S5)
 **Stock inlet air sensor (IAT)** - RX-7_AFM(S5 in AFM)
 
