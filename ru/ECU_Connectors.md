@@ -2,7 +2,7 @@
 title: ЭБУ разъёмы ECU_Connectors
 description: 
 published: true
-date: 2021-01-05T11:34:31.005Z
+date: 2021-01-05T11:45:05.051Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-05T11:08:06.669Z
@@ -11,9 +11,9 @@ dateCreated: 2021-01-05T11:08:06.669Z
 ЭБУ разъёмы информация ECU Connector Reference
 -----------------------
 
-In an effort to simplify the design of new boards, this page is a reference of known ECU connector part numbers. Many times these can be difficult to find and are closely guarded by many wiring specialists who have significant price markups without supplying the manufacturer part numbers etc.
+Чтобы упростить проектирование новых плат, на этой странице приведены ссылки на известные номера деталей разъемов ECU. Во многих случаях их трудно найти и они тщательно охраняются многими специалистами по монтажу, которые имеют значительные ценовые наценки без указания номеров деталей производителя и т.д.
 
-These part numbers are primarily for the ECU side. Where known, a loom side part number is also shown.
+Эти номера деталей предназначены главным образом для установки пиролиза. Там, где это известно, также показан номер боковой части.
 
 ### Audi
 | Модели | Номера части | Вариант номера | заметки | Картинка                                                                                                                                                                                    |
@@ -58,10 +58,10 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 
 | Модели | Номер части | Вариант номера | Изготовитель | замечания | Картинка                                                                                                                                   |
 |--------------|-------------|--------------------------|------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| MK3 Supra ('87-'88)<br/>Celica ST165   | 172319-7    |                          | AMP  | 52-pin, 3 plug ECU  |  |
+| MK3 Supra ('87-'88)<br/>Celica ST165   | 172319-7    |                          | AMP  | 52-контакта, 3 штепселя ЭБУ.  |  |
 | MK3 Supra ('89+)   | 178780-1    |                          | AMP  | 76-pin, 4 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178780&DocType=Customer+Drawing&DocLang=Japanese) |
-| 3S-GT MR2    | 174518-7    |                          | AMP  | 64-pin, 3 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
-| 4efte GT<br/>2e-fe<br/>4e-fe    | 175446-6    |                          | AMP  | 42-pin, 2 plug ECU  |                                                                                                                                         |
-| 4efte Glanza | 175448-6    |                          | AMP  | 54-pin, 3 plug ECU  |                                                                                                                                         |
-| 1MZFE Camry  | 178203      |                          | AMP  | 100-pin, 4 plug ECU | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
+| 3S-GT MR2    | 174518-7    |                          | AMP  | 64-контакта, 3 штепселя ЭБУ.  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
+| 4efte GT<br/>2e-fe<br/>4e-fe    | 175446-6    |                          | AMP  | 42контакта, 2 штепселя ЭБУ.  |                                                                                                                                         |
+| 4efte Glanza | 175448-6    |                          | AMP  | 54-контакта, 3 штепселя ЭБУ.  |                                                                                                                                         |
+| 1MZFE Camry  | 178203      |                          | AMP  | 100-контакта, 4 штепселя ЭБУ. | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
 
