@@ -2,7 +2,7 @@
 title: Рруководство по стилю Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2021-01-05T12:37:39.796Z
+date: 2021-01-05T13:02:13.308Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:57:03.173Z
@@ -38,23 +38,24 @@ Speeduino стремится к соблюдению стандарта коди
 6.  пототипыр prototypes
 7.  (внешние) глобальные переменные (extern) global vars
 
-## File Names
-All names should be meaningful and follow existing usage patterns if present.
+## Имена файлов
 
-## Naming Conventions
-| Item                                        | Standard                                                     | Example                   |
+Все имена должны быть значимыми и соответствовать существующим шаблонам использования, если они имеются.
+
+## Соглашения о присвоении имен
+| Предмет                                        | Стандарт                                                     | Пример                   |
 |---------------------------------------------|--------------------------------------------------------------|---------------------------|
-| Functions                                   | camelCase, lowercase first letter, no spaces or _            | `readSensor();`           |
-| Variables                                   | Same as functions                                            | `sensorValue = 0;`        |
-| Anonymous variables (eg some loop counters) | Single lowercase letter (Preferred order or use: x, y, z, i) | `x++;`                    |
-| Constants                                   | UPPER_CASE, words joined with _                              | `#define TWO_SQUARED 4`   |
+| Функция                                   | camelCase, с строчная первая буква, нет пробелов или _            | `readSensor();`           |
+| Переменные                                   | Также как функции                                            |`sensorValue = 0;`       |
+| Анонимные переменные (например, некоторые счетчики циклов) | Однострочная буква (предпочтительный порядок или использование: x, y, z, i) | `x++;`                    |
+| Постоянные                                  | ВЕРХНИЙ_РЕГИСТР, слова, соединенные с _                              | `#define TWO_SQUARED 4`   |
 
-## Layout and whitespace
--   Use spaces for indents, not tabs
--   Indent 2 spaces per level
--   Always use { }, even for single statement blocks
--   Describe block structures using indentation, do not rely on { } alone
--   For multiple line blocks, brackets should always have their own line:
+## Макет и пробел Layout and whitespace
+-   Использование пробелов для отступов, а не табуляции
+-   Отступы 2 пробела на уровень
+-   Всегда использовать {}, даже для отдельных блоков инструкций
+-   описывать структуры блоков с помощью отступа, не полагаться только на {}
+-   Для блоков с несколькими линиями скобки всегда должны иметь собственную линию:
 
 ```
 void readSensors()
@@ -64,36 +65,36 @@ void readSensors()
 }
 ```
 
--   Single line blocks (if/else statements etc) should be on the same line and must includes braces
-    -   When used on a single line, there should be a trailing space after the { and a preceding space before the }
+-   Однострочные блоки (операторы if/else и т.д.) должны находиться в одной строке и содержать фигурные скобки
+    -   При использовании в одной строке должно быть заключительное пространство после {и предшествующее пространство перед}
 
 ` if(fanEnabled) { digitalWrite(fanPin, HIGH); }`
 
-## Declarations
--   Declare variables at the top of the function
--   In a block of related definitions vertically align the names, types, and initialisations
--   Initialise variables close to where they are first used.
+## Декларации Declarations 
+-   Объявить переменные в верхней части функции
+-   В блоке связанных определений вертикальное выравнивание имен, типов и инициализаций
+-   Инициализируйте переменные, близкие к месту их первого использования.
 
-## Functions
--   Also put the return type on same line as function name
--   Functions should be kept as short, and broken into sub-functions as required
--   Each function should have a single clearly defined purpose, this purpose should be reflected in its name.
+## Функции Functions
+-   Также поместите возвращаемый тип в ту же строку, что и имя функции
+-   Функции должны быть короткими и разбиваться на подфункции по мере необходимости
+-   Каждая функция должна иметь одну четко определенную цель, эта цель должна быть отражена в её названии.
 
-## Executable Statements
-- One per line, not i=0; j=0;
-- Multiple operations are permitted per line where appropriate. Eg: i = j = 0;
-- True / False if statements should **always** use a comparison (Either to 0 or 1, or to `true` and `false`). Eg:
+## Исполняемые инструкции Executable Statements
+- По одному на строку, не i=0; j=0;
+- При необходимости допускается выполнение нескольких операций в каждой строке. Например: i = j = 0;
+- Правда/Лож - True/False, если операторы **always** используют сравнение (либо 0, либо 1, либо true и false). Например:
     -   Good: `if(isEnabled == 1)`
     -   Bad: `if(isEnabled)`
-- Do no use comma operator for multiple variable definitions on a single line
+- Не используйте оператор запятой для нескольких определений переменных в одной строке
 
-## Function definitions
--   Use inline static for all non-interface functions
--   Use prototypes for all functions (even those returning int or void)
--   Don't turn parameter type checking off in prototypes with (), use (void) instead
--   Give sensible variable names in prototypes
+## Определения функций Function definitions
+- Использовать встроенную статику для всех неинтерфейсных функций
+-   Использовать прототипы для всех функций (даже возвращаемых int или void)
+-   Не отключать проверку типа параметра в прототипах с помощью (), используйте вместо этого (void)
+-   Давайте понятные имена переменных в прототипах
 
-## Comments
-- Use of the Doxygen commenting syntax is STRONGLY recommended (http://www.doxygen.nl/manual/docblocks.html)
-- Blocks comments should be used for any single comment longer than one line
-- Single comments are preferred at the end of a line rather than on their own line beforehand
+## Комментарии Comments
+- НАСТОЯТЕЛЬНО рекомендуется использовать синтаксис комментария Doxygen (http://www.doxygen.nl/manual/docblocks.html)
+- Комментарии блоков должны использоваться для любого отдельного комментария длиннее одной строки
+- Отдельные комментарии предпочтительны в конце строки, а не в их собственной строке заранее
