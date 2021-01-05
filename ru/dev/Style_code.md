@@ -2,7 +2,7 @@
 title: Рруководство по стилю Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2021-01-05T12:16:20.242Z
+date: 2021-01-05T12:31:24.889Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:57:03.173Z
@@ -19,16 +19,16 @@ Speeduino стремится к соблюдению стандарта коди
 
 В программных кодах ('.ino') элементы должны располагаться в следующей последовательности:
 
-1. A mandatory header comment describing the purpose of the file
-2. included files (`#include`)
-3. defines (`#define`)
-4. local struct typedefs
-5. local prototypes
-6. Definitions of any global vars
-7. Main function (if present)
-8. Local functions
+1. Обязательный комментарий к заголовку, описывающий назначение файла
+2. включенные файлы (`#include`)
+3. определения (`#define`)
+4. локальные типы структуры local struct typedefs
+5. локальные прототипы local prototypes
+6. Определения любых глобальных переменных global vars
+7. Основная функция (при наличии) Main function
+8. Локальные функции Local functions
 
-In a C header (`.h`) file items must be arranged in the following sequence:
+В заголовке C (`.h`) элементы файла должны располагаться в следующей последовательности:
 
 1.  Header comment
 2.  ifndef guard
