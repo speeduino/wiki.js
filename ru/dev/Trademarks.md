@@ -1,38 +1,38 @@
 ---
-title: Trademarks
+title: Товарные знаки Trademarks
 description: 
 published: true
-date: 2021-01-02T04:58:12.856Z
+date: 2021-01-05T13:11:02.747Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:58:12.856Z
 ---
 
 
-Overview
+Обзор
 ========
 
-Whilst the Speeduino project is completely open source in terms of hardware, software etc both the name ('Speeduino') and logo are trademarked in the USA and Australia (And potentially others). The use of either (or both) the name or logo is limited to the specific methods outlined on this page.
+В то время как проект Speeduino является полностью открытым с точки зрения оборудования, программного обеспечения и т.д. как название ('Speeduino'), так и логотип являются товарными знаками в США и Австралии (И потенциально других странах). Использование имени или логотипа (или и того, и другого) ограничено конкретными методами, описанными на этой странице.
 
-I encourage the adaptation of the designs and code that are included in this project, but in order to protect it from exploitation and potentially quality concerns, these restrictions on the project identity will be enforced.
+Я призываю адаптировать проекты и коды, которые включены в этот проект, но чтобы защитить его от эксплуатации и потенциально проблем качества, эти ограничения на идентичность проекта будут применяться.
 
-Speeduino name
+Название Speeduino
 --------------
 
-No unofficial boards (Eg PCBs), complete products or accessories may use the name 'Speeduino' on it's own, or combined with something like a version number, in a way that could potentially imply that it is in any way sanctioned by the project. The 'Speeduino' name maybe used, however, if it is combined with wording that indicates that the product is related to Speeduino. Permitted examples of this are:
+Никакие неофициальные платы (например, ПХД), комплектные продукты или аксессуары не могут использовать название "Speeduino" самостоятельно или в сочетании с чем-то вроде номера версии таким образом, что это может потенциально означать, что он каким-либо образом санкционирован проектом. Однако название "Speeduino" может использоваться, если оно сочетается с формулировкой, указывающей, что продукт имеет отношение к Speeduino. Допустимыми примерами этого являются:
 
--   'Speeduino compatible'
--   'Made for Speeduino'
--   'Powered by Speeduino'
+-   Speeduino совместим 'Speeduino compatible'
+-   Сделано для Speeduino 'Made for Speeduino'
+-   На базе Speeduino 'Powered by Speeduino'
 
-If you wish to use other, similar wording, but are unclear whether it is allowed, please contact me for clarification.
+Если вы хотите использовать другую, аналогичную формулировку, но неясно, возможен ли такой варивнт, пожалуйста, свяжитесь с автором проекта для разъяснения.
 
-Speeduino logo
+Логотип Speeduino
 --------------
 
-Similar to the 'Speeduino' name itself, the logo may not be used on it's own. However, additional wording may be added to make clear that the product in question (hardware/software/documentation/artwork etc) is not an official prt of the project. As with the naming, the following examples are permitted:
+Как и само название 'Speeduino', логотип может не использоваться сам по себе. Однако могут быть добавлены дополнительные формулировки, чтобы четко указать, что данный продукт (оборудование/программное обеспечение/документация/художественные работы и т.д.) не является официальным документом проекта. Как и в случае присвоения имен, допустимы следующие варианты:
 
--   'Speeduino Community'
--   'Speeduino compatible'
--   'Made for Speeduino'
--   'Powered by Speeduino'
+-   Сообщество Спидуино 'Speeduino Community'
+-   Speeduino совместим 'Speeduino compatible'
+-   Сделано для Speeduino 'Made for Speeduino'
+-   На базе Speeduino 'Powered by Speeduino'
