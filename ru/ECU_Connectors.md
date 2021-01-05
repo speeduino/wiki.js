@@ -2,7 +2,7 @@
 title: ЭБУ разъёмы ECU_Connectors
 description: 
 published: true
-date: 2021-01-05T11:33:11.609Z
+date: 2021-01-05T11:34:31.005Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-05T11:08:06.669Z
@@ -43,7 +43,7 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 | Неизвестно                         | 917940 (ECU)  | 917937 (Loom side)                       | AMP  | 120 контакт сборка Impul-Mate                                             |                                                                                                                                                                                                                                                                                |
 | Skyline RB25 (NEO)              | 178079 (ECU)  | 178073 (Loom side)                       | AMP  | 104 контакт сборка Impul-Mate. Также используется с 5 спереди (Eg 5178079) |                                                                                                                                                                                                                                                                                |
 | Неизвестно                         | 178078 (ECU)  | 178080 (Loom side)                       | AMP  | 88 контакт сборка Impul-Mate. Также используется с 5 спереди (Eg 5178078)  |                                                                                                                                                                                                                                                                                |
-| 300ZX<br>Skyline R32,R33,R34 (Excl NEO)<br/>Silvia S13(CA18),S14(Zenki)<br/>180SX<br/>Infinity Q45                     | 5174385 (ECU) | 174385 (Older prt \#) 177700 (Loom side) | AMP  | 76 pin 'Impul-Mate' assembly                                              | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174385&DocType=Customer+Drawing&DocLang=Japanese)                                                 |
+| 300ZX<br>Skyline R32,R33,R34 (Excl NEO)<br/>Silvia S13(CA18),S14(Zenki)<br/>180SX<br/>Infinity Q45                     | 5174385 (ECU) | 174385 (Older prt \#) 177700 (Loom side) | AMP  | 76 контакт сборка Impul-Mate                                              | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174385&DocType=Customer+Drawing&DocLang=Japanese)                                                 |
 | Silvia S13(SR20),S14(Kouki),S15 | 174836 (ECU)  | 177699 (Loom)                            | AMP  | 64  контакт сборка Impul-Mate                                              | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174836&DocType=Customer+Drawing&DocLang=Japanese) [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=177699&DocType=Customer+Drawing&DocLang=English) |
 | Неизвестно                         | 174831 (ECU)  | 177698 (Loom)                            | AMP  | 48  контакт сборка Impul-Mate                                              |                                                                                                                                                                                                                                                                                |
 
