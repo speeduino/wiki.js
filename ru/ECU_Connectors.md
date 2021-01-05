@@ -2,7 +2,7 @@
 title: ЭБУ разъёмы ECU_Connectors
 description: 
 published: true
-date: 2021-01-05T11:19:57.655Z
+date: 2021-01-05T11:26:43.333Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-05T11:08:06.669Z
@@ -18,13 +18,13 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 ### Audi
 | Модели | Номера части | Вариант номера | заметки | Картинка                                                                                                                                                                                    |
 |------------------------------|-------------|--------------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A3,A4,A6,Golf,Passat         | 8-1393476-0 |                          | 80-pin 2 plug connector. Found on many models starting from 1997 going to mid 2000's. Both gasoline and diesel. | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+View+Model%7FCVM_8-1393476-0%7FB%7Fpdf%7F3D%7F3D_CVM_CVM_8-1393476-0_B.pdf%7F8-1393476-0)        |
-| Golf mk3, Passat B4, Corrado | 963356-1    |                          | 1st gen VR6 type engines (both coilpack/distributor type)                                                       | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+View+Model%7FCVM_963356-1%7FD%7Fpdf%7F3D%7F3D_CVM_CVM_963356-1_D_c-963356-1-d-3d.pdf%7F963356-1) |
+| A3,A4,A6,Golf,Passat         | 8-1393476-0 |                          | 80-контактный 2 штепсельный разъем. Встречается на многих моделях, начиная с 1997 до середины 2000-х годов. И бензин, и дизель. | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+View+Model%7FCVM_8-1393476-0%7FB%7Fpdf%7F3D%7F3D_CVM_CVM_8-1393476-0_B.pdf%7F8-1393476-0)        |
+| Golf mk3, Passat B4, Corrado | 963356-1    |                          | 1 поколение VR6 двигателей (оба типа катушки/дистрибутор)                                                        | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+View+Model%7FCVM_963356-1%7FD%7Fpdf%7F3D%7F3D_CVM_CVM_963356-1_D_c-963356-1-d-3d.pdf%7F963356-1) |
 
 ### BMW
 | Модели | Номера части | Вариант номера | заметки | Картинка                                                                                                                                          |
 |---------------------------|-------------|--------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| M54/M52tu/M62tu           | 967-288     |                          | 134 pins, 5 plug construction        | [PDF](https://www.mouser.fi/ProductDetail/571-7-967288-1)              |
+| M54/M52tu/M62tu           | 967-288     |                          | 134 контакта, в 5 штекерах        | [PDF](https://www.mouser.fi/ProductDetail/571-7-967288-1)              |
 
 
 
@@ -32,9 +32,9 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 
 | Модели | Номера части | Вариант номера | заметки | Картинка                                                                                                                                          |
 |---------------------------|-------------|--------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| NA Miata/MX5              | 174917-6    |                          | 2 plug 48 pin connector that covers most of the early NA models (Up to around '94)        | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174917&DocType=Customer+Drawing&DocLang=JP)              |
-| NB(A) Miata/MX5 ('98-'01) | 174518-7    |                          | 3 plug 64 pin connector that covers all NB models up to '01 and some of the later NA ECUs | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese)        |
-| NB(B) Miata/MX5 ('01-'05) | 1123038-2   | 353830-5                 | 3 plug 72 pin connector that covers all facelift NB(B) models from '01 onwards            | [3D-PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=CVM_1123038-2&DocType=Customer+View+Model&DocLang=3D) |
+| NA Miata/MX5              | 174917-6    |                          | 2 штепсельный 48-контактный разъем, который покрывает большинство ранних моделей NA (примерно до '94) | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174917&DocType=Customer+Drawing&DocLang=JP)              |
+| NB(A) Miata/MX5 ('98-'01) | 174518-7    |                          | 3 штепсельный 64-контактный разъем, который охватывает все модели NB до '01 и некоторые из более поздних ЭБУ NA | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese)        |
+| NB(B) Miata/MX5 ('01-'05) | 1123038-2   | 353830-5                 | 3 штепсельный 72-контактный разъем, закрывающий все модели фейслифт NB (B) начиная с '01 и далее           | [3D-PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=CVM_1123038-2&DocType=Customer+View+Model&DocLang=3D) |
 
 ### Nissan
 
