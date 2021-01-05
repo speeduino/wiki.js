@@ -2,7 +2,7 @@
 title: ЭБУ разъёмы ECU_Connectors
 description: 
 published: true
-date: 2021-01-05T11:31:40.269Z
+date: 2021-01-05T11:33:11.609Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-05T11:08:06.669Z
@@ -51,8 +51,8 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 
 | Модели | Номер части | Вариант номера | Изготовитель | замечания | Картинка                                                                                                                                  |
 |-------------|-------------------------------|--------------------------|------|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Most 99-00  | 1-353222-6 (ECU side)         |                          | TE   | Subarus only use 96 of the 126 pins. The 3rd block of pins is not populated | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=353222&DocType=Customer+Drawing&DocLang=English) |
-| JECS 93 pin | MX7-93PL-C4 (ECU side)<br/>Loom side (3 plugs):<br/>35 pins connector: MX7-A-35SC<br/>28 pins connector: MX7-A-28SC<br/>30 pins connector: MX7-A-30SC   |                          | JAE  | 3 rows of pins. Used on WRX models (maybe others) up to 1999.               | [1](https://www.mouser.com/ds/2/206/J031431-1134923.pdf)                                                                               |
+| Most 99-00  | 1-353222-6 (ECU side)         |                          | TE   | Subaru использует только 96 контактов из 126. 3-й блок контактов не заполнен | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=353222&DocType=Customer+Drawing&DocLang=English) |
+| JECS 93 pin | MX7-93PL-C4 (ECU side)<br/>Loom side (3 plugs):<br/>35 pins connector: MX7-A-35SC<br/>28 pins connector: MX7-A-28SC<br/>30 pins connector: MX7-A-30SC   |                          | JAE  | 3 ряда штырей. Используется на моделях WRX (возможно, других) до 1999 года.               | [1](https://www.mouser.com/ds/2/206/J031431-1134923.pdf)                                                                               |
 
 ### Toyota
 
