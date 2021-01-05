@@ -2,7 +2,7 @@
 title: ЭБУ разъёмы ECU_Connectors
 description: 
 published: true
-date: 2021-01-05T11:49:06.778Z
+date: 2021-01-05T11:51:34.269Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-05T11:08:06.669Z
@@ -58,10 +58,10 @@ dateCreated: 2021-01-05T11:08:06.669Z
 
 | Модели | Номер части | Вариант номера | Изготовитель | замечания | Картинка                                                                                                                                   |
 |--------------|-------------|--------------------------|------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| MK3 Supra ('87-'88)<br/>Celica ST165   | 172319-7    |                          | AMP  | 52-контакта, 3 штепселя ЭБУ.  |  |
-| MK3 Supra ('89+)   | 178780-1    |                          | AMP  | 76-pin, 4 plug ECU  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178780&DocType=Customer+Drawing&DocLang=Japanese) |
-| 3S-GT MR2    | 174518-7    |                          | AMP  | 64-контакта, 3 штепселя ЭБУ.  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
-| 4efte GT<br/>2e-fe<br/>4e-fe    | 175446-6    |                          | AMP  | 42контакта, 2 штепселя ЭБУ.  |                                                                                                                                         |
-| 4efte Glanza | 175448-6    |                          | AMP  | 54-контакта, 3 штепселя ЭБУ.  |                                                                                                                                         |
-| 1MZFE Camry  | 178203      |                          | AMP  | 100-контакта, 4 штепселя ЭБУ. | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
+| MK3 Supra ('87-'88)<br/>Celica ST165   | 172319-7    |                          | AMP  | 52-контакта, 3 разьема ЭБУ.  |  |
+| MK3 Supra ('89+)   | 178780-1    |                          | AMP  | 76-контакта, 4 разьема ЭБУ.  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178780&DocType=Customer+Drawing&DocLang=Japanese) |
+| 3S-GT MR2    | 174518-7    |                          | AMP  | 64-контакта, 3 разьема ЭБУ.  | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=174518&DocType=Customer+Drawing&DocLang=Japanese) |
+| 4efte GT<br/>2e-fe<br/>4e-fe    | 175446-6    |                          | AMP  | 42-контакта, 2 разьема ЭБУ.  |                                                                                                                                         |
+| 4efte Glanza | 175448-6    |                          | AMP  | 54-контакта, 3 разьема ЭБУ.  |                                                                                                                                         |
+| 1MZFE Camry  | 178203      |                          | AMP  | 100-контакта, 4 разьема ЭБУ. | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
 
