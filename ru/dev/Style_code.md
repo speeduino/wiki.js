@@ -1,23 +1,23 @@
 ---
-title: Style Guide
+title: Рруководство по стилю Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2021-01-02T04:57:03.173Z
+date: 2021-01-05T12:16:20.242Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:57:03.173Z
 ---
 
-# Goal
-The Speeduino firmware aspires to a common, unified approach to code layout based on the guidelines on this page. Any pull requests or submissions should align with these recommendations as much as possible. 
+# Цель
+Микропрограмма Speeduino стремится к общему, унифицированному подходу к компоновке кода на основе рекомендаций на этой странице. Любые запросы или представления должны в максимально возможной степени соответствовать этим рекомендациям.
 
-## A note on MISRA compliance
-Speeduino strives for compliance to the MISRA C:2012 coding standard and many of the conventions below are to align with this. A full description of the requirments of MISRA C:2012 is beyond the scope of this document, but the code does include a MISRA scanning script based on cppcheck that you can use to verify your code changes.
+## Замечания о соблюдении MISRA
+Speeduino стремится к соблюдению стандарта кодирования MISRA C:2012, и многие из приведенных ниже конвенций должны соответствовать этому. Полное описание требований MISRA C:2012 выходит за рамки данного документа, но код включает скрипт сканирования MISRA, основанный на cppcheck, который можно использовать для проверки изменений кода
 
-# Details
-## File Structure
+# Детали
+## Структура файла
 
-Within code files (`.ino`), items must be arranged in the following sequence:
+В программных кодах ('.ino') элементы должны располагаться в следующей последовательности:
 
 1. A mandatory header comment describing the purpose of the file
 2. included files (`#include`)
