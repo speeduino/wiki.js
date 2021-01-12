@@ -1,8 +1,8 @@
 ---
-title: Code_overview
+title: Обзор кода Code_overview
 description: 
 published: true
-date: 2021-01-02T04:56:02.483Z
+date: 2021-01-12T12:52:44.783Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-02T04:56:02.482Z
