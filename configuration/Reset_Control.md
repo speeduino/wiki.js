@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2021-01-20T12:30:08.133Z
+date: 2021-01-20T12:37:42.001Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -27,7 +27,7 @@ Reset Control can be used as simply as setting some options and [connecting a wi
 Options
 -------
 
-![<File:2018-02-27> 21 11 05-Reset Control.png](2018-02-27_21_11_05-Reset_Control.png "File:2018-02-27 21 11 05-Reset Control.png")
+![](2018-02-27_21_11_05-Reset_Control.png "File:2018-02-27 21 11 05-Reset Control.png")
 
 The Speeduino firmware provides three options for preventing the Arduino from resetting *(**\*** indicates a [bootloader update](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink") is required)*:
 
