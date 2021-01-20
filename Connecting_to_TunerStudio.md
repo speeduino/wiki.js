@@ -2,8 +2,10 @@
 title: Setting up TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2020-01-16T15:28:01.635Z
+date: 2021-01-20T11:22:30.482Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:37:05.419Z
 ---
 
 # Connecting to Tuner Studio
@@ -14,7 +16,7 @@ Once you have the firmware compiled and uploaded to your Arduino, you're ready t
 
 ## Downloading Tuner Studio
 
-If you haven't already, grab a copy of Tuner Studio from: http://www.tunerstudio.com/index.php/downloads
+If you haven't already, grab a copy of Tuner Studio from [EFI Analytics](http://www.tunerstudio.com/index.php/downloads)
 Tuner Studio is available for Windows, Mac and linux and will run on most PCs as it's system requirements are fairly low.
 
 The current minimum version of TunerStudio required is 3.0.7, but the latest version is usually recommended.
