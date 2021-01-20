@@ -2,8 +2,10 @@
 title: 3rd_party
 description: 
 published: true
-date: 2020-02-22T23:10:43.305Z
+date: 2021-01-20T10:27:39.689Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:36:57.774Z
 ---
 
 3rd Party Boards
@@ -51,4 +53,4 @@ By Darren Siepka, aka Dazq
 
 dxControl-Gears is a controller for electronically controlled automatic gearboxes, designed to accompany Speeduino. It is a custom development of the dxControl-GPIO code .
 
-More information [dxControl-Gears](dxControl-Gears "wikilink")
+More information [dxControl-Gears](/en/dxControl-Gears "wikilink")
