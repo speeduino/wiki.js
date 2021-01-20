@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-01-20T10:27:39.689Z
+date: 2021-01-20T10:28:00.821Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -24,7 +24,7 @@ By Weaver Markel, aka turboedge
 
 NO2C is the smallest, fully functional, single board, Arduino MEGA shield made for Speeduino. The board is no bigger than the MEGA itself. Originally intended for, but not limited to applications where space is limited. These may include ATVs, motorcycles, karts, lawnmowers, and other power equipment. As you might guess by the title, it is capable of driving two injector and two ignition channels. If desired the channels can be split to drive two injectors and two coil drivers each. Some versions of the NO2C can accept a daughter board that allows more channels and other features.
 
-More information [NO2C for Speeduino](NO2C_for_Speeduino "wikilink")
+More information [NO2C for Speeduino](/en/NO2C_for_Speeduino "wikilink")
 
 Accessary Boards
 ================
