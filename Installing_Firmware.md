@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2021-01-20T10:50:22.787Z
+date: 2021-01-20T10:51:25.292Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
@@ -103,11 +103,11 @@ Most official boards and many non-official versions use the ATMega16U2 or 8U2, w
 
 ### Older firmware releases
 
-If required, older firmware releases and details can be found at [/en/Firmware_History](Firmware_History "wikilink")
+If required, older firmware releases and details can be found at [Firmware_History](/en/Firmware_History "wikilink")
 
 ### Verifying Firmware
 
-The firmware is now loaded onto your board and you are now able to move onto [/en/Connecting to TunerStudio](Connecting_to_TunerStudio "wikilink").
+The firmware is now loaded onto your board and you are now able to move onto [Connecting to TunerStudio](/en/Connecting_to_TunerStudio "wikilink").
 
 Optionally, you may perform a manual verification of the firmware by using the Arduino IDE's Serial Monitor. This can be started by selecting 'Serial Monitor' from the Tools menu.
 
