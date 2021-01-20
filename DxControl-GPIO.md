@@ -1,3 +1,13 @@
+---
+title: DxControl-GPIO
+description: 
+published: true
+date: 2021-01-20T11:10:21.994Z
+tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:37:08.537Z
+---
+
 dxControl-GPIO, A GPIO Controller for Speeduino
 ===============================================
 
@@ -61,7 +71,7 @@ This Firmware also offers Generic 11bit broadcasting of any outchannel data.
 Software installation
 ---------------------
 
-You can download the latest versions of GPIO here <https://github.com/Autohome2/Speeduino-GPIO>
+You can download the latest versions of GPIO [here](https://github.com/Autohome2/Speeduino-GPIO)
 
 If you are installing one of the versions with CANBUS you will need to install the libraries to your Arduino IDE if you dont have a current version installed.The libraries are included in the download.
 
