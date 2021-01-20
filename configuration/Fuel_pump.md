@@ -2,12 +2,14 @@
 title: Fuel pump
 description: Setting the on/off conditions of the fuel pump
 published: true
-date: 2020-01-16T14:17:07.764Z
+date: 2021-01-20T11:39:01.704Z
 tags: aux outputs, tuning
+editor: markdown
+dateCreated: 2020-01-14T06:24:04.641Z
 ---
 
 # Fuel pump
-Fuel pump control is a simple but important function performed by the ECU. Currently Speeduino does not perform variable (PWM) pump control, but 
+Fuel pump control is a simple but important function performed by the ECU. Currently Speeduino does not perform variable (PWM) pump control.
 
 ## Settings
 ![fuel_pump.png](/img/accessories/fuel_pump.png){.align-center width=480}
