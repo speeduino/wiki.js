@@ -1,3 +1,13 @@
+---
+title: VR_conditioner
+description: 
+published: true
+date: 2021-01-20T11:47:59.954Z
+tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:53:46.712Z
+---
+
 Overview
 ========
 
@@ -33,4 +43,5 @@ The board is based around the reference design for the MAX9926 adaptive conditio
 Alternative uses
 ----------------
 
-Whilst the 'VR' socket on the Speeduino board was initially designed for a VR conditioner, it can be used to process any incoming signal. An example of this would be an opto isolator to bring a 0-12v signal down to a safe 0-5v range. For reference, the pinout of the socket is shown below: <img src="https://raw.githubusercontent.com/speeduino/wiki/master/vr/VR%20Conditioner%20pinout.png" />
+Whilst the 'VR' socket on the Speeduino board was initially designed for a VR conditioner, it can be used to process any incoming signal. An example of this would be an opto isolator to bring a 0-12v signal down to a safe 0-5v range. For reference, the pinout of the socket is shown below: 
+<img src="https://raw.githubusercontent.com/speeduino/wiki/master/vr/VR%20Conditioner%20pinout.png" />
