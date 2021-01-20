@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-01-20T11:03:52.383Z
+date: 2021-01-20T11:04:49.256Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -37,7 +37,7 @@ By Weaver Markel, aka turboedge
 The UA4C gets it’s name “Under Arduino 4 Channel”, as the Arduino Mega sits on top of the Speeduino PCB.
 This combined with an all surface mount part design give all the functionality and more of the 0.4 Speeduino in a much slimmer package.
 
-More information [TO BE ADDED]()
+More information [UA4C for Speeduino](/boards/ua4c "wikilink")
 
 
 Accessary Boards
