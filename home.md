@@ -2,8 +2,10 @@
 title: Speeduino Manual
 description: The Speeduino documentation manual
 published: true
-date: 2020-04-24T17:13:24.501Z
+date: 2021-01-20T10:55:16.662Z
 tags: home
+editor: markdown
+dateCreated: 2020-01-05T22:26:30.455Z
 ---
 
 # Introduction
@@ -13,7 +15,7 @@ Whilst this document will assist in providing information related to Speeduino's
 
 ### Getting Started
 
-In terms of starting out with Speeduino, it can help to understand the various compnents that make up the system:
+In terms of starting out with Speeduino, it can help to understand the various components that make up the system:
 
 1. **A Speeduino board** - This is the muscle of the Speeduino ECU and contains all the drivers and IO circuits. This maybe one of the generic boards (Such as the v0.4) or a PNP board for a specific model car
 2. **An Arduino** - This is the brains of Speeduino and contains the processor, memory and storage. It plugs into the Speeduino board in order to interface with the vehicle wiring. Usually a Arduino Mega 2560.
@@ -21,10 +23,10 @@ In terms of starting out with Speeduino, it can help to understand the various c
 
 As a starting point, it is generally recommended to first upload the firmware to your Arduino and get it connecting to the tuning software (Tuner Studio) before moving on to hardware assembly or wiring etc. Software setup and configuration on Speeduino can be completed without the need for any additional hardware to be present (Beyond the arduino itself) and this allows exploration of the software and options available before either an outlay of significant funds or a significant investment of time.
 
-More details on hardware requirments and verson specific features can be found on the Getting Started page. (https://wiki.speeduino.com/en/Getting_Started)
+More details on hardware requirments and verson specific features can be found on the [Getting Started page](/en/Getting_Started)
 
 ### About this manual
 
 As an open source project, this documentation is growing continually and this means that you may come across gaps in the documentation where little information is currently provided. Please do not hesitate to post on the forum if there is something missing that you need critically (or even not so critically).
 
-Additionally, if you would like to contribute to the Speeduino documentation, we would love to hear from you! The preferred method to request wiki access is either via Slack (https://speeduino.com/forum/app.php/page/slack)
+Additionally, if you would like to contribute to the Speeduino documentation, we would love to hear from you! The preferred method to request wiki access is either via [Slack](https://speeduino.com/forum/app.php/page/slack)
