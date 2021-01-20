@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2021-01-20T11:19:30.307Z
+date: 2021-01-20T11:20:39.016Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
@@ -50,8 +50,9 @@ If you want to compile the firmware yourself, or make any code changes, then the
 
 There are two methods for obtaining the Speeduino firmware:
 
-1.  Regular, stable code drops are produced and made as releases on Github. These can be found at: <https://github.com/noisymime/speeduino/releases>
-2.  If you want the latest and greatest (And occasionally flakiest) code, the git repository can be cloned and updated. See <https://github.com/noisymime/speeduino>
+1.  Regular, stable code drops are produced and made as releases on Github. These can be found at: [Releases](https://github.com/noisymime/speeduino/releases)
+2.  If you want the latest and greatest (And occasionally flakiest) code, the git repository can be cloned and updated. 
+See [here](https://github.com/noisymime/speeduino)
 
 ### Compiling the firmware
 
