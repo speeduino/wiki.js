@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2021-01-20T12:24:54.212Z
+date: 2021-01-20T12:25:15.098Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -20,7 +20,7 @@ This feature will enable you to prevent that from happening.
 Requirements
 ------------
 
-Reset Control can be used as simply as setting some options and [connecting a wire](/reset_control/#Wiring "wikilink"). However, some options also require [updating the usb-serial bootloader](/en/configuration/Reset_Control#updating-the-bootloader "wikilink") on the ATmega16U2 chip (if the board has one).
+Reset Control can be used as simply as setting some options and [connecting a wire](/reset_control#Wiring "wikilink"). However, some options also require [updating the usb-serial bootloader](/en/configuration/Reset_Control#updating-the-bootloader "wikilink") on the ATmega16U2 chip (if the board has one).
 
 (TODO more details)
 
