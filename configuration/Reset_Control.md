@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2021-01-20T12:26:00.072Z
+date: 2021-01-20T12:27:14.976Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -20,7 +20,7 @@ This feature will enable you to prevent that from happening.
 Requirements
 ------------
 
-Reset Control can be used as simply as setting some options and [connecting a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink"). However, some options also require [updating the usb-serial bootloader](/en/configuration/Reset_Control#updating-the-bootloader "wikilink") on the ATmega16U2 chip (if the board has one).
+Reset Control can be used as simply as setting some options and [connecting a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink"). However, some options also require [updating the usb-serial bootloader](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink") on the ATmega16U2 chip (if the board has one).
 
 (TODO more details)
 
