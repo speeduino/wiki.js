@@ -2,7 +2,7 @@
 title: Speeduino Manual
 description: The Speeduino documentation manual
 published: true
-date: 2021-01-20T10:55:16.662Z
+date: 2021-01-20T11:50:48.648Z
 tags: home
 editor: markdown
 dateCreated: 2020-01-05T22:26:30.455Z
@@ -29,4 +29,4 @@ More details on hardware requirments and verson specific features can be found o
 
 As an open source project, this documentation is growing continually and this means that you may come across gaps in the documentation where little information is currently provided. Please do not hesitate to post on the forum if there is something missing that you need critically (or even not so critically).
 
-Additionally, if you would like to contribute to the Speeduino documentation, we would love to hear from you! The preferred method to request wiki access is either via [Slack](https://speeduino.com/forum/app.php/page/slack)
+Additionally, if you would like to contribute to the Speeduino documentation, we would love to hear from you! The preferred method to request wiki access is via [Slack](https://speeduino.com/forum/app.php/page/slack)
