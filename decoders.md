@@ -2,8 +2,10 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2020-05-19T03:27:59.119Z
+date: 2021-01-20T11:58:51.843Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-05T23:43:16.210Z
 ---
 
 Speeduino supports an ever growing number of crank and cam decoders and trigger wheels. This includes some of the more common OEM setups as well as those favoured in the aftermarket (Such as the missing tooth wheels).
@@ -25,7 +27,7 @@ The list below includes all those that are currently supported. They each lead t
 | [Miata 99](/decoders/Miata_99 "wikilink")                         | Complete         | 1.8L Miata/MX5 from '99 to '00                                                                                                  |
 | [Non-360](/decoders/Non-360 "wikilink")                           | Complete         | A variation of the dual wheel decoder that can be used with tooth counts that do not divide evenly into 360                     |
 | [Nissan 360](/decoders/Nissan_360 "wikilink")                     | In progress      | 360 tooth cam wheel used in many 4 and 6 cylinder engines.                                                                      |
-| [Subaru 6/7](/decoders/Subaru_6/7 "wikilink")                     | Testing underway | Subaru engines using the 6 tooth crank wheel + 7 tooth cam wheel arrangement                                                    |
+| [Subaru 6/7]               | Testing underway | Subaru engines using the 6 tooth crank wheel + 7 tooth cam wheel arrangement                                                    |
 | [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Complete         | 3+1 and 4+1 patterns used on 3 and 4 cylinder Daihatsu engines                                                                  |
 | [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps                                                                       |
 
