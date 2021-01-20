@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2021-01-20T12:29:23.160Z
+date: 2021-01-20T12:30:08.133Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -68,7 +68,7 @@ Using the "When the engine is running" and "Prevent Always" reset control modes 
 
 A hex file for the updated bootloader can be found in the following locations:
 
--   In the [Speeduino Firmware download](https://wiki.speeduino.com/en/Installing_Firmware#downloading-the-firmwaree "wikilink") under the "reference/bootloaders" directory
+-   In the [Speeduino Firmware download](https://wiki.speeduino.com/en/Installing_Firmware#downloading-the-firmware "wikilink") under the "reference/bootloaders" directory
 -   In the Speeduino source on GitHub: [1](https://raw.githubusercontent.com/noisymime/speeduino/master/reference/bootloaders/Speeduino-usbserial-atmega16u2-Mega2560-Rev3.hex)
 
 To perform the update, you will need a copy of [dfu-programmer](https://dfu-programmer.github.io/). Directions for installing dfu-programmer for Mac can be found [here](https://www.arduino.cc/en/Hacking/DFUProgramming8U2). It may also be possible to use Atmel's flip programmer but it has not been tested.
