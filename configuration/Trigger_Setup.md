@@ -2,8 +2,10 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2020-05-19T03:57:04.713Z
+date: 2021-01-20T10:36:01.063Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:54:10.355Z
 ---
 
 # Trigger Setup
@@ -30,7 +32,7 @@ Note that many of the settings on this dialog are dependant on your configuratio
 ### Trigger options
 
 - **Skip revolutions** - The number of revolutions the engine should perform before the Sync flag is set. This can help prevent false sync events when cranking. Typical values are from 0 to 2
-- **Trigger edge** - Whether the primary signal triggers on the Rising or Falling edge
+- **Trigger edge** - Whether the primary signal triggers on the Rising or Falling edge. <b>VR Conditioners require specific setting depending on model used.</b> [See hardware requirements](/en/Hardware_requirements#inputs)
 - **Secondary trigger edge** -Whether the secondary signal triggers on the Rising or Falling edge
 - **Trigger filter** - A time based software filter that will ignore crank/cam inputs if they arrive sooner than expected based on the current RPM. The more aggressive the filter, the closer to the expected time the filter will operate. Higher levels of filtering may cause true pulses to be filtered out however, so it is recommended to use the lowest setting possible
 - **Re-sync every cycle** - If set to yes, the system will look for the sync conditions every cycle rather than just counting the expected number of teeth. It is recommended that this option should be turned on, however if you have a noisy crank/cam signal you may need to turn it off as it can cause sync to drop out occassionally. 
