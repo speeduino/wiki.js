@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2021-01-20T12:37:42.001Z
+date: 2021-01-20T12:47:36.387Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -27,7 +27,7 @@ Reset Control can be used as simply as setting some options and [connecting a wi
 Options
 -------
 
-![](2018-02-27_21_11_05-Reset_Control.png "File:2018-02-27 21 11 05-Reset Control.png")
+![2018-02-27_21_11_05-reset_control.png](/img/reset_control/2018-02-27_21_11_05-reset_control.png)
 
 The Speeduino firmware provides three options for preventing the Arduino from resetting *(**\*** indicates a [bootloader update](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink") is required)*:
 
@@ -57,7 +57,7 @@ This is as simple as running a wire from the control pin to the reset pin on you
 
 The custom 16u2 firmware differs from the stock one in that it uses one of the 16u2's GPIO pins to recognize when the board should / should not be allowed to reset. The pin used is PB7, as illustrated.
 
-![](Reset_control_16u2_pins.jpg "Reset_control_16u2_pins.jpg")
+![reset_control_16u2_pins.jpg](/img/reset_control/reset_control_16u2_pins.jpg)![](Reset_control_16u2_pins.jpg "Reset_control_16u2_pins.jpg")
 
 How you connect the control pin to PB7 is up to you, but if you are connecting from a pin on the Speeduino's proto area, you may wish to use right-angle pin headers on the Arduino to make separating the Speeduino shield from the Arduino MCU (also illustrated).
 
