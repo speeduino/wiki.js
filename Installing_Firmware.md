@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2021-01-20T10:51:25.292Z
+date: 2021-01-20T11:19:30.307Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
@@ -42,7 +42,7 @@ If you want to compile the firmware yourself, or make any code changes, then the
 -   A Windows, Mac or linux PC
 -   One of the following:
     -   [The Arduino IDE](http://arduino.cc/en/Main/Software). Current minimum version required is 1.6.7, although a newer version is recommended.
-    -   [PlatformIO](http://platformio.org/). Can be downloaded from <http://platformio.org/platformio-ide>
+    -   [PlatformIO](http://platformio.org/). Can be downloaded from [here](http://platformio.org/platformio-ide)
 -   A copy of the latest Speeduino codebase. See below.
 -   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
 
