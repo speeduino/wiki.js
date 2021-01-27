@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2021-01-27T11:58:23.207Z
+date: 2021-01-27T11:59:11.000Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
@@ -60,7 +60,7 @@ See [here](https://github.com/noisymime/speeduino)
 -   Set the board type: *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK (This is the only board currently supported)
 -   Click the **Verify** icon in the top left corner (Looks like a tick) 
 
-At this point you should have a compiled firmware! If you experienced a problem during the compile, see the [Troubleshooting](/en/Compiling_and_Installing_Firmware&action=edit&section=4#Troubleshooting) section below.
+At this point you should have a compiled firmware! If you experienced a problem during the compile, see the [Troubleshooting](/en/Installing_Firmware#troubleshooting) section below.
 
 This video walks through the whole process of installing the firmware on your Arduino from scratch:
 
