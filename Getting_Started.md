@@ -2,7 +2,7 @@
 title: Getting Started
 description: Starting pages for each area of the manual
 published: true
-date: 2021-01-27T08:54:56.360Z
+date: 2021-01-27T08:55:30.436Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:14.971Z
@@ -20,7 +20,7 @@ The links below will help give an overview of each area, how it should be config
   - [v0.3 board](/boards/V03)
   - [v0.4 board](/boards/V04)
   - [Miata/MX5 NA 89-95 PNP](/boards/MX5_PNP)
-  - [Dropbear](/boards/Offical/Dropbear)
+  - [Dropbear](/en/boards/offical/dropbear)
   - [3rd Party](/en/3rd_party)
 -   [Loading the Speeduino Firmware](/Installing_Firmware)
 -   Working with Tuner Studio software
