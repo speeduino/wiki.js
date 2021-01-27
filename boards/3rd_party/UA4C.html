@@ -2,102 +2,16 @@
 title: UA4C Seafox/Sea Wolf
 description: 
 published: false
-date: 2021-01-27T09:09:42.057Z
+date: 2021-01-27T09:10:10.223Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-01-20T11:01:47.993Z
 -->
 
-<p>The No Overhang Two Channel boards made for Speeduino share the features below</p>
-<p>------------------------------------------------------------------------------</p>
-<p>&nbsp;</p>
-<p>- &nbsp; Arduino MEGA 2560 shield board</p>
-<p>- &nbsp; Same size as the Arduino</p>
-<p>- &nbsp; 2 injector output channels</p>
-<p>- &nbsp; 2 coil output channels</p>
-<p>- &nbsp; Dedicated tachometer output</p>
-<p>- &nbsp; 4 medium/high current outputs (idle, boost, VVT, fuel pump, fan, etc)</p>
-<p>- &nbsp; IAT, CLT, TPS, and O2 inputs (protected)</p>
-<p>- &nbsp; On-board MAP sensor</p>
-<p>- &nbsp; Stepper idle control through board mounted DRV8825 accessory PCB</p>
-<p>- &nbsp; VR conditioning through board mounted VR conditioner accessory PCB</p>
-<p>&nbsp;</p>
-<p>Like the official Speeduino boards, the NO2C requires igniter driven coils and a conditioner for crank/cam signals that aren't 5v square-wave. The board is designed to accept the official Speeduino conditioner board for signals that do not meet the requirements.</p>
-<p>&nbsp;</p>
-<p>NO2C v0.1.x</p>
-<p>-----------</p>
-<p>&nbsp;</p>
-<p>Uses the AMP MTA-100 or Molex KK100/KK254 connector system and through hole components</p>
-<p>&nbsp;</p>
-<p>### v0.1.0</p>
-<p>&nbsp;</p>
-<p>- &nbsp; Had flaws which caused the Arduino USB connector to interfere with the boards solder pads</p>
-<p>- &nbsp; lacked tachometer output</p>
-<p>- &nbsp; was never released</p>
-<p>&nbsp;</p>
-<p>### v0.1.1</p>
-<p>&nbsp;</p>
-<p>- &nbsp; corrected the issue mentioned above</p>
-<p>- &nbsp; added tachometer output</p>
-<p>&nbsp;</p>
-<p>NO2C v0.2.x</p>
-<p>-----------</p>
-<p>&nbsp;</p>
-<p>Uses the Molex Micro-Fit 3.0 connector system and through hole components. The Micro-Fit connector is used as a computer power connector and there are several manufacturers, it's known generically as 3mm connector.</p>
-<p>&nbsp;</p>
-<p>For some tips that will help make the assembly of your board a success: **[v0.2.x Assembly Tips](v0.2.x_Assembly_Tips "wikilink")**</p>
-<p>&nbsp;</p>
-<p>### v0.2.0</p>
-<p>&nbsp;</p>
-<p>- &nbsp; Added pass through pinholes around the edge for daughter board expansion</p>
-<p>- &nbsp; Increased size of resistor footprints making it easier to find usable resistors and/or use precision resistors for all voltage dividers</p>
-<p>- &nbsp; Increased pitch of 1uf caps (see above)</p>
-<p>- &nbsp; Added launch control input</p>
-<p>&nbsp;</p>
-<p>### v0.2.1</p>
-<p>&nbsp;</p>
-<p>- &nbsp; Improved silk screen</p>
-<p>- &nbsp; All MOSFET outputs (injector and auxiliary) have the same gate connection to the Arduino MEGA</p>
-<p>- &nbsp; VR signals are routed straight into the conditioner</p>
-<p>- &nbsp; MAP sensor location accepts either though-hole or SMD part</p>
-<p>- &nbsp; Other routing and placement adjustments (R10 and R11 are flipped)</p>
-<p>&nbsp;</p>
-<p>### v0.2.2</p>
-<p>&nbsp;</p>
-<p>- &nbsp; Moved C20 from the edge of the board, it has always bothered me there</p>
-<p>- &nbsp; Added Serial0/Bluetooth header</p>
-<p>- &nbsp; Other routing and placement adjustments</p>
-<p>&nbsp;</p>
-<p>### vC1</p>
-<p>&nbsp;</p>
-<p>- &nbsp; Traditional reset protection removed in favor of a jumper and resistor to hold the reset pin high</p>
-<p>- &nbsp; Routing and placement adjustments</p>
-<p>- &nbsp; Version style changed to bring inline with other projects and due to required BOM change compared to v0.2.x</p>
-<p>&nbsp;</p>
-<p>NO2C DB</p>
-<p>-------</p>
-<p>&nbsp;</p>
-<p>A daughter board that stacks on top of the NO2C v0.2.x and vCx boards to add the features below. The daughter boards are hybrid surface mount/through hole, see features below for which parts are through hole.</p>
-<p>&nbsp;</p>
-<p>### DB1 (Scraped)</p>
-<p>&nbsp;</p>
-<p>Makes it easy to add additional general outputs, and can be populated to add all the features below.</p>
-<p>&nbsp;</p>
-<p>- &nbsp; 4 low current outputs (through hole)</p>
-<p>- &nbsp; 2 general digital inputs (protected)</p>
-<p>- &nbsp; 1 analog input (protected)</p>
-<p>- &nbsp; Flex-fuel input (protected)</p>
-<p>- &nbsp; Barometric pressure sensor (provides constant correction vs power on base)</p>
-<p>&nbsp;</p>
-<p>### DB2</p>
-<p>&nbsp;</p>
-<p>Makes it easy to add additional coil outputs, and can be populated to add all the features below.</p>
-<p>&nbsp;</p>
-<p>- &nbsp; 2 additional coil output channels (through hole)</p>
-<p>- &nbsp; 4 low current outputs</p>
-<p>- &nbsp; 2 general digital inputs (protected)</p>
-<p>- &nbsp; 1 analog input (protected)</p>
-<p>- &nbsp; Flex-fuel input (protected)</p>
-<p>- &nbsp; Barometric pressure sensor (provides constant correction vs power on base)</p>
-<p>&nbsp;</p>
-<p>With the low current outputs you could reconfigure two of the medium/high current outputs on the NO2C to act as injector drivers. To do this you will have to make minor changes to the firmware before programming the Arduino.</p>
+<p>The UA4C uses SMD technology to make a 4 ignition/4 injection channel board smaller, with more features, and cheaper. It is a bottom mounted Arduino MEGA shield. The MEGA is placed upside down on top of it.* This makes the total package thickness less than 20mm. All of the outputs (except for stepper idle) include an LED for quick troubleshooting during setup. An externally accessible jumper blocks resetting of the system when a USB cable is connected. Wire housings and 50 (four extra) terminals are included to connect your wiring to the PCB. Will fit in the slim or standard height Hammond case. If you include soldering service the sensors, connectors, etc will be soldered to the board. If you require special provisions you can leave a note on your order use the contact form on the help page.</p>
+<h4>Outputs</h4>
+<p>– 4 ignition channels, logic 5V, 330mA max pulse<br>– 4 injector channels, ground switching<br>– 4 high current outputs (idle, idle2, boost, vvt) ground switching<br>– 8 low current outputs (fuel pump, tachometer, fan, fan2, aux1-4) ground switching<br>– Accepts DRV8825 module for stepper idle control</p>
+<h4>Inputs</h4>
+<p>– 2 triggers (crank, cam, etc, logic level with socket for conditioner modules)<br>– MAP (250 or 400kPa) and separate barometer<br>– Voltage correction<br>– Throttle position<br>– Coolant and incoming air temperature<br>– Oxygen<br>– Flex fuel<br>– Launch<br>– Knock (future code update)<br>– 2 spare inputs</p>
+<h4>Communications</h4>
+<p>– Serial3 routed to external connector (optional CAN with future module)<br>– Bluetooth header with blocking diode to allow use of USB</p>
