@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-01-27T09:24:20.460Z
+date: 2021-01-27T09:33:03.433Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -56,7 +56,7 @@ The modules can use several different processor board types, including different
 
 IO operations are programmed with logic, &lt; ,&gt;,= and bitwise AND . some variants offer 2 or even 3 connecting logic conditions.
 
-More information [dxControl-GPIO](/en/DxControl-GPIO "wikilink")
+More information [dxControl-GPIO](/boards/3rd_party/DAZQ/DxControl-GPIO "wikilink")
 
 DxControl-Gears , A Gearbox Controller for Speeduino
 ----------------------------------------------------
@@ -67,4 +67,4 @@ By Darren Siepka, aka Dazq
 
 dxControl-Gears is a controller for electronically controlled automatic gearboxes, designed to accompany Speeduino. It is a custom development of the dxControl-GPIO code .
 
-More information [dxControl-Gears](/en/dxControl-Gears "wikilink")
+More information [dxControl-Gears](/boards/3rd_party/DAZQ/dxControl-Gears "wikilink")
