@@ -2,7 +2,7 @@
 title: NO2C_for_Speeduino
 description: 
 published: true
-date: 2021-01-27T12:00:30.571Z
+date: 2021-01-27T12:01:01.628Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:35.241Z
@@ -45,7 +45,7 @@ NO2C v0.2.x
 
 Uses the Molex Micro-Fit 3.0 connector system and through hole components. The Micro-Fit connector is used as a computer power connector and there are several manufacturers, it's known generically as 3mm connector.
 
-For some tips that will help make the assembly of your board a success: **[v0.2.x Assembly Tips](/V02x_Assembly_Tips "wikilink")**
+For some tips that will help make the assembly of your board a success: **[v0.2.x Assembly Tips](/en/boards/3rd_party/wtmtronics/V02x_Assembly_Tips "wikilink")**
 
 ### v0.2.0
 
