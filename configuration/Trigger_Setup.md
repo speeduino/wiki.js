@@ -2,7 +2,7 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-01-20T10:36:01.063Z
+date: 2021-01-31T04:34:51.789Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:10.355Z
@@ -35,7 +35,7 @@ Note that many of the settings on this dialog are dependant on your configuratio
 - **Trigger edge** - Whether the primary signal triggers on the Rising or Falling edge. <b>VR Conditioners require specific setting depending on model used.</b> [See hardware requirements](/en/Hardware_requirements#inputs)
 - **Secondary trigger edge** -Whether the secondary signal triggers on the Rising or Falling edge
 - **Trigger filter** - A time based software filter that will ignore crank/cam inputs if they arrive sooner than expected based on the current RPM. The more aggressive the filter, the closer to the expected time the filter will operate. Higher levels of filtering may cause true pulses to be filtered out however, so it is recommended to use the lowest setting possible
-- **Re-sync every cycle** - If set to yes, the system will look for the sync conditions every cycle rather than just counting the expected number of teeth. It is recommended that this option should be turned on, however if you have a noisy crank/cam signal you may need to turn it off as it can cause sync to drop out occassionally. 
+- **Re-sync every cycle** - If set to yes, the system will look for the sync conditions every cycle rather than just counting the expected number of teeth. It is recommended that this option should be turned on, however if you have a noisy crank/cam signal you may need to turn it off as it can cause sync to drop out occassionally. Once Speeduino has full sync it will continue to run in full sequential mode unless sync loss on crack trigger occurs.
 
 ## Finding tooth \#1 and trigger angle
 Please refer to the [Trigger Patterns and Decoders](/decoders) for the trigger that you are using
