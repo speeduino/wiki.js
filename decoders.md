@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-01-31T21:51:22.844Z
+date: 2021-01-31T22:06:09.739Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -16,7 +16,7 @@ The list below includes all those that are currently supported. They each lead t
 | ------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [Missing Tooth](/decoders/Missing_Tooth "wikilink")               | Complete         | A crank wheel with 1 or more 'missing' teeth                                                                                    |
 | [Missing Tooth (cam)](/decoders/Missing_Tooth_\(cam\) "wikilink") | Complete         | A camshaft or distributor wheel with 1 or more 'missing' teeth at half-crank speed                                              |
-| [Dual Wheel] 																                     | Complete         | Two signals combined from two different wheels                                                                                  |
+| [Dual Wheel](/decoders/Dual_Wheel) 																                     | Complete         | Two signals combined from two different wheels (Crank + Cam)                                                                                  |
 | [Basic Distributor](/decoders/Basic_Distributor "wikilink")       | Complete         | Untimed pulses that are the equivalent of a tach or distributor pulse                                                           |
 | [GM 7X](/decoders/GM_7X "wikilink")                               | Untested         | Multi tooth pulse                                                                                                               |
 | [4G63](/decoders/4G63 "wikilink")                                 | Complete         | As used on many 4 cylinder Mitsubishis and NA/NB Miata / MX-5. Also supports the 6 cylinder variation of this pattern (Eg 6g72) |
