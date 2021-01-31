@@ -2,7 +2,7 @@
 title: Subaru 36-2-2-2
 description: 
 published: true
-date: 2021-01-31T21:53:22.861Z
+date: 2021-01-31T21:56:43.985Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:25.568Z
@@ -16,6 +16,14 @@ Early wheels were VR triggered however after the switch to variable valve timing
 
 > Note that there are 2 variations of the 36-2-2-2 pattern, the H4 and the H6. Whilst visually very similar, the patterns have different groupings of teeth and are not compatible. **This trigger is for the H4 variant**
 {.is-info}
+
+### Configuration
+**Trigger Angle:** 0
+**Trigger Edge:** FALLING
+**Secondary Trigger edge:** N/A
+**Skip Revolutions:** 1
+**Trigger Filter:** Weak (Depending on install)
+
 
 
 ### Trigger Pattern
