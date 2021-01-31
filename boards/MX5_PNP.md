@@ -2,8 +2,10 @@
 title: Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2020-01-16T11:54:38.899Z
-tags: boards, PNP
+date: 2021-01-31T04:02:46.210Z
+tags: boards
+editor: markdown
+dateCreated: 2020-01-06T01:53:34.029Z
 ---
 
 Introduction
@@ -29,7 +31,7 @@ Most significantly, Speeduino does not operate with the stock AFM on the NA6 eng
 
 ### Manifold Pressure
 
-For a load reference, it is strongly recommended to run a manifold pressure line to the Speeduino PNP box. This allows Speeduino to run in the default Speed-Density configuration and is usually a fairly easy installation. The unit comes with a built-in MAP sensor that supports up to 1 Bar of boost, but is compatible with other external sensors if more pressure is required.
+For a load reference, it is strongly recommended to run a manifold pressure line to the Speeduino PNP box. This allows Speeduino to run in the default Speed-Density configuration and is usually a fairly easy installation. The unit comes with a built-in MAP sensor that supports up to 1.5 Bar of boost (250kpa absolute pressure), but is compatible with other external sensors if more pressure is required.
 
 The 1.6L cars typically come with a suitable MAP port near the throttle body that is capped off in stock form and is generally the easiest place to take the manifold pressure reference.
 
