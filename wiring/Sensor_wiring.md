@@ -21,4 +21,5 @@ Analog sensors provide data such as temperatures, throttle position and O2 readi
   * An external MAP can provide benefits as well:
     * Some cars come with a MAP sensor already attached to the intake
     * Less worry about kinking / leaking vacuum line
+    * Slightly more accurate pressure readings
 * A 3 wire variable TPS is required. On/Off type throttle switches are not suitable
