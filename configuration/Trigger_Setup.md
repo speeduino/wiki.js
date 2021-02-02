@@ -2,7 +2,7 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-01-31T04:34:51.789Z
+date: 2021-02-02T09:40:10.770Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:10.355Z
@@ -27,7 +27,7 @@ Note that many of the settings on this dialog are dependant on your configuratio
 - **Missing teeth** - If using the missing tooth pattern, this is the size of the gap, given in 'missing teeth'. Eg 36-1 has 1 missing tooth. 60-2 has 2 missing teeth etc. The missing teeth **MUST** be all located in a single block, there cannot be multiple missing tooth gaps around the wheel.
 - **Secondary teeth** - As above, but for the secondary input. This input is always assumed to run at cam speed.
 - **Trigger angle multiplier** - This option is used only on the [Non-360 pattern](/decoders/non-360). 
-- **Trigger angle** - The angle of the crank, **After Top Dead Centre (ATDC)**, when tooth \#1 passes the sensor on the primary (crank) input. This setting is critical for Speeduino to accurately know the current crank angle. See section below ('Finding tooth \#1 and trigger angle') for further information on how to determine this value
+- **Trigger angle** - The angle of the crank, **After Top Dead Centre (ATDC)**, when tooth \#1 passes the sensor on the primary (crank) input. This setting is critical for Speeduino to accurately know the current crank angle. See section below ('Finding tooth \#1 and trigger angle') for further information on how to determine this value. You should be using a timing light to confirm angle is correct once calculated. Without doing this your angle may be incorrect.
 
 ### Trigger options
 
