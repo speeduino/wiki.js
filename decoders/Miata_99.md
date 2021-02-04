@@ -2,8 +2,10 @@
 title: Miata 99-05
 description: 
 published: true
-date: 2020-05-28T07:32:26.758Z
+date: 2021-02-04T23:42:40.436Z
 tags: decoder, miata, trigger
+editor: markdown
+dateCreated: 2020-01-06T01:54:20.826Z
 ---
 
 ## Miata 99-05
@@ -18,14 +20,12 @@ NB Miatas from 1999 until 2005.
 
 ### Tuner Studio Configuration
 
-The trigger angle should not need changing once this pattern has been selected (ie Make sure it is set to 0)
-
-For most installs, Trigger filtering set to Off or Weak is sufficient.
-
-In the `Starting/Idle -> Cranking Settings` dialog ensure the following options are turned on:
-
-* 'Fix cranking timing with trigger'
-* 'Use new ignition mode'
+* The trigger angle should not need changing once this pattern has been selected (ie Make sure it is set to 0)
+* Both trigger edges should be set to `RISING`
+* For most installs, Trigger filtering set to Off or Weak is sufficient.
+* In the `Starting/Idle -> Cranking Settings` dialog ensure the following options are turned on:
+	* 'Fix cranking timing with trigger'
+	* 'Use new ignition mode'
 
 ### Trigger Pattern
 
