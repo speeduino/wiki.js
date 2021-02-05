@@ -6,6 +6,12 @@ date: 2021-01-20T11:50:48.648Z
 tags: home
 editor: markdown
 dateCreated: 2020-01-05T22:26:30.455Z
+titlepage: true
+titlepage-rule-height: 2
+titlepage-rule-color: 360049
+titlepage-background: offline/background1.pdf
+logo: offline/logo.png
+logo-width: 350
 ---
 
 # Introduction
