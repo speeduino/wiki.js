@@ -1,0 +1,169 @@
+<!--
+title: Injector Pulse Visualiser
+description: 
+published: true
+date: 2021-02-19T22:16:44.386Z
+tags: 
+editor: code
+dateCreated: 2021-02-19T22:16:44.386Z
+-->
+
+ <div class="wrapper">
+    <div class="wrapper" style="float: left;">
+      <div class="wrapper" style="float: left;">
+        <div class="square" style="float: top; width: 280px;">
+          <h1>Engine Constants</h1>
+          <p>
+            Required Fuel
+            <input id="reqFuel" step="0.1" type="number" min="0" max="25.5" value="12.0" onchange="compute();">
+          </p>
+          <p>
+            Control Algorithm
+            <select disabled>
+              <option>MAP</option>
+            </select>
+          </p>
+          <p>
+            Squirts Per Engine Cycle
+            <select id="nSquirts" onchange="compute()">
+              <option value=1>1</option>
+              <option value=2 selected>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=8>8</option>
+            </select>
+          </p>
+          <p>
+            Injector Staging
+            <select id="alternate" onchange="compute()">
+              <option value=0>Simultaneous</option>
+              <option value=1 selected>Alternating</option>
+            </select>
+          </p>
+          <p>
+            Engine Stroke
+            <select id="strokes" onchange="compute()">
+              <option value=0 selected>4-stroke</option>
+              <option value=1>2-stroke</option>
+            </select>
+          </p>
+          <p>
+            Number of Cylinders
+            <select id="nCylinders" onchange="disablePaired(this.value); compute();">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4 selected>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=8>8</option>
+            </select>
+          </p>
+          <p>
+            Injector Port Type
+            <select disabled>
+              <option>Port</option>
+            </select>
+          </p>
+          <p>
+            Number of Injectors
+            <select id="nInjectors" onchange="disablePaired(this.value); compute();">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4 selected>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=8>8</option>
+            </select>
+          </p>
+          <p>
+            Engine Type
+            <select id="engine_type" onchange="compute()" disabled>
+              <option value=0 selected>Even fire</option>
+              <option value=1>Odd fire</option>
+            </select>
+          </p>
+          <p>
+            Injector Layout
+            <select id="paired" onchange="compute()">
+              <option value=0>Paired</option>
+              <option value=1 selected>Semi-Sequential</option>
+              <option value=3>Sequential</option>
+            </select>
+          </p>
+        </div>
+        <div class="square" style="float: bottom; margin-top: 5px; width: 280px;">
+          <h1>Other Constants</h1>
+          <p>
+            INJ_CHANNELS
+            <select id="INJ_CHANNELS" onchange="compute()">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4 selected>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+            </select>
+          </p>
+          (The number of outputs the physical board has.)
+          <p>
+            Injection timing
+            <input id="injTiming" step="1" type="number" min="-359" max="360" value="355" onchange="compute();">
+          </p>
+          (Angle at which the injector closes.)
+          <p>
+            Duty Cycle
+            <input id="dcPercent" step="1" type="number" min="0" max="100" value="20" onchange="compute();">
+          </p>
+          (Only used to scale the pulses on the chart, not part of the injection settings.)
+        </div>
+      </div>
+      <div class="square" style="float: right; margin-left:5px;">
+        <canvas id="myChart" width="600" height="500"></canvas>
+      </div>
+      <!--div class="square" style="float: right; margin-left:5px;">
+        <h1>Results</h1>
+        <p>PW:
+          <b class="out" id="PW"></b>ms
+        </p>
+        <p>Full Cycle:
+          <b class="out" id="cycle"></b>°
+        </p>
+        <br>
+        <p>Inj1:
+          <b class="out" id="inj1"></b>°
+        </p>
+        <p>Inj2:
+          <b class="out" id="inj2"></b>°
+        </p>
+        <p>Inj3:
+          <b class="out" id="inj3"></b>°
+        </p>
+        <p>Inj4:
+          <b class="out" id="inj4"></b>°
+        </p>
+        <p>Inj5:
+          <b class="out" id="inj5"></b>°
+        </p>
+        <p>Inj6:
+          <b class="out" id="inj6"></b>°
+        </p>
+        <p>Inj7:
+          <b class="out" id="inj7"></b>°
+        </p>
+        <p>Inj8:
+          <b class="out" id="inj8"></b>°
+        </p>
+      </div-->
+    </div>
+  </div>
+
+  <script>
+    compute();
+  </script>
