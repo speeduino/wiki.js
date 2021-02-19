@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2021-01-20T10:45:57.833Z
+date: 2021-02-19T10:51:54.252Z
 tags: hardware, wiring
 editor: markdown
 dateCreated: 2020-01-06T01:37:16.331Z
@@ -56,7 +56,7 @@ Most usable TPS sensors have 3 pins. If your TPS has a different number of pins,
 
 ### MAP (Manifold Pressure)
 
-Recommended MAP sensor is the MPX4250 from Freescale, however many MAP sensors are supported. If you want to use one that is not included in the list (Under Tools-&gt;Map Calibration in TunerStudio) then please make a new thread in the forum requesting this. Other sensors can and will work just fine, but you will need to calibrate these within TunerStudio against a different set of values.
+Recommended MAP sensor is the MPX4250 from Freescale, however many MAP sensors are supported. If you want to use one that is not included in the list (Under Tools-&gt;Map Calibration in TunerStudio) then please make a new thread in the forum requesting this. Other sensors can and will work just fine, but you will need to calibrate these within TunerStudio against a different set of values. MAF IS NOT SUPPORTED.
 
 ### Temperature Sensors (CLT and IAT)
 
