@@ -2,7 +2,7 @@
 title: Getting Started
 description: Starting pages for each area of the manual
 published: true
-date: 2021-02-21T21:53:50.384Z
+date: 2021-02-21T21:54:20.977Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:14.971Z
@@ -18,7 +18,7 @@ The links below will help give an overview of each area, how it should be config
 - [Hardware requirements](/Hardware_requirements) - What hardware you will need to have in order to work with Speeduino (Sensors, wiring, injectors, coils etc)
 - Specific board information
   - [v0.3 board](/boards/V03)
-  - [v0.4 board](/boards/official/V04)
+  - [v0.4 board](/boards/V04)
   - [Miata/MX5 NA 89-95 PNP](/boards/MX5_PNP)
   - [Dropbear](/boards/official/dropbear)
   - [3rd Party](/3rd_party)
