@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-02-21T10:21:55.203Z
+date: 2021-02-21T10:29:52.993Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -31,4 +31,4 @@ The list below includes all those that are currently supported. They each lead t
 | [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Complete         | 3+1 and 4+1 patterns used on 3 and 4 cylinder Daihatsu engines                                                                  |
 | [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps             (H4 variant)                                                          |
 
-All signals need to be conditioned to a 3.3v - 5v dc square wave before being used by the firmware.
+All signals <b><i>MUST</b></i> to be conditioned to a 3.3v - 5v dc square wave before being used by the firmware.
