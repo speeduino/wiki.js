@@ -2,8 +2,10 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2020-02-29T21:25:11.772Z
+date: 2021-03-02T06:42:14.500Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T01:54:09.173Z
 ---
 
 # Staged Injection
@@ -42,6 +44,18 @@ Table control allows the use of a manual 8x8 map that indicates what percentage 
 It is important to note that the values in this table do NOT correspond directly to the split of the duty cycle or pulse width. They represent the percentage of the total fuel load that the secondaries will be asked to perform. The affect this value has on the pulse width depends on the ratio of the primary and secondary injector capacities.
 
 One disadvantage of the table tuning method is that it does not allow for the full fuel load of the primary and secondary injectors to be used simultaneously. As the table is a split of the total fuel load, as one set of injectors performs more, the other will perform less.
+
+
+
+#### Wiring
+
+Assuming a 4 cylinder even fire engine, the injectors are to be wired in pairs.
+
+Primary injectors on outputs 1 and 2. The secondary on outputs 3 and 4.
+
+For other setups hit up the forum for clarification.
+
+
 
 ### Note
 The dead time of the 2 sets of injectors is currently assumed to be the same. This may be altered in future firmwares if required (Post a feature request if needed).
