@@ -2,7 +2,7 @@
 title: Trigger Wheel Generator
 description: 
 published: true
-date: 2021-03-02T01:26:29.542Z
+date: 2021-03-02T01:33:55.819Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:21.158Z
@@ -70,7 +70,8 @@ https://www.badappleproducts.com/trigger-wheel
 <p><label class="choice"> <input type="radio" name="WheelType" required id="TwentyFour"> 24-1 </label></p>
 <p><label class="choice"> <input type="radio" name="WheelType" checked="checked" required id="ThirtySix"> 36-1 </label></p>
 <p><label class="choice"> <input type="radio" name="WheelType" required id="Sixty"> 60-2 </label></p>
-<p><label class="choice"> <input type="radio" name="WheelType" required id="CustomWheel"> Custom </label></p><input type="text" id="CustomWheelSize" value="45-2"></input>
+<p><label class="choice"> <input type="radio" name="WheelType" required id="CustomWheel"> Custom </label></p>
+<p><input type="text" id="CustomWheelSize" value="45-2"></input></p>
 </fieldset>
 
 <fieldset id="MaterialThickness">
@@ -85,13 +86,14 @@ https://www.badappleproducts.com/trigger-wheel
 <input type="text" id="BoltHoles" value="3">
 </label>
 </p>
+  
 <p>
-
 <label>Bolt Hole Diameter
 <input type="text" id="BoltHoleDiameter" value="0.250">
 </label>
 </p>
 
+<p>
 <label>Bolt Hole Circle
 <input type="text" id="BoltCircle" value="3.250">
 <input type="range" min="50" max="1100" value="325" id="BoltCircle-Slider">
@@ -99,14 +101,6 @@ https://www.badappleproducts.com/trigger-wheel
 </p>
 
 </form>
-</div>
-
-<div id="dialog" title="Submit Order" style="display: none;">
-  <p>We need to review that the wheel is cuttable. Type in your email address and click send, we will email you back ASAP to get your order fulfilled!<p>
-  <p>Name: </p><input type="text" id="Name"><br>
-  <p>Email Address: </p><input type="text" id="EmailAddress">
-  <br><br>
-  <button id="Send" class="button">Send</button>
 </div>
 
 
