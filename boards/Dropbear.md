@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-03-04T01:56:28.747Z
+date: 2021-03-04T03:13:52.060Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -33,7 +33,7 @@ The ECU contains a dual onboard conditioner that can can be used with VR sensors
 When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
 
 #### Crank filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitance being used on this signal. 
+The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW3` on the PCB and operates on both Hall and VR inputs. 
 
 > Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
 {.is-warning}
@@ -42,13 +42,17 @@ The switches come with an insulating Kapton seal on them that must be removed be
 
 ![filter_dip.jpg](/img/boards/filter_dip.jpg){.align-center width=150}
 
-Recommended values for the filters are shown below:
+Recommended values for the filters are shown below (By default both switches will be in the On position):
 
 | Tooth count (at crank speed)  | Switch 1 | Switch 2 |
 |-------------------------------|----------|----------|
 | Less than 60                  |    On    |    On    |
 | 60-100                        |    On    |    Off   |
 | 100+                          |    Off   |    On    |
+
+> Both switches can be set to off, however doing so will disable all hardware filtering. This can be useful when performing bench testing with a stim, but is not recommend for real world use
+{.is-warning}
+
 
 ### MAP Selector
 The Dropbear board uses a removable MAP card containing the sensor and a short hose running to the bulkhead connector on the enclosure. Currently only the default 0-250kpa sensor board is available, with higher range boards to be made available in the future. To use this MAP card, select the `Int.` (Internal) option on the MAP switch. 
