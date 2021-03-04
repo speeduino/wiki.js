@@ -2,7 +2,7 @@
 title: ECU_Connectors
 description: 
 published: true
-date: 2020-09-21T00:58:04.163Z
+date: 2021-03-04T12:41:29.354Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:30.269Z
@@ -26,7 +26,11 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 |---------------------------|-------------|--------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | M54/M52tu/M62tu           | 967-288     |                          | 134 pins, 5 plug construction        | [PDF](https://www.mouser.fi/ProductDetail/571-7-967288-1)              |
 
+### DSM / Mitsubishi
 
+| Model/s                   | Part Number | Alternative Part Numbers | Notes                                                                                     | Image                                                                                                                                          |
+|---------------------------|-------------|--------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| DSM 420a / 2G / Neon          | 178780-1     | Loom side: 917975-7 (12P), 917981-7 (16P), 917989-7 (22P), 917992-7 (26P)                         | 76 pin, 4 plug construction.        | [PDF](https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F178780%7FP9%7Fpdf%7FJapanese%7FJPN_CD_178780_P9.pdf%7F178780-1)              |
 
 ### Mazda
 
