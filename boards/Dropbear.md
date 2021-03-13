@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-03-04T03:13:52.060Z
+date: 2021-03-12T23:59:51.357Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -73,7 +73,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
 | A4  | N/A       | N/A         | Not used.         |         |
-| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc        |
+| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. MCU pin #22 in TunerStudio        |
 | A6  | Both      | N/A         | CAN L             | CAN L connection        |
 | A7  | Both      | N/A         | CAN H             | CAN H connection        |
 | A8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
@@ -82,12 +82,12 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | B3  | Input     | N/A         | Crank Negative    | **Only used with a VR sensor.** Connect to negative side of VR crank sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
 | B4  | Input     | N/A         | Cam Primary     | Cam sensor (CMP) primary input. Can be 12v, Ground switching or the positive wire of a VR sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
 | B5  | Input     | N/A         | Cam Negative    | **Only used with a VR sensor.** Connect to negative side of VR cam sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
-| B6  | Input     | N/A         | Spare Digital 1| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc        |
+| B6  | Input     | N/A         | Spare Digital 1| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. MCU pin #23 in TunerStudio        |
 | B7  | Input     | N/A         | Clutch input.     | Ground switching digital input that goes to ground when clutch is engaged. Do not feed 12v on this input        |
 | B8  | Input     | N/A         | Flex sensor       | Signal wire from GM/Continental Flex sensor.         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
-| C2  | Input     | N/A         | Spare Analog 1    | Spare analog input for use with sensors such as fuel pressure/temperature, oil pressure etc. Should be a 0-5v signal        |
-| C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with sensors such as fuel pressure/temperature, oil pressure etc. Should be a 0-5v signal        |
+| C2  | Input     | N/A         | Spare Analog 1    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. MCU pin A17 in TunerStudio        |
+| C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. MCU pin A18 in TunerStudio        |
 | C4  | Input     | N/A         | O2 Sensor         | Connect to the 0-5v signal wire of external wideband controller. Can also be used with 0-1v output from narrowband sensor however wideband is **strongly** recommended        |
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
 | C6  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
