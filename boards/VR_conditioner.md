@@ -2,7 +2,7 @@
 title: VR_conditioner
 description: 
 published: true
-date: 2021-01-20T11:47:59.954Z
+date: 2021-03-20T12:41:00.418Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:46.712Z
@@ -12,6 +12,10 @@ Overview
 ========
 
 For its crank and cam signals, Speeduino requires 3.3v-5v square wave pulses. Such signals can be inputted directly from hall or optical sensors, however the common Variable Reluctance (VR) sensor requires conditioning in order to convert its AC signal. Speeduino has an onboard socket and jumper system to allow for simple use of a plug in conditioner board.
+
+VR conditioners need to have Trigger Edge in TunerStudio set to the correct option based on the conditioner you are using. Rising for MAX or LM conditioners, and Falling for most others.
+
+
 
 Conditioner Board
 =================
