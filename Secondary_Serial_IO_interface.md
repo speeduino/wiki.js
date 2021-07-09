@@ -2,7 +2,7 @@
 title: Secondary_Serial_IO_interface
 description: 
 published: true
-date: 2020-12-16T23:49:26.641Z
+date: 2021-07-09T12:39:49.314Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:19.933Z
@@ -49,17 +49,17 @@ Depending on if the secondary port is a simple serial port or is a canbus port t
 ##### A Simple Serial Port
 A Serial port offers ,
 
-   1. Retrieve the current realtime data in full from Speeduino . This is the same data as sent to TunerStudio.
+   1. Retrieve the current realtime data from Speeduino . This can be a simple or full(enhanced) data set. This is the same realtime data as sent to TunerStudio.
    2. Retrieve specific current realtime data from Speeduino.
    3. Read in the Analog data values from 16 remote sensors as requested by Speeduino.
    4. Activate External Outputs(coming soon!)
    
-##### A Canbus Port (COMING SOON!)
+##### A Canbus Port 
 A Canbus port offers ,
 
   1. OBD2 formatted data of current realtime data .
-  2. Broadcast selected current realtime data and function status .
-  3. Read in Analog and Digital data values from other devices on the BUS including those from OEM devices/ECU.
+  2. Broadcast selected current realtime data and function status .(COMING SOON!)
+  3. Read in Analog and Digital data values from other devices on the BUS including those from OEM devices/ECU.(COMING SOON!)
   
 Serial Port Functions
 ---------------------
@@ -67,23 +67,25 @@ Serial Port Functions
 ### Retrieve realtime data
 
 To get Speeduino to send out the realtime data to your device connected on a Secondary Serial IO port you must send either an "A", an "n" or an "r" to it.
+An 'A' will retreive a simple set of data whereas an 'n' will retreive an enhanced set of realtime data.
+An 'r' will retrieve specific data starting at a selected position in the list for x number of bytes.
 
 -   **Send an "A"**
 
 If you send an "A" to the port it will reply with ,
 
  1. A "A" confirming the received instruction (sent as 0x41 in hex),
- 2. The port will then transmit the first 75 realtime data values from the list below.
+ 2. The port will then transmit the first 75 realtime data values from the list below(simple data set).
  
 The "A" command data set will not be changed or expanded upon and is maintained for legacy devices.
-Designers of new devices are recommended to use the newer "n" command to enable use of any additonal realtime data available beyond the orignal 75 This command supports. 
+Designers of new devices are recommended to use the newer "n" command to enable use of any additonal enhanced realtime data available beyond the orignal 75 This command supports. 
 
 -   **Send an "n"**
 
 If you send an "n" to the Serial port it will reply with,
   1. A "n" confirming the received instruction (sent as 0x6E in hex (110 in DEC) ).
   2. A single hex byte ,this value is the type of "n" command about to be sent. In this case the value is 0x32 in Hex.
-  3. A single hex byte , this value is the number of data bytes the port will be transmitting next as part ofthe command. At the time of writing (23/02/2020) this is 0x4B (75 dec)
+  3. A single hex byte , this value is the number of data bytes the port will be transmitting next as part ofthe command. At the time of writing (09/07/2021) this is 0x77 (119 dec)
  4. The port will now transmit the realtime data.
 
 -   **Send an "r"**
@@ -107,13 +109,15 @@ BIT 0 - currentStatus.secl
 
 `     secl is simply a counter that increments each second`
 
-1 - currentStatus.squirt
+1 - currentStatus.status1
 
-`     Squirt Bitfield`
+`     Status1 Bitfield(was squirt)`
+`     inj1Status(0), inj2Status(1),inj3Status(2), inj4Status(3), DFCOOn(4), boostCutFuel(5), toothLog1Ready(6), toothLog2Ready(7)` 
 
 2 - currentStatus.engine
 
 `     Engine Status Bitfield`
+`     running(0), crank(1), ase(2), warmup(3), tpsacden(5), mapaccden(7)`
 
 3 - (byte)(divu100(currentStatus.dwell))
 
@@ -226,6 +230,7 @@ BIT 0 - currentStatus.secl
 31 - currentStatus.spark
 
 `     Spark related bitfield`
+`     launchHard(0), launchSoft(1), hardLimitOn(2), softLimitOn(3), boostCutSpark(4), error(5), idleControlOn(6), sync(7) `
 
 32 - lowByte(currentStatus.rpmDOT)
 
@@ -254,6 +259,7 @@ BIT 0 - currentStatus.secl
 38 - currentStatus.testOutputs
 
 `     testoutputs bitfield`
+`     testEnabled(0), testActive(1)`
 
 39 - currentStatus.O2_2
 
@@ -325,7 +331,7 @@ BIT 0 - currentStatus.secl
 
 71 - lowByte(currentStatus.canin\[15\]);
 
-72 - highByte(currentStatus.canin\[15\]);
+72 - highByte(currentStatus.canin\[15\])
 
 73 - currentStatus.tpsADC
 
@@ -334,6 +340,116 @@ BIT 0 - currentStatus.secl
 74 - getNextError()
 
 `     Error codes`
+`     errorNum(0:1), currentError(2:7)`
+
+75 - currentStatus.launchCorrection
+
+76 - lowByte(currentStatus.PW2)
+`    Pulsewidth 2 multiplied by 10 in ms. Have to convert from uS to mS.`
+
+77 - highByte(currentStatus.PW2)
+`    Pulsewidth 2 multiplied by 10 in ms. Have to convert from uS to mS.`
+
+78 - lowByte(currentStatus.PW3)
+`    Pulsewidth 3 multiplied by 10 in ms. Have to convert from uS to mS.`
+
+79 - highByte(currentStatus.PW3)
+`    Pulsewidth 3 multiplied by 10 in ms. Have to convert from uS to mS.`
+
+80 - lowByte(currentStatus.PW4)
+`    Pulsewidth 4 multiplied by 10 in ms. Have to convert from uS to mS.`
+
+81 - highByte(currentStatus.PW4)
+`    Pulsewidth 4 multiplied by 10 in ms. Have to convert from uS to mS.`
+
+82 - currentStatus.status3
+`    resentLockOn(0), nitrousOn(1), fuel2Active(2), vssRefresh(3), halfSync(4), nSquirts(6:7)`
+
+83 - currentStatus.engineProtectStatus
+`    RPM(0), MAP(1), OIL(2), AFR(3), Unused(4:7)`
+
+84 - lowByte(currentStatus.fuelLoad)
+
+85 - highByte(currentStatus.fuelLoad)
+
+86 - lowByte(currentStatus.ignLoad)
+
+87 - highByte(currentStatus.ignLoad)
+
+88 - lowByte(currentStatus.injAngle) 
+
+89 - highByte(currentStatus.injAngle) 
+
+90 - currentStatus.idleDuty
+
+91 - currentStatus.CLIdleTarget
+`    closed loop idle target`
+
+92 - currentStatus.mapDOT
+`rate of change of the map` 
+
+93 - (int8_t)currentStatus.vvt1Angle
+
+94 - currentStatus.vvt1TargetAngle
+
+95 - currentStatus.vvt1Duty
+
+96 - lowByte(currentStatus.flexBoostCorrection)
+
+97 - highByte(currentStatus.flexBoostCorrection)
+
+98 - currentStatus.baroCorrection
+
+99 - currentStatus.ASEValue
+`Current ASE (%)`
+
+100 - lowByte(currentStatus.vss)
+`    lowByte of speed reading from the speed sensor`
+
+101 - highByte(currentStatus.vss)
+`    highByte of speed reading from the speed sensor`
+
+102 - currentStatus.gear 
+
+103 - currentStatus.fuelPressure
+
+104 - currentStatus.oilPressure
+
+105 - currentStatus.wmiPW
+
+106 - currentStatus.status4
+`     wmiEmptyBit(0), vvt1Error(1), vvt2Error(2), UnusedBits(3:7)`
+
+107 - (int8_t)currentStatus.vvt2Angle
+
+108 - currentStatus.vvt2TargetAngle
+
+109 - currentStatus.vvt2Duty
+
+110 - currentStatus.outputsStatus
+
+111 - (byte)(currentStatus.fuelTemp + CALIBRATION_TEMPERATURE_OFFSET)
+`     Fuel temperature from flex sensor`
+
+112 - currentStatus.fuelTempCorrection
+`     Fuel temperature Correction (%)`
+
+113 - currentStatus.VE1
+`     VE 1 (%)`
+
+114 - currentStatus.VE2
+`     VE 2 (%)`
+
+115 - currentStatus.advance1
+`     advance 1` 
+
+116 - currentStatus.advance2
+`     advance 2` 
+
+117 - currentStatus.nitrous_status
+
+118 - currentStatus.TS_SD_Status
+`     SD card status`
 
 ### Read external analog data from a remote device
 
