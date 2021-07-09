@@ -2,7 +2,7 @@
 title: Secondary_Serial_IO_interface
 description: 
 published: true
-date: 2021-07-09T12:39:49.314Z
+date: 2021-07-09T12:57:09.722Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:19.933Z
@@ -26,7 +26,8 @@ To enable use of the Secondary io interface it must be enabled in TunerStudio.
 
 Dependant on if CAN_COMMANDS have been enabled will vary the type of dropdown menu you will see
 
-![](Auxindrop_nocan.jpg "fig:Auxindrop_nocan.jpg") ![](Auxindrop_withcan.jpg "fig:Auxindrop_withcan.jpg")
+![auxindrop_nocan.jpg](/img/TunerStudio/auxindrop_nocan.jpg "fig:auxindrop_nocan.jpg")
+![](Auxindrop_withcan.jpg "fig:Auxindrop_withcan.jpg")
 
 select option "Secondary Serial IO Interface" or "CanBus/Secondary Serial IO Interface" as appropriate.
 
@@ -175,7 +176,7 @@ BIT 0 - currentStatus.secl
 
 `     Total GammaE (%)`
 
-18 - currentStatus.VE
+18 - currentStatus ve
 
 `     Current VE 1 (%)`
 
@@ -183,7 +184,7 @@ BIT 0 - currentStatus.secl
 
 `     chosen afr target`
 
-20 - lowByte(currentStatus.PW1);
+20 - lowByte(currentStatus.PW1)
 
 `     Pulsewidth 1 multiplied by 10 in ms. Have to convert from uS to mS.`
 
