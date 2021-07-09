@@ -2,7 +2,7 @@
 title: Secondary_Serial_IO_interface
 description: 
 published: true
-date: 2021-07-09T13:09:48.555Z
+date: 2021-07-09T13:15:13.573Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:19.933Z
@@ -26,7 +26,7 @@ To enable use of the Secondary io interface it must be enabled in TunerStudio.
 
 Dependant on if CAN_COMMANDS have been enabled will vary the type of dropdown menu you will see
 
-![accdrop_nocan.jpg](/img/TunerStudio/accdrop_nocan.jpg)
+![accdrop_nocan.jpg](/img/TunerStudio/accdrop_nocan.jpg "fig:accdrop_nocan.jpg")
 ![](Auxindrop_withcan.jpg "fig:Auxindrop_withcan.jpg")
 
 select option "Secondary Serial IO Interface" or "CanBus/Secondary Serial IO Interface" as appropriate.
@@ -35,7 +35,7 @@ select option "Secondary Serial IO Interface" or "CanBus/Secondary Serial IO Int
 
 Again dependant on if CAN_COMMANDS have been enabled will vary what options you have to enable Secondary serial.
 
-![](EnableSecondarySerial_nocan.jpg "fig:EnableSecondarySerial_nocan.jpg") <img src="EnableSecondarySerial_withcan.jpg" title="fig:EnableSecondarySerial_withcan.jpg" alt="EnableSecondarySerial_withcan.jpg" width="700" />
+![auxindrop_nocan.jpg](/img/TunerStudio/auxindrop_nocan.jpg "fig:EnableSecondarySerial_nocan.jpg")
 
 -   **Enable options**
 -   1. Disabled
