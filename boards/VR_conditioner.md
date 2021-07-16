@@ -2,7 +2,7 @@
 title: VR_conditioner
 description: 
 published: true
-date: 2021-03-20T12:41:00.418Z
+date: 2021-07-16T08:02:10.464Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:46.712Z
@@ -20,7 +20,7 @@ VR conditioners need to have Trigger Edge in TunerStudio set to the correct opti
 Conditioner Board
 =================
 
-The plug in dual VR conditioner board has been developed and is for sale as well as having its design files make available on github (https://github.com/noisymime/speeduino/tree/master/reference/hardware/VR%20Conditioner). The board can take either a single VR signal input or one for both the cam and crank.
+The plug in dual VR conditioner board has been developed and is for sale as well as having its design files make available on github (https://github.com/speeduino/Hardware/tree/main/VR%20Conditioner/Latest). The board can take either a single VR signal input or one for both the cam and crank.
 
 **Note:** The same PCB is used for both the VR conditioner and as a dual Opto isolator. It is populated on 1 side only, depending on which configuration is needed. For VR conditioning, only the bottom side of the board is populated, so don't be alarmed that the side labelled Top is left bare.
 
