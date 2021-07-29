@@ -2,7 +2,7 @@
 title: Interface Protocols
 description: 
 published: true
-date: 2021-07-29T22:10:41.363Z
+date: 2021-07-29T22:16:05.011Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-29T18:45:18.652Z
@@ -138,22 +138,22 @@ Speeduino replies with
 // warmcor
 
 43. (99)
-// accelEnrich
+// blank data for accelEnrich
 
 44. (99)
-// accelEnrich
+// blank data for accelEnrich
 
 45. (99)
-// tpsFuelCut
+// blank data for tpsFuelCut
 
 46. (99)
-// tpsFuelCut
+// blank data for tpsFuelCut
 
 47. (99)
-// baroCorrection
+// blank data for baroCorrection
 
 48. (99)
-// baroCorrection
+// blank data for baroCorrection
 
 49. highByte(currentStatus.corrections * 10)
 // gammaEnrich
@@ -174,16 +174,16 @@ Speeduino replies with
 // ve2
 
 55. (99) 
-// iacstep
+// blank data for iacstep
 
 56. (99)
-// iacstep
+// blank data for iacstep
 
 57. (99)
-// cold_adv_deg
+// blank data for cold_adv_deg
 
 58. (99)
-// cold_adv_deg
+// blank data for cold_adv_deg
 
 59.  highByte(currentStatus.tpsDOT * 10)
 // TPSdot
@@ -204,22 +204,22 @@ Speeduino replies with
 // dwell
 
 65. (99)
-// MAF
+// blank data for MAF
 
 66. (99)
-// MAF
+// blank data for MAF
 
 67. (currentStatus.fuelLoad*10) 
 // fuelload
 
 68. (99) 
-// fuelcor
+// blank data for fuelcor
 
 69. (99)
-// fuelcor
+// blank data for fuelcor
 
 70. (99)
-// portStatus
+// blank data for portStatus
 
 71. highByte(currentStatus.advance1 * 10)
 
@@ -230,7 +230,7 @@ Speeduino replies with
 74. lowByte(currentStatus.advance2 * 10)
 
 75. to 114.  (99)
-// bytes 75 to 114 blank to fill buffer
+// bytes 75 to 114 blank data to fill buffer
 
 #### 'A' Command
 This returns all the current realtime data(120 bytes 29/07/2021).
