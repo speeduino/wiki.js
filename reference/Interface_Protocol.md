@@ -2,7 +2,7 @@
 title: Interface Protocols
 description: 
 published: true
-date: 2021-07-29T22:16:05.011Z
+date: 2021-07-29T22:46:38.797Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-29T18:45:18.652Z
@@ -467,15 +467,15 @@ Speeduino replies with
 
 94. highByte(currentStatus.vvt1Angle)
 
-95. currentStatus.vvt1TargetAngle; break;
+95. currentStatus.vvt1TargetAngle
 
-96. (byte)(currentStatus.vvt1Duty); break;
+96. (byte)(currentStatus.vvt1Duty)
 
 97. lowByte(currentStatus.flexBoostCorrection)
 
 98. highByte(currentStatus.flexBoostCorrection)
 
-99. currentStatus.baroCorrection; break;
+99. currentStatus.baroCorrection
 
 100. currentStatus.VE
 //Current VE (%). Can be equal to VE1 or VE2 or a calculated value from both of them
@@ -543,6 +543,15 @@ The Format to send is
 Speeduino response
 (none)
 
+#### 'c' Command
+Send the current loops/sec value
+
+The Format to send is 
+'c'
+
+Speeduino response
+lowByte(currentStatus.loopsPerSecond) , highByte(currentStatus.loopsPerSecond)
+
 #### 'C' Command
 Test communications. This is used by Tunerstudio to see whether there is an ECU on a given serial port
 The Format to send is 
@@ -553,15 +562,94 @@ Speeduino response
 #### 'd' Command
 Send a CRC32 hash of a given page
  The Format to send is 
-'d'
+'d' , '0' , '*'
+where * is the value to calc the hash of.
 
+The response is 3 bytes calculated as follows.
+CRC32_val = calculateCRC32( * )
+((CRC32_val >> 24) & 255) )
+ byte 1 = ( ((CRC32_val >> 16) & 255) )
+ byte 2 = ( ((CRC32_val >> 8) & 255) )
+ byte 3 = ( (CRC32_val & 255) )
+ 
 Speeduino response
+byte 1 , byte 2 , byte 3
+
 #### 'E' Command
-receive command button commands
+Command button commands.
+Commands are built as cmdCombined = word(cmdGroup, cmdValue).
+this is the current(29/07/2021) list of valid cmdCombined command values.
+
+TS_CMD_TEST_DSBL  256
+TS_CMD_TEST_ENBL  257
+
+TS_CMD_INJ1_ON    513
+TS_CMD_INJ1_OFF   514
+TS_CMD_INJ1_50PC  515
+TS_CMD_INJ2_ON    516
+TS_CMD_INJ2_OFF   517
+TS_CMD_INJ2_50PC  518
+TS_CMD_INJ3_ON    519
+TS_CMD_INJ3_OFF   520
+TS_CMD_INJ3_50PC  521
+TS_CMD_INJ4_ON    522
+TS_CMD_INJ4_OFF   523
+TS_CMD_INJ4_50PC  524
+TS_CMD_INJ5_ON    525
+TS_CMD_INJ5_OFF   526
+TS_CMD_INJ5_50PC  527
+TS_CMD_INJ6_ON    528
+TS_CMD_INJ6_OFF   529
+TS_CMD_INJ6_50PC  530
+TS_CMD_INJ7_ON    531
+TS_CMD_INJ7_OFF   532
+TS_CMD_INJ7_50PC  533
+TS_CMD_INJ8_ON    534
+TS_CMD_INJ8_OFF   535
+TS_CMD_INJ8_50PC  536
+TS_CMD_IGN1_ON    769
+TS_CMD_IGN1_OFF   770
+TS_CMD_IGN1_50PC  771
+TS_CMD_IGN2_ON    772
+TS_CMD_IGN2_OFF   773
+TS_CMD_IGN2_50PC  774
+TS_CMD_IGN3_ON    775
+TS_CMD_IGN3_OFF   776
+TS_CMD_IGN3_50PC  777
+TS_CMD_IGN4_ON    778
+TS_CMD_IGN4_OFF   779
+TS_CMD_IGN4_50PC  780
+TS_CMD_IGN5_ON    781
+TS_CMD_IGN5_OFF   782
+TS_CMD_IGN5_50PC  783
+TS_CMD_IGN6_ON    784
+TS_CMD_IGN6_OFF   785
+TS_CMD_IGN6_50PC  786
+TS_CMD_IGN7_ON    787
+TS_CMD_IGN7_OFF   788
+TS_CMD_IGN7_50PC  789
+TS_CMD_IGN8_ON    790
+TS_CMD_IGN8_OFF   791
+TS_CMD_IGN8_50PC  792
+
+TS_CMD_STM32_REBOOT     12800
+TS_CMD_STM32_BOOTLOADER 12801
+
+TS_CMD_VSS_60KMH  39168 //0x99x00
+TS_CMD_VSS_RATIO1 39169
+TS_CMD_VSS_RATIO2 39170
+ 
+TS_CMD_VSS_RATIO3 39171
+TS_CMD_VSS_RATIO4 39172
+TS_CMD_VSS_RATIO5 39173
+TS_CMD_VSS_RATIO6 39174
+
  The Format to send is 
-'E'
+'E' , cmdGroup , cmdValue   
+eg for cmdtestspk1on  send  'E' , '0x03' , '0x01' 
 
 Speeduino response
+(none , hardware action only)
 
 #### 'F' Command
 send serial protocol version
@@ -589,6 +677,11 @@ List the contents of current page in human readable form
 
 #### 'm' Command
 Send the current free memory
+The Format to send is 
+'m'
+
+Speeduino response
+'lowByte(currentStatus.freeRAM)' , 'highByte(currentStatus.freeRAM)'
 
 #### 'M' Command
 
