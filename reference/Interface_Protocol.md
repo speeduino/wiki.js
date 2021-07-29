@@ -2,7 +2,7 @@
 title: Interface Protocols
 description: 
 published: true
-date: 2021-07-29T22:08:35.860Z
+date: 2021-07-29T22:10:41.363Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-29T18:45:18.652Z
@@ -16,7 +16,7 @@ dateCreated: 2021-07-29T18:45:18.652Z
 Speeduino can be interfaced to via  several ways.
 1. USB
 2. Secondary Serial
-3. Canbus (MCU dependant)
+3. Canbus (MCU dependent)
 
 ## 1. USB
 This is the primary interface and the way in which TunerStudio connects to Speeduino in order to program/configure its settings.
