@@ -2,7 +2,7 @@
 title: Interface Protocols
 description: 
 published: true
-date: 2021-07-29T22:46:38.797Z
+date: 2021-07-29T23:08:51.046Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-29T18:45:18.652Z
@@ -662,18 +662,141 @@ NOTE these values are sent in ASCII.
 
 #### 'h' Command
 Stop the tooth logger
+This reconnects the crank and cam input interrupts back to the normal input trigger code.
+
+The Format to send is 
+'h'
+
+Speeduino response
+(none)
 
 #### 'H' Command
 Start the tooth logger
+This disconnects the crank and cam input interrupts from their normal input trigger code and routes them to the tooth logger code.An acknowledge reply is made by speeduino.
+
+The Format to send is 
+'H'
+
+Speeduino response
+'1'
 
 #### 'j' Command
 Stop the composite logger
+This reconnects the crank and cam input interrupts back to the normal input trigger code.
+
+The Format to send is 
+'j'
+
+Speeduino response
+
 
 #### 'J' Command
 Start the composite logger
+This disconnects the crank and cam input interrupts from their normal input trigger code and routes them to the composite logger code.An acknowledge reply is made by speeduino.
+
+The Format to send is 
+'J'
+
+Speeduino response
+'1'
 
 #### 'L' Command
 List the contents of current page in human readable form
+You must set the current page prior to issuing this command to set the required page to be generated.
+the data structure is as follows.
+
+currentPage veMapPage:
+      Serial.println(F("\nVE Map"));
+      serial_print_3dtable(fuelTable);
+
+
+currentPage veSetPage:
+      Serial.println(F("\nPg 2 Cfg"));
+      // The following loop displays in human readable form of all byte values in config page 1 up to but not including the first array.
+      serial_println_range((byte *)&configPage2, configPage2.wueValues);
+      serial_print_space_delimited_array(configPage2.wueValues);
+      // This displays all the byte values between the last array up to but not including the first unsigned int on config page 1
+      serial_println_range(_end_range_byte_address(configPage2.wueValues), (byte*)&configPage2.injAng);
+      // The following loop displays four unsigned ints
+      serial_println_range(configPage2.injAng, configPage2.injAng + _countof(configPage2.injAng));
+      // Following loop displays byte values between the unsigned ints
+      serial_println_range(_end_range_byte_address(configPage2.injAng), (byte*)&configPage2.mapMax);
+      Serial.println(configPage2.mapMax);
+      // Following loop displays remaining byte values of the page
+      serial_println_range(&configPage2.fpPrime, (byte *)&configPage2 + sizeof(configPage2));
+      break;
+
+currentPage ignMapPage:
+      Serial.println(F("\nIgnition Map"));
+      serial_print_3dtable(ignitionTable);
+
+currentPage ignSetPage:
+      Serial.println(F("\nPg 4 Cfg"));
+      Serial.println(configPage4.triggerAngle);// configPage4.triggerAngle is an int so just display it without complication
+      // Following loop displays byte values after that first int up to but not including the first array in config page 2
+      serial_println_range((byte*)&configPage4.FixAng, configPage4.taeBins);
+      serial_print_space_delimited_array(configPage4.taeBins);
+      serial_print_space_delimited_array(configPage4.taeValues);
+      serial_print_space_delimited_array(configPage4.wueBins);
+      Serial.println(configPage4.dwellLimit);// Little lonely byte stuck between two arrays. No complications just display it.
+      serial_print_space_delimited_array(configPage4.dwellCorrectionValues);
+      serial_println_range(_end_range_byte_address(configPage4.dwellCorrectionValues), (byte *)&configPage4 + sizeof(configPage4));
+
+currentPage afrMapPage:
+      Serial.println(F("\nAFR Map"));
+      serial_print_3dtable(afrTable);
+      break;
+
+currentPage afrSetPage:
+      Serial.println(F("\nPg 6 Config"));
+      serial_println_range((byte *)&configPage6, configPage6.voltageCorrectionBins);
+      serial_print_space_delimited_array(configPage6.voltageCorrectionBins);
+      serial_print_space_delimited_array(configPage6.injVoltageCorrectionValues);
+      serial_print_space_delimited_array(configPage6.airDenBins);
+      serial_print_space_delimited_array(configPage6.airDenRates);
+      serial_println_range(_end_range_byte_address(configPage6.airDenRates), configPage6.iacCLValues);
+      serial_print_space_delimited_array(configPage6.iacCLValues);
+      serial_print_space_delimited_array(configPage6.iacOLStepVal);
+      serial_print_space_delimited_array(configPage6.iacOLPWMVal);
+      serial_print_space_delimited_array(configPage6.iacBins);
+      serial_print_space_delimited_array(configPage6.iacCrankSteps);
+      serial_print_space_delimited_array(configPage6.iacCrankDuty);
+      serial_print_space_delimited_array(configPage6.iacCrankBins);
+      // Following loop is for remaining byte value of page
+      serial_println_range(_end_range_byte_address(configPage6.iacCrankBins), (byte *)&configPage6 + sizeof(configPage6));
+      break;
+
+currentPage boostvvtPage:
+      Serial.println(F("\nBoost Map"));
+      serial_print_3dtable(boostTable);
+      Serial.println(F("\nVVT Map"));
+      serial_print_3dtable(vvtTable);
+      break;
+
+currentPage seqFuelPage:
+      Serial.println(F("\nTrim 1 Table"));
+      serial_print_3dtable(trim1Table);
+      break;
+
+currentPage canbusPage:
+      Serial.println(F("\nPage 9 Cfg"));
+      serial_println_range((byte *)&configPage9, (byte *)&configPage9 + sizeof(configPage9));
+      break;
+
+currentPage fuelMap2Page:
+      Serial.println(F("\n2nd Fuel Map"));
+      serial_print_3dtable(fuelTable2);
+      break;
+   
+currentPage ignMap2Page:
+      Serial.println(F("\n2nd Ignition Map"));
+      serial_print_3dtable(ignitionTable2);
+      break;
+
+currentPage warmupPage:
+N/A
+currentPage progOutsPage:
+N/A
 
 #### 'm' Command
 Send the current free memory
