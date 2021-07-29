@@ -2,7 +2,7 @@
 title: Interface Protocols
 description: 
 published: true
-date: 2021-07-29T21:17:41.433Z
+date: 2021-07-29T22:08:35.860Z
 tags: 
 editor: markdown
 dateCreated: 2021-07-29T18:45:18.652Z
@@ -34,12 +34,203 @@ All data is little-endian. (Low byte first.) Data is sent in binary format and t
 
 #### 'a' Command
 This Command is for legacy use only. It returns the current realtime data.
+The data value list speeduino replies with can be seen below , along with their function.ONLY the data value is sent NOT its order number or description.
 
 The format to send is 
 'a' , '0' , '6'
 
-- Speeduino replies with 
-xxxx
+Speeduino replies with 
+
+1. highByte(currentStatus.secl)
+
+2. lowByte(currentStatus.secl)
+
+3. highByte(currentStatus.PW1)
+
+4. lowByte(currentStatus.PW1)
+
+5. highByte(currentStatus.PW2)
+
+6. lowByte(currentStatus.PW2)
+
+7. highByte(currentStatus.RPM)
+
+8. lowByte(currentStatus.RPM)
+
+9. highByte(currentStatus.advance * 10)
+
+10. lowByte(currentStatus.advance * 10)
+
+11. currentStatus.nSquirts);
+
+12. currentStatus.engine);
+
+13. currentStatus.afrTarget);
+
+14. currentStatus.afrTarget); // send twice so afrtgt1 == afrtgt2
+
+15. (99)
+// send dummy data as we don't have wbo2_en1
+
+16. (99)
+// send dummy data as we don't have wbo2_en2
+
+17. highByte(currentStatus.baro * 10)
+
+18. lowByte(currentStatus.baro * 10)
+
+19. highByte(currentStatus.MAP * 10)
+
+20. lowByte(currentStatus.MAP * 10)
+
+21. highByte(currentStatus.IAT * 10)
+
+22. lowByte(currentStatus.IAT * 10)
+
+23. highByte(currentStatus.coolant * 10)
+
+24. lowByte(currentStatus.coolant * 10)
+
+25. highByte(currentStatus.TPS * 10)
+
+26. lowByte(currentStatus.TPS * 10)
+
+27. highByte(currentStatus.battery10)
+
+28. lowByte(currentStatus.battery10)
+
+29. highByte(currentStatus.O2)
+
+30. lowByte(currentStatus.O2)
+
+31. highByte(currentStatus.O2_2)
+
+32. lowByte(currentStatus.O2_2)
+
+33. (99)
+// blank data for knock
+
+34. (99)
+// blank data for knock
+
+35. highByte(currentStatus.egoCorrection * 10)
+// egocor1
+
+36. lowByte(currentStatus.egoCorrection * 10)
+  // egocor1
+  
+37. highByte(currentStatus.egoCorrection * 10)
+// egocor2
+
+38. lowByte(currentStatus.egoCorrection * 10)
+// egocor2
+  
+39. highByte(currentStatus.iatCorrection * 10)
+// aircor
+
+40. lowByte(currentStatus.iatCorrection * 10)
+// aircor
+  
+41. highByte(currentStatus.wueCorrection * 10)
+// warmcor
+
+42. lowByte(currentStatus.wueCorrection * 10)
+// warmcor
+
+43. (99)
+// accelEnrich
+
+44. (99)
+// accelEnrich
+
+45. (99)
+// tpsFuelCut
+
+46. (99)
+// tpsFuelCut
+
+47. (99)
+// baroCorrection
+
+48. (99)
+// baroCorrection
+
+49. highByte(currentStatus.corrections * 10)
+// gammaEnrich
+
+50. lowByte(currentStatus.corrections * 10)
+// gammaEnrich
+
+51. highByte(currentStatus.VE * 10)
+// ve1
+
+52. lowByte(currentStatus.VE * 10)
+// ve1
+
+53. highByte(currentStatus.VE2 * 10)
+// ve2
+
+54. lowByte(currentStatus.VE2 * 10)
+// ve2
+
+55. (99) 
+// iacstep
+
+56. (99)
+// iacstep
+
+57. (99)
+// cold_adv_deg
+
+58. (99)
+// cold_adv_deg
+
+59.  highByte(currentStatus.tpsDOT * 10)
+// TPSdot
+
+60.  lowByte(currentStatus.tpsDOT * 10)
+// TPSdot
+
+61.  highByte(currentStatus.mapDOT * 10) 
+// MAPdot
+
+62.  lowByte(currentStatus.mapDOT * 10)
+// MAPdot
+
+63.  highByte(currentStatus.dwell * 10) 
+// dwell
+
+64.  lowByte(currentStatus.dwell * 10)
+// dwell
+
+65. (99)
+// MAF
+
+66. (99)
+// MAF
+
+67. (currentStatus.fuelLoad*10) 
+// fuelload
+
+68. (99) 
+// fuelcor
+
+69. (99)
+// fuelcor
+
+70. (99)
+// portStatus
+
+71. highByte(currentStatus.advance1 * 10)
+
+72. lowByte(currentStatus.advance1 * 10)
+  
+73. highByte(currentStatus.advance2 * 10)
+
+74. lowByte(currentStatus.advance2 * 10)
+
+75. to 114.  (99)
+// bytes 75 to 114 blank to fill buffer
 
 #### 'A' Command
 This returns all the current realtime data(120 bytes 29/07/2021).
