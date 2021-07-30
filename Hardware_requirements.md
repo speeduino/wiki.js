@@ -2,7 +2,7 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2021-02-21T21:50:20.223Z
+date: 2021-07-30T04:48:59.090Z
 tags: hardware, wiring
 editor: markdown
 dateCreated: 2020-01-06T01:37:16.331Z
@@ -97,7 +97,7 @@ Some position sensors output a 12v signal. To correct this, and avoid damaging t
 
 #### GM 7 / 8 pin Distributor Module
 
-See [GM Distributor Module](/configration/GM_Module) for more details
+See [GM_Module](/en/configuration/GM_Module) for more details 
 
 Outputs
 -------
