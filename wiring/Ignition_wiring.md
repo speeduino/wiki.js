@@ -2,8 +2,10 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2020-01-16T12:42:32.994Z
+date: 2021-07-30T04:59:54.269Z
 tags: ignition, wiring
+editor: markdown
+dateCreated: 2020-01-13T13:26:54.675Z
 ---
 
 # Ignition Wiring
@@ -50,3 +52,7 @@ Sequential ignition control using Coil-on=Plugs coils dramtically simplifies the
 ## Distributor
 If a distributor remains in use, only a single output is required from the ECU. This should be fed into a single channel ignition module (Such as the common Bosch 124) which can then drive the coil. 
 ![ign_Basic-distributor.png](/img/wiring/ign_Basic-distributor.png){.align-center width=500}
+
+## Application Specific
+Some application specific ignition setups exist that do no fit any of the above configurations. See below for more details:
+* [GM 7/8 Pin Modules](/en/configuration/GM_Module)
