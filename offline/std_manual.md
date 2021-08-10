@@ -29,7 +29,9 @@ editor: markdown
 ./configuration/Dwell.md
 ./configuration/IAT_Retard.md
 ./configuration/Cranking.md
+./configuration/Priming.md
 ./configuration/Warmup.md
+./configuration/ASE.md
 ./configuration/Idle.md
 ./configuration/IdleAdvance.md
 ./configuration/Thermo_fan.md
@@ -37,6 +39,8 @@ editor: markdown
 ./configuration/Fuel_pump.md
 ./configuration/Boost_Control.md
 ./configuration/Nitrous_Control.md
+./configuration/VVT.md
+./configuration/VSS.md
 ./configuration/Sensor_Calibration.md
 ./configuration/Auxillary_IO_Configuration.md
 ./decoders/Missing_Tooth.md
