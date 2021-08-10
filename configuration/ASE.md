@@ -2,7 +2,7 @@
 title: ASE
 description: Afterstart Enrichment (ASE)
 published: true
-date: 2021-08-10T09:47:26.058Z
+date: 2021-08-10T12:53:49.942Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-10T09:26:15.758Z
@@ -16,7 +16,7 @@ Afterstart Enrichment (ASE) is a separate fuel modifier that operates over and a
 Settings
 --------
 
-![ase.png](/ase.png)
+![After Start Enrichment dialog](/ase.png){.align-center width=400}
 
 -   **ASE - Enrichment %** - This curve sets the amount of enrichment during ASE period in percentage based on coolant temp. Typically 50% enrichment is required with cold engine and 5% with warm engine.
 -   **Transition time to disable** - After the ASE duration has passed, the enrichment amount will taper to zero smoothly to avoid sudden changes to AFR. This sets the time for how long the taper to zero will be. Typically few seconds.
