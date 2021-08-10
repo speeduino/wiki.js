@@ -2,7 +2,7 @@
 title: VVT
 description: 
 published: true
-date: 2021-08-10T13:13:40.230Z
+date: 2021-08-10T14:30:50.125Z
 tags: tuning, variable valve timing, vvt
 editor: markdown
 dateCreated: 2020-05-14T05:39:02.336Z
@@ -32,11 +32,11 @@ Closed loop PWM mode also uses Pulse Width Modulation for VVT output to adjust t
 
 ## Settings
 
-![vvt.png](/vvt.png){.align-center}
+![Example VVT Settings](/img/accessories/vvt_settings.png){.align-center width=400}
 
 ## VVT duty cycle
 
-![vvt_cntrl_table.png](/img/accessories/vvt_cntrl_table.png){.align-center}
+![Example VVT duty table](/img/accessories/vvt_cntrl_table.png){.align-center width=500}
 
 The VVT control table function varies depending on whether on/off, open or closed loop VVT mode has been selected. 
 
