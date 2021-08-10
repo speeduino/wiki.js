@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2021-08-10T08:28:27.487Z
+date: 2021-08-10T08:28:54.644Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -29,7 +29,6 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [Cranking](/configuration/Cranking "wikilink")
     -   [Warmup](/configuration/Warmup "wikilink")
     -   [Priming](/configuration/Priming "wikilink")
-    -   [Configuration_Index](/en/Configuration_Index)
 -   **Idle control**
     -   [Idle](/configuration/Idle "wikilink")
     -   [Idle Advance](/configuration/IdleAdvance "wikilink")
