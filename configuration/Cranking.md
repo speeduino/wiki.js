@@ -2,7 +2,7 @@
 title: Cranking
 description: 
 published: true
-date: 2021-08-10T07:36:10.862Z
+date: 2021-08-10T13:17:40.276Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:52.563Z
@@ -17,7 +17,7 @@ Settings
 --------
 
 
-![cranking202108.png](/cranking202108.png){.align-center}
+![Cranking Settings](/img/warmup/cranking.png){.align-center}
 
 -   **Cranking RPM (Max)** - This sets the threshold for whether Speeduino will set its status to be cranking or running. Any RPM above 0 and below this value will be considered cranking and all cranking related adjustments will be applied. It's generally best to set this to be around 100rpm higher than your typical cranking speed to account for spikes and to provide a smoother transition to normal idle
 -   **Flood Clear level** - Flood clear is used to assist in removing excess fuel that has entered the cylinder/s. Whilst flood clear is active, all fuel and ignition events will be stopped and the engine can be cranked for a few seconds without risk of starting or further flooding. To trigger flood clear, the RPM must be **below** the above Cranking RPM setting and the TPS must be **above** the threshold of this setting.
