@@ -2,7 +2,7 @@
 title: Engine Constants
 description: 
 published: true
-date: 2021-08-11T07:11:38.333Z
+date: 2021-08-11T07:15:54.533Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:54.869Z
@@ -40,6 +40,7 @@ The required fuel calculator determines the theoretical fuel injection time that
 - **Injector Port Type:** Option isn't used by firmware. Selection currently does not matter
 - **Number of injectors:** Usually the same as number of cylinders (For port injection)
 - **Engine Type:** Whether the crank angle between firings is the same for all cylinders. If using an Odd fire engine (Eg Some V-Twins and Buick V6s), the angle for each output channel must be specific.
+- **Stoichiometric ratio:** The stoichiometric ration of the fuel being used. For flex fuel, choose the primary fuel. This field is automatically set by the req. fuel calculator after being used.
 - **Injector Layout:** Specifies how the injectors are wired in
   - **Paired:** 2 injectors are wired to each channel. The number of channels used is therefore equal to half the number of cylinders.
   - **Semi-Sequential:** Semi-sequential: Same as paired except that injector channels are mirrored (1&4, 2&3) meaning the number of outputs used are equal to the number of cylinders. Only valid for 4 cylinders or less.
