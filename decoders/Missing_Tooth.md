@@ -2,8 +2,10 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2020-04-28T18:38:42.248Z
+date: 2021-08-11T08:49:24.137Z
 tags: 
+editor: markdown
+dateCreated: 2020-01-06T00:30:19.883Z
 ---
 
 # Supported trigger patterns
@@ -32,7 +34,7 @@ If the starter motor is good and getting the right voltage ensure the mechanical
 
 
 ### Tuner Studio Configuration
-![missingtooth_triggerconfig.png](/img/decoders/missingtooth_triggerconfig.png){.align-center}
+![missingtooth_202108.png](/img/decoders/missingtooth_202108.png){.align-center}
 
 **Fields:**
 
