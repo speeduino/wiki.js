@@ -2,9 +2,10 @@
 title: Engine Constants
 description: 
 published: true
-date: 2020-06-18T00:42:45.270Z
+date: 2021-08-11T07:11:38.333Z
 tags: 
 editor: markdown
+dateCreated: 2020-01-06T01:53:54.869Z
 ---
 
 # Engine Constants
@@ -18,7 +19,7 @@ Here you need to setup the engine constants. Fill out the fields in the bottom s
 
 ## Configuration
 
-![engine.png](/img/constants/engine.png){.align-center width=400}
+![engine202108_2.png](/constants/engine202108_2.png){.align-center width=400}
 
 ### Required Fuel Calculator
 The required fuel calculator determines the theoretical fuel injection time that would be required at 100% VE. This is determined by knowing the engine capacity, the size and number of the fuel injectors and the number of squirts that will be performed in each cycle. Increasing this figure will lead to an overall increase in the amount of fuel that is injected **at all points** of the VE map (And vice versa).
@@ -48,6 +49,7 @@ The required fuel calculator determines the theoretical fuel injection time that
   - **Instantaneous:** Every reading is used as it is taken. Makes for a highly fluctuating signal, but can be useful for testing
   - **Cycle Average:** The average sensor reading across 720 crank degrees is used. This is of Event average are the recommended options for 4 of more cylinders
   - **Cycle Minimum:** The lowest value detected across 720 degrees is used. This is the recommended method for less than 4 cylinders or ITBs
-  - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. Generally offers faster response with a similar level of accuracy. 
+  - **Event Average:** Similar to Cycle Average, however performs the averaging once per ignition event rather than once per cycle. Generally offers faster response with a similar level of accuracy.
+- **MAP Sample switch point:** Instantaneous MAP sampling method is used below this RPM and the selected method is used above this RPM. Default value: 0 RPM. This can be used to improve low RPM thorttle response, by using instantaneous MAP sample method around idle RPM for fastest MAP response and then switch to other methods at higher RPM to get rid of the MAP noise that instantaneous mode can have.
     
 The Oddfire angles should only be used on oddfire engines (Primarily some specifica V6s)
