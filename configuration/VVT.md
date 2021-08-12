@@ -2,7 +2,7 @@
 title: VVT
 description: 
 published: true
-date: 2021-08-11T06:55:32.461Z
+date: 2021-08-12T06:52:48.893Z
 tags: tuning, variable valve timing, vvt
 editor: markdown
 dateCreated: 2020-05-14T05:39:02.336Z
@@ -45,6 +45,15 @@ Closed loop PWM mode also uses Pulse Width Modulation for VVT output to adjust t
 -   **Increased duty direction** - Sets the closed loop control direction. If higher solenoid duty advances cam, set this to "Advance". If on the other hand, more duty retards the cam, set this to "Retard".
 -   **Hold duty used** - In some VVT systems, specific solenoid duty is used to hold the current cam angle. Use this setting to enable the hold duty.
 -   **Hold duty (%)** - Set the desired cam angle holding duty. Usually around 50%.
+-   **Adjust fuel timing** - By enabling this, fuel injection timing is adjusted based on the cam angle.
+-   **Cam angle @ 0% duty(deg)** - This setting is used to bring the cam angle reading to usable 1-99 degrees range. First use Open Loop mode to figure out the cam angle reading at 0% duty and then switch to closed loop and write the open Loop 0% duty cam angle reading here. When doing that, the cam angle reading at 0% duty will show 0. Now you can fine tune this value so that the VVT angle reading is in the 1-99 range. You might need to adjust this value bigger amount if the cam angle reading goes to negative values when duty increases. For example if 100% cam angle reading is -35, lower this value at least by 36. So that the both ends of the adjustment are withing the 1-99 range. Also make sure that the cam angle readings stay withing the 1-99 range at higher RPM too. Belt strecth etc. can affect the cam angle reading, even though duty stays the same.
+-   **Minimum Cam angle(deg)** - Safety limit for minimum expected cam angle value. If cam angle gets smaller or equal to this, it triggers VVT error state, closed loop adjustment is disabled and VVT output duty drops to 0%. Start by using 0 degrees and fine tune if needed.
+-   **Maximum Cam angle(deg)** - Safety limit for maximum expected cam angle value. If cam angle gets bigger than this, it triggers VVT error state, closed loop adjustment is disabled and VVT output duty drops to 0%. Start by using 100 degrees and after everything is dialed in, set this to slightly higher value than the biggest cam angle reading is in your setup.
+### Second VVT Output
+-   **VVT2 Control Enabled** - To enable second VVT control. This uses mainly the same settings as the primary VVT control. For the settings that are available for VVT2, see descriptions above. Set this to Off if not used.
+> **Note:** Currently Closed loop VVT control for second VVT output is only available for missing tooth trigger pattern with single tooth on the cam.{.is-info}
+-   **VVT2 Trigger edge** - Set the second cam input to trigger on falling or rising edge.
+
 
 ## VVT duty cycle
 
