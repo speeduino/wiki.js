@@ -2,7 +2,7 @@
 title: VVT
 description: 
 published: true
-date: 2021-08-12T06:52:48.893Z
+date: 2021-08-12T06:55:30.783Z
 tags: tuning, variable valve timing, vvt
 editor: markdown
 dateCreated: 2020-05-14T05:39:02.336Z
@@ -22,7 +22,7 @@ In On/Off mode the VVT output is either On or Off depending on the load and RPM.
 
 ### Open loop PWM
 
-In Open loop PWM mode the VVT output uses Pulse Width Modulation to adjust the cam timing. MAP or TPS can be selected as load source and also output frequency is selectable. Output duty is defined by the VVT control table so that value on the map is directly the VVT output duty. VVT output has 0.5% duty accurasy and the usable frequency range is 10-510Hz
+In Open loop PWM mode the VVT output uses Pulse Width Modulation to adjust the cam timing. MAP or TPS can be selected as load source and also output frequency is selectable. Output duty is defined by the VVT control table so that value on the map is directly the VVT output duty. VVT output has 0.5% duty accuracy and the available frequency range is 10-510Hz
 
 ### Closed loop PWM
 
