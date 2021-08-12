@@ -2,7 +2,7 @@
 title: VVT
 description: 
 published: true
-date: 2021-08-12T06:55:30.783Z
+date: 2021-08-12T06:57:52.874Z
 tags: tuning, variable valve timing, vvt
 editor: markdown
 dateCreated: 2020-05-14T05:39:02.336Z
@@ -26,7 +26,7 @@ In Open loop PWM mode the VVT output uses Pulse Width Modulation to adjust the c
 
 ### Closed loop PWM
 
-Closed loop PWM mode also uses Pulse Width Modulation for VVT output to adjust the cam timing. But in this mode the VVT control table is used as cam angle target table. VVT control algorithm uses PID loop to keep the cam angle at the target value using the VVT output duty. Setting up the closed loop VVT is way more in depth than On/Off or Open Loop modes. But yeilds to better cam control if the engine supports this kind of VVT mode.
+Closed loop PWM mode also uses Pulse Width Modulation for VVT output to adjust the cam timing. But in this mode the VVT control table is used as cam angle target table. VVT control algorithm uses PID loop to keep the cam angle at the target value using the VVT output duty. Setting up the closed loop VVT is way more in depth than On/Off or Open Loop modes. But yields to better cam control if the engine supports this kind of VVT mode. This mode can be used for example in BMW dual vanos engines and Ford ST170.
 
 > **Note:** Currently Closed loop VVT control is experimental feature and it only works for Miata, Missing tooth and ST170 trigger patterns.{.is-info}
 
