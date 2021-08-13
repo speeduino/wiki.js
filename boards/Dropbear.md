@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-03-12T23:59:51.357Z
+date: 2021-08-13T01:57:31.509Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -33,7 +33,7 @@ The ECU contains a dual onboard conditioner that can can be used with VR sensors
 When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
 
 #### Crank filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW3` on the PCB and operates on both Hall and VR inputs. 
+The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` or `SW3` on the PCB and operates on both Hall and VR inputs. 
 
 > Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
 {.is-warning}
