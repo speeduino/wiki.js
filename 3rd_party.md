@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-08-24T12:34:43.663Z
+date: 2021-08-24T12:56:11.236Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -104,3 +104,14 @@ By Darren Siepka, aka Dazq
 dxControl-Gears is a controller for electronically controlled automatic gearboxes, designed to accompany Speeduino. It is a custom development of the dxControl-GPIO code .
 
 More information [dxControl-Gears](/boards/3rd_party/DAZQ/dxControl-Gears "wikilink")
+
+8-Channel EGT board
+--------------------------------
+
+By Pasi Kemppainen, aka pazi88
+
+### What is it?
+
+Simple 8-channel EGT add-on board that can be connected to Speeduino via secondary serial to add EGT sensing capabilities. Also CAN-bus is supported.
+
+More information [here](https://github.com/pazi88/8Ch-EGT)
