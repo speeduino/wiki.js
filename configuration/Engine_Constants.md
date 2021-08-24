@@ -2,7 +2,7 @@
 title: Engine Constants
 description: 
 published: true
-date: 2021-08-11T07:17:30.385Z
+date: 2021-08-24T12:54:34.436Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:54.869Z
@@ -13,13 +13,13 @@ dateCreated: 2020-01-06T01:53:54.869Z
 
 From the Settings menu, select Constants
 
-![TS_8.png](/img/TunerStudio/TS_8.png){.align-center width=300}
+![Engine constants menu](/img/TunerStudio/TS_8.png){.align-center width=300}
 
 Here you need to setup the engine constants. Fill out the fields in the bottom section before calculating the Required Fuel.
 
 ## Configuration
 
-![engine202108_2.png](/constants/engine202108_2.png){.align-center width=400}
+![Engine constants dialog](/img/constants/engine.png){.align-center width=400}
 
 ### Required Fuel Calculator
 The required fuel calculator determines the theoretical fuel injection time that would be required at 100% VE. This is determined by knowing the engine capacity, the size and number of the fuel injectors and the number of squirts that will be performed in each cycle. Increasing this figure will lead to an overall increase in the amount of fuel that is injected **at all points** of the VE map (And vice versa).
