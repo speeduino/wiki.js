@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-01-27T09:33:03.433Z
+date: 2021-08-24T12:28:07.142Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -38,6 +38,28 @@ The UA4C gets it’s name “Under Arduino 4 Channel”, as the Arduino Mega sit
 This combined with an all surface mount part design give all the functionality and more of the 0.4 Speeduino in a much slimmer package.
 
 More information [UA4C for Speeduino](/boards/3rd_party/wtmtronics/ua4c "wikilink")
+
+
+### Speeduino compatible BMW M52 PnP board
+
+By Pasi Kemppainen, aka pazi88
+
+### What is it?
+
+Speeduino compatible board that replaces the original board in Siemens ms41 engine control units used in BMW M52 and S52 engines.
+
+More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m52%20PnP)
+
+
+### Speeduino compatible BMW M4x, M50, M60 PnP board
+
+By Pasi Kemppainen, aka pazi88
+
+### What is it?
+
+Speeduino compatible board that replaces the original board in Bosch Motronic engine control units used in BMW M4x, M50 and M60 engines.
+
+More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m50%2Cm40%2Cm60%20Pnp)
 
 
 Accessary Boards
