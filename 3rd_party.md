@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-08-24T12:29:58.431Z
+date: 2021-08-24T12:34:43.663Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -16,7 +16,8 @@ dateCreated: 2020-01-06T01:36:57.774Z
 Alternative Speeduino Mainboards
 ================================
 
-### NO2C or No Overhang Two Channel
+NO2C or No Overhang Two Channel
+--------------------------------
 
 By Weaver Markel, aka turboedge
 
@@ -28,7 +29,8 @@ More information [NO2C for Speeduino](/boards/3rd_party/wtmtronics/NO2C_for_Spee
 
 
 
-### UA4C for Speeduino Seawolf/Sea Fox
+UA4C for Speeduino Seawolf/Sea Fox
+--------------------------------
 
 By Weaver Markel, aka turboedge
 
@@ -40,7 +42,8 @@ This combined with an all surface mount part design give all the functionality a
 More information [UA4C for Speeduino](/boards/3rd_party/wtmtronics/ua4c "wikilink")
 
 
-### Speeduino compatible BMW M52 PnP board
+BMW M52 PnP board
+--------------------------------
 
 By Pasi Kemppainen, aka pazi88
 
@@ -51,7 +54,8 @@ Speeduino compatible board that replaces the original board in Siemens ms41 engi
 More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m52%20PnP)
 
 
-### Speeduino compatible BMW M4x/M50/M60 PnP board
+BMW M4x/M50/M60 PnP board
+--------------------------------
 
 By Pasi Kemppainen, aka pazi88
 
@@ -61,7 +65,8 @@ Speeduino compatible board that replaces the original board in Bosch Motronic en
 
 More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m50%2Cm40%2Cm60%20Pnp)
 
-### Speeduino compatible BMW M52TU/M54 PnP board
+BMW M52TU/M54 PnP board
+--------------------------------
 
 By Pasi Kemppainen, aka pazi88
 
