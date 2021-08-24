@@ -2,7 +2,7 @@
 title: 3rd_party
 description: 
 published: true
-date: 2021-08-24T12:28:07.142Z
+date: 2021-08-24T12:29:58.431Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:36:57.774Z
@@ -51,7 +51,7 @@ Speeduino compatible board that replaces the original board in Siemens ms41 engi
 More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m52%20PnP)
 
 
-### Speeduino compatible BMW M4x, M50, M60 PnP board
+### Speeduino compatible BMW M4x/M50/M60 PnP board
 
 By Pasi Kemppainen, aka pazi88
 
@@ -61,6 +61,15 @@ Speeduino compatible board that replaces the original board in Bosch Motronic en
 
 More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m50%2Cm40%2Cm60%20Pnp)
 
+### Speeduino compatible BMW M52TU/M54 PnP board
+
+By Pasi Kemppainen, aka pazi88
+
+### What is it?
+
+Speeduino compatible board that replaces the original board in Siemens ms42/43 engine control units used in BMW M52TU and M54 engines.
+
+More information [here](https://github.com/pazi88/Speeduino-M5x-PCBs/tree/master/m52tu%2C%20m54%20PnP)
 
 Accessary Boards
 ================
