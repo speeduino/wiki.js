@@ -2,7 +2,7 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-08-11T08:38:35.499Z
+date: 2021-08-24T12:57:28.040Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:10.355Z
@@ -19,7 +19,7 @@ Note that many of the settings on this dialog are dependant on your configuratio
 
 ## Trigger Settings
 
-![triggersettings202108.png](/constants/triggersettings202108.png){.align-center width=400}
+![Trigger settings dialog](/img/constants/triggersettings.png){.align-center width=400}
 
 - **Trigger Pattern** - The pattern used by the crank/cam sensor setup on your engine. For a full list of the supported patterns, see the [Decoders](/decoders) page
 - **Primary Base teeth** - For patterns where the number of teeth are variable (missing tooth, dual wheel etc), this number represents the number of teeth on the primary wheel. For missing tooth type wheels, this number should be the count as if there were no teeth missing.
