@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-25T07:14:11.636Z
+date: 2021-08-25T13:29:19.502Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -24,7 +24,7 @@ The ECU contains a dual onboard conditioner that can can be used with VR sensors
 When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
 
 #### Crank filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` or `SW3` on the PCB and operates on both Hall and VR inputs. 
+The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` on the PCB and operates on both Hall and VR inputs. 
 
 > Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
 {.is-warning}
@@ -44,6 +44,10 @@ Recommended values for the filters are shown below (By default both switches wil
 > Both switches can be set to off, however doing so will disable all hardware filtering. This can be useful when performing bench testing with a stim, but is not recommend for real world use
 {.is-warning}
 
+## EGT inputs
+The v0.2 controller contains a total of 4 EGT circuits, however EGT1 and EGT2 could not be fully populated at PCBA time and should not be used. There are override pins on the Black connector for EGT1 and EGT2 inputs however that allow the use of external thermo amps
+
+EGT 3 and 4 on the Grey connector use digital thermo amps on board. 
 
 
 ## Pin out
@@ -76,7 +80,8 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. Teensy pin A18        |
 | C4  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
-| C6  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
+| C6  | Input     | N/A         | EGT 1+  | **DO NOT USE ON V0.2 BOARD!**       |
+| C7  | Input     | N/A         | EGT 1-  | **DO NOT USE ON V0.2 BOARD!**       |
 | C8  | Input     | N/A         | Throttle Sensor   | Connect to signal line of variable throttle position sensor (TPS). Other pins of sensor should connect to C1 and A3        |
 
 ### Grey Connector
