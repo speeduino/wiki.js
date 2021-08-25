@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-25T06:58:43.834Z
+date: 2021-08-25T07:14:11.636Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -58,27 +58,26 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | A1  | Input     | 5A          | Switched 12v      | Main power input. Connect to switched 12v power via 5A fuse        |
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
-| A4  | N/A       | N/A         | Not used.         |         |
-| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. MCU pin #22 in TunerStudio        |
+| A4  | Input     | N/A         | Spare In 2        | Spare digital input. Teensy pin 22         |
+| A5  | Input     | N/A         | RPM 2             | Hall effect input for RPM2 (N2)        |
 | A6  | Both      | N/A         | CAN L             | CAN L connection        |
-| A7  | Both      | N/A         | CAN H             | CAN H connection        |
+| A7  | Input     | N/A         | EGT 2-  | **DO NOT USE ON V0.2 BOARD!**       |
 | A8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | B1  | Output    | 100mA       | Tacho             | 12v square wave output for use as input to a tachometer        |
-| B2  | Input     | N/A         | Crank Primary     | Primary crank sensor (CKP) input. Can be 12v, Ground switching or the positive wire of a VR sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
-| B3  | Input     | N/A         | Crank Negative    | **Only used with a VR sensor.** Connect to negative side of VR crank sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
-| B4  | Input     | N/A         | Cam Primary     | Cam sensor (CMP) primary input. Can be 12v, Ground switching or the positive wire of a VR sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
-| B5  | Input     | N/A         | Cam Negative    | **Only used with a VR sensor.** Connect to negative side of VR cam sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
-| B6  | Input     | N/A         | Spare Digital 1| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. MCU pin #23 in TunerStudio        |
-| B7  | Input     | N/A         | Clutch input.     | Ground switching digital input that goes to ground when clutch is engaged. Do not feed 12v on this input        |
-| B8  | Input     | N/A         | Flex sensor       | Signal wire from GM/Continental Flex sensor.         |
+| B2  | Input     | N/A         | EGT 2 Override  | This pin bypasses the onboard Thermo amp for EGT2 and instead takes a 0-5v signal from an offboard amp       |
+| B3  | Input     | N/A         | EGT 1 Override  | This pin bypasses the onboard Thermo amp for EGT1 and instead takes a 0-5v signal from an offboard amp       |
+| B4  | Input     | N/A         | Spare In 1        | Spare digital input. Teensy pin 23         |
+| B5  | Input     | N/A         | RPM1              | Hall effect input for RPM1 (N1)        |
+| B6  | Both      | N/A         | CAN H             | CAN H connection        |
+| B7  | Input     | N/A         | EGT 2+  | **DO NOT USE ON V0.2 BOARD!**       |
+| B8  | Input     | N/A         | Clutch input      | Ground switching input. Probably not use         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
-| C2  | Input     | N/A         | Spare Analog 1    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. MCU pin A17 in TunerStudio        |
-| C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. MCU pin A18 in TunerStudio        |
-| C4  | Input     | N/A         | O2 Sensor         | Connect to the 0-5v signal wire of external wideband controller. Can also be used with 0-1v output from narrowband sensor however wideband is **strongly** recommended        |
+| C2  | Input     | N/A         | CDP Sensor        | 0-5v signal line from CDP transducer        |
+| C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. Teensy pin A18        |
+| C4  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
 | C6  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
-| C7  | Input     | N/A         | Throttle Sensor   | Connect to signal line of variable throttle position sensor (TPS). Other pins of sensor should connect to C1 and A3        |
-| C8  | Input     | N/A         |External MAP Sensor| Signal line if using external MAP sensor. Input should be 0-5v and MAP source switch should be set to 'Ext.'. See [MAP Selection](#map-selector) section for more details. If using internal sensor this pin should be left unconnected.        |
+| C8  | Input     | N/A         | Throttle Sensor   | Connect to signal line of variable throttle position sensor (TPS). Other pins of sensor should connect to C1 and A3        |
 
 ### Grey Connector
 ![Delphi SICMA Grey Connector](/img/boards/Connector_grey.png){.align-center width=400}
