@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-25T05:42:10.592Z
+date: 2021-08-25T06:58:43.834Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -103,10 +103,10 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | B8  | Output    | 500mA       | Fuel 1  | Primary fuel control output       |
 | C1  | Output    | 1.5A        | Safety relay      | Ground switching output for use with safety relay. Teensy pin 26        |
 | C2  | Output    | 1.5A        | Starter relay     | Ground switching output for the starter relay. Teensy pin 27 |
-| C3  | Output    | 2A          | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
-| C4  | Output    | 2A          | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
+| C3  | Output    | 1.5A        | Spare 1 | Spare ground switching output. Teensy pin 28       |
+| C4  | Output    | 1.5A        | Spare 2 | Spare ground switching output. Teensy pin 29       |
 | C5  | Output    | 500mA       | Ignition  | Ground switching output for use with ignition relay. Teensy pin 30    |
 | C6  | Output    | 1.5A        | Spill relay     | Ground switching output for the spill valve relay. Teensy pin 31 |
-| C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
+| C7  | Output    | 1.5A        | Spare 3 | Spare ground switching output. Teensy pin 8       |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 
