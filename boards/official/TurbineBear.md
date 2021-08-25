@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-25T01:57:06.706Z
+date: 2021-08-25T04:16:09.931Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -115,21 +115,21 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | A5  | Input     | N/A         | EGT 3-  |         |
 | A6  | N/A       | N/A         | N/C     | Not used|
 | A7  | N/A       | N/A         | N/C     | Not used|
-| A8  | Output    | 500mA       | Fuel 2        | Backup fuel control output        |
-| B1  | Output    | 500mA       | Fuel 1        | Primary fuel control output       |
+| A8  | Output    | 500mA       | Fuel 2  | Backup fuel control output        |
+| B1  | N/A       | N/A         | N/C     | Not used|
 | B2  | N/A       | N/A         | N/C     | Not used|
 | B3  | N/A       | N/A         | N/C     | Not used|
 | B4  | N/A       | N/A         | N/C     | Not used|
 | B5  | N/A       | N/A         | N/C     | Not used|
 | B6  | N/A       | N/A         | N/C     | Not used|
 | B7  | N/A       | N/A         | N/C     | Not used|
-| B8  | N/A       | N/A         | N/C     | Not used|
-| C1  | Output    | 2A          | Boost             | Ground switching output for use with boost control solenoid        |
-| C2  | Output    | 2A          | Fan.              | Ground switching output for triggering a fan relay. **Do not drive fan directly from this pin, use only with relay**        |
+| B8  | Output    | 500mA       | Fuel 1  | Primary fuel control output       |
+| C1  | Output    | 1.5A        | Safety relay      | Ground switching output for use with safety relay. Teensy pin 26        |
+| C2  | Output    | 1.5A        | Starter relay     | Ground switching output for the starter relay. Teensy pin 27 |
 | C3  | Output    | 2A          | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
 | C4  | Output    | 2A          | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
-| C5  | Output    | 2A          | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
-| C6  | Output    | 2A          | Spare 1/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
+| C5  | Output    | 500mA       | Ignition  | Ground switching output for use with ignition relay. Teensy pin 30    |
+| C6  | Output    | 1.5A        | Spill relay     | Ground switching output for the spill valve relay. Teensy pin 31 |
 | C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 
