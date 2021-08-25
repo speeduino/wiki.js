@@ -2,27 +2,18 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-25T04:16:09.931Z
+date: 2021-08-25T05:42:10.592Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
 ---
 
-# Dropbear ECU
-The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to a full production release. It is powered by the high speed Teensy 3.5 board and is designed to be a complete unit out of the box. 
+# Turbine Controller
+Blah blah
 
 ## Features
 
-- 8x high impedance injector drivers
-- 8x 5v/12v coil pre-drivers (For use with igniters/smart coils)
-- 6x medium current (2A) outputs
-- 7x analog inputs
-- 4x digital inputs
-- CAN transceiver
-- Onboard VR conditioner
-- Swappable internal MAP sensors
-- Onboard baro sensor
-- Optional stepper motor driver
+Blah
 
 ## Board Configuration
 The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
@@ -54,24 +45,10 @@ Recommended values for the filters are shown below (By default both switches wil
 {.is-warning}
 
 
-### MAP Selector
-The Dropbear board uses a removable MAP card containing the sensor and a short hose running to the bulkhead connector on the enclosure. Currently only the default 0-250kpa sensor board is available, with higher range boards to be made available in the future. To use this MAP card, select the `Int.` (Internal) option on the MAP switch. 
-
-If you wish to use an external MAP sensor located in the engine bay, this switch should be to to `Ext.` and the sensors signal line should be connected to pin `C8` on the Black connector. The MAP card can be left in place or removed when the `Ext.` option is used. 
-
-### Stepper Driver
-By default the Dropbear unit is designed for use with PWM idle valves, however an optional stepper motor driver can be fitted. 
-
-> Please note that using the stepper driver requires pins C3 through C6 on the grey connector. Other output functions cannot use these pins when a stepper driver is installed
-{.is-warning}
-
-The board has a socket to install a standard DRV8825 stepper motor driver if required. It should be installed in the following orientation if needed:
-![drv8825_dropbear_fitment.jpg](/img/idle/drv8825_dropbear_fitment.jpg){.align-center width=400}
-
 
 ## Pin out
 
-The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and will only connect to the matching colour loom plug. 
+The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and will only connect to the matching colour loom plug. 
 
 ### Black Connector      
 ![Delphi SICMA Black Connector](/img/boards/Connector_black.png){.align-center width=400}
