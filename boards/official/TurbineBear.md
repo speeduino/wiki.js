@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-25T13:29:19.502Z
+date: 2021-08-26T08:10:10.768Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -18,13 +18,11 @@ Blah
 ## Board Configuration
 The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
 
-### Crank/Cam inputs
-The ECU contains a dual onboard conditioner that can can be used with VR sensors. The selection between Hall/Optical sensors and VR sensors is made via a pair of switches, one each for the crank and cam. These can be selected independently for setups that use one of each sensor type. 
+### RPM 1/2 (N1/2) inputs
+The ECU contains is designed to take 2 hall/optical inputs. 
 
-When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
-
-#### Crank filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` on the PCB and operates on both Hall and VR inputs. 
+#### N1 filter
+The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `N1 Filter` on the PCB. 
 
 > Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
 {.is-warning}
