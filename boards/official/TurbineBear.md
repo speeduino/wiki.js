@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-26T08:10:10.768Z
+date: 2021-08-26T08:11:27.726Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -22,7 +22,7 @@ The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to
 The ECU contains is designed to take 2 hall/optical inputs. 
 
 #### N1 filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `N1 Filter` on the PCB. 
+The board includes a variable hardware filter on the N1 input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `N1 Filter` on the PCB. 
 
 > Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
 {.is-warning}
@@ -46,6 +46,8 @@ Recommended values for the filters are shown below (By default both switches wil
 The v0.2 controller contains a total of 4 EGT circuits, however EGT1 and EGT2 could not be fully populated at PCBA time and should not be used. There are override pins on the Black connector for EGT1 and EGT2 inputs however that allow the use of external thermo amps
 
 EGT 3 and 4 on the Grey connector use digital thermo amps on board. 
+
+An option will be added in TunerStudio to select whether EGT 1/2 or EGT 3/4 should be used. 
 
 
 ## Pin out
