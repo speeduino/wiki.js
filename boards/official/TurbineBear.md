@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-26T08:11:27.726Z
+date: 2021-08-27T15:13:00.915Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -74,7 +74,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | B5  | Input     | N/A         | RPM1              | Hall effect input for RPM1 (N1)        |
 | B6  | Both      | N/A         | CAN H             | CAN H connection        |
 | B7  | Input     | N/A         | EGT 2+  | **DO NOT USE ON V0.2 BOARD!**       |
-| B8  | Input     | N/A         | Clutch input      | Ground switching input. Probably not use         |
+| B8  | Input     | N/A         | Brake input      | Ground switching input. Teensy pin A15         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
 | C2  | Input     | N/A         | CDP Sensor        | 0-5v signal line from CDP transducer        |
 | C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. Teensy pin A18        |
