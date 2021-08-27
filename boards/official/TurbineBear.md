@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-27T15:13:00.915Z
+date: 2021-08-27T15:21:17.601Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -62,7 +62,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | A1  | Input     | 5A          | Switched 12v      | Main power input. Connect to switched 12v power via 5A fuse        |
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
-| A4  | Input     | N/A         | Spare In 2        | Spare digital input. Teensy pin 22         |
+| A4  | Input     | N/A         | Starter switch        | Ground switching input to trigger the starter. Teensy pin 22         |
 | A5  | Input     | N/A         | RPM 2             | Hall effect input for RPM2 (N2)        |
 | A6  | Both      | N/A         | CAN L             | CAN L connection        |
 | A7  | Input     | N/A         | EGT 2-  | **DO NOT USE ON V0.2 BOARD!**       |
@@ -70,7 +70,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | B1  | Output    | 100mA       | Tacho             | 12v square wave output for use as input to a tachometer        |
 | B2  | Input     | N/A         | EGT 2 Override  | This pin bypasses the onboard Thermo amp for EGT2 and instead takes a 0-5v signal from an offboard amp       |
 | B3  | Input     | N/A         | EGT 1 Override  | This pin bypasses the onboard Thermo amp for EGT1 and instead takes a 0-5v signal from an offboard amp       |
-| B4  | Input     | N/A         | Spare In 1        | Spare digital input. Teensy pin 23         |
+| B4  | Input     | N/A         | Idle/Run Switch        | Goes to ground when Run is selected. Teensy pin 23         |
 | B5  | Input     | N/A         | RPM1              | Hall effect input for RPM1 (N1)        |
 | B6  | Both      | N/A         | CAN H             | CAN H connection        |
 | B7  | Input     | N/A         | EGT 2+  | **DO NOT USE ON V0.2 BOARD!**       |
