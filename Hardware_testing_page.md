@@ -12,7 +12,7 @@ By clicking on "Stop Test Mode" or upon closing the output test page , test mode
 Injector Driver Output Test
 ---------------------------
 
-CAUTION !! Use care when testing injectors with this feature. If your fuel system has line pressure or the fuel pump is running you will get fuel flow into the engine which could cause serious starting issues or even hydraulic lock!(a very serious flooding of the engine bore resulting in potentially major engine damage)
+**CAUTION !! Use care when testing injectors with this feature. If your fuel system has line pressure or the fuel pump is running you will get fuel flow into the engine which could cause serious starting issues or even hydraulic lock!(a very serious flooding of the engine bore resulting in potentially major engine damage)**
 
 Pressing "On" on the respective channel will activate that individual channels output stage.
 
@@ -21,7 +21,7 @@ Pressing "Off" will turn that channel back off.
 Spark Driver Output Test
 ------------------------
 
-CAUTION !! Use care when testing spark drivers with this feature. If you touch your HT circuit and it is activated by the spark driver you could receive a potentially lethal electric shock!! Leaving your coils charging for an excessively long period will cause them to overheat and may burn out!
+**CAUTION !! Use care when testing spark drivers with this feature. If you touch your HT circuit and it is activated by the spark driver you could receive a potentially lethal electric shock!! Leaving your coils charging for an excessively long period will cause them to overheat and may burn out!**
 
 Pressing "On" on the respective channel will activate that individual channels output driver stage.
 
