@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-08-27T15:21:17.601Z
+date: 2021-08-29T04:36:57.051Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -56,6 +56,8 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 
 ### Black Connector      
 ![Delphi SICMA Black Connector](/img/boards/Connector_black.png){.align-center width=400}
+> Note connector alignment in above image
+{.is-info}
 
 | Pin | Direction | Max Current | Purpose | Comment |
 |-----|-----------|-------------|---------|---------|
@@ -86,6 +88,8 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 
 ### Grey Connector
 ![Delphi SICMA Grey Connector](/img/boards/Connector_grey.png){.align-center width=400}
+> Note connector alignment in above image
+{.is-info}
 
 | Pin | Direction | Max Current | Purpose | Comment |
 |-----|-----------|-------------|---------|---------|
