@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-08-13T02:24:59.097Z
+date: 2021-08-29T04:36:26.834Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -75,6 +75,9 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 
 ### Black Connector      
 ![Delphi SICMA Black Connector](/img/boards/Connector_black.png){.align-center width=400}
+> Note connector alignment in above image
+{.is-info}
+
 
 | Pin | Direction | Max Current | Purpose | Comment |
 |-----|-----------|-------------|---------|---------|
@@ -105,6 +108,8 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 
 ### Grey Connector
 ![Delphi SICMA Grey Connector](/img/boards/Connector_grey.png){.align-center width=400}
+> Note connector alignment in above image
+{.is-info}
 
 | Pin | Direction | Max Current | Purpose | Comment |
 |-----|-----------|-------------|---------|---------|
