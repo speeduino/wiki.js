@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-08-29T04:36:26.834Z
+date: 2021-09-09T02:48:18.822Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -138,3 +138,12 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 
+## FAQ / Troubleshooting
+
+- **Does this board use the same firmware / ini file as other Speeduinos?**
+	- The firmware itself is the same, but must be compiled for the Teensy board (if you are compiling yourself). If you are using SpeedyLoader, it will detect the board and load the correct version on automatically (Make sure you are using the latest version v1.5+). The ini file is the same one that is used on other boards
+- **Sensor values are not reading correctly**
+  - The board must be powered with 12v for the sensors to read correctly. If only connected via USB the sensors readings will not work correctly
+- **MAP reading is incorrect (Other sensors are OK)**
+  - Check that the Internal/External MAP switch is set correctly on the board. 
+- 
