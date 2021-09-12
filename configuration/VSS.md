@@ -2,7 +2,7 @@
 title: VSS and Gear Detection
 description: 
 published: true
-date: 2021-08-10T17:27:50.821Z
+date: 2021-09-12T10:01:54.127Z
 tags: gear detection, speed, tuning, vss
 editor: markdown
 dateCreated: 2020-05-12T02:08:21.817Z
@@ -23,4 +23,10 @@ Speeduino includes Vehicle Speed Sensing option that senses speed by measuring p
 -   **Pulses Per KM(pulses)** - You can set manually how many pulses at VSS input equal one kilometer travel distance. Or you can drive speed of 60km/h and click "60km/h auto-calibrate" button to set pulses per km setting automatically.
 -   **Smoothing Factor(%)** - A smoothing factor to help reduce noise in the VSS signal. Typical values are between 0 and 50
 ### Gear Detection
-TBD
+> Gear detection should only be calibrated once VSS is working correctly and should be done with a passenger for safety!. 
+{.is-warning}
+
+Once VSS is working accurately, gear detection can also be configured. To calibrate this:
+1. Place car in 1st gear and begin driving
+2. Once RPM reaches approx. 2500 in this gear, press the `Set Gear 1` button
+3. Repeat above steps for each gear (Pressing the appropriate button each time)
