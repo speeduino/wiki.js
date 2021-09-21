@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-09-01T01:06:47.941Z
+date: 2021-09-21T01:31:48.280Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -79,7 +79,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | B8  | Input     | N/A         | Brake input      | Ground switching input. Teensy pin A15         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
 | C2  | Input     | N/A         | CDP Sensor        | 0-5v signal line from CDP transducer        |
-| C3  | Input     | N/A         | Spare Analog 1    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. Teensy pin A18        |
+| C3  | Input     | N/A         | Fuel flow Sensor    | nput for use with **0-5v** fuel flow sensor. Teensy pin A18        |
 | C4  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
 | C6  | Input     | N/A         | EGT 1+  | **DO NOT USE ON V0.2 BOARD!**       |
