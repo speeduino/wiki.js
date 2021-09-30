@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-09-30T00:06:19.586Z
+date: 2021-09-30T00:26:53.597Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -121,7 +121,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 ## Engine States
 | State Number | Description | Exit Condition | Next State |
 |--------------|-------------|----------------|------------|
-| 0						 | **OFF**. Fuel is turned ofd, all relay outputs turned off. | RPM is detected or starter button pin goes to ground | 1-5 based on RPM detected. Will be state 1 if starter pin is grounded |
+| 0						 | **OFF**. Fuel is turned off, all relay outputs turned off. | RPM is detected or starter button pin goes to ground | 1-5 based on RPM detected. Will be state 1 if starter pin is grounded |
 | 1						 | **PRE-START**. Starter is turned on but fuel and ignition are off. Will remain in this mode until RPM reaches defined level or times out | RPM exceeds X1 or time with starter on exceeds timeout value | 2 (or 0 if timed out) |
 | 2						 | **START**. Fuel and ignition are turned on  | RPM exceeds X2 or time with starter on exceeds timeout value | 3 (or 0 if timed out) |
 | 3            | **PRE-WARMUP**. Fuel is commanded to 'Starter fuel duty'. Starter is off. Ignition is off | 	RPM exceeds X3 | 4 |
