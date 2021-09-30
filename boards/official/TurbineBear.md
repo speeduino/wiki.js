@@ -2,7 +2,7 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-09-28T03:14:47.761Z
+date: 2021-09-30T00:06:19.586Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
@@ -118,3 +118,16 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | C7  | Output    | 1.5A        | Spare 3 | Spare ground switching output. Teensy pin 8       |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 
+## Engine States
+| State Number | Description | Exit Condition | Next State |
+|--------------|-------------|----------------|------------|
+| 0						 | **OFF**. Fuel is turned ofd, all relay outputs turned off. | RPM is detected or starter button pin goes to ground | 1-5 based on RPM detected. Will be state 1 if starter pin is grounded |
+| 1						 | **PRE-START**. Starter is turned on but fuel and ignition are off. Will remain in this mode until RPM reaches defined level or times out | RPM exceeds X1 or time with starter on exceeds timeout value | 2 (or 0 if timed out) |
+| 2						 | **START**. Fuel and ignition are turned on  | RPM exceeds X2 or time with starter on exceeds timeout value | 3 (or 0 if timed out) |
+| 3            | **PRE-WARMUP**. Fuel is commanded to 'Starter fuel duty'. Starter is off. Ignition is off | 	RPM exceeds X3 | 4 |
+| 4            | **WARMUP**. Fuel duty is based on warmup curve | RPM exceeds X4 | 5 |
+| 5            | **IDLING**. Fuel duty is based on Idle Duty setting | Run switch pin is pulled to ground | 6 |
+| 6            | **RUNNING**. Fuel duty is based on main 3D lookup table | Run switch pin is no longer pulled to ground | 5 |
+| 7            | **EGT PROTECTION**. Fuel is commanded to 0 | RPM drops to 0 and remains there for 1 second | 0 |
+| 8            | **TEST**. Unused test mode | NA | NA |
+| 9            | **KILLED**. Engine has been killed due to kill switching being pressed | Engine RPM returns to 0 | 0 |
