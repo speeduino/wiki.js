@@ -2,7 +2,7 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2021-08-10T06:47:33.646Z
+date: 2021-11-11T07:32:26.028Z
 tags: fuel, fuel table, tuning, ve table
 editor: markdown
 dateCreated: 2020-06-18T00:47:09.502Z
@@ -20,9 +20,9 @@ The fuel map is a 3D, interpolated table that uses RPM and fuel load to lookup t
 The values in this table represent a percentage of the `Required Fuel` amount that will be injected when the engine is at a given speed/load point. 
 
 ### Options
-- **Multiply VE value by MAP ratio:** Enabling this option 'flattens' the fuel table by multiplying the value in the current speed/load point by the MAP value divided by either the Baro value (in kPa) or a fixed 100% (For compatibility with tunes from other systems). 
+- **Multiply VE value by MAP ratio:** Enabling this option 'flattens' the fuel table by multiplying the value in the current speed/load point by the MAP value divided by either the Baro value (in kPa) or a fixed 100%. Using the `Baro` option adjusts fueling based on barometric reading, but for better results it's recommended to use the  [Barometric Correction](/en/configuration/Barometric_Correction) curve instead.
   - You can tune with or without this option enabled, but it is generally recommended to be turned on as it will allow for simpler and more predictable tuning results. 
-  - For new tunes it is recommended to use the `Baro` option
+  - For new tunes it is recommended to use the `Fixed` option
   
 > **Warning:** Changing this value will require retuning of the fuel map!{.is-warning}
 
