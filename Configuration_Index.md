@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2021-08-10T09:46:43.567Z
+date: 2021-11-11T07:06:33.517Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -13,6 +13,7 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [Injector Characteristics](/configuration/Injector_Characteristics)
     -   [Trigger Setup](/configuration/Trigger_Setup)
     -   [IAT Density](/configuration/IAT_Density)
+    -   [Barometric Correction](/configuration/Barometric_Correction)
 <!---    -   [Reset Control](/configuration/Reset_Control) -->
 -   **Tuning Menu**
     -   [Fuel (VE) Table](/configuration/VE_table)
