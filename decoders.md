@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-11-15T22:26:57.540Z
+date: 2021-11-15T22:28:41.735Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -30,7 +30,6 @@ The list below includes all those that are currently supported. They each lead t
 | [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Complete         | 3+1 and 4+1 patterns used on 3 and 4 cylinder Daihatsu engines                                                                  |
 | [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps             (H4 and H6)                                                          |
 | [Chrysler NGC](/decoders/ChryslerNGC "wikilink")           | Complete         | A 36+2-2 crank with 7 tooth cam for 4 cylinder Chrysler/Jeep/Dodge vehicles from 2002 onward. |
-
 | [DRZ400](/decoders/DRZ400 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
 
 
