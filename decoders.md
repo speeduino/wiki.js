@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2021-11-15T22:43:35.923Z
+date: 2021-11-15T23:27:50.198Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -32,5 +32,6 @@ The list below includes all those that are currently supported. They each lead t
 | [Chrysler NGC](/decoders/ChryslerNGC "wikilink")           | Complete         | A 36+2-2 crank with 7 tooth cam for 4 cylinder Chrysler/Jeep/Dodge vehicles from 2002 onward. |
 | [DRZ400](/decoders/DRZ400 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
 | [Renix](/decoders/Renix "wikilink")           | In Progress         | Renix decoder for 44 and 66 tooth trigger wheels |
+| [Rover MEMs](/decoders/Rover "wikilink")           | In Progress         | Rover MEMs decoder covering multiple crank patterns |
 
 All signals <b><i>MUST</b></i> be conditioned to a 3.3v - 5v dc square wave before being used by the firmware.
