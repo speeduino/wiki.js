@@ -1,0 +1,20 @@
+<!--
+title: Rover
+description: Rover MEMS decoder
+published: true
+date: 2021-11-15T23:24:28.622Z
+tags: decoders
+editor: ckeditor
+dateCreated: 2021-11-15T23:24:28.622Z
+-->
+
+<p>Rover MEMs decoder</p>
+<p>This decoder will automatically identify and decode the following 4 MEMS crank trigger patterns (numbers are the teeth and ‘-’ are gaps within the crank pattern)</p>
+<ul>
+  <li>3-14-2-13-</li>
+  <li>2-14-3-13-</li>
+  <li>11-5-12-4-</li>
+  <li>17-17- (limited to fuel only in default setup due to no unique identifier within 720 degrees)</li>
+</ul>
+<p>The pattern also supports the secondary 5-3-2 tooth pattern used by Rover as well as normal single tooth patterns.</p>
+<p>Additionally, functionality has been added to the &nbsp;17-17- pattern so if a secondary (cam) signal is present it will allow accurate spark signal to be generate at the appropriate time. The secondary signal needs to be between 360 and 720 degrees in the 720 degree cycle.&nbsp;</p>
