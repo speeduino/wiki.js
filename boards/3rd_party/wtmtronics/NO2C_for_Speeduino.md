@@ -2,7 +2,7 @@
 title: NO2C_for_Speeduino
 description: 
 published: true
-date: 2021-11-17T11:41:40.960Z
+date: 2021-11-17T11:47:57.731Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:35.241Z
@@ -105,4 +105,4 @@ With the low current outputs you could reconfigure two of the medium/high curren
 Links
 -------
 
-Board files, BOM and ther documentation can be found from [GitHub](https://github.com/turboedge/SpeedyBoards/tree/master/NO2C)
+Board files, BOM and other documentation can be found from [GitHub](https://github.com/turboedge/SpeedyBoards/tree/master/NO2C)
