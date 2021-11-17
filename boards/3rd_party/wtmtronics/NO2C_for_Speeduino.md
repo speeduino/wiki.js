@@ -2,7 +2,7 @@
 title: NO2C_for_Speeduino
 description: 
 published: true
-date: 2021-01-27T12:01:01.628Z
+date: 2021-11-17T11:40:23.006Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:35.241Z
@@ -101,3 +101,7 @@ Makes it easy to add additional coil outputs, and can be populated to add all th
 -   Barometric pressure sensor (provides constant correction vs power on base)
 
 With the low current outputs you could reconfigure two of the medium/high current outputs on the NO2C to act as injector drivers. To do this you will have to make minor changes to the firmware before programming the Arduino.
+
+### Links
+
+Board files, BOM and ther documentation can be found from [GitHub](https://github.com/turboedge/SpeedyBoards/tree/master/NO2C)
