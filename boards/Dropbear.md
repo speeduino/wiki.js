@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2021-09-09T02:48:18.822Z
+date: 2022-01-17T22:47:02.452Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -19,6 +19,7 @@ The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to
 - 7x analog inputs
 - 4x digital inputs
 - CAN transceiver
+- Onboard SD slot for logging (Requires firmware 202202+)
 - Onboard VR conditioner
 - Swappable internal MAP sensors
 - Onboard baro sensor
