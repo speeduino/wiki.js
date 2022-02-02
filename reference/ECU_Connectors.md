@@ -70,3 +70,4 @@ These part numbers are primarily for the ECU side. Where known, a loom side part
 | 4efte Glanza | 175448-6    |                          | AMP  | 54-pin, 3 plug ECU  |                                                                                                                                         |
 | 1MZFE Camry  | 178203      |                          | AMP  | 100-pin, 4 plug ECU | [PDF](http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=178203&DocType=Customer+Drawing&DocLang=Japanese) |
 
+| 1MZFE Camry  | 8-5353015-1      |   353015          | TE/AMP  | 122-pin, 5 plug ECU for OBD II | [PDF](https://www.mouser.com/datasheet/2/418/8/JPN_CD_353015_K-2492104.pdf) |
