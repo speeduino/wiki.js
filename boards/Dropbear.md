@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-01-17T22:47:02.452Z
+date: 2022-02-20T00:12:06.479Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -147,4 +147,5 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
   - The board must be powered with 12v for the sensors to read correctly. If only connected via USB the sensors readings will not work correctly
 - **MAP reading is incorrect (Other sensors are OK)**
   - Check that the Internal/External MAP switch is set correctly on the board. 
-- 
+- **Which crimping tool should I use with these connectors?**
+  - The recommended tool is an **SN-28B** style crimper, which can generally be found fairly inexpensively and is straightforward to use. 
