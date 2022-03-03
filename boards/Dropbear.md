@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-02-20T00:12:06.479Z
+date: 2022-03-03T02:59:44.548Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -149,3 +149,5 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
   - Check that the Internal/External MAP switch is set correctly on the board. 
 - **Which crimping tool should I use with these connectors?**
   - The recommended tool is an **SN-28B** style crimper, which can generally be found fairly inexpensively and is straightforward to use. 
+- **I can't connect to the Dropbear unit in TunerStudio**
+  - The serial drivers for the Teensy board inside the Dropbear come included with Windows 10/11, MacOS and linux. If you are running an earlier version of Windows (Eg XP, Vista, 7 or 8) then you will need to install the driver from : http://www.pjrc.com/teensy/serial_install.exe
