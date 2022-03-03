@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-03-03T02:59:44.548Z
+date: 2022-03-03T03:00:49.601Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -24,51 +24,6 @@ The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to
 - Swappable internal MAP sensors
 - Onboard baro sensor
 - Optional stepper motor driver
-
-## Board Configuration
-The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
-
-### Crank/Cam inputs
-The ECU contains a dual onboard conditioner that can can be used with VR sensors. The selection between Hall/Optical sensors and VR sensors is made via a pair of switches, one each for the crank and cam. These can be selected independently for setups that use one of each sensor type. 
-
-When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
-
-#### Crank filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` or `SW3` on the PCB and operates on both Hall and VR inputs. 
-
-> Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
-{.is-warning}
-
-The switches come with an insulating Kapton seal on them that must be removed before the switches can be adjusted. If not adjusting filter this tape should be left in place. 
-
-![Dropbear crank filter switch](/img/boards/filter_dip.jpg){.align-center width=150}
-
-Recommended values for the filters are shown below (By default both switches will be in the On position):
-
-| Tooth count (at crank speed)  | Switch 1 | Switch 2 |
-|-------------------------------|----------|----------|
-| Less than 60                  |    On    |    On    |
-| 60-100                        |    On    |    Off   |
-| 100+                          |    Off   |    On    |
-
-> Both switches can be set to off, however doing so will disable all hardware filtering. This can be useful when performing bench testing with a stim, but is not recommend for real world use
-{.is-warning}
-
-
-### MAP Selector
-The Dropbear board uses a removable MAP card containing the sensor and a short hose running to the bulkhead connector on the enclosure. Currently only the default 0-250kpa sensor board is available, with higher range boards to be made available in the future. To use this MAP card, select the `Int.` (Internal) option on the MAP switch. 
-
-If you wish to use an external MAP sensor located in the engine bay, this switch should be to to `Ext.` and the sensors signal line should be connected to pin `C8` on the Black connector. The MAP card can be left in place or removed when the `Ext.` option is used. 
-
-### Stepper Driver
-By default the Dropbear unit is designed for use with PWM idle valves, however an optional stepper motor driver can be fitted. 
-
-> Please note that using the stepper driver requires pins C3 through C6 on the grey connector. Other output functions cannot use these pins when a stepper driver is installed
-{.is-warning}
-
-The board has a socket to install a standard DRV8825 stepper motor driver if required. It should be installed in the following orientation if needed:
-![drv8825_dropbear_fitment.jpg](/img/idle/drv8825_dropbear_fitment.jpg){.align-center width=400}
-
 
 ## Pin out
 
@@ -138,6 +93,51 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | C6  | Output    | 2A          | Spare 1/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
 | C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
+
+## Board Configuration
+The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
+
+### Crank/Cam inputs
+The ECU contains a dual onboard conditioner that can can be used with VR sensors. The selection between Hall/Optical sensors and VR sensors is made via a pair of switches, one each for the crank and cam. These can be selected independently for setups that use one of each sensor type. 
+
+When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
+
+#### Crank filter
+The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` or `SW3` on the PCB and operates on both Hall and VR inputs. 
+
+> Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
+{.is-warning}
+
+The switches come with an insulating Kapton seal on them that must be removed before the switches can be adjusted. If not adjusting filter this tape should be left in place. 
+
+![Dropbear crank filter switch](/img/boards/filter_dip.jpg){.align-center width=150}
+
+Recommended values for the filters are shown below (By default both switches will be in the On position):
+
+| Tooth count (at crank speed)  | Switch 1 | Switch 2 |
+|-------------------------------|----------|----------|
+| Less than 60                  |    On    |    On    |
+| 60-100                        |    On    |    Off   |
+| 100+                          |    Off   |    On    |
+
+> Both switches can be set to off, however doing so will disable all hardware filtering. This can be useful when performing bench testing with a stim, but is not recommend for real world use
+{.is-warning}
+
+
+### MAP Selector
+The Dropbear board uses a removable MAP card containing the sensor and a short hose running to the bulkhead connector on the enclosure. Currently only the default 0-250kpa sensor board is available, with higher range boards to be made available in the future. To use this MAP card, select the `Int.` (Internal) option on the MAP switch. 
+
+If you wish to use an external MAP sensor located in the engine bay, this switch should be to to `Ext.` and the sensors signal line should be connected to pin `C8` on the Black connector. The MAP card can be left in place or removed when the `Ext.` option is used. 
+
+### Stepper Driver
+By default the Dropbear unit is designed for use with PWM idle valves, however an optional stepper motor driver can be fitted. 
+
+> Please note that using the stepper driver requires pins C3 through C6 on the grey connector. Other output functions cannot use these pins when a stepper driver is installed
+{.is-warning}
+
+The board has a socket to install a standard DRV8825 stepper motor driver if required. It should be installed in the following orientation if needed:
+![drv8825_dropbear_fitment.jpg](/img/idle/drv8825_dropbear_fitment.jpg){.align-center width=400}
+
 
 ## FAQ / Troubleshooting
 
