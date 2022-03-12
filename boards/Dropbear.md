@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-03-03T03:00:49.601Z
+date: 2022-03-12T23:54:25.391Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -87,10 +87,10 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | B8  | Output    | 100mA       | Ignition 8        | Ignition 8 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil        |
 | C1  | Output    | 2A          | Boost             | Ground switching output for use with boost control solenoid        |
 | C2  | Output    | 2A          | Fan.              | Ground switching output for triggering a fan relay. **Do not drive fan directly from this pin, use only with relay**        |
-| C3  | Output    | 2A          | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
-| C4  | Output    | 2A          | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
-| C5  | Output    | 2A          | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
-| C6  | Output    | 2A          | Spare 1/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))       |
+| C3  | Output    | 2A          | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #26       |
+| C4  | Output    | 2A          | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #27       |
+| C5  | Output    | 2A          | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))Tuner Studio pin #28       |
+| C6  | Output    | 2A          | Spare 1/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #29       |
 | C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 
