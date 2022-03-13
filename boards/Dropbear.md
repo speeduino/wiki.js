@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-03-12T23:54:25.391Z
+date: 2022-03-13T01:03:40.769Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -90,7 +90,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | C3  | Output    | 2A          | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #26       |
 | C4  | Output    | 2A          | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #27       |
 | C5  | Output    | 2A          | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))Tuner Studio pin #28       |
-| C6  | Output    | 2A          | Spare 1/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #29       |
+| C6  | Output    | 2A          | Spare 1/Idle 2/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). This is the default pin for Idle 2 when using a 3 wire PWM valve. Tuner Studio pin #29       |
 | C7  | Output    | 1.5A        | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**        |
 | C8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 
