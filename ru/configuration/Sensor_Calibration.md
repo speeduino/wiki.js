@@ -2,9 +2,9 @@
 title: Калибровка датчиков Sensor Calibration
 description: Steps for calibrating all analog sensor inputs
 published: true
-date: 2021-01-03T07:18:55.111Z
+date: 2021-01-03T07:19:01.310Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:41:37.772Z
 ---
 

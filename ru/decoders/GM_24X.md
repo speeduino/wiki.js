@@ -2,9 +2,9 @@
 title: GM_24X
 description: 
 published: true
-date: 2021-01-02T07:04:03.423Z
+date: 2021-01-02T07:04:09.177Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:04:03.423Z
 ---
 

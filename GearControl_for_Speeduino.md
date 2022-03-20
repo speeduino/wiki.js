@@ -1,3 +1,13 @@
+---
+title: GearControl_for_Speeduino
+description: 
+published: true
+date: 2020-04-08T02:06:07.657Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:37:13.632Z
+---
+
 Dxcontrol-Gears , A Gearbox Controller for Speeduino
 ====================================================
 

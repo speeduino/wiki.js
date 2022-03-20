@@ -2,9 +2,9 @@
 title: Dual Wheel
 description: 
 published: true
-date: 2021-01-31T22:05:00.719Z
-tags: decoders
-editor: markdown
+date: 2021-01-31T22:05:06.627Z
+tags: 
+editor: undefined
 dateCreated: 2021-01-31T22:05:00.719Z
 ---
 

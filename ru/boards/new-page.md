@@ -2,9 +2,9 @@
 title: V032
 description: 
 published: true
-date: 2021-01-02T07:21:56.273Z
+date: 2021-01-02T07:22:01.946Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:21:56.273Z
 ---
 

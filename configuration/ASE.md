@@ -2,9 +2,9 @@
 title: ASE
 description: Afterstart Enrichment (ASE)
 published: true
-date: 2021-08-10T14:44:13.619Z
+date: 2021-08-10T14:44:19.360Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-08-10T09:26:15.758Z
 ---
 

@@ -2,9 +2,9 @@
 title: Реперный диск (триггер) с отсутствующим зубом Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2021-01-03T08:40:46.341Z
+date: 2021-01-03T08:40:52.284Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:02:39.535Z
 ---
 

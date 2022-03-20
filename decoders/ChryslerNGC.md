@@ -2,9 +2,9 @@
 title: Chrysler NGC
 description: Decoder for engines with the Chrysler NGC pattern
 published: true
-date: 2022-01-08T13:28:31.261Z
+date: 2022-01-08T13:28:41.019Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-10-12T16:19:05.254Z
 ---
 

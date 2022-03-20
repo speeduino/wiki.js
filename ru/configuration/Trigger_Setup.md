@@ -2,9 +2,9 @@
 title: Настройки реперных дисков Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-01-03T08:20:44.025Z
+date: 2021-01-03T08:20:50.039Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:46:44.421Z
 ---
 

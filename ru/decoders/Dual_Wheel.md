@@ -2,9 +2,9 @@
 title: Сдвоенное колесо (VW Audi) Dual Wheel
 description: 
 published: true
-date: 2021-01-04T17:52:21.111Z
-tags: trigger
-editor: markdown
+date: 2021-01-04T17:52:27.123Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-06T01:54:14.919Z
 ---
 

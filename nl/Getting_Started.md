@@ -2,9 +2,9 @@
 title: Begin maken
 description: Startpagina's voor elk deel van de handleiding
 published: true
-date: 2020-12-22T07:49:09.759Z
+date: 2020-12-22T07:49:15.521Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-22T07:46:44.278Z
 ---
 

@@ -2,9 +2,9 @@
 title: Ошибки
 description: 
 published: true
-date: 2021-01-02T19:29:16.982Z
+date: 2021-01-02T19:29:23.369Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:28:36.433Z
 ---
 

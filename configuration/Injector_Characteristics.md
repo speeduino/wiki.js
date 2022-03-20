@@ -2,8 +2,10 @@
 title: Injector Characteristics
 description: Configuring the injector properties
 published: true
-date: 2020-02-29T21:36:42.779Z
+date: 2020-04-08T02:08:09.204Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:54:01.036Z
 ---
 
 # Injector Characteristics

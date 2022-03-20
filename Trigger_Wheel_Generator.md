@@ -2,9 +2,9 @@
 title: Trigger Wheel Generator
 description: 
 published: true
-date: 2021-03-02T01:41:01.825Z
+date: 2021-03-02T01:41:07.766Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:21.158Z
 ---
 

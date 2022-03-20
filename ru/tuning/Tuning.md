@@ -2,9 +2,9 @@
 title: Настройка Tuning
 description: 
 published: true
-date: 2021-01-03T10:01:21.715Z
+date: 2021-01-03T10:01:27.928Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:27:32.418Z
 ---
 

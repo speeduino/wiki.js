@@ -2,9 +2,9 @@
 title: Setting up TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2021-01-20T11:22:30.482Z
+date: 2021-01-20T11:22:36.487Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:05.419Z
 ---
 

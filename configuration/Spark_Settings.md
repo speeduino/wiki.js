@@ -2,9 +2,10 @@
 title: Spark Settings
 description: Configuration options for the ignition outputs
 published: true
-date: 2020-06-18T01:40:50.711Z
+date: 2020-06-18T01:40:56.465Z
 tags: 
-editor: markdown
+editor: undefined
+dateCreated: 2020-01-06T01:54:08.016Z
 ---
 
 # Spark Settings

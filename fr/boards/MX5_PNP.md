@@ -2,9 +2,9 @@
 title: MX5 PNP
 description: MX5 PNP
 published: true
-date: 2020-10-18T11:24:04.877Z
+date: 2020-10-18T11:24:11.172Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-18T11:24:04.877Z
 ---
 

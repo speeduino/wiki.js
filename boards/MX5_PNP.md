@@ -2,9 +2,9 @@
 title: Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2021-01-31T04:02:46.210Z
-tags: boards
-editor: markdown
+date: 2021-01-31T04:02:56.074Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-06T01:53:34.029Z
 ---
 

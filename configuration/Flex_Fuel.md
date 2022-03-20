@@ -2,8 +2,10 @@
 title: Flex Fuel
 description: Setting up the flex fuel / ethanol content sensor
 published: true
-date: 2020-01-16T12:09:30.179Z
+date: 2020-04-08T02:07:49.978Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:53:57.218Z
 ---
 
 # Flex Fuel

@@ -2,9 +2,9 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2021-07-30T04:48:59.090Z
-tags: hardware, wiring
-editor: markdown
+date: 2021-07-30T04:49:05.622Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-06T01:37:16.331Z
 ---
 

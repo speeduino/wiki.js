@@ -2,9 +2,10 @@
 title: std_manual
 description: 
 published: true
-date: 2020-06-18T00:50:35.813Z
+date: 2021-08-10T13:46:06.592Z
 tags: 
-editor: markdown
+editor: undefined
+dateCreated: 2020-01-16T03:50:01.907Z
 ---
 
 ./home.md

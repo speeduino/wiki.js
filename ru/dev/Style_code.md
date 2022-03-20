@@ -2,9 +2,9 @@
 title: Руководство по стилю программирования Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2021-01-12T12:46:53.403Z
+date: 2021-01-12T12:47:03.117Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:57:03.173Z
 ---
 

@@ -2,9 +2,9 @@
 title: Конфигурация вспомогательных вводов-выводов
 description: 
 published: true
-date: 2021-01-02T18:36:33.907Z
+date: 2021-01-02T18:36:40.052Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:21:13.651Z
 ---
 

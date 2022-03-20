@@ -1,3 +1,13 @@
+---
+title: AFR_Table
+description: 
+published: true
+date: 2020-04-08T02:09:55.323Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:54:32.819Z
+---
+
 ### AFR Table
 
 AFR Table (for **A**ir:**F**uel **R**atio targets)

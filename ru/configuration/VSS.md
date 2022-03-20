@@ -2,9 +2,9 @@
 title: Определение оборотов колеса и передачи VSS and Gear Detection
 description: 
 published: true
-date: 2021-01-03T07:23:20.064Z
+date: 2021-01-03T07:23:25.833Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:48:14.362Z
 ---
 

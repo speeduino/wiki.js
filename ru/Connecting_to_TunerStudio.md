@@ -2,9 +2,9 @@
 title: Подключение к TunerStudio
 description: How to create and connect to your ECU within TunerStudio
 published: true
-date: 2021-01-04T17:02:49.967Z
+date: 2021-01-04T17:02:55.986Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-04T16:44:00.758Z
 ---
 

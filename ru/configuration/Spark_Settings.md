@@ -2,9 +2,9 @@
 title: Настройка зажигания Spark Settings
 description: Configuration options for the ignition outputs
 published: true
-date: 2021-01-03T09:14:21.374Z
+date: 2021-01-03T09:14:27.448Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:42:38.347Z
 ---
 

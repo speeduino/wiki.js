@@ -2,9 +2,9 @@
 title: Модуль Блютуз
 description: 
 published: true
-date: 2021-01-02T07:40:01.560Z
+date: 2021-01-02T07:40:07.821Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:40:01.560Z
 ---
 

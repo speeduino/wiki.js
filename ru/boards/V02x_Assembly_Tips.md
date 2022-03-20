@@ -2,9 +2,9 @@
 title: V02x_Assembly_Tips
 description: 
 published: true
-date: 2021-01-02T07:19:44.282Z
+date: 2021-01-02T07:19:49.953Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:19:44.282Z
 ---
 

@@ -2,9 +2,9 @@
 title: Аппаратные Требования
 description: 
 published: true
-date: 2021-01-03T04:33:11.884Z
+date: 2021-01-04T15:47:57.241Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:58:44.060Z
 ---
 

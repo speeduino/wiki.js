@@ -2,9 +2,9 @@
 title: câblage capteurs
 description: 
 published: true
-date: 2020-10-16T03:08:10.087Z
-tags: wiring
-editor: markdown
+date: 2020-10-16T03:08:15.925Z
+tags: 
+editor: undefined
 dateCreated: 2020-10-16T01:55:42.856Z
 ---
 

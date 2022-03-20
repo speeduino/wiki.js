@@ -1,3 +1,13 @@
+---
+title: Board_overview
+description: 
+published: true
+date: 2020-04-08T02:05:37.646Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:37:00.375Z
+---
+
 **THIS PAGE IS A WORK IN PROGRESS. FURTHER DETAILS TO COME!**
 
 There are currently 2 families of Speeduino boards available, the v0.3 line and the v0.4 line. These boards were designed to fit 2 different use cases and serve different purposes. The v0.4 line of boards is not necessarily newer/better than the v0.3, the 2 share largely the same features and capabilities. The differences are in how these are intended to be used.

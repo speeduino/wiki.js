@@ -2,8 +2,10 @@
 title: Idle advance
 description: Controlling idle speed with changes to advance
 published: true
-date: 2020-01-14T02:02:16.409Z
-tags: idle, tuning
+date: 2020-04-08T02:08:05.954Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-14T00:45:09.872Z
 ---
 
 # Idle advance control

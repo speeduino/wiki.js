@@ -2,9 +2,9 @@
 title: getting started
 description: 
 published: true
-date: 2020-10-19T00:17:45.855Z
+date: 2020-10-19T00:17:51.668Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-16T00:09:22.204Z
 ---
 

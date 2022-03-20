@@ -2,8 +2,10 @@
 title: Auxillary IO Configuration
 description: 
 published: true
-date: 2020-01-19T11:55:21.136Z
-tags: tuning, aux, IO
+date: 2021-11-17T12:02:01.896Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:53:50.218Z
 ---
 
 # Auxillary IO Configuration
@@ -21,9 +23,13 @@ The configuration is mainly split into two categories,
 
 ### How to Configure to use a Local MCU pin
 
-The configuration page is accessed from the Accessories drop down within TunerStudio ,select the "local Auxillary input channel configuration" option ![](Auxindrop_nocan.jpg "fig:Auxindrop_nocan.jpg")
+The configuration page is accessed from the Accessories drop down within TunerStudio ,select the "local Auxillary input channel configuration" option 
 
-This window will be opened. ![](Auxin_config.jpg "fig:Auxin_config.jpg")
+![accdrop_nocan.jpg](/img/TunerStudio/accdrop_nocan.jpg)
+
+This window will be opened. 
+
+![auxin_config.jpg](/img/TunerStudio/auxin_config.jpg "fig:auxin_config.jpg")!
 
 In the above image the first two channels have been configured as an local analog and a local digital input respectively.
 
@@ -53,11 +59,16 @@ This setting is only available for local mcu pin selections. It is the actual mc
 
 ### How to Configure to use a External Data Source
 
-To use the Auxillary input channels for external data the Secondary IO must be enabled. [See here for further information on how to do this.](Secondary_Serial_IO_interface#Enable_Secondary_IO_interface "wikilink")
+To use the Auxillary input channels for external data the Secondary IO must be enabled. [See here for further information on how to do this.](https://wiki.speeduino.com/en/Secondary_Serial_IO_interface)
 
-The configuration page is accessed from the Accessories drop down within TunerStudio ,select the "External Auxillary input channel configuration" option ![](Auxindrop_withcan.jpg "fig:Auxindrop_withcan.jpg")
+The configuration page is accessed from the Accessories drop down within TunerStudio ,select the "External Auxillary input channel configuration" option 
 
-This window will be opened. ![](ExtAuxin_config2.jpg "fig:ExtAuxin_config2.jpg")
+![accdrop_nocan.jpg](/img/TunerStudio/accdrop_nocan.jpg)
+
+This window will be opened. 
+
+![extauxin_config_nocan.jpg](/img/TunerStudio/extauxin_config_nocan.jpg)
+![](ExtAuxin_config2.jpg "fig:ExtAuxin_config2.jpg")
 
 For External data inputs to be active the "Enable External Data Input" option must be enabled.
 

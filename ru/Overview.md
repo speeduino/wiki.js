@@ -2,9 +2,9 @@
 title: Краткий Обзор
 description: 
 published: true
-date: 2021-01-02T08:03:43.403Z
+date: 2021-01-02T08:03:49.346Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T08:03:43.403Z
 ---
 

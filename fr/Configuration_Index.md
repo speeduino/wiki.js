@@ -2,9 +2,9 @@
 title: configuration index
 description: configuration indez
 published: true
-date: 2020-10-19T00:48:25.818Z
+date: 2020-10-19T00:48:32.011Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-19T00:48:25.818Z
 ---
 

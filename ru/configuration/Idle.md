@@ -2,9 +2,9 @@
 title: Холостой ход Idle
 description: 
 published: true
-date: 2021-01-03T05:27:27.853Z
+date: 2021-01-03T05:27:34.327Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:32:55.051Z
 ---
 

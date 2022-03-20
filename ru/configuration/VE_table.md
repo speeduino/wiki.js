@@ -2,9 +2,9 @@
 title: Топливная карта объемной эффективности Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2021-01-02T20:07:00.397Z
+date: 2021-01-02T20:07:06.591Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:29:36.436Z
 ---
 

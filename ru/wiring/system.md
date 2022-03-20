@@ -2,9 +2,9 @@
 title: Электрическая схема подключения Speeduino
 description: A high level master system wiring diagram
 published: true
-date: 2021-01-02T03:20:35.216Z
+date: 2021-01-02T07:58:53.824Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-01T17:20:34.465Z
 ---
 

@@ -2,9 +2,9 @@
 title: CanBus Support
 description: 
 published: true
-date: 2021-01-04T15:45:20.024Z
+date: 2021-01-04T15:45:26.247Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-04T15:45:20.024Z
 ---
 

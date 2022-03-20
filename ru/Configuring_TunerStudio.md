@@ -2,9 +2,9 @@
 title: Настройка опций проекта в TunerStudio
 description: 
 published: true
-date: 2021-01-02T10:28:01.876Z
+date: 2021-01-02T10:28:08.611Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:48:10.428Z
 ---
 

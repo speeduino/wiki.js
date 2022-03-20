@@ -2,8 +2,10 @@
 title: IAT Density
 description: 
 published: true
-date: 2020-01-16T16:05:09.541Z
+date: 2020-04-08T02:07:56.210Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:53:58.480Z
 ---
 
 # IAT Density

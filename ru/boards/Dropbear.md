@@ -2,9 +2,9 @@
 title: Самая новая плата Dropbear
 description: 
 published: true
-date: 2021-01-03T09:33:19.316Z
+date: 2021-01-03T09:33:25.977Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:10:43.264Z
 ---
 

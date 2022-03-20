@@ -2,9 +2,9 @@
 title: patrons décodeurs
 description: patrons décodeurs
 published: true
-date: 2020-10-18T02:02:32.574Z
+date: 2020-10-18T02:02:38.675Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-18T02:02:32.574Z
 ---
 

@@ -2,9 +2,9 @@
 title: Гибкое топливо (с этиловым спиртом) Flex Fuel
 description: Setting up the flex fuel / ethanol content sensor
 published: true
-date: 2021-01-04T17:07:35.199Z
+date: 2021-01-04T17:07:41.185Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:27:27.299Z
 ---
 

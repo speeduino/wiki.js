@@ -2,9 +2,9 @@
 title: Hardware_testing_page
 description: 
 published: true
-date: 2021-11-26T21:21:16.024Z
+date: 2021-11-26T21:21:21.954Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:17.626Z
 ---
 

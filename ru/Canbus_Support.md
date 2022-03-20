@@ -2,9 +2,9 @@
 title: Поддержка шины CanBus
 description: 
 published: true
-date: 2021-01-02T07:44:23.032Z
+date: 2021-01-02T07:44:29.316Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:44:23.032Z
 ---
 

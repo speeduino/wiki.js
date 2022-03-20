@@ -2,9 +2,9 @@
 title: Dwell
 description: 
 published: true
-date: 2021-08-12T08:18:24.876Z
+date: 2021-08-12T08:18:30.759Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:53:53.703Z
 ---
 

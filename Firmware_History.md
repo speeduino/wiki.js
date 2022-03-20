@@ -2,9 +2,10 @@
 title: Firmware_History
 description: 
 published: true
-date: 2020-06-19T05:31:03.807Z
+date: 2020-06-19T05:31:10.277Z
 tags: 
-editor: markdown
+editor: undefined
+dateCreated: 2020-01-06T01:37:11.016Z
 ---
 
 # Firmware releases now posted on GitHub

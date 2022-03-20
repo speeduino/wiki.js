@@ -2,9 +2,9 @@
 title: Меню конфигурации и настроек
 description: Listing of all dialog configuration help pages
 published: true
-date: 2021-01-05T13:20:27.631Z
+date: 2021-01-05T13:20:33.619Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:13:48.000Z
 ---
 

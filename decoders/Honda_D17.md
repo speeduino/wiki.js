@@ -2,8 +2,10 @@
 title: Honda D17
 description: 
 published: true
-date: 2020-01-18T11:58:20.186Z
-tags: decoder, trigger
+date: 2020-04-08T02:09:10.216Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:54:18.505Z
 ---
 
 ## Overview

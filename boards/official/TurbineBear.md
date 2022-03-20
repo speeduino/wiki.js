@@ -2,9 +2,9 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-09-30T00:26:53.597Z
+date: 2021-09-30T00:27:00.547Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-08-25T01:57:06.706Z
 ---
 

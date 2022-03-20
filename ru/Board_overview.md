@@ -2,9 +2,9 @@
 title: Обзор плат 03 и 04
 description: 
 published: true
-date: 2021-01-02T07:41:55.570Z
+date: 2021-01-02T07:42:01.413Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:41:55.570Z
 ---
 

@@ -2,9 +2,9 @@
 title: Miata 99-05
 description: 
 published: true
-date: 2021-01-02T06:57:42.233Z
+date: 2021-01-02T06:57:48.101Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T06:57:42.233Z
 ---
 

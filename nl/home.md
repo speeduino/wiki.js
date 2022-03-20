@@ -2,9 +2,9 @@
 title: Speeduino Handleiding
 description: De Speeduino documentatie handleiding
 published: true
-date: 2020-12-22T07:19:47.101Z
-tags: home
-editor: markdown
+date: 2020-12-22T07:19:56.368Z
+tags: 
+editor: undefined
 dateCreated: 2020-12-22T07:19:47.101Z
 ---
 

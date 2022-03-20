@@ -2,10 +2,10 @@
 title: Интерфейсы ввода/вывода общего назначения
 description: 
 published: true
-date: 2021-01-02T07:53:42.540Z
+date: 2021-01-02T07:53:42.547Z
 tags: 
-editor: markdown
-dateCreated: 2021-01-02T07:53:42.540Z
+editor: undefined
+dateCreated: 2021-01-02T07:53:42.547Z
 ---
 
 dxControl-GPIO, A GPIO Controller for Speeduino

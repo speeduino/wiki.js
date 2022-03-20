@@ -2,9 +2,9 @@
 title: schéma injecteur
 description: schéma injecteur
 published: true
-date: 2020-10-18T01:16:52.303Z
+date: 2020-10-18T01:16:58.333Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-18T01:16:52.303Z
 ---
 

@@ -2,9 +2,9 @@
 title: Getting Started
 description: Starting pages for each area of the manual
 published: true
-date: 2021-11-26T21:13:01.136Z
+date: 2021-11-26T21:13:11.304Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:14.971Z
 ---
 

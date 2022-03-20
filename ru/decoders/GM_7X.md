@@ -2,9 +2,9 @@
 title: GM 7X
 description: 
 published: true
-date: 2021-01-04T18:17:05.787Z
+date: 2021-01-04T18:17:11.444Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T06:53:24.279Z
 ---
 

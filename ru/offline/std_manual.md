@@ -2,10 +2,10 @@
 title: std_manual
 description: 
 published: true
-date: 2021-01-02T04:52:48.034Z
+date: 2021-01-02T04:52:48.042Z
 tags: 
-editor: markdown
-dateCreated: 2021-01-02T04:52:48.034Z
+editor: undefined
+dateCreated: 2021-01-02T04:52:48.042Z
 ---
 
 ./home.md

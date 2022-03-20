@@ -2,9 +2,9 @@
 title: Interface Protocols
 description: 
 published: true
-date: 2021-07-29T23:08:51.046Z
+date: 2021-07-29T23:09:00.579Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-07-29T18:45:18.652Z
 ---
 

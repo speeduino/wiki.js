@@ -2,9 +2,9 @@
 title: Запуск и плоское смещение Launch & Flatshift
 description: 
 published: true
-date: 2021-01-02T19:46:26.413Z
+date: 2021-01-02T19:46:32.443Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:36:19.868Z
 ---
 

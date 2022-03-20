@@ -2,9 +2,9 @@
 title: Speeduino-järjestelmän komponentit
 description: 
 published: true
-date: 2020-12-09T18:47:48.373Z
-tags: elektroniikan komponentit
-editor: markdown
+date: 2020-12-09T18:47:55.031Z
+tags: 
+editor: undefined
 dateCreated: 2020-11-13T12:11:48.259Z
 ---
 

@@ -2,9 +2,9 @@
 title: Speeduino käyttöohje
 description: Speeduino moottorinohjausjärjestelmän käyttöohje.
 published: false
-date: 2020-11-10T09:51:13.725Z
-tags: home
-editor: markdown
+date: 2020-11-10T09:51:19.600Z
+tags: 
+editor: undefined
 dateCreated: 2020-11-10T08:18:27.466Z
 ---
 

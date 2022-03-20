@@ -2,8 +2,10 @@
 title: Sensor Calibration
 description: Steps for calibrating all analog sensor inputs
 published: true
-date: 2020-01-19T11:42:14.490Z
+date: 2020-04-08T02:08:28.650Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:54:06.827Z
 ---
 
 # Sensor Calibration

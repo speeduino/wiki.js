@@ -2,9 +2,10 @@
 title: Glossary
 description: A list of terms and abbreviations used through out the Speeduino community and beyond.
 published: true
-date: 2020-08-05T04:52:10.650Z
+date: 2020-08-05T04:52:16.342Z
 tags: 
-editor: markdown
+editor: undefined
+dateCreated: 2020-08-05T03:10:32.896Z
 ---
 
 **accel** - acceleration or accelerator.

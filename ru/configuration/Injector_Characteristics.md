@@ -2,9 +2,9 @@
 title: Характеристики форсунок Injector Characteristics
 description: Configuring the injector properties
 published: true
-date: 2021-01-03T09:30:55.852Z
+date: 2021-01-03T09:31:01.653Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:34:58.088Z
 ---
 

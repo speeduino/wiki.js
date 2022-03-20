@@ -2,9 +2,9 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2021-07-30T04:59:54.269Z
-tags: ignition, wiring
-editor: markdown
+date: 2021-07-30T05:00:00.250Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-13T13:26:54.675Z
 ---
 

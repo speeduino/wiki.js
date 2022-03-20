@@ -2,9 +2,9 @@
 title: Характеристики Форсунок
 description: Configuring the injector properties
 published: true
-date: 2021-01-02T18:01:34.993Z
+date: 2021-01-02T18:01:40.864Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T18:01:34.993Z
 ---
 

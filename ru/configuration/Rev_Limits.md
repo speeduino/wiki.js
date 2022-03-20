@@ -2,9 +2,9 @@
 title: Ограничение максимальных оборотов Limiters
 description: Configuring engine protection limiters
 published: true
-date: 2021-01-03T06:56:57.242Z
+date: 2021-01-03T06:57:03.017Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:37:22.043Z
 ---
 

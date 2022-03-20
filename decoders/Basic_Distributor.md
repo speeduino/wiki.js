@@ -2,9 +2,9 @@
 title: Basic Distributor
 description: 
 published: true
-date: 2020-09-16T07:29:23.217Z
-tags: decoder, trigger
-editor: markdown
+date: 2020-09-16T07:29:29.139Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-06T01:54:12.645Z
 ---
 

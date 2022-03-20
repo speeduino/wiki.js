@@ -2,8 +2,10 @@
 title: Configuring TunerStudio project options
 description: 
 published: true
-date: 2020-01-16T15:21:09.539Z
-tags: TunerStudio
+date: 2020-04-08T02:05:40.982Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:37:04.245Z
 ---
 
 # Configuring TunerStudio Project Properties

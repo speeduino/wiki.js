@@ -2,9 +2,9 @@
 title: Контроль перегрузки Reset_Control
 description: 
 published: true
-date: 2021-01-03T06:46:34.319Z
+date: 2021-01-03T06:46:41.271Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:40:27.686Z
 ---
 

@@ -2,9 +2,9 @@
 title: История прошивок
 description: 
 published: true
-date: 2021-01-02T10:16:20.173Z
+date: 2021-01-02T10:16:26.335Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:56:01.165Z
 ---
 

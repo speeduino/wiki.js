@@ -2,9 +2,9 @@
 title: Acceleration Wizard
 description: Tuning the acceleration enrichment
 published: true
-date: 2020-09-16T00:13:54.075Z
+date: 2020-09-16T00:14:00.031Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:53:49.039Z
 ---
 

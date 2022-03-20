@@ -2,9 +2,9 @@
 title: Warmup
 description: 
 published: true
-date: 2021-08-10T13:26:41.859Z
+date: 2021-08-10T13:26:47.536Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:54:11.507Z
 ---
 

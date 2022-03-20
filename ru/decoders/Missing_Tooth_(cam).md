@@ -1,48 +1,48 @@
 ---
-title: Отсутствующий зуб Missing Tooth (Cam speed)
+title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2021-01-04T18:08:10.297Z
+date: 2021-01-02T07:01:35.254Z
 tags: 
-editor: markdown
-dateCreated: 2021-01-02T07:01:35.249Z
+editor: undefined
+dateCreated: 2021-01-02T07:01:35.254Z
 ---
 
-## Отсутствующий зуб Missing tooth (Cam speed)
-Отсутствующий зуб распредвалв является новшеством Speeduino, которое позволяет выполнять функцию, подобную конфигурации с двумя колесами, тем самым обеспечивая последовательную или бесполезную искровую работу с колесами, установленными на кулачке или распределителе. Операция основана на обоих [Missing Tooth](/decoders/Missing_Tooth "wikilink") и [Dual Wheel](/decoders/Dual_Wheel "wikilink"). Предлагается сначала прочитать эти разделы для ознакомления, поскольку в этом разделе будут лишь подчеркнуты фундаментальные различия с этими распространенными декодерами.
+## Missing tooth (Cam speed)
+The missing tooth cam-speed trigger is a Speeduino innovation, that permits function similar to a dual-wheel setup, thereby allowing sequential or wasted spark operation from cam-mounted or distributor wheels. The operation is based on both [Missing Tooth](/decoders/Missing_Tooth "wikilink") and [Dual Wheel](/decoders/Dual_Wheel "wikilink"). It is suggested to read those sections first for familiarization as this section will only highlight the fundamental differences to those common decoders.
 
-Этот декодер состоит из одного колеса с кулачковой скоростью в той же конфигурации, что и колесо с отсутствующими зубьями, установленное на коленчатом рычаге. **Число зубьев** должно быть равномерно разделено на 720°. При вращении с половинной скоростью кривошипа датчик считывает половину зубьев колеса при каждом повороте кривошипа на 360°, а остальные зубья при следующем вращении кривошипа. Один отсутствующий зуб появится только на одном из двух вращений кривошипа и затем будет использоваться в качестве индикатора фазы, так же как система с двумя колесами использует кулачковый сигнал.
+This decoder is comprised of a single cam-speed wheel in the same configuration as a crank-mounted missing-tooth wheel. The number of teeth ***must*** be evenly divisible into 720°. As it rotates at half crank speed, the sensor reads half the wheel teeth on each 360° crank revolution, and the remaining teeth on the next crank rotation. A single missing tooth will appear on only one of the two crank rotations, and is then used as a phase indicator, much as the dual-wheel system uses the cam signal.
 
-### Приложения
+### Applications
 
-Отсутствующие зубчатые кулачки или распределительные колеса могут использоваться с модификацией или изготовлением кулачковых или распределительных колес, так как изначально их не использовали никакие OEM-системы. Колесо ***должно*** иметь по крайней мере столько же зубьев, сколько и цилиндры, ***не*** включая отсутствующий зуб. Это обычно требует удвоения числа зубьев в виде цилиндров или более. Для удовлетворения этого требования и максимального разрешения рекомендуется как можно больше зубьев, прорезей или других считываемых элементов (целей датчика) в ограниченном пространстве. Датчик должен быть способен надежно считывать меньшие или близко расположенные зубья.
+Missing tooth cam or distributor wheels can be used with cam or distributor wheel modification or fabrication as no OEM systems use it originally. The wheel ***must*** have at least as many teeth as cylinders, ***not*** including the missing tooth. This generally requires double the number of teeth as cylinders or more. As many teeth, slots, or other readable features (sensor targets) as possible in the limited space is recommended in order to satisfy this requirement, and to maximize resolution. The sensor must be capable of reliably reading smaller or closely-spaced teeth.
 
-Из-за обычно ограниченных зубьев только половина зубьев считывается на каждом обороте, и потенциал снижения точности из-за износа привода синхронизации; точность синхронизации может быть снижена по сравнению с системами коленчатых колес. Здесь нельзя предсказать ошибку, поскольку износ или "накат" данного двигателя будет уникальным. Однако следует исходить из того, что погрешность синхронизации не будет превышать точность OEM-эквивалентной системы с кулачковым приводом, такой как типичные распределительные системы, или, возможно, лучше из-за большего количества целей датчиков.
-
-
-### Требования к синхронизации Timing Requirements
-
-Отсутствующие кривошипно-кулачковые декодеры требуют, чтобы колесо вращалось приблизительно с одинаковой скоростью на протяжении всего вращения. Для одного отсутствующего зуба декодеры: Если следующий зуб не приходит в пределах 1.5 * Дельта времени последних 2 зубов предполагается, что мы только что наблюдали отсутствующий зуб. Для более чем одного отсутствующего декодера зуба есть немного больше свободы, если следующий зуб не попадает в течение 2 * Дельта-время последних 2 зубов предполагается, что мы только что наблюдали отсутствующие зубы.
-
-Обычно это можно зафиксировать, гарантируя, что пусковой двигатель имеет достаточный ток, доступный для питания через любые более жесткие точки через кулачки поворота/открытия/вспомогательные устройства двигателя. 
-
-Если двигатель стартера хороший и получает правильное напряжение, убедитесь в правильности механических компонентов двигателя.
+Due to typically limited teeth, only half the teeth being read on each revolution, and the potential for reduced accuracy due to timing drive wear; the timing accuracy may be reduced in comparison to crank wheel systems. A figure of error cannot be predicted here as the wear or 'slop' of a given engine will be unique. However, it should be reasonable to assume the timing error will not exceed the accuracy of an OEM-equivalent cam-driven system such as typical distributor systems, or possibly better due to more sensor targets.
 
 
+### Timing Requirements
 
-### Конфигурация Tuner Studio
+The missing tooth crank and cam decoders require that the wheel is spinning at roughly the same speed throughout the rotation. For single missing tooth decoders: If the next tooth does not come within 1.5 * The Delta Time of the last 2 teeth it is assumed we just observed the missing tooth. For more than one missing tooth decoder there is a bit more leeway if the next tooth does not come within 2 * The Delta Time of the last 2 teeth it is assumed we just observed the missing teeth. 
+
+Usually this can be fixed by ensuring that the starter motor has enough current available to power through any harder spots through the rotation / opening closing cams / engine accessories. 
+
+If the starter motor is good and getting the right voltage ensure the mechanical components of the engine are correct. 
+
+
+
+### Tuner Studio Configuration
 ![missingtooth_cam_triggerconfig.png](/img/decoders/missingtooth_cam_triggerconfig.png){.align-center width=450}
 
-**Поля:**
-- **Primary base teeth**: Это количество зубьев, которые были бы у колеса, если бы их не было, например, колесо 36-1 имеет только 35 фактических зубьев, но вы бы ввели 36 в это поле.
-- **Missing Teeth:** Размер "зазора" в количестве зубов. Эти отсутствующие зубы должны быть расположены в одном блоке (то есть есть только один зазор в зубах). Рекомендуется один отсутствующий зуб.
-- **Trigger Angle**: Это угол в ** градусах кривошипа** **ПОСЛЕ** ВМТ (ATDC) первого зуба, следующего за зазором. Это число колеблется от -360 ° до + 360°.
-- **Cam Speed**: Убедитесь, что этот флажок установлен для распредвала.
+**Fields:**
+- **Primary base teeth**: This is the number of teeth the wheel would have if there were none missing, e.g. a 36-1 wheel has only 35 actual teeth, but you would enter 36 into this field.
+- **Missing Teeth:** The size of the 'gap' in the number of teeth. These missing teeth must be situated in a single block (ie there's only a single gap in the teeth). One missing tooth is recommended.
+- **Trigger Angle**: This is the angle in **crank degrees** **AFTER** TDC (ATDC) of the first tooth following the gap. This number ranges from -360° to +360°.
+- **Cam Speed**: Ensure this box is checked for this cam-speed system.
 
-### Настройка синхронизации Timing Setting
+### Timing Setting
 
-Угол устанавливается в градусах кривошипа, а не распредвала.
+The trigger angle is set in CRANK degrees, not cam.
 
-### Шаблон триггера Trigger Pattern
+### Trigger Pattern
 
 ![missingtooth_cam_trace.jpg](/img/decoders/missingtooth_cam_trace.jpg){.align-center width75%}

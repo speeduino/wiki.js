@@ -2,9 +2,9 @@
 title: MAP_Sensors
 description: 
 published: true
-date: 2021-01-02T07:33:09.433Z
+date: 2021-01-02T07:33:15.157Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T07:33:09.432Z
 ---
 

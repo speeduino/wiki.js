@@ -2,9 +2,9 @@
 title: Время выдержки катушек Dwell
 description: 
 published: true
-date: 2021-01-02T19:12:16.582Z
+date: 2021-01-02T19:12:22.503Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:24:31.931Z
 ---
 

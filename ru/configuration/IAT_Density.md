@@ -2,9 +2,9 @@
 title: Плотность воздуха на впуске IAT Density
 description: 
 published: true
-date: 2021-01-03T04:44:44.641Z
+date: 2021-01-03T04:44:50.419Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:31:35.795Z
 ---
 

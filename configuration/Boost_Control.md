@@ -2,8 +2,10 @@
 title: Boost Control
 description: Open and closed loop boost control settings
 published: true
-date: 2020-01-19T11:43:23.245Z
+date: 2020-04-08T02:07:36.974Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:53:51.415Z
 ---
 
 # Boost Control

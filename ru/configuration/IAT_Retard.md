@@ -2,9 +2,9 @@
 title: Корректировка опережения по температуре IAT Temperature based timing changes
 description: 
 published: true
-date: 2021-01-03T07:29:52.755Z
+date: 2021-01-03T07:29:58.440Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:44:37.568Z
 ---
 

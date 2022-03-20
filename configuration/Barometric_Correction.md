@@ -2,9 +2,9 @@
 title: Barometric Correction
 description: 
 published: true
-date: 2021-11-11T07:25:29.014Z
-tags: baro
-editor: markdown
+date: 2021-11-11T07:25:34.808Z
+tags: 
+editor: undefined
 dateCreated: 2021-11-11T07:25:29.014Z
 ---
 

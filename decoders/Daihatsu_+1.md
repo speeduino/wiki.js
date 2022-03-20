@@ -2,8 +2,10 @@
 title: Daihatsu +1 trigger
 description: 
 published: true
-date: 2020-01-16T11:48:01.703Z
+date: 2020-04-08T02:08:57.557Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:54:13.775Z
 ---
 
 ## Overview

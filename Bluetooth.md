@@ -2,9 +2,10 @@
 title: Bluetooth
 description: 
 published: true
-date: 2020-06-25T01:49:38.083Z
+date: 2020-06-25T01:49:44.047Z
 tags: 
-editor: markdown
+editor: undefined
+dateCreated: 2020-01-06T01:36:59.175Z
 ---
 
 ## Bluetooth Wireless Option

@@ -2,9 +2,9 @@
 title: Kuinka aloittaa?
 description: Kuinka aloittaa Speeduino-projekti.
 published: false
-date: 2020-11-23T18:32:22.505Z
-tags: kuinka aloittaa
-editor: markdown
+date: 2020-11-23T18:32:31.864Z
+tags: 
+editor: undefined
 dateCreated: 2020-11-10T09:54:44.085Z
 ---
 

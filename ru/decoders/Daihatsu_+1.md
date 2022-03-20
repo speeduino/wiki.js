@@ -2,9 +2,9 @@
 title: Дайхатсу-Тойота Daihatsu +1 trigger
 description: 
 published: true
-date: 2021-01-04T17:42:02.645Z
+date: 2021-01-04T17:42:08.480Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-04T17:33:16.543Z
 ---
 

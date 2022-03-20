@@ -2,9 +2,10 @@
 title: Trademarks
 description: 
 published: true
-date: 2020-09-02T11:15:48.904Z
+date: 2020-09-02T11:15:56.188Z
 tags: 
-editor: markdown
+editor: undefined
+dateCreated: 2020-01-06T01:54:29.074Z
 ---
 
 

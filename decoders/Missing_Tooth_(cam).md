@@ -2,8 +2,10 @@
 title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2020-04-28T18:39:15.344Z
-tags: decoder
+date: 2021-01-31T22:05:09.576Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:54:21.989Z
 ---
 
 ## Missing tooth (Cam speed)

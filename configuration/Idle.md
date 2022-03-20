@@ -2,8 +2,10 @@
 title: Idle
 description: 
 published: true
-date: 2020-04-08T02:02:30.883Z
+date: 2020-04-08T02:08:02.750Z
 tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:53:59.753Z
 ---
 
 # Idle Control

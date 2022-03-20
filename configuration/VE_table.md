@@ -2,9 +2,9 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2021-11-11T07:32:26.028Z
-tags: fuel, fuel table, tuning, ve table
-editor: markdown
+date: 2021-11-11T07:32:32.241Z
+tags: 
+editor: undefined
 dateCreated: 2020-06-18T00:47:09.502Z
 ---
 

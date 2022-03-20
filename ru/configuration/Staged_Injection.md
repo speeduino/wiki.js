@@ -2,9 +2,9 @@
 title: Поэтапный впрыск Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2021-01-03T07:48:40.173Z
+date: 2021-01-03T07:48:46.166Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:43:36.211Z
 ---
 

@@ -2,9 +2,9 @@
 title: Интерфейс ввода/вывода GPIO_for_Speeduino
 description: 
 published: true
-date: 2021-01-04T16:38:10.086Z
+date: 2021-01-04T16:38:16.862Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-04T15:47:47.591Z
 ---
 

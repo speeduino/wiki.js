@@ -2,9 +2,9 @@
 title: Электрическая схема подключения зажигания
 description: 
 published: true
-date: 2021-01-02T03:57:47.204Z
+date: 2021-01-02T03:57:53.182Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-01T19:25:31.031Z
 ---
 

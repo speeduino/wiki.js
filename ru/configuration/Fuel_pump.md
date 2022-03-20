@@ -2,9 +2,9 @@
 title: Топливный насос Fuel pump
 description: Setting the on/off conditions of the fuel pump
 published: true
-date: 2021-01-03T04:39:29.554Z
+date: 2021-01-03T04:39:35.323Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:30:32.916Z
 ---
 

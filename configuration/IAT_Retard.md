@@ -2,8 +2,10 @@
 title: Temperature based timing changes
 description: 
 published: true
-date: 2020-01-16T11:40:27.486Z
-tags: tuning
+date: 2020-04-08T02:07:59.335Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-14T00:30:56.331Z
 ---
 
 # Temperature based timing changes

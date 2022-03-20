@@ -2,9 +2,9 @@
 title: VVT
 description: 
 published: true
-date: 2021-08-12T07:00:42.124Z
-tags: tuning, variable valve timing, vvt
-editor: markdown
+date: 2021-08-12T07:00:48.196Z
+tags: 
+editor: undefined
 dateCreated: 2020-05-14T05:39:02.336Z
 ---
 

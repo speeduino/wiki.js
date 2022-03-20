@@ -2,9 +2,9 @@
 title: Fuel pump
 description: Setting the on/off conditions of the fuel pump
 published: true
-date: 2021-01-20T11:39:57.637Z
-tags: aux outputs, tuning
-editor: markdown
+date: 2021-01-20T11:40:03.348Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-14T06:24:04.641Z
 ---
 

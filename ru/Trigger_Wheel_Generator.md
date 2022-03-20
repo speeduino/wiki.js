@@ -2,9 +2,9 @@
 title: Изготовление реперных дисков
 description: 
 published: true
-date: 2021-01-05T13:25:21.780Z
+date: 2021-01-05T13:25:27.446Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T08:05:34.407Z
 ---
 

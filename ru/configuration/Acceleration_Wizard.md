@@ -2,9 +2,9 @@
 title: Настройка ускорения
 description: Tuning the acceleration enrichment
 published: true
-date: 2021-01-02T18:38:21.410Z
+date: 2021-01-02T18:38:27.373Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-02T04:18:44.187Z
 ---
 

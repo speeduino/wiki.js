@@ -2,9 +2,9 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2021-08-11T08:49:24.137Z
+date: 2021-08-11T08:49:30.107Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T00:30:19.883Z
 ---
 
