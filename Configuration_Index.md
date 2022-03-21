@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2022-03-21T03:04:14.700Z
+date: 2022-03-21T03:04:59.834Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -47,6 +47,6 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [CanBus Support](/en/CanBus_Support2)   
     -   [Auxilary IO configuration](/configuration/Auxillary_IO_Configuration)
 -   **Datalogging Menu**
-		-   [SD logging](/SD_logging)
+    -   [SD logging](/SD_logging)
 -   **Tools Menu**
     -   [Sensor Calibration](/configuration/Sensor_Calibration "wikilink")
