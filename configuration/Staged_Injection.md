@@ -2,9 +2,9 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2021-03-02T06:42:20.580Z
+date: 2022-03-21T03:10:32.933Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:09.173Z
 ---
 
@@ -55,7 +55,5 @@ Primary injectors on outputs 1 and 2. The secondary on outputs 3 and 4.
 
 For other setups hit up the forum for clarification.
 
-
-
-### Note
-The dead time of the 2 sets of injectors is currently assumed to be the same. This may be altered in future firmwares if required (Post a feature request if needed).
+> **Note:** The dead time of the 2 sets of injectors is currently assumed to be the same. This may be altered in future firmwares if required (Post a feature request if needed).
+{.is-info}
