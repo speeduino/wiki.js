@@ -2,9 +2,9 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2021-07-30T04:49:05.622Z
-tags: 
-editor: undefined
+date: 2022-03-31T13:45:06.214Z
+tags: hardware, wiring
+editor: markdown
 dateCreated: 2020-01-06T01:37:16.331Z
 ---
 
@@ -14,7 +14,7 @@ This page presents the basic hardware requirements of a Speeduino system, as wel
 Arduino
 -------
 
-Speeduino uses the Arduino Mega 2560 R3 as the controller. All official and most clone Arduino Mega 2560 boards will work fine, but it is recommended to use a board that has the 16u2 serial interface rather than the cheaper CH340. Which chip a board uses can usually be found on the information/specification listing from most retailers, but if in doubt, ask the seller you are looking to buy from.
+Most of the Speeduino designs use the Arduino Mega 2560 R3 as the controller. All official and most clone Arduino Mega 2560 boards will work fine, but it is recommended to use a board that has the 16u2 serial interface rather than the cheaper CH340. Which chip a board uses can usually be found on the information/specification listing from most retailers, but if in doubt, ask the seller you are looking to buy from.
 
 Inputs
 ------
@@ -148,14 +148,14 @@ v0.3x and later boards include medium-power MOSFET auxiliary outputs to switch u
 Auxilary IO
 -----------
 
-On Arduino Mega2560 based Speeduino boards (official or just running current firmware) git commit 13f80e7 support is available for the external connection of 8 16bit analog inputs via [Serial3](/Secondary_Serial_IO_interface)
+Speeduino has support for up to 16, 16bit external analog inputs via [Serial3](/Secondary_Serial_IO_interface)
 
-CanBus
+CAN bus
 ------
 
-As the Arduino mega2560 has no CanBus interface a seperate "co-processor" interface has been designed. More information about this unit can be found here <https://github.com/Autohome2/Speeduino-can-interface>. This uses the functionality provided by the Serial3 port and connects via that port.
+CAN bus is directly available for Speeduino in case of STM32 or Teensy MCU is used or via separate co-processor in case of mega2560. From the official boards [Dropbear](/en/boards/official/dropbear) is only one currently featuring CAN bus and it uses Teensy 3.5 MCU. But there are 3rd party designs available too with CAN bus support. More information about Speeduino CAN bus support can be found [here](/en/Canbus_Support2).
 
-On the upcoming Teensy3.5 variant of Speeduino the CanBus code will be incorporated into the main system firmware as the Teensy3.5 has integrated CanBus and only requires a transceiver module added.
+As Arduino mega2560 has no CAN bus interface a seperate "co-processor" interface has been designed. More information about this unit can be found [here](https://github.com/Autohome2/Speeduino-can-interface). This uses the functionality provided by the Serial3 port and connects via that port.
 
 Third Party Addon's
 -------------------
@@ -165,6 +165,6 @@ In This section you will find information about third party designed hardware de
 GPIO for Speeduino
 ------------------
 
-There are several variants of the GPIO , The firmware can be downloaded here <https://github.com/Autohome2/Speeduino-GPIO>
+There are several variants of the GPIO , The firmware can be downloaded [here](https://github.com/Autohome2/Speeduino-GPIO)
 
 More information [GPIO_for_Speeduino](/GPIO_for_Speeduino "wikilink")
