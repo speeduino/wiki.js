@@ -2,9 +2,9 @@
 title: VVT
 description: 
 published: true
-date: 2021-08-12T07:00:48.196Z
-tags: 
-editor: undefined
+date: 2022-03-31T13:58:08.025Z
+tags: tuning, variable valve timing, vvt
+editor: markdown
 dateCreated: 2020-05-14T05:39:02.336Z
 ---
 
@@ -32,10 +32,12 @@ Closed loop PWM mode also uses Pulse Width Modulation for VVT output to adjust t
 
 ## Settings
 
-![Example VVT Settings](/img/accessories/vvt_settings.png){.align-center width=400}
+![Example VVT Settings](/img/accessories/vvt_settings2.png){.align-center width=400}
 
 ### General
 -   **VVT Control Enabled** - If VVT isn't used, set this to Off.
+-   **VVT Minimum CLT(C)** - Minimum coolant temp to activate VVT.
+-   **VVT Delay(S)** - Time to wait after reaching minimum coolant temp (additional time for oil warmup).
 -   **VVT Mode** - For selecting one of the three VVT modes.
 -   **Load source** - This defines the Y-axis (Load axis) of the VVT control table. Available options for load are MAP and TPS.
 -   **VVT output pin** - For selecting VVT output pin. "Board default" uses the VVT output pin specific for your board and it's the correct setting for most of the setups. But also other pins for VVT output are available.
