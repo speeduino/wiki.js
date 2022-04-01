@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2022-04-01T12:45:10.223Z
+date: 2022-04-01T12:54:28.760Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -32,21 +32,25 @@ Settings in Tuner Studio
 In case of options 2 or 3 are used for reset control, Tuner Studio has dedicated "Reset Control" -menu to change how the speeduino FW handles reset protection.
 
 ![2018-02-27_21_11_05-reset_control.png](/img/reset_control/2018-02-27_21_11_05-reset_control.png){.align-center width=450}
- *(**\*** indicates that it only works with [option 3](https://wiki.speeduino.com/en/configuration/Reset_Control#Options "wikilink"))*:
+### Control Type
+ *(**\*** indicates that it only works with [option 3](https://wiki.speeduino.com/en/configuration/Reset_Control#options "wikilink") and to see the selection, [Advanced Reset Control Features needs to be enabled in Project Properties](/en/Configuring_TunerStudio "wikilink"))*:
 
 - **Disabled:** No reset control is enabled
 - ***Prevent When Running:**  As long as the engine is running, the Arduino will not automatically reset itself, because the control pin will be held high as long as the engine is running. It will only be possible to update the Speeduino firmware when the car is not running or the control pin is otherwise held low.
 - ***Prevent Always:**  The control pin is always held high. It will only be possible to update the Speeduino firmware if the control pin is held low by jumper, switch, or some other means.
 - **Serial Command:**  Similar to "Prevent Always," except that no custom bootloader is required. The control pin will normally be held high. To update the Speeduino firmware, you will need to first send the character 'U' to it over the serial connection. This will let it know that an update is coming and it will reset itself upon receiving any more data.
 
+### Control Pin
+- Select the pin used for Reset Control. This is the Arduino Mega -pin you need to run wire to reset or 16u2 -pin. See [wiring](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink") -section for more info.
+
 Wiring
 ------
 
-### Standard 16u2 Firmware or No 16u2
+### Standard 16u2 Firmware or No 16u2 (Option 2)
 
 This is as simple as running a wire from the control pin to the reset pin on your Arduino.
 
-### Custom 16u2 Firmware
+### Custom 16u2 Firmware (Option 3)
 
 The custom 16u2 firmware differs from the stock one in that it uses one of the 16u2's GPIO pins to recognize when the board should / should not be allowed to reset. The pin used is PB7, as illustrated.
 
@@ -57,7 +61,7 @@ How you connect the control pin to PB7 is up to you, but if you are connecting f
 Updating the Bootloader
 -----------------------
 
-Using the "When the engine is running" and "Prevent Always" reset control modes requires updating the usb-serial firmware on your Arduino's ATmega16U2 chip (these modes are unavailable if your board uses something else to perform usb serial functionality, such as an FTDI or CH340 chip).
+Using the Option 3 for "When the engine is running" and "Prevent Always" reset control modes requires updating the usb-serial firmware on your Arduino's ATmega16U2 chip (these modes are unavailable if your board uses something else to perform usb serial functionality, such as an FTDI or CH340 chip).
 
 A hex file for the updated bootloader can be found in the following locations:
 
