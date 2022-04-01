@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2022-04-01T12:54:28.760Z
+date: 2022-04-01T12:59:46.006Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -25,7 +25,8 @@ There are basically three ways to that can be used for reset control.
 1. Some board versions have `Prog - Run` switch for reset control. When switch is set to `Prog`, the Arduino Mega board will reset normally and firmware upload is possible to do. When switch is set to `Run`, the Arduino Mega board will not reset and no firmware upload is possible. So in normal operation set the switch to `Run` and only use `Prog` -selection when updating firmware. This way doesn't require changes in TS.
 ![reset.jpg](/img/reset_control/reset.jpg){.align-center width=350}
 2. For boards that don't have dedicated reset control -switch, it's possible to [connect a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink") between reset pin and control pin in arduino.
-3. If the Arduino Mega is version that has ATmega16U2 chip for USB-serial connection, it's possible to update the ATmega16U2 with custom firmware, [connect a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink") from ATmega16U2 pin to control pin and enable the advanced reset control features in TS.
+3. If the Arduino Mega is version that has ATmega16U2 chip for USB-serial connection, it's possible to [update the ATmega16U2 with custom firmware](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink"), [connect a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink") from ATmega16U2 pin to control pin and enable the [Advanced Reset Control Features needs to be enabled in TS Project Properties](/en/Configuring_TunerStudio "wikilink")
+
 
 Settings in Tuner Studio
 -------
