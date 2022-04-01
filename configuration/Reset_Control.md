@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2022-04-01T12:08:00.648Z
+date: 2022-04-01T12:41:29.491Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -17,17 +17,23 @@ Specifically, in an effort to make the programming process as painless as possib
 
 This feature will enable you to prevent that from happening.
 
-Requirements
+Options
 ------------
 
-Reset Control can be used as simply as setting some options and [connecting a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink"). However, some options also require [updating the usb-serial bootloader](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink") on the ATmega16U2 chip (if the board has one). These also require that Advance reset control features are enabled in TS project properties.
+There are basically three ways to that can be used for reset control.
 
-Options
+1. Some board versions have `Prog - Run` switch for reset control. When switch is set to `Prog`, the Arduino Mega board will reset normally and firmware upload is possible to do. When switch is set to `Run`, the Arduino Mega board will not reset and no firmware upload is possible. So in normal operation set the switch to `Run` and only use `Prog` -selection when updating firmware. This way doesn't require changes in TS.
+![reset.jpg](/img/reset_control/reset.jpg){.align-center width=350}
+2. For boards that don't have dedicated reset control -switch, it's possible to [connect a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink") between reset pin and control pin in arduino.
+3. If the Arduino Mega is version that has ATmega16U2 chip for USB-serial connection, it's possible to update the ATmega16U2 with custom firmware, [connect a wire](https://wiki.speeduino.com/en/configuration/Reset_Control#wiring "wikilink") from ATmega16U2 pin to control pin and enable the advanced reset control features in TS.
+
+Settings in Tuner Studio
 -------
+In case of options 2 or 3 are used for reset control, Tuner Studio has dedicated "Reset Control" -menu to change how the speeduino FW handles reset protection.
 
-![2018-02-27_21_11_05-reset_control.png](/img/reset_control/2018-02-27_21_11_05-reset_control.png)
+![2018-02-27_21_11_05-reset_control.png](/img/reset_control/2018-02-27_21_11_05-reset_control.png){.align-center width=450}
 
-The Speeduino firmware provides three options for preventing the Arduino from resetting *(**\*** indicates a [bootloader update](https://wiki.speeduino.com/en/configuration/Reset_Control#updating-the-bootloader "wikilink") is required)*:
+The Speeduino firmware provides three options for preventing the Arduino from resetting *(**\*** indicates that it only works with option 3)*:
 
 - **Disabled:** No reset control is enabled
 - ***Prevent When Running:**  As long as the engine is running, the Arduino will not automatically reset itself, because the control pin will be held high as long as the engine is running. It will only be possible to update the Speeduino firmware when the car is not running or the control pin is otherwise held low.
