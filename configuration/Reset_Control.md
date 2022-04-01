@@ -2,7 +2,7 @@
 title: Reset_Control
 description: 
 published: true
-date: 2022-04-01T12:41:29.491Z
+date: 2022-04-01T12:45:10.223Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:54:04.493Z
@@ -32,8 +32,7 @@ Settings in Tuner Studio
 In case of options 2 or 3 are used for reset control, Tuner Studio has dedicated "Reset Control" -menu to change how the speeduino FW handles reset protection.
 
 ![2018-02-27_21_11_05-reset_control.png](/img/reset_control/2018-02-27_21_11_05-reset_control.png){.align-center width=450}
-
-The Speeduino firmware provides three options for preventing the Arduino from resetting *(**\*** indicates that it only works with option 3)*:
+ *(**\*** indicates that it only works with [option 3](https://wiki.speeduino.com/en/configuration/Reset_Control#Options "wikilink"))*:
 
 - **Disabled:** No reset control is enabled
 - ***Prevent When Running:**  As long as the engine is running, the Arduino will not automatically reset itself, because the control pin will be held high as long as the engine is running. It will only be possible to update the Speeduino firmware when the car is not running or the control pin is otherwise held low.
