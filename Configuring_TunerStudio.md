@@ -2,9 +2,9 @@
 title: Configuring TunerStudio project options
 description: 
 published: true
-date: 2020-04-08T02:05:40.982Z
+date: 2022-04-01T21:11:35.064Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:37:04.245Z
 ---
 
@@ -12,11 +12,11 @@ dateCreated: 2020-01-06T01:37:04.245Z
 
 The menu option for the project properties page can be found here
 
-![TS_9.png](/img/TunerStudio/TS_9.png){.align-center width=400}
+![ts_9_2.png](/img/TunerStudio/ts_9_2.png){.align-center width=400}
 
 Once opened this page will be seen. 
 
-![TS_4.png](/img/TunerStudio/TS_4.png){.align-center width=350}
+![ts_4_2.png](/img/TunerStudio/ts_4_2.png){.align-center width=350}
 
 ## Settings Tab
 The Settings tab does not affect the tune directly, but does change the way some things are displayed within Tuner Studio. Some menus are hidden by default, either for safety reasons or because they are still under development, and they can be enabled here.
@@ -25,7 +25,6 @@ The Settings tab does not affect the tune directly, but does change the way some
 This changes whether the oxygen sensor reasons are shown in AFR (default) or Lambda.
 
 ### Temperature Display
-
 The temperature selection changes all degrees values within TunerStudio. 
 
 -   Fahrenheit(Default)
@@ -48,6 +47,18 @@ If Enabled, an additional Tab will appear on the tuning page
 ### Reset control features
 An optional Speeduino specific boot loader is available that has different methods of controlling the automatic reset. The vast majority of users should leave this on the default 'Basic options only'
 
+### Controller in use
+Select correct processor type that Speeduino board uses. Typically this is left to default (Arduino MEGA 2560)
+
+-   Arduino Mega 2560(Default)
+-   STM32
+-   Teensy
+
+### NEW_COMMS
+To change between new and old comms protocol. Typically this is left to default (NEW_COMMS Activated)
+
+### CAN_COMMANDS
+Setting not currently in use.
 
 ## CAN Devices Tab
 
