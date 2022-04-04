@@ -2,9 +2,9 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2022-01-08T13:31:18.772Z
+date: 2022-04-04T07:27:19.193Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
 ---
 
@@ -33,5 +33,6 @@ The list below includes all those that are currently supported. They each lead t
 | [DRZ400](/decoders/DRZ400 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
 | [Renix](/decoders/Renix "wikilink")           | In Progress         | Renix decoder for 44 and 66 tooth trigger wheels |
 | [Rover MEMs](/decoders/Rover "wikilink")           | In Progress         | Rover MEMs decoder covering multiple crank patterns |
+| [Ford ST170](/decoders/ST170 "wikilink")           | Complete         | 36-1 Missing tooth with special Ford ST170 cam trigger wheel |
 
 All signals <b><i>MUST</b></i> be conditioned to a 3.3v - 5v dc square wave before being used by the firmware.
