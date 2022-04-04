@@ -2,9 +2,9 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2021-08-11T08:49:30.107Z
+date: 2022-04-04T07:17:27.656Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T00:30:19.883Z
 ---
 
@@ -50,7 +50,7 @@ The trigger angle can be found by placing the engine at TDC, then calculating ho
 
 The missing tooth decoder supports sequential operation if an additional cam input is present. If Sequential mode is selected for either the fuel timing or spark timing, the system will expect to see a cam signal and will not sync correctly without this. Note that this is ONLY the case if sequential is selected for one or both of fuel and spark timing.
 
-This cam signal should take the form of a single pulse every complete cycle. This can be a short tooth or a half moon type arrangement, provided that electrically there is only a single rising (or falling) pulse per cycle.
+This cam signal should take the form of 4-1 cam trigger wheel or a single pulse every complete cycle. This can be a short tooth or a half moon type arrangement, provided that electrically there is only a single rising (or falling) pulse per cycle.
 
 ### Trigger Diagram
 ![missingtooth_trace1.png](/img/decoders/missingtooth_trace1.png){.align-center}
