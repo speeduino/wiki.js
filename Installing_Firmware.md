@@ -2,9 +2,9 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2021-01-27T11:59:19.461Z
+date: 2022-04-04T09:13:32.831Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
 ---
 
@@ -17,7 +17,7 @@ With the goal of maximum simplicity in mind, the process of compiling and instal
 
 ## Installation - SpeedyLoader
 
-The simplest (and recommended) method of installing the Speeduino firmware onto a standard Arduino Mega 2560 is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file and optionally a base tune for the firmware you choose so it can be loaded into your TunerStudio project.
+The simplest (and recommended) method of installing the Speeduino firmware onto a standard Arduino Mega 2560 or Teensy is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file and optionally a base tune for the firmware you choose so it can be loaded into your TunerStudio project.
 
 -   **Windows:** [32-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-ia32.exe) / [64-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-x64.exe)
 -   **Mac:** [SpeedyLoader.dmg](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.dmg)
@@ -30,7 +30,7 @@ The simplest (and recommended) method of installing the Speeduino firmware onto 
 
 Once the firmware is installed on the board, see [Connecting to TunerStudio](/Connecting_to_TunerStudio) for more details on how to configure TunerStudio
 
-## Installation - Manually Compiling
+## Installation - Manually Compiling using Arduino IDE
 > Note that manually compiling the firmware is **NOT** required to install Speeduino, the easiest (and recommended for most users) method is using SpeedyLoader as described above.
 {.is-warning}
 
@@ -40,11 +40,10 @@ If you want to compile the firmware yourself, or make any code changes, then the
 ### Requirements
 
 -   A Windows, Mac or linux PC
--   One of the following:
-    -   [The Arduino IDE](http://arduino.cc/en/Main/Software). Current minimum version required is 1.6.7, although a newer version is recommended.
-    -   [PlatformIO](http://platformio.org/). Can be downloaded from [here](http://platformio.org/platformio-ide)
+-   [The Arduino IDE](http://arduino.cc/en/Main/Software). Current minimum version required is 1.6.7, although a newer version is recommended.
 -   A copy of the latest Speeduino codebase. See below.
 -   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
+-   [Time -library](https://github.com/PaulStoffregen/Time) installed on Arduino IDE.
 
 ### Downloading the firmware
 
@@ -57,16 +56,12 @@ See [here](https://github.com/noisymime/speeduino)
 ### Compiling the firmware
 
 -   Start the IDE, select *File &gt; Open*, navigate to the location you downloaded Speeduino to and open the **speeduino.ino** file.
--   Set the board type: *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK (This is the only board currently supported)
+-   Set the board type: *Tools &gt; Board &gt; Arduino Mega 2560* or Mega ADK (Teensy and other Arduino board types are also supported, but this guide only explains Arduino Mega)
 -   Click the **Verify** icon in the top left corner (Looks like a tick) 
 
 At this point you should have a compiled firmware! If you experienced a problem during the compile, see the [Troubleshooting](/en/Installing_Firmware#troubleshooting) section below.
 
-This video walks through the whole process of installing the firmware on your Arduino from scratch:
-
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AX9URou4JTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
+This video walks through the whole process of installing the firmware on your Arduino from scratch: https://www.youtube.com/watch?v=AX9URou4JTs
 
 #### Optional (But recommended)
 
@@ -82,8 +77,6 @@ There is an option available for changing the compiler optimization level, which
     -   compiler.c.elf.flags
     -   compiler.cpp.flags
 -   Save the file and restart the Arduino IDE
-
-**Note:** This is NOT required if using PlatformIO, the above optimisation is applied automatically there
 
 ### Installing
 
@@ -143,3 +136,48 @@ Make sure all the files are contained within the same directory, then select Fil
 ![speeduinoIDE.png](/img/TunerStudio/speeduinoIDE.png){.align-center width=500}
 
 If you see only a single file or a small number of files then you haven't opened the entire project.
+
+## Installation - Manually Compiling using Platform IO
+
+Other way of manually compiling the Speeduino firmware is to use Platform IO. Using platform IO is usually easier than Arduino IDE, because everyhting is already configured in the platformio.ini -file and PIO automatically downloads missing components. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
+
+### Requirements
+
+-   A Windows, Mac or linux PC
+-  [PlatformIO](http://platformio.org/). Can be downloaded from [here](http://platformio.org/platformio-ide)
+-   A copy of the latest Speeduino codebase. See below.
+-   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
+
+### Downloading the firmware
+
+There are two methods for obtaining the Speeduino firmware:
+
+1.  Regular, stable code drops are produced and made as releases on Github. These can be found at: [Releases](https://github.com/noisymime/speeduino/releases)
+2.  If you want the latest and greatest (And occasionally flakiest) code, the git repository can be cloned and updated. 
+See [here](https://github.com/noisymime/speeduino)
+
+### Compiling the firmware
+
+TBD
+
+### Installing
+
+TBD
+
+### Older firmware releases
+
+If required, older firmware releases and details can be found at [Firmware_History](/en/Firmware_History "wikilink")
+
+### Verifying Firmware
+
+The firmware is now loaded onto your board and you are now able to move onto [Connecting to TunerStudio](/en/Connecting_to_TunerStudio "wikilink").
+
+Optionally, you may perform a manual verification of the firmware by using the Arduino IDE's Serial Monitor. This can be started by selecting 'Serial Monitor' from the Tools menu.
+
+In the window that appears, enter a capital "S" (no quotes) and press *Enter*. The Mega should respond with the year and month of the code version installed (xxxx.xx):
+
+    Speeduino 2017.03
+
+**NOTE**: Ensure the baud rate is set to 115200
+
+You can also enter "?" for a list of queries from your Mega.
