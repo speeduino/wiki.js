@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2022-04-01T11:57:08.065Z
+date: 2022-04-04T06:23:59.933Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -15,6 +15,8 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [IAT Density](/configuration/IAT_Density)
     -   [Barometric Correction](/configuration/Barometric_Correction)
     -   [Reset Control](/configuration/Reset_Control)
+    -   [Gauge Limits](/configuration/Gauge_Limits)
+    -   [I/O Summary](/configuration/IO_Summary)
 -   **Tuning Menu**
     -   [Fuel (VE) Table](/configuration/VE_table)
     -   [Acceleration Wizard](/configuration/Acceleration_Wizard)
