@@ -2,7 +2,7 @@
 title: Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2022-04-04T08:06:06.514Z
+date: 2022-04-04T08:06:59.006Z
 tags: boards
 editor: markdown
 dateCreated: 2020-01-06T01:53:34.029Z
@@ -116,10 +116,10 @@ Chart consist all pin numbers used in Speeduino Firmware for Miata / MX5 PNP boa
 | pinCoil2 | 41 | Pin for coil 2
 | pinCoil3 | 32 | Pin for coil 3
 | pinCoil4 | 33 | Pin for coil 4
-| pinCoil5 | 34 | Pin for coil 5 PLACEHOLDER value for now
+| pinCoil5 | 34 | Pin for coil 5 (PLACEHOLDER)
 | pinTrigger | 19 | The CAS pin
 | pinTrigger2 | 18 | The Cam Sensor pin
-| pinTPS | A2;//TPS input pin
+| pinTPS | A2 | TPS input pin
 | pinMAP | A5 | MAP sensor pin
 | pinIAT | A0 | IAT sensor pin
 | pinCLT | A1 | CLS sensor pin
@@ -128,7 +128,7 @@ Chart consist all pin numbers used in Speeduino Firmware for Miata / MX5 PNP boa
 | pinDisplayReset | 48 |  OLED reset pin
 | pinTachOut | 49 | Tacho output pin  (Goes to ULN2803)
 | pinIdle1 | 2 | Single wire idle control
-| pinBoost | 4;
+| pinBoost | 4 |
 | pinIdle2 | 4 | 2 wire idle control (Note this is shared with boost!!!)
 | pinFuelPump | 37 | Fuel pump output
 | Note that there is no stepper driver output on the PNP boards. These pins are unconnected and remain here just to prevent issues with random pin numbers occurring
