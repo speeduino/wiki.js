@@ -2,9 +2,9 @@
 title: Miata/MX5 89-95 NA6 PNP
 description: Plug and Play board for the NA Miata/MX5 model years '89 through to early '95
 published: true
-date: 2021-01-31T04:02:56.074Z
-tags: 
-editor: undefined
+date: 2022-04-04T08:06:06.514Z
+tags: boards
+editor: markdown
 dateCreated: 2020-01-06T01:53:34.029Z
 ---
 
@@ -100,3 +100,45 @@ The stock sensors can use preset calibrations within TunerStudio. The following 
 **Stock inlet air sensor (IAT)** - RX-7_AFM(S5 in AFM)
 
 ![sensor_calibrations.PNG](/img/MX5/sensor_calibrations.PNG){.align-center width=420}
+
+## Full pin number chart
+
+Chart consist all pin numbers used in Speeduino Firmware for Miata / MX5 PNP boards. Pin numbers are Arduino Mega pin numbers. This chart can be used as a guide when setting unused default outputs for some other use.
+
+| Pin name              | Pin number           | Description |
+|---------------------------|-----------------------|-----|
+| pinInjector1 | 11 | Output pin injector 1
+| pinInjector2 | 10 | Output pin injector 2
+| pinInjector3 | 9 | Output pin injector 3
+| pinInjector4 | 8 | Output pin injector 4
+| pinInjector5 | 14 | Output pin injector 5
+| pinCoil1 | 39 | Pin for coil 1
+| pinCoil2 | 41 | Pin for coil 2
+| pinCoil3 | 32 | Pin for coil 3
+| pinCoil4 | 33 | Pin for coil 4
+| pinCoil5 | 34 | Pin for coil 5 PLACEHOLDER value for now
+| pinTrigger | 19 | The CAS pin
+| pinTrigger2 | 18 | The Cam Sensor pin
+| pinTPS | A2;//TPS input pin
+| pinMAP | A5 | MAP sensor pin
+| pinIAT | A0 | IAT sensor pin
+| pinCLT | A1 | CLS sensor pin
+| pinO2 | A3 | O2 Sensor pin
+| pinBat | A4 | Battery reference voltage pin
+| pinDisplayReset | 48 |  OLED reset pin
+| pinTachOut | 49 | Tacho output pin  (Goes to ULN2803)
+| pinIdle1 | 2 | Single wire idle control
+| pinBoost | 4;
+| pinIdle2 | 4 | 2 wire idle control (Note this is shared with boost!!!)
+| pinFuelPump | 37 | Fuel pump output
+| Note that there is no stepper driver output on the PNP boards. These pins are unconnected and remain here just to prevent issues with random pin numbers occurring
+| pinStepperEnable | 15 | Enable pin for the DRV8825
+| pinStepperDir | 16 | Direction pin  for DRV8825 driver
+| pinStepperStep | 17 | Step pin for DRV8825 driver
+| pinFan | 35 | Pin for the fan output
+| pinLaunch | 12 | Can be overwritten below
+| pinFlex | 3 |  Flex sensor (Must be external interrupt enabled)
+| pinResetControl | 44 | Reset control output
+| pinVSS | 20 |
+| pinIdleUp | 48 |
+| pinCTPS | 47 |
