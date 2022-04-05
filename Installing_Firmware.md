@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2022-04-04T09:13:32.831Z
+date: 2022-04-05T07:41:57.558Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
@@ -144,7 +144,8 @@ Other way of manually compiling the Speeduino firmware is to use Platform IO. Us
 ### Requirements
 
 -   A Windows, Mac or linux PC
--  [PlatformIO](http://platformio.org/). Can be downloaded from [here](http://platformio.org/platformio-ide)
+-   Visual Studio Code. Can be downloaded from [here](https://code.visualstudio.com/)
+-  [PlatformIO](http://platformio.org/) Add-on in VS Code. To install, open VS Code and search for "Platform IO IDE" -extension (Ctrl+Shift+X) and click install.
 -   A copy of the latest Speeduino codebase. See below.
 -   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
 
@@ -156,28 +157,16 @@ There are two methods for obtaining the Speeduino firmware:
 2.  If you want the latest and greatest (And occasionally flakiest) code, the git repository can be cloned and updated. 
 See [here](https://github.com/noisymime/speeduino)
 
-### Compiling the firmware
+### Compiling and installing the firmware
 
-TBD
+-   Start the VS Code and let it open/update PlatformIO -extension, select *Explorer &gt; Open Folder* and navigate to the location you downloaded Speeduino
+-   The speeduino folder should now look like this on the workspace (platformio.ini is visible). Click on the PIO logo on the left panel:
+![pio_1.png](/img/TunerStudio/pio_1.png){.align-center}
+-   On the opened *project tasks* open the *megaatmega2560* and click *Build* to compile the FW:
+![pio_2.png](/img/TunerStudio/pio_2.png){.align-center}
+-   PIO should now download all the needed components to compile the firmware and compile it.
+![pio_3.png](/img/TunerStudio/pio_3.png){.align-center width=500}
+-   Once the compiling is done, you can click *Upload* and PIO will upload the speeduino code to the Arduino MEGA.
+![pio_4.png](/img/TunerStudio/pio_4.png){.align-center width=500}
 
-### Installing
-
-TBD
-
-### Older firmware releases
-
-If required, older firmware releases and details can be found at [Firmware_History](/en/Firmware_History "wikilink")
-
-### Verifying Firmware
-
-The firmware is now loaded onto your board and you are now able to move onto [Connecting to TunerStudio](/en/Connecting_to_TunerStudio "wikilink").
-
-Optionally, you may perform a manual verification of the firmware by using the Arduino IDE's Serial Monitor. This can be started by selecting 'Serial Monitor' from the Tools menu.
-
-In the window that appears, enter a capital "S" (no quotes) and press *Enter*. The Mega should respond with the year and month of the code version installed (xxxx.xx):
-
-    Speeduino 2017.03
-
-**NOTE**: Ensure the baud rate is set to 115200
-
-You can also enter "?" for a list of queries from your Mega.
+Platform IO can be used to compile Firmware for other platforms too by selecting correct MCU option from the *project tasks*. Currently Teensy 3.5, Teensy 3.6 and STM32F407 are supported to run the Firmware on car.
