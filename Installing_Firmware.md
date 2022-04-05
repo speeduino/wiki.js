@@ -2,7 +2,7 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2022-04-05T07:41:57.558Z
+date: 2022-04-05T07:43:03.015Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
@@ -139,7 +139,7 @@ If you see only a single file or a small number of files then you haven't opened
 
 ## Installation - Manually Compiling using Platform IO
 
-Other way of manually compiling the Speeduino firmware is to use Platform IO. Using platform IO is usually easier than Arduino IDE, because everyhting is already configured in the platformio.ini -file and PIO automatically downloads missing components. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
+Other way of manually compiling the Speeduino firmware is to use Platform IO. Using platform IO is usually easier than Arduino IDE, because everything is already configured in the platformio.ini -file and PIO automatically downloads missing components. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
 
 ### Requirements
 
