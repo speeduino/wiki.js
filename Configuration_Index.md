@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2022-04-04T08:14:52.845Z
+date: 2022-04-06T10:53:12.251Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -14,7 +14,7 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [Trigger Setup](/configuration/Trigger_Setup)
     -   [IAT Density](/configuration/IAT_Density)
     -   [Barometric Correction](/configuration/Barometric_Correction)
-    -   [Reset Control](/configuration/Reset_Control)
+    -   [Reset Control](/configuration/Reset_Control#settings-in-tuner-studio)
     -   [Gauge Limits](/configuration/Gauge_Limits)
     -   [I/O Summary](/configuration/IO_Summary)
     -   [Programmable Outputs](/configuration/Programmable_Outputs)
