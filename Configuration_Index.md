@@ -2,7 +2,7 @@
 title: Configuration Index
 description: Listing of all dialog configuration help pages
 published: true
-date: 2022-04-06T10:53:12.251Z
+date: 2022-04-07T14:03:55.213Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:02.999Z
@@ -22,7 +22,7 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [Fuel (VE) Table](/configuration/VE_table)
     -   [Acceleration Wizard](/configuration/Acceleration_Wizard)
     -   [AFR/O2](/configuration/O2)
-    -   [Rev Limits](/configuration/Rev_Limits)
+    -   [Engine Protection](/configuration/Engine_Protection)
     -   [Flex Fuel](/configuration/Flex_Fuel)
     -   [Staged Injection](/configuration/Staged_Injection)
 -   **Spark Menu**
