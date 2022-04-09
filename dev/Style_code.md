@@ -2,9 +2,9 @@
 title: Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2020-04-08T02:09:38.942Z
+date: 2022-04-09T23:21:39.625Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:27.875Z
 ---
 
@@ -42,6 +42,11 @@ In a C header (`.h`) file items must be arranged in the following sequence:
 All names should be meaningful and follow existing usage patterns if present.
 
 ## Naming Conventions
+
+### Language
+Speeduino uses UK/Australian English rather than US. Names and comments should reflect this.
+
+### Examples
 | Item                                        | Standard                                                     | Example                   |
 |---------------------------------------------|--------------------------------------------------------------|---------------------------|
 | Functions                                   | camelCase, lowercase first letter, no spaces or _            | `readSensor();`           |
