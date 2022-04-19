@@ -2,9 +2,9 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-03-13T01:03:47.721Z
+date: 2022-04-19T00:21:59.017Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
 ---
 
@@ -103,7 +103,7 @@ The ECU contains a dual onboard conditioner that can can be used with VR sensors
 When set for Hall sensors, this input will work with both the traditional ground switching sensor (the pullup resistor is on the board and does not need to be added) or a 0-12v signal as used on some GM vehicles. 
 
 #### Crank filter
-The board includes a variable hardware filter on the crank input that can be used to adjust the amount of capacitor filtering being used on this signal. This is designated `SW4` or `SW3` on the PCB and operates on both Hall and VR inputs. 
+The board includes a variable hardware filter on the crank input that can be used to adjust the amount of hardware filtering being used on this signal. This is designated `SW4` or `SW3` on the PCB and operates on both Hall and VR inputs. 
 
 > Changing this filter from the default setting (On/On) is not required in most cases. It should only be considered if the trigger is utilising 60+ teeth at crank speed. 
 {.is-warning}
@@ -128,6 +128,13 @@ Recommended values for the filters are shown below (By default both switches wil
 The Dropbear board uses a removable MAP card containing the sensor and a short hose running to the bulkhead connector on the enclosure. Currently only the default 0-250kpa sensor board is available, with higher range boards to be made available in the future. To use this MAP card, select the `Int.` (Internal) option on the MAP switch. 
 
 If you wish to use an external MAP sensor located in the engine bay, this switch should be to to `Ext.` and the sensors signal line should be connected to pin `C8` on the Black connector. The MAP card can be left in place or removed when the `Ext.` option is used. 
+
+### CAN terminator
+Dropbear units have a built-in CAN transceiver that can be connected directly to the CAN bus in your vehicle as the circuit is unterminated by default. If you wish to do any bench testing or are using an isolated CAN bus, you may wish to have this network terminated and there is a resistor on-board for this. 
+
+To enabled the terminating resistor a solder bridge must be added to the following jumper point
+
+![dropbear_can_terminator.jpg](/img/boards/dropbear_can_terminator.jpg){.align-center width=100}
 
 ### Stepper Driver
 By default the Dropbear unit is designed for use with PWM idle valves, however an optional stepper motor driver can be fitted. 
