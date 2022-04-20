@@ -2,7 +2,7 @@
 title: Yamaha VMax 1990+ pattern
 description: Information about the Yamaha VMax 1990+ pattern
 published: true
-date: 2022-04-13T09:08:36.408Z
+date: 2022-04-20T06:22:04.269Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-13T09:08:36.408Z
@@ -12,7 +12,7 @@ dateCreated: 2022-04-13T09:08:36.408Z
 ## Yamaha VMax 1990+ pattern
 ### Overview
 
-The Yamaha Vmax is a V4 engine with 70 degrees between the cylinder head. This makes it an oddfire engine since combustion is not always after the same number of degrees. The picture below shows the ignition pattern for this engine:
+The Yamaha Vmax is a V4 engine with 70 degrees between the cylinder heads. This makes it an oddfire engine since combustion is not always after the same number of degrees. The picture below shows the ignition pattern for this engine:
 ![vmax.png](/img/decoders/vmax.png){.align-center}
 
 As can be seen, combustion occurs after 180, 250, 180 and 110 degrees.
@@ -42,7 +42,7 @@ To ensure the trigger filter works correctly, the distance between the lobes is 
 
 ### Hardware modification
 
-The signal from the pick-up is quite noisy. Therefore, it requires 10K resistors on the VR+ and VR- line (before getting to the VR-conditioner), and the R10 on the VR-conditioner to be equipped with a 220nf ceramic capacitor acting as a shunt.
+The signal from the pick-up is quite noisy. Therefore, it requires 10K resistors on the VR+ and VR- line (before getting to the VR-conditioner), and the R10 on the VR-conditioner to be equipped with a 220nf ceramic capacitor to filter the generator noise.
 
 ### Tuner Studio Configuration
 ![vmax3.png](/img/decoders/vmax3.png){.align-center}
