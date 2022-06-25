@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2022-06-25T21:16:10.545Z
+date: 2022-06-25T21:16:39.914Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -211,7 +211,7 @@ Example IAC duty curve
 ![iac_pwm_duty.png](/idle/iac_pwm_duty.png)
 
 ### Idle RPM targets curve
-The RPM target curve is used to lookup what the idle RPM target will be for the a given engine temperature. This will be used in the PID feedback controller to keep IDLE RPM at this target. 
+The RPM target curve is used to lookup what the idle RPM target will be for the a given engine temperature. This will be used in the PID feedback controller to keep idle RPM at this target. 
 
 Example Idle RPM targets curve
 ![idle_rpm_targets.png](/idle/idle_rpm_targets.png)
