@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2022-06-25T20:34:46.349Z
+date: 2022-06-25T20:44:49.313Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -183,27 +183,27 @@ In the "Closed loop idle" part you can setup the PID feedback controller gains. 
 The gains are used to tune the PID controller. Look on the web for various manuals to tune PID controllers. 
 
 A PID controller calculates the folling formula every step.
-controller action = (Kp * error) + (Ki * accumulated error) - (Kd * (error - previous error)) 
+***(controller action = (Kp * error) + (Ki * accumulated error) - (Kd * (error - previous error)) )***
 
 Some hints while tuning. 
 P gain reacts directly on the error
 I gain reacts over time on a error, it slowly fills a buffer of errors to counteract any steady-state error left over by the P gain
 D gain reacts on the rate of change (speed) of the error. It dampens the too quick of a reaction of the controller. For example when it quickly moves toward the target set-point and tends to overshoot its target. 
 
-#### valve mimum/maximum duty cycle
+#### Valve mimum/maximum duty cycle
 The minimum and maximum duty cycle set how much of the 0% to 100% duty cycle is available for the open-loop + closed-loop feedback control. The PWM output is limited to those values. Make sure that the values are as wide a possible so the PID controller has some room to control the idle. If these values are to strict the controller can not keep the target RPM. These values are only fail-safe values and should never be reached with a properly tuned idle control system. 
 
 #### Integral reset TPS
-There are two integral reset values. These are used to reset the accumulated error part of the PID controller when activated. Essentially this disables most of the PID controller action when one or the other function is active. The first one is based on the TPS. Usually this set around 1% to 2%. If the TPS reads above this value the driver is using the throttle. To prevent the idle controller to counteract this throttle opening the accumulated error for the I gain will be reset to 0 continuously. 
+There are two integral reset values. These are used to reset the accumulated error part of the PID controller when activated. Essentially this disables most of the PID controller action when one or the other function is active. The first one is based on the TPS. Usually this is set around 1% to 2%. If the TPS reads above this value the driver is using the throttle. To prevent the idle controller to counteract this throttle opening the accumulated error for the I gain will be reset to 0 continuously. 
 
 #### Integral reset RPM hysteresis.
-The second one is based on RPM. If the car is in gear rolling to a traffic light with no pedal input the controller must also not try and compensate this higher RPM. The accumulated error will keep filling up. So the RPM value represents when the controller must start trying to keep idle again. It is calculated as RPM hysteresis value + RPM target. So when below this value the closed loop controller starts and tries to keep it on target again. 
+The second one is based on RPM. If the car is in gear rolling to a traffic light with no pedal input the controller must also not try and compensate this higher RPM. The accumulated error will keep filling up. So the RPM value represents when the controller must start trying to keep idle target RPM again. The threshold is calculated as "RPM hysteresis" + "idle RPM target". When below this value the closed loop controller starts and tries to keep it on target again. 
 
 Example: Target RPM from the target table is 750 RPM. RPM hysteresis value is set at 500 RPM. The controller starts trying to keep it at its target RPM again if the egine RPM is below 1250 RPM. 
 
-## Open loop table
-The open-loop curve is used to lookup what PWM duty cycle will be used for a certain engine temperature. This is just like the open-loop controller. Tune this curve first before starting open+closed loop tuning. Tune it so that the actual RPM is a bit above the desired RPM target value to prevent the engine stalling after engine braking. Tune this table while idle control is set to open-loop, or set all PID gains to 0 and tune it.
+## IAC PWM duty
+The IAC PWM curve is used to lookup what PWM duty cycle will be output to the idle control valve for a certain engine temperature. This is just like the open-loop idle function. Tune this curve first before starting open+closed loop tuning. Tune it so that the actual RPM is a bit above the desired RPM target value to prevent the engine stalling after engine braking. Tune this table while idle control is set to open-loop, or set all PID gains to 0 and tune it.
 
-### Idle RPM targets
+## Idle RPM targets
 The RPM target curve is used to lookup what the idle RPM target will be for the a given engine temperature. This will be used in the PID feedback controller to keep IDLE RPM at this target. 
 
