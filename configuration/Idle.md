@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2022-06-25T20:44:49.313Z
+date: 2022-06-25T20:46:33.111Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -201,9 +201,9 @@ The second one is based on RPM. If the car is in gear rolling to a traffic light
 
 Example: Target RPM from the target table is 750 RPM. RPM hysteresis value is set at 500 RPM. The controller starts trying to keep it at its target RPM again if the egine RPM is below 1250 RPM. 
 
-## IAC PWM duty
+### IAC PWM duty curve
 The IAC PWM curve is used to lookup what PWM duty cycle will be output to the idle control valve for a certain engine temperature. This is just like the open-loop idle function. Tune this curve first before starting open+closed loop tuning. Tune it so that the actual RPM is a bit above the desired RPM target value to prevent the engine stalling after engine braking. Tune this table while idle control is set to open-loop, or set all PID gains to 0 and tune it.
 
-## Idle RPM targets
+### Idle RPM targets curve
 The RPM target curve is used to lookup what the idle RPM target will be for the a given engine temperature. This will be used in the PID feedback controller to keep IDLE RPM at this target. 
 
