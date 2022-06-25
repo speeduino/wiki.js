@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2022-06-25T20:53:31.429Z
+date: 2022-06-25T21:16:10.545Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -179,8 +179,11 @@ In the idle control menu first select the "PWM Open+Closed loop" or the "Stepper
 
 In the "Closed loop idle" part you can setup the PID feedback controller gains. P,I,D. 
 
+Example idle settings window.
+![idle_settings.png](/idle/idle_settings.png)
+
 #### PID Gains
-The gains are used to tune the PID controller. Look on the web for various manuals to tune PID controllers. 
+The gains are used to tune the PID controller. Look on the web for various manuals to tune PID controllers. The Idle PID controller uses a setpoint (idle Target RPM) and a Measurement (Crank position sensor) to calculate an output over time to keep the engine RPM as close as possible to the Target RPM. How aggressive the controller tries to keep this target is determined by the PID gains.
 
 A PID controller calculates the following formula every step.
 ***(controller action = (Kp * error) + (Ki * accumulated error) - (Kd * (error - previous error)) )***
@@ -197,13 +200,18 @@ The minimum and maximum duty cycle set how much of the 0% to 100% duty cycle is 
 There are two integral reset values. These are used to reset the accumulated error part of the PID controller when activated. Essentially this disables most of the PID controller action when one or the other function is active. The first one is based on the TPS. Usually this is set around 1% to 2%. If the TPS reads above this value the driver is using the throttle. To prevent the idle controller to counteract this throttle opening the accumulated error for the I gain will be reset to 0 continuously. 
 
 #### Integral reset RPM hysteresis.
-The second one is based on RPM. If the car is in gear rolling to a traffic light with no pedal input the controller must also not try and compensate this higher RPM. The accumulated error will keep filling up. So the RPM value represents when the controller must start trying to keep idle target RPM again. The threshold is calculated as "RPM hysteresis" + "idle RPM target". When below this value the closed loop controller starts and tries to keep it on target again. 
+The second one is based on RPM. If the car is in gear rolling to a traffic light with no pedal input the controller must also not try and compensate this higher RPM by closing the idle valve, even when the TPS reads 0%. The accumulated error will keep filling up. So the RPM value represents when the controller must start trying to keep idle target RPM again. The threshold is calculated as "RPM hysteresis" + "idle RPM target". When below this value the closed loop controller starts and tries to keep it on target again. 
 
 * Example: Target RPM from the target curve is 750 RPM. RPM hysteresis value is set at 500 RPM. The controller starts trying to keep it at its target RPM again if the egine RPM is below 1250 RPM. 
 
 ### IAC PWM duty curve
 The IAC PWM curve is used to lookup what PWM duty cycle will be output to the idle control valve for a certain engine temperature. This is just like the open-loop idle function. Tune this curve first before starting open+closed loop tuning. Tune it so that the actual RPM is a bit above the desired RPM target value to prevent the engine stalling after engine braking. Tune this table while idle control is set to open-loop, or set all PID gains to 0 and tune it.
 
+Example IAC duty curve
+![iac_pwm_duty.png](/idle/iac_pwm_duty.png)
+
 ### Idle RPM targets curve
 The RPM target curve is used to lookup what the idle RPM target will be for the a given engine temperature. This will be used in the PID feedback controller to keep IDLE RPM at this target. 
 
+Example Idle RPM targets curve
+![idle_rpm_targets.png](/idle/idle_rpm_targets.png)
