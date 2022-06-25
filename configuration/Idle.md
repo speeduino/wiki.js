@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2022-06-25T20:49:55.894Z
+date: 2022-06-25T20:52:27.142Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -199,7 +199,7 @@ There are two integral reset values. These are used to reset the accumulated err
 #### Integral reset RPM hysteresis.
 The second one is based on RPM. If the car is in gear rolling to a traffic light with no pedal input the controller must also not try and compensate this higher RPM. The accumulated error will keep filling up. So the RPM value represents when the controller must start trying to keep idle target RPM again. The threshold is calculated as "RPM hysteresis" + "idle RPM target". When below this value the closed loop controller starts and tries to keep it on target again. 
 
-Example: Target RPM from the target table is 750 RPM. RPM hysteresis value is set at 500 RPM. The controller starts trying to keep it at its target RPM again if the egine RPM is below 1250 RPM. 
+* Example: Target RPM from the target curve is 750 RPM. RPM hysteresis value is set at 500 RPM. The controller starts trying to keep it at its target RPM again if the egine RPM is below 1250 RPM. 
 
 ### IAC PWM duty curve
 The IAC PWM curve is used to lookup what PWM duty cycle will be output to the idle control valve for a certain engine temperature. This is just like the open-loop idle function. Tune this curve first before starting open+closed loop tuning. Tune it so that the actual RPM is a bit above the desired RPM target value to prevent the engine stalling after engine braking. Tune this table while idle control is set to open-loop, or set all PID gains to 0 and tune it.
