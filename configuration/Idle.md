@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2022-06-25T20:52:27.142Z
+date: 2022-06-25T20:53:31.429Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -186,9 +186,9 @@ A PID controller calculates the following formula every step.
 ***(controller action = (Kp * error) + (Ki * accumulated error) - (Kd * (error - previous error)) )***
 
 Some hints while tuning. 
-P gain reacts directly on the error
-I gain reacts over time on a error, it slowly fills a buffer of errors to counteract any steady-state error left over by the P gain
-D gain reacts on the rate of change (speed) of the error. It dampens the too quick of a reaction of the controller. For example when it quickly moves toward the target set-point and tends to overshoot its target. 
+* P gain reacts directly on the error
+* I gain reacts over time on a error, it slowly fills a buffer of errors to counteract any steady-state error left over by the P gain
+* D gain reacts on the rate of change (speed) of the error. It dampens the too quick of a reaction of the controller. For example when it quickly moves toward the target set-point and tends to overshoot its target. 
 
 #### Valve minimum/maximum duty cycle
 The minimum and maximum duty cycle set how much of the 0% to 100% duty cycle is available for the open-loop + closed-loop feedback control. The PWM output is limited to those values. Make sure that the values are as wide a possible so the PID controller has some room to control the idle. If these values are to strict the controller can not keep the target RPM. These values are only fail-safe values and should never be reached with a properly tuned idle control system. 
