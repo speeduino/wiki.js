@@ -2,9 +2,9 @@
 title: SD Card logging
 description: 
 published: true
-date: 2022-03-20T22:48:20.396Z
-tags: 
-editor: undefined
+date: 2022-09-05T12:45:20.939Z
+tags: sd, logging, dropbear
+editor: markdown
 dateCreated: 2021-10-12T05:18:25.120Z
 ---
 
@@ -22,13 +22,13 @@ Whilst not required, logging can be combined with a Real Time Clock (RTC)
 ## How to use
 ### Setup SD Card / Logging options
 
-![sd-options.png](/img/sd_card/sd-options.png)
+![SD Logging Options](/img/sd_card/sd-options.png){.align-center width=450}
 
 #### Real Time Clock (RTC)
-![sd-rtc.png](/img/sd_card/sd-rtc.png)
+![Real Time Clock](/img/sd_card/sd-rtc.png){.align-center width=450}
 
 ### Reading log files
-![sd-browse.png](/img/sd_card/sd-browse.png)
+![Browsing Log files](/img/sd_card/sd-browse.png){.align-center width=450}
 
 
 ## File sizes
