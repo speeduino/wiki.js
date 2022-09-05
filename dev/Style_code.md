@@ -2,9 +2,9 @@
 title: Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2022-04-09T23:21:39.625Z
+date: 2022-04-09T23:21:51.050Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:54:27.875Z
 ---
 

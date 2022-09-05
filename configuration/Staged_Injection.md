@@ -2,9 +2,9 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2022-03-21T03:10:32.933Z
+date: 2022-03-21T03:10:39.010Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:54:09.173Z
 ---
 

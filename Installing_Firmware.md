@@ -2,9 +2,9 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2022-04-05T07:43:03.015Z
+date: 2022-04-05T07:43:11.798Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:01.522Z
 ---
 

@@ -2,9 +2,9 @@
 title: Thermo fan
 description: Control of a cooling fan relay
 published: true
-date: 2022-04-01T11:26:22.708Z
-tags: aux outputs, tuning
-editor: markdown
+date: 2022-04-01T11:26:31.076Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-14T02:17:03.743Z
 ---
 

@@ -2,9 +2,9 @@
 title: Configuring TunerStudio project options
 description: 
 published: true
-date: 2022-04-01T21:11:35.064Z
+date: 2022-04-01T21:11:41.035Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:04.245Z
 ---
 

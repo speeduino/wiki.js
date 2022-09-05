@@ -2,9 +2,9 @@
 title: Gauge Limits
 description: 
 published: true
-date: 2022-04-04T06:30:02.141Z
+date: 2022-04-04T06:30:07.841Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2022-04-04T06:30:02.141Z
 ---
 

@@ -2,9 +2,9 @@
 title: Idle advance
 description: Controlling idle speed with changes to advance
 published: true
-date: 2022-09-05T00:31:19.397Z
-tags: idle, tuning
-editor: markdown
+date: 2022-09-05T00:31:29.706Z
+tags: 
+editor: undefined
 dateCreated: 2020-01-14T00:45:09.872Z
 ---
 
