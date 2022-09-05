@@ -34,8 +34,8 @@ jobs:
           
       - name: Preparing directories
         run: |
-          cd $GITHUB_WORKSPACE/wiki.js
-          sudo ln -s /home/travis/build/speeduino/wiki.js/img /img
+          cd $GITHUB_WORKSPACE
+          sudo ln -s $GITHUB_WORKSPACE/img /img
           
       - name: Building PDF
         run: sudo ./make_pdf.sh
