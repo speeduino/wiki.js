@@ -2,9 +2,9 @@
 title: std_manual
 description: 
 published: true
-date: 2021-08-10T13:46:06.592Z
+date: 2022-09-05T12:46:35.998Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-16T03:50:01.907Z
 ---
 
@@ -29,10 +29,10 @@ dateCreated: 2020-01-16T03:50:01.907Z
 ./configuration/Spark_Settings.md 
 ./configuration/Dwell.md
 ./configuration/IAT_Retard.md
-./configuration/Cranking.md
 ./configuration/Priming.md
-./configuration/Warmup.md
+./configuration/Cranking.md
 ./configuration/ASE.md
+./configuration/Warmup.md
 ./configuration/Idle.md
 ./configuration/IdleAdvance.md
 ./configuration/Thermo_fan.md
@@ -40,10 +40,11 @@ dateCreated: 2020-01-16T03:50:01.907Z
 ./configuration/Fuel_pump.md
 ./configuration/Boost_Control.md
 ./configuration/Nitrous_Control.md
-./configuration/VVT.md
 ./configuration/VSS.md
+./configuration/VVT.md
 ./configuration/Sensor_Calibration.md
 ./configuration/Auxillary_IO_Configuration.md
+./SD_logging.md
 ./decoders/Missing_Tooth.md
 ./decoders/Missing_Tooth_(cam).md
 ./decoders/Dual_Wheel.md
@@ -60,4 +61,5 @@ dateCreated: 2020-01-16T03:50:01.907Z
 ./decoders/Subaru_36-2-2-2.md
 ./boards/V04.md
 ./boards/V03.md
+./boards/Dropbear.md
 ./footer.md
