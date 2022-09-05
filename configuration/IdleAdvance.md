@@ -2,9 +2,9 @@
 title: Idle advance
 description: Controlling idle speed with changes to advance
 published: true
-date: 2020-04-08T02:08:05.954Z
-tags: 
-editor: undefined
+date: 2022-09-05T00:31:19.397Z
+tags: idle, tuning
+editor: markdown
 dateCreated: 2020-01-14T00:45:09.872Z
 ---
 
@@ -28,6 +28,8 @@ Idle speed can be controlled without the use of an idle valve (IACV) by adjustim
 
 ### Idle Advance curve
 This curve specifies the amount of timing adjustment (Added mode) or the absoolute advance amount (Switched mode) that will be used based on the delta (error) from target RPM. 
+
+The RPM delta is equal to: `[Idle Target RPM] - [Current RPM]`
 
 Generally timing will be added (positive values) in order to try and increase RPM and timing will be removed (Negative values) to redue RPM.
 
