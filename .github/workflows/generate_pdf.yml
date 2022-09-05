@@ -39,3 +39,8 @@ jobs:
           
       - name: Building PDF
         run: sudo ./make_pdf.sh
+        
+      - name: Upload PDF
+        run: |
+          curl -v https://speeduino.com:2078 || true
+          curl -v --tlsv1.2 --ipv4 --user "speeduino_manual@speeduino.com:$WEB_PWD" --basic -T "./offline/Speeduino_manual.pdf" "https://speeduino.com:2078/Speeduino_manual.pdf"
