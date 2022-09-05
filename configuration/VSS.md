@@ -2,9 +2,9 @@
 title: VSS and Gear Detection
 description: 
 published: true
-date: 2021-09-12T10:02:03.692Z
-tags: 
-editor: undefined
+date: 2022-09-05T12:42:41.309Z
+tags: gear detection, speed, tuning, vss
+editor: markdown
 dateCreated: 2020-05-12T02:08:21.817Z
 ---
 
@@ -14,7 +14,7 @@ Speeduino includes Vehicle Speed Sensing option that senses speed by measuring p
 
 ## Settings
 
-![vss_settings.png](/img/accessories/vss_settings.png)
+![Vehicle Speed Settings](/img/accessories/vss_settings.png){.align-center width=450}
 
 -   **VSS input mode** - Select between "Pulses per KM" or "Pulses per mile" depending on which one is preferred. If VSS is not used, set this to Off.
 -   **VSS Pin** - Select what input pin is used for VSS signal.
