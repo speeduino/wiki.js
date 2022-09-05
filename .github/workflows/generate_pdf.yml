@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install texlive-fonts-recommended lmodern texlive-xetex texlive-fonts-extra pandoc
+
+      - name: Installing Pandoc
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb
+          sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb
+          
+      - name: Preparing directories
+        run: |
+          cd $GITHUB_WORKSPACE/wiki.js
+          sudo ln -s /home/travis/build/speeduino/wiki.js/img /img
+          
+      - name: Building PDF
+        run: sudo ./make_pdf.sh
