@@ -2,9 +2,9 @@
 title: Style Guide
 description: Style guidelines used within the Speeduino firmware
 published: true
-date: 2022-04-09T23:21:51.050Z
+date: 2022-09-08T05:39:31.642Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:27.875Z
 ---
 
@@ -13,6 +13,24 @@ The Speeduino firmware aspires to a common, unified approach to code layout base
 
 ## A note on MISRA compliance
 Speeduino strives for compliance to the MISRA C:2012 coding standard and many of the conventions below are to align with this. A full description of the requirments of MISRA C:2012 is beyond the scope of this document, but the code does include a MISRA scanning script based on cppcheck that you can use to verify your code changes.
+
+### MISRA Scanning
+A MISRA scanning script is available for reviewing the current violations in the code. 
+
+**Requirements**:
+* [cppcheck](https://github.com/danmar/cppcheck) version 2.7 or above
+* Python 3.x
+* A Unix-like environment (Linux, Mac or WSL on Windows)
+
+**Usage:**
+* Enter the `speeduino/misra` directory of the source code
+* Run `./check_misra.sh` with any of the below optional arguments:
+	* `-s`, `--source=`: Source code directory to scan (Defaults to `../speeduino/`)
+  * `-e`, `--exts=`: File extensions (Defaults to `ino`)
+  * `-o`, `--out=`: Output directory (Defaults to `.results`)
+  * `-c`, `--cppcheck=`: Location of cppcheck binary (No default, assumes `cppcheck` is within the users `$PATH`
+  * `-q`, `--quiet`: Quiet, will not output the scan results to stout, only to the results file
+
 
 # Details
 ## File Structure
