@@ -8,8 +8,7 @@ editor: undefined
 dateCreated: 2020-01-06T01:54:30.269Z
 ---
 
-ECU Connector Reference
------------------------
+# ECU Connector Reference
 
 In an effort to simplify the design of new boards, this page is a reference of known ECU connector part numbers. Many times these can be difficult to find and are closely guarded by many wiring specialists who have significant price markups without supplying the manufacturer part numbers etc.
 

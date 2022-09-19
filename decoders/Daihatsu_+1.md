@@ -22,7 +22,7 @@ Simply select the Daihatsu +1 trigger option.
 
 ## Timing adjustment
 
-In most cases altering the trigger angle should not be required, however there is some small variation between the OEM versions of thIs trigger so some minor adjustment may be needed. Once you have the engine started, set a fixed ignition angle and check the timing with a timing light. If this is a few degrees out (&lt;20°), adjust the trigger angle here. If this is more than 20° out, there may be a larger problem.
+In most cases altering the trigger angle should not be required, however there is some small variation between the OEM versions of this trigger so some minor adjustment may be needed. Once you have the engine started, set a fixed ignition angle and check the timing with a timing light. If this is a few degrees out (&lt;20°), adjust the trigger angle here. If this is more than 20° out, there may be a larger problem.
 
 Trigger Pattern
 ---------------

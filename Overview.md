@@ -13,7 +13,7 @@ So what's the go?
 
 The Speeduino project aims to create a fully featured, totally open source (Hardware and firmware) Engine Management System (EMS) / Engine Control Unit (ECU) on top of the [| Arduino Mega](http://arduino.cc/en/Main/arduinoBoardMega2560) platform. In order of priority the specific aims are:
 
--   Low barrier to entry (ie price and availability of hardware, clear, well documented code, easily accessible software development etc)
+-   Low barrier to entry (ie. price and availability of hardware, clear, well documented code, easily accessible software development etc)
 -   Capabilities / Features
 -   Simplicity of development
 

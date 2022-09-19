@@ -42,7 +42,7 @@ To ensure the trigger filter works correctly, the distance between the lobes is 
 
 ### Hardware modification
 
-The signal from the pick-up is quite noisy. Therefore, it requires 10K resistors on the VR+ and VR- line (before getting to the VR-conditioner), and the R10 on the VR-conditioner to be equipped with a 220nf ceramic capacitor to filter the generator noise.
+The signal from the pick-up is quite noisy. Therefore, it requires 10K resistors on the VR+ and VR- line (before getting to the VR conditioner), and the R10 on the VR conditioner to be equipped with a 220nf ceramic capacitor to filter the generator noise.
 
 ### Tuner Studio Configuration
 ![vmax3.png](/img/decoders/vmax3.png){.align-center}
@@ -50,7 +50,7 @@ The signal from the pick-up is quite noisy. Therefore, it requires 10K resistors
 **Fields:**
 
   - **Trigger Angle:** Since we sync on the first lobe after the sync lobe, this should be 70
-  - **Trigger edge:** For an inverting vr-conditioner, use `FALLING`, for a non-inverting use `RISING`
+  - **Trigger edge:** For an inverting VR conditioner, use `FALLING`, for a non-inverting use `RISING`
   - **Trigger filter:** Set to your preference, but Aggressive is likely going to cause sync issues
 
 ### Further details

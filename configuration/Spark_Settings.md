@@ -32,7 +32,7 @@ To generate a base timing map that will give you better numbers than the default
 ### Rotary modes
 ![rotary_settings.png](/img/ignition/rotary_settings.png){.align-center width=450}
 
-Speeduino supports the ignition configurations found on FC/FD RX7 and RX8 engines and this option becomes avaialble when the Rotary ignition mode is selected above. The leading / trailing split angle can be set as a function of the current engine load.
+Speeduino supports the ignition configurations found on FC/FD RX7 and RX8 engines and this option becomes available when the Rotary ignition mode is selected above. The leading / trailing split angle can be set as a function of the current engine load.
 
 - **FC** - Outputs are configured for the Leading/Trailing setup that was used on FC RX7s. Wiring is:
   - **IGN1** - Leading (wasted) sparks

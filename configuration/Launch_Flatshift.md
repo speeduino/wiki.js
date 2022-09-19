@@ -26,14 +26,14 @@ Both the 2-step and flatshift modes have hard and soft cut states. When under so
 
 ### Flat shift
 * **Soft rev window** - This is an RPM window below the `Launch / Flat shift switch RPM` point during which an alternative timing will be applied. Typical values are 100 to 1000rpm. 
-* **Soft limit absolute timing** - The abosloute timing that will be used when in the flat shift soft RPM window
+* **Soft limit absolute timing** - The absolute timing that will be used when in the flat shift soft RPM window
 
 ### Clutch settings
 Both launch and flat shift require a clutch input in order to activate. This is generally a ground active type switch attached behind the clutch pedal.
 
 * **Clutch input pin** - The Arduino pin that the switch is wired to. Most setups should leave this as the Board Default
 * **Clutch enabled when switch is** - The polarity of the clutch input. Typically this should be set to `LOW` for a switch that connects to ground when activated 
-* **Clutch pullup resistor** - Whether the internal pullup will be enabled on this input. Typicall this should be set to `Pullup` if you have selected `LOW` for the above setting
+* **Clutch pullup resistor** - Whether the internal pullup will be enabled on this input. Typical this should be set to `Pullup` if you have selected `LOW` for the above setting
 * **Launch / Flat shift switch RPM** - The ECU will use the RPM point the clutch is engaged at to determine whether it is in launch mode or flatshift. If the clutch is pressed above this RPM value, it will be assumed to be a flat shift, below it will be considered a launch
 
 > The engagement point of the clutch switch can make a significant difference in the applcation of launch control. The switch should trigger as close to the clutches take up point as possible for the fastest response. 

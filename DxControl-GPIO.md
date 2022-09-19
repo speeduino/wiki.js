@@ -4,8 +4,8 @@ description:
 published: true
 date: 2021-01-20T11:10:21.994Z
 tags: 
-editor: markdown
-dateCreated: 2020-01-06T01:37:08.537Z
+editor: undefined
+dateCreated: 2020-01-06T01:37:12.223Z
 ---
 
 dxControl-GPIO, A GPIO Controller for Speeduino
@@ -15,9 +15,9 @@ By Darren Siepka
 
 ### What is it?
 
-dxControl-GPIO are a family of multipurpose general programmable input and output modules that can be used both in conjunction with the Speeduino engine ECU or standalone. The modules are programmed via Tunerstudio either via the serial port or over the integrated CanBus network(certain variants only)
+dxControl-GPIO are a family of multipurpose general programmable input and output modules that can be used both in conjunction with the Speeduino engine ECU or standalone. The modules are programmed via TunerStudio either via the serial port or over the integrated CAN bus network(certain variants only)
 
-The modules can use several different processor board types, including different arduino, teensy and stm32.
+The modules can use several different processor board types, including different Arduino, Teensy and STM32.
 
 Io operations are programmed with logic, &lt; ,&gt;,= and bitwise AND . some variants offer 2 or even 3 connecting logic conditions.
 
@@ -25,7 +25,7 @@ Io operations are programmed with logic, &lt; ,&gt;,= and bitwise AND . some var
 
 ### GPIO MINI V0.001
 
-This firmware supports up to 16 output channels , 16 input channels and 16 analog channels from local sources subject to MCU capability. MCU supported are currently Arduino Pro-Mini , Arduino Uno and Arduino Mega2560. The Output channels can be activated via one condition with logical operations of &lt; , &gt; and = Only onboard(local) io are supported in this version.
+This firmware supports up to 16 output channels , 16 input channels and 16 analog channels from local sources subject to MCU capability. MCU supported are currently Arduino Pro-Mini , Arduino Uno and Arduino Mega2560. The Output channels can be activated via one condition with logical operations of &lt; , &gt; and = Only onboard(local) I/O are supported in this version.
 
 ### GPIO MINI V0.002
 
@@ -37,34 +37,34 @@ This firmware allows Speeduino to access the GPIO device's inputs(both digital a
 
 ### GPIO MINI V3.001
 
-This firmware has substantial improvements to the speed and stability of the Serial3 link with Speeduino. It also introduced the Display code module, which gives support for two displays of either I2C or SPI type. There are a few dispaly types pre configured and the list is growing. Current support
+This firmware has substantial improvements to the speed and stability of the Serial3 link with Speeduino. It also introduced the Display code module, which gives support for two displays of either I2C or SPI type. There are a few display types pre configured and the list is growing. Current support
 
 1.  SSD1306 , Hardware I2C
 2.  SSH1106 , Hardware I2C
 3.  SSH1106 , Hardware SPI
 4.  SSH1106 , Hardware SPI
 
-The display section offer users the ability to easily integrate a custom display solution without worrying about timing or the serial protocols itself. All GPIO system realtime variables are available to use withon the display routine.
+The display section offer users the ability to easily integrate a custom display solution without worrying about timing or the serial protocols itself. All GPIO system realtime variables are available to use within the display routine.
 
 ### GPIO STD V1.000
 
 This firmware offer the first of a range of BCU or "body control unit" features.
 
-Max number of input pins supported is 32 (subject to mcu limitations)
+Max number of input pins supported is 32 (subject to MCU limitations)
 
-Max number of output pins supported is 32 (subject to mcu limitations)
+Max number of output pins supported is 32 (subject to MCU limitations)
 
-Max number of analog inputs supported is 16 (subject to mcu limitations)
+Max number of analog inputs supported is 16 (subject to MCU limitations)
 
-The firmware supports up to 2 canbus modules via spi(mcp2515) specified as CAN0 and CAN1
+The firmware supports up to 2 CAN bus modules via SPI(mcp2515) specified as CAN0 and CAN1
 
 CAN0 is used for broadcast and other general use
 
 CAN1 is for OBD2 use. The port offers a wide range of data to any STD code reader. In this firmware only realtime data is available.If the Speeduino ECU is connected to GPIO then all the supported realtime from The Speeduino will be available to the OBD2 reader.
 
-Inputs can be linked to canbus addresses and have their status periodically broadcast at a selectable rate on CAN0.
+Inputs can be linked to CAN bus addresses and have their status periodically broadcast at a selectable rate on CAN0.
 
-Outputs can be linked to a Canbus address and have their status changed upon reciept of a valid value on CAN0.They can also broadcast on a selectable can address, at a selectable rate the status of the output including and error or fault detection that the output stage may support.
+Outputs can be linked to a CAN bus address and have their status changed upon receipt of a valid value on CAN0.They can also broadcast on a selectable can address, at a selectable rate the status of the output including and error or fault detection that the output stage may support.
 
 This Firmware also offers Generic 11bit broadcasting of any outchannel data.
 
@@ -73,11 +73,11 @@ Software installation
 
 You can download the latest versions of GPIO [here](https://github.com/Autohome2/Speeduino-GPIO)
 
-If you are installing one of the versions with CANBUS you will need to install the libraries to your Arduino IDE if you dont have a current version installed.The libraries are included in the download.
+If you are installing one of the versions with CAN bus you will need to install the libraries to your Arduino IDE if you don't have a current version installed. The libraries are included in the download.
 
 The libraries used are:
 
-Canbus .This is for the mcp2515 can modules if used. This library is included in the libraries folder in the GPIO git download.
+Canbus from CoryJFowler.This is for the mcp2515 can modules if used. This library is included in the libraries folder in the GPIO git download.
 
 U8g2. This is the display library used.This library is included in the libraries folder in the GPIO git download.
 
@@ -85,27 +85,20 @@ Flexcan from Pawelsky( for Teensy onboard Can)[1](https://github.com/pawelsky/Fl
 
 The flexcan library is included in the installation of Teensyduino into the Arduino IDE[2](https://www.pjrc.com/teensy/td_download.html)
 
-The Tunerstudio INI file and base tune can be found in the reference folder for the specific variant you wish to install in the download . NOTE it is very important to install the correct ini and base msq for the selected firmware. A demo dash fie for tunerstudio may also be provided.
+The TunerStudio .ini file and base tune can be found in the reference folder for the specific variant you wish to install in the download. NOTE it is very important to install the correct .ini and base .msq for the selected firmware. A demo dash fie for TunerStudio may also be provided.
 
 Realtime Data Organisation
 --------------------------
 
-Some versions of GPIO support the ability to access the realtime data from the GPIO I/O ports remotely via Either the Serial3 port or Canbus (see model versions). The data is stuctured as an offset address to the GPIO device real canID.
+Some versions of GPIO support the ability to access the realtime data from the GPIO I/O ports remotely via Either the Serial3 port or CAN bus (see model versions). The data is structured as an offset address to the GPIO device real canID.
 
 -   1 - 32 The Digital Inputs 1 through 32. These Send a value of 1023 if ON and 0 when OFF.
 
-<!-- -->
-
 -   33 - 64 The Digital Outputs 1 through 32. These have an ON value of 1023 and an Off value of 0.
-
-<!-- -->
 
 -   65 - 81 The Analog Inputs 0 through 15. These Send a value ranging from 0 to 1024.
 
-example:
-
-`if the GPIO real canID == 0x105 (261dec)`
-`to request analog 0 you would request data from 261dec + 65dec == 326dec == 0x146`
+example: if the GPIO `real canID == 0x105 (261dec)`, to request analog `0` you would request data from `261dec + 65dec == 326dec == 0x146`
 
 The data is located in bytes 0 and 1 of the 8 transmitted , 0 being lsb 1 being msb.
 
@@ -116,7 +109,7 @@ NOTE! The following information covers many versions of the GPIO family some Con
 
 ### Device Configuration
 
-Device configuration can be found in the Tunerstudio Tab "Settings" then select "device configuration"
+Device configuration can be found in the TunerStudio Tab "Settings" then select "device configuration"
 
 ![](Gpio_config_2.jpg "Gpio_config_2.jpg")
 
@@ -134,16 +127,16 @@ Select the appropriate mcu and board type for your GPIO unit.The firmware downlo
 
 <img src="Speeduino_connection_2.jpg" title="Speeduino_connection_2.jpg" alt="Speeduino_connection_2.jpg" width="400" />
 
--   **Speeduino Realtime Base CanBus Address** - The HEX 11bit Can address of the Speeduino ECU
+-   **Speeduino Realtime Base CAN Bus Address** - The HEX 11bit Can address of the Speeduino ECU
 -   **GPIO OBD Address** - The HEX 11bit CanBus address of the GPIO OBD port
 
 ### Project Properties
 
-In project Properties you can enable the Hardware Testpage and CAN_COMMANDS. Select "File", "Vehicle Projects", "Project Properties".
+In project Properties you can enable the Hardware Test page and CAN_COMMANDS. Select "File", "Vehicle Projects", "Project Properties".
 
 <img src="Project_properties_select.jpg" title="Project_properties_select.jpg" alt="Project_properties_select.jpg" width="800" />
 
-Yuo can now enable/disable the appropriate options. The project will reload after you confirm the changes.
+You can now enable/disable the appropriate options. The project will reload after you confirm the changes.
 
 <img src="Project_properties_gpio.jpg" title="Project_properties_gpio.jpg" alt="Project_properties_gpio.jpg" width="800" />
 
@@ -159,28 +152,24 @@ This page enables the configuration of the Universal Outputs.
 
 <img src="Universal_outputs1_16.jpg" title="Universal_outputs1_16.jpg" alt="Universal_outputs1_16.jpg" width="500" />
 
--   *' Output port*' - This is the output port on the GPIO device . To use first select a port from the output port list ,configure the setting for that port and then click "burn" to burn the changes to your GPIO device(if online)
+- `Output port` - This is the output port on the GPIO device . To use first select a port from the output port list, configure the setting for that port and then click "burn" to burn the changes to your GPIO device(if online)
 
-<!-- -->
+-  `Port settings`
+   -  `Enabled` - Enables this output port
+   -  `Power on value` - The active state of the port when the GPIO  device starts up
+   -   `Active value` - The active output state(Active High or Active Low)
 
--   *' Port settings*'
-    -   -   *' Enabled*' - Enables this output port
-        -   *' Power on value*' - The active state of the port when the GPIO device starts up
-        -   *' Active value*' - The active output state(Active High or Active Low)
-
-<!-- -->
-
--   *' Active conditions*'
-    -   -   *' Controller*' - This is fixed as the name of the GPIO device in use
-        -   *' Output channel*' - This is either the realtime output data from the local GPIO device or data from External devices[(see external data configuration)]((see_external_data_configuration) "wikilink")).
-        -   *' Logic option*' - The logical operation on the source value compared to the threshold , select &lt;,&gt;, =, or &
-        -   *' Threshold*' - The Trigger threshold for the output vs the source data.
-        -   ''' Hysteresis ''' - The threshold used with the threshold value
-        -   ''' Linking Logical condition ''' This is the logical operation(if applicable/available) between the first and second data source.
-        -   *' Output channel(second data source)*' - This is either the realtime output data from the local GPIO device or data from External devices[(see external data configuration)]((see_external_data_configuration) "wikilink")).
-        -   *' Logic option(second data source)*' - The logical operation on the source value compared to the threshold , select &lt;,&gt;, =, or &
-        -   *' Threshold(second data source)*' - The Trigger threshold for the output vs the source data.
-        -   ''' Hysteresis(second data source) ''' - The threshold used with the threshold value
+-  `Active conditions`
+    -  `Controller` - This is fixed as the name of the GPIO device in use
+    -  `Output channel` - This is either the realtime output data from the local GPIO device or data from External devices[(see external data configuration)]((see_external_data_configuration) "wikilink")).
+    -  `Logic option` - The logical operation on the source value compared to the threshold , select &lt;,&gt;, =, or &
+    -  `Threshold` - The Trigger threshold for the output vs the source data.
+    -  `Hysteresis` - The threshold used with the threshold value
+    -  `Linking Logical condition` - This is the logical operation(if applicable/available) between the first and second data source.
+    -  `Output channel(second data source)` - This is either the realtime output data from the local GPIO device or data from External devices[(see external data configuration)]((see_external_data_configuration) "wikilink")).
+    -  `Logic option(second data source)` - The logical operation on the source value compared to the threshold , select &lt;,&gt;, =, or &
+    -  `Threshold(second data source)` - The Trigger threshold for the output vs the source data.
+    -  `Hysteresis(second data source)` - The threshold used with the threshold value
 
 To use the universal outputs
 
@@ -193,13 +182,13 @@ To use the universal outputs
 7.  input the threshold value the data formula is to use
 8.  input the hysteresis value . This value will stop the output switching on/off repeatedly if the data only changes a small amount .
 
-`If logical operation was "&" then the threshold value is the value the data is logically ANDed to. and the result of that is compared to the value input in hysteresis.If the comparison of the ANDed value == the value in hysteresis then the output is active .                       This is useful for bit operations eg the digital inputs.`
+If logical operation was "&" then the threshold value is the value the data is logically ANDed to. and the result of that is compared to the value input in hysteresis. If the comparison of the ANDed value == the value in hysteresis then the output is active . This is useful for bit operations eg the digital inputs.
 
-Some controller firmware offer support for a second set of input and comparison , with and additional lnking logical operation between the two. This linking operation can be OR , AND and NOT(!).
+Some controller firmware offer support for a second set of input and comparison , with and additional linking logical operation between the two. This linking operation can be OR, AND and NOT(!).
 
-1.  OR , the output is active if EITHER or BOTH statement is true.
-2.  AND , the output is active only if BOTH statement are true.
-3.  NOT , the output is active if ONLY ONE of the statement are true.
+1.  `OR`  - The output is active if EITHER or BOTH statement is true.
+2.  `AND` - The output is active only if BOTH statement are true.
+3.  `NOT` - The output is active if ONLY ONE of the statement are true.
 
 The second output channel,logic operation ,threshold and hysteresis must be chosen for the second comparison input in a similar manner to the first.
 
@@ -213,11 +202,7 @@ This page configures the external input data sources.
 
 -   **Input Alias** - This is a user defined Alias name (up to 20 characters) for the input channel.This will appear on the gauge for the channel.
 
-<!-- -->
-
 -   **External Input Channel Selection** - Enable/disable the external input channel
-
-<!-- -->
 
 -   **Source Base CanID** - The 11bit HEX CanID of the device the data is to be sourced from.
 
@@ -225,7 +210,7 @@ EG: In the picture this is set to 0x200 which was the Speeduino Base Can address
 
 -   **Data from outchannel** - The outchannel number (from realtime outchannels) the data BEGINS at.
 
-If the device is being accessed via CANBUS then this is the offset added to the base address +1 EG: in the picture it is 7 this would give a Can address of 0x208 or if a direct connection with Speeduino collect data from outchannel 7 (tpsADC)
+If the device is being accessed via CAN bus then this is the offset added to the base address +1 EG: in the picture it is 7 this would give a Can address of 0x208 or if a direct connection with Speeduino collect data from outchannel 7 (tpsADC)
 
 -   **no: of bytes** - The number of bytes the data has , select 1 or 2 (a 1 byte value has a range 0-254 , a 2 byte from 0 - 1024).
 
@@ -246,7 +231,7 @@ Then a new Tab will appear on the main dash
 
 This will allow you to individually turn on/off output ports that are available . The availability depends on the board you have selected and pin configuration.
 
-To start testing click on "Enable test mode" . The output ports that can be tested will then be unGreyed and can be clicked on/off. After testing either click "Stop test mode" or just close the window. Any outputs still activated will be switched off.
+To start testing click on "Enable test mode" . The output ports that can be tested will then be un-Greyed and can be clicked on/off. After testing either click "Stop test mode" or just close the window. Any outputs still activated will be switched off.
 
 <img src="Hardware_output_test.jpg" title="Hardware_output_test.jpg" alt="Hardware_output_test.jpg" width="800" />
 
@@ -258,17 +243,17 @@ The availability depends on the board you have selected and pin configuration.
 
 Whilst test mode is NOT enabled you can observe the current state of an input pin on the "STATE" button for the appropriate input.This will be black when active(high) and grey when not(low).When test mode is enabled this feature does not work.
 
-To start overide testing click on "Enable test mode" . The Input ports that can be tested will then be unGreyed and can be clicked on/off. After testing either click "Stop test mode" or just close the window. Any Inputs overriden will be returned to their current true input state.
+To start override testing click on "Enable test mode" . The Input ports that can be tested will then be un-Greyed and can be clicked on/off. After testing either click "Stop test mode" or just close the window. Any Inputs overridden will be returned to their current true input state.
 
 <img src="Test_input_hardware.jpg" title="Test_input_hardware.jpg" alt="Test_input_hardware.jpg" width="800" />
 
 ### Creating new board layouts/pin configurations
 
-New board types can be easily added to GPIO. It requires changes to be made to two files , "Utils.ino" and the Tunerstudio ini file.
+New board types can be easily added to GPIO. It requires changes to be made to two files , "Utils.ino" and the TunerStudio .ini file.
 
 #### Utils.ino
 
-In the utils.ino file is the indiivual configurations for each board option EG:
+In the utils.ino file is the individual configurations for each board option EG:
 
 `     #if defined(CORE_AVR)`
 `     case 1: // mega2560 demo V0.001`
@@ -388,11 +373,11 @@ To add a new board create a new case with all the above pins. Ensure you change 
 
 `Add that in in the appropriate space ie between 5 and 7 (in they exist or at the end of the options if not).`
 
-Saving and rcomplie the file and upload to your GPIO. Ensure the position used matches that in the ini file mods see next.
+Saving and recomplie the file and upload to your GPIO. Ensure the position used matches that in the .ini file mods see next.
 
 #### The Tunerstudio ini
 
-This is located in the "reference" folder in the firmware download. Do not use MS notepad to edit this file!! A good editor is Notepad++ a few software download. The line rquiring editing is line 140
+This is located in the "reference" folder in the firmware download. Do not use MS notepad to edit this file!! A good editor is Notepad++ a few software download. The line requiring editing is line 140
 
 `#define PIN_LAYOUT = "ProMini GPIO v0.002", "Mega2560 GPIO v0.003", "STM32 BluePill GPIO V0.003", "Speeduino v0.3", "Speeduino v0.4", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID"  `
 
@@ -400,15 +385,15 @@ To add a new entry simply remove one of the "INVALID" and replace with your boar
 
 `#define PIN_LAYOUT = "ProMini GPIO v0.002", "Mega2560 GPIO v0.003", "STM32 BluePill GPIO V0.003", "Speeduino v0.3", "Speeduino v0.4", "INVALID", "mynewboard", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID", "INVALID" `
 
-This shows the new entry being a position 6(promini is position 0). The board config must be at position 6 in the utils.ino too. When you save the changed file and reload it into Tunerstudio your new board will appear as an option.
+This shows the new entry being a position 6(promini is position 0). The board config must be at position 6 in the utils.ino too. When you save the changed file and reload it into TunerStudio your new board will appear as an option.
 
 ### Display Configuration
 
-GPIO(firmware versions may vary level of support) supports up to Two independant screens. They can be connected via I2C or SPI.Each display can be of either type.The display support is configured before uploading the firmware via settings in the display.h file. In the display.h file you will see the following(typical extract from file , may vary)
+GPIO(firmware versions may vary level of support) supports up to Two independent screens. They can be connected via I2C or SPI.Each display can be of either type.The display support is configured before uploading the firmware via settings in the display.h file. In the display.h file you will see the following(typical extract from file , may vary)
 
 #### Step1 activate the display and its type
 
-if a display is not in use then comment out the line DISP1_ACTIVE for display 1 or DISP2_ACTIVE for display 2 If display1 is I2C set DISP1_ROUTE to 0 if it is connected to the hardware I2C port or enter the mux address if a TCA9548A I2C mux is in use. The same applies to display2 Uncomment the appropriate USE option according to your display model
+if a display is not in use then comment out the line DISP1_ACTIVE for display 1 or DISP2_ACTIVE for display 2 If display1 is I2C set DISP1_ROUTE to 0 if it is connected to the hardware I2C port or enter the mux address if a TCA9548A I2C mux is in use. The same applies to display2 Un-comment the appropriate USE option according to your display model
 
 //display module options . only choose one of the following defines for display selection , comment out the unused ones //set display 1 type
 
@@ -467,9 +452,9 @@ HINT!: keep your display code as short as possible to prevent timing hangups, an
 
 <img src="Canbus_broadcast_config_B.jpg" title="fig:Canbus_broadcast_config_B.jpg" alt="Canbus_broadcast_config_B.jpg" width="800" /> Here you enable the CAN0 and CAN1 Canbus modules. These modules are MCP2515 SPI modules connected to the hardware spi ports on the mcu.
 
-#### Generic 11bit CanBus Broadcast
+#### Generic 11bit CAN Bus Broadcast
 
-The 11bit CanBus Broadast feature offers the ability to periodically broadcast on a specified can address the values from any Outchannel on GPIO. This could include external data read from Speeduino for instance using the [Configuring external data sources](#Configuring_external_data_sources "wikilink") method. <img src="Canbus_broadcast_config_C.jpg" title="fig:Canbus_broadcast_config_C.jpg" alt="Canbus_broadcast_config_C.jpg" width="800" />
+The 11bit CAN bus Broadcast feature offers the ability to periodically broadcast on a specified can address the values from any Outchannel on GPIO. This could include external data read from Speeduino for instance using the [Configuring external data sources](#Configuring_external_data_sources "wikilink") method. <img src="Canbus_broadcast_config_C.jpg" title="fig:Canbus_broadcast_config_C.jpg" alt="Canbus_broadcast_config_C.jpg" width="800" />
 
 -   **Name Alias** - This is a user defined Alias name (up to 20 characters) for the broadcast channel .
 
@@ -493,13 +478,13 @@ The 11bit CanBus Broadast feature offers the ability to periodically broadcast o
 
 The Remote Trigger menu tab options are only visible when CAN_COMMANDS are enabled in [Project Properties](#project_properties "wikilink").
 
-Remote CanBus triggers come in four varietys , Digtial Input, Analog Input, Digital Output, PWM Output.
+Remote CAN bus triggers come in four varieties, Digital Input, Analog Input, Digital Output, PWM Output.
 
 They are part of the BCU or BODY CONTROL UNIT functions introduced in the GPIO STD firmwares.
 
-The Remote inputs attach a input port on GPIO to a canbus address. The current status of the input pin is broadcast on the assigned canbus address at the frequency chosen.
+The Remote inputs attach a input port on GPIO to a CAN bus address. The current status of the input pin is broadcast on the assigned CAN bus address at the frequency chosen.
 
-The Remote Outputs attach an output port on GPIO to a canbus address. The current status of the output port can be changed by sending a valid value to GPIO on that canbus address.
+The Remote Outputs attach an output port on GPIO to a CAN bus address. The current status of the output port can be changed by sending a valid value to GPIO on that CAN bus address.
 
 <img src="Digital_remote_canbus_output_config.jpg" title="Digital_remote_canbus_output_config.jpg" alt="Digital_remote_canbus_output_config.jpg" width="800" />
 
@@ -571,7 +556,7 @@ There are two pages of these configs , channels 0 -15 and 16-31. They have both 
 
 <!-- -->
 
--   **Status Can Address** - The 11bit HEX Can Address the remote output status is broadcasted on.If this option is not available then the data is broadcast on the same can address.
+-   **Status Can Address** - The 11bit HEX Can Address the remote output status is broadcast on. If this option is not available then the data is broadcast on the same can address.
 
 <!-- -->
 

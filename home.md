@@ -21,9 +21,9 @@ In terms of starting out with Speeduino, it can help to understand the various c
 2. **An Arduino** - This is the brains of Speeduino and contains the processor, memory and storage. It plugs into the Speeduino board in order to interface with the vehicle wiring. Usually a Arduino Mega 2560.
 3. **Firmware** - This is the system software that runs on the Arduino board and powers its operation. New firmware is released regularly with updates, performance improvements and bug fixes. 
 
-As a starting point, it is generally recommended to first upload the firmware to your Arduino and get it connecting to the tuning software (Tuner Studio) before moving on to hardware assembly or wiring etc. Software setup and configuration on Speeduino can be completed without the need for any additional hardware to be present (Beyond the arduino itself) and this allows exploration of the software and options available before either an outlay of significant funds or a significant investment of time.
+As a starting point, it is generally recommended to first upload the firmware to your Arduino and get it connecting to the tuning software (Tuner Studio) before moving on to hardware assembly or wiring etc. Software setup and configuration on Speeduino can be completed without the need for any additional hardware to be present (Beyond the Arduino itself) and this allows exploration of the software and options available before either an outlay of significant funds or a significant investment of time.
 
-More details on hardware requirments and verson specific features can be found on the [Getting Started page](/en/Getting_Started)
+More details on hardware requirements and version specific features can be found on the [Getting Started page](/en/Getting_Started)
 
 ### About this manual
 

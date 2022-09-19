@@ -11,7 +11,7 @@ dateCreated: 2021-08-10T09:26:15.758Z
 Overview
 --------
 
-Afterstart Enrichment (ASE) is a separate fuel modifier that operates over and above the WUE for a fixed period of time after the engine first starts. Typically this is a few seconds long period where a small enrichment can help the engine transition smoothly from cranking to idling.
+After Start Enrichment (ASE) is a separate fuel modifier that operates over and above the WUE for a fixed period of time after the engine first starts. Typically this is a few seconds long period where a small enrichment can help the engine transition smoothly from cranking to idling.
 
 Settings
 --------

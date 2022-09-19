@@ -29,7 +29,7 @@ dateCreated: 2020-01-06T01:37:02.999Z
     -   [Spark Settings](/configuration/Spark_Settings "wikilink")
     -   [Dwell](/configuration/Dwell "wikilink")
     -   [IAT Retard](/configuration/IAT_Retard "wikilink")
--   **Starting/Idle Menu**
+-   **Starting / Idle Menu**
     -   [Cranking](/configuration/Cranking "wikilink")
     -   [Priming](/configuration/Priming "wikilink")
     -   [Warmup](/configuration/Warmup "wikilink")

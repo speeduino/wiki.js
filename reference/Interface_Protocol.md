@@ -16,25 +16,25 @@ dateCreated: 2021-07-29T18:45:18.652Z
 Speeduino can be interfaced to via  several ways.
 1. USB
 2. Secondary Serial
-3. Canbus (MCU dependent)
+3. CAN bus (MCU dependent)
 
 ## 1. USB
 This is the primary interface and the way in which TunerStudio connects to Speeduino in order to program/configure its settings.
 Only a single device can communicate with Speeduino via the USB at a time, this is usually a laptop or other computer running the TunerStudio Application software.
 It is also possible to use this interface with other devices if the correct communication protocol is used. Great care must be taken as it is possible to corrupt the configuration of your Speeduino MCU such that it no longer functions correctly or at all!
-> It is highly recommended to connect Dashes,Dataloggers and other Third party devices via the Secondary Serial interface or Canbus(if available)
+> It is highly recommended to connect Dashes,Dataloggers and other Third party devices via the Secondary Serial interface or CAN bus(if available)
 {.is-warning}
 
 
 ### The Primary Protocol
-The Speeduino Primary serial protocol uses a request/response method, in that untill it recieves the correct set of commands it will not transmit data out.You must not send additional commands until the current one has been actioned.
+The Speeduino Primary serial protocol uses a request/response method, in that until it receives the correct set of commands it will not transmit data out.You must not send additional commands until the current one has been actioned.
 All data is little-endian. (Low byte first.) Data is sent in binary format and there is no conversion to text.Commands are case sensitive.
 
 ### The Commands
 
 #### 'a' Command
 This Command is for legacy use only. It returns the current realtime data.
-The data value list speeduino replies with can be seen below , along with their function.ONLY the data value is sent NOT its order number or description.
+The data value list Speeduino replies with can be seen below , along with their function.ONLY the data value is sent NOT its order number or description.
 
 The format to send is 
 'a' , '0' , '6'
@@ -553,7 +553,7 @@ Speeduino response
 lowByte(currentStatus.loopsPerSecond) , highByte(currentStatus.loopsPerSecond)
 
 #### 'C' Command
-Test communications. This is used by Tunerstudio to see whether there is an ECU on a given serial port
+Test communications. This is used by TunerStudio to see whether there is an ECU on a given serial port
 The Format to send is 
 'B'
 
@@ -563,7 +563,7 @@ Speeduino response
 Send a CRC32 hash of a given page
  The Format to send is 
 'd' , '0' , '*'
-where * is the value to calc the hash of.
+where * is the value to calculate the hash of.
 
 The response is 3 bytes calculated as follows.
 CRC32_val = calculateCRC32( * )
@@ -672,7 +672,7 @@ Speeduino response
 
 #### 'H' Command
 Start the tooth logger
-This disconnects the crank and cam input interrupts from their normal input trigger code and routes them to the tooth logger code.An acknowledge reply is made by speeduino.
+This disconnects the crank and cam input interrupts from their normal input trigger code and routes them to the tooth logger code. An acknowledge reply is made by Speeduino.
 
 The Format to send is 
 'H'
@@ -692,7 +692,7 @@ Speeduino response
 
 #### 'J' Command
 Start the composite logger
-This disconnects the crank and cam input interrupts from their normal input trigger code and routes them to the composite logger code.An acknowledge reply is made by speeduino.
+This disconnects the crank and cam input interrupts from their normal input trigger code and routes them to the composite logger code. An acknowledge reply is made by Speeduino.
 
 The Format to send is 
 'J'
@@ -819,7 +819,7 @@ NOTE this is sent as plain text NOT ASCII
 
 
 #### 'p' Command
-Sets the current Page.This is the new foramt used by TunerStudio.
+Sets the current Page.This is the new format used by TunerStudio.
 6 bytes are required:
 -         2 byte - Page identifier
 -         2 byte - offset
@@ -916,7 +916,7 @@ U - Prepare for firmware update. The next byte received will cause the Arduino t
 The Secondary Serial interface enables an external device to access data from Speeduino or to expand the io of the Speeduino ECU. 
 A full explanation of the features and operation of secondary serial can be found here. [Secondary_Serial_IO_interface](/en/Secondary_Serial_IO_interface)
 
-## 3. CanBus
-Canbus is only available directly on Teensy and STM32 MCU based Speeduino. Mega2560 based units need additional hardware such as DxControl GPIO .  
+## 3. CAN Bus
+CAN bus is only available directly on Teensy and STM32 MCU based Speeduino. Mega2560 based units need additional hardware such as DxControl GPIO .  
 A full explanation of the features and operation of secondary serial can be found here.
 [Canbus_Support](/en/Canbus_Support2)

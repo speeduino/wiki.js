@@ -11,7 +11,7 @@ dateCreated: 2020-12-15T21:58:51.731Z
 # Overview
 --------
 
-Speeduino is able to support Canbus in two ways.
+Speeduino is able to support CAN bus in two ways.
 
 1. Use a Mega2560 MCU with a coprocessor board
 2. Use a Teensy or STM32 (with internal can module) MCU.
@@ -21,8 +21,8 @@ Speeduino is able to support Canbus in two ways.
 > The STM32F4XX uses pins PD0(RX) and PD1(TX) by default for can0 and PB5(RX) and PB6(TX) for can1 for connection to the can transceivers.
 {.is-info}
 
-## About the CanBus Interface
-The can0 Canbus Interface offers ,
+## About the CAN Bus Interface
+The can0 CAN bus Interface offers ,
 
   1. OBD2 formatted data of current realtime data .
   2. Broadcast selected current realtime data and function status .(coming soon)
@@ -31,14 +31,14 @@ The can0 Canbus Interface offers ,
 # Settings
 --------
 
-## Enable CanBus interface
+## Enable CAN Bus Interface
 
-To enable use of the Canbus interface it must be enabled in TunerStudio.
+To enable use of the CAN bus interface it must be enabled in TunerStudio.
 
 # OBD2 Data Support
 
-When used with an MCU that has an Internal canbus interface Speeduino firmware is able to output data using the OBD2 std 
-On MCU that have multiple canbus ports the OBD support is provided on can0.
+When used with an MCU that has an Internal CAN bus interface Speeduino firmware is able to output data using the OBD2 std 
+On MCU that have multiple CAN bus ports the OBD support is provided on can0.
 > Speeduino does not offer “readiness monitoring” or emission testing support and should not be used for such.
 {.is-warning}
 
@@ -100,7 +100,7 @@ Speeduino responds to the Mode 22 request for the following PID:
 Some of the PIDs in the above table cannot be explained with a simple formula. A more elaborate explanation of these data is provided here:
 Example MODE 01 PID 00
 
-A request for this PID returns 4 bytes of data (Big-endian). Each bit, from MSB to LSB, represents one of the next 32 PIDs and specifies whether that PID is supported.
+A request for this PID returns 4 bytes of data (big-endian). Each bit, from MSB to LSB, represents one of the next 32 PIDs and specifies whether that PID is supported.
 
 For example, if the car response is BE1FA813, it can be decoded like this:
 

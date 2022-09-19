@@ -53,7 +53,7 @@ This is as simple as running a wire from the control pin to the reset pin on you
 
 ### Custom 16u2 Firmware (Option 3)
 
-The custom 16u2 firmware differs from the stock one in that it uses one of the 16u2's GPIO pins to recognize when the board should / should not be allowed to reset. The pin used is PB7, as illustrated.
+The custom 16u2 firmware differs from the stock one in that it uses one of the 16u2's GPIO pins to recognise when the board should / should not be allowed to reset. The pin used is PB7, as illustrated.
 
 ![reset_control_16u2_pins.jpg](/img/reset_control/reset_control_16u2_pins.jpg)![](Reset_control_16u2_pins.jpg "Reset_control_16u2_pins.jpg")
 

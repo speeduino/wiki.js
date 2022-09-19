@@ -35,7 +35,7 @@ The temperature selection changes all degrees values within TunerStudio.
 
 
 ### Enable Hardware Test
-The hardware testing dialog allows you to manually turn the ignition and injection outputs on and off in order to test that the circuits are working. This can be dangerous if the outputs are connected to hardware however and so this dialog must be explicitely enabled. 
+The hardware testing dialog allows you to manually turn the ignition and injection outputs on and off in order to test that the circuits are working. This can be dangerous if the outputs are connected to hardware however and so this dialog must be explicitly enabled. 
 
 > Please **ONLY** turn this on when the ECU is not connected to a vehicle
 {.is-danger}
@@ -55,7 +55,7 @@ Select correct processor type that Speeduino board uses. Typically this is left 
 -   Teensy
 
 ### NEW_COMMS
-To change between new and old comms protocol. Typically this is left to default (NEW_COMMS Activated)
+To change between new and old serial communication protocol. Typically this is left to default (NEW_COMMS Activated)
 
 ### CAN_COMMANDS
 Setting not currently in use.
