@@ -9,6 +9,7 @@ dateCreated: 2020-01-06T01:37:01.522Z
 ---
 
 # Loading the Speeduino firmware
+
 ## Overview
 The Speeduino firmware is the code that powers the hardware and must be installed onto your board prior to using the ECU. New firmware releases are made regularly (Approximately every 2 months) that bring new features, bug fixes and performance improvements so staying up to date is highly recommended. 
 
@@ -17,12 +18,13 @@ With the goal of maximum simplicity in mind, the process of compiling and instal
 
 ## Installation - SpeedyLoader
 
-The simplest (and recommended) method of installing the Speeduino firmware onto a standard Arduino Mega 2560 or Teensy is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the INI file and optionally a base tune for the firmware you choose so it can be loaded into your TunerStudio project.
+The simplest (and recommended) method of installing the Speeduino firmware onto a standard Arduino Mega 2560 or Teensy is with the SpeedyLoader utility. SpeedyLoader takes care of downloading the firmware and installing it onto an Arduino without the need to manually compile any of the code yourself. You can choose the newest firmware that has been released, or select from one of the older ones if preferred. SpeedyLoader will also download the .ini file and optionally a base tune for the firmware you choose so it can be loaded into your TunerStudio project.
 
 -   **Windows:** [32-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-ia32.exe) / [64-bit](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-x64.exe)
 -   **Mac:** [SpeedyLoader.dmg](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.dmg)
--   **Linux:** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.AppImage) (Will need to be made executable after downloading)
-    -   Linux requires libusb libraries to be installed. EG if on Debian/Ubuntu:
+-   **Linux:** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader.AppImage)
+    -  Will need to be made executable after downloading (eg. `chmod +x`)
+    -  Linux requires libusb libraries to be installed. EG if on Debian/Ubuntu:
             `sudo apt-get install libusb-1.0-0 libusb-0.1-4:i386`
 -   **Raspberry Pi** [SpeedyLoader.AppImage](https://github.com/speeduino/SpeedyLoader/releases/latest/download/SpeedyLoader-armv7l.AppImage)
     -   Raspberry Pi / Raspbian users can install the required libraries with:
@@ -39,9 +41,9 @@ If you want to compile the firmware yourself, or make any code changes, then the
 
 ### Requirements
 
--   A Windows, Mac or linux PC
+-   A Windows, Mac or Linux PC
 -   [The Arduino IDE](http://arduino.cc/en/Main/Software). Current minimum version required is 1.6.7, although a newer version is recommended.
--   A copy of the latest Speeduino codebase. See below.
+-   A copy of the latest Speeduino code base. See below.
 -   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
 -   [Time -library](https://github.com/PaulStoffregen/Time) installed on Arduino IDE.
 
@@ -65,7 +67,7 @@ This video walks through the whole process of installing the firmware on your Ar
 
 #### Optional (But recommended)
 
-There is an option available for changing the compiler optimization level, which can improve . By default, the IDE uses the -Os compile option, which focuses on producing small binaries. As the size of the Speeduino code is not an issue but speed is a consideration, changing this to -O3 produces better results (Approximately 20% faster, with a 40% larger sketch size) To do this, you need to edit the platform.txt file:
+There is an option available for changing the compiler optimisation level, which can improve . By default, the IDE uses the -Os compile option, which focuses on producing small binaries. As the size of the Speeduino code is not an issue but speed is a consideration, changing this to -O3 produces better results (Approximately 20% faster, with a 40% larger sketch size) To do this, you need to edit the platform.txt file:
 
 -   Make sure the Arduino IDE isn't running
 -   Open the platform.txt file which is in the following locations:
@@ -137,16 +139,16 @@ Make sure all the files are contained within the same directory, then select Fil
 
 If you see only a single file or a small number of files then you haven't opened the entire project.
 
-## Installation - Manually Compiling using Platform IO
+## Installation - Manually Compiling using Platform IO & VSCode
 
-Other way of manually compiling the Speeduino firmware is to use Platform IO. Using platform IO is usually easier than Arduino IDE, because everything is already configured in the platformio.ini -file and PIO automatically downloads missing components. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
+The recommended way of manually compiling the Speeduino firmware is to use Platform IO & Visual Studio Code. Using platform IO is usually easier than Arduino IDE, because everything is already configured in the platformio.ini file and PIO automatically downloads missing components. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
 
 ### Requirements
 
--   A Windows, Mac or linux PC
+-   A Windows, Mac or Linux PC
 -   Visual Studio Code. Can be downloaded from [here](https://code.visualstudio.com/)
 -  [PlatformIO](http://platformio.org/) Add-on in VS Code. To install, open VS Code and search for "Platform IO IDE" -extension (Ctrl+Shift+X) and click install.
--   A copy of the latest Speeduino codebase. See below.
+-   A copy of the latest Speeduino code base. See below.
 -   A copy of [TunerStudio](http://www.tunerstudio.com/index.php/downloads) to test that the firmware has uploaded successfully
 
 ### Downloading the firmware

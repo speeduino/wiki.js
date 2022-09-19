@@ -17,7 +17,7 @@ The 2 stages operate independantly and can overlap (ie both run at the same time
 ## Activation Settings
 - **Nitrous Mode:** Whether 1 or 2 stages will be used
 - **Arming Pin:** The Arduino Pin to be used for arming the nitrous control. 
-- **Arming pin polarity:** What pin state is considerd to be armed. Generally this will be LOW for a ground switching input
+- **Arming pin polarity:** What pin state is considered to be armed. Generally this will be LOW for a ground switching input
 - **Minimum CLT:** The minimum coolant temperature that the stages will activate at
 - **Minimum TPS:** The minimum TPS that the stage will activate at
 - **Maximum MAP:** A protection to ensure that the nitrous will not activate above a certain level of boost
@@ -25,7 +25,7 @@ The 2 stages operate independantly and can overlap (ie both run at the same time
 
 ## Stage Settings
 
-The settings for each stage are identical and allow for the 2 stages to run individually or joinly overlapping during a given RPM window. 
+The settings for each stage are identical and allow for the 2 stages to run individually or jointly overlapping during a given RPM window. 
 
 - **Nitrous output Pin:** The (Arduino) pin that will be driven high when the stage is active. 
 - **Minimum Engage RPM:** The RPM at which the stage will begin

@@ -42,7 +42,7 @@ This method is only available on 4 cylinder / 4 injector applications and allows
 
 ![inj_4Cyl_seq.png](/img/wiring/inj_4Cyl_seq.png){.align-center width=450}
 
-> **Note:** Using sequential fueling requires a compatible Cam signal to be used in addition to the Crank. If no cam signal is provided when the sequential option is selected, the system will not sync
+> **Note:** Using sequential fuelling requires a compatible Cam signal to be used in addition to the Crank. If no cam signal is provided when the sequential option is selected, the system will not sync
 {.is-warning}
 
 

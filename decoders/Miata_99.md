@@ -10,13 +10,13 @@ dateCreated: 2020-01-06T01:54:20.826Z
 
 ## Miata 99-05
 
-From MY99 onwards, Miatas moved to a new trigger patter that, whilst similar to that used on the 4g63, is more tolerant to noise and does not rely on both edges of a tooth being tracked. Crucially it also permits movement of the cam signal relative to the crank signal which is required due to the addition of variable cam timing in these engines. Sync can be determined in the same way regardless of if the variable cam is at it's maximum or minimum movement.
+From MY99 onwards, Miata's moved to a new trigger patter that, whilst similar to that used on the 4g63, is more tolerant to noise and does not rely on both edges of a tooth being tracked. Crucially it also permits movement of the cam signal relative to the crank signal which is required due to the addition of variable cam timing in these engines. Sync can be determined in the same way regardless of if the variable cam is at it's maximum or minimum movement.
 
 The trigger consists of a 4 tooth wheel located on the crankshaft and a 3 tooth wheel on the cam. The teeth on both wheels are unevenly spaced.
 
 ### Applications
 
-NB Miatas from 1999 until 2005.
+NB Miata's from 1999 until 2005.
 
 ### Tuner Studio Configuration
 

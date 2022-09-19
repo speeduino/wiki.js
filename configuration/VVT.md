@@ -64,8 +64,13 @@ Closed loop PWM mode also uses Pulse Width Modulation for VVT output to adjust t
 The VVT control table function varies depending on whether on/off, open or closed loop VVT mode has been selected. 
 
 - In On/Off mode, 100 is taken as "output on" and any other values represents "output off". Values 0 and 100 are recommended to use in this mode.
+
 ![vvt_on_off.png](/img/accessories/vvt_on_off.png){.align-center width=500}
+
 - In open loop mode, the map values are the duty cycle percents that will be used
+
 ![Example VVT duty table](/img/accessories/vvt_cntrl_table.png){.align-center width=500}
+
 - In closed loop mode, this map serves as a cam angle target table.
+
 ![vvt_cl.png](/img/accessories/vvt_cl.png){.align-center width=500}

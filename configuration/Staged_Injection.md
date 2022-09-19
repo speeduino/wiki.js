@@ -26,7 +26,8 @@ No matter which control strategy is chosen, you must enter the sizing of the pri
 * **Value entered into the req_fuel calculator :** 1000cc
 
 ![Staged fuel settings](/img/staging/staging_settings.PNG){.align-center width=400}
-![REquired fuel calculator](/img/staging/staged_reqfuel.PNG){.align-center width=400}
+
+![Required fuel calculator](/img/staging/staged_reqfuel.PNG){.align-center width=400}
 
 ### Control methods
 Speeduino provides 2 staging control modes, each with their own strengths and weaknesses. In most cases it is recommended to start with the Automatic mode, which only requires tuning of the standard VE table, and reviewing to see if you get the desired outcome. Only if this can't be tuned to give a satisfactory fuel split would changing to the manual table tuning be recommended.

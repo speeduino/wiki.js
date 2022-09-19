@@ -35,7 +35,7 @@ The values in this table represent a percentage of the `Required Fuel` amount th
 
 ![Secondary Fuel table](/img/tuning/2nd_fuel_table.png){.align-center width=450}
 
-Speeduino also has the ability to use a secondary fuel table which allows for blended and switched mode fueling. There are 2 blended modes and 2 switched modes available.
+Speeduino also has the ability to use a secondary fuel table which allows for blended and switched mode fuelling. There are 2 blended modes and 2 switched modes available.
 
 Blended fuel modes work in conjunction with the primary fuel table to come up with a single, combined VE. Switched fuel modes are where either the primary or secondary fuel table is used, but not both at the same time. Which table is being used at any given time can be configured based on either an external input (Eg dash switch) or set via certain conditions. 
 
@@ -63,7 +63,7 @@ The final fuel value is derived from treating both values (Primary and Secondary
 * **Final value:** 72
 
 ### Added
-This is a blended fuel mode that is very similar to the above `Multipled %` mode. The only difference between the two is that instead of multiplying the values from the primary and secondary tables, the 2 are added together. 
+This is a blended fuel mode that is very similar to the above `Multiplied %` mode. The only difference between the two is that instead of multiplying the values from the primary and secondary tables, the 2 are added together. 
 
 This is a less commonly used mode, but is an alternative in the same setups that you would use `Multiplied %`
 
@@ -75,7 +75,7 @@ Conditional switched mode will allow use of the 2nd fuel table when a certain va
 * MAP 
 * TPS
 
-Dpending on the desired outcome, this can be used to expand the resolution of the main fuel table, automatically handle alternate fuels or as an alternative ITB mode (Particularly if running boosted ITBs). 
+Depending on the desired outcome, this can be used to expand the resolution of the main fuel table, automatically handle alternate fuels or as an alternative ITB mode (Particularly if running boosted ITBs). 
 
 ### Switched - Input based
 Input based switch mode let's you change the fuel table that is in use via an external input to the ECU. The options required are:

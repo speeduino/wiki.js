@@ -10,7 +10,7 @@ dateCreated: 2020-01-06T01:54:01.036Z
 
 # Injector Characteristics
 ## Overview
-Fuel injectors have unique hardware properties that must be accounted for within your tune. Ideally these will be provided as part of the specifications for your injectors, however in some cases the data may not be avaialble or be difficult to find. Typical values are given below as starting points for these cases. 
+Fuel injectors have unique hardware properties that must be accounted for within your tune. Ideally these will be provided as part of the specifications for your injectors, however in some cases the data may not be available or be difficult to find. Typical values are given below as starting points for these cases. 
 
 ## Settings
 ![Injector Characteristics](/img/constants/injectorChars.png){.align-center width=50%}

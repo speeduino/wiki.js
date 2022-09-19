@@ -11,18 +11,18 @@ dateCreated: 2020-01-06T01:37:19.933Z
 Overview
 --------
 
-The Arduino Mega2560 version of Speeduino supports the use of Serial3 for supplemetry IO.
+The Arduino Mega2560 version of Speeduino supports the use of Serial3 for supplementary IO.
 The STM32F4XX and Teensy3.5/6 versions use Serial2 .
 On a Mega 2560 Serial3 can be found on the board at pins 14 and 15.The connection speed is 115200baud.
-Supplementry IO via Canbus is under development for Teensy and Mega2560 mcu types.
-The use of canbus will also enable more advanced features to be added in the future.
+Supplementary IO via CAN bus is under development for Teensy and Mega2560 MCU types.
+The use of CAN bus will also enable more advanced features to be added in the future.
 
 Settings
 --------
 
 ### Enable Secondary IO interface
 
-To enable use of the Secondary io interface it must be enabled in TunerStudio.
+To enable use of the Secondary I/O interface it must be enabled in TunerStudio.
 
 Dependant on if CAN_COMMANDS have been enabled will vary the type of dropdown menu you will see
 
@@ -40,12 +40,12 @@ Again dependant on if CAN_COMMANDS have been enabled will vary what options you 
 -   **Enable options**
 -   1. Disabled
 -   2. Enabled Secondary IO via Serial port
--   3. Enabled Secondary IO via canbus (this option will only be available when CAN_COMMANDS are enabled
+-   3. Enabled Secondary IO via CAN bus (this option will only be available when CAN_COMMANDS are enabled
 
 How to use it
 -------------
 
-Depending on if the secondary port is a simple serial port or is a canbus port there are several things that the Secondary io interface is capable of.
+Depending on if the secondary port is a simple serial port or is a CAN bus port there are several things that the Secondary I/O interface is capable of.
 
 ##### A Simple Serial Port
 A Serial port offers ,
@@ -55,8 +55,8 @@ A Serial port offers ,
    3. Read in the Analog data values from 16 remote sensors as requested by Speeduino.
    4. Activate External Outputs(coming soon!)
    
-##### A Canbus Port 
-A Canbus port offers ,
+##### A CAN Bus Port 
+A CAN bus port offers ,
 
   1. OBD2 formatted data of current realtime data .
   2. Broadcast selected current realtime data and function status .(COMING SOON!)
@@ -68,7 +68,7 @@ Serial Port Functions
 ### Retrieve realtime data
 
 To get Speeduino to send out the realtime data to your device connected on a Secondary Serial IO port you must send either an "A", an "n" or an "r" to it.
-An 'A' will retreive a simple set of data whereas an 'n' will retreive an enhanced set of realtime data.
+An 'A' will retrieve a simple set of data whereas an 'n' will retrieve an enhanced set of realtime data.
 An 'r' will retrieve specific data starting at a selected position in the list for x number of bytes.
 
 -   **Send an "A"**
@@ -79,14 +79,14 @@ If you send an "A" to the port it will reply with ,
  2. The port will then transmit the first 75 realtime data values from the list below(simple data set).
  
 The "A" command data set will not be changed or expanded upon and is maintained for legacy devices.
-Designers of new devices are recommended to use the newer "n" command to enable use of any additonal enhanced realtime data available beyond the orignal 75 This command supports. 
+Designers of new devices are recommended to use the newer "n" command to enable use of any additional enhanced realtime data available beyond the original 75 This command supports. 
 
 -   **Send an "n"**
 
 If you send an "n" to the Serial port it will reply with,
   1. A "n" confirming the received instruction (sent as 0x6E in hex (110 in DEC) ).
   2. A single hex byte ,this value is the type of "n" command about to be sent. In this case the value is 0x32 in Hex.
-  3. A single hex byte , this value is the number of data bytes the port will be transmitting next as part ofthe command. At the time of writing (09/07/2021) this is 0x77 (119 dec)
+  3. A single hex byte , this value is the number of data bytes the port will be transmitting next as part of the command. At the time of writing (09/07/2021) this is 0x77 (119 dec)
  4. The port will now transmit the realtime data.
 
 -   **Send an "r"**
@@ -472,14 +472,14 @@ Using Example 1 this is how to get your remote device to reply to the request fr
 ## IF the remote device is connected directly to Serial3.
 
 1. You must first send an "G".
-2. Then a '1' to flag the cmd is valid.
+2. Then a '1' to flag the command is valid.
 3. Then the Can input channel (this is the channel number that Speeduino issued with the request. 
 4. Then send 8 bytes of data. The Data you wish to send should be placed in bytes 0 and 1 (LSB and MSB respectively)if the data is two bytes long or in byte 0 if it is only a single byte long .
 
 
-### Remote Device response to Speeduino Canbus Port
+### Remote Device response to Speeduino CAN Bus Port
 
-## If the remote device is connected via CANBUS.
+## If the remote device is connected via CAN bus.
 
 Speeduino will issue an "R" request for the Can address selected for the Can input channel.
 
@@ -489,4 +489,4 @@ Speeduino will now await the response.
 
 The remote device upon hearing its ID requested will respond to the Speeduino(at the address that was sent in the outgoing packet) with the Can input channel and 8 bytes of data.It is recommended that the Data you wish to send is placed in bytes 0 and 1 (LSB and MSB respectively)if it is two bytes long or in byte 0 if it is only a single byte long, but the data can be placed in any of the data bytes(just ensure that Speeduino is configured to read those bytes in the config table above.
 
-The value sent is readable in Tunerstudio using the CanIN gauges
+The value sent is readable in TunerStudio using the CanIN gauges

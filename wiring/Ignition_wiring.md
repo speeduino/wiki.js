@@ -12,7 +12,7 @@ dateCreated: 2020-01-13T13:26:54.675Z
 ## Overview
 Ignition output configuration can be one of the most difficult areas of ECU wiring and one that often causes the most confusion. A large part of this complexity comes from the huge number of different ignition types that are available, with there being significant changes in the hardware used in the late 80s and throughout the 90s compared to newer designs. 
 
-Whilst this guide does not cover all ignition styles and hardware, it does cover the most common scenarios. Generally, it is recommended (Where possible) to use newer styles of ignition hardware (Typically 'smart' Coil-on-Plug or Coil-Near-Plug) rather than utilising separate igntion modules. 
+Whilst this guide does not cover all ignition styles and hardware, it does cover the most common scenarios. Generally, it is recommended (Where possible) to use newer styles of ignition hardware (Typically 'smart' Coil-on-Plug or Coil-Near-Plug) rather than utilising separate ignition modules. 
 
 ## Wasted Spark
 Wasted spark is a common means of controlling spark that requires only half the number of ignition outputs as there are cylinders, with 2 cylinder being attached to each output. EG:

@@ -1,4 +1,14 @@
-dxControl-Gears , A Gearbox Controller for Speeduino
+---
+title: Dxcontrol-Gears_GearControl_for_Speeduino
+description: 
+published: true
+date: 2020-04-08T02:06:07.657Z
+tags: 
+editor: undefined
+dateCreated: 2020-01-06T01:37:13.632Z
+---
+
+Dxcontrol-Gears , A Gearbox Controller for Speeduino
 ====================================================
 
 By Darren Siepka
@@ -9,7 +19,7 @@ dxControl-Gears is a controller for electronically controlled Automatic gearboxe
 
 It supports up to 32 output channels to drive solenoids and valve , 16 digital input channels ,8 analog input channels.
 
-Future releases will have pwm input and output capability along with direct or Canbus connectivity to the Speeduino ECU.
+Future releases will have PWM input and output capability along with direct or CAN bus connectivity to the Speeduino ECU.
 
 ### Gearbox Configurations Available
 
@@ -23,17 +33,19 @@ Future releases will have pwm input and output capability along with direct or C
 
 #### The A340E
 
-The A340E made by Aisin Warner can be found in numerous vehicles including mitsubishi and Lexus.
+The A340E made by Aisin Warner can be found in numerous vehicles including Mitsubishi and Lexus.
 
 It has Two shift solenoids and electric convertor lockup.
 
-The solenoid to gearselection pattern is
+The solenoid to gear selection pattern is
 
-`               Solenoid 1       Solenoid 2`
-` Gear 1             on               off`
-` Gear 2             on               on`
-` Gear 3             off              on`
-` Gear 4             off              off`
+                   Solenoid 1     Solenoid 2
+--------------- -------------- ---------------
+      Gear 1           on           off      
+      Gear 2           on            on
+      Gear 3          off            on
+      Gear 4          off           off
+--------------- -------------- ---------------
 
 #### The AODE
 

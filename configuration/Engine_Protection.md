@@ -14,7 +14,7 @@ dateCreated: 2022-04-07T14:44:42.636Z
 
 Speeduino includes a spark and fuel based rev limiters with both hard and soft cuts. In addition to rev. limiter, there is optional oil and boost pressure based protection limiters. Boost limit settings are also available under [Boost_Control](/en/configuration/Boost_Control) dialog.
 
-The soft cut rev. limiter will lock timing at an absolute value or reduce timing advance to slow further acceleration. If RPMs continue to climb and reach the hard cut limit, ignition events and/or fueling will cease until the RPM drop below this threshold. 
+The soft cut rev. limiter will lock timing at an absolute value or reduce timing advance to slow further acceleration. If RPMs continue to climb and reach the hard cut limit, ignition events and/or fuelling will cease until the RPM drop below this threshold. 
 
 ## Settings
 

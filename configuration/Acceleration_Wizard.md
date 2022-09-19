@@ -10,7 +10,7 @@ dateCreated: 2020-01-06T01:53:49.039Z
 
 # Acceleration Enrichment (AE)
 
-Acceleration Enrichment (AE) is used to add extra fuel during the short transient period following a rapid increase in throttle. It performs much the same function as an accelerator pump on a carbureted engine, increasing the amount of fuel delivered until the manifold pressure reading adjusts based on the new load.
+Acceleration Enrichment (AE) is used to add extra fuel during the short transient period following a rapid increase in throttle. It performs much the same function as an accelerator pump on a carburetted engine, increasing the amount of fuel delivered until the manifold pressure reading adjusts based on the new load.
 
 > To operate TPS based AE correctly, you must have a variable TPS installed and calibrated.
 {.is-info}
