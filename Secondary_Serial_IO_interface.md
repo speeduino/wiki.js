@@ -1,8 +1,8 @@
 ---
-title: Secondary_Serial_IO_interface
+title: Secondary Serial IO interface
 description: 
 published: true
-date: 2022-10-12T08:10:31.845Z
+date: 2022-10-12T08:12:03.145Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:37:19.933Z
