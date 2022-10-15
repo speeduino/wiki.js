@@ -2,9 +2,9 @@
 title: Overview
 description: 
 published: true
-date: 2020-04-08T02:06:25.866Z
+date: 2022-10-15T13:42:25.354Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:37:18.780Z
 ---
 
@@ -63,3 +63,5 @@ What you will get is flexible and configurable fuel and ignition management that
 -   Launch control
 -   Flex fuel
 -   O2 based autotune (Registered version of TunerStudio required)
+-   WMI control
+-   Up to 8 Programmable outputs
