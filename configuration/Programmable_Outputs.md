@@ -2,7 +2,7 @@
 title: Programmable Outputs
 description: 
 published: true
-date: 2022-10-15T13:46:17.720Z
+date: 2022-10-15T13:48:53.054Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-04T08:51:25.574Z
@@ -18,7 +18,7 @@ Speeduino features 8 programmable (on/off) outputs that can be used for purposes
 ![programmable_outputs.jpg](/img/tuning/programmable_outputs.jpg){.align-center width=400}
 
 - **Select Rule number** - The programmable output number (1-8)
-- **Output Pin Num** - Sets the output pin. Note that this is Arduino pin number. Not IDC or other ECU connector pin number. Select virtual to keep the rule result for cascade ruling. *Since **FW 202207** is possible to use free injectors and/or ignition outputs. All pins number are validated at boot.* ***Requires power cycle***
+- **Output Pin Num** - Sets the output pin. Note that this is Arduino pin number. Not IDC or other ECU connector pin number. Select virtual to keep the rule result for cascade ruling. *Since **FW 202207** is possible to use free injectors and/or ignition outputs. Each pin number are validated at boot, when its used the rule processing will be disabled.* ***Requires power cycle***
 - **Rule Alias** - This can be used to rename the output based on what it is controlling. This name will apear in log.
 - **Output Polarity** - Sets if the output pin goes low or high when output is active. `Active low` means that output gets grounded when it's active and `Active high` means that output goes to 5v when active. *This refers to arduino pin polarity, board output might be inverted.*
 - **Activation Delay(S)** - Sets how long the rule conditions need to stay active before the output is activated. Setting this to 0.0 makes the output to be active whenever conditions are met.
