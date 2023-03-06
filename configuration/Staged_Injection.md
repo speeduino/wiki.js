@@ -2,15 +2,26 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2022-03-21T03:10:39.010Z
+date: 2023-03-06T05:46:17.596Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:09.173Z
 ---
 
 # Staged Injection
 ## Overview
 Speeduino has the ability to control a secondary fuel stage for engines that have 2 sets of injectors, typically of different capacities. Whilst there are few stock engines that come with secondary injectors (the notable exception being many Mazda rotaries) secondary staged injection is a common modification, in particular used whenever large injectors are required, but where it is desirable to keep smaller injectors for smoother low RPM performance.
+
+## Hardware Configuration
+The hardware configuration of the staging outputs depends greatly on the board in use, the engine itself and the fuel injector arrangement. 
+
+The table below outlines the number and channel configuration of the fuel channels required based on the cylinder count and fuel mode:
+
+|                | **1**                           | **2**                               | **3**                                   | **4**                                       | **5**                                   | **6**                                     | **8**                                       |
+|----------------|---------------------------------|-------------------------------------|-----------------------------------------|---------------------------------------------|-----------------------------------------|-------------------------------------------|---------------------------------------------|
+| **Sequential** | **Min Inj#:** 2<br>**Pri:** 1<br>**Sec:** 2 | **Min Inj#:** 4<br>**Pri:** 1/2<br>**Sec:** 3/4 | **Min Inj#:** 6<br>**Pri:** 1/2/3<br>**Sec:** 4/5/6 | **Min Inj#:** 8<br>**Pri:** 1/2/3/4<br>**Sec:** 5/6/7/8 | **Min Inj#:** 6<br>**Pri:** 1/2/3/4/5<br>**Sec:** 6 | **Min Inj#:** 7<br>**Pri:** 1/2/3/4/5/6<br>**Sec:** 7 | N/A                                         |
+| **Other**      | As above                        | **Min Inj#:** 2<br>**Pri:** 1<br>**Sec:** 2     | **Min Inj#:** 4<br>**Pri:** 1/2/3<br>**Sec:** 4     | **Min Inj#:** 4<br>**Pri:** 1/2<br>**Sec:** 3/4         | As above                                | **Min Inj#:** 6<br>**Pri:** 1/2/3<br>**Sec:** 4/5/6   | **Min Inj#:** 8<br>**Pri:** 1/2/3/4<br>**Sec:** 5/6/7/8 |
+
 
 ## Configuration
 No matter which control strategy is chosen, you must enter the sizing of the primary and secondary injectors in order to allow Speeduino to know the split in the overall fuelling.
