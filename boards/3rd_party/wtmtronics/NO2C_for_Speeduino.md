@@ -2,9 +2,9 @@
 title: NO2C_for_Speeduino
 description: 
 published: true
-date: 2021-11-17T11:48:03.837Z
+date: 2023-03-14T15:52:00.581Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:53:35.241Z
 ---
 
@@ -73,6 +73,11 @@ For some tips that will help make the assembly of your board a success: **[v0.2.
 -   Traditional reset protection removed in favor of a jumper and resistor to hold the reset pin high
 -   Routing and placement adjustments
 -   Version style changed to bring inline with other projects and due to required BOM change compared to v0.2.x
+
+### vD1
+
+-   Improved protection circuit on launch input
+-   Routing and placement adjustments
 
 NO2C DB
 -------
