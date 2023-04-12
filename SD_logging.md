@@ -2,9 +2,9 @@
 title: SD Card logging
 description: 
 published: true
-date: 2022-09-05T12:45:20.939Z
-tags: sd, logging, dropbear
-editor: markdown
+date: 2022-09-05T12:45:26.939Z
+tags: 
+editor: undefined
 dateCreated: 2021-10-12T05:18:25.120Z
 ---
 

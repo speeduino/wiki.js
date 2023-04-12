@@ -2,9 +2,9 @@
 title: Idle
 description: 
 published: true
-date: 2022-09-05T11:36:08.801Z
+date: 2022-09-05T11:36:20.206Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:53:59.753Z
 ---
 

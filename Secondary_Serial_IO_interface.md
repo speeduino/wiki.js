@@ -2,9 +2,9 @@
 title: Secondary Serial IO interface
 description: 
 published: true
-date: 2023-02-22T16:44:02.166Z
+date: 2023-02-22T16:44:14.084Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-06T01:37:19.933Z
 ---
 

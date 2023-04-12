@@ -2,7 +2,7 @@
 title: CanBus Support
 description: 
 published: true
-date: 2021-08-10T13:29:25.945Z
+date: 2022-12-30T07:24:55.946Z
 tags: 
 editor: undefined
 dateCreated: 2020-12-15T21:58:51.731Z
@@ -26,8 +26,15 @@ The can0 Canbus Interface offers ,
 
   1. OBD2 formatted data of current realtime data .
   2. Broadcast selected current realtime data and function status .(coming soon)
-  3. Read in Analog and Digital data values from other devices on the BUS including those from OEM devices/ECU.(coming soon)
-
+  3. Read in Analog and Digital data values from other devices on the BUS including those from OEM devices/ECU.(coming soon).
+  4. Connect to Tunerstudio for programming/data logging.(under development)
+ 
+draft note: under development 
+The can1 Canbus Interface offers ,
+ 1. Broadcast current realtime data and function status 
+ 2. Read in Analog and Digital data values from other devices on the BUS including those from OEM devices/ECU.
+ 3. Connect to Tunerstudio for programming/data logging.
+ 
 # Settings
 --------
 

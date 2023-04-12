@@ -2,7 +2,7 @@
 title: Fuel (VE) table / map
 description: Configuration of the main fuel / VE table 
 published: true
-date: 2021-11-11T07:32:32.241Z
+date: 2022-12-13T23:59:09.280Z
 tags: 
 editor: undefined
 dateCreated: 2020-06-18T00:47:09.502Z
@@ -26,7 +26,7 @@ The values in this table represent a percentage of the `Required Fuel` amount th
   
 > **Warning:** Changing this value will require retuning of the fuel map!{.is-warning}
 
-- **Multiply by ration of AFR to Target AFR:** This option is normally set to `No` for most setups. It allows basic close loop feedback by adjust the base fuel amount according to how far away from the target AFR the engine is currently running. 
+- **Multiply by ratio of AFR to Target AFR:** This option is normally set to `No` for most setups. It allows basic closed loop feedback by adjusting the base fuel amount according to how far away from the target AFR the engine is currently running (in %). If the AFR/O2 Sensor type is set to `Disabled` then this setting will have no impact on the fuel calculation. 
 - **Multiply by ratio of stoich AFR to target AFR ('Incorporate AFR')**: By enabling this setting  AFR target is incorporated to pulsewidth calculation. This makes VE table a better representation of actual VE, without AFR targets greatly affecting numbers. After VE table has been tuned, one can adjust an area richer or leaner just from AFR target table, basically without need to touch VE table.
 
 > **Warning:** Changing this value will require retuning of the fuel map!{.is-warning}

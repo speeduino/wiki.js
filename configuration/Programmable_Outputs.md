@@ -2,9 +2,9 @@
 title: Programmable Outputs
 description: 
 published: true
-date: 2022-10-15T13:48:53.054Z
+date: 2022-10-15T13:48:59.072Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2022-04-04T08:51:25.574Z
 ---
 

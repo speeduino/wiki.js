@@ -2,9 +2,9 @@
 title: std_manual
 description: 
 published: true
-date: 2022-09-05T12:46:35.998Z
+date: 2022-09-05T12:46:41.775Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-01-16T03:50:01.907Z
 ---
 

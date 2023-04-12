@@ -2,9 +2,9 @@
 title: VSS and Gear Detection
 description: 
 published: true
-date: 2022-09-05T12:42:41.309Z
-tags: gear detection, speed, tuning, vss
-editor: markdown
+date: 2022-09-05T12:42:47.297Z
+tags: 
+editor: undefined
 dateCreated: 2020-05-12T02:08:21.817Z
 ---
 
