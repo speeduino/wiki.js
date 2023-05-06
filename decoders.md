@@ -2,9 +2,9 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2022-04-13T09:08:45.602Z
+date: 2023-05-06T22:47:57.974Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
 ---
 
@@ -31,8 +31,8 @@ The list below includes all those that are currently supported. They each lead t
 | [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps             (H4 and H6)                                                          |
 | [Chrysler NGC](/decoders/ChryslerNGC "wikilink")           | Complete         | A 36+2-2 crank with 7 tooth cam for 4 cyl, 12 tooth cam for 6 cyl and 15 tooth cam for 8 cyl. Used on Chrysler/Jeep/Dodge vehicles from 2002 onward. |
 | [DRZ400](/decoders/DRZ400 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
-| [Renix](/decoders/Renix "wikilink")           | In Progress         | Renix decoder for 44 and 66 tooth trigger wheels |
-| [Rover MEMs](/decoders/Rover "wikilink")           | In Progress         | Rover MEMs decoder covering multiple crank patterns |
+| [Renix](/decoders/Renix "wikilink")           | Next Firmware Release         | Renix decoder for 44 and 66 tooth trigger wheels |
+| [Rover MEMs](/decoders/Rover "wikilink")           | Next Firmware Release    | Rover MEMs decoder covering 5 different crank patterns |
 | [Ford ST170](/decoders/ST170 "wikilink")           | Complete         | 36-1 Missing tooth with special Ford ST170 cam trigger wheel |
 | [Yamaha VMax 1990+](/decoders/Yamaha_VMax  "wikilink")           | Complete         | Yamaha V4 engine with 6 unevenly spaced teeth at crank |
 
