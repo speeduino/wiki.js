@@ -2,9 +2,9 @@
 title: Idle
 description: 
 published: true
-date: 2022-09-05T11:36:20.206Z
+date: 2023-05-16T22:29:43.982Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
 ---
 
@@ -130,6 +130,8 @@ Under Idle control type, stepper is selected. The basic stepper operational sett
 * **Home Steps:** Stepper motors must be 'homed' before they can be used so the that ECU knows their current position. You should set this to the maximum number of steps that the motor can move.
 * **Minimum steps:** In order to allow a smooth idle that isn't continually fluctuating, the ECU will only move the motor if at least this many steps are required. Typical values are in the 2-6 range, however if you have a noisy coolant signal line, this value may need to be increased.
 * **Don't exceed:** In order to prevent the stepper motor attempting to move beyond it's maximum range, this is a limit placed on the total number of steps that will be made. The value in this field must always be lower than the number of homing steps
+* **Stepper Inverted: ** Polarity of stepper pulses will be inverted
+* **Stepper Power: ** Whether the stepper motor is only powered when performing a step or constantly. Most stepper motors only require power when stepping/active and can overheat it powered constantly, however for 'free wheel' valves that will close when unpowered, select Always
 
 The temperature-versus-steps is selected under the Idle - Stepper Motor selection. Note the relationship between temperature and motor steps can be altered by simply moving the blue dots in the curve, or by selecting the table for manual entry as shown here:
 
