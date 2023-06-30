@@ -2,9 +2,9 @@
 title: GM 7X
 description: 
 published: true
-date: 2020-04-08T02:09:07.007Z
-tags: 
-editor: undefined
+date: 2023-06-30T21:24:31.790Z
+tags: decoders, trigger
+editor: markdown
 dateCreated: 2020-01-06T01:54:17.345Z
 ---
 
