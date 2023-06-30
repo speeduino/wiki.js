@@ -2,7 +2,7 @@
 title: Renix Decoder
 description: Renix 44 tooth and 66 tooth decoders
 published: true
-date: 2023-05-06T22:45:01.006Z
+date: 2023-06-30T20:55:08.634Z
 tags: decoders
 editor: ckeditor
 dateCreated: 2021-11-15T22:40:18.284Z
@@ -11,13 +11,13 @@ dateCreated: 2021-11-15T22:40:18.284Z
 <h2>Overview</h2>
 <h1>Renix 44 and 66 tooth decoder</h1>
 <h2>Availability</h2>
-<p>This decoder is scheduled for the next public release. If you wish to try the decoder ahead of then it is available in the main branch for you to download and compile yourself.</p>
+<p>This decoder is available as part of the current release.</p>
 <h2>Background</h2>
-<p>The Renix trigger wheels are required because neither tooth pattern divides exactly into 360 degrees. On the 44 tooth pattern each tooth is 8.1818 degrees wide, whilst the 66 tooth pattern is 5.4545 degrees. For Speeduino to work accurately the trigger wheel teeth must divide exactly (be a whole number) into 360. Every 11 teeth for either decoder equals a whole number (11 *<i> 8.1818 = 90, 11 *</i> 5.4545 = 60). This trigger wheel therefore works by fooling Speeduino into thinking the 44 tooth pattern only has 4 teeth (one every 90 degrees) and the 66 tooth pattern has 6 (one every 60 degrees).&nbsp;</p>
+<p>The Renix trigger wheels are required because neither tooth pattern divides exactly into 360 degrees. On the 44 tooth pattern each tooth is 8.1818 degrees wide, whilst the 66 tooth pattern is 5.4545 degrees. For Speeduino to work accurately the trigger wheel teeth must divide exactly (be left with a whole number) into 360. Every 11 teeth for either decoder equals a whole number (11 *<i> 8.1818 = 90, 11 *</i> 5.4545 = 60). This trigger wheel therefore works by fooling Speeduino into thinking the 44 tooth pattern only has 4 teeth (one every 90 degrees) and the 66 tooth pattern has 6 (one every 60 degrees).&nbsp;</p>
 <h2>Limitations</h2>
 <p>Both 44 and 66 tooth trigger wheels have nothing to indicate a unique point within 360 degrees. This means we can't establish if we're at 0 or 180 degrees. This presents two limitations,</p>
 <ol>
-  <li>This decoder can't do wasted spark or sequential ignition. If you require ignition you need to keep the distributor.&nbsp;</li>
+  <li>This decoder can't do wasted spark or sequential ignition. If you require ignition you need to keep the distributor.</li>
   <li>Fuel injection can not be timed to match the valve timing. You should therefore select as a minimum two squirts per engine cycle to ensure the injection event is within 180 degrees of ideal. This should be the speeduino default. Injection timing is less critical than ignition timing so for none race vehicles this is acceptable.</li>
 </ol>
 <p>Both 44 and 66 tooth use the same implementation. Whilst 44 tooth has been tested for many months before inclusion into the firmware the 66 tooth hasn't so could potentially have issues. If problems are found please log an issue on Github for it to be investigated.&nbsp;</p>
@@ -27,7 +27,7 @@ dateCreated: 2021-11-15T22:40:18.284Z
 <p>Squirts per Engine Cycle is set to 2 or higher</p>
 <p>Number of cylinders dictates your trigger pattern.&nbsp;</p>
 <ul>
-  <li>4 cylinders equates 44 tooth pattern.&nbsp;</li>
+  <li>4 cylinders equates 44 tooth pattern.</li>
   <li>6 cylinders equates 66 tooth pattern</li>
 </ul>
 <h3>Trigger Settings</h3>
