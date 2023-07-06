@@ -2,9 +2,9 @@
 title: Hardware Requirements
 description: 
 published: true
-date: 2022-03-31T13:45:16.870Z
-tags: 
-editor: undefined
+date: 2023-07-06T20:12:22.316Z
+tags: hardware, wiring
+editor: markdown
 dateCreated: 2020-01-06T01:37:16.331Z
 ---
 
@@ -29,7 +29,7 @@ Alternatively (and necessary for full-sequential injection) an added cam signal 
 
 VR (variable reluctance) sensors can also be used, however as the board does not contain any sort of signal conditioner to convert the sine wave (below) to the required square wave, an additional module will be needed. An 8-pin DIP socket is located on v0.3.x and v0.4.x series official boards for this purpose as IC3. The MAX9926 chip has been tested to work with most types of input signals, and is available from the [Speeduino Store](https://speeduino.com/shop/index.php?id_product=17&controller=product), however any similar module that outputs a 0v-5v square wave (LM1815, LM358, SSC/DSC, many OEM modules, etc.) should also work fine with VR sensor signals.
 
-VR conditioners need to have Trigger Edge in TunerStudio set to the correct option based on the conditioner you are using. Rising for MAX or LM conditioners, and Falling for most others.
+VR conditioners need to have Trigger Edge in TunerStudio set to the correct option based on the conditioner you are using. Rising for MAX or LM conditioners, and Falling for DSC and most others.
 
 ![vr_wave.gif](/img/vr/vr_wave.gif =400x){.align-center}
 
