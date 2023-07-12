@@ -2,9 +2,9 @@
 title: Boost Control
 description: Open and closed loop boost control settings
 published: true
-date: 2020-04-08T02:07:36.974Z
+date: 2023-07-12T23:50:49.176Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:53:51.415Z
 ---
 
@@ -17,8 +17,14 @@ Most 3 or 4 port boost solenoids can be used, with frequencies between 15Hz and 
 ## Settings
 
 Speeduino's boost control uses a PID algorithm with 2 modes of operation, Simple and Full. Each has their own advantages and disadvantages, as outlined below
+
 ![boost_settings.png](/img/accessories/boost_settings.png){.align-center width=400}
+
 In Simple mode, the PID values themselves are controlled by the ECU itself and a sensitivity slider is used to adjust how aggressive the output duty cycle will be set. The simple mode can be easy and fast to setup, however has the downside that to avoid overboost, the sensitivity may need to be set low, which can increase lag.
+
+### Boost Cut
+
+Boost Cut is a safety setting that will cut engine cycles (fuel, spark or both) if the boost level exceeds a certain figure. 
 
 ## Target table
 
