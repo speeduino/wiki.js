@@ -2,9 +2,9 @@
 title: Nissan_360
 description: 
 published: true
-date: 2020-04-08T02:09:26.194Z
+date: 2023-07-13T05:18:05.641Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:23.193Z
 ---
 
@@ -38,7 +38,7 @@ The trigger is comprised of a wheel, running at cam speed, that has 360 windows 
 
 **NOTE**: If you are still not seeing any RPM signal or Sync try reversing the CAM and CRANK signals on the IDC40. These settings are confirmed for the 4-8-12-16 wheel.
 
-![nissan_360.gif](/img/decoders/nissan_360_settings.png){.align-center width=400}
+![Nissan 360 Configuration in TunerStudio](/img/decoders/nissan_360_settings.png){.align-center width=400}
 
 ### Timing adjustment
 
@@ -46,4 +46,4 @@ In most cases altering the trigger angle should not be required, however there i
 
 ### Trigger Pattern
 
-![nissan_360.gif](/img/decoders/nissan_360.gif){.align-center width=80%}
+![Nissan 360 timing diagram](/img/decoders/nissan_360.gif){.align-center width=80%}
