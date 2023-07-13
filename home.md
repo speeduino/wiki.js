@@ -1,11 +1,11 @@
 ---
-title: Speeduino Manual
-description: The Speeduino documentation manual
+title: Home
+description: 
 published: true
-date: 2023-07-12T23:46:25.501Z
-tags: home
+date: 2023-07-13T05:43:53.096Z
+tags: 
 editor: markdown
-dateCreated: 2020-01-05T22:26:30.455Z
+dateCreated: 2023-07-13T05:43:53.096Z
 ---
 
 # Introduction
