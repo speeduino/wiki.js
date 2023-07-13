@@ -37,10 +37,17 @@ echo "Temp directory:" `pwd`
 git clone --depth=1 https://github.com/speeduino/wiki.js.git
 cd wiki.js
 
-#Add a blank line on the top of each file to prevent issues with pandoc concatenation
+
 for f in ${CHAPTERS}
 do
+  #Add a blank line on the top of each file to prevent issues with pandoc concatenation
   sed -s -i '1i\\' $f
+  
+  #Remove the css classes from highlighted notes
+  sed -i 's/{.is-success}//g' $f
+  sed -i 's/{.is-info}//g' $f
+  sed -i 's/{.is-warning}//g' $f
+  sed -i 's/{.is-danger}//g' $f
 done
 
 
