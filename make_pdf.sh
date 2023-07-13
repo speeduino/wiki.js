@@ -20,7 +20,7 @@ CHAPTERS=`tail -n +${START_LINE} ${DEFINITION}`
 IMAGES_FOLDER="img"
 IMAGES=${IMAGES_FOLDER}/*
 COVER_IMAGE=${IMAGES_FOLDER}/Speeduino\ logo.png
-TEMPLATE=offline/eisvogel.tex
+TEMPLATE=offline/eisvogel.latex
 TEMPLATE_OPTIONS='--listings --toc --toc-depth=2'
 ARGS="${TEMPLATE_OPTIONS} --template=${TEMPLATE}"
 #ARGS="${TEMPLATE_OPTIONS}"

@@ -3,6 +3,7 @@
 name: CI
 
 # Controls when the workflow will run
+# https://github.com/jgm/pandoc/releases/download/3.1.5/pandoc-3.1.5-1-amd64.deb
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
@@ -15,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -29,8 +30,8 @@ jobs:
 
       - name: Installing Pandoc
         run: |
-          wget https://github.com/jgm/pandoc/releases/download/2.9.1.1/pandoc-2.9.1.1-1-amd64.deb
-          sudo dpkg -i pandoc-2.9.1.1-1-amd64.deb
+          wget https://github.com/jgm/pandoc/releases/download/3.1.5/pandoc-3.1.5-1-amd64.deb
+          sudo dpkg -i pandoc-3.1.5-1-amd64.deb
           
       - name: Preparing directories
         run: |
