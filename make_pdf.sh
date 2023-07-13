@@ -51,8 +51,8 @@ do
 done
 
 
-echo ${PANDOC_PATH}pandoc ${ARGS} ${METADATA_ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
-${PANDOC_PATH}pandoc ${ARGS} ${METADATA_ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} ${CHAPTERS}
+echo ${PANDOC_PATH}pandoc ${ARGS} ${METADATA_ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} header.md ${CHAPTERS}
+${PANDOC_PATH}pandoc ${ARGS} ${METADATA_ARGS} ${PDF_ARGS} -o ${OUTPUT_FILENAME} header.md ${CHAPTERS}
 
 #Copy the produced PDF back to the main directory
 #cp ${OUTPUT_FILENAME} ${CUR_PATH}/offline
