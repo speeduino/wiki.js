@@ -2,9 +2,9 @@
 title: Speeduino Firmware setup
 description: Setting up the Speeduino firmware on your board
 published: true
-date: 2022-04-05T07:43:11.798Z
+date: 2023-07-13T05:28:27.558Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:37:01.522Z
 ---
 
@@ -97,7 +97,7 @@ Most official boards and many non-official versions use the ATMega16U2 or 8U2, w
 
 ### Older firmware releases
 
-If required, older firmware releases and details can be found at [Firmware_History](/en/Firmware_History "wikilink")
+If required, older firmware releases can also be installed through SpeedyLoader
 
 ### Verifying Firmware
 
@@ -133,13 +133,13 @@ The following can occur if you have only opened the speeduino.ino file rather th
 
 Make sure all the files are contained within the same directory, then select File-&gt;Open and find the speeduino.ino file. If you have opened the project correctly, you should have multiple tabs along the top:
 
-![speeduinoIDE.png](/img/TunerStudio/speeduinoIDE.png){.align-center width=500}
+![Arduino IDE](/img/TunerStudio/speeduinoIDE.png){.align-center width=500}
 
 If you see only a single file or a small number of files then you haven't opened the entire project.
 
 ## Installation - Manually Compiling using Platform IO
 
-Other way of manually compiling the Speeduino firmware is to use Platform IO. Using platform IO is usually easier than Arduino IDE, because everything is already configured in the platformio.ini -file and PIO automatically downloads missing components. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
+An alternative of manually compiling the Speeduino firmware is to use Platform IO. Using platform IO is usually easier than Arduino IDE as it allows automatic configuration of the project in the platformio.ini -file. Platform IO can also be used to easily build for other MCU types (Teensy, STM32).
 
 ### Requirements
 
@@ -161,12 +161,19 @@ See [here](https://github.com/noisymime/speeduino)
 
 -   Start the VS Code and let it open/update PlatformIO -extension, select *Explorer &gt; Open Folder* and navigate to the location you downloaded Speeduino
 -   The speeduino folder should now look like this on the workspace (platformio.ini is visible). Click on the PIO logo on the left panel:
-![pio_1.png](/img/TunerStudio/pio_1.png){.align-center}
+
+![PlatformIO menu](/img/TunerStudio/pio_1.png){.align-center}
+
 -   On the opened *project tasks* open the *megaatmega2560* and click *Build* to compile the FW:
-![pio_2.png](/img/TunerStudio/pio_2.png){.align-center}
+
+![PlatformIO task selction](/img/TunerStudio/pio_2.png){.align-center}
+
 -   PIO should now download all the needed components to compile the firmware and compile it.
-![pio_3.png](/img/TunerStudio/pio_3.png){.align-center width=500}
+
+![PlatformIO example compile](/img/TunerStudio/pio_3.png){.align-center width=500}
+
 -   Once the compiling is done, you can click *Upload* and PIO will upload the speeduino code to the Arduino MEGA.
-![pio_4.png](/img/TunerStudio/pio_4.png){.align-center width=500}
+
+![PlatformIO example upload](/img/TunerStudio/pio_4.png){.align-center width=500}
 
 Platform IO can be used to compile Firmware for other platforms too by selecting correct MCU option from the *project tasks*. Currently Teensy 3.5, Teensy 3.6 and STM32F407 are supported to run the Firmware on car.
