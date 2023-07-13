@@ -2,22 +2,22 @@
 title: Yamaha VMax 1990+ pattern
 description: Information about the Yamaha VMax 1990+ pattern
 published: true
-date: 2022-04-20T06:22:14.986Z
+date: 2023-07-13T05:15:30.971Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2022-04-13T09:08:36.408Z
 ---
 
-# Supported trigger patterns
-## Yamaha VMax 1990+ pattern
+## Yamaha VMax 1990+
+
 ### Overview
 
 The Yamaha Vmax is a V4 engine with 70 degrees between the cylinder heads. This makes it an oddfire engine since combustion is not always after the same number of degrees. The picture below shows the ignition pattern for this engine:
-![vmax.png](/img/decoders/vmax.png){.align-center}
+![Yamaha VMax trigger pattern](/img/decoders/vmax.png){.align-center}
 
 As can be seen, combustion occurs after 180, 250, 180 and 110 degrees.
 The early Yamaha Vmax bikes (from -85 to -89) used four pick-ups and a TCI controller, this trigger will not work for the old Vmaxes, perhaps these can use the basic distributor and run off the ignition pulse. From 1990, the Yamaha Vmax uses a digital ignition which has one pick-up and uses the pattern as shown below:
-![vmax2.png](/img/decoders/vmax2.png){.align-center}
+![VMax tooth numbers](/img/decoders/vmax2.png){.align-center}
 
 The flywheel runs counter-clockwise and the beginning of lobe 6 (it's left side) is TDC of cylinder 1. To identify all lobes:
 Lobe 1 is the firing point without advance for cylinder 2
@@ -45,7 +45,7 @@ To ensure the trigger filter works correctly, the distance between the lobes is 
 The signal from the pick-up is quite noisy. Therefore, it requires 10K resistors on the VR+ and VR- line (before getting to the VR-conditioner), and the R10 on the VR-conditioner to be equipped with a 220nf ceramic capacitor to filter the generator noise.
 
 ### Tuner Studio Configuration
-![vmax3.png](/img/decoders/vmax3.png){.align-center}
+![VMax configuration in TunerStudio](/img/decoders/vmax3.png){.align-center}
 
 **Fields:**
 
