@@ -1,5 +1,5 @@
 ---
-title: Speeduino Manual
+title: Speeduino Installation & Configuration Manual
 description: The Speeduino documentation manual
 published: true
 date: 2023-07-12T23:46:25.501Z
@@ -10,6 +10,7 @@ titlepage: true
 titlepage-rule-height: 2
 titlepage-rule-color: 360049
 titlepage-background: offline/background1.pdf
+toc-own-page: true
 titlepage-logo: offline/logo.png
 logo-width: 350pt
 ---

@@ -933,7 +933,7 @@ $endif$
 $if(titlepage-logo)$
 \noindent
 \includegraphics[width=$if(logo-width)$$logo-width$$else$35mm$endif$, left]{$titlepage-logo$}
-\vskip 2em
+\vskip 1em
 $endif$
 
 $if(titlepage-background)$
@@ -947,6 +947,8 @@ $if(titlepage-background)$
   \vskip 1em
   {\Large \textsf{$subtitle$}}
   $endif$
+  \vskip 2em
+  \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$} \vskip 0.6em \textsf{$date$}}
   \vfill
 }
 $else$
@@ -958,6 +960,8 @@ $else$
   \vskip 1em
   {\Large \textsf{$subtitle$}}
   $endif$
+  \vskip 2em
+  \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$}}
   \vfill
 }
 $endif$

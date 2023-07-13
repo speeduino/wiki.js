@@ -57,8 +57,11 @@ dateCreated: 2020-01-16T03:50:01.907Z
 ./decoders/Honda_D17.md
 ./decoders/Miata_99.md
 ./decoders/Non-360.md
+./decoders/Nissan_360.md
 ./decoders/Daihatsu_+1.md
+./decoders/ST170.md
 ./decoders/Subaru_36-2-2-2.md
+./decoders/Yamaha_VMax.md
 ./boards/V04.md
 ./boards/V03.md
 ./boards/Dropbear.md
