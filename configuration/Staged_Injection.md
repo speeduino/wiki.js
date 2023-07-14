@@ -2,9 +2,9 @@
 title: Staged Injection
 description: Configuring multi-stage fuel injection
 published: true
-date: 2023-03-06T05:46:28.934Z
+date: 2023-07-14T04:14:43.859Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:09.173Z
 ---
 
@@ -37,7 +37,8 @@ No matter which control strategy is chosen, you must enter the sizing of the pri
 * **Value entered into the req_fuel calculator :** 1000cc
 
 ![Staged fuel settings](/img/staging/staging_settings.PNG){.align-center width=400}
-![REquired fuel calculator](/img/staging/staged_reqfuel.PNG){.align-center width=400}
+
+![Required fuel calculator](/img/staging/staged_reqfuel.PNG){.align-center width=400}
 
 ### Control methods
 Speeduino provides 2 staging control modes, each with their own strengths and weaknesses. In most cases it is recommended to start with the Automatic mode, which only requires tuning of the standard VE table, and reviewing to see if you get the desired outcome. Only if this can't be tuned to give a satisfactory fuel split would changing to the manual table tuning be recommended.
@@ -60,11 +61,14 @@ One disadvantage of the table tuning method is that it does not allow for the fu
 
 #### Wiring
 
+The wiring of injectors depends on the number of cylinders, the number of channels available on your ECU and whether you are using sequential fueling. 
+
+##### Example
 Assuming a 4 cylinder even fire engine, the injectors are to be wired in pairs.
 
 Primary injectors on outputs 1 and 2. The secondary on outputs 3 and 4.
 
-For other setups hit up the forum for clarification.
+For other setups see the Hardware Configuration section above
 
 > **Note:** The dead time of the 2 sets of injectors is currently assumed to be the same. This may be altered in future firmwares if required (Post a feature request if needed).
 {.is-info}
