@@ -2,9 +2,9 @@
 title: Trigger Setup
 description: Setting up the RPM trigger input to work correctly with the Speeduino decoder
 published: true
-date: 2021-08-24T13:22:44.387Z
+date: 2023-07-14T06:51:06.737Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:10.355Z
 ---
 
@@ -19,7 +19,7 @@ Note that many of the settings on this dialog are dependant on your configuratio
 
 ## Trigger Settings
 
-![Trigger settings dialog](/img/constants/triggerSettings.png){.align-center width=400}
+![Trigger settings dialog](/img/constants/triggersettings.png){.align-center width=400}
 
 - **Trigger Pattern** - The pattern used by the crank/cam sensor setup on your engine. For a full list of the supported patterns, see the [Decoders](/decoders) page
 - **Primary Base teeth** - For patterns where the number of teeth are variable (missing tooth, dual wheel etc), this number represents the number of teeth on the primary wheel. For missing tooth type wheels, this number should be the count as if there were no teeth missing.
@@ -29,7 +29,10 @@ Note that many of the settings on this dialog are dependant on your configuratio
 - **Trigger angle** - The angle of the crank, **After Top Dead Centre (ATDC)**, when tooth \#1 passes the sensor on the primary (crank) input. This setting is critical for Speeduino to accurately know the current crank angle. See section below ('Finding tooth \#1 and trigger angle') for further information on how to determine this value. You should be using a timing light to confirm angle is correct once calculated. Without doing this your angle may be incorrect.
 
 - **Skip revolutions** - The number of revolutions the engine should perform before the Sync flag is set. This can help prevent false sync events when cranking. Typical values are from 0 to 2
-- **Trigger edge** - Whether the primary signal triggers on the Rising or Falling edge. <b>VR Conditioners require specific setting depending on model used.</b> [See hardware requirements](/en/Hardware_requirements#inputs)
+- **Trigger edge** - Whether the primary signal triggers on the Rising or Falling edge. 
+  - **VR Conditioners require specific setting depending on model used:**
+    - VR conditioners based on MAX9926 or LM ICs should use `RISING`. This includes Dropbear units
+    - DSC conditioners should use `FALLING`
 - **Secondary trigger edge** - Whether the secondary signal triggers on the Rising or Falling edge
 - **Missing Tooth Secondary type** - Cam mode/type also known as Secondary Trigger Pattern.
 - **Level for 1st phase** - Only active with "Poll level" cam decoder. The level of the cam trigger input will be checked at crank tooth #1 and this defines if the level is supposed to be High or Low at 1st phase of the engine.
