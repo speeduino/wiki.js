@@ -2,7 +2,7 @@
 title: Idle
 description: 
 published: true
-date: 2023-05-16T22:29:43.982Z
+date: 2023-07-14T02:58:03.029Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T01:53:59.753Z
@@ -182,7 +182,8 @@ In the idle control menu first select the "PWM Open+Closed loop" or the "Stepper
 In the "Closed loop idle" part you can setup the PID feedback controller gains. P,I,D. 
 
 Example idle settings window.
-![idle_settings.png](/img/idle/idle_settings.png){.align-center width=400}
+
+![Closed Loop stepper idle control](/img/idle/idle_settings.png){.align-center width=400}
 
 #### PID Gains
 The gains are used to tune the PID controller. Look on the web for various manuals to tune PID controllers. The Idle PID controller uses a setpoint (idle Target RPM) and a Measurement (Crank position sensor) to calculate an output over time to keep the engine RPM as close as possible to the Target RPM. How aggressive the controller tries to keep this target is determined by the PID gains.
@@ -210,10 +211,12 @@ The second one is based on RPM. If the car is in gear rolling to a traffic light
 The IAC PWM curve is used to lookup what PWM duty cycle will be output to the idle control valve for a certain engine temperature. This is just like the open-loop idle function. Tune this curve first before starting open+closed loop tuning. Tune it so that the actual RPM is a bit above the desired RPM target value to prevent the engine stalling after engine braking. Tune this table while idle control is set to open-loop, or set all PID gains to 0 and tune it.
 
 Example IAC duty curve
-![iac_pwm_duty.png](/img/idle/iac_pwm_duty.png){.align-center width=400}
+
+![Example PWM duty cycle curve](/img/idle/iac_pwm_duty.png){.align-center width=400}
 
 ### Idle RPM targets curve
 The RPM target curve is used to lookup what the idle RPM target will be for the a given engine temperature. This will be used in the PID feedback controller to keep idle RPM at this target. 
 
 Example Idle RPM targets curve
-![idle_rpm_targets.png](/img/idle/idle_rpm_targets.png){.align-center width=300}
+
+![Example idle target curve](/img/idle/idle_rpm_targets.png){.align-center width=300}
