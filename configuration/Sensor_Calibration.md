@@ -2,9 +2,9 @@
 title: Sensor Calibration
 description: Steps for calibrating all analog sensor inputs
 published: true
-date: 2020-04-08T02:08:28.650Z
+date: 2023-07-15T01:01:07.166Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:06.827Z
 ---
 
@@ -16,13 +16,13 @@ This should be completed after completing the Settings for your engine. Your com
 
 ## MAP Sensor
 
-Open the **Tools** menu: tools_menu
+Open the **Tools** menu:
 
-![tools_menu.png](/img/tuning/tools_menu.png){.align-center width=400}
+![Tuner Studio Tools Menu](/img/tuning/tools_menu.png){.align-center width=400}
 
 Select **Calibrate Pressure Sensors**, the window below will open:
 
-![MAP_calibration.png](/img/tuning/MAP_calibration.png){.align-center width=400}
+![MAP calibration](/img/tuning/MAP_calibration.png){.align-center width=400}
 
 Select your MAP Sensor from the drop down list. If you used the MAP sensor in the bill of materials, this will be the MPX4250A. If you are using another MAP or one from the engine manufacturer, select it from the list. Click **Burn** to send the information to your Speeduino.
 
@@ -37,11 +37,11 @@ The sensor selected will be the **Coolant Temperature Sensor**. Select your sens
 
 Note that the standard Speeduino build is to have a 2490 ohm bias resistor, which is standard for sensors used by most manufacturers. If your sensor requires another value, you may need to change resistor R3 to the correct value for your sensor. You can try overriding the Bias Resistor Value with 2490 ohms, but check to be sure your sensor reads correctly in TS.
 
-![CLT_calibration.png](/img/tuning/CLT_calibration.png){.align-center width=450}
+![CLT calibration](/img/tuning/CLT_calibration.png){.align-center width=450}
 
 The same calibration can then be performed for the Inlet Air Temperature (IAT) sensor by changing the **Sensor Table** to **Air Temperature Sensor**:
 
-![IAT_calibration.png](/img/tuning/IAT_calibration.png){.align-center width=450}
+![IAT calibration](/img/tuning/IAT_calibration.png){.align-center width=450}
 
 Select your sensor from the **Common Sensor Values** drop-down list. This will place the correct values into the temperature and resistance charts and the Bias resistor value. Click **Write to Controller** to send this information to your Speeduino. If your sensor is not listed, see [Entering Custom Values](#Entering_Custom_Values "wikilink") below.
 
@@ -75,6 +75,7 @@ This will set up your Speeduino so that you can also run simulations to check yo
 Before Speeduino can work correctly with your engine, you will also need to Calibrate the Throttle Position Sensor. This must be done using the throttle body and TPS used on the engine. It is best to do this while the throttle body is installed on the engine.
 
 Open the **Tools** menu and select **Calibrate TPS**:
+
 ![TPS calibration](/img/tuning/TPS_calibration.png){.align-center width=480}
 
 With the throttle closed, click the **Get Current** button beside the Closed Throttle ADC count field. Then move the throttle to full open and hold it there. Then click the **Get Current** button beside the Full Throttle ADC count field.
