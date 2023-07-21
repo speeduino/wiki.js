@@ -2,9 +2,9 @@
 title: Cranking
 description: 
 published: true
-date: 2021-08-10T13:17:46.299Z
+date: 2023-07-21T13:29:31.247Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:53:52.563Z
 ---
 
@@ -26,5 +26,5 @@ Settings
 -   **Cranking enrichment taper time** - Taper time from cranking enrichment to ASE or run (after engine has started).
 -   **Cranking enrichment** - Whilst cranking is active (See Cranking RPM above), the fuel load will be increased by this amount. Note that as a standard correction value, this cranking enrichment **is in addition** to any other adjustments that are currently active. This includes the warmup enrichment etc.
 -   **Cranking advance Angle** - Whilst cranking the ignition advance from the spark table is ignored and engine uses this ignition advance value instead.
--   **Cranking Bypass** - This option is specifically for ignition systems that have a hardware cranking ignition option. These systems were used throughout the 80s and early 90s and allowed ignition timing to be fixed and controlled by the ignition system itself when active (Via an input wire). With this option you can specify an output pin that will be set HIGH when the system is cranking. The pin number specified is the ARDUINO pin number.
+-   **Cranking Bypass** - This option is specifically for ignition systems that have a hardware cranking ignition option. These systems were used throughout the 80s and early 90s and allowed ignition timing to be fixed and controlled by the ignition system itself. Once the engine is determined to be running (via the cranking RPM setting) the output is raised HIGH to enable ECU timing control. With this option you can specify an output pin that will be set HIGH when the engine is running. The pin number specified is the ARDUINO pin number.
 -   **Fix cranking timing with trigger** - Some (usually low resolution) trigger patterns are designed to align one of their pulses with the desired cranking advance. This is typically 5 or 10 degrees BTDC. When enabled, Speeduino will wait for this timed input pulse before firing the relevant ignition output (A dwell safety factor is still applied incase this pulse is not detected). This option is only made available when a trigger pattern that supports this function is selected (See [Trigger Setup](/configuration/Trigger_Setup "wikilink"))
