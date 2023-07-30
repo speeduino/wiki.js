@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2023-07-30T19:14:45.055Z
+date: 2023-07-30T19:43:17.955Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -32,12 +32,12 @@ The list below includes all those that are currently supported. They each lead t
 | [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Complete         | 3+1 and 4+1 patterns used on 3 and 4 cylinder Daihatsu engines |
 | [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps             (H4 and H6) |
 | [Chrysler NGC](/decoders/ChryslerNGC "wikilink")           | Complete         | A 36+2-2 crank with 7 tooth cam for 4 cyl, 12 tooth cam for 6 cyl and 15 tooth cam for 8 cyl. Used on Chrysler/Jeep/Dodge vehicles from 2002 onward. |
-| [DRZ400](/decoders/DRZ400 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
+| [DRZ400](/decoders/DRZ400V2 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
 | [Renix](/decoders/RenixV2 "wikilink")           | Complete         | Renix decoder for 44 and 66 tooth trigger wheels |
 | [Rover MEMs](/decoders/RoverV2 "wikilink")           | Complete    | Rover MEMs decoder covering 5 different crank patterns |
 | [Ford ST170](/decoders/ST170 "wikilink")           | Complete         | 36-1 Missing tooth with special Ford ST170 cam trigger wheel |
 | [Yamaha VMax 1990+](/decoders/Yamaha_VMax  "wikilink")           | Complete         | Yamaha V4 engine with 6 unevenly spaced teeth at crank |
-| [Toyota 3 tooth cam](/decoders/Toyota3Tooth  "wikilink")           | In Progress         | Decoder covering a number of Toyota engines with a 3 tooth cam including 1uz, 1jz, 2jz-vvti, 1f-fe |
+| [Toyota 3 tooth cam](/decoders/Toyota3ToothV2  "wikilink")           | In Progress         | Decoder covering a number of Toyota engines with a 3 tooth cam including 1uz, 1jz, 2jz-vvti, 1f-fe |
 
 
 
