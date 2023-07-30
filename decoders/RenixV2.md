@@ -2,7 +2,7 @@
 title: Renix Decoder
 description: Renix decoder for 44 or 66 tooth trigger wheels
 published: true
-date: 2023-07-30T19:36:42.976Z
+date: 2023-07-30T19:38:37.912Z
 tags: decoder, trigger
 editor: markdown
 dateCreated: 2023-07-30T19:22:37.646Z
