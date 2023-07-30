@@ -2,7 +2,7 @@
 title: Renix Decoder
 description: Renix decoder for 44 or 66 tooth trigger wheels
 published: true
-date: 2023-07-30T19:22:37.647Z
+date: 2023-07-30T19:36:42.976Z
 tags: decoder, trigger
 editor: markdown
 dateCreated: 2023-07-30T19:22:37.646Z
@@ -50,8 +50,7 @@ NB you can only setup the “Trigger Angle (deg)” once you have completed all 
 Due to the way the teeth are setup on the decoder its very important if a VR sensor is used the wiring, VR decoder and trigger edge are setup correctly. You are targeting a tooth log that looks like the one below.
 
 
-[https://wiki.speeduino.com/decoders/renix_trigger_pattern.jpg]
-
+[https://wiki.speeduino.com/decoders/renix_trigger_pattern.jpg]  {.align-center width=90%}
 
 
 ### Spark Settings (Ignition)
