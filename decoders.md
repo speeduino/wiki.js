@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2023-09-10T13:18:27.494Z
+date: 2023-10-01T11:44:59.748Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -25,6 +25,7 @@ The list below includes all those that are currently supported. They each lead t
 | [Harley EVO](/decoders/Harley_EVO "wikilink")                     | Complete         | Harley EVO V-Twin engines up to '99  |
 | [Honda D17](/decoders/Honda_D17 "wikilink")                       | Complete         | Honda 4 cylinder D17 engine with 12+1 crank signal  |
 | [Honda K20/K24](/decoders/HondaK20K24  "wikilink")           | In Development         | Honda K20/K24 with 12+1 crank and supporting inlet and exhaust cams  |
+| [Honda K6A](/decoders/HondaK6A  "wikilink")           | In Development         | Honda K6A |
 | [Honda J30/J32](/decoders/HondaJ30J32v2  "wikilink")           | In Development         | Honda J30/J32 as well as early s2000's  |
 | [Miata 99-05](/decoders/Miata_99 "wikilink")                      | Complete         | 1.8L Miata/MX5 from '99 to '09  |
 | [Non-360](/decoders/Non-360 "wikilink")                           | Complete         | A variation of the dual wheel decoder that can be used with tooth counts that do not divide evenly into 360  |
