@@ -2,7 +2,7 @@
 title: Honda K6A
 description: Decided supporting the Honda K6A
 published: true
-date: 2023-10-01T11:48:56.614Z
+date: 2023-10-01T11:52:49.666Z
 tags: decoder, trigger
 editor: markdown
 dateCreated: 2023-10-01T11:48:30.583Z
