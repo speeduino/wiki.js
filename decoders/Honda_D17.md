@@ -2,15 +2,15 @@
 title: Honda D17
 description: 
 published: true
-date: 2020-04-08T02:09:10.216Z
-tags: 
-editor: undefined
+date: 2023-10-02T20:03:47.771Z
+tags: decoder, trigger
+editor: markdown
 dateCreated: 2020-01-06T01:54:18.505Z
 ---
 
 ## Overview
 
-The Honda D17 decoder applies to the Honda engine family using a 12+1 crankshaft wheel. The 4+1 camshaft signal is not currently used with Speeduino. Without the cam signal, all standard fuel and ignition modes up to semi-sequential and wasted-spark are supported.
+The Honda D17 decoder applies to the Honda engine family using a 12+1 crankshaft wheel. The 4+1 camshaft signal is not currently supported with Speeduino, but as of Oct'23 development including vtec support is underway. Without the cam signal, all standard fuel and ignition modes up to semi-sequential and wasted-spark are supported.
 
 ### Applications
 
