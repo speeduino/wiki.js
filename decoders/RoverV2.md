@@ -2,7 +2,7 @@
 title: Rover MEMS decoder
 description: Rover MEMS decoder details
 published: true
-date: 2023-07-30T19:41:35.332Z
+date: 2023-10-04T21:32:56.650Z
 tags: decoder, trigger
 editor: markdown
 dateCreated: 2023-07-30T19:41:35.332Z
@@ -54,4 +54,4 @@ If you have the trigger wheel 17 teeth gap 17 teeth gap Speeduino can currently 
 
 All other patterns can support wasted spark and if a secondary trigger edge (cam) signal is present support sequential.
 
-“Use new ignition mode” should be set to “yes”.
+“Enable per tooth timing” should be set to “yes”.
