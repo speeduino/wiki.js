@@ -1,8 +1,8 @@
 ---
-title: Honda K6A
-description: Decided supporting the Honda K6A
+title: Suzuki K6A
+description: Decided supporting the Suzuki K6A
 published: true
-date: 2023-10-04T20:35:38.939Z
+date: 2023-10-04T20:36:29.014Z
 tags: decoder, trigger
 editor: markdown
 dateCreated: 2023-10-01T11:48:30.583Z
