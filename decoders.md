@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2023-10-04T20:34:36.246Z
+date: 2023-10-04T20:39:29.704Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -32,7 +32,7 @@ The list below includes all those that are currently supported. They each lead t
 | [Daihatsu +1](/decoders/Daihatsu_+1 "wikilink")                   | Complete         | 3+1 and 4+1 patterns used on 3 and 4 cylinder Daihatsu engines |
 | [Subaru 36-2-2-2](/decoders/Subaru_36-2-2-2 "wikilink")           | Complete         | A 30 tooth wheel with three strategically placed big gaps             (H4 and H6) |
 | [Subaru 6/7](/decoders/Subaru67 "wikilink")           | Complete         | Subaru 90's decoder with 6 crank and 7 cam teeth |
-| [Suzuki K6A](/decoders/HondaK6A  "wikilink")           | In Development         | Suzuki K6A |
+| [Suzuki K6A](/decoders/SuzukiK6A  "wikilink")           | In Development         | Suzuki K6A |
 | [Chrysler NGC](/decoders/ChryslerNGC "wikilink")           | Complete         | A 36+2-2 crank with 7 tooth cam for 4 cyl, 12 tooth cam for 6 cyl and 15 tooth cam for 8 cyl. Used on Chrysler/Jeep/Dodge vehicles from 2002 onward. |
 | [DRZ400](/decoders/DRZ400V2 "wikilink")           | Complete         | A varient on the dual wheel decoder setup for DRZ400 bikes |
 | [Renix](/decoders/RenixV2 "wikilink")           | Complete         | Renix decoder for 44 and 66 tooth trigger wheels |
