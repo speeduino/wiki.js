@@ -2,9 +2,9 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2022-04-04T07:17:33.627Z
+date: 2023-10-06T00:08:20.559Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T00:30:19.883Z
 ---
 
@@ -44,7 +44,10 @@ If the starter motor is good and getting the right voltage ensure the mechanical
 
 ### Timing Setting
 
-The trigger angle can be found by placing the engine at TDC, then calculating how far it must be rotated until the first tooth after the gap reaches the sensor.
+The trigger angle can be found using the following steps:
+1. Set the crankshaft at TDC 0° (Cylinder 1) with a tool by hand
+1. Rotate the crankshaft (running direction) until the first tooth after the missing teeth is under the sensor
+1. Measure how many degrees the crankshaft rotated. This is the value to enter as the trigger angle. 
 
 ### Sequential operation
 
