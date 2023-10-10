@@ -2,7 +2,7 @@
 title: Missing Tooth
 description: Information about the missing tooth decoder pattern
 published: true
-date: 2023-10-06T00:08:20.559Z
+date: 2023-10-10T21:59:13.184Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T00:30:19.883Z
@@ -34,7 +34,7 @@ If the starter motor is good and getting the right voltage ensure the mechanical
 
 
 ### Tuner Studio Configuration
-![missingtooth_202108.png](/img/decoders/missingtooth_202108.png){.align-center}
+![Configuring the Missing Tooth pattern](/img/decoders/missingtooth_202108.png){.align-center}
 
 **Fields:**
 
@@ -45,9 +45,10 @@ If the starter motor is good and getting the right voltage ensure the mechanical
 ### Timing Setting
 
 The trigger angle can be found using the following steps:
+
 1. Set the crankshaft at TDC 0° (Cylinder 1) with a tool by hand
-1. Rotate the crankshaft (running direction) until the first tooth after the missing teeth is under the sensor
-1. Measure how many degrees the crankshaft rotated. This is the value to enter as the trigger angle. 
+2. Rotate the crankshaft (running direction) until the first tooth after the missing teeth is under the sensor
+3. Measure how many degrees the crankshaft rotated. This is the value to enter as the trigger angle. 
 
 ### Sequential operation
 
@@ -56,4 +57,4 @@ The missing tooth decoder supports sequential operation if an additional cam inp
 This cam signal should take the form of 4-1 cam trigger wheel or a single pulse every complete cycle. This can be a short tooth or a half moon type arrangement, provided that electrically there is only a single rising (or falling) pulse per cycle.
 
 ### Trigger Diagram
-![missingtooth_trace1.png](/img/decoders/missingtooth_trace1.png){.align-center}
+![Example missing tooth pulse pattern](/img/decoders/missingtooth_trace1.png){.align-center}
