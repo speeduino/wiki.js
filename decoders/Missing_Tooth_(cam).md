@@ -2,9 +2,9 @@
 title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2021-01-31T22:05:09.576Z
-tags: 
-editor: undefined
+date: 2023-10-10T22:01:54.688Z
+tags: decoder
+editor: markdown
 dateCreated: 2020-01-06T01:54:21.989Z
 ---
 
@@ -31,9 +31,10 @@ If the starter motor is good and getting the right voltage ensure the mechanical
 
 
 ### Tuner Studio Configuration
-![missingtooth_cam_triggerconfig.png](/img/decoders/missingtooth_cam_triggerconfig.png){.align-center width=450}
+![Configuring the Missing Tooth pattern](/img/decoders/missingtooth_cam_triggerconfig.png){.align-center width=450}
 
 **Fields:**
+
 - **Primary base teeth**: This is the number of teeth the wheel would have if there were none missing, e.g. a 36-1 wheel has only 35 actual teeth, but you would enter 36 into this field.
 - **Missing Teeth:** The size of the 'gap' in the number of teeth. These missing teeth must be situated in a single block (ie there's only a single gap in the teeth). One missing tooth is recommended.
 - **Trigger Angle**: This is the angle in **crank degrees** **AFTER** TDC (ATDC) of the first tooth following the gap. This number ranges from -360° to +360°.
@@ -45,4 +46,4 @@ The trigger angle is set in CRANK degrees, not cam.
 
 ### Trigger Pattern
 
-![missingtooth_cam_trace.jpg](/img/decoders/missingtooth_cam_trace.jpg){.align-center width75%}
+![Example missing tooth pulse trace](/img/decoders/missingtooth_cam_trace.jpg){.align-center width75%}
