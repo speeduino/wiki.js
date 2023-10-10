@@ -2,7 +2,7 @@
 title: Missing Tooth (Cam speed)
 description: 
 published: true
-date: 2023-10-10T22:01:54.688Z
+date: 2023-10-10T22:02:55.107Z
 tags: decoder
 editor: markdown
 dateCreated: 2020-01-06T01:54:21.989Z
@@ -46,4 +46,4 @@ The trigger angle is set in CRANK degrees, not cam.
 
 ### Trigger Pattern
 
-![Example missing tooth pulse trace](/img/decoders/missingtooth_cam_trace.jpg){.align-center width75%}
+![Example missing tooth pulse trace](/img/decoders/missingtooth_cam_trace.jpg){.align-center width=75%}
