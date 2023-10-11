@@ -2,14 +2,14 @@
 title: Dropbear
 description: 
 published: true
-date: 2022-04-19T00:22:10.018Z
+date: 2023-10-11T03:49:30.118Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
 ---
 
 # Dropbear ECU
-The Dropbear is an 8 fuel + 8 ignition ECU that is currently in testing prior to a full production release. It is powered by the high speed Teensy 3.5 board and is designed to be a complete unit out of the box. 
+The Dropbear is an 8 fuel + 8 ignition ECU powered by the high speed Teensy 3.5 board and is designed to be a complete unit out of the box. This is the most complete and fully featured Speeduino ECU and requires no user assembly. 
 
 ## Features
 
@@ -31,6 +31,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 
 ### Black Connector      
 ![Delphi SICMA Black Connector](/img/boards/Connector_black.png){.align-center width=400}
+
 > Note connector alignment in above image
 {.is-info}
 
@@ -64,6 +65,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 
 ### Grey Connector
 ![Delphi SICMA Grey Connector](/img/boards/Connector_grey.png){.align-center width=400}
+
 > Note connector alignment in above image
 {.is-info}
 
