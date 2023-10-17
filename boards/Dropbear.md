@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2023-10-12T23:45:43.900Z
+date: 2023-10-17T04:26:11.775Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -37,7 +37,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 
 
 | Pin | Direction | Max Current | Purpose | Comment |
-|-----|-----------|-------------|---------|---------|
+|-----|-----------|-------------|---------|------------------------------------------------------------------------------|
 | A1  | Input     | 5A          | Switched 12v      | Main power input. Connect to switched 12v power via 5A fuse        |
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
@@ -70,7 +70,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 {.is-info}
 
 | Pin | Direction | Max Current | Purpose | Comment |
-|-----|-----------|-------------|---------|---------|
+|-----|-----------|-------------|---------|------------------------------------------------------------------------------|
 | A1  | Output    | 2A      | Injector 1        | Injector 1 output            |
 | A2  | Output    | 2A      | Injector 2        | Injector 2 output            |
 | A3  | Output    | 2A      | Injector 3        | Injector 3 output            |
