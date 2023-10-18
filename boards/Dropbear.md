@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2023-10-17T04:26:11.775Z
+date: 2023-10-18T01:55:31.313Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -70,7 +70,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 {.is-info}
 
 | Pin | Direction | Max Current | Purpose | Comment |
-|-----|-----------|-------------|---------|------------------------------------------------------------------------------|
+|-----|-----------|--------------|---------------|----------------------------------------------------------------------------|
 | A1  | Output    | 2A      | Injector 1        | Injector 1 output            |
 | A2  | Output    | 2A      | Injector 2        | Injector 2 output            |
 | A3  | Output    | 2A      | Injector 3        | Injector 3 output            |
