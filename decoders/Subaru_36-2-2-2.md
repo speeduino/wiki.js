@@ -2,9 +2,9 @@
 title: Subaru 36-2-2-2
 description: 
 published: true
-date: 2021-03-03T22:07:54.580Z
+date: 2023-10-19T06:58:39.556Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:54:25.568Z
 ---
 
@@ -18,11 +18,12 @@ Early wheels were VR triggered however after the switch to variable valve timing
 {.is-info}
 
 ### Configuration
-**Trigger Angle:** 0
-**Trigger Edge:** FALLING
-**Secondary Trigger edge:** N/A
-**Skip Revolutions:** 1
-**Trigger Filter:** Weak (Depending on install)
+
+- **Trigger Angle:** 0
+- **Trigger Edge:** FALLING
+- **Secondary Trigger edge:** N/A
+- **Skip Revolutions:** 1
+- **Trigger Filter:** Weak (Depending on install)
 
 
 
@@ -32,6 +33,7 @@ The 3 sets of 2 missing teeth are located such that one group is on its own and 
 Cylinder 1 TDC compression happens on the fourth tooth after the single gap. Speeduino watches for any missing tooth period, then waits to confirm whether it is followed by another. Sync can therefore be determined in this manner at 2 points in a single crank revolution.
 
 #### H4 Pattern
+
 ![36-2-2-2.png](/img/decoders/36-2-2-2.png){.align-center width=90%}
 
 **Note:** Many diagrams and trigger wheel images available online show the wheel from the backside, making it show as rotating counter clockwise. For the correct orientation, when looking at the front of the engine, the wheel spins clockwise.
