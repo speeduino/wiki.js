@@ -2,9 +2,9 @@
 title: SD Card logging
 description: 
 published: true
-date: 2022-09-05T12:45:26.939Z
-tags: 
-editor: undefined
+date: 2023-11-14T21:23:20.278Z
+tags: sd, logging, dropbear
+editor: markdown
 dateCreated: 2021-10-12T05:18:25.120Z
 ---
 
@@ -34,7 +34,7 @@ Whilst not required, logging can be combined with a Real Time Clock (RTC)
 ## File sizes
 The size of the log file will depend on the duration and the logging speed that is selected. The table below gives an approximation of the filesize that can be expected for various scenarios
 
-> Note that logs are split into 10MB files. Once the log file reaches 10MB, a new file will be created and the logging continued. Except for the overall SD card size, there is no limit to the number (and hence duration) of the SD logs
+> Note that logs are split into 10MB files. Once the log file reaches 10MB, a new file will be created and the logging continued. Currently the firmware is limited to producing 9999 files on an SD card. Beyond this point the 1st log file will be overwritten. 
 {.is-info}
 
 |          | **1 min** | **10 min** | **30 Min** |
