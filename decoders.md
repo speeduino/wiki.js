@@ -2,7 +2,7 @@
 title: Trigger Patterns and Decoders
 description: List of supported crank/cam patterns
 published: true
-date: 2023-10-04T20:39:29.704Z
+date: 2024-02-12T18:57:03.656Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-05T23:43:16.210Z
@@ -20,6 +20,7 @@ The list below includes all those that are currently supported. They each lead t
 | [Basic Distributor](/decoders/Basic_Distributor "wikilink")       | Complete         | Untimed pulses that are the equivalent of a tach or distributor pulse  |
 | [GM 7X](/decoders/GM_7X "wikilink")                               | Untested         | Multi tooth pulse |
 | [4G63](/decoders/4G63 "wikilink")                                 | Complete         | As used on many 4 cylinder Mitsubishis and NA/NB Miata / MX-5. Also supports the 6 cylinder variation of this pattern (Eg 6g72) |
+| [420a](/decoders/420a "wikilink")                                 | Complete         | As used on many 4 cylinder Mitsubishis and Dodge Neon |
 | [GM 24X](/decoders/GM_24X "wikilink")                             | In Progress         | Commonly used on GM LS1 V8  |
 | [Jeep 2000](/decoders/Jeep_2000 "wikilink")                       | Complete         | 6 Cylinder Jeep engines from '91 to 2000  |
 | [Harley EVO](/decoders/Harley_EVO "wikilink")                     | Complete         | Harley EVO V-Twin engines up to '99  |
