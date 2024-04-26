@@ -2,9 +2,9 @@
 title: NO2C_for_Speeduino
 description: 
 published: true
-date: 2023-03-14T15:52:12.828Z
+date: 2024-04-26T20:34:30.006Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-01-06T01:53:35.241Z
 ---
 
@@ -40,7 +40,7 @@ Uses the AMP MTA-100 or Molex KK100/KK254 connector system and through hole comp
 -   corrected the issue mentioned above
 -   added tachometer output
 
-NO2C v0.2.x
+NO2C v0.2.x and v?x
 -----------
 
 Uses the Molex Micro-Fit 3.0 connector system and through hole components. The Micro-Fit connector is used as a computer power connector and there are several manufacturers, it's known generically as 3mm connector.
@@ -82,7 +82,7 @@ For some tips that will help make the assembly of your board a success: **[v0.2.
 NO2C DB
 -------
 
-A daughter board that stacks on top of the NO2C v0.2.x and vCx boards to add the features below. The daughter boards are hybrid surface mount/through hole, see features below for which parts are through hole.
+A daughter board that stacks on top of the NO2C v0.2.x and v?x boards to add the features below. The daughter boards are hybrid surface mount/through hole, see features below for which parts are through hole.
 
 ### DB1 (Scraped)
 
