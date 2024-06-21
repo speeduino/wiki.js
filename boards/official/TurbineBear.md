@@ -2,9 +2,9 @@
 title: Turbine Bear
 description: 
 published: true
-date: 2021-09-30T00:27:00.547Z
+date: 2024-06-21T08:39:30.620Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2021-08-25T01:57:06.706Z
 ---
 
@@ -64,7 +64,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | A1  | Input     | 5A          | Switched 12v      | Main power input. Connect to switched 12v power via 5A fuse        |
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
-| A4  | Input     | N/A         | Starter switch        | Ground switching input to trigger the starter. Teensy pin 22         |
+| A4  | Input     | N/A         | Starter switch        | Ground switching input to trigger the starter. <br/>**v0.2:** Teensy pin 22 <br/>**v1.0:** Teensy pin 34         |
 | A5  | Input     | N/A         | RPM 2             | Hall effect input for RPM2 (N2)        |
 | A6  | Both      | N/A         | CAN L             | CAN L connection        |
 | A7  | Input     | N/A         | EGT 2-  | **DO NOT USE ON V0.2 BOARD!**       |
@@ -79,7 +79,7 @@ The ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keyed and wil
 | B8  | Input     | N/A         | Kill Switch       | Ground switching input to kill engine. Teensy pin A15/D34         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
 | C2  | Input     | N/A         | CDP Sensor        | 0-5v signal line from CDP transducer        |
-| C3  | Input     | N/A         | Fuel flow Sensor  | Input for use with **0-5v** fuel flow sensor. Teensy pin A18        |
+| C3  | Input     | N/A         | Fuel flow Sensor  | Input for use with **0-5v** fuel flow sensor. <br/>**v0.2:** Teensy pin A18 <br/>**v1.0:** Teensy pin A17        |
 | C4  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
 | C6  | Input     | N/A         | EGT 1+  | **DO NOT USE ON V0.2 BOARD!**       |
