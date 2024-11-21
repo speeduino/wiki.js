@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-11-21T22:50:27.764Z
+date: 2024-11-21T22:55:16.600Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -148,7 +148,7 @@ The battery sizes required are:
 * **Dropbear v1** 
   * **Rechargeable:** VL621 or ML621
 * **Dropbear v2**  
-  * **Rechargeable:** ML1220 or ML1225 or VL1220 or VL1225
+  * **Rechargeable:** ML1220 or ML1225 or VL1220 or VL1225 (1225 variants will give slightly longer life than 1220, however both are compatible)
   * **Non-Rechargeable:** CR1220 or CR1225 (Recommended to cut trace above battery on board if used)
 
 ### Stepper Driver
