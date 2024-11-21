@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-09-21T23:30:37.514Z
+date: 2024-11-21T22:50:27.764Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -137,6 +137,19 @@ Dropbear units have a built-in CAN transceiver that can be connected directly to
 To enabled the terminating resistor a solder bridge must be added to the following jumper point
 
 ![Dropbear CAN terminator bridge](/img/boards/dropbear_can_terminator.jpg){.align-center width=100}
+
+### RTC Battery
+Dropbear units contain a Real Time Clock (RTC) that allows them to retain the actual date/time when the unit is unpowered. This requires a coin cell battery to be installed which, due to regulatory requirements, cannot be shipped with the units. 
+
+The recommended batteries are rechargeable and will charge when the ECU is powered. They will last approximately 1 month (Dropbear v1) or 3 months (Dropbear v2) without power being applied to the ECU. 
+
+The battery sizes required are:
+
+* **Dropbear v1** 
+  * **Rechargeable:** VL621 or ML621
+* **Dropbear v2**  
+  * **Rechargeable:** ML1220 or ML1225 or VL1220 or VL1225
+  * **Non-Rechargeable:** CR1220 or CR1225 (Recommended to cut trace above battery on board if used)
 
 ### Stepper Driver
 By default the Dropbear unit is designed for use with PWM idle valves, however an optional stepper motor driver can be fitted. 
