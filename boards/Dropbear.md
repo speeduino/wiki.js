@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-12-02T03:12:25.231Z
+date: 2024-12-07T22:21:30.211Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -42,7 +42,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
 | A4  | N/A       | N/A         | Not used.         |         |
-| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. This is also the default input for a secondary Cam input if using dual VVT. MCU pin #22 in TunerStudio        |
+| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. This is also the default input for a secondary Cam input if using dual VVT. <br/> **Dropbear V1:** Pin 22 in TunerStudio <br/> **Dropbear V2:** Pin 34 in TunerStudio         |
 | A6  | Both      | N/A         | CAN L             | CAN L connection        |
 | A7  | Both      | N/A         | CAN H             | CAN H connection        |
 | A8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
@@ -51,7 +51,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | B3  | Input     | N/A         | Crank Negative    | **Only used with a VR sensor.** Connect to negative side of VR crank sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
 | B4  | Input     | N/A         | Cam Primary     | Cam sensor (CMP) primary input. Can be 12v, Ground switching or the positive wire of a VR sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
 | B5  | Input     | N/A         | Cam Negative    | **Only used with a VR sensor.** Connect to negative side of VR cam sensor. See [Crank/Cam Inputs](#crankcam-inputs) section        |
-| B6  | Input     | N/A         | Spare Digital 1| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. MCU pin #23 in TunerStudio        |
+| B6  | Input     | N/A         | Spare Digital 1| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. <br/> **Dropbear V1:** Pin 23 in TunerStudio <br/> **Dropbear V2:** Pin 35 in TunerStudio        |
 | B7  | Input     | N/A         | Clutch input.     | Ground switching digital input that goes to ground when clutch is engaged. Do not feed 12v on this input        |
 | B8  | Input     | N/A         | Flex sensor       | Signal wire from GM/Continental Flex sensor.         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
@@ -90,9 +90,9 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | C1  | Output    | 2A      | Boost             | Ground switching output for use with boost control solenoid            |
 | C2  | Output    | 2A      | Fan.              | Ground switching output for triggering a fan relay. **Do not drive fan directly from this pin, use only with relay**            |
 | C3  | Output    | 2A      | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #26           |
-| C4  | Output    | 2A      | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #27           |
-| C5  | Output    | 2A      | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver))Tuner Studio pin #28           |
-| C6  | Output    | 2A      | Spare 1/Idle 2/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). This is the default pin for Idle 2 when using a 3 wire PWM valve. Tuner Studio pin #29           |
+| C4  | Output    | 2A      | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). <br/>Tuner Studio pin #27           |
+| C5  | Output    | 2A      | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). <br/>Tuner Studio pin #28           |
+| C6  | Output    | 2A      | Spare 1/Idle 2/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). This is the default pin for Idle 2 when using a 3 wire PWM valve. <br/>Tuner Studio pin #29           |
 | C7  | Output    | 1.5A    | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**            |
 | C8  | Input     | 15A     | Power Ground      | Connect to battery negative.            |
 
