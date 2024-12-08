@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-12-08T02:56:50.482Z
+date: 2024-12-08T23:59:49.219Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -69,32 +69,32 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 > Note connector alignment in above image
 {.is-info}
 
-| Pin | Direction | Max Current | Purpose | Comment |
-|-----|-----------|--------------|-----------------|-------------------------------------------------------------------------|
-| A1  | Output    | 2A      | Injector 1        | Injector 1 output            |
-| A2  | Output    | 2A      | Injector 2        | Injector 2 output            |
-| A3  | Output    | 2A      | Injector 3        | Injector 3 output            |
-| A4  | Output    | 2A      | Injector 4        | Injector 4 output            |
-| A5  | Output    | 2A      | Injector 5        | Injector 5 output            |
-| A6  | Output    | 2A      | Injector 6        | Injector 6 output            |
-| A7  | Output    | 2A      | Injector 7        | Injector 7 output            |
-| A8  | Output    | 2A      | Injector 8        | Injector 8 output            |
-| B1  | Output    | 100mA   | Ignition 1        | Ignition 1 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B2  | Output    | 100mA   | Ignition 2        | Ignition 2 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B3  | Output    | 100mA   | Ignition 3        | Ignition 3 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B4  | Output    | 100mA   | Ignition 4        | Ignition 4 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B5  | Output    | 100mA   | Ignition 5        | Ignition 5 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B6  | Output    | 100mA   | Ignition 6        | Ignition 6 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B7  | Output    | 100mA   | Ignition 7        | Ignition 7 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| B8  | Output    | 100mA   | Ignition 8        | Ignition 8 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
-| C1  | Output    | 2A      | Boost             | Ground switching output for use with boost control solenoid            |
-| C2  | Output    | 2A      | Fan.              | Ground switching output for triggering a fan relay. **Do not drive fan directly from this pin, use only with relay**            |
-| C3  | Output    | 2A      | Spare 2/Stepper-B2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). Tuner Studio pin #26           |
-| C4  | Output    | 2A      | Idle/Stepper-B1  | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). <br/>Tuner Studio pin #27           |
-| C5  | Output    | 2A      | VVT/Stepper-A1.   | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). <br/>Tuner Studio pin #28           |
-| C6  | Output    | 2A      | Spare 1/Idle 2/Stepper-A2  | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). This is the default pin for Idle 2 when using a 3 wire PWM valve. <br/>Tuner Studio pin #29           |
-| C7  | Output    | 1.5A    | Fuel Pump         | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**            |
-| C8  | Input     | 15A     | Power Ground      | Connect to battery negative.            |
+| Pin | Direction | Max Current | Purpose | Tuner Studio Pin | Comment |
+|-----|-----------|--------------|-----------------|-----|-------------------------------------------------------------------------|
+| A1  | Output    | 2A      | Injector 1        | N/A | Injector 1 output            |
+| A2  | Output    | 2A      | Injector 2        | N/A | Injector 2 output            |
+| A3  | Output    | 2A      | Injector 3        | N/A | Injector 3 output            |
+| A4  | Output    | 2A      | Injector 4        | N/A | Injector 4 output            |
+| A5  | Output    | 2A      | Injector 5        | N/A | Injector 5 output            |
+| A6  | Output    | 2A      | Injector 6        | N/A | Injector 6 output            |
+| A7  | Output    | 2A      | Injector 7        | N/A | Injector 7 output            |
+| A8  | Output    | 2A      | Injector 8        | N/A | Injector 8 output            |
+| B1  | Output    | 100mA   | Ignition 1        | N/A | Ignition 1 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B2  | Output    | 100mA   | Ignition 2        | N/A | Ignition 2 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B3  | Output    | 100mA   | Ignition 3        | N/A | Ignition 3 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B4  | Output    | 100mA   | Ignition 4        | N/A | Ignition 4 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B5  | Output    | 100mA   | Ignition 5        | N/A | Ignition 5 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B6  | Output    | 100mA   | Ignition 6        | N/A | Ignition 6 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B7  | Output    | 100mA   | Ignition 7        | N/A | Ignition 7 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| B8  | Output    | 100mA   | Ignition 8        | N/A | Ignition 8 output. 5v or 12v depending on switch selection. **Do not connect directly to high current coils**, only connect to igniter or 'smart' coil            |
+| C1  | Output    | 2A      | Boost             | 24 | Ground switching output for use with boost control solenoid            |
+| C2  | Output    | 2A      | Fan.              | 25 | Ground switching output for triggering a fan relay. **Do not drive fan directly from this pin, use only with relay**            |
+| C3  | Output    | 2A      | Spare 2/Stepper-B2  | 26 | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)).
+| C4  | Output    | 2A      | Idle/Stepper-B1  | 27 | Can be used either as ground switching idle output (For use with PWM valves) or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). |
+| C5  | Output    | 2A      | VVT/Stepper-A1.   | 28 | Can be used either as ground switching VVT output or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). |
+| C6  | Output    | 2A      | Spare 1/Idle 2/Stepper-A2  | 29 | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). This is the default pin for Idle 2 when using a 3 wire PWM valve. |
+| C7  | Output    | 1.5A    | Fuel Pump         | N/A | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**            |
+| C8  | Input     | 15A     | Power Ground      | N/A | Connect to battery negative.            |
 
 ## Board Configuration
 The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
