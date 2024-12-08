@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-12-08T02:49:30.633Z
+date: 2024-12-08T02:56:50.482Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -42,7 +42,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | A2  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
 | A3  | Output    | 80mA        | Sensor reference  | Used for sensors requiring a 5v reference (Eg TPS). **Do not use for powering offboard systems.**        |
 | A4  | N/A       | N/A         | Not used.         |         |
-| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. This is also the default input for a secondary Cam input if using dual VVT. <br/> **Dropbear V1:** Pin 22 in TunerStudio <br/> **Dropbear V2:** Pin 34 in TunerStudio         |
+| A5  | Input     | N/A         | Spare Digital In 2| 12v or Ground switching digital input. Can be used for VSS, Idle Up etc. This is also the default input for a secondary Cam input if using dual VVT. <br /> &#10; **Dropbear V1:** Pin 22 in TunerStudio <br/> &#10; **Dropbear V2:** Pin 34 in TunerStudio         |
 | A6  | Both      | N/A         | CAN L             | CAN L connection        |
 | A7  | Both      | N/A         | CAN H             | CAN H connection        |
 | A8  | Input     | 15A         | Power Ground      | Connect to battery negative.        |
