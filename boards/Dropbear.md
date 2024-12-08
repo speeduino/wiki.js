@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-12-07T22:21:30.211Z
+date: 2024-12-08T02:49:30.633Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -56,7 +56,7 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | B8  | Input     | N/A         | Flex sensor       | Signal wire from GM/Continental Flex sensor.         |
 | C1  | Output    | N/A         | Analog ground     | Ground reference for use by sensors such as TPS, IAT, CLT. **Do not use for powering offboard controllers**       |
 | C2  | Input     | N/A         | Spare Analog 1    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. <br/> **Dropbear V1:** Pin A17 in TunerStudio <br/> **Dropbear V2:** Pin A16 in TunerStudio        |
-| C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. <br/> **Dropbear V1:** Pin A18 in TunerStudio <br/> **Dropbear V2:** Pin A17 in TunerStudio       |
+| C3  | Input     | N/A         | Spare Analog 2    | Spare analog input for use with **0-5v** sensors such as fuel pressure/temperature, oil pressure etc. <br/> **Dropbear V1:** Pin A18 in TunerStudio <br/> **Dropbear V2:** <br/>Pin A17 in TunerStudio       |
 | C4  | Input     | N/A         | O2 Sensor         | Connect to the 0-5v signal wire of external wideband controller. Can also be used with 0-1v output from narrowband sensor however wideband is **strongly** recommended        |
 | C5  | Input     | N/A         | Coolant Sensor    | Connect to one side of 2 wire coolant sensor (CLT). Other side of sensor connected to pin C1        |
 | C6  | Input     | N/A         | Inlet Air Sensor  | Connect to one side of 2 wire inlet air temp sensor (IAT). Other side of sensor connected to pin C1        |
