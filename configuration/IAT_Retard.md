@@ -2,9 +2,9 @@
 title: Temperature based timing changes
 description: 
 published: true
-date: 2020-04-08T02:07:59.335Z
-tags: 
-editor: undefined
+date: 2024-12-09T00:24:28.000Z
+tags: tuning
+editor: markdown
 dateCreated: 2020-01-14T00:30:56.331Z
 ---
 
@@ -13,4 +13,5 @@ Changes in Inlet Air Temperature (IAT), in particular significant increases whil
 
 ## Example
 Exact settings will be engine dependant, but pulling of ignition timing beyond 100\*C is a common scenario.
-![iat_retard.png](/img/ignition/iat_retard.png){.align-center width=500}
+
+![Temperature based timing adjustment curve](/img/ignition/iat_retard.png){.align-center width=500}
