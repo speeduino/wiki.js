@@ -2,7 +2,7 @@
 title: Airbear
 description: 
 published: true
-date: 2025-07-23T21:27:17.811Z
+date: 2025-07-23T21:31:16.013Z
 tags: wifi bluetooth ble dash dashboard airbear
 editor: markdown
 dateCreated: 2025-04-19T23:05:25.945Z
@@ -36,7 +36,13 @@ Up to 3 separate connections can be made to the dashoboard at the same time from
 
 ### Tuner Studio (Wifi)
 
-Setting the Connection Type to TunerStudio allows the ECU to be tuned and monitored over wifi 
+Setting the Connection Type to TunerStudio allows the ECU to be tuned and monitored over wifi with TunerStudio. 
+
+Set the mode to 'TunerStudio' via the Airbear web interface and then restart the device. Within TunerStudio itself, change your Communication Settings to the following:
+
+**Connection Type:** TCP/IP - Wifi driver
+**Port:** 2000
+**IP Address:** speeduino.local (Or the manual IP address if you prefer)
 
 ![Airbear TunerStudio wifi settings](/img/boards/airbear/ts-connection-settings.png){.align-center width=500}
 
