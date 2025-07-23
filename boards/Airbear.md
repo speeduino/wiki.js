@@ -2,24 +2,25 @@
 title: Airbear
 description: 
 published: true
-date: 2025-04-22T01:40:19.807Z
+date: 2025-07-23T21:27:17.811Z
 tags: wifi bluetooth ble dash dashboard airbear
 editor: markdown
 dateCreated: 2025-04-19T23:05:25.945Z
 ---
 
 # Airbear
-Your content here
+
+Airbear is a Wifi and BLE module for Speeduino ECUs that allows it to display dash informatino or tune the the system wirelessly. 
 
 ## Setup
 
 Out of the box the Airbear unit will start a wifi network with the SSID (Name) `Speeduino Dash`. The network will not have a password to join. Connect to this network and then open the following URL in a browser: http://speeduino.local/
 
-### Wifi
+### Connecting to Wifi
 
-It is recommended to connect to your own wifi network.
+Generally it is recommended to connect to your own wifi network when this is available. 
 
-If your home 
+If your home wifi network is not available when the unit starts, it will start the default  `Speeduino Dash` network so that the unit can be accessed when away from known networks. 
 
 ## Modes
 
@@ -34,6 +35,8 @@ In this mode a dashboard interface is presented at the default URL (http://speed
 Up to 3 separate connections can be made to the dashoboard at the same time from different client devices. 
 
 ### Tuner Studio (Wifi)
+
+Setting the Connection Type to TunerStudio allows the ECU to be tuned and monitored over wifi 
 
 ![Airbear TunerStudio wifi settings](/img/boards/airbear/ts-connection-settings.png){.align-center width=500}
 
