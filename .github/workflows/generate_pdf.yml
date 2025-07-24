@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -45,5 +45,5 @@ jobs:
         env:
           WEB_PWD: ${{ secrets.WEB_PWD }}
         run: |
-          curl -v https://speeduino.com:2078 || true
-          curl -v --tlsv1.2 --ipv4 --user "speeduino_manual@speeduino.com:$WEB_PWD" --basic -T "./offline/Speeduino_manual.pdf" "https://speeduino.com:2078/Speeduino_manual.pdf"
+          curl -v https://webdisk.speeduino.com:2078 || true
+          curl -v --tlsv1.2 --ipv4 --user "speeduino_manual@speeduino.com:$WEB_PWD" --basic -T "./offline/Speeduino_manual.pdf" "https://webdisk.speeduino.com:2078/Speeduino_manual.pdf"
