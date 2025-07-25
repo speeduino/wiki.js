@@ -2,9 +2,9 @@
 title: Ignition Wiring
 description: 
 published: true
-date: 2021-07-30T05:00:00.250Z
-tags: 
-editor: undefined
+date: 2025-07-25T04:18:31.049Z
+tags: ignition, wiring
+editor: markdown
 dateCreated: 2020-01-13T13:26:54.675Z
 ---
 
@@ -26,7 +26,7 @@ When using wasted spark, it is critical the correct pairs coils and/or spark plu
 
 There are many dual pole, wasted spark coil packs available both with and without built in igniters. Either are suitable for use with Speeduino, but use of coils with built-in igniters is recommended
 
-![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-spark.png){.align-center width=500}
+![4 Cylinder Wasted Spark with Dual coils](/img/wiring/ign_4Cyl_COP_wasted-spark.png){.align-center width=500}
 
 > Note: The above example uses 'smart' coils with built in igniters. Do NOT attach high current (dumb) coils without adding an igniter
 {.is-warning}
@@ -34,7 +34,7 @@ There are many dual pole, wasted spark coil packs available both with and withou
 ### Coil on Plug 
 As an alternative to a dual pole wasted spark coil, individual coil on plug units can be used in a wasted spark configuration. 
 
-![ign_4Cyl_COP_wasted-spark.png](/img/wiring/ign_4Cyl_COP_wasted-COP.png){.align-center width=500}
+![4 Cylinder Wasted Spark with COP](/img/wiring/ign_4Cyl_COP_wasted-COP.png){.align-center width=500}
 
 > Note: The above examples use 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
 {.is-warning}
@@ -44,15 +44,17 @@ As an alternative to a dual pole wasted spark coil, individual coil on plug unit
 Sequential ignition control using Coil-on=Plugs coils dramtically simplifies the ignition wiring. With this configuration, each coil (and subsequently each cylinder) connects to a single ignition outpt, wired in the firing order. 
 
 
-![ign_4Cyl_COP_seq.png](/img/wiring/ign_4Cyl_COP_seq.png){.align-center width=500}
+![4 Cylinder Coil on Plug Ignition](/img/wiring/ign_4Cyl_COP_seq.png){.align-center width=500}
 
 > Note: The above example uses 'smart' coils with built in igniters. Do NOT attach dumb COPs (2 pins) without adding an igniter
 {.is-warning}
 
 ## Distributor
 If a distributor remains in use, only a single output is required from the ECU. This should be fed into a single channel ignition module (Such as the common Bosch 124) which can then drive the coil. 
-![ign_Basic-distributor.png](/img/wiring/ign_Basic-distributor.png){.align-center width=500}
+
+![Distributor Ignition](/img/wiring/ign_Basic-distributor.png){.align-center width=500}
 
 ## Application Specific
 Some application specific ignition setups exist that do no fit any of the above configurations. See below for more details:
+
 * [GM 7/8 Pin Modules](/en/configuration/GM_Module)
