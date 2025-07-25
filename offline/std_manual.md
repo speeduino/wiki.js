@@ -65,4 +65,5 @@ dateCreated: 2020-01-16T03:50:01.907Z
 ./boards/V04.md
 ./boards/V03.md
 ./boards/Dropbear.md
+./boards/Airbear.md
 ./footer.md
