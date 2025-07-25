@@ -7,10 +7,8 @@ tags: header
 editor: markdown
 dateCreated: 2020-01-05T22:26:30.455Z
 titlepage: true
-titlepage-rule-height: 2
+titlepage-rule-height: 0
 titlepage-rule-color: 360049
-titlepage-background: offline/background1.pdf
+titlepage-background: offline/background-speeduino.pdf
 toc-own-page: true
-titlepage-logo: offline/logo.png
-logo-width: 350pt
 ---
