@@ -2,7 +2,7 @@
 title: System Wiring Diagram
 description: A high level master system wiring diagram
 published: true
-date: 2025-07-27T06:13:47.861Z
+date: 2025-07-27T06:15:42.321Z
 tags: 
 editor: markdown
 dateCreated: 2020-01-06T23:29:13.246Z
@@ -20,7 +20,8 @@ See the [Hardware Requirements](/Hardware_requirements) page for specific requir
 
 All Speeduino installations will differ in some aspects and require some level of customisation, however the following should be kept in mind for most setups:
 
-* The ECU should share switched power with all devices that it will control (Eg Injectors, relays, solenoids etc). For example, an Idle control valve should not be able to be powered when the ECU is off. This can lead to backfeeding of power to the ECU. 
+* The ECU should share switched power with all devices that it will control (Injectors, relays, solenoids etc). 
+  * **Eg:** An Idle control valve should not ever be be powered when the 12v supply to the ECU is off. This can lead to backfeeding of power to the ECU. 
 * Speeduino ECUs are generally not recommended for installation in the engine bay and wiring the ECU into a cabin location is preferred. 
 * Consider the wiring path of all sensors (Particularly crank and cam) carefully and avoid running them near any high power devices (HT leads, alternator etc). 
 	* Shielded wiring is strongly recommended for crank/cam sensors. 
