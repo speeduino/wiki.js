@@ -2,7 +2,7 @@
 title: Dropbear
 description: 
 published: true
-date: 2024-12-09T00:17:25.511Z
+date: 2025-08-04T07:42:11.463Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T00:42:27.964Z
@@ -95,6 +95,11 @@ The Dropbear ECU uses 2x 24 pin Delphi Sicma connectors. The connectors are keye
 | C6  | Output    | 2A      | Spare 1/Idle 2/Stepper-A2  | 29 | Can be used either as ground switching output for general purpose use or 12v output if using a stepper idle control (Requires stepper driver to be fitted, see [Stepper Driver](#stepper-driver)). This is the default pin for Idle 2 when using a 3 wire PWM valve. |
 | C7  | Output    | 1.5A    | Fuel Pump         | N/A | Ground switching output for triggering fuel pump relay. **Do not drive pump directly from this pin, use only with relay**            |
 | C8  | Input     | 15A     | Power Ground      | N/A | Connect to battery negative.            |
+
+## Wireless Communication
+
+Dropbear V2 units come with a built-in socket for an Airbear unit to allow communication over wifi and BLE. 
+[See the Airbear page](/en/boards/Airbear) for more details on configuration for this
 
 ## Board Configuration
 The Dropbear board contains 4 switches and 1 DIP switch pair that can be used to change the setup of the ECU. 
